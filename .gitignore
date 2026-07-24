@@ -1,0 +1,15 @@
+# Visual Studio 和 CMake 生成的临时文件
+out/
+build/
+.vs/
+.vscode/
+cmake-build-debug/
+cmake-build-release/
+
+# 编译生成的二进制可执行文件
+*.exe
+*.pdb
+*.ilk
+
+# 系统或 IDE 的临时文件
+.DS_Store
