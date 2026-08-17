@@ -10,4 +10,5 @@ int main()
 		app.Update();
 		app.Render();
 	}
+	return 0;
 }
