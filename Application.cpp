@@ -14,30 +14,153 @@ Application::Application() :
 	//禁用连续键
 	window_.setKeyRepeatEnabled(false);
 
-	//纹理
+	//纹理//
 	T_player_.loadFromFile("player.png");    //主角纹理
+	T_player_glance_.loadFromFile("Glance.png");    //主角惊鸿一瞥纹理
+	T_player_big_laugh_.loadFromFile("Big_Laugh.png");    //主角捧腹大笑纹理
 	T_collection_1.loadFromFile("collection1.png");    //拾取物状态1纹理
 	T_collection_2.loadFromFile("collection2.png");    //拾取物状态2纹理
-	T_BackGround_1.loadFromFile("Snow_Filed.png");    //背景1纹理
+	T_Spine_.loadFromFile("Spine.png");    //陷阱尖刺纹理
+	T_Deco_tree_.loadFromFile("Tree.png");    //装饰物:树纹理
+	T_Deco_Leave_Left_.loadFromFile("Leave_Left.png");    //装饰物:左叶片纹理
+	T_Deco_Leave_Right_.loadFromFile("Leave_Right.png");    //装饰物:右叶片纹理
+	T_Deco_cloud_mass_.loadFromFile("Cloud_Mass.png");    //装饰物:云朵纹理
+	T_BackGround_1.loadFromFile("Snow.png");    //背景1纹理
 	T_BackGround_2.loadFromFile("Desert.png");    //背景2纹理
 	T_BackGround_3.loadFromFile("Forest.png");    //背景3纹理
+	T_S_Ground_1.loadFromFile("Snow_Ground1.png");    //冬天地面1纹理
+	T_S_Ground_2.loadFromFile("Snow_Ground2.png");    //冬天地面2纹理
+	T_S_Ground_3.loadFromFile("Snow_Ground3.png");    //冬天地面3纹理
 
-	//形状
+	//形状//
+	//角色
 	player_.setTexture(&T_player_);
-	player_.setSize({ 70,84 });
-	player_.setPosition({ 700,400 });
+	player_.setSize({ 70.0f,84.0f });
+	player_.setPosition({ 70.0f,0.0f });
 	player_.setOrigin(player_.getGeometricCenter());
-	player_.setScale({ 2.5f,2.5f });
+	player_.setScale({ 2.0f,2.0f });
 	
-	collection_1.setTexture(&T_collection_1);
-	collection_1.setSize({ 100,100 });
-	collection_1.setPosition({ 1000,500 });
-    collection_1.setOrigin(collection_1.getGeometricCenter());
+	//拾取物
+	collection_.setTexture(&T_collection_1);
+	collection_.setSize({ 80.0f,80.0f });
+	collection_.setPosition({ 1395.0f,100.0f });
+    collection_.setOrigin(collection_.getGeometricCenter());
 
-	BackGround_.setTexture(&T_BackGround_3);
+	//陷阱
+	sf::RectangleShape spine1;
+	spine1.setTexture(&T_Spine_);
+	spine1.setSize({ 100.0f,50.0f });
+	spine1.setPosition({ 211.0f,790.0f });
+	Trap_.push_back(spine1);
+
+	//背景//
+	BackGround_.setTexture(&T_BackGround_1);
 	BackGround_.setSize({ 1920, 1080 });
-	BackGround_.setPosition({ 960 , 540 });
-	BackGround_.setOrigin(BackGround_.getGeometricCenter());
+	BackGround_.setPosition({ 0 , 0 });
+
+	//地面
+	sf::RectangleShape ground1;
+	ground1.setTexture(&T_S_Ground_1);
+	ground1.setSize({ 174.f,120.f });
+	ground1.setPosition({ 0.0f,960.f });
+	Grounds_.push_back(ground1);
+
+	sf::RectangleShape ground2;
+	ground2.setTexture(&T_S_Ground_2);
+	ground2.setSize({ 174.f,240.f });
+	ground2.setPosition({ 174.0f,840.f });
+	Grounds_.push_back(ground2);
+
+	sf::RectangleShape ground3;
+	ground3.setTexture(&T_S_Ground_3);
+	ground3.setSize({ 174.f,360.f });
+	ground3.setPosition({ 348.0f,730.f });
+	Grounds_.push_back(ground3);
+
+	sf::RectangleShape ground4;
+	ground4.setTexture(&T_S_Ground_2);
+	ground4.setSize({ 174.f,240.f });
+	ground4.setPosition({ 522.0f,840.f });
+	Grounds_.push_back(ground4);
+
+	sf::RectangleShape ground5;
+	ground5.setTexture(&T_S_Ground_1);
+	ground5.setSize({ 174.f,120.f });
+	ground5.setPosition({ 696.0f,960.f });
+	Grounds_.push_back(ground5);
+
+	sf::RectangleShape ground6;
+	ground6.setTexture(&T_S_Ground_1);
+	ground6.setSize({ 174.f,120.f });
+	ground6.setPosition({ 870.0f,960.f });
+	Grounds_.push_back(ground6);
+
+	sf::RectangleShape ground7;
+	ground7.setTexture(&T_S_Ground_1);
+	ground7.setSize({ 174.f,120.f });
+	ground7.setPosition({ 1044.0f,960.f });
+	Grounds_.push_back(ground7);
+
+	sf::RectangleShape ground8;
+	ground8.setTexture(&T_S_Ground_2);
+	ground8.setSize({ 174.f,240.f });
+	ground8.setPosition({ 1218.0f,840.f });
+	Grounds_.push_back(ground8);
+
+	sf::RectangleShape ground9;
+	ground9.setTexture(&T_S_Ground_3);
+	ground9.setSize({ 174.f,360.f });
+	ground9.setPosition({ 1392.0f,730.f });
+	Grounds_.push_back(ground9);
+
+	sf::RectangleShape ground10;
+	ground10.setTexture(&T_S_Ground_2);
+	ground10.setSize({ 174.f,240.f });
+	ground10.setPosition({ 1566.0f,840.f });
+	Grounds_.push_back(ground10);
+
+	sf::RectangleShape ground11;
+	ground11.setTexture(&T_S_Ground_1);
+	ground11.setSize({ 180.f,120.f });
+	ground11.setPosition({ 1740.0f,960.f });
+	Grounds_.push_back(ground11);
+
+	//装饰物
+	sf::RectangleShape tree;
+	tree.setTexture(&T_Deco_tree_);
+	tree.setSize({ 174.0f,667.0f });
+	tree.setPosition({ 850.0f,293.0f });
+	Grounds_.push_back(tree);
+
+	sf::RectangleShape leave_1;
+	leave_1.setTexture(&T_Deco_Leave_Left_);
+	leave_1.setSize({ 130.0f,130.0f });
+	leave_1.setPosition({ 720.0f,476.0f });
+	Grounds_.push_back(leave_1);
+
+	sf::RectangleShape leave_2;
+	leave_2.setTexture(&T_Deco_Leave_Right_);
+	leave_2.setSize({ 130.0f,130.0f });
+	leave_2.setPosition({ 1008.0f,476.0f });
+	Grounds_.push_back(leave_2);
+
+	sf::RectangleShape cloud_mass;
+	cloud_mass.setTexture(&T_Deco_cloud_mass_);
+	cloud_mass.setSize({ 100.0f,27.0f });
+	cloud_mass.setPosition({ 1330.0f,130.0f });
+	Grounds_.push_back(cloud_mass);
+
+	sf::RectangleShape cloud_mass_1;
+	cloud_mass_1.setTexture(&T_Deco_cloud_mass_);
+	cloud_mass_1.setSize({ 100.0f,27.0f });
+	cloud_mass_1.setPosition({ 245.0f,230.0f });
+	Grounds_.push_back(cloud_mass_1);
+
+	sf::RectangleShape cloud_mass_2;
+	cloud_mass_2.setTexture(&T_Deco_cloud_mass_);
+	cloud_mass_2.setSize({ 100.0f,27.0f });
+	cloud_mass_2.setPosition({ 1530.0f,330.0f });
+	Grounds_.push_back(cloud_mass_2);
 }
 
 
@@ -70,8 +193,8 @@ void Application::Update()
 	deltaTime_ = clock_.restart().asSeconds();    //每帧时间差
 
 	UpdatePlayer(deltaTime_);    //移动方法
-
 	UpdatePickup(deltaTime_);    //拾取方法
+	UpdateGravity(deltaTime_);    //重力系统
 }
 
 
@@ -80,8 +203,12 @@ void Application::Render()
 {
 	window_.clear();
 	window_.draw(BackGround_);
+	for (const auto& ground : Grounds_) 
+	{
+		window_.draw(ground);
+	}
 	window_.draw(player_);
-	window_.draw(collection_1);
+	window_.draw(collection_);
 	window_.display();
 }
 
@@ -123,15 +250,22 @@ void Application::HandleEvent(const sf::Event::FocusGained&)
 void Application::HandleEvent(const sf::Event::KeyPressed& key) 
 {
 	//记录space按下
-	std::cout << "space pressed\n";
-	JumpRequested_ = true;
+	if (key.code == sf::Keyboard::Key::Space) 
+	{
+		std::cout << "space pressed\n";
+		JumpRequested_ = true;
+	}
 }
 
 void Application::HandleEvent(const sf::Event::KeyReleased& key)
 {
 	//记录space释放
-	std::cout << "space released\n";
-	JumpRequested_ = false;
+	if (key.code == sf::Keyboard::Key::Space) 
+	{
+		std::cout << "space released\n";
+		JumpRequested_ = false;
+	}
+	
 }
 
 void Application::HandleEvent(const sf::Event::MouseButtonPressed& mouse) 
@@ -156,6 +290,7 @@ void Application::HandleEvent(const sf::Event::MouseButtonReleased& mouse)
 
 
 //更新接口
+//移动模块
 void Application::UpdatePlayer(float deltaTime_) 
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W)) 
@@ -176,14 +311,15 @@ void Application::UpdatePlayer(float deltaTime_)
 	}
 }
 
-void Application::UpdatePickup(float deltaTime)
+//拾取模块
+void Application::UpdatePickup(float deltaTime_)
 {
 	if (pickupState_ == 0)
 	{
-		if (player_.getGlobalBounds().findIntersection(collection_1.getGlobalBounds())) 
+		if (player_.getGlobalBounds().findIntersection(collection_.getGlobalBounds())) 
 		{
-			collection_1.setTexture(&T_collection_2);
-			collection_1.setScale({ 1.3f , 1.3f });
+			collection_.setTexture(&T_collection_2);
+			collection_.setScale({ 1.3f , 1.3f });
 			pickupState_ = 1;    //开始谈出
 			fadeTime_ = 0.0f;    //启动计时
 		}
@@ -196,11 +332,124 @@ void Application::UpdatePickup(float deltaTime)
 		if (progress < 1.0f) 
 		{
 			std::uint8_t alpha = static_cast<std::uint8_t>(255 - (progress * 255));
-			collection_1.setFillColor(sf::Color(255, 255, 255, alpha));
+			collection_.setFillColor(sf::Color(255, 255, 255, alpha));
 		}
 	}
 	else 
 	{
 		pickupState_ = 2;
+	}
+}
+
+//陷阱模块
+void Application::UpdateTrap(float deltaTime_) 
+{
+	sf::FloatRect playerBounds = player_.getGlobalBounds();
+	sf::FloatRect trapBounds;
+
+	//碰撞检测
+	for (const auto& trap : Trap_)
+	{
+		if (playerBounds.findIntersection(trap.getGlobalBounds()))
+		{
+			trapBounds = trap.getGlobalBounds();
+			window_.draw(trap);
+			break;
+		}
+	}
+
+	if (playerState_ == 0)
+	{
+		if (playerBounds.findIntersection(trapBounds))
+		{
+			player_.setTexture(&T_player_glance_);
+			collection_.setScale({ 1.3f , 1.3f });
+			pickupState_ = 1;    //开始谈出
+			fadeTime_ = 0.0f;    //启动计时
+		}
+	}
+	else if (playerState_ == 1)
+	{
+		fadeTime_ += deltaTime_;    //记录时间
+		float progress = fadeTime_ / 2.5f;    //设置谈出速度
+
+		if (progress >= 0.5f) 
+		{
+			player_.setTexture(&T_player_big_laugh_);
+		}
+
+		if (progress < 1.0f)
+		{
+			std::uint8_t alpha = static_cast<std::uint8_t>(255 - (progress * 255));
+			player_.setFillColor(sf::Color(255, 255, 255, alpha));
+		}
+	}
+	else
+	{
+		playerState_ = 2;
+	}
+}
+
+//重力系统
+void Application::UpdateGravity(float deltaTime_) 
+{
+	const float Gravity = 2200.0f;    //重力系数
+	const float Max_Fall_Speed = 1600.0f;    //最大下落速度
+	const float Jump_Speed = -1500.0f;    //跳跃初速度
+	
+    velocity_Y += Gravity * deltaTime_;    //计算垂直速度
+	
+	//限速判断
+	if (velocity_Y >= Max_Fall_Speed) 
+	{
+		velocity_Y = Max_Fall_Speed;
+	}
+
+	bool isColliding = false;
+	sf::FloatRect playerNextBounds = player_.getGlobalBounds();
+	sf::FloatRect GroundBounds;
+	
+	//角色预测碰撞盒位置更新
+	playerNextBounds.position.y += velocity_Y * deltaTime_;
+
+	//碰撞检测
+	for (const auto& ground : Grounds_) 
+	{
+		if (playerNextBounds.findIntersection(ground.getGlobalBounds())) 
+		{
+			GroundBounds = ground.getGlobalBounds();
+			isColliding = true;
+			break;
+		}
+	}
+
+	if (isColliding) 
+	{
+		//吸附地面
+		if (velocity_Y > 0.0f) 
+		{
+			player_.setPosition({ player_.getPosition().x ,GroundBounds.position.y - player_.getSize().y });
+		}
+		
+		//落地参数重置
+		velocity_Y = 0.0f;
+		isOnGround_ = true;
+		
+		//跳跃事件
+		if (JumpRequested_)
+		{
+			if (isOnGround_)
+			{
+				velocity_Y = Jump_Speed;
+				isOnGround_ = false;
+				player_.move({ 0.0f , -18.0f });
+			}
+			JumpRequested_ = false;
+		}
+
+	}
+	else 
+	{
+		player_.move({ 0, velocity_Y * deltaTime_ });
 	}
 }
