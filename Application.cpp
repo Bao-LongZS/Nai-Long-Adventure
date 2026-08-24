@@ -49,9 +49,66 @@ Application::Application() :
 	//陷阱
 	sf::RectangleShape spine1;
 	spine1.setTexture(&T_Spine_);
-	spine1.setSize({ 100.0f,50.0f });
-	spine1.setPosition({ 211.0f,790.0f });
+	spine1.setSize({ 130.0f,30.0f });
+	spine1.setPosition({ 196.0f,810.0f });
+	spine1.setFillColor({ 255,255,255,0 });
 	Trap_.push_back(spine1);
+
+	sf::RectangleShape spine2;
+	spine2.setTexture(&T_Spine_);
+	spine2.setSize({ 130.0f,30.0f });
+	spine2.setPosition({ 1400.0f,700.0f });
+	spine2.setFillColor({ 255,255,255,0 });
+	Trap_.push_back(spine2);
+
+	sf::RectangleShape spine3;
+	spine3.setTexture(&T_Spine_);
+	spine3.setSize({ 90.0f,20.0f });
+	spine3.setPosition({ 248.0f,210.0f });
+	spine3.setFillColor({ 255,255,255,0 });
+	Trap_.push_back(spine3);
+
+	sf::RectangleShape spine4;
+	spine4.setTexture(&T_Spine_);
+	spine4.setSize({ 90.0f,20.0f });
+	spine4.setPosition({ 1535.0f,310.0f });
+	spine4.setFillColor({ 255,255,255,0 });
+	Trap_.push_back(spine4);
+
+	sf::RectangleShape spine5;
+	spine5.setTexture(&T_Spine_);
+	spine5.setSize({ 110.0f,30.0f });
+	spine5.setPosition({ 730.0f,446.0f });
+	spine5.setFillColor({ 255,255,255,0 });
+	Trap_.push_back(spine5);
+
+	sf::RectangleShape spine6;
+	spine6.setTexture(&T_Spine_);
+	spine6.setSize({ 110.0f,30.0f });
+	spine6.setPosition({ 1018.0f,446.0f });
+	spine6.setFillColor({ 255,255,255,0 });
+	Trap_.push_back(spine6);
+
+	sf::RectangleShape spine7;
+	spine7.setTexture(&T_Spine_);
+	spine7.setSize({ 130.0f,30.0f });
+	spine7.setPosition({ 1068.0f,930.0f });
+	spine7.setFillColor({ 255,255,255,0 });
+	Trap_.push_back(spine7);
+
+	sf::RectangleShape spine8;
+	spine8.setTexture(&T_Spine_);
+	spine8.setSize({ 130.0f,30.0f });
+	spine8.setPosition({ 1590.0f,810.0f });
+	spine8.setFillColor({ 255,255,255,0 });
+	Trap_.push_back(spine8);
+
+	sf::RectangleShape spine9;
+	spine9.setTexture(&T_Spine_);
+	spine9.setSize({ 130.0f,30.0f });
+	spine9.setPosition({ 1240.0f,810.0f });
+	spine9.setFillColor({ 255,255,255,0 });
+	Trap_.push_back(spine9);
 
 	//背景//
 	BackGround_.setTexture(&T_BackGround_1);
@@ -194,7 +251,9 @@ void Application::Update()
 
 	UpdatePlayer(deltaTime_);    //移动方法
 	UpdatePickup(deltaTime_);    //拾取方法
+	UpdateTrap(deltaTime_);    //陷阱方法
 	UpdateGravity(deltaTime_);    //重力系统
+	UpdateReset();	
 }
 
 
@@ -203,10 +262,8 @@ void Application::Render()
 {
 	window_.clear();
 	window_.draw(BackGround_);
-	for (const auto& ground : Grounds_) 
-	{
-		window_.draw(ground);
-	}
+	RenderTrap();
+	RenderGround();
 	window_.draw(player_);
 	window_.draw(collection_);
 	window_.display();
@@ -352,8 +409,8 @@ void Application::UpdateTrap(float deltaTime_)
 	{
 		if (playerBounds.findIntersection(trap.getGlobalBounds()))
 		{
+			isTrapTouch = true;
 			trapBounds = trap.getGlobalBounds();
-			window_.draw(trap);
 			break;
 		}
 	}
@@ -363,16 +420,16 @@ void Application::UpdateTrap(float deltaTime_)
 		if (playerBounds.findIntersection(trapBounds))
 		{
 			player_.setTexture(&T_player_glance_);
-			collection_.setScale({ 1.3f , 1.3f });
-			pickupState_ = 1;    //开始谈出
-			fadeTime_ = 0.0f;    //启动计时
+			//player_.setScale({ 1.3f , 1.3f });
+			playerState_ = 1;    //开始谈出
+			playerFadeTime_ = 0.0f;    //启动计时
 		}
 	}
 	else if (playerState_ == 1)
 	{
-		fadeTime_ += deltaTime_;    //记录时间
-		float progress = fadeTime_ / 2.5f;    //设置谈出速度
-
+		playerFadeTime_ += deltaTime_;    //记录时间
+		float progress = playerFadeTime_ / 2.5f;    //设置谈出速度
+		
 		if (progress >= 0.5f) 
 		{
 			player_.setTexture(&T_player_big_laugh_);
@@ -383,24 +440,28 @@ void Application::UpdateTrap(float deltaTime_)
 			std::uint8_t alpha = static_cast<std::uint8_t>(255 - (progress * 255));
 			player_.setFillColor(sf::Color(255, 255, 255, alpha));
 		}
+		if (progress >= 1.0f) 
+		{
+			playerState_ = 2;
+		}
 	}
 	else
 	{
-		playerState_ = 2;
+		isRestart = true;
 	}
 }
 
 //重力系统
-void Application::UpdateGravity(float deltaTime_) 
+void Application::UpdateGravity(float deltaTime_)
 {
 	const float Gravity = 2200.0f;    //重力系数
 	const float Max_Fall_Speed = 1600.0f;    //最大下落速度
 	const float Jump_Speed = -1500.0f;    //跳跃初速度
-	
-    velocity_Y += Gravity * deltaTime_;    //计算垂直速度
-	
+
+	velocity_Y += Gravity * deltaTime_;    //计算垂直速度
+
 	//限速判断
-	if (velocity_Y >= Max_Fall_Speed) 
+	if (velocity_Y >= Max_Fall_Speed)
 	{
 		velocity_Y = Max_Fall_Speed;
 	}
@@ -408,14 +469,14 @@ void Application::UpdateGravity(float deltaTime_)
 	bool isColliding = false;
 	sf::FloatRect playerNextBounds = player_.getGlobalBounds();
 	sf::FloatRect GroundBounds;
-	
+
 	//角色预测碰撞盒位置更新
 	playerNextBounds.position.y += velocity_Y * deltaTime_;
 
 	//碰撞检测
-	for (const auto& ground : Grounds_) 
+	for (const auto& ground : Grounds_)
 	{
-		if (playerNextBounds.findIntersection(ground.getGlobalBounds())) 
+		if (playerNextBounds.findIntersection(ground.getGlobalBounds()))
 		{
 			GroundBounds = ground.getGlobalBounds();
 			isColliding = true;
@@ -423,18 +484,18 @@ void Application::UpdateGravity(float deltaTime_)
 		}
 	}
 
-	if (isColliding) 
+	if (isColliding)
 	{
 		//吸附地面
-		if (velocity_Y > 0.0f) 
+		if (velocity_Y > 0.0f)
 		{
 			player_.setPosition({ player_.getPosition().x ,GroundBounds.position.y - player_.getSize().y });
 		}
-		
+
 		//落地参数重置
 		velocity_Y = 0.0f;
 		isOnGround_ = true;
-		
+
 		//跳跃事件
 		if (JumpRequested_)
 		{
@@ -448,8 +509,60 @@ void Application::UpdateGravity(float deltaTime_)
 		}
 
 	}
-	else 
+	else
 	{
 		player_.move({ 0, velocity_Y * deltaTime_ });
 	}
 }
+
+//重置函数
+void Application::UpdateReset() 
+{
+	if (isRestart) 
+	{
+		//重置主角状态位置
+		player_.setTexture(&T_player_);
+		player_.setFillColor({ 255,255,255,255 });
+		player_.setPosition({ 70.0f,200.0f });
+	    playerState_ = 0;
+
+	    //重置陷阱状态
+	    for (auto& spine : Trap_)
+	    {
+		    spine.setFillColor({ 255,255,255,0 });
+	    }
+	    isTrapTouch = false;
+
+	    //重置拾取物状态
+	    pickupState_ = 0;
+	}
+	isRestart = false;
+}
+
+//渲染接口
+//陷阱绘制
+void Application::RenderTrap() 
+{
+	for (auto& spine : Trap_)
+	{
+		window_.draw(spine);
+		if (isTrapTouch)
+		{
+			spine.setFillColor({ 255,255,255,255 });
+		}
+		else
+		{
+			spine.setFillColor({ 255,255,255,0 });
+		}
+	}
+}
+
+//地形绘制
+void Application::RenderGround() 
+{
+	for (const auto& ground : Grounds_)
+	{
+		window_.draw(ground);
+	}
+}
+

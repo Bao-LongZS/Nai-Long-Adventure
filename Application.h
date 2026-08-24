@@ -23,6 +23,7 @@ private:
 	int playerState_ = 0;    //角色状态标记
 	int pickupState_ = 0;    //拾取物状态标记
 	float fadeTime_ = 0.f;    //淡出时间
+	float playerFadeTime_ = 0.0f;    //角色淡出时间
 
 //角色参量
 private:
@@ -68,6 +69,12 @@ private:
 	void UpdatePickup(float deltaTime_);    //拾取模块
 	void UpdateTrap(float deltaTime_);    //陷阱模块
 	void UpdateGravity(float deltaTime_);    //重力系统
+	void UpdateReset();    //重置函数
+	//渲染接口
+	void RenderTrap();    //陷阱渲染辅助函数
+	void RenderGround();    //地形绘制
+
+	
 
 public:
 	Application();    //创建窗口构造函数
