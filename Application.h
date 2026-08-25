@@ -1,6 +1,7 @@
 #pragma once
 
 #include<SFML/Graphics.hpp>
+#include<SFML/Audio.hpp>
 #include<vector>
 
 class Application
@@ -25,6 +26,9 @@ private:
 	float fadeTime_ = 0.f;    //淡出时间
 	float playerFadeTime_ = 0.0f;    //角色淡出时间
 
+	int current_music_ = 1;    //背景音乐循环标记
+	int Easter_egg_ = 1;    //彩蛋标记
+
 //角色参量
 private:
 	//纹理//
@@ -44,14 +48,36 @@ private:
 	sf::Texture T_S_Ground_1;    //冬天地面1
 	sf::Texture T_S_Ground_2;    //冬天地面2
 	sf::Texture T_S_Ground_3;    //冬天地面3
+
 	//形状//
 	sf::RectangleShape player_;    //主角形状
 	sf::RectangleShape collection_;    //拾取物形状
 	std::vector<sf::RectangleShape> Trap_;    //陷阱形状
+
 	//背景//
 	sf::RectangleShape BackGround_;    //背景形状
 	std::vector<sf::RectangleShape> Grounds_;    //地形形状
 
+	//音频//
+	sf::SoundBuffer B_Collection_;    //固定collection缓存区
+	sf::SoundBuffer B_Die_;    //固定die缓存区
+	sf::SoundBuffer B_Die_1;    //奶龙笑缓存区
+	sf::SoundBuffer B_Jump_;   //跳跃音效缓存区
+	//长音频
+	sf::Music M_Background_1;    //第一关戴夫
+	sf::Music M_Background_2;    //第一关哈吉米
+	sf::Music M_Background_3;
+	sf::Music M_Background_4;
+	sf::Music M_Collection_1;    //牛肉面
+	sf::Music M_Collection_2;    //加麻
+	sf::Music M_Die_3;    //急急如律令
+	sf::Music M_Hurdle2_1;    //恋爱循环安迪
+	sf::Music M_Hurdle2_2;    //猪猪侠安迪
+
+	sf::Sound S_Collection_;    //固定collection
+	sf::Sound S_Die_;    //固定die
+	sf::Sound S_Die_1;    //奶龙笑
+	sf::Sound S_Jump_;    //跳跃音效
 //私有接口
 private:
 	//事件接口
@@ -74,7 +100,23 @@ private:
 	void RenderTrap();    //陷阱渲染辅助函数
 	void RenderGround();    //地形绘制
 
-	
+	//音频接口
+	void Background_Music_1();
+	void Background_Music_2();
+	void Background_Music_3();
+	void Background_Music_4();
+	void SoundCollection();
+	void MusicCollection_1();
+	void MusicCollection_2();
+	void SoundDie();
+	void SoundDie_1();
+	void MusicDie_3();
+	void SoundJump();
+	void Background_Music_Hurdle2_1();
+	void Background_Music_Hurdle2_2();
+	void Back_Cycle();    //背景音乐
+	void Easter_egg1();    //忘情牛肉面
+	void Easter_egg2();    //急急如律令
 
 public:
 	Application();    //创建窗口构造函数

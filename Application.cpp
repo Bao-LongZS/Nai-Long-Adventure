@@ -3,7 +3,24 @@
 
 //构造函数//
 Application::Application() :
-	window_(sf::VideoMode({ 1920,1080 }), "Nai Long Adventure")
+	window_(sf::VideoMode({ 1920,1080 }), "Nai Long Adventure"),
+	B_Collection_("Collection.wav"),
+	B_Die_("Die.wav"),
+	B_Die_1("Die_1.wav"),
+	B_Jump_("Jump.wav"),
+	M_Background_1("Background_Music_1.wav"),
+	M_Background_2("Background_Music_2.wav"),
+	M_Background_3("Background_Music_3.wav"),
+	M_Background_4("Background_Music_4.wav"),
+	M_Collection_1("Collection_1.wav"),
+	M_Collection_2("Collection_2.wav"),
+	M_Die_3("Die_3.wav"),
+	M_Hurdle2_1("Hurdle2_1.wav"),
+	M_Hurdle2_2("Hurdle2_2.wav"),
+	S_Collection_(B_Collection_),
+	S_Die_(B_Die_),
+	S_Die_1(B_Die_1),
+	S_Jump_(B_Jump_)
 {
 	//设置窗口大小范围
 	window_.setMinimumSize(sf::Vector2u(200, 300));
@@ -13,6 +30,8 @@ Application::Application() :
 
 	//禁用连续键
 	window_.setKeyRepeatEnabled(false);
+	
+	Background_Music_1();    //启动背景音乐
 
 	//纹理//
 	T_player_.loadFromFile("player.png");    //主角纹理
@@ -253,7 +272,8 @@ void Application::Update()
 	UpdatePickup(deltaTime_);    //拾取方法
 	UpdateTrap(deltaTime_);    //陷阱方法
 	UpdateGravity(deltaTime_);    //重力系统
-	UpdateReset();	
+	UpdateReset();    //重启方法
+	Back_Cycle();    //背景音乐
 }
 
 
@@ -268,7 +288,6 @@ void Application::Render()
 	window_.draw(collection_);
 	window_.display();
 }
-
 
 //私有接口//
 //事件接口
@@ -377,6 +396,7 @@ void Application::UpdatePickup(float deltaTime_)
 		{
 			collection_.setTexture(&T_collection_2);
 			collection_.setScale({ 1.3f , 1.3f });
+			SoundCollection();    //哇哦音效
 			pickupState_ = 1;    //开始谈出
 			fadeTime_ = 0.0f;    //启动计时
 		}
@@ -421,6 +441,7 @@ void Application::UpdateTrap(float deltaTime_)
 		{
 			player_.setTexture(&T_player_glance_);
 			//player_.setScale({ 1.3f , 1.3f });
+			SoundDie();    //呃啊音效
 			playerState_ = 1;    //开始谈出
 			playerFadeTime_ = 0.0f;    //启动计时
 		}
@@ -433,6 +454,7 @@ void Application::UpdateTrap(float deltaTime_)
 		if (progress >= 0.5f) 
 		{
 			player_.setTexture(&T_player_big_laugh_);
+			SoundDie_1();    //奶龙笑音效
 		}
 
 		if (progress < 1.0f)
@@ -501,6 +523,7 @@ void Application::UpdateGravity(float deltaTime_)
 		{
 			if (isOnGround_)
 			{
+				SoundJump();    //hey跳跃音效
 				velocity_Y = Jump_Speed;
 				isOnGround_ = false;
 				player_.move({ 0.0f , -18.0f });
@@ -537,6 +560,7 @@ void Application::UpdateReset()
 	    pickupState_ = 0;
 	}
 	isRestart = false;
+	Easter_egg_++;
 }
 
 //渲染接口
@@ -566,3 +590,104 @@ void Application::RenderGround()
 	}
 }
 
+//音频接口
+void Application::Background_Music_1()
+{
+	M_Background_1.play();
+	M_Background_1.setVolume(30);
+	M_Background_1.setPitch(1.0);
+}
+
+void Application::Background_Music_2()
+{
+	M_Background_2.play();
+	M_Background_2.setVolume(30);
+}
+
+void Application::Background_Music_3()
+{
+	M_Background_3.play();
+	M_Background_3.setVolume(20);
+}
+
+void Application::Background_Music_4()
+{
+	M_Background_4.play();
+	M_Background_4.setVolume(20);
+}
+
+void Application::SoundCollection()
+{
+	S_Collection_.play();
+}
+
+void Application::MusicCollection_1()
+{
+	M_Collection_1.play();
+}
+
+void Application::MusicCollection_2()
+{
+	M_Collection_2.play();
+}
+
+void Application::SoundDie()
+{
+	S_Die_.play();
+	S_Die_.setPitch(1.5);
+}
+
+void Application::SoundDie_1()
+{
+	S_Die_1.play();
+}
+
+void Application::MusicDie_3()
+{
+	M_Die_3.play();
+}
+
+void Application::SoundJump()
+{
+	S_Jump_.play();
+}
+
+void Application::Background_Music_Hurdle2_1()
+{
+	M_Hurdle2_1.play();
+}
+
+void Application::Background_Music_Hurdle2_2()
+{
+	M_Hurdle2_2.play();
+}
+
+//背景音乐//
+void Application::Back_Cycle()
+{
+	// 只有当第一首【彻底停止播放】了，才去启动第二首
+	if (current_music_ == 1 && M_Background_1.getStatus() == sf::Sound::Status::Stopped)
+	{
+		M_Background_1.stop(); // 保险起见彻底停掉第一首
+		Background_Music_2(); 
+		current_music_ = 2;
+	}
+	else if (current_music_ == 2 && M_Background_2.getStatus() == sf::Sound::Status::Stopped)
+	{
+		M_Background_2.stop();
+		Background_Music_3();
+		current_music_ = 3;
+	}
+	else if (current_music_ == 3 && M_Background_3.getStatus() == sf::Sound::Status::Stopped)
+	{
+		M_Background_3.stop();
+		Background_Music_4();
+		current_music_ = 4;
+	}
+	else if (current_music_ == 4 && M_Background_4.getStatus() == sf::Sound::Status::Stopped)
+	{
+		M_Background_4.stop();
+		Background_Music_1(); // 回到第一首，实现无限整体循环
+		current_music_ = 1;
+	}
+}

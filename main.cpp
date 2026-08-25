@@ -2,20 +2,20 @@
 
 int main() 
 {
-    /*auto app = std::make_unique<Application>();
+    auto app = std::make_unique<Application>();
 
     while (app->IsRunning())
     {
         app->ProcessEvents();
         app->Update();
         app->Render();
-    }*/
+    }
 
-    Application app;
+    /*Application app;
     while (app.IsRunning()) {
         app.ProcessEvents();
         app.Update();
         app.Render();
-    }
+    }*/
     return 0;
 }
