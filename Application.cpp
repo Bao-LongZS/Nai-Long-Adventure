@@ -557,10 +557,14 @@ void Application::UpdateReset()
 	    isTrapTouch = false;
 
 	    //重置拾取物状态
+		collection_.setTexture(&T_collection_1);
+		collection_.setScale({ 1.0f , 1.0f });
+		collection_.setFillColor({ 255,255,255,255 });
 	    pickupState_ = 0;
+		//彩蛋标记
+		Easter_egg_++;
 	}
 	isRestart = false;
-	Easter_egg_++;
 }
 
 //渲染接口
@@ -595,7 +599,7 @@ void Application::Background_Music_1()
 {
 	M_Background_1.play();
 	M_Background_1.setVolume(30);
-	M_Background_1.setPitch(1.0);
+	M_Background_1.setPitch(1.2);
 }
 
 void Application::Background_Music_2()
@@ -607,7 +611,7 @@ void Application::Background_Music_2()
 void Application::Background_Music_3()
 {
 	M_Background_3.play();
-	M_Background_3.setVolume(20);
+	M_Background_3.setVolume(30);
 }
 
 void Application::Background_Music_4()
@@ -624,6 +628,8 @@ void Application::SoundCollection()
 void Application::MusicCollection_1()
 {
 	M_Collection_1.play();
+	M_Collection_1.setVolume(20);
+	M_Collection_1.setPitch(1.5);
 }
 
 void Application::MusicCollection_2()
@@ -645,6 +651,8 @@ void Application::SoundDie_1()
 void Application::MusicDie_3()
 {
 	M_Die_3.play();
+	M_Die_3.setVolume(20);
+	M_Die_3.setPitch(1.5);
 }
 
 void Application::SoundJump()
@@ -687,7 +695,20 @@ void Application::Back_Cycle()
 	else if (current_music_ == 4 && M_Background_4.getStatus() == sf::Sound::Status::Stopped)
 	{
 		M_Background_4.stop();
+		MusicCollection_1(); // 回到第一首，实现无限整体循环
+		current_music_ = 5;
+	}
+	else if (current_music_ == 5 && M_Collection_1.getStatus() == sf::Sound::Status::Stopped)
+	{
+		M_Collection_1.stop();
+		MusicDie_3(); // 回到第一首，实现无限整体循环
+		current_music_ = 6;
+	}
+	else if (current_music_ == 6 && M_Die_3.getStatus() == sf::Sound::Status::Stopped)
+	{
+		M_Die_3.stop();
 		Background_Music_1(); // 回到第一首，实现无限整体循环
 		current_music_ = 1;
 	}
 }
+
