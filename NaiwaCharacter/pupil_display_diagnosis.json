@@ -1,0 +1,169 @@
+{
+  "target": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261005_head_side_continuity\\Naiwa_Character.blend",
+  "render_engine": "BLENDER_EEVEE",
+  "view_layer_overrides": {
+    "ViewLayer": null
+  },
+  "eyes": {
+    "L": {
+      "hide_render": false,
+      "hide_viewport": false,
+      "EyeColor_domain": "CORNER",
+      "black_color_corner_count": 2592,
+      "materials": [
+        {
+          "name": "L single eye surface",
+          "diffuse_color": [
+            0.10499999672174454,
+            0.26499998569488525,
+            0.03999999910593033,
+            1.0
+          ],
+          "use_nodes": true,
+          "nodes": [
+            {
+              "type": "ShaderNodeBsdfPrincipled",
+              "name": "Principled BSDF",
+              "attribute_name": null
+            },
+            {
+              "type": "ShaderNodeOutputMaterial",
+              "name": "Material Output",
+              "attribute_name": null
+            },
+            {
+              "type": "ShaderNodeAttribute",
+              "name": "Attribute",
+              "attribute_name": "EyeColor"
+            }
+          ],
+          "links": [
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ],
+            [
+              "Attribute",
+              "Color",
+              "Principled BSDF",
+              "Base Color"
+            ]
+          ]
+        }
+      ]
+    },
+    "R": {
+      "hide_render": false,
+      "hide_viewport": false,
+      "EyeColor_domain": "CORNER",
+      "black_color_corner_count": 2592,
+      "materials": [
+        {
+          "name": "R single eye surface",
+          "diffuse_color": [
+            0.10499999672174454,
+            0.26499998569488525,
+            0.03999999910593033,
+            1.0
+          ],
+          "use_nodes": true,
+          "nodes": [
+            {
+              "type": "ShaderNodeBsdfPrincipled",
+              "name": "Principled BSDF",
+              "attribute_name": null
+            },
+            {
+              "type": "ShaderNodeOutputMaterial",
+              "name": "Material Output",
+              "attribute_name": null
+            },
+            {
+              "type": "ShaderNodeAttribute",
+              "name": "Attribute",
+              "attribute_name": "EyeColor"
+            }
+          ],
+          "links": [
+            [
+              "Principled BSDF",
+              "BSDF",
+              "Material Output",
+              "Surface"
+            ],
+            [
+              "Attribute",
+              "Color",
+              "Principled BSDF",
+              "Base Color"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "viewports": [
+    {
+      "screen": "Animation",
+      "shading_type": "SOLID",
+      "color_type": "MATERIAL",
+      "show_overlays": false
+    },
+    {
+      "screen": "Animation",
+      "shading_type": "SOLID",
+      "color_type": "MATERIAL",
+      "show_overlays": false
+    },
+    {
+      "screen": "Geometry Nodes",
+      "shading_type": "SOLID",
+      "color_type": "MATERIAL",
+      "show_overlays": false
+    },
+    {
+      "screen": "Layout",
+      "shading_type": "SOLID",
+      "color_type": "MATERIAL",
+      "show_overlays": false
+    },
+    {
+      "screen": "Modeling",
+      "shading_type": "SOLID",
+      "color_type": "MATERIAL",
+      "show_overlays": false
+    },
+    {
+      "screen": "Scripting",
+      "shading_type": "SOLID",
+      "color_type": "MATERIAL",
+      "show_overlays": false
+    },
+    {
+      "screen": "Sculpting",
+      "shading_type": "SOLID",
+      "color_type": "MATERIAL",
+      "show_overlays": false
+    },
+    {
+      "screen": "Shading",
+      "shading_type": "MATERIAL",
+      "color_type": "MATERIAL",
+      "show_overlays": false
+    },
+    {
+      "screen": "Texture Paint",
+      "shading_type": "SOLID",
+      "color_type": "TEXTURE",
+      "show_overlays": false
+    },
+    {
+      "screen": "UV Editing",
+      "shading_type": "SOLID",
+      "color_type": "MATERIAL",
+      "show_overlays": false
+    }
+  ]
+}

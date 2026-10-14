@@ -1,0 +1,1567 @@
+{
+  "method": "actual radial curves fitted in arc length; one cubic longitudinal and degree-four periodic normal field",
+  "curve_spacing_arc": 0.055,
+  "curve_fairing_length": 0.02,
+  "field_spacing_Z": 0.05,
+  "angular_order": 4,
+  "source": "frozen actual E2 triangle surface",
+  "independent_XYZ_allowed_via_surface_normals": true,
+  "same_target_and_scope_for_A_B": true,
+  "release_weights_in_fit": true,
+  "full_front_neck_uniform_translation": false,
+  "unscaled_maximum_grid_displacement": 0.0021342330768888812,
+  "curve_fits": [
+    {
+      "arc_length": 1.1815527504080374,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1807287697901003,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1788462216787763,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1758337986704095,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1705810255486413,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.164029197352321,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1570535358060714,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1500518691269426,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1450071701584437,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1418501156034144,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.139986541258726,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1387608805647318,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1380184947426928,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1372064547262506,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1361668175605775,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1350938286719545,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.134446842832054,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1338675128495512,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1329611139557796,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.131299903563137,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1291266914329376,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.126658313029092,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1240631439701156,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.121298103212298,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.118590142958,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1159294467384977,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1136673261396641,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1127485445132856,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1129457793404025,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1153743528630953,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1242822147282565,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1430936003610617,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1679177045683578,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1815048680807583,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1889246467862649,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1912684123221902,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1887513615651055,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1810408087688335,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1669280061151,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1494190406800964,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1299762196396645,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1188695508551503,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1115969016161849,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1068072371219084,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1037921096553884,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1013859781147737,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0992814596077791,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0973189017550753,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0954574381696356,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.093532708193189,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0916838880543847,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0897651726099815,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0878418956264735,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.086124267225351,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0844220366388468,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0828552169163421,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0813117107566754,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0799436289385855,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0787250921089964,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.07774998813422,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0768370908327143,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0761424140500688,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0755684212615728,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0752479904190375,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0750963761533234,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0752771343711223,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.075603090468098,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.076188000638852,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.076860461413239,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0777332168262337,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0786848949666263,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.079875088589325,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0812211938994138,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0827855685551817,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.084360502074572,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0860751345519106,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.087840452951176,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0897851064256265,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0917032856119016,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0935579156310207,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0954935202646208,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0973460878450725,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.0993126031745348,
+      "control_count": 23,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1014243044971301,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1038303378790943,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1068211013057254,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1115728205011302,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.118812355353204,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1299220154625595,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1497843485892314,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1669154264769204,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1810423739473646,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1887691245710619,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.191253911735216,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1889079767064772,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.181489904257029,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1679127085803775,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1430853742206968,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.124275426411188,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1153909818214165,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1129272990971542,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1127497855399755,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.113666016184323,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1159181027383298,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1185503501142597,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1212681793551325,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1240194142225652,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1266343252267463,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1290603511275137,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1312241870725883,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.13288901453623,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1337963109832563,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1343359832222906,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1350133557066902,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1359848681574762,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1370504115283608,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.137815752884884,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.138577085734097,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.139803868127994,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1417061085431537,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1449454330924056,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.14996018278953,
+      "control_count": 24,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1570796675453925,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1640743841694263,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1707037675128602,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1760687624015291,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.1791608524418673,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    },
+    {
+      "arc_length": 1.180854794918072,
+      "control_count": 25,
+      "endpoint_position_tangent_observations": [
+        0,
+        1,
+        2,
+        179,
+        180,
+        181
+      ]
+    }
+  ],
+  "visual_acceptance": "pending",
+  "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "measurement_protocol_sha256": "da275f5db5421384fd0bca8b6748c07b936d81bdbe8ed8d081c1af025452ccfc",
+  "baseline_arrays_sha256": "c4f01f4996ea0b254e3c454f49579ec6ae66ddd3a20cc15a6ed9e643a46d7857",
+  "field_sha256": "564287327dd1d75072b452fc27644459bf6e88ac71bec8222f239af0e3b91d03",
+  "D": 0.11709836009845984,
+  "unscaled_maximum_vertex_displacement": 0.0021490925398999806,
+  "unscaled_maximum_eye_local_displacement": 0.0015253661994241603,
+  "coincident_groups_tied": 0,
+  "coincident_groups_with_frozen_priority": 0,
+  "scales": {
+    "A": 1.9172652078976653,
+    "B": 1.9172652078976653
+  },
+  "field_script_sha256": "f75e34cddd906e2f4bdac91720b5d1c515006607442ca435ee2822f87525463c",
+  "driver_sha256": "16e97672463c3d2aa2e4194445e281a2470884b6337f85060e99b0c7e5df89ec"
+}

@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "label": "B",
+  "purpose": "one independent selected-native reproduction from fixed E2",
+  "selected_candidate": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\candidate_B\\Naiwa_Character.blend",
+  "selected_candidate_sha256": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+  "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.blend",
+  "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "reproduced_project": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\rebuild_selected\\Naiwa_Character.blend",
+  "amplitude_scale": 1.0,
+  "immutable_inputs_sha256": {
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.blend": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\candidate_B\\Naiwa_Character.blend": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\baseline\\snapshot.json": "853860788ad2061ac267e1c93f05accb75a1f0c4ef4333a000b08141042cfd1a",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\baseline\\baseline_arrays.npz": "c4f01f4996ea0b254e3c454f49579ec6ae66ddd3a20cc15a6ed9e643a46d7857",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\measurement_protocol.json": "da275f5db5421384fd0bca8b6748c07b936d81bdbe8ed8d081c1af025452ccfc",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\c3_field.npz": "242e78360a1a9440ecb2afd91159210e286c71a337ad9f7ea88a556fd14043c5",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\c3_field_report.json": "925dde98bbee532a8d474f4a9f34694401f49120026dee75f0c9cd279cd08e82",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\candidate_B\\build_report.json": "2a2788aca6ca0ef04beb20326ca0ef17a31e87666078f921cc0340d0023cc063",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\reproduce_c3_selected.py": "795dc17a67ce5cc27547a90b4ca6d0a0c2c0c1a2d6f64f7f93869a3d6337558c",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\c3_measurement_utils.py": "7cf1d314d4f15a0e6346b5803ada4c8a9eb85eb15b8c80272d6860b4fa1288e7"
+  },
+  "recipe": "frozen world direction times recorded scale; solve affine transform; float32 native coordinates; exact frozen and eye-local restoration",
+  "solver_or_generation_driver_imported": false,
+  "historical_stages_reconstructed": false,
+  "render_or_export_performed": false,
+  "pose_contact_validation_repeated": false,
+  "objects": {
+    "Head and torso silhouette only": {
+      "native_coordinates_bit_exact": true,
+      "native_triangles_bit_exact": true,
+      "coordinate_sha256": "e5b6cc8c52e7f356f03d8e7799e856778f73a582291872664e1eefb79b22eb1f",
+      "triangle_sha256": "d7e525d3cf2f66a7c734518d953ef6ec83707eedf2c4489277528f1f20da71f0",
+      "vertex_count": 102914,
+      "triangle_count": 205824,
+      "fingerprint_exact": true,
+      "visibility_exact": true
+    },
+    "L concentric iris and pupil": {
+      "native_coordinates_bit_exact": true,
+      "native_triangles_bit_exact": true,
+      "coordinate_sha256": "7de9e0192794fd2bfdd877eb982ac95c0146b11b1015f7b04fe4d4649b9e143b",
+      "triangle_sha256": "0da80cfafd6593e447d4b3c5bab7440429392b92b9b69b3655c74662e6221e42",
+      "vertex_count": 5474,
+      "triangle_count": 10944,
+      "fingerprint_exact": true,
+      "visibility_exact": true
+    },
+    "L eye glint": {
+      "native_coordinates_bit_exact": true,
+      "native_triangles_bit_exact": true,
+      "coordinate_sha256": "b55deb4eadde23cef9c21305ab965898f71856aa542b331902f582e295330fd8",
+      "triangle_sha256": "ac158226e172284aec0c6c9a7e25c86ab695b9f9cbe738abedbfecae7ccc3559",
+      "vertex_count": 362,
+      "triangle_count": 720,
+      "fingerprint_exact": true,
+      "visibility_exact": true
+    },
+    "Naiwa unified golden body": {
+      "native_coordinates_bit_exact": true,
+      "native_triangles_bit_exact": true,
+      "coordinate_sha256": "361ff8116d47e3f2ba004ddd7281c8a23ef37c093b0f3f3b6514a1bb23f78c93",
+      "triangle_sha256": "59029e17ed3eb512202b3f6b186174b8756fdc3af860ab20083241d582d65751",
+      "vertex_count": 371666,
+      "triangle_count": 743328,
+      "fingerprint_exact": true,
+      "visibility_exact": true
+    },
+    "Preview floor": {
+      "native_coordinates_bit_exact": true,
+      "native_triangles_bit_exact": true,
+      "coordinate_sha256": "f69cbb67088dc9a345cdb801e2d5ecfdca2581181cb7cf0748038cb79debda84",
+      "triangle_sha256": "46b39b610dc2cd4e110ae89a789cd92bbdc81c72db452f315ae3e336bb2c95ef",
+      "vertex_count": 4,
+      "triangle_count": 2,
+      "fingerprint_exact": true,
+      "visibility_exact": true
+    },
+    "R concentric iris and pupil": {
+      "native_coordinates_bit_exact": true,
+      "native_triangles_bit_exact": true,
+      "coordinate_sha256": "8716ba1873649bf0182e46beea29ef843f4125080a93e8c9515033a1c2acd225",
+      "triangle_sha256": "0da80cfafd6593e447d4b3c5bab7440429392b92b9b69b3655c74662e6221e42",
+      "vertex_count": 5474,
+      "triangle_count": 10944,
+      "fingerprint_exact": true,
+      "visibility_exact": true
+    },
+    "R eye glint": {
+      "native_coordinates_bit_exact": true,
+      "native_triangles_bit_exact": true,
+      "coordinate_sha256": "b55deb4eadde23cef9c21305ab965898f71856aa542b331902f582e295330fd8",
+      "triangle_sha256": "f1ff4248a9011ab3ab4c762cb7c2d00486097e096cb832384607f9c48ba43193",
+      "vertex_count": 362,
+      "triangle_count": 720,
+      "fingerprint_exact": true,
+      "visibility_exact": true
+    },
+    "Short closed oral seam": {
+      "native_coordinates_bit_exact": true,
+      "native_triangles_bit_exact": true,
+      "coordinate_sha256": "9f3f33af8e9161a1f45d29e93128ccd07b410218927d9e9f7357d84f432aa379",
+      "triangle_sha256": "bc4403c2c0dec46aeabdf2bc732938b358efc256227f4148ba99bc1868db6c44",
+      "vertex_count": 4322,
+      "triangle_count": 8640,
+      "fingerprint_exact": true,
+      "visibility_exact": true
+    }
+  },
+  "field_masks_equal_immutable_baseline": true,
+  "actual_source_native_data_matches_fixed_cache": true,
+  "maximum_actual_world_displacement": 0.007371504125862908,
+  "frozen_and_eye_local_coordinates_bit_exact": true,
+  "reproduction_actually_saved_and_reopened": true,
+  "all_materials_links_modifiers_constraints_exact": true,
+  "rig_exact": true,
+  "complete_original_action_curves_exact": true,
+  "all_immutable_input_hashes_unchanged": true,
+  "reproduced_project_sha256": "922196baeda71f52a662fb0616a876ee52cc143254d7e36539ebce72fa9cead0",
+  "final_immutable_hash_check": {
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.blend": true,
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\candidate_B\\Naiwa_Character.blend": true,
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\baseline\\snapshot.json": true,
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\baseline\\baseline_arrays.npz": true,
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\measurement_protocol.json": true,
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\c3_field.npz": true,
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\c3_field_report.json": true,
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\candidate_B\\build_report.json": true,
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\reproduce_c3_selected.py": true,
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\c3_measurement_utils.py": true
+  }
+}

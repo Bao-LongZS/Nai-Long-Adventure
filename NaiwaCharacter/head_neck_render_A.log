@@ -1,0 +1,24 @@
+00:00.734  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\candidate_A\Naiwa_Character.blend"
+00:02.890  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\A_head_front.png'
+00:03.187  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\A_head_three_quarter.png'
+00:03.500  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\A_head_side.png'
+00:03.781  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\A_full_front.png'
+00:04.062  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\A_common_ORTHO.png'
+00:04.984  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\A_head_gray_front.png'
+00:05.234  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\A_head_gray_three_quarter.png'
+00:05.484  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\A_head_gray_side.png'
+00:05.734  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\A_common_gray_ORTHO.png'
+C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\render_head_neck_comparisons.py:64: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+00:06.047  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\A_body_id_front.png'
+00:06.281  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\A_body_id_three_quarter.png'
+00:06.531  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\A_body_id_side.png'
+00:06.765  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\A_common_body_id.png'
+00:07.047  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\A_extra_yaw45_pitch-5.png'
+00:07.312  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\A_extra_yaw55_pitch0.png'
+00:07.594  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\A_extra_lens135.png'
+HEAD_NECK_MODEL_RENDER_OK A
+HEAD_NECK_COMPARISONS_OK ['A']
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

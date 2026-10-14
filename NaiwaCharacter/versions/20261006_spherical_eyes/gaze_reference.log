@@ -1,0 +1,21 @@
+00:00.625  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_side_continuity\Naiwa_Character.blend"
+00:03.078  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\reference_comparison\original_common_ORTHO.png'
+00:03.437  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\reference_comparison\original_common_PERSP.png'
+00:03.797  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\candidate_A\Naiwa_Character.blend"
+00:05.094  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\reference_comparison\A_common_ORTHO.png'
+00:05.437  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\reference_comparison\A_common_PERSP.png'
+00:06.750  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\reference_comparison\A_gaze20_common_ORTHO.png'
+00:07.031  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\reference_comparison\A_gaze20_front.png'
+00:07.609  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\reference_comparison\A_gaze35_common_ORTHO.png'
+00:07.875  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\reference_comparison\A_gaze35_front.png'
+00:08.125  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\candidate_B\Naiwa_Character.blend"
+00:09.141  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\reference_comparison\B_common_ORTHO.png'
+00:09.500  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\reference_comparison\B_common_PERSP.png'
+00:10.672  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\reference_comparison\B_gaze20_common_ORTHO.png'
+00:10.937  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\reference_comparison\B_gaze20_front.png'
+00:11.516  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\reference_comparison\B_gaze35_common_ORTHO.png'
+00:11.797  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\reference_comparison\B_gaze35_front.png'
+SPHERICAL_GAZE_REFERENCE_OK
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

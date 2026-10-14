@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "candidate": "N2",
+  "source_blend_sha256": "9397186f3ae13e93e05cc0d492c12ceb68b743ab4d2a9a0d650426a47a66b0cb",
+  "fbx_sha256": "55f648db74606bca94f4d65cd2b5eb72a2dde2fd95e00127a4e8242b442afa59",
+  "meshes": 6,
+  "bones": 10,
+  "actions": [
+    "Naiwa_Rig|Naiwa_Rig|Naiwa_Idle",
+    "Naiwa_Rig|Naiwa_Rig|Naiwa_Jump",
+    "Naiwa_Rig|Naiwa_Rig|Naiwa_Laugh",
+    "Naiwa_Rig|Naiwa_Rig|Naiwa_Walk"
+  ],
+  "all_meshes_have_armature_modifier": true,
+  "mesh_vertex_counts": {
+    "L concentric iris and pupil": 5474,
+    "L eye glint": 362,
+    "Naiwa unified golden body": 371666,
+    "R concentric iris and pupil": 5474,
+    "R eye glint": 362,
+    "Short closed oral seam": 4322
+  },
+  "body_and_eye_color_attributes": {
+    "L concentric iris and pupil": {
+      "EyeColor": {
+        "domain": "CORNER",
+        "data_type": "BYTE_COLOR",
+        "element_count": 22080
+      }
+    },
+    "Naiwa unified golden body": {
+      "NaiwaColor": {
+        "domain": "CORNER",
+        "data_type": "BYTE_COLOR",
+        "element_count": 1486656
+      }
+    },
+    "R concentric iris and pupil": {
+      "EyeColor": {
+        "domain": "CORNER",
+        "data_type": "BYTE_COLOR",
+        "element_count": 22080
+      }
+    }
+  },
+  "source_blend_unchanged": true
+}

@@ -1,0 +1,284 @@
+{
+  "method": "one cubic-Z/even-transverse YZ vertex field; protected-mask triangle barycentric front-ray Jacobian; joint reference retraction and mouth-curvature solve",
+  "field_control_count": 84,
+  "Z_spacing": 0.045,
+  "Z_support": [
+    1.93,
+    2.41
+  ],
+  "transverse_even_modes": 3,
+  "X_displacement": "exact zero",
+  "eye_local_displacement": "exact zero through C2 upper support",
+  "mouth_freeze_distance": 0.005172620363988828,
+  "mouth_release_end": 0.044604122205852845,
+  "source": "immutable cached E2 actual triangles; no E2 project reopened",
+  "weights_in_vertex_Jacobian_before_optimization": true,
+  "curvature_target_sigma_arc": 0.014,
+  "curvature_goal_baseline_fraction": 0.7,
+  "curvature_linear_bound_relative_to_fixed_baseline_peak": 0.995,
+  "one_target_fixed_for_A_B": true,
+  "same_target_and_scope_for_A_B": true,
+  "scales": {
+    "A": 0.5,
+    "B": 1.0
+  },
+  "optimization_history": [
+    {
+      "iteration": 0,
+      "active_count": 1,
+      "maximum_linear_constraint_violation": 0.41484449138145374
+    },
+    {
+      "iteration": 13,
+      "active_count": 5,
+      "maximum_linear_constraint_violation": 6.106226635438361e-16
+    }
+  ],
+  "actual_triangle_predictions": {
+    "A": {
+      "-0.18": {
+        "baseline_peak": 12.814833406454124,
+        "predicted_peak": 11.349254005347232,
+        "predicted_peak_ratio": 0.8856341432914172,
+        "baseline_angle80_width": 0.06697875739513581,
+        "predicted_angle80_width": 0.07104477815508814,
+        "predicted_angle80_width_ratio": 1.0607061241217892
+      },
+      "-0.12": {
+        "baseline_peak": 58.72101362562424,
+        "predicted_peak": 58.09117120301105,
+        "predicted_peak_ratio": 0.9892739858574522,
+        "baseline_angle80_width": 0.051526760172833475,
+        "predicted_angle80_width": 0.050290176076261905,
+        "predicted_angle80_width_ratio": 0.9760011284927723
+      },
+      "-0.08": {
+        "baseline_peak": 58.60561274166071,
+        "predicted_peak": 58.37248300609402,
+        "predicted_peak_ratio": 0.9960220578770442,
+        "baseline_angle80_width": 0.05447794072004675,
+        "predicted_angle80_width": 0.06645220259494011,
+        "predicted_angle80_width_ratio": 1.219800192823498
+      },
+      "-0.04": {
+        "baseline_peak": 25.62053569661924,
+        "predicted_peak": 25.5423585677734,
+        "predicted_peak_ratio": 0.9969486536202226,
+        "baseline_angle80_width": 0.07072217908785333,
+        "predicted_angle80_width": 0.07575441879310474,
+        "predicted_angle80_width_ratio": 1.0711550431583874
+      },
+      "0.0": {
+        "baseline_peak": 31.5144627864388,
+        "predicted_peak": 31.281294934989305,
+        "predicted_peak_ratio": 0.992601243021987,
+        "baseline_angle80_width": 0.060507468422358435,
+        "predicted_angle80_width": 0.07283381495809976,
+        "predicted_angle80_width_ratio": 1.20371611731795
+      },
+      "0.04": {
+        "baseline_peak": 25.348673545590007,
+        "predicted_peak": 25.181368120855485,
+        "predicted_peak_ratio": 0.993399835126141,
+        "baseline_angle80_width": 0.07082687042066599,
+        "predicted_angle80_width": 0.0780187507747015,
+        "predicted_angle80_width_ratio": 1.101541693305385
+      },
+      "0.08": {
+        "baseline_peak": 59.87841728656199,
+        "predicted_peak": 59.676172116217096,
+        "predicted_peak_ratio": 0.9966224028705201,
+        "baseline_angle80_width": 0.04754203116220457,
+        "predicted_angle80_width": 0.053993318663534295,
+        "predicted_angle80_width_ratio": 1.1356965056734563
+      },
+      "0.12": {
+        "baseline_peak": 58.85565388552381,
+        "predicted_peak": 58.16967330624599,
+        "predicted_peak_ratio": 0.9883446953012862,
+        "baseline_angle80_width": 0.044908373931181245,
+        "predicted_angle80_width": 0.048389959696535034,
+        "predicted_angle80_width_ratio": 1.0775264268238494
+      },
+      "0.18": {
+        "baseline_peak": 13.107368579208774,
+        "predicted_peak": 11.538100371249776,
+        "predicted_peak_ratio": 0.8802758770018713,
+        "baseline_angle80_width": 0.06611770087683266,
+        "predicted_angle80_width": 0.07050234638943637,
+        "predicted_angle80_width_ratio": 1.0663157589337784
+      }
+    },
+    "B": {
+      "-0.18": {
+        "baseline_peak": 12.814833406454124,
+        "predicted_peak": 12.263356373688266,
+        "predicted_peak_ratio": 0.9569657275069913,
+        "baseline_angle80_width": 0.06697875739513581,
+        "predicted_angle80_width": 0.07516378039268207,
+        "predicted_angle80_width_ratio": 1.122203267362208
+      },
+      "-0.12": {
+        "baseline_peak": 58.72101362562424,
+        "predicted_peak": 57.09295022914506,
+        "predicted_peak_ratio": 0.9722746033156223,
+        "baseline_angle80_width": 0.051526760172833475,
+        "predicted_angle80_width": 0.05755710318601459,
+        "predicted_angle80_width_ratio": 1.1170332268699577
+      },
+      "-0.08": {
+        "baseline_peak": 58.60561274166071,
+        "predicted_peak": 58.116689946141214,
+        "predicted_peak_ratio": 0.9916574066433754,
+        "baseline_angle80_width": 0.05447794072004675,
+        "predicted_angle80_width": 0.07302876335094477,
+        "predicted_angle80_width_ratio": 1.34051989457949
+      },
+      "-0.04": {
+        "baseline_peak": 25.62053569661924,
+        "predicted_peak": 25.49481342865661,
+        "predicted_peak_ratio": 0.9950929102556111,
+        "baseline_angle80_width": 0.07072217908785333,
+        "predicted_angle80_width": 0.08366615651383674,
+        "predicted_angle80_width_ratio": 1.1830257154534787
+      },
+      "0.0": {
+        "baseline_peak": 31.5144627864388,
+        "predicted_peak": 30.872733531416237,
+        "predicted_peak_ratio": 0.9796369920892731,
+        "baseline_angle80_width": 0.060507468422358435,
+        "predicted_angle80_width": 0.07855145224922394,
+        "predicted_angle80_width_ratio": 1.298210853921596
+      },
+      "0.04": {
+        "baseline_peak": 25.348673545590007,
+        "predicted_peak": 24.938668043764892,
+        "predicted_peak_ratio": 0.9838253665980702,
+        "baseline_angle80_width": 0.07082687042066599,
+        "predicted_angle80_width": 0.08457872110195147,
+        "predicted_angle80_width_ratio": 1.1941614898358257
+      },
+      "0.08": {
+        "baseline_peak": 59.87841728656199,
+        "predicted_peak": 59.37326511780468,
+        "predicted_peak_ratio": 0.9915637020541176,
+        "baseline_angle80_width": 0.04754203116220457,
+        "predicted_angle80_width": 0.07278858415118244,
+        "predicted_angle80_width_ratio": 1.5310364822832523
+      },
+      "0.12": {
+        "baseline_peak": 58.85565388552381,
+        "predicted_peak": 57.11039768389394,
+        "predicted_peak_ratio": 0.9703468386397601,
+        "baseline_angle80_width": 0.044908373931181245,
+        "predicted_angle80_width": 0.0534491112915052,
+        "predicted_angle80_width_ratio": 1.1901813985385443
+      },
+      "0.18": {
+        "baseline_peak": 13.107368579208774,
+        "predicted_peak": 11.999454078879705,
+        "predicted_peak_ratio": 0.9154739188393259,
+        "baseline_angle80_width": 0.06611770087683266,
+        "predicted_angle80_width": 0.07446518823001463,
+        "predicted_angle80_width_ratio": 1.1262519301560725
+      }
+    }
+  },
+  "fixed_reference_row_footprint_actual_triangle_predictions": [
+    {
+      "state": "E2",
+      "observations": [
+        {
+          "reference_row": 220,
+          "world_X": 0.194,
+          "world_Z": 2.306,
+          "actual_front_world_Y": -0.30629777908325195
+        },
+        {
+          "reference_row": 260,
+          "world_X": 0.194,
+          "world_Z": 2.214,
+          "actual_front_world_Y": -0.2722511291503906
+        },
+        {
+          "reference_row": 300,
+          "world_X": 0.231,
+          "world_Z": 2.122,
+          "actual_front_world_Y": -0.2752394676208496
+        }
+      ]
+    },
+    {
+      "state": "A",
+      "observations": [
+        {
+          "reference_row": 220,
+          "world_X": 0.194,
+          "world_Z": 2.306,
+          "actual_front_world_Y": -0.3041343688964844,
+          "effective_delta_Y_from_E2": 0.002163410186767578
+        },
+        {
+          "reference_row": 260,
+          "world_X": 0.194,
+          "world_Z": 2.214,
+          "actual_front_world_Y": -0.2687842845916748,
+          "effective_delta_Y_from_E2": 0.0034668445587158203
+        },
+        {
+          "reference_row": 300,
+          "world_X": 0.231,
+          "world_Z": 2.122,
+          "actual_front_world_Y": -0.2724461555480957,
+          "effective_delta_Y_from_E2": 0.0027933120727539062
+        }
+      ]
+    },
+    {
+      "state": "B",
+      "observations": [
+        {
+          "reference_row": 220,
+          "world_X": 0.194,
+          "world_Z": 2.306,
+          "actual_front_world_Y": -0.3020341396331787,
+          "effective_delta_Y_from_E2": 0.004263639450073242
+        },
+        {
+          "reference_row": 260,
+          "world_X": 0.194,
+          "world_Z": 2.214,
+          "actual_front_world_Y": -0.2653186321258545,
+          "effective_delta_Y_from_E2": 0.006932497024536133
+        },
+        {
+          "reference_row": 300,
+          "world_X": 0.231,
+          "world_Z": 2.122,
+          "actual_front_world_Y": -0.2696535587310791,
+          "effective_delta_Y_from_E2": 0.005585908889770508
+        }
+      ]
+    }
+  ],
+  "unscaled_maximum_vertex_displacement": 0.007371492890071764,
+  "unscaled_maximum_eye_local_displacement": 0.0,
+  "delta_world_ranges": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      -0.0012844680531619685,
+      0.007371473771226482
+    ],
+    [
+      -0.005481883844835222,
+      0.0020838745200620797
+    ]
+  ],
+  "visual_acceptance": "pending saved-A key views; prediction is not acceptance",
+  "solver_residuals": {
+    "maximum_linear_curvature_violation": 6.106226635438361e-16
+  }
+}

@@ -1,0 +1,14 @@
+00:00.594  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\candidate_N2\Naiwa_Character.blend"
+R1_SOLVER_PROGRESS 200 primal= 0.0007308740243600922 change= 6.491733996158397e-06
+R1_SOLVER_PROGRESS 400 primal= 0.0005803805527163771 change= 1.2807649485841313e-06
+R1_SOLVER_PROGRESS 600 primal= 0.0005009192791396538 change= 7.008254602525082e-07
+R1_SOLVER_PROGRESS 800 primal= 0.0004478063127990809 change= 1.8792741602742056e-07
+R1_SOLVER_PROGRESS 1000 primal= 0.00040833309398424154 change= 2.854832600179824e-06
+R1_SOLVER_PROGRESS 1200 primal= 0.0003771544590556481 change= 1.3187169767824256e-07
+R1_SOLVER_PROGRESS 1400 primal= 0.00035152891764527567 change= 6.982369952920523e-08
+R1_SOLVER_PROGRESS 1600 primal= 0.0003298683441351734 change= 2.0256831278098334e-07
+信息: 已另存为 "Naiwa_Character.blend"
+N2_ROUND_REFINEMENT_BUILD_OK {"Naiwa unified golden body": {"changed_vertices": 24119, "maximum_total_displacement": 0.005980529594745169, "maximum_abs_X": 0.002568155527114868, "maximum_abs_Z": 0.0, "maximum_abs_source_normal_projection": 0.004528745450353852, "has_custom_normals_before": false, "custom_normals_action": "none; preserve source normals representation and update geometry"}, "Head and torso silhouette only": {"changed_vertices": 21752, "maximum_total_displacement": 0.00596345543876849, "maximum_abs_X": 0.002482891082763672, "maximum_abs_Z": 0.0, "maximum_abs_source_normal_projection": 0.004485714364591337, "has_custom_normals_before": false, "custom_normals_action": "none; preserve source normals representation and update geometry"}}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

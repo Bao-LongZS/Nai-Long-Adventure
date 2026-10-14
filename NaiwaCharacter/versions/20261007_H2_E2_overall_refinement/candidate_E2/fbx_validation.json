@@ -1,0 +1,965 @@
+{
+  "status": "passed",
+  "candidate": "E2",
+  "source_blend": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.blend",
+  "fbx": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.fbx",
+  "source_blend_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "fbx_sha256": "8dae9ce28c4b44465dcb8e73dd462804c3a561daee9eebaf79842900a3005147",
+  "surface_tolerance_world_units": 1e-05,
+  "effective_weight_tolerance": 1e-05,
+  "baked_action_world_deformation_matrix_tolerance": 0.001,
+  "mesh_surface_checks": {
+    "Naiwa unified golden body": {
+      "native_REST_vertex_count": 371666,
+      "FBX_REST_vertex_count": 371666,
+      "native_actual_triangle_count": 743328,
+      "FBX_actual_triangle_count": 743328,
+      "all_vertices_checked_both_directions": true,
+      "maximum_FBX_to_native_vertex_distance": 4.995779363525799e-07,
+      "maximum_native_to_FBX_vertex_distance": 4.995779363525799e-07,
+      "all_triangle_centroids_checked_both_directions": true,
+      "maximum_FBX_to_native_actual_surface_distance": 6.542532560160907e-07,
+      "maximum_native_to_FBX_actual_surface_distance": 6.597025503651821e-07,
+      "maximum_effective_bone_weight_difference": 0.0,
+      "maximum_native_to_FBX_effective_bone_weight_difference": 0.0,
+      "native_weight_sum_range": [
+        0.9049804545938969,
+        0.9998779296875
+      ],
+      "FBX_weight_sum_range": [
+        0.9049804545938969,
+        0.9998779296875
+      ],
+      "all_vertices_effectively_bound": true,
+      "source_color_attributes": {
+        "NaiwaColor": {
+          "domain": "CORNER",
+          "data_type": "FLOAT_COLOR"
+        }
+      },
+      "actual_eye_green_black_color_check": null,
+      "FBX_color_attributes": {
+        "NaiwaColor": {
+          "domain": "CORNER",
+          "data_type": "BYTE_COLOR",
+          "element_count": 1486656
+        }
+      }
+    },
+    "L concentric iris and pupil": {
+      "native_REST_vertex_count": 5474,
+      "FBX_REST_vertex_count": 5474,
+      "native_actual_triangle_count": 10944,
+      "FBX_actual_triangle_count": 10944,
+      "all_vertices_checked_both_directions": true,
+      "maximum_FBX_to_native_vertex_distance": 4.814712610823335e-07,
+      "maximum_native_to_FBX_vertex_distance": 4.814712610823335e-07,
+      "all_triangle_centroids_checked_both_directions": true,
+      "maximum_FBX_to_native_actual_surface_distance": 6.447228315664688e-07,
+      "maximum_native_to_FBX_actual_surface_distance": 6.536584464811313e-07,
+      "maximum_effective_bone_weight_difference": 0.0,
+      "maximum_native_to_FBX_effective_bone_weight_difference": 0.0,
+      "native_weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "FBX_weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "all_vertices_effectively_bound": true,
+      "source_color_attributes": {
+        "EyeColor": {
+          "domain": "CORNER",
+          "data_type": "FLOAT_COLOR"
+        }
+      },
+      "actual_eye_green_black_color_check": {
+        "all_actual_triangle_colors_checked_both_directions": true,
+        "maximum_FBX_to_native_RGBA_difference": 5.873511665921427e-08,
+        "maximum_native_to_FBX_RGBA_difference": 5.873511665921427e-08,
+        "maximum_raw_linear_RGBA_quantization_difference": 0.001355677843093872,
+        "FBX_import_BYTE_COLOR": true,
+        "color_representation_comparison": "linear float source -> 8-bit sRGB -> decoded linear RGB",
+        "actual_green_black_mask_and_RGBA_values_preserved": true,
+        "tolerance": 1e-05
+      },
+      "FBX_color_attributes": {
+        "EyeColor": {
+          "domain": "CORNER",
+          "data_type": "BYTE_COLOR",
+          "element_count": 22080
+        }
+      }
+    },
+    "L eye glint": {
+      "native_REST_vertex_count": 362,
+      "FBX_REST_vertex_count": 362,
+      "native_actual_triangle_count": 720,
+      "FBX_actual_triangle_count": 720,
+      "all_vertices_checked_both_directions": true,
+      "maximum_FBX_to_native_vertex_distance": 6.861009751446545e-07,
+      "maximum_native_to_FBX_vertex_distance": 6.861009751446545e-07,
+      "all_triangle_centroids_checked_both_directions": true,
+      "maximum_FBX_to_native_actual_surface_distance": 5.81718097691919e-07,
+      "maximum_native_to_FBX_actual_surface_distance": 5.5033518719938e-07,
+      "maximum_effective_bone_weight_difference": 0.0,
+      "maximum_native_to_FBX_effective_bone_weight_difference": 0.0,
+      "native_weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "FBX_weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "all_vertices_effectively_bound": true,
+      "source_color_attributes": {},
+      "actual_eye_green_black_color_check": null,
+      "FBX_color_attributes": {}
+    },
+    "R concentric iris and pupil": {
+      "native_REST_vertex_count": 5474,
+      "FBX_REST_vertex_count": 5474,
+      "native_actual_triangle_count": 10944,
+      "FBX_actual_triangle_count": 10944,
+      "all_vertices_checked_both_directions": true,
+      "maximum_FBX_to_native_vertex_distance": 4.807789650840277e-07,
+      "maximum_native_to_FBX_vertex_distance": 4.807789650840277e-07,
+      "all_triangle_centroids_checked_both_directions": true,
+      "maximum_FBX_to_native_actual_surface_distance": 6.587341658814694e-07,
+      "maximum_native_to_FBX_actual_surface_distance": 6.551429123646813e-07,
+      "maximum_effective_bone_weight_difference": 0.0,
+      "maximum_native_to_FBX_effective_bone_weight_difference": 0.0,
+      "native_weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "FBX_weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "all_vertices_effectively_bound": true,
+      "source_color_attributes": {
+        "EyeColor": {
+          "domain": "CORNER",
+          "data_type": "FLOAT_COLOR"
+        }
+      },
+      "actual_eye_green_black_color_check": {
+        "all_actual_triangle_colors_checked_both_directions": true,
+        "maximum_FBX_to_native_RGBA_difference": 5.873511665921427e-08,
+        "maximum_native_to_FBX_RGBA_difference": 5.873511665921427e-08,
+        "maximum_raw_linear_RGBA_quantization_difference": 0.001355677843093872,
+        "FBX_import_BYTE_COLOR": true,
+        "color_representation_comparison": "linear float source -> 8-bit sRGB -> decoded linear RGB",
+        "actual_green_black_mask_and_RGBA_values_preserved": true,
+        "tolerance": 1e-05
+      },
+      "FBX_color_attributes": {
+        "EyeColor": {
+          "domain": "CORNER",
+          "data_type": "BYTE_COLOR",
+          "element_count": 22080
+        }
+      }
+    },
+    "R eye glint": {
+      "native_REST_vertex_count": 362,
+      "FBX_REST_vertex_count": 362,
+      "native_actual_triangle_count": 720,
+      "FBX_actual_triangle_count": 720,
+      "all_vertices_checked_both_directions": true,
+      "maximum_FBX_to_native_vertex_distance": 5.331722263690608e-07,
+      "maximum_native_to_FBX_vertex_distance": 5.331722263690608e-07,
+      "all_triangle_centroids_checked_both_directions": true,
+      "maximum_FBX_to_native_actual_surface_distance": 5.373206590775226e-07,
+      "maximum_native_to_FBX_actual_surface_distance": 4.860611966250872e-07,
+      "maximum_effective_bone_weight_difference": 0.0,
+      "maximum_native_to_FBX_effective_bone_weight_difference": 0.0,
+      "native_weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "FBX_weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "all_vertices_effectively_bound": true,
+      "source_color_attributes": {},
+      "actual_eye_green_black_color_check": null,
+      "FBX_color_attributes": {}
+    },
+    "Short closed oral seam": {
+      "native_REST_vertex_count": 4322,
+      "FBX_REST_vertex_count": 4322,
+      "native_actual_triangle_count": 8640,
+      "FBX_actual_triangle_count": 8640,
+      "all_vertices_checked_both_directions": true,
+      "maximum_FBX_to_native_vertex_distance": 4.551566803456808e-07,
+      "maximum_native_to_FBX_vertex_distance": 4.551566803456808e-07,
+      "all_triangle_centroids_checked_both_directions": true,
+      "maximum_FBX_to_native_actual_surface_distance": 5.079397737972613e-07,
+      "maximum_native_to_FBX_actual_surface_distance": 5.16893237545446e-07,
+      "maximum_effective_bone_weight_difference": 0.0,
+      "maximum_native_to_FBX_effective_bone_weight_difference": 0.0,
+      "native_weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "FBX_weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "all_vertices_effectively_bound": true,
+      "source_color_attributes": {},
+      "actual_eye_green_black_color_check": null,
+      "FBX_color_attributes": {}
+    }
+  },
+  "action_checks": {
+    "Naiwa_Idle": {
+      "FBX_action_name": "Naiwa_Rig|Naiwa_Rig|Naiwa_Idle",
+      "native": {
+        "frame_range": [
+          1.0,
+          31.0
+        ],
+        "curves": 30,
+        "animated_bones": [
+          "Forearm.L",
+          "Forearm.R",
+          "Root",
+          "Shin.L",
+          "Shin.R",
+          "Thigh.L",
+          "Thigh.R",
+          "Torso",
+          "UpperArm.L",
+          "UpperArm.R"
+        ],
+        "sample_frames": [
+          1.0,
+          2.375,
+          8.5,
+          16.0,
+          16.125,
+          23.5,
+          30.375,
+          31.0
+        ]
+      },
+      "FBX_frame_range": [
+        1.0,
+        31.0
+      ],
+      "FBX_curve_count": 109,
+      "FBX_animated_bones": [
+        "Forearm.L",
+        "Forearm.R",
+        "Root",
+        "Shin.L",
+        "Shin.R",
+        "Thigh.L",
+        "Thigh.R",
+        "Torso",
+        "UpperArm.L",
+        "UpperArm.R"
+      ],
+      "sampled_bone_deformations": [
+        {
+          "frame": 1.0,
+          "maximum_world_deformation_matrix_entry_difference": 5.475012585520744e-07,
+          "bone_differences": {
+            "Forearm.L": 5.475012585520744e-07,
+            "Forearm.R": 5.475012585520744e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 1.6292068494294654e-07,
+            "UpperArm.L": 2.384185791015625e-07,
+            "UpperArm.R": 2.384185791015625e-07
+          }
+        },
+        {
+          "frame": 2.375,
+          "maximum_world_deformation_matrix_entry_difference": 4.435831215232611e-06,
+          "bone_differences": {
+            "Forearm.L": 4.426517989486456e-06,
+            "Forearm.R": 4.426517989486456e-06,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 4.416564479470253e-06,
+            "UpperArm.L": 4.435831215232611e-06,
+            "UpperArm.R": 4.435831215232611e-06
+          }
+        },
+        {
+          "frame": 8.5,
+          "maximum_world_deformation_matrix_entry_difference": 5.427282303571701e-07,
+          "bone_differences": {
+            "Forearm.L": 5.427282303571701e-07,
+            "Forearm.R": 5.427282303571701e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 1.685693860054016e-07,
+            "UpperArm.L": 2.980232238769531e-07,
+            "UpperArm.R": 2.980232238769531e-07
+          }
+        },
+        {
+          "frame": 16.0,
+          "maximum_world_deformation_matrix_entry_difference": 8.884817361831665e-07,
+          "bone_differences": {
+            "Forearm.L": 8.884817361831665e-07,
+            "Forearm.R": 8.884817361831665e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 1.8067657947540283e-07,
+            "UpperArm.L": 2.2351741790771484e-07,
+            "UpperArm.R": 2.2351741790771484e-07
+          }
+        },
+        {
+          "frame": 16.125,
+          "maximum_world_deformation_matrix_entry_difference": 4.978850483894348e-06,
+          "bone_differences": {
+            "Forearm.L": 4.9658119678497314e-06,
+            "Forearm.R": 4.9658119678497314e-06,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 4.954636096954346e-06,
+            "UpperArm.L": 4.978850483894348e-06,
+            "UpperArm.R": 4.978850483894348e-06
+          }
+        },
+        {
+          "frame": 23.5,
+          "maximum_world_deformation_matrix_entry_difference": 5.427282303571701e-07,
+          "bone_differences": {
+            "Forearm.L": 5.427282303571701e-07,
+            "Forearm.R": 5.427282303571701e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 1.685693860054016e-07,
+            "UpperArm.L": 2.980232238769531e-07,
+            "UpperArm.R": 2.980232238769531e-07
+          }
+        },
+        {
+          "frame": 30.375,
+          "maximum_world_deformation_matrix_entry_difference": 4.970410373061895e-06,
+          "bone_differences": {
+            "Forearm.L": 4.951783921569586e-06,
+            "Forearm.R": 4.951783921569586e-06,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 4.9350346671417356e-06,
+            "UpperArm.L": 4.970410373061895e-06,
+            "UpperArm.R": 4.970410373061895e-06
+          }
+        },
+        {
+          "frame": 31.0,
+          "maximum_world_deformation_matrix_entry_difference": 5.475012585520744e-07,
+          "bone_differences": {
+            "Forearm.L": 5.475012585520744e-07,
+            "Forearm.R": 5.475012585520744e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 1.6292068494294654e-07,
+            "UpperArm.L": 2.384185791015625e-07,
+            "UpperArm.R": 2.384185791015625e-07
+          }
+        }
+      ],
+      "complete_clip_and_source_bone_channel_coverage": true
+    },
+    "Naiwa_Walk": {
+      "FBX_action_name": "Naiwa_Rig|Naiwa_Rig|Naiwa_Walk",
+      "native": {
+        "frame_range": [
+          1.0,
+          33.0
+        ],
+        "curves": 30,
+        "animated_bones": [
+          "Forearm.L",
+          "Forearm.R",
+          "Root",
+          "Shin.L",
+          "Shin.R",
+          "Thigh.L",
+          "Thigh.R",
+          "Torso",
+          "UpperArm.L",
+          "UpperArm.R"
+        ],
+        "sample_frames": [
+          1.0,
+          2.375,
+          9.0,
+          17.0,
+          17.125,
+          25.0,
+          32.375,
+          33.0
+        ]
+      },
+      "FBX_frame_range": [
+        1.0,
+        33.0
+      ],
+      "FBX_curve_count": 109,
+      "FBX_animated_bones": [
+        "Forearm.L",
+        "Forearm.R",
+        "Root",
+        "Shin.L",
+        "Shin.R",
+        "Thigh.L",
+        "Thigh.R",
+        "Torso",
+        "UpperArm.L",
+        "UpperArm.R"
+      ],
+      "sampled_bone_deformations": [
+        {
+          "frame": 1.0,
+          "maximum_world_deformation_matrix_entry_difference": 8.195638656616211e-07,
+          "bone_differences": {
+            "Forearm.L": 6.705522537231445e-07,
+            "Forearm.R": 8.195638656616211e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 3.5762786865234375e-07,
+            "Shin.R": 1.648440957069397e-07,
+            "Thigh.L": 4.172325134277344e-07,
+            "Thigh.R": 2.9243528842926025e-07,
+            "Torso": 1.8067657947540283e-07,
+            "UpperArm.L": 2.8312206268310547e-07,
+            "UpperArm.R": 6.854534149169922e-07
+          }
+        },
+        {
+          "frame": 2.375,
+          "maximum_world_deformation_matrix_entry_difference": 0.0003046095371246338,
+          "bone_differences": {
+            "Forearm.L": 0.00020486116409301758,
+            "Forearm.R": 0.00023099780082702637,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 0.00022521615028381348,
+            "Shin.R": 0.00022083520889282227,
+            "Thigh.L": 0.00030428171157836914,
+            "Thigh.R": 0.0003046095371246338,
+            "Torso": 1.8067657947540283e-07,
+            "UpperArm.L": 0.00020493566989898682,
+            "UpperArm.R": 0.00023083388805389404
+          }
+        },
+        {
+          "frame": 9.0,
+          "maximum_world_deformation_matrix_entry_difference": 8.195638656616211e-07,
+          "bone_differences": {
+            "Forearm.L": 8.195638656616211e-07,
+            "Forearm.R": 6.705522537231445e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 1.648440957069397e-07,
+            "Shin.R": 3.5762786865234375e-07,
+            "Thigh.L": 2.9243528842926025e-07,
+            "Thigh.R": 4.172325134277344e-07,
+            "Torso": 1.8067657947540283e-07,
+            "UpperArm.L": 6.854534149169922e-07,
+            "UpperArm.R": 2.8312206268310547e-07
+          }
+        },
+        {
+          "frame": 17.0,
+          "maximum_world_deformation_matrix_entry_difference": 8.195638656616211e-07,
+          "bone_differences": {
+            "Forearm.L": 6.705522537231445e-07,
+            "Forearm.R": 8.195638656616211e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 3.5762786865234375e-07,
+            "Shin.R": 1.648440957069397e-07,
+            "Thigh.L": 4.172325134277344e-07,
+            "Thigh.R": 2.9243528842926025e-07,
+            "Torso": 1.8067657947540283e-07,
+            "UpperArm.L": 2.8312206268310547e-07,
+            "UpperArm.R": 6.854534149169922e-07
+          }
+        },
+        {
+          "frame": 17.125,
+          "maximum_world_deformation_matrix_entry_difference": 0.00044229626655578613,
+          "bone_differences": {
+            "Forearm.L": 0.00029754638671875,
+            "Forearm.R": 0.00034356117248535156,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 0.00032930076122283936,
+            "Shin.R": 0.00032150745391845703,
+            "Thigh.L": 0.00044211745262145996,
+            "Thigh.R": 0.00044229626655578613,
+            "Torso": 1.8067657947540283e-07,
+            "UpperArm.L": 0.0002975165843963623,
+            "UpperArm.R": 0.0003433823585510254
+          }
+        },
+        {
+          "frame": 25.0,
+          "maximum_world_deformation_matrix_entry_difference": 8.195638656616211e-07,
+          "bone_differences": {
+            "Forearm.L": 8.195638656616211e-07,
+            "Forearm.R": 6.705522537231445e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 1.648440957069397e-07,
+            "Shin.R": 3.5762786865234375e-07,
+            "Thigh.L": 2.9243528842926025e-07,
+            "Thigh.R": 4.172325134277344e-07,
+            "Torso": 1.8067657947540283e-07,
+            "UpperArm.L": 6.854534149169922e-07,
+            "UpperArm.R": 2.8312206268310547e-07
+          }
+        },
+        {
+          "frame": 32.375,
+          "maximum_world_deformation_matrix_entry_difference": 0.0003865659236907959,
+          "bone_differences": {
+            "Forearm.L": 0.0002600550651550293,
+            "Forearm.R": 0.00029872357845306396,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 0.0002873837947845459,
+            "Shin.R": 0.0002808123826980591,
+            "Thigh.L": 0.00038632750511169434,
+            "Thigh.R": 0.0003865659236907959,
+            "Torso": 1.8067657947540283e-07,
+            "UpperArm.L": 0.0002601444721221924,
+            "UpperArm.R": 0.0002985745668411255
+          }
+        },
+        {
+          "frame": 33.0,
+          "maximum_world_deformation_matrix_entry_difference": 8.195638656616211e-07,
+          "bone_differences": {
+            "Forearm.L": 6.705522537231445e-07,
+            "Forearm.R": 8.195638656616211e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 3.5762786865234375e-07,
+            "Shin.R": 1.648440957069397e-07,
+            "Thigh.L": 4.172325134277344e-07,
+            "Thigh.R": 2.9243528842926025e-07,
+            "Torso": 1.8067657947540283e-07,
+            "UpperArm.L": 2.8312206268310547e-07,
+            "UpperArm.R": 6.854534149169922e-07
+          }
+        }
+      ],
+      "complete_clip_and_source_bone_channel_coverage": true
+    },
+    "Naiwa_Laugh": {
+      "FBX_action_name": "Naiwa_Rig|Naiwa_Rig|Naiwa_Laugh",
+      "native": {
+        "frame_range": [
+          1.0,
+          25.0
+        ],
+        "curves": 30,
+        "animated_bones": [
+          "Forearm.L",
+          "Forearm.R",
+          "Root",
+          "Shin.L",
+          "Shin.R",
+          "Thigh.L",
+          "Thigh.R",
+          "Torso",
+          "UpperArm.L",
+          "UpperArm.R"
+        ],
+        "sample_frames": [
+          1.0,
+          2.375,
+          7.0,
+          13.0,
+          13.125,
+          19.0,
+          24.375,
+          25.0
+        ]
+      },
+      "FBX_frame_range": [
+        1.0,
+        25.0
+      ],
+      "FBX_curve_count": 109,
+      "FBX_animated_bones": [
+        "Forearm.L",
+        "Forearm.R",
+        "Root",
+        "Shin.L",
+        "Shin.R",
+        "Thigh.L",
+        "Thigh.R",
+        "Torso",
+        "UpperArm.L",
+        "UpperArm.R"
+      ],
+      "sampled_bone_deformations": [
+        {
+          "frame": 1.0,
+          "maximum_world_deformation_matrix_entry_difference": 4.004104994237423e-07,
+          "bone_differences": {
+            "Forearm.L": 4.004104994237423e-07,
+            "Forearm.R": 4.004104994237423e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 1.6391277313232422e-07,
+            "UpperArm.L": 2.384185791015625e-07,
+            "UpperArm.R": 2.384185791015625e-07
+          }
+        },
+        {
+          "frame": 2.375,
+          "maximum_world_deformation_matrix_entry_difference": 0.00022333767265081406,
+          "bone_differences": {
+            "Forearm.L": 0.0002232687547802925,
+            "Forearm.R": 0.0002232687547802925,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 0.0001267697662115097,
+            "UpperArm.L": 0.00022333767265081406,
+            "UpperArm.R": 0.00022333767265081406
+          }
+        },
+        {
+          "frame": 7.0,
+          "maximum_world_deformation_matrix_entry_difference": 5.662441253662109e-07,
+          "bone_differences": {
+            "Forearm.L": 5.662441253662109e-07,
+            "Forearm.R": 5.662441253662109e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 1.7881393432617188e-07,
+            "UpperArm.L": 2.384185791015625e-07,
+            "UpperArm.R": 2.384185791015625e-07
+          }
+        },
+        {
+          "frame": 13.0,
+          "maximum_world_deformation_matrix_entry_difference": 6.28642737865448e-07,
+          "bone_differences": {
+            "Forearm.L": 6.28642737865448e-07,
+            "Forearm.R": 6.28642737865448e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 1.7881393432617188e-07,
+            "UpperArm.L": 2.4586915969848633e-07,
+            "UpperArm.R": 2.4586915969848633e-07
+          }
+        },
+        {
+          "frame": 13.125,
+          "maximum_world_deformation_matrix_entry_difference": 0.0004573836922645569,
+          "bone_differences": {
+            "Forearm.L": 0.0004573836922645569,
+            "Forearm.R": 0.0004573836922645569,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 0.0002978295087814331,
+            "UpperArm.L": 0.00045716017484664917,
+            "UpperArm.R": 0.00045716017484664917
+          }
+        },
+        {
+          "frame": 19.0,
+          "maximum_world_deformation_matrix_entry_difference": 5.662441253662109e-07,
+          "bone_differences": {
+            "Forearm.L": 5.662441253662109e-07,
+            "Forearm.R": 5.662441253662109e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 1.7881393432617188e-07,
+            "UpperArm.L": 2.384185791015625e-07,
+            "UpperArm.R": 2.384185791015625e-07
+          }
+        },
+        {
+          "frame": 24.375,
+          "maximum_world_deformation_matrix_entry_difference": 0.0003285147249698639,
+          "bone_differences": {
+            "Forearm.L": 0.0003285147249698639,
+            "Forearm.R": 0.0003285147249698639,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 0.00018528476357460022,
+            "UpperArm.L": 0.0003284718841314316,
+            "UpperArm.R": 0.0003284718841314316
+          }
+        },
+        {
+          "frame": 25.0,
+          "maximum_world_deformation_matrix_entry_difference": 4.004104994237423e-07,
+          "bone_differences": {
+            "Forearm.L": 4.004104994237423e-07,
+            "Forearm.R": 4.004104994237423e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 1.6391277313232422e-07,
+            "UpperArm.L": 2.384185791015625e-07,
+            "UpperArm.R": 2.384185791015625e-07
+          }
+        }
+      ],
+      "complete_clip_and_source_bone_channel_coverage": true
+    },
+    "Naiwa_Jump": {
+      "FBX_action_name": "Naiwa_Rig|Naiwa_Rig|Naiwa_Jump",
+      "native": {
+        "frame_range": [
+          1.0,
+          20.0
+        ],
+        "curves": 30,
+        "animated_bones": [
+          "Forearm.L",
+          "Forearm.R",
+          "Root",
+          "Shin.L",
+          "Shin.R",
+          "Thigh.L",
+          "Thigh.R",
+          "Torso",
+          "UpperArm.L",
+          "UpperArm.R"
+        ],
+        "sample_frames": [
+          1.0,
+          2.375,
+          5.75,
+          10.125,
+          10.5,
+          15.25,
+          19.375,
+          20.0
+        ]
+      },
+      "FBX_frame_range": [
+        1.0,
+        20.0
+      ],
+      "FBX_curve_count": 109,
+      "FBX_animated_bones": [
+        "Forearm.L",
+        "Forearm.R",
+        "Root",
+        "Shin.L",
+        "Shin.R",
+        "Thigh.L",
+        "Thigh.R",
+        "Torso",
+        "UpperArm.L",
+        "UpperArm.R"
+      ],
+      "sampled_bone_deformations": [
+        {
+          "frame": 1.0,
+          "maximum_world_deformation_matrix_entry_difference": 5.475012585520744e-07,
+          "bone_differences": {
+            "Forearm.L": 5.475012585520744e-07,
+            "Forearm.R": 5.475012585520744e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 1.6292068494294654e-07,
+            "UpperArm.L": 2.384185791015625e-07,
+            "UpperArm.R": 2.384185791015625e-07
+          }
+        },
+        {
+          "frame": 2.375,
+          "maximum_world_deformation_matrix_entry_difference": 0.000182420015335083,
+          "bone_differences": {
+            "Forearm.L": 0.00011876225471496582,
+            "Forearm.R": 0.00011876225471496582,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 0.00018240883946418762,
+            "Shin.R": 0.00018240883946418762,
+            "Thigh.L": 0.000182420015335083,
+            "Thigh.R": 0.000182420015335083,
+            "Torso": 0.0001187734305858612,
+            "UpperArm.L": 0.00011877715587615967,
+            "UpperArm.R": 0.00011877715587615967
+          }
+        },
+        {
+          "frame": 5.75,
+          "maximum_world_deformation_matrix_entry_difference": 5.280598998069763e-07,
+          "bone_differences": {
+            "Forearm.L": 5.280598998069763e-07,
+            "Forearm.R": 5.280598998069763e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 5.21540641784668e-07,
+            "Shin.R": 5.21540641784668e-07,
+            "Thigh.L": 4.6193599700927734e-07,
+            "Thigh.R": 4.6193599700927734e-07,
+            "Torso": 1.862645149230957e-07,
+            "UpperArm.L": 2.2351741790771484e-07,
+            "UpperArm.R": 2.2351741790771484e-07
+          }
+        },
+        {
+          "frame": 10.125,
+          "maximum_world_deformation_matrix_entry_difference": 0.00014165043830871582,
+          "bone_differences": {
+            "Forearm.L": 7.975473999977112e-05,
+            "Forearm.R": 7.975473999977112e-05,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 0.00014165043830871582,
+            "Shin.R": 0.00014165043830871582,
+            "Thigh.L": 0.00014162808656692505,
+            "Thigh.R": 0.00014162808656692505,
+            "Torso": 7.976219058036804e-05,
+            "UpperArm.L": 7.977522909641266e-05,
+            "UpperArm.R": 7.977522909641266e-05
+          }
+        },
+        {
+          "frame": 10.5,
+          "maximum_world_deformation_matrix_entry_difference": 8.274801075458527e-07,
+          "bone_differences": {
+            "Forearm.L": 8.274801075458527e-07,
+            "Forearm.R": 8.274801075458527e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.5331974029541016e-07,
+            "Shin.R": 2.5331974029541016e-07,
+            "Thigh.L": 2.3096799850463867e-07,
+            "Thigh.R": 2.3096799850463867e-07,
+            "Torso": 1.695007085800171e-07,
+            "UpperArm.L": 1.9371509552001953e-07,
+            "UpperArm.R": 1.9371509552001953e-07
+          }
+        },
+        {
+          "frame": 15.25,
+          "maximum_world_deformation_matrix_entry_difference": 7.03730620443821e-07,
+          "bone_differences": {
+            "Forearm.L": 7.03730620443821e-07,
+            "Forearm.R": 7.03730620443821e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.980232238769531e-07,
+            "Shin.R": 2.980232238769531e-07,
+            "Thigh.L": 2.0116567611694336e-07,
+            "Thigh.R": 2.0116567611694336e-07,
+            "Torso": 1.6763806343078613e-07,
+            "UpperArm.L": 1.9744038581848145e-07,
+            "UpperArm.R": 1.9744038581848145e-07
+          }
+        },
+        {
+          "frame": 19.375,
+          "maximum_world_deformation_matrix_entry_difference": 7.38934613764286e-05,
+          "bone_differences": {
+            "Forearm.L": 3.108283272013068e-05,
+            "Forearm.R": 3.108283272013068e-05,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 7.389090023934841e-05,
+            "Shin.R": 7.389090023934841e-05,
+            "Thigh.L": 7.38934613764286e-05,
+            "Thigh.R": 7.38934613764286e-05,
+            "Torso": 3.10682225972414e-05,
+            "UpperArm.L": 3.1096802558749914e-05,
+            "UpperArm.R": 3.1096802558749914e-05
+          }
+        },
+        {
+          "frame": 20.0,
+          "maximum_world_deformation_matrix_entry_difference": 5.475012585520744e-07,
+          "bone_differences": {
+            "Forearm.L": 5.475012585520744e-07,
+            "Forearm.R": 5.475012585520744e-07,
+            "Root": 1.6292068494294654e-07,
+            "Shin.L": 2.8524402750917943e-07,
+            "Shin.R": 2.8524402750917943e-07,
+            "Thigh.L": 2.798016680571891e-07,
+            "Thigh.R": 2.798016680571891e-07,
+            "Torso": 1.6292068494294654e-07,
+            "UpperArm.L": 2.384185791015625e-07,
+            "UpperArm.R": 2.384185791015625e-07
+          }
+        }
+      ],
+      "complete_clip_and_source_bone_channel_coverage": true
+    }
+  },
+  "meshes": 6,
+  "bones": 10,
+  "actions": [
+    "Naiwa_Rig|Naiwa_Rig|Naiwa_Idle",
+    "Naiwa_Rig|Naiwa_Rig|Naiwa_Jump",
+    "Naiwa_Rig|Naiwa_Rig|Naiwa_Laugh",
+    "Naiwa_Rig|Naiwa_Rig|Naiwa_Walk"
+  ],
+  "bone_names": [
+    "Forearm.L",
+    "Forearm.R",
+    "Root",
+    "Shin.L",
+    "Shin.R",
+    "Thigh.L",
+    "Thigh.R",
+    "Torso",
+    "UpperArm.L",
+    "UpperArm.R"
+  ],
+  "all_meshes_have_armature_modifier": true,
+  "source_blend_unchanged": true,
+  "FBX_unchanged": true
+}

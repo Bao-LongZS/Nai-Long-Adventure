@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "blender_version": "5.2.2 LTS",
+  "source_blend": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261005_eye_muzzle_body_delivery\\Naiwa_Character.blend",
+  "source_sha256": "f1ccb3ef65318d7e5db008ecd3f5f805bd8f9576ea1ee8f24be044c6c7b12391",
+  "source_unchanged": true,
+  "bound_meshes": 6,
+  "bones": 10,
+  "actions": [
+    "Naiwa_Idle",
+    "Naiwa_Jump",
+    "Naiwa_Laugh",
+    "Naiwa_Walk"
+  ],
+  "body_vertices": 371666,
+  "generator_scripts_syntax_checked": 83,
+  "scope": "Project open, structure, finite coordinates, eye colors and Python syntax; no geometry was edited or saved."
+}

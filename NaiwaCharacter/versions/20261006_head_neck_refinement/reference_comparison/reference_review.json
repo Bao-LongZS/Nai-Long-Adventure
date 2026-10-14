@@ -1,0 +1,794 @@
+{
+  "source_hashes": {
+    "A": "f251f5a0fc00fedf1df76fcc6286bc40e102406a536cb6c676a93e176cb71ca0",
+    "N1": "f4dba962dc5a38480e96381118bac8b0bf88c55de248bbf8e0c97dcea01ce845",
+    "N2": "9397186f3ae13e93e05cc0d492c12ceb68b743ab4d2a9a0d650426a47a66b0cb"
+  },
+  "fixed_registration": {
+    "scale": 0.41175526202447044,
+    "translation": [
+      245.38813136509236,
+      -17.159665982101984
+    ],
+    "recalculated": false,
+    "uniform_xy": true,
+    "common_pose": {
+      "type": "ORTHO",
+      "yaw": 50.0,
+      "pitch": -2.5,
+      "target": [
+        0,
+        -0.12,
+        2.425
+      ],
+      "distance": 7.0,
+      "scale": 0.86,
+      "lens": 50.0,
+      "resolution": [
+        900,
+        900
+      ]
+    }
+  },
+  "reference_original_pixels": {
+    "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\references\\20261005\\pdf_page03_image03_IM60.jpg",
+    "packaged_copy": "reference_figure13.jpg",
+    "sha256": "4ec47b76c34f5a0e2a670f7fe6a675d49bd0aaeb524a03d83add37e9f209074d",
+    "resolution": [
+      900,
+      1130
+    ],
+    "sample_bounds": {
+      "90": [
+        344.0,
+        490.0
+      ],
+      "180": [
+        302.0,
+        546.0
+      ],
+      "220": [
+        331.0,
+        569.0
+      ],
+      "260": [
+        344.0,
+        592.0
+      ],
+      "300": [
+        336.0,
+        612.0
+      ]
+    },
+    "boundary_uncertainty_pixels": 3
+  },
+  "sample_rows": {
+    "A": {
+      "sample_rows": {
+        "90": {
+          "raw_model_row_pixels": 260,
+          "raw_model_front_back_x_pixels": [
+            292,
+            559
+          ],
+          "registered_front_back_x_pixels": [
+            365.62066787623775,
+            475.55932283677134
+          ],
+          "front_back_error_pixels": [
+            21.620667876237746,
+            -14.440677163228656
+          ],
+          "error_reduction_fraction_from_A": [
+            0.0,
+            0.0
+          ]
+        },
+        "180": {
+          "raw_model_row_pixels": 479,
+          "raw_model_front_back_x_pixels": [
+            133,
+            693
+          ],
+          "registered_front_back_x_pixels": [
+            300.15158121434695,
+            530.7345279480503
+          ],
+          "front_back_error_pixels": [
+            -1.8484187856530525,
+            -15.2654720519497
+          ],
+          "error_reduction_fraction_from_A": [
+            0.0,
+            0.0
+          ]
+        },
+        "220": {
+          "raw_model_row_pixels": 576,
+          "raw_model_front_back_x_pixels": [
+            119,
+            743
+          ],
+          "registered_front_back_x_pixels": [
+            294.3870075460043,
+            551.3222910492739
+          ],
+          "front_back_error_pixels": [
+            -36.61299245399567,
+            -17.677708950726128
+          ],
+          "error_reduction_fraction_from_A": [
+            0.0,
+            0.0
+          ]
+        },
+        "260": {
+          "raw_model_row_pixels": 673,
+          "raw_model_front_back_x_pixels": [
+            124,
+            784
+          ],
+          "registered_front_back_x_pixels": [
+            296.4457838561267,
+            568.2042567922772
+          ],
+          "front_back_error_pixels": [
+            -47.554216143873305,
+            -23.795743207722808
+          ],
+          "error_reduction_fraction_from_A": [
+            0.0,
+            0.0
+          ]
+        },
+        "300": {
+          "raw_model_row_pixels": 770,
+          "raw_model_front_back_x_pixels": [
+            116,
+            833
+          ],
+          "registered_front_back_x_pixels": [
+            293.1517417599309,
+            588.3802646314762
+          ],
+          "front_back_error_pixels": [
+            -42.84825824006907,
+            -23.619735368523834
+          ],
+          "error_reduction_fraction_from_A": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "neck_mean_absolute_front_back_error_pixels": [
+        42.33848894597935,
+        21.69772917565759
+      ],
+      "source_sha256": "f251f5a0fc00fedf1df76fcc6286bc40e102406a536cb6c676a93e176cb71ca0",
+      "raw_mask_resolution": [
+        900,
+        900
+      ],
+      "eye_projection": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1401,
+            "center_pixels": [
+              163.06495360456816,
+              354.32976445396145
+            ],
+            "bbox_pixels": [
+              [
+                124.0,
+                304.0
+              ],
+              [
+                214.0,
+                426.0
+              ]
+            ],
+            "D_pixels": 84.47031673135749,
+            "principal_axis_ratio": 2.401478914177744
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 519,
+            "center_pixels": [
+              146.77842003853564,
+              376.70520231213874
+            ],
+            "bbox_pixels": [
+              [
+                128.0,
+                346.0
+              ],
+              [
+                168.0,
+                412.0
+              ]
+            ],
+            "D_pixels": 51.41250134811764,
+            "principal_axis_ratio": 1.5956027598203184
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 3153,
+            "center_pixels": [
+              332.0545512210593,
+              356.5182366000634
+            ],
+            "bbox_pixels": [
+              [
+                264.0,
+                298.0
+              ],
+              [
+                398.0,
+                416.0
+              ]
+            ],
+            "D_pixels": 126.72054741911381,
+            "principal_axis_ratio": 1.1845170682048194
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 545,
+            "center_pixels": [
+              287.2330275229358,
+              370.21651376146787
+            ],
+            "bbox_pixels": [
+              [
+                266.0,
+                338.0
+              ],
+              [
+                308.0,
+                404.0
+              ]
+            ],
+            "D_pixels": 52.68455378498194,
+            "principal_axis_ratio": 1.5284660321949999
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "ID_sha256": "adc28610e47091ec6c1675fea9cbc09c9e12ee8dd8e7a77e62635cbd1388dd21",
+      "binary_sha256": "88f23a779f66c5a05c6970fe14bf81d8e9d6e505838bcfd3901c9bd5d3d78e76",
+      "neck_error_reduction_fraction_from_A": [
+        0.0,
+        0.0
+      ]
+    },
+    "N1": {
+      "sample_rows": {
+        "90": {
+          "raw_model_row_pixels": 260,
+          "raw_model_front_back_x_pixels": [
+            292,
+            559
+          ],
+          "registered_front_back_x_pixels": [
+            365.62066787623775,
+            475.55932283677134
+          ],
+          "front_back_error_pixels": [
+            21.620667876237746,
+            -14.440677163228656
+          ],
+          "error_reduction_fraction_from_A": [
+            0.0,
+            0.0
+          ]
+        },
+        "180": {
+          "raw_model_row_pixels": 479,
+          "raw_model_front_back_x_pixels": [
+            133,
+            693
+          ],
+          "registered_front_back_x_pixels": [
+            300.15158121434695,
+            530.7345279480503
+          ],
+          "front_back_error_pixels": [
+            -1.8484187856530525,
+            -15.2654720519497
+          ],
+          "error_reduction_fraction_from_A": [
+            0.0,
+            0.0
+          ]
+        },
+        "220": {
+          "raw_model_row_pixels": 576,
+          "raw_model_front_back_x_pixels": [
+            154,
+            761
+          ],
+          "registered_front_back_x_pixels": [
+            308.7984417168608,
+            558.7338857657144
+          ],
+          "front_back_error_pixels": [
+            -22.201558283139207,
+            -10.266114234285624
+          ],
+          "error_reduction_fraction_from_A": [
+            0.39361530442955395,
+            0.4192621757208004
+          ]
+        },
+        "260": {
+          "raw_model_row_pixels": 673,
+          "raw_model_front_back_x_pixels": [
+            166,
+            807
+          ],
+          "registered_front_back_x_pixels": [
+            313.73950486115444,
+            577.67462781884
+          ],
+          "front_back_error_pixels": [
+            -30.260495138845556,
+            -14.325372181159992
+          ],
+          "error_reduction_fraction_from_A": [
+            0.3636632544358699,
+            0.39798593151271056
+          ]
+        },
+        "300": {
+          "raw_model_row_pixels": 770,
+          "raw_model_front_back_x_pixels": [
+            150,
+            854
+          ],
+          "registered_front_back_x_pixels": [
+            307.1514206687629,
+            597.0271251339901
+          ],
+          "front_back_error_pixels": [
+            -28.84857933123709,
+            -14.972874866009874
+          ],
+          "error_reduction_fraction_from_A": [
+            0.3267269075535103,
+            0.3660862565817291
+          ]
+        }
+      },
+      "neck_mean_absolute_front_back_error_pixels": [
+        27.103544251073952,
+        13.18812042715183
+      ],
+      "source_sha256": "f4dba962dc5a38480e96381118bac8b0bf88c55de248bbf8e0c97dcea01ce845",
+      "raw_mask_resolution": [
+        900,
+        900
+      ],
+      "eye_projection": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1401,
+            "center_pixels": [
+              163.06495360456816,
+              354.32976445396145
+            ],
+            "bbox_pixels": [
+              [
+                124.0,
+                304.0
+              ],
+              [
+                214.0,
+                426.0
+              ]
+            ],
+            "D_pixels": 84.47031673135749,
+            "principal_axis_ratio": 2.401478914177744
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 519,
+            "center_pixels": [
+              146.77842003853564,
+              376.70520231213874
+            ],
+            "bbox_pixels": [
+              [
+                128.0,
+                346.0
+              ],
+              [
+                168.0,
+                412.0
+              ]
+            ],
+            "D_pixels": 51.41250134811764,
+            "principal_axis_ratio": 1.5956027598203184
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 3153,
+            "center_pixels": [
+              332.0545512210593,
+              356.5182366000634
+            ],
+            "bbox_pixels": [
+              [
+                264.0,
+                298.0
+              ],
+              [
+                398.0,
+                416.0
+              ]
+            ],
+            "D_pixels": 126.72054741911381,
+            "principal_axis_ratio": 1.1845170682048194
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 545,
+            "center_pixels": [
+              287.2330275229358,
+              370.21651376146787
+            ],
+            "bbox_pixels": [
+              [
+                266.0,
+                338.0
+              ],
+              [
+                308.0,
+                404.0
+              ]
+            ],
+            "D_pixels": 52.68455378498194,
+            "principal_axis_ratio": 1.5284660321949999
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "ID_sha256": "e3f6a02db6e93da1d1ee1171bd7addd389d94976c0d5bf0106d3f078769d950a",
+      "binary_sha256": "346b7cc5bd821190561e638984ee389b4be51b37687f05ffe749f8d5b522c530",
+      "neck_error_reduction_fraction_from_A": [
+        0.3598367602193837,
+        0.39218890970639375
+      ]
+    },
+    "N2": {
+      "sample_rows": {
+        "90": {
+          "raw_model_row_pixels": 260,
+          "raw_model_front_back_x_pixels": [
+            292,
+            559
+          ],
+          "registered_front_back_x_pixels": [
+            365.62066787623775,
+            475.55932283677134
+          ],
+          "front_back_error_pixels": [
+            21.620667876237746,
+            -14.440677163228656
+          ],
+          "error_reduction_fraction_from_A": [
+            0.0,
+            0.0
+          ]
+        },
+        "180": {
+          "raw_model_row_pixels": 479,
+          "raw_model_front_back_x_pixels": [
+            133,
+            693
+          ],
+          "registered_front_back_x_pixels": [
+            300.15158121434695,
+            530.7345279480503
+          ],
+          "front_back_error_pixels": [
+            -1.8484187856530525,
+            -15.2654720519497
+          ],
+          "error_reduction_fraction_from_A": [
+            0.0,
+            0.0
+          ]
+        },
+        "220": {
+          "raw_model_row_pixels": 576,
+          "raw_model_front_back_x_pixels": [
+            166,
+            768
+          ],
+          "registered_front_back_x_pixels": [
+            313.73950486115444,
+            561.6161725998857
+          ],
+          "front_back_error_pixels": [
+            -17.260495138845556,
+            -7.383827400114342
+          ],
+          "error_reduction_fraction_from_A": [
+            0.5285691230911154,
+            0.5823085773899992
+          ]
+        },
+        "260": {
+          "raw_model_row_pixels": 673,
+          "raw_model_front_back_x_pixels": [
+            182,
+            816
+          ],
+          "registered_front_back_x_pixels": [
+            320.327589053546,
+            581.3804251770603
+          ],
+          "front_back_error_pixels": [
+            -23.672410946454022,
+            -10.61957482293974
+          ],
+          "error_reduction_fraction_from_A": [
+            0.5022016370781063,
+            0.5537195568872503
+          ]
+        },
+        "300": {
+          "raw_model_row_pixels": 770,
+          "raw_model_front_back_x_pixels": [
+            162,
+            862
+          ],
+          "registered_front_back_x_pixels": [
+            312.09248381305656,
+            600.3211672301859
+          ],
+          "front_back_error_pixels": [
+            -23.90751618694344,
+            -11.678832769814107
+          ],
+          "error_reduction_fraction_from_A": [
+            0.44204228669004353,
+            0.505547687660482
+          ]
+        }
+      },
+      "neck_mean_absolute_front_back_error_pixels": [
+        21.613474090747673,
+        9.894078330956063
+      ],
+      "source_sha256": "9397186f3ae13e93e05cc0d492c12ceb68b743ab4d2a9a0d650426a47a66b0cb",
+      "raw_mask_resolution": [
+        900,
+        900
+      ],
+      "eye_projection": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1401,
+            "center_pixels": [
+              163.06495360456816,
+              354.32976445396145
+            ],
+            "bbox_pixels": [
+              [
+                124.0,
+                304.0
+              ],
+              [
+                214.0,
+                426.0
+              ]
+            ],
+            "D_pixels": 84.47031673135749,
+            "principal_axis_ratio": 2.401478914177744
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 519,
+            "center_pixels": [
+              146.77842003853564,
+              376.70520231213874
+            ],
+            "bbox_pixels": [
+              [
+                128.0,
+                346.0
+              ],
+              [
+                168.0,
+                412.0
+              ]
+            ],
+            "D_pixels": 51.41250134811764,
+            "principal_axis_ratio": 1.5956027598203184
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 3153,
+            "center_pixels": [
+              332.0545512210593,
+              356.5182366000634
+            ],
+            "bbox_pixels": [
+              [
+                264.0,
+                298.0
+              ],
+              [
+                398.0,
+                416.0
+              ]
+            ],
+            "D_pixels": 126.72054741911381,
+            "principal_axis_ratio": 1.1845170682048194
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 545,
+            "center_pixels": [
+              287.2330275229358,
+              370.21651376146787
+            ],
+            "bbox_pixels": [
+              [
+                266.0,
+                338.0
+              ],
+              [
+                308.0,
+                404.0
+              ]
+            ],
+            "D_pixels": 52.68455378498194,
+            "principal_axis_ratio": 1.5284660321949999
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "ID_sha256": "4aafe3a70d73aaadc05cf4c929bd680e6eb9333082fa7b2bff486e800555755b",
+      "binary_sha256": "ad7e4659c6c0009c983b601d3fca28238cc1dd06c96920cf431cec944594c911",
+      "neck_error_reduction_fraction_from_A": [
+        0.4895076648029456,
+        0.544003971528223
+      ]
+    }
+  },
+  "old_color_threshold_comparison": [
+    {
+      "reference_y_pixels": 90,
+      "old_color_threshold_A_error_pixels": [
+        21.20891261421326,
+        -14.440677163228656
+      ],
+      "new_body_ID_A_error_pixels": [
+        21.620667876237746,
+        -14.440677163228656
+      ],
+      "ID_minus_old_threshold_pixels": [
+        0.4117552620244851,
+        0.0
+      ]
+    },
+    {
+      "reference_y_pixels": 180,
+      "old_color_threshold_A_error_pixels": [
+        -1.8484187856530525,
+        -15.677227313974072
+      ],
+      "new_body_ID_A_error_pixels": [
+        -1.8484187856530525,
+        -15.2654720519497
+      ],
+      "ID_minus_old_threshold_pixels": [
+        0.0,
+        0.4117552620243714
+      ]
+    },
+    {
+      "reference_y_pixels": 220,
+      "old_color_threshold_A_error_pixels": [
+        -36.61299245399567,
+        -17.677708950726128
+      ],
+      "new_body_ID_A_error_pixels": [
+        -36.61299245399567,
+        -17.677708950726128
+      ],
+      "ID_minus_old_threshold_pixels": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "reference_y_pixels": 260,
+      "old_color_threshold_A_error_pixels": [
+        -47.554216143873305,
+        -23.795743207722808
+      ],
+      "new_body_ID_A_error_pixels": [
+        -47.554216143873305,
+        -23.795743207722808
+      ],
+      "ID_minus_old_threshold_pixels": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "reference_y_pixels": 300,
+      "old_color_threshold_A_error_pixels": [
+        -43.26001350209356,
+        -24.031490630548205
+      ],
+      "new_body_ID_A_error_pixels": [
+        -42.84825824006907,
+        -23.619735368523834
+      ],
+      "ID_minus_old_threshold_pixels": [
+        0.4117552620244851,
+        0.4117552620243714
+      ]
+    }
+  ],
+  "method": {
+    "model_contour": "Unified evaluated body only, white unlit emission ID, other geometry hidden. Black background. Binarized coverage threshold128; row +/-1 raw pixel.",
+    "reference_contour": "Retained visually checked reference RGB silhouette bounds; no new reference camera or scale fit.",
+    "model_shadow_independent": true,
+    "extra_views_in_numeric_ranking": false
+  },
+  "neck_numeric_preference": "N2",
+  "neck_numeric_ranking": [
+    "N2",
+    "N1"
+  ],
+  "C1_numeric_delta": null,
+  "recommendation": {
+    "selected_neck": "N2",
+    "c1_decision": "pending",
+    "scope": "neck_only",
+    "status": "neck decision recorded after multi-view inspection",
+    "numeric_ranking_is_not_visual_acceptance": true
+  },
+  "cross_references": {
+    "fig6_2": "PDF page8 thinking pose; hand obscures under-mouth/neck. Use visible short lower face and broad neck transition only.",
+    "fig6_5": "PDF page9 stance pose; crouching and shoulder/arm pose affect chest. Use continuous head-neck silhouette only.",
+    "pose_lens_dimensions_not_transferred": true
+  },
+  "artifacts": [
+    "reference_stable_comparison.png",
+    "body_ID_contour_comparison.png",
+    "reference_figure13.jpg"
+  ],
+  "visual_assessment": {
+    "scope": "neck_only",
+    "status": "accepted",
+    "recommended_candidate": "N2",
+    "source_hashes": {
+      "A": "f251f5a0fc00fedf1df76fcc6286bc40e102406a536cb6c676a93e176cb71ca0",
+      "N1": "f4dba962dc5a38480e96381118bac8b0bf88c55de248bbf8e0c97dcea01ce845",
+      "N2": "9397186f3ae13e93e05cc0d492c12ceb68b743ab4d2a9a0d650426a47a66b0cb"
+    },
+    "paragraphs": [
+      "实际复核固定 0/45/90 度彩色及灰模、全身、共同参考视角与三个额外镜头。N1/N2 均形成短圆下脸、颈前回收和胸部展开；未见尖下颌、独立喉坑、横向硬颈环或胸口台阶。",
+      "先前嘴下双褶由逐锚点停顿造成，改为全局受限 C2 曲线后消除。肩根离散种子距离造成的浅纹波改用连续保护三角面距离并加宽羽化后消除；现为宽缓连续的肩根过渡。",
+      "推荐 N2：固定参考前颈误差改善约49%、后颈约54%，多视角改善方向一致。N1 保留为较温和对照。五官、嘴、眼窝接触和冠顶保持基线；后续上部头壳未实施。"
+    ]
+  }
+}

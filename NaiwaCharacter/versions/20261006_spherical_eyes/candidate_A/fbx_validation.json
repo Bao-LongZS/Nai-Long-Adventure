@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "fbx_sha256": "00ae7aab3fa231e8e0a5f486a1d9c9aa0d8db6f3f92d9ae78b24c6171910d8b8",
+  "bound_meshes": 6,
+  "bones": 10,
+  "actions": [
+    "Naiwa_Idle",
+    "Naiwa_Walk",
+    "Naiwa_Laugh",
+    "Naiwa_Jump"
+  ],
+  "EyeColor_retained": true
+}

@@ -1,0 +1,121 @@
+{
+  "independent_validation": "passed",
+  "target": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_head_neck_refinement\\candidate_N2\\Naiwa_Character.blend",
+  "rebuild": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_head_neck_refinement\\rebuild_neck_check\\candidate_N2\\Naiwa_Character.blend",
+  "target_sha256": "9397186f3ae13e93e05cc0d492c12ceb68b743ab4d2a9a0d650426a47a66b0cb",
+  "rebuild_sha256": "f76ab8540a191bf9a2baf9c19b86cef396b76b3c307a1eac7577a30d36e06fee",
+  "separate_saved_file_loads": true,
+  "pose": "Naiwa_Idle frame 1",
+  "parent_links_material_settings_modifier_settings_animation_curves_exact": true,
+  "objects": {
+    "Head and torso silhouette only": {
+      "vertex_count": 102914,
+      "coordinate_maximum_error": 0.0,
+      "coordinates_exact": true,
+      "Idle_frame1_evaluated_coordinates_exact": true,
+      "all_vertex_group_weights_exact": true,
+      "weights_exact": true,
+      "object_transform_exact": true,
+      "topology_and_material_assignments_exact": true,
+      "colors": {},
+      "shading_and_custom_properties_exact": true
+    },
+    "L concentric iris and pupil": {
+      "vertex_count": 5474,
+      "coordinate_maximum_error": 0.0,
+      "coordinates_exact": true,
+      "Idle_frame1_evaluated_coordinates_exact": true,
+      "all_vertex_group_weights_exact": true,
+      "weights_exact": true,
+      "object_transform_exact": true,
+      "topology_and_material_assignments_exact": true,
+      "colors": {
+        "EyeColor": "exact"
+      },
+      "shading_and_custom_properties_exact": true
+    },
+    "L eye glint": {
+      "vertex_count": 362,
+      "coordinate_maximum_error": 0.0,
+      "coordinates_exact": true,
+      "Idle_frame1_evaluated_coordinates_exact": true,
+      "all_vertex_group_weights_exact": true,
+      "weights_exact": true,
+      "object_transform_exact": true,
+      "topology_and_material_assignments_exact": true,
+      "colors": {},
+      "shading_and_custom_properties_exact": true
+    },
+    "Naiwa unified golden body": {
+      "vertex_count": 371666,
+      "coordinate_maximum_error": 0.0,
+      "coordinates_exact": true,
+      "Idle_frame1_evaluated_coordinates_exact": true,
+      "all_vertex_group_weights_exact": true,
+      "weights_exact": true,
+      "object_transform_exact": true,
+      "topology_and_material_assignments_exact": true,
+      "colors": {
+        "NaiwaColor": "exact"
+      },
+      "shading_and_custom_properties_exact": true
+    },
+    "Naiwa_Rig": {
+      "bones_exact": true,
+      "bone_count": 10,
+      "Idle_frame1_pose_exact": true,
+      "object_transform_exact": true
+    },
+    "Preview floor": {
+      "vertex_count": 4,
+      "coordinate_maximum_error": 0.0,
+      "coordinates_exact": true,
+      "Idle_frame1_evaluated_coordinates_exact": true,
+      "all_vertex_group_weights_exact": true,
+      "weights_exact": true,
+      "object_transform_exact": true,
+      "topology_and_material_assignments_exact": true,
+      "colors": {},
+      "shading_and_custom_properties_exact": true
+    },
+    "R concentric iris and pupil": {
+      "vertex_count": 5474,
+      "coordinate_maximum_error": 0.0,
+      "coordinates_exact": true,
+      "Idle_frame1_evaluated_coordinates_exact": true,
+      "all_vertex_group_weights_exact": true,
+      "weights_exact": true,
+      "object_transform_exact": true,
+      "topology_and_material_assignments_exact": true,
+      "colors": {
+        "EyeColor": "exact"
+      },
+      "shading_and_custom_properties_exact": true
+    },
+    "R eye glint": {
+      "vertex_count": 362,
+      "coordinate_maximum_error": 0.0,
+      "coordinates_exact": true,
+      "Idle_frame1_evaluated_coordinates_exact": true,
+      "all_vertex_group_weights_exact": true,
+      "weights_exact": true,
+      "object_transform_exact": true,
+      "topology_and_material_assignments_exact": true,
+      "colors": {},
+      "shading_and_custom_properties_exact": true
+    },
+    "Short closed oral seam": {
+      "vertex_count": 4322,
+      "coordinate_maximum_error": 0.0,
+      "coordinates_exact": true,
+      "Idle_frame1_evaluated_coordinates_exact": true,
+      "all_vertex_group_weights_exact": true,
+      "weights_exact": true,
+      "object_transform_exact": true,
+      "topology_and_material_assignments_exact": true,
+      "colors": {},
+      "shading_and_custom_properties_exact": true
+    }
+  },
+  "frontal_body_and_head_geometry_exact": true
+}

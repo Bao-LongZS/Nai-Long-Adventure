@@ -1,0 +1,8 @@
+00:00.437  blend            | Read blend: "C:\Users\31314\Desktop\NaiwaCharacter\iterations\before_raised_head_neck_revision\Naiwa_Character.blend"
+00:02.671  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\neck_draft_side.png'
+00:03.015  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\neck_draft_three_quarter.png'
+NECK_EXTENSION_SCULPT_OK head_vertices= 30707 neck_vertices= 11438 raise= 0.14
+NECK_DRAFT_OK
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

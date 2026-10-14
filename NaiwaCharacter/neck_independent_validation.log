@@ -1,0 +1,5 @@
+00:00.515  blend            | Read blend: "C:\Users\31314\Desktop\NaiwaCharacter\Naiwa_Character.blend"
+NECK_INDEPENDENT_VALIDATION_OK fixed= 329521 rigid_head= 30707 neck= 11438 head_error= 1.0490417479136482e-07 feature_errors= {'L concentric iris and pupil': 1.0490417479136482e-07, 'R concentric iris and pupil': 1.0490417479136482e-07, 'Short closed oral seam': 1.0490417479136482e-07, 'L eye glint': 1.043081283569336e-07, 'R eye glint': 1.043081283569336e-07}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

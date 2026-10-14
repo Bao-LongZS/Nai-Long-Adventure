@@ -1,0 +1,180 @@
+{
+  "L": {
+    "matrix_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "matrix_local": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "parent": "Naiwa_Rig",
+    "parent_type": "OBJECT",
+    "vertex_count": 5474,
+    "unique_weight_assignments": [
+      [
+        [
+          "Torso",
+          1.0
+        ]
+      ]
+    ],
+    "modifiers": [
+      {
+        "name": "Naiwa armature",
+        "type": "ARMATURE",
+        "show_viewport": true,
+        "show_render": true,
+        "object": "Naiwa_Rig"
+      }
+    ],
+    "color_attributes": [
+      [
+        "EyeColor",
+        "CORNER",
+        "FLOAT_COLOR"
+      ]
+    ],
+    "materials": [
+      "L single eye surface"
+    ]
+  },
+  "R": {
+    "matrix_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "matrix_local": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "parent": "Naiwa_Rig",
+    "parent_type": "OBJECT",
+    "vertex_count": 5474,
+    "unique_weight_assignments": [
+      [
+        [
+          "Torso",
+          1.0
+        ]
+      ]
+    ],
+    "modifiers": [
+      {
+        "name": "Naiwa armature",
+        "type": "ARMATURE",
+        "show_viewport": true,
+        "show_render": true,
+        "object": "Naiwa_Rig"
+      }
+    ],
+    "color_attributes": [
+      [
+        "EyeColor",
+        "CORNER",
+        "FLOAT_COLOR"
+      ]
+    ],
+    "materials": [
+      "R single eye surface"
+    ]
+  }
+}

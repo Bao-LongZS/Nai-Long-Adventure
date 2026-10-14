@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "labels": [
+    "E2",
+    "A"
+  ],
+  "fixed_reference_registration": {
+    "scale": 0.41175526202447044,
+    "translation": [
+      245.38813136509236,
+      -17.159665982101984
+    ]
+  },
+  "reference_display_crop_xyxy": [
+    260,
+    40,
+    660,
+    340
+  ],
+  "reference_crop_units": "original figure_1_3.jpg pixels",
+  "source_model_files_saved": false,
+  "no_candidate_camera_or_registration_fitting": true,
+  "no_photometric_changes": true,
+  "files": [
+    {
+      "file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\assembled\\comparison_head_color.png",
+      "sha256": "249b01c92e5a773309fdc22181eb765ba9a4876c9fab44b097943933d8c81a0d",
+      "inputs": [
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\E2\\E2_head_color_front.png",
+          "sha256": "329bb3521b12faa2fbad31647ab75b1b7f90ee440e0e1c2cdabb3780f0db6956"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\A\\A_head_color_front.png",
+          "sha256": "494ddb8cb8dec2c96f6da21c4737e8e6f2deb6e1669505bdabda91e8046bfddf"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\E2\\E2_head_color_three_quarter.png",
+          "sha256": "0322e199646e101dbba9939eb5376ae8eb10ebb77b1e4e9bdace62faeeb0c089"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\A\\A_head_color_three_quarter.png",
+          "sha256": "4a66ed69fa03601aa0bd43c85787f9ce80d09b83fc4a82e957215b5094815aac"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\E2\\E2_head_color_side.png",
+          "sha256": "5618150d283f1a6981755db26afa6b2b7262b52ffc531289be4157eeae8383d3"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\A\\A_head_color_side.png",
+          "sha256": "31bcae82ebbebfad6fd83c98866cd7070994d80e1a519ffbfc3461a07ca19e32"
+        }
+      ],
+      "display_method": "uniform image scale; no photometric changes",
+      "display_column_width_px": 495
+    },
+    {
+      "file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\assembled\\comparison_head_gray.png",
+      "sha256": "15b3cc6a6ab50cb100ce097a6ec7026a3e540ef1fee8c7853c4d24745abd6861",
+      "inputs": [
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\E2\\E2_head_gray_front.png",
+          "sha256": "5fe64ae96921347708832329a08f6843f2bb00d1e7285968b5a71a84313a1409"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\A\\A_head_gray_front.png",
+          "sha256": "e5bafa8577c3b7ac839a7d0ac68a12fb11df4ed76d66c269d327eddbb852c543"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\E2\\E2_head_gray_three_quarter.png",
+          "sha256": "bd899a8e13a7642d858cf4761c5a277b34c207d67c5e9b5a39298e2deb3a3497"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\A\\A_head_gray_three_quarter.png",
+          "sha256": "7004b30384010a63c9922e84e43ca5679e1adb12778a3539d5fb1b85abd0caa9"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\E2\\E2_head_gray_side.png",
+          "sha256": "0bd932ba76f28ee004c4e8caf9f18734340f7c4cffa8f2b11dd29e41a9d559e8"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\A\\A_head_gray_side.png",
+          "sha256": "8bdac900c612f8ad9de85d5d6e4412de326846878a0d11f44ac34090cbf7b170"
+        }
+      ],
+      "display_method": "uniform image scale; no photometric changes",
+      "display_column_width_px": 495
+    },
+    {
+      "file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\assembled\\comparison_reference_50.png",
+      "sha256": "86dd9d1a681a427f3d893866aaf4a5bd90fa612a8f127eb01e399620982d9d2f",
+      "inputs": [
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\references\\figure_1_3.jpg",
+          "sha256": "4ec47b76c34f5a0e2a670f7fe6a675d49bd0aaeb524a03d83add37e9f209074d"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\E2\\E2_common_ORTHO_50.png",
+          "sha256": "153a77bccef3ea3bf2d45e923a5e052d24924163e0e53847838af1068f1b6e9c"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\A\\A_common_ORTHO_50.png",
+          "sha256": "13514a7fbddbf4459f3e6894faae3b84158b5e4d9936552cd6611e04155a321a"
+        }
+      ],
+      "display_method": "uniform image scale; no photometric changes",
+      "display_column_width_px": 495
+    },
+    {
+      "file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\assembled\\comparison_full_45.png",
+      "sha256": "96e42477c678aa7f9c02c951815f962167621dd1b44e2f941942b85fe3d701c6",
+      "inputs": [
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\E2\\E2_full_color_three_quarter.png",
+          "sha256": "9471022a7c084078cdf43b75173411a3f7ec41d328cb8992d319bfd290989acc"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\key\\A\\A_full_color_three_quarter.png",
+          "sha256": "da3fa526170553aa1ac5ce97f88cc24abeccc9c42516d4cdcdcdf499a1913e39"
+        }
+      ],
+      "display_method": "uniform image scale; no photometric changes",
+      "display_column_width_px": 495
+    },
+    {
+      "file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\assembled\\baseline_AO_off_diagnostic.png",
+      "sha256": "6ee11a0e8a3a166b0b2f372f3beb1dd6c7d7666577d52c4bd8b952047990a4d6",
+      "inputs": [
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\baseline_diagnostic\\E2\\E2_head_gray_AO_off_front.png",
+          "sha256": "15109c8ca9c3369f64f34a48b5d81ebb5d2f95eff8438217e5512d170147c69d"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\baseline_diagnostic\\E2\\E2_head_gray_AO_off_three_quarter.png",
+          "sha256": "bb35a3fb0389900eed21c50eb582c7a8ab2865139f15a08aa2c8fbc9f9fa3edb"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\baseline_diagnostic\\E2\\E2_head_gray_AO_off_side.png",
+          "sha256": "d9441cfbf6851a0705d3b2d3aaba448fc145804e3f3cb4ce8195313a41362a8d"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\review\\baseline_diagnostic\\E2\\E2_head_gray_AO_off_three_quarter_moved_key.png",
+          "sha256": "a2d0bb8d9e8a0102f513212efbf1966831e5985f5e7b708893cb8e223457ee81"
+        }
+      ],
+      "display_method": "uniform image scale; no photometric changes",
+      "display_column_width_px": 495
+    }
+  ],
+  "render_contract_sha256": "4ba8ad0b958a41efcbcb02045e1d0e57d267a4a146e12ad5a1340207452ea109"
+}

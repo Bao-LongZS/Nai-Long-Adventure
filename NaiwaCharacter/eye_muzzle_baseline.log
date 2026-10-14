@@ -1,0 +1,5 @@
+00:00.516  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\before_eye_muzzle_body_revision\Naiwa_Character.blend"
+EYE_MUZZLE_BASELINE_OK {"height": 2.6368305683135986, "sole_z": 0.007999999448657036, "crown_z": 2.6448304653167725, "D": 0.10238124334202339, "D_definition": "Mean equal-area diameter of the visible green outer aperture including its enclosed pupil, not green annulus thickness", "axes": {"Z": [0, 0, 1], "F": [0, -1, 0]}, "mouth_center": [0.0, -0.43680211901664734, 2.359487533569336], "eye_center_distance": 0.17595644351989598, "requested": {"face_raise": 0.04095249733680936, "eye_projection": 0.02047624866840468, "pupil_diameter": 0.0542620589712724, "mouth_width": 0.12797655417752923, "mouth_opening": 0.006142874600521403, "muzzle_advance": 0.03583343516970818, "throat_retraction": 0.015357186501303507, "throat_z": 2.3082969118983243, "belly_lower_extension": 0.06592076420783997}}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

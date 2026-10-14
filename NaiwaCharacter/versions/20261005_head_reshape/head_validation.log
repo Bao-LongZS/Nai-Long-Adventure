@@ -1,0 +1,5 @@
+00:00.875  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\Naiwa_Character.blend"
+HEAD_RESHAPE_INDEPENDENT_VALIDATION_OK {"target": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261005_head_reshape\\Naiwa_Character.blend", "D0": 0.1020112181710007, "D1": 0.11731290089665079, "W0": 0.40681878639536856, "eye_line_width": 0.44750014165210783, "eye_center_distance": 0.23462583438856127, "mouth_width": 0.14664112031459808, "mouth_opening": 0.007038593292236328, "bound_mesh_count": 6, "bone_count": 10, "action_count": 4, "report": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261005_head_reshape\\head_reshape_validation.json"}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

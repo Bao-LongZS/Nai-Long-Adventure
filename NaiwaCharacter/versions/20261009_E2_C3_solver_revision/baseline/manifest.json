@@ -1,0 +1,21 @@
+{
+  "source_unchanged": true,
+  "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "protocol_frozen": true,
+  "files": {
+    "baseline_arrays.npz": "c4f01f4996ea0b254e3c454f49579ec6ae66ddd3a20cc15a6ed9e643a46d7857",
+    "body_field_input.npz": "d773dcb12c9b376137ef192c8af9abab4664baf2df9acafd126420f8cf4d4fa1",
+    "body_scope_release_frozen.csv": "40be4bd1736d2ec9bd505e5267bdc9f061182cf7d4e172091929f38a77d0b770",
+    "longitudinal_front.npz": "f40c69ad2a42c01b7b1165bce2dcf73ca9c8d9aefe529a2f398fd1a571d57e3d",
+    "measurements_Idle1.json": "d6cf2eea6372a2b9a610d0688c81647bdc63b22121c1e1eba07998520c69de7e",
+    "measurements_Raw.json": "9afe284254591791700a723af88197da88cb8271798339992185c529f7f32243",
+    "mouth_underturn_protection_audit.csv": "9d84666bc349a835396b88e31a7aaf6c7fc97a514ab5c174b8ee484e37469e88",
+    "preliminary_objects.json": "289dde25e9cd8730c4a120c0afa7a1bba377af479d96c919351959df1ed5882f",
+    "preliminary_raw.npz": "828a7d220482b427dbe666bad31f3e12dde6765912fb84fd4c26ba6796151cf0",
+    "snapshot.json": "853860788ad2061ac267e1c93f05accb75a1f0c4ef4333a000b08141042cfd1a",
+    "surface_grid.npz": "cad261ce9a44fdc1e27d6d56c9ee46c529f24a15b56a8ab4b06d5116892602dc",
+    "eye_contact_boundaries.npz": "7e2fc5f1a73ae6ffeb4180ebbdeb019a638595105bc1994ec4e8a007341e11ba",
+    "eye_contact_boundaries.json": "9065028faf81057d83f23348584f9ccbb7565c69c9092f2b5625a2699394c8d8",
+    "definition_notes.md": "795108260641c5b074cf824521fa5e7675d42840ef1900f8a00bfe2b10f6a56f"
+  }
+}

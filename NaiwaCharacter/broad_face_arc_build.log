@@ -1,0 +1,39 @@
+00:00.485  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\before_broad_face_arc_refinement\Naiwa_Character.blend"
+00:04.235  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_front.png'
+00:04.485  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_side.png'
+00:04.766  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_three_quarter.png'
+00:05.000  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_surface_check_side.png'
+00:05.235  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_silhouette_front.png'
+00:05.469  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_silhouette_side.png'
+00:05.672  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_torso_silhouette_front.png'
+00:05.875  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_torso_silhouette_side.png'
+00:06.157  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_face_close.png'
+00:06.438  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_face_side_close.png'
+00:06.719  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_face_three_quarter_close.png'
+00:07.000  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_hand_close.png'
+00:07.329  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_foot_close.png'
+00:07.594  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_foot_side_close.png'
+00:07.907  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_neck_front_close.png'
+00:08.204  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_neck_side_close.png'
+00:08.485  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_neck_gray_three_quarter.png'
+00:08.750  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_surface_gray_side.png'
+00:09.032  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_surface_gray_front.png'
+00:09.313  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_surface_gray_three_quarter.png'
+00:09.657  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_review_side.png'
+00:09.969  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_review_front.png'
+00:10.282  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_review_three_quarter.png'
+信息: 已另存为 "Naiwa_Character.blend"
+
+FBX export starting... 'C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\Naiwa_Character.fbx'
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+export finished in 1.4436 sec.
+BROAD_FACE_ARC_DELIVERABLES_OK 6 meshes 10 bones
+BROAD_FACE_ARC_REVISION_OK
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

@@ -1,0 +1,67 @@
+{
+  "independent_validation": "passed",
+  "target": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261005_eye_muzzle_body_delivery\\Naiwa_Character.blend",
+  "rebuild": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\iterations\\eye_muzzle_delivery_rebuild_check\\Naiwa_Character.blend",
+  "objects": {
+    "Naiwa unified golden body": {
+      "vertex_count": 371666,
+      "coordinate_maximum_error": 0.0,
+      "coordinates_exact": true,
+      "weights_exact": true,
+      "colors": {
+        "NaiwaColor": "exact"
+      }
+    },
+    "Head and torso silhouette only": {
+      "vertex_count": 102914,
+      "coordinate_maximum_error": 0.0,
+      "coordinates_exact": true,
+      "weights_exact": true,
+      "colors": {}
+    },
+    "L concentric iris and pupil": {
+      "vertex_count": 5474,
+      "coordinate_maximum_error": 0.0,
+      "coordinates_exact": true,
+      "weights_exact": true,
+      "colors": {
+        "EyeColor": "exact"
+      }
+    },
+    "R concentric iris and pupil": {
+      "vertex_count": 5474,
+      "coordinate_maximum_error": 0.0,
+      "coordinates_exact": true,
+      "weights_exact": true,
+      "colors": {
+        "EyeColor": "exact"
+      }
+    },
+    "L eye glint": {
+      "vertex_count": 362,
+      "coordinate_maximum_error": 0.0,
+      "coordinates_exact": true,
+      "weights_exact": true,
+      "colors": {}
+    },
+    "R eye glint": {
+      "vertex_count": 362,
+      "coordinate_maximum_error": 0.0,
+      "coordinates_exact": true,
+      "weights_exact": true,
+      "colors": {}
+    },
+    "Short closed oral seam": {
+      "vertex_count": 4322,
+      "coordinate_maximum_error": 0.0,
+      "coordinates_exact": true,
+      "weights_exact": true,
+      "colors": {}
+    },
+    "Naiwa_Rig": {
+      "bones_exact": true,
+      "bone_count": 10
+    }
+  },
+  "frontal_body_and_head_geometry_exact": true
+}

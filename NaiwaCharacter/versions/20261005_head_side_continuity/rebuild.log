@@ -1,0 +1,14 @@
+00:00.812  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\Naiwa_Character.blend"
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+信息: 已另存为 "Naiwa_Character.blend"
+
+FBX export starting... 'C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\head_side_continuity_rebuild_check\\Naiwa_Character.fbx'
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+export finished in 2.0439 sec.
+HEAD_SIDE_CONTINUITY_BUILD_OK 0.004244387149810791 0.004134748131036758
+NAIWA_BUILD_OK 6 4

@@ -1,0 +1,945 @@
+{
+  "reference_figure_verification": {
+    "figure": "PDF第3页图1.3奶蛙经典形象",
+    "embedded_image": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\references\\20261005\\pdf_page03_image03_IM60.jpg",
+    "packaged_original_image": "reference_figure13.jpg",
+    "embedded_resolution": [
+      900,
+      1130
+    ],
+    "embedded_sha256": "4ec47b76c34f5a0e2a670f7fe6a675d49bd0aaeb524a03d83add37e9f209074d",
+    "page_screenshot_is_full_page": true,
+    "manual_outer_near_eye_bbox_pixels": [
+      [
+        352,
+        101
+      ],
+      [
+        409,
+        155
+      ]
+    ],
+    "near_eye_equal_area_D_pixels": 55.47972602672079,
+    "far_visible_bbox_approx_pixels": [
+      [
+        309,
+        120
+      ],
+      [
+        320,
+        154
+      ]
+    ],
+    "near_pupil_dark_interior_centroid_pixels": [
+      374.9409594095941,
+      130.64022140221402
+    ],
+    "near_pupil_center_method": "Raw ROI [353,105,408,153], R<50 G<60 B<50. Dark interior centroid only; threshold area is not used as outer pupil diameter.",
+    "far_visible_D_over_near_D_approx": 0.34857921966844974,
+    "landmarks_original_pixels": {
+      "near_eye": [
+        380.5,
+        128.0
+      ],
+      "far_visible_eye_centroid_approx": [
+        314.5,
+        137.0
+      ],
+      "mouth_approx": [
+        325.0,
+        180.0
+      ],
+      "crown": [
+        419.2567567567568,
+        68.0
+      ]
+    },
+    "boundary_uncertainty_px": 2
+  },
+  "selected_common_camera": {
+    "type": "ORTHO",
+    "yaw": 50.0,
+    "pitch": -2.5,
+    "target": [
+      0,
+      -0.12,
+      2.425
+    ],
+    "distance": 7.0,
+    "scale": 0.86,
+    "lens": 50.0,
+    "roll_degrees": 0,
+    "resolution": [
+      900,
+      900
+    ],
+    "view_transform": "Standard",
+    "exposure": -0.4,
+    "status": "Practical common diagnostic camera, not uniquely recovered reference camera",
+    "selection": "A best common ortho score; B favors 135mm 50/0 in its individual search. Use one 50/-2.5 ORTHO camera to compare original/A/B fairly."
+  },
+  "camera_search_audit": {
+    "yaw_grid": [
+      40,
+      50,
+      60,
+      70,
+      80
+    ],
+    "pitch_grid": [
+      -5,
+      0,
+      5
+    ],
+    "grid_records": 30,
+    "total_records": 42,
+    "fine_sampling": {
+      "A": [
+        {
+          "type": "ORTHO",
+          "yaw": 45,
+          "pitch": -5,
+          "target": [
+            0,
+            -0.12,
+            2.425
+          ],
+          "distance": 7.0,
+          "scale": 0.86,
+          "lens": 50.0
+        },
+        {
+          "type": "ORTHO",
+          "yaw": 55,
+          "pitch": -5,
+          "target": [
+            0,
+            -0.12,
+            2.425
+          ],
+          "distance": 7.0,
+          "scale": 0.86,
+          "lens": 50.0
+        },
+        {
+          "type": "ORTHO",
+          "yaw": 50,
+          "pitch": -7.5,
+          "target": [
+            0,
+            -0.12,
+            2.425
+          ],
+          "distance": 7.0,
+          "scale": 0.86,
+          "lens": 50.0
+        },
+        {
+          "type": "ORTHO",
+          "yaw": 50,
+          "pitch": -2.5,
+          "target": [
+            0,
+            -0.12,
+            2.425
+          ],
+          "distance": 7.0,
+          "scale": 0.86,
+          "lens": 50.0
+        },
+        {
+          "type": "PERSP",
+          "yaw": 50,
+          "pitch": -5,
+          "target": [
+            0,
+            -0.12,
+            2.425
+          ],
+          "distance": 2.1500000000000004,
+          "scale": 0.86,
+          "lens": 90.0
+        },
+        {
+          "type": "PERSP",
+          "yaw": 50,
+          "pitch": -5,
+          "target": [
+            0,
+            -0.12,
+            2.425
+          ],
+          "distance": 3.2249999999999996,
+          "scale": 0.86,
+          "lens": 135.0
+        }
+      ],
+      "B": [
+        {
+          "type": "ORTHO",
+          "yaw": 45,
+          "pitch": 0,
+          "target": [
+            0,
+            -0.12,
+            2.425
+          ],
+          "distance": 7.0,
+          "scale": 0.86,
+          "lens": 50.0
+        },
+        {
+          "type": "ORTHO",
+          "yaw": 55,
+          "pitch": 0,
+          "target": [
+            0,
+            -0.12,
+            2.425
+          ],
+          "distance": 7.0,
+          "scale": 0.86,
+          "lens": 50.0
+        },
+        {
+          "type": "ORTHO",
+          "yaw": 50,
+          "pitch": -2.5,
+          "target": [
+            0,
+            -0.12,
+            2.425
+          ],
+          "distance": 7.0,
+          "scale": 0.86,
+          "lens": 50.0
+        },
+        {
+          "type": "ORTHO",
+          "yaw": 50,
+          "pitch": 2.5,
+          "target": [
+            0,
+            -0.12,
+            2.425
+          ],
+          "distance": 7.0,
+          "scale": 0.86,
+          "lens": 50.0
+        },
+        {
+          "type": "PERSP",
+          "yaw": 50,
+          "pitch": 0,
+          "target": [
+            0,
+            -0.12,
+            2.425
+          ],
+          "distance": 2.1500000000000004,
+          "scale": 0.86,
+          "lens": 90.0
+        },
+        {
+          "type": "PERSP",
+          "yaw": 50,
+          "pitch": 0,
+          "target": [
+            0,
+            -0.12,
+            2.425
+          ],
+          "distance": 3.2249999999999996,
+          "scale": 0.86,
+          "lens": 135.0
+        }
+      ]
+    },
+    "best_per_candidate": {
+      "A": {
+        "pose": {
+          "type": "ORTHO",
+          "yaw": 50,
+          "pitch": -2.5,
+          "target": [
+            0,
+            -0.12,
+            2.425
+          ],
+          "distance": 7.0,
+          "scale": 0.86,
+          "lens": 50.0
+        },
+        "diagnostic_score": 0.8597816921135395
+      },
+      "B": {
+        "pose": {
+          "type": "PERSP",
+          "yaw": 50,
+          "pitch": 0,
+          "target": [
+            0,
+            -0.12,
+            2.425
+          ],
+          "distance": 3.2249999999999996,
+          "scale": 0.86,
+          "lens": 135.0
+        },
+        "diagnostic_score": 0.911035458171143
+      }
+    },
+    "score_limitations": "Weights are heuristic and far-reference ellipse is approximate. Includes eye center, near circularity, far visibility, crown and mouth. Body geometry prevents a joint exact fit."
+  },
+  "fixed_scale_registration": {
+    "model_original_resolution": [
+      900,
+      900
+    ],
+    "model_pixels_to_reference_pixels_scale": 0.41175526202447044,
+    "model_to_reference_translation_pixels": [
+      245.38813136509236,
+      -17.159665982101984
+    ],
+    "search_render_scale_at_600px": 0.6176328930367057,
+    "fit_landmarks": [
+      "unchanged yellow crown",
+      "unchanged mouth center"
+    ],
+    "shared_by": [
+      "original",
+      "A",
+      "B"
+    ],
+    "scale_computed_once": true,
+    "eye_diameter_used_for_scale": false,
+    "uniform_xy_scale": true,
+    "display_scale_reference_pixels_to_panel_pixels": 1.5,
+    "display_crop_origin_reference_pixels": [
+      270.0,
+      40.0
+    ],
+    "display_panel_size_pixels": [
+      620,
+      470
+    ]
+  },
+  "source_provenance": {
+    "original": {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261005_head_side_continuity\\Naiwa_Character.blend",
+      "sha256": "a95a5c7efb25cb6f379897dd6ec4af98a201bc2619dc8caa2bb5b5de8ea3dfd5",
+      "mtime_seconds": 1791213115.3327262,
+      "comparison_render_newer_than_source": true
+    },
+    "A": {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_spherical_eyes\\candidate_A\\Naiwa_Character.blend",
+      "sha256": "f251f5a0fc00fedf1df76fcc6286bc40e102406a536cb6c676a93e176cb71ca0",
+      "mtime_seconds": 1791272307.899557,
+      "comparison_render_newer_than_source": true,
+      "current_validation_report": "spherical_eyes_validation.json"
+    },
+    "B": {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_spherical_eyes\\candidate_B\\Naiwa_Character.blend",
+      "sha256": "d381f9ce3d505372467814d2dcb56e97e70b54864396a19453e60b93be8824fb",
+      "mtime_seconds": 1791272316.10836,
+      "comparison_render_newer_than_source": true,
+      "current_validation_report": "spherical_eyes_validation.json"
+    }
+  },
+  "common_camera_measurements": {
+    "original": {
+      "eyes": {
+        "L": {
+          "raw_aperture_pixels": {
+            "visible": true,
+            "sample_count": 809,
+            "center_pixels": [
+              168.93943139678615,
+              362.2768850432633
+            ],
+            "bbox_pixels": [
+              [
+                136.0,
+                304.0
+              ],
+              [
+                214.0,
+                422.0
+              ]
+            ],
+            "D_pixels": 64.18880873456825,
+            "principal_axis_ratio": 4.086186171927623
+          },
+          "raw_pupil_pixels": {
+            "visible": true,
+            "sample_count": 162,
+            "center_pixels": [
+              156.25925925925927,
+              361.641975308642
+            ],
+            "bbox_pixels": [
+              [
+                138.0,
+                332.0
+              ],
+              [
+                174.0,
+                392.0
+              ]
+            ],
+            "D_pixels": 28.723844188903154,
+            "principal_axis_ratio": 6.216770731073182
+          },
+          "registered_center_reference_pixels": [
+            314.9498312061411,
+            132.00974774429585
+          ],
+          "registered_D_reference_pixels": 26.430079759540767,
+          "registered_pupil_center_reference_pixels": [
+            309.7287036051383,
+            131.74832032015496
+          ],
+          "pupil_minus_outer_center_reference_pixels": [
+            -5.221127601002763,
+            -0.2614274241408907
+          ]
+        },
+        "R": {
+          "raw_aperture_pixels": {
+            "visible": true,
+            "sample_count": 3191,
+            "center_pixels": [
+              333.92416170479476,
+              354.91820745847696
+            ],
+            "bbox_pixels": [
+              [
+                256.0,
+                296.0
+              ],
+              [
+                408.0,
+                414.0
+              ]
+            ],
+            "D_pixels": 127.48187929662637,
+            "principal_axis_ratio": 1.755205775510043
+          },
+          "raw_pupil_pixels": {
+            "visible": true,
+            "sample_count": 875,
+            "center_pixels": [
+              314.768,
+              354.0868571428571
+            ],
+            "bbox_pixels": [
+              [
+                276.0,
+                324.0
+              ],
+              [
+                354.0,
+                384.0
+              ]
+            ],
+            "D_pixels": 66.75581178124546,
+            "principal_axis_ratio": 1.76562630656921
+          },
+          "registered_center_reference_pixels": [
+            382.88316206415175,
+            128.97977352721855
+          ],
+          "registered_D_reference_pixels": 52.49133461315431,
+          "registered_pupil_center_reference_pixels": [
+            374.99551168201083,
+            128.63746066017637
+          ],
+          "pupil_minus_outer_center_reference_pixels": [
+            -7.887650382140919,
+            -0.3423128670421818
+          ]
+        }
+      },
+      "far_D_over_near_D": 0.5035131980225438
+    },
+    "A": {
+      "eyes": {
+        "L": {
+          "raw_aperture_pixels": {
+            "visible": true,
+            "sample_count": 1401,
+            "center_pixels": [
+              163.06495360456816,
+              354.32976445396145
+            ],
+            "bbox_pixels": [
+              [
+                124.0,
+                304.0
+              ],
+              [
+                214.0,
+                426.0
+              ]
+            ],
+            "D_pixels": 84.47031673135749,
+            "principal_axis_ratio": 2.401478914177744
+          },
+          "raw_pupil_pixels": {
+            "visible": true,
+            "sample_count": 519,
+            "center_pixels": [
+              146.77842003853564,
+              376.70520231213874
+            ],
+            "bbox_pixels": [
+              [
+                128.0,
+                346.0
+              ],
+              [
+                168.0,
+                412.0
+              ]
+            ],
+            "D_pixels": 51.41250134811764,
+            "principal_axis_ratio": 1.5956027598203184
+          },
+          "registered_center_reference_pixels": [
+            312.53098406354945,
+            128.7374790237078
+          ],
+          "registered_D_reference_pixels": 34.78109739901011,
+          "registered_pupil_center_reference_pixels": [
+            305.8249181675974,
+            137.95068330191384
+          ],
+          "pupil_minus_outer_center_reference_pixels": [
+            -6.706065895952065,
+            9.213204278206035
+          ]
+        },
+        "R": {
+          "raw_aperture_pixels": {
+            "visible": true,
+            "sample_count": 3153,
+            "center_pixels": [
+              332.0545512210593,
+              356.5182366000634
+            ],
+            "bbox_pixels": [
+              [
+                264.0,
+                298.0
+              ],
+              [
+                398.0,
+                416.0
+              ]
+            ],
+            "D_pixels": 126.72054741911381,
+            "principal_axis_ratio": 1.1845170682048194
+          },
+          "raw_pupil_pixels": {
+            "visible": true,
+            "sample_count": 545,
+            "center_pixels": [
+              287.2330275229358,
+              370.21651376146787
+            ],
+            "bbox_pixels": [
+              [
+                266.0,
+                338.0
+              ],
+              [
+                308.0,
+                404.0
+              ]
+            ],
+            "D_pixels": 52.68455378498194,
+            "principal_axis_ratio": 1.5284660321949999
+          },
+          "registered_center_reference_pixels": [
+            382.1133401095376,
+            129.63859394565927
+          ],
+          "registered_D_reference_pixels": 52.17785220644154,
+          "registered_pupil_center_reference_pixels": [
+            363.6578418748807,
+            135.27893164753718
+          ],
+          "pupil_minus_outer_center_reference_pixels": [
+            -18.455498234656886,
+            5.640337701877911
+          ]
+        }
+      },
+      "far_D_over_near_D": 0.6665873723854863
+    },
+    "B": {
+      "eyes": {
+        "L": {
+          "raw_aperture_pixels": {
+            "visible": true,
+            "sample_count": 1731,
+            "center_pixels": [
+              156.38012709416523,
+              354.24378971692664
+            ],
+            "bbox_pixels": [
+              [
+                114.0,
+                304.0
+              ],
+              [
+                210.0,
+                426.0
+              ]
+            ],
+            "D_pixels": 93.89308072348179,
+            "principal_axis_ratio": 1.9190831240220512
+          },
+          "raw_pupil_pixels": {
+            "visible": true,
+            "sample_count": 533,
+            "center_pixels": [
+              135.5234521575985,
+              370.10881801125703
+            ],
+            "bbox_pixels": [
+              [
+                116.0,
+                338.0
+              ],
+              [
+                156.0,
+                402.0
+              ]
+            ],
+            "D_pixels": 52.10131197364772,
+            "principal_axis_ratio": 1.5521293268467065
+          },
+          "registered_center_reference_pixels": [
+            309.77847157217036,
+            128.70207847333256
+          ],
+          "registered_D_reference_pixels": 38.660970055582,
+          "registered_pupil_center_reference_pixels": [
+            301.1906259187051,
+            135.2345873556902
+          ],
+          "pupil_minus_outer_center_reference_pixels": [
+            -8.587845653465251,
+            6.532508882357632
+          ]
+        },
+        "R": {
+          "raw_aperture_pixels": {
+            "visible": true,
+            "sample_count": 3099,
+            "center_pixels": [
+              326.1406905453372,
+              355.8502742820265
+            ],
+            "bbox_pixels": [
+              [
+                262.0,
+                296.0
+              ],
+              [
+                392.0,
+                416.0
+              ]
+            ],
+            "D_pixels": 125.63071836353193,
+            "principal_axis_ratio": 1.1389439092112887
+          },
+          "raw_pupil_pixels": {
+            "visible": true,
+            "sample_count": 532,
+            "center_pixels": [
+              283.7894736842105,
+              362.3533834586466
+            ],
+            "bbox_pixels": [
+              [
+                264.0,
+                330.0
+              ],
+              [
+                304.0,
+                394.0
+              ]
+            ],
+            "D_pixels": 52.05241350020599,
+            "principal_axis_ratio": 1.5350981687975067
+          },
+          "registered_center_reference_pixels": [
+            379.6782768574294,
+            129.3635569463735
+          ],
+          "registered_D_reference_pixels": 51.72910935809854,
+          "registered_pupil_center_reference_pixels": [
+            362.239940461721,
+            132.04124636936646
+          ],
+          "pupil_minus_outer_center_reference_pixels": [
+            -17.438336395708404,
+            2.6776894229929553
+          ]
+        }
+      },
+      "far_D_over_near_D": 0.7473735878178108
+    }
+  },
+  "candidate_recommendation": {
+    "overall": "A for continuation with the primary Fig1.3 target",
+    "front": "B gives a more centered pupil and less diagonal clipping. Both retain prescribed front outer area and spacing; A is slightly more oblique in visible contour.",
+    "oblique": "B near exposed eye is rounder; A exposes less far eye, closer to Fig1.3. Both much rounder than original non-spherical eye.",
+    "reference": "A common camera score .860 versus B .970, and far/near visible ratio is lower. Neither reproduces reference far-eye occlusion.",
+    "gaze": "Saved basic gaze remains F=-Y. 35 degree temporary variant better centers near pupil at this oblique camera; reference eye gaze is unknown. Gaze tests do not justify changing the saved construction."
+  },
+  "residuals": {
+    "crown_model_minus_reference_pixels": [
+      5.183938365578797,
+      5.354555110603613
+    ],
+    "mouth_model_minus_reference_pixels": [
+      -5.183938365578797,
+      -5.3545551106036555
+    ],
+    "eye_centers_model_minus_reference": {
+      "original": {
+        "L": {
+          "center_delta_pixels": [
+            0.4498312061410843,
+            -4.990252255704149
+          ]
+        },
+        "R": {
+          "center_delta_pixels": [
+            2.3831620641517475,
+            0.9797735272185548
+          ]
+        }
+      },
+      "A": {
+        "L": {
+          "center_delta_pixels": [
+            -1.9690159364505462,
+            -8.262520976292194
+          ]
+        },
+        "R": {
+          "center_delta_pixels": [
+            1.613340109537603,
+            1.6385939456592666
+          ]
+        }
+      },
+      "B": {
+        "L": {
+          "center_delta_pixels": [
+            -4.721528427829639,
+            -8.297921526667437
+          ]
+        },
+        "R": {
+          "center_delta_pixels": [
+            -0.8217231425705904,
+            1.3635569463735067
+          ]
+        }
+      }
+    },
+    "yellow_outline_rows": [
+      {
+        "reference_y_pixels": 90,
+        "reference": {
+          "sample_row_original_pixels": 90,
+          "raw_x_range_pixels": [
+            344,
+            490
+          ],
+          "registered_x_range_reference_pixels": [
+            344.0,
+            490.0
+          ]
+        },
+        "model": {
+          "sample_row_original_pixels": 260,
+          "raw_x_range_pixels": [
+            291,
+            559
+          ],
+          "registered_x_range_reference_pixels": [
+            365.20891261421326,
+            475.55932283677134
+          ]
+        },
+        "model_minus_reference_front_back_pixels": [
+          21.20891261421326,
+          -14.440677163228656
+        ],
+        "model_minus_reference_front_back_over_reference_D": [
+          0.382282216101759,
+          -0.2602874635010557
+        ]
+      },
+      {
+        "reference_y_pixels": 180,
+        "reference": {
+          "sample_row_original_pixels": 180,
+          "raw_x_range_pixels": [
+            302,
+            546
+          ],
+          "registered_x_range_reference_pixels": [
+            302.0,
+            546.0
+          ]
+        },
+        "model": {
+          "sample_row_original_pixels": 479,
+          "raw_x_range_pixels": [
+            133,
+            692
+          ],
+          "registered_x_range_reference_pixels": [
+            300.15158121434695,
+            530.3227726860259
+          ]
+        },
+        "model_minus_reference_front_back_pixels": [
+          -1.8484187856530525,
+          -15.677227313974072
+        ],
+        "model_minus_reference_front_back_over_reference_D": [
+          -0.033317013583715166,
+          -0.2825757882514312
+        ]
+      },
+      {
+        "reference_y_pixels": 220,
+        "reference": {
+          "sample_row_original_pixels": 220,
+          "raw_x_range_pixels": [
+            331,
+            569
+          ],
+          "registered_x_range_reference_pixels": [
+            331.0,
+            569.0
+          ]
+        },
+        "model": {
+          "sample_row_original_pixels": 576,
+          "raw_x_range_pixels": [
+            119,
+            743
+          ],
+          "registered_x_range_reference_pixels": [
+            294.3870075460043,
+            551.3222910492739
+          ]
+        },
+        "model_minus_reference_front_back_pixels": [
+          -36.61299245399567,
+          -17.677708950726128
+        ],
+        "model_minus_reference_front_back_over_reference_D": [
+          -0.6599346297485625,
+          -0.31863367425808814
+        ]
+      },
+      {
+        "reference_y_pixels": 260,
+        "reference": {
+          "sample_row_original_pixels": 260,
+          "raw_x_range_pixels": [
+            344,
+            592
+          ],
+          "registered_x_range_reference_pixels": [
+            344.0,
+            592.0
+          ]
+        },
+        "model": {
+          "sample_row_original_pixels": 673,
+          "raw_x_range_pixels": [
+            124,
+            784
+          ],
+          "registered_x_range_reference_pixels": [
+            296.4457838561267,
+            568.2042567922772
+          ]
+        },
+        "model_minus_reference_front_back_pixels": [
+          -47.554216143873305,
+          -23.795743207722808
+        ],
+        "model_minus_reference_front_back_over_reference_D": [
+          -0.8571458359576197,
+          -0.42890880889105376
+        ]
+      },
+      {
+        "reference_y_pixels": 300,
+        "reference": {
+          "sample_row_original_pixels": 300,
+          "raw_x_range_pixels": [
+            336,
+            612
+          ],
+          "registered_x_range_reference_pixels": [
+            336.0,
+            612.0
+          ]
+        },
+        "model": {
+          "sample_row_original_pixels": 770,
+          "raw_x_range_pixels": [
+            115,
+            832
+          ],
+          "registered_x_range_reference_pixels": [
+            292.73998649790644,
+            587.9685093694518
+          ]
+        },
+        "model_minus_reference_front_back_pixels": [
+          -43.26001350209356,
+          -24.031490630548205
+        ],
+        "model_minus_reference_front_back_over_reference_D": [
+          -0.7797445409383992,
+          -0.43315806244201494
+        ]
+      }
+    ],
+    "interpretation": "After shared crown/mouth registration the neck front remains too far forward (screen left), and back silhouette is less far right; upper crown posterior contour is also narrower. No head/neck geometry changed in this round.",
+    "contour_method": "Original RGB pixel yellow threshold R>1.02G, G>1.15B, R>100; +/-1 raw pixel row. Threshold silhouette is approximate, not a mesh dimensional measurement.",
+    "contour_uncertainty_registered_pixels_approx": 3,
+    "not_a_head_scaling_multiplier": true
+  },
+  "gaze_variants": {
+    "angles_degrees": [
+      0,
+      20,
+      35
+    ],
+    "temporary_material_and_glint_only": true,
+    "geometry_unchanged_asserted_in_renderer": true,
+    "saved_to_blend": false,
+    "pixel_measurements_source": "reference_and_gaze_protocol.json"
+  },
+  "artifacts": [
+    "reference_stable_comparison.png",
+    "reference_gaze_comparison.png",
+    "reference_camera_grid_A.png",
+    "reference_camera_grid_B.png"
+  ]
+}

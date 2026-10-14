@@ -1,0 +1,32 @@
+{
+  "recommended": "E2",
+  "C3_B_adopted": false,
+  "native": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.blend",
+  "native_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "fixed_E2_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "candidate_B_sha256": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+  "saved_geometry_assets_animation_validation": true,
+  "independent_native_reproduction": true,
+  "visual_acceptance": false,
+  "native_only_delivery": true,
+  "new_FBX_exported": false,
+  "front_reference_error_pixels_same_protocol": {
+    "E2": 18.894272012976767,
+    "A": 17.95261174559323,
+    "B": 17.028431765664873
+  },
+  "back_reference_error_pixels_same_protocol": {
+    "E2": 6.827946677269097,
+    "A": 6.827946677269097,
+    "B": 6.827946677269097
+  },
+  "maximum_final_world_displacement_B": 0.007371504125862908,
+  "maximum_eye_local_displacement_B": 0.0,
+  "source_E2_unchanged": true,
+  "no_third_candidate": true,
+  "residuals": [
+    "Frontal under-mouth concentration and 45 degree wedge remain",
+    "Side-neck existing stripe return becomes more closed; supplemental local curvature and turn concentration increase",
+    "Existing eye sockets, strong reflection microtexture, remote-eye reference exposure difference and Laugh7 tiny mouth-front projection remain"
+  ]
+}

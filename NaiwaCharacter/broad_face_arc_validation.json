@@ -1,0 +1,1198 @@
+{
+  "independent_validation": "passed",
+  "baseline": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\iterations\\before_broad_face_arc_refinement\\Naiwa_Character.blend",
+  "target": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\Naiwa_Character.blend",
+  "all_body_and_shell_heights_exact": true,
+  "crown_root_shoulders_limbs_exact": true,
+  "upper_head_width_exact": true,
+  "topology_material_assignments_colors_bones_weights_preserved": true,
+  "height_before": 2.6448304653167725,
+  "height_after": 2.6448304653167725,
+  "changed_body_vertex_count": 35075,
+  "maximum_body_displacement": 0.025929614901542664,
+  "eye_fitting": {
+    "L": {
+      "rigid_fit_error": 1.2627098024882648e-07,
+      "pupil_x_z": [
+        -0.08659810572862625,
+        2.46272349357605
+      ]
+    },
+    "R": {
+      "rigid_fit_error": 1.3262639922824936e-07,
+      "pupil_x_z": [
+        0.0865972489118576,
+        2.4627325534820557
+      ]
+    }
+  },
+  "mouth_seam_width_before": 0.1219625398516655,
+  "mouth_seam_width_after": 0.1219625398516655,
+  "mouth_seam_height_before": 0.002409219741821289,
+  "mouth_seam_height_after": 0.002409219741821289,
+  "mouth_surface_gap_mean": 0.0006999969482421875,
+  "mouth_surface_gap_max_change": 0.0,
+  "sagittal_lower_face": {
+    "range_z": [
+      2.19,
+      2.33
+    ],
+    "sample_spacing": 0.002,
+    "local_cubic_window_length": 0.048,
+    "maximum_abs_slope_before": 0.7756457251421217,
+    "maximum_abs_slope_after": 0.5295320424274591,
+    "maximum_abs_slope_reduction_percent": 31.73016684512342,
+    "curvature_variation_rms_before": 234.73865599985442,
+    "curvature_variation_rms_after": 126.42740869140381,
+    "curvature_variation_reduction_percent": 46.141206205303384,
+    "curvature_peak_to_peak_before": 24.600600009074483,
+    "curvature_peak_to_peak_after": 14.96922367348581
+  },
+  "volume_redistribution": {
+    "maximum_front_retraction": 0.005995392799377441,
+    "maximum_front_advance": 0.016945838928222656,
+    "face_apex_before": {
+      "z": 2.3579999999999606,
+      "y": -0.47108030319213867
+    },
+    "face_apex_after": {
+      "z": 2.3579999999999606,
+      "y": -0.46508491039276123
+    },
+    "apex_retraction": 0.005995392799377441,
+    "throat_before": {
+      "z": 2.1879999999999793,
+      "y": -0.39347314834594727
+    },
+    "throat_after": {
+      "z": 2.155999999999983,
+      "y": -0.4055185317993164
+    },
+    "throat_extremum_forward_change": 0.01204538345336914,
+    "throat_forward_change_at_previous_height": 0.013721823692321777
+  },
+  "section_monotonicity": {
+    "width": {
+      "before": {
+        "maximum_upward_step": -0.00034987926483154297,
+        "total_positive_excursion": 0.0
+      },
+      "after": {
+        "maximum_upward_step": -0.0003972053527832031,
+        "total_positive_excursion": 0.0
+      }
+    },
+    "nape": {
+      "before": {
+        "maximum_upward_step": -0.0006933212280273438,
+        "total_positive_excursion": 0.0
+      },
+      "after": {
+        "maximum_upward_step": -0.0006933212280273438,
+        "total_positive_excursion": 0.0
+      }
+    }
+  },
+  "angular_change_diagnostics": [
+    {
+      "z": 2.12,
+      "front_half_max_abs_y_change": 0.0050466060638427734,
+      "rear_half_max_abs_y_change": 0.002496063709259033,
+      "rear_to_front_y_change_ratio": 0.4946024472055558,
+      "samples": [
+        {
+          "angle_degrees": 0,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.003568291664123535,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 30,
+          "ray_hit": true,
+          "delta_y": 0.002492845058441162,
+          "radial_change": 0.00498560955747962,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 60,
+          "ray_hit": true,
+          "delta_y": 0.0013350248336791992,
+          "radial_change": 0.001541539211757481,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 90,
+          "ray_hit": true,
+          "delta_y": 1.1920928955078125e-07,
+          "radial_change": 1.1920928955078125e-07,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 120,
+          "ray_hit": true,
+          "delta_y": 0.0013322830200195312,
+          "radial_change": 0.0015383899444714189,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 150,
+          "ray_hit": true,
+          "delta_y": 0.002496063709259033,
+          "radial_change": 0.004992174217477441,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 180,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.003568410873413086,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 210,
+          "ray_hit": true,
+          "delta_y": -0.0033458471298217773,
+          "radial_change": 0.00669174874201417,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 240,
+          "ray_hit": true,
+          "delta_y": -0.0050466060638427734,
+          "radial_change": 0.005827345885336399,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 270,
+          "ray_hit": true,
+          "delta_y": -0.004846334457397461,
+          "radial_change": 0.004846334457397461,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 300,
+          "ray_hit": true,
+          "delta_y": -0.005045533180236816,
+          "radial_change": 0.0058260587975382805,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 330,
+          "ray_hit": true,
+          "delta_y": -0.003346562385559082,
+          "radial_change": 0.006693138740956783,
+          "half": "front"
+        }
+      ]
+    },
+    {
+      "z": 2.16,
+      "front_half_max_abs_y_change": 0.010580182075500488,
+      "rear_half_max_abs_y_change": 0.0037477612495422363,
+      "rear_to_front_y_change_ratio": 0.3542246459274616,
+      "samples": [
+        {
+          "angle_degrees": 0,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.009550929069519043,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 30,
+          "ray_hit": true,
+          "delta_y": 0.0037449002265930176,
+          "radial_change": 0.007489747833460569,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 60,
+          "ray_hit": true,
+          "delta_y": 0.0018362998962402344,
+          "radial_change": 0.0021203762153163552,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 90,
+          "ray_hit": true,
+          "delta_y": -1.1920928955078125e-07,
+          "radial_change": -1.1920928955078125e-07,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 120,
+          "ray_hit": true,
+          "delta_y": 0.001836538314819336,
+          "radial_change": 0.0021206423407420516,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 150,
+          "ray_hit": true,
+          "delta_y": 0.0037477612495422363,
+          "radial_change": 0.007495514117181301,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 180,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.009550213813781738,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 210,
+          "ray_hit": true,
+          "delta_y": -0.00508570671081543,
+          "radial_change": 0.010171439033001661,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 240,
+          "ray_hit": true,
+          "delta_y": -0.010028481483459473,
+          "radial_change": 0.011579887010157108,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 270,
+          "ray_hit": true,
+          "delta_y": -0.010580182075500488,
+          "radial_change": 0.010580182075500488,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 300,
+          "ray_hit": true,
+          "delta_y": -0.010030150413513184,
+          "radial_change": 0.011581809259951115,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 330,
+          "ray_hit": true,
+          "delta_y": -0.005093574523925781,
+          "radial_change": 0.010187142062932253,
+          "half": "front"
+        }
+      ]
+    },
+    {
+      "z": 2.19,
+      "front_half_max_abs_y_change": 0.013967752456665039,
+      "rear_half_max_abs_y_change": 0.0042549967765808105,
+      "rear_to_front_y_change_ratio": 0.3046300247503627,
+      "samples": [
+        {
+          "angle_degrees": 0,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.010809540748596191,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 30,
+          "ray_hit": true,
+          "delta_y": 0.004224181175231934,
+          "radial_change": 0.008448339533060789,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 60,
+          "ray_hit": true,
+          "delta_y": 0.0020133256912231445,
+          "radial_change": 0.002324796048924327,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 90,
+          "ray_hit": true,
+          "delta_y": 1.1920928955078125e-07,
+          "radial_change": 1.1920928955078125e-07,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 120,
+          "ray_hit": true,
+          "delta_y": 0.0020123720169067383,
+          "radial_change": 0.0023237019777297974,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 150,
+          "ray_hit": true,
+          "delta_y": 0.0042549967765808105,
+          "radial_change": 0.008509998209774494,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 180,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.010808706283569336,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 210,
+          "ray_hit": true,
+          "delta_y": -0.006033658981323242,
+          "radial_change": 0.012067316100001335,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 240,
+          "ray_hit": true,
+          "delta_y": -0.013539791107177734,
+          "radial_change": 0.015634377487003803,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 270,
+          "ray_hit": true,
+          "delta_y": -0.013967752456665039,
+          "radial_change": 0.013967752456665039,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 300,
+          "ray_hit": true,
+          "delta_y": -0.013542652130126953,
+          "radial_change": 0.015637719072401524,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 330,
+          "ray_hit": true,
+          "delta_y": -0.006018280982971191,
+          "radial_change": 0.012036604806780815,
+          "half": "front"
+        }
+      ]
+    },
+    {
+      "z": 2.22,
+      "front_half_max_abs_y_change": 0.01839745044708252,
+      "rear_half_max_abs_y_change": 0.0044266581535339355,
+      "rear_to_front_y_change_ratio": 0.24061258739446248,
+      "samples": [
+        {
+          "angle_degrees": 0,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.010998964309692383,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 30,
+          "ray_hit": true,
+          "delta_y": 0.004421830177307129,
+          "radial_change": 0.008843664079904556,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 60,
+          "ray_hit": true,
+          "delta_y": 0.0020112991333007812,
+          "radial_change": 0.00232244492508471,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 90,
+          "ray_hit": true,
+          "delta_y": 1.1920928955078125e-07,
+          "radial_change": 1.1920928955078125e-07,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 120,
+          "ray_hit": true,
+          "delta_y": 0.0020089149475097656,
+          "radial_change": 0.0023196947295218706,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 150,
+          "ray_hit": true,
+          "delta_y": 0.0044266581535339355,
+          "radial_change": 0.008853305131196976,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 180,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.010999083518981934,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 210,
+          "ray_hit": true,
+          "delta_y": -0.007055103778839111,
+          "radial_change": 0.014110197313129902,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 240,
+          "ray_hit": true,
+          "delta_y": -0.01839745044708252,
+          "radial_change": 0.02124355174601078,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 270,
+          "ray_hit": true,
+          "delta_y": -0.01686275005340576,
+          "radial_change": 0.01686275005340576,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 300,
+          "ray_hit": true,
+          "delta_y": -0.018387794494628906,
+          "radial_change": 0.02123238891363144,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 330,
+          "ray_hit": true,
+          "delta_y": -0.0070612430572509766,
+          "radial_change": 0.01412245538085699,
+          "half": "front"
+        }
+      ]
+    },
+    {
+      "z": 2.26,
+      "front_half_max_abs_y_change": 0.019553422927856445,
+      "rear_half_max_abs_y_change": 0.004583120346069336,
+      "rear_to_front_y_change_ratio": 0.23438966993037688,
+      "samples": [
+        {
+          "angle_degrees": 0,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.010877132415771484,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 30,
+          "ray_hit": true,
+          "delta_y": 0.004581809043884277,
+          "radial_change": 0.009163579437881708,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 60,
+          "ray_hit": true,
+          "delta_y": 0.0020121335983276367,
+          "radial_change": 0.0023234060499817133,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 90,
+          "ray_hit": true,
+          "delta_y": -1.1920928955078125e-07,
+          "radial_change": -1.1920928955078125e-07,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 120,
+          "ray_hit": true,
+          "delta_y": 0.0020198822021484375,
+          "radial_change": 0.0023323517525568604,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 150,
+          "ray_hit": true,
+          "delta_y": 0.004583120346069336,
+          "radial_change": 0.00916629983112216,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 180,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.010876655578613281,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 210,
+          "ray_hit": true,
+          "delta_y": -0.007476747035980225,
+          "radial_change": 0.014953560195863247,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 240,
+          "ray_hit": true,
+          "delta_y": -0.019530892372131348,
+          "radial_change": 0.02255234122276306,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 270,
+          "ray_hit": true,
+          "delta_y": -0.013138651847839355,
+          "radial_change": 0.013138651847839355,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 300,
+          "ray_hit": true,
+          "delta_y": -0.019553422927856445,
+          "radial_change": 0.022578351199626923,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 330,
+          "ray_hit": true,
+          "delta_y": -0.00749659538269043,
+          "radial_change": 0.014993113465607166,
+          "half": "front"
+        }
+      ]
+    },
+    {
+      "z": 2.3,
+      "front_half_max_abs_y_change": 0.012192249298095703,
+      "rear_half_max_abs_y_change": 0.003908038139343262,
+      "rear_to_front_y_change_ratio": 0.32053463178067193,
+      "samples": [
+        {
+          "angle_degrees": 0,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.008832812309265137,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 30,
+          "ray_hit": true,
+          "delta_y": 0.0039020776748657227,
+          "radial_change": 0.007804132532328367,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 60,
+          "ray_hit": true,
+          "delta_y": 0.001772761344909668,
+          "radial_change": 0.0020470217568799853,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 90,
+          "ray_hit": true,
+          "delta_y": -1.1920928955078125e-07,
+          "radial_change": -1.1920928955078125e-07,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 120,
+          "ray_hit": true,
+          "delta_y": 0.0017715692520141602,
+          "radial_change": 0.0020456317579373717,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 150,
+          "ray_hit": true,
+          "delta_y": 0.003908038139343262,
+          "radial_change": 0.007816094439476728,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 180,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.008832216262817383,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 210,
+          "ray_hit": true,
+          "delta_y": -0.005735635757446289,
+          "radial_change": 0.011471282690763474,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 240,
+          "ray_hit": true,
+          "delta_y": -0.012192249298095703,
+          "radial_change": 0.014078391715884209,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 270,
+          "ray_hit": true,
+          "delta_y": -0.0026543140411376953,
+          "radial_change": 0.0026543140411376953,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 300,
+          "ray_hit": true,
+          "delta_y": -0.012190580368041992,
+          "radial_change": 0.014076469466090202,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 330,
+          "ray_hit": true,
+          "delta_y": -0.005737245082855225,
+          "radial_change": 0.011474461294710636,
+          "half": "front"
+        }
+      ]
+    },
+    {
+      "z": 2.34,
+      "front_half_max_abs_y_change": 0.00586700439453125,
+      "rear_half_max_abs_y_change": 0.0021352767944335938,
+      "rear_to_front_y_change_ratio": 0.3639466840052016,
+      "samples": [
+        {
+          "angle_degrees": 0,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.004668593406677246,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 30,
+          "ray_hit": true,
+          "delta_y": 0.0021352767944335938,
+          "radial_change": 0.004270605742931366,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 60,
+          "ray_hit": true,
+          "delta_y": 0.0010151863098144531,
+          "radial_change": 0.001172223361209035,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 90,
+          "ray_hit": true,
+          "delta_y": 1.1920928955078125e-07,
+          "radial_change": 1.1920928955078125e-07,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 120,
+          "ray_hit": true,
+          "delta_y": 0.001016378402709961,
+          "radial_change": 0.0011736133601516485,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 150,
+          "ray_hit": true,
+          "delta_y": 0.0021334290504455566,
+          "radial_change": 0.004266894422471523,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 180,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.004668831825256348,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 210,
+          "ray_hit": true,
+          "delta_y": -0.0033759474754333496,
+          "radial_change": 0.006751914042979479,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 240,
+          "ray_hit": true,
+          "delta_y": -0.00586700439453125,
+          "radial_change": 0.006774640642106533,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 270,
+          "ray_hit": true,
+          "delta_y": 0.005139946937561035,
+          "radial_change": -0.005139946937561035,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 300,
+          "ray_hit": true,
+          "delta_y": -0.005866646766662598,
+          "radial_change": 0.006774211768060923,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 330,
+          "ray_hit": true,
+          "delta_y": -0.0033752918243408203,
+          "radial_change": 0.006750553846359253,
+          "half": "front"
+        }
+      ]
+    },
+    {
+      "z": 2.38,
+      "front_half_max_abs_y_change": 0.0049495697021484375,
+      "rear_half_max_abs_y_change": 0.00048542022705078125,
+      "rear_to_front_y_change_ratio": 0.09807321772639692,
+      "samples": [
+        {
+          "angle_degrees": 0,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.0010645389556884766,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 30,
+          "ray_hit": true,
+          "delta_y": 0.00048542022705078125,
+          "radial_change": 0.0009708496509119868,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 60,
+          "ray_hit": true,
+          "delta_y": 0.0002480745315551758,
+          "radial_change": 0.00028645382553804666,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 90,
+          "ray_hit": true,
+          "delta_y": -2.384185791015625e-07,
+          "radial_change": -2.384185791015625e-07,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 120,
+          "ray_hit": true,
+          "delta_y": 0.00025200843811035156,
+          "radial_change": 0.00029099317907821387,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 150,
+          "ray_hit": true,
+          "delta_y": 0.00048530101776123047,
+          "radial_change": 0.0009705835836939514,
+          "half": "rear"
+        },
+        {
+          "angle_degrees": 180,
+          "ray_hit": true,
+          "delta_y": 0.0,
+          "radial_change": 0.0010645389556884766,
+          "half": "side"
+        },
+        {
+          "angle_degrees": 210,
+          "ray_hit": true,
+          "delta_y": -0.0020980238914489746,
+          "radial_change": 0.004196127410978079,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 240,
+          "ray_hit": true,
+          "delta_y": -0.0049495697021484375,
+          "radial_change": 0.005715265870094299,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 270,
+          "ray_hit": true,
+          "delta_y": 0.004899263381958008,
+          "radial_change": -0.004899263381958008,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 300,
+          "ray_hit": true,
+          "delta_y": -0.004946351051330566,
+          "radial_change": 0.005711554549634457,
+          "half": "front"
+        },
+        {
+          "angle_degrees": 330,
+          "ray_hit": true,
+          "delta_y": -0.002096414566040039,
+          "radial_change": 0.004192844964563847,
+          "half": "front"
+        }
+      ]
+    }
+  ],
+  "surface_integrity": {
+    "duplicate_vertices_at_1e_7": 0,
+    "duplicate_faces": 0,
+    "degenerate_faces": 0,
+    "nonadjacent_intersections": 0,
+    "normal_unit_error": 1.7881393432617188e-07,
+    "minimum_outward_x": 0.17249952256679535,
+    "custom_normals": false,
+    "sharp_edges": 0,
+    "all_faces_smooth": true
+  },
+  "sections": [
+    {
+      "z": 2.0,
+      "before": [
+        0.4306074380874634,
+        -0.4449669122695923,
+        0.3109318017959595
+      ],
+      "after": [
+        0.43063223361968994,
+        -0.4447793960571289,
+        0.3109321594238281
+      ]
+    },
+    {
+      "z": 2.019999999999998,
+      "before": [
+        0.4145904779434204,
+        -0.4394207000732422,
+        0.3008671998977661
+      ],
+      "after": [
+        0.4146277904510498,
+        -0.43894529342651367,
+        0.30086731910705566
+      ]
+    },
+    {
+      "z": 2.0399999999999956,
+      "before": [
+        0.39937520027160645,
+        -0.4330103397369385,
+        0.2902640104293823
+      ],
+      "after": [
+        0.3993961811065674,
+        -0.43238019943237305,
+        0.2902640104293823
+      ]
+    },
+    {
+      "z": 2.0599999999999934,
+      "before": [
+        0.38370537757873535,
+        -0.42573070526123047,
+        0.2791323661804199
+      ],
+      "after": [
+        0.3837350606918335,
+        -0.42536604404449463,
+        0.2791324853897095
+      ]
+    },
+    {
+      "z": 2.079999999999991,
+      "before": [
+        0.37048280239105225,
+        -0.4179816246032715,
+        0.2675211429595947
+      ],
+      "after": [
+        0.3708159923553467,
+        -0.4185541868209839,
+        0.2675211429595947
+      ]
+    },
+    {
+      "z": 2.099999999999989,
+      "before": [
+        0.359067440032959,
+        -0.4103642702102661,
+        0.25546813011169434
+      ],
+      "after": [
+        0.3603414297103882,
+        -0.41268765926361084,
+        0.2554682493209839
+      ]
+    },
+    {
+      "z": 2.119999999999987,
+      "before": [
+        0.3464089632034302,
+        -0.40358173847198486,
+        0.24308156967163086
+      ],
+      "after": [
+        0.35000109672546387,
+        -0.4084281921386719,
+        0.2430816888809204
+      ]
+    },
+    {
+      "z": 2.1399999999999846,
+      "before": [
+        0.33096957206726074,
+        -0.39829325675964355,
+        0.23045730590820312
+      ],
+      "after": [
+        0.3380788564682007,
+        -0.4061272144317627,
+        0.23045730590820312
+      ]
+    },
+    {
+      "z": 2.1599999999999824,
+      "before": [
+        0.3155398368835449,
+        -0.3949394226074219,
+        0.217695951461792
+      ],
+      "after": [
+        0.3251556158065796,
+        -0.405519962310791,
+        0.217695951461792
+      ]
+    },
+    {
+      "z": 2.17999999999998,
+      "before": [
+        0.3035188913345337,
+        -0.39355385303497314,
+        0.20493710041046143
+      ],
+      "after": [
+        0.31409335136413574,
+        -0.40636157989501953,
+        0.20493698120117188
+      ]
+    },
+    {
+      "z": 2.199999999999978,
+      "before": [
+        0.2951362133026123,
+        -0.39428675174713135,
+        0.19228732585906982
+      ],
+      "after": [
+        0.30593252182006836,
+        -0.4095417261123657,
+        0.19228732585906982
+      ]
+    },
+    {
+      "z": 2.2199999999999758,
+      "before": [
+        0.2889363765716553,
+        -0.398883581161499,
+        0.17986929416656494
+      ],
+      "after": [
+        0.29963767528533936,
+        -0.41574645042419434,
+        0.1798691749572754
+      ]
+    },
+    {
+      "z": 2.2399999999999736,
+      "before": [
+        0.2840726375579834,
+        -0.40835559368133545,
+        0.16779184341430664
+      ],
+      "after": [
+        0.2945913076400757,
+        -0.42454659938812256,
+        0.16779160499572754
+      ]
+    },
+    {
+      "z": 2.2599999999999714,
+      "before": [
+        0.2801097631454468,
+        -0.4216500520706177,
+        0.15621113777160645
+      ],
+      "after": [
+        0.29041314125061035,
+        -0.43478870391845703,
+        0.15621113777160645
+      ]
+    },
+    {
+      "z": 2.279999999999969,
+      "before": [
+        0.27649688720703125,
+        -0.43696916103363037,
+        0.14508700370788574
+      ],
+      "after": [
+        0.28623151779174805,
+        -0.4451611042022705,
+        0.1450868844985962
+      ]
+    },
+    {
+      "z": 2.299999999999967,
+      "before": [
+        0.27262139320373535,
+        -0.45156681537628174,
+        0.13462090492248535
+      ],
+      "after": [
+        0.2812793254852295,
+        -0.45422112941741943,
+        0.1346210241317749
+      ]
+    },
+    {
+      "z": 2.3199999999999648,
+      "before": [
+        0.26820945739746094,
+        -0.462841272354126,
+        0.12479400634765625
+      ],
+      "after": [
+        0.2752455472946167,
+        -0.4607102870941162,
+        0.1247943639755249
+      ]
+    },
+    {
+      "z": 2.3399999999999626,
+      "before": [
+        0.2632632255554199,
+        -0.4693613052368164,
+        0.1156536340713501
+      ],
+      "after": [
+        0.26833677291870117,
+        -0.4642214775085449,
+        0.1156536340713501
+      ]
+    },
+    {
+      "z": 2.3599999999999604,
+      "before": [
+        0.2576272487640381,
+        -0.47107255458831787,
+        0.10714113712310791
+      ],
+      "after": [
+        0.2607085704803467,
+        -0.46508216857910156,
+        0.10714113712310791
+      ]
+    },
+    {
+      "z": 2.379999999999958,
+      "before": [
+        0.2514688968658447,
+        -0.4681074619293213,
+        0.09921479225158691
+      ],
+      "after": [
+        0.2529137134552002,
+        -0.4632079601287842,
+        0.09921479225158691
+      ]
+    },
+    {
+      "z": 2.399999999999956,
+      "before": [
+        0.24528956413269043,
+        -0.4575042724609375,
+        0.09177744388580322
+      ],
+      "after": [
+        0.24564886093139648,
+        -0.4555184841156006,
+        0.09177756309509277
+      ]
+    },
+    {
+      "z": 2.4199999999999537,
+      "before": [
+        0.23900580406188965,
+        -0.44052112102508545,
+        0.0846790075302124
+      ],
+      "after": [
+        0.23892724514007568,
+        -0.4418729543685913,
+        0.0846792459487915
+      ]
+    },
+    {
+      "z": 2.4399999999999515,
+      "before": [
+        0.23230838775634766,
+        -0.4216240644454956,
+        0.07770764827728271
+      ],
+      "after": [
+        0.23217058181762695,
+        -0.4248005151748657,
+        0.07770764827728271
+      ]
+    },
+    {
+      "z": 2.4599999999999493,
+      "before": [
+        0.2245020866394043,
+        -0.4052257537841797,
+        0.07061004638671875
+      ],
+      "after": [
+        0.22441768646240234,
+        -0.407678484916687,
+        0.07061004638671875
+      ]
+    },
+    {
+      "z": 2.479999999999947,
+      "before": [
+        0.21562957763671875,
+        -0.39238810539245605,
+        0.06306207180023193
+      ],
+      "after": [
+        0.21561896800994873,
+        -0.3928128480911255,
+        0.06306207180023193
+      ]
+    },
+    {
+      "z": 2.499999999999945,
+      "before": [
+        0.20603394508361816,
+        -0.3796849250793457,
+        0.05468165874481201
+      ],
+      "after": [
+        0.20603394508361816,
+        -0.3796849250793457,
+        0.05468165874481201
+      ]
+    },
+    {
+      "z": 2.5199999999999427,
+      "before": [
+        0.19576764106750488,
+        -0.3656994104385376,
+        0.04500710964202881
+      ],
+      "after": [
+        0.19576764106750488,
+        -0.3656994104385376,
+        0.04500710964202881
+      ]
+    }
+  ]
+}

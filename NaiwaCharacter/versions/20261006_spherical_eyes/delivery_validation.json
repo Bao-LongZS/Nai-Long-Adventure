@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "source_unchanged": true,
+  "source_sha256": "a95a5c7efb25cb6f379897dd6ec4af98a201bc2619dc8caa2bb5b5de8ea3dfd5",
+  "required_files": [
+    "README_\u4ea4\u4ed8\u8bf4\u660e.md",
+    "index.html",
+    "\u4fee\u6539\u6307\u4ee4.md",
+    "calibrated_parameters.csv",
+    "calibrated_parameters.json",
+    "generation_scripts.zip",
+    "generation_source_manifest.json",
+    "spherical_eyes_validation.json",
+    "default_rebuild_validation.json",
+    "reference_comparison/reference_review.md",
+    "reference_comparison/reference_review.json",
+    "comparisons/comparison_head.png",
+    "comparisons/comparison_head_gray.png",
+    "comparisons/comparison_eye.png",
+    "comparisons/comparison_eye_gray.png",
+    "comparisons/comparison_full.png",
+    "comparisons/eye_side_sections.png",
+    "comparisons/sphere_center_sections.png",
+    "comparisons/eye_measurements.png",
+    "reference_comparison/reference_stable_comparison.png",
+    "reference_comparison/reference_gaze_comparison.png",
+    "candidate_A/Naiwa_Character.blend",
+    "candidate_A/Naiwa_Character.fbx",
+    "candidate_A/validation_report.json",
+    "candidate_A/fbx_validation.json",
+    "candidate_A/rebuild_validation.json",
+    "candidate_A/sphere_center_sections.json",
+    "candidate_A/spherical_eye_build_report.json",
+    "candidate_B/Naiwa_Character.blend",
+    "candidate_B/Naiwa_Character.fbx",
+    "candidate_B/validation_report.json",
+    "candidate_B/fbx_validation.json",
+    "candidate_B/rebuild_validation.json",
+    "candidate_B/sphere_center_sections.json",
+    "candidate_B/spherical_eye_build_report.json"
+  ],
+  "original_comparison_png_count": 39,
+  "comparison_source_hashes_exact": true,
+  "source_snapshot_zip_verified": true,
+  "candidates": {
+    "A": {
+      "blend_sha256": "f251f5a0fc00fedf1df76fcc6286bc40e102406a536cb6c676a93e176cb71ca0",
+      "fbx_sha256": "00ae7aab3fa231e8e0a5f486a1d9c9aa0d8db6f3f92d9ae78b24c6171910d8b8",
+      "independent_geometry_validation": true,
+      "rebuild_exact": true,
+      "non_eye_meshes_rig_exact": true,
+      "actual_spacing": 0.2345631328663189
+    },
+    "B": {
+      "blend_sha256": "d381f9ce3d505372467814d2dcb56e97e70b54864396a19453e60b93be8824fb",
+      "fbx_sha256": "ffd430f3a6d4b2aa10197fa4098082f29b281d0ff61262b873b68535cbe53dac",
+      "independent_geometry_validation": true,
+      "rebuild_exact": true,
+      "non_eye_meshes_rig_exact": true,
+      "actual_spacing": 0.23466435592091883
+    }
+  }
+}

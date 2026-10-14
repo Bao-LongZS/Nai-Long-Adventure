@@ -1,0 +1,58 @@
+{
+  "source_scripts_include_local_import_closure": true,
+  "inputs_are_in_existing_project_not_in_script_zip": true,
+  "runtime": {
+    "Blender": "Use the same Blender release as the saved models; rebuild_command.ps1 accepts -Blender",
+    "analysis_Python": "Python with numpy and Pillow"
+  },
+  "files": [
+    {
+      "path": "versions/20261007_N2_round_refinement/candidate_R1/Naiwa_Character.blend",
+      "bytes": 23901979,
+      "sha256": "ea12e9af2c564527d0c473cd31b28974339fcceb15b666502a33f0ffa057bc24"
+    },
+    {
+      "path": "versions/20261006_spherical_eyes/comparisons/camera_protocol.json",
+      "bytes": 18688,
+      "sha256": "e9c8c9a9755497f673b83be28fb70591fd75b71a990c574c0c9a33e08583d0b3"
+    },
+    {
+      "path": "versions/20261007_N2_round_refinement/reference_comparison/reference_review.json",
+      "bytes": 6501,
+      "sha256": "9ccd59c5c173d8dd44aff375cbd0d38fcb3d3c58238cb0aaf1f78077cfe07726"
+    },
+    {
+      "path": "references/20261005/pdf_page03_image03_IM60.jpg",
+      "bytes": 34544,
+      "sha256": "4ec47b76c34f5a0e2a670f7fe6a675d49bd0aaeb524a03d83add37e9f209074d"
+    },
+    {
+      "path": "references/20261005/pdf_page08_fig6_2.png",
+      "bytes": 416176,
+      "sha256": "bd331174ac6e510965b4111b20969442bb5ba02d8fd7ead5fe49e55b3f410ec7"
+    },
+    {
+      "path": "references/20261005/pdf_page09_fig6_5.png",
+      "bytes": 377934,
+      "sha256": "48c23c8638731ee6520ba209477c5cf868fbc6752296acdec9a487843c52af49"
+    }
+  ],
+  "delivered_recipe_and_comparison_targets": [
+    {
+      "path": "candidate_H2/Naiwa_Character.blend",
+      "sha256": "7b2233033e755b614bf9b15f49e7f8a459e12ff775dc278215cbb34049193a49"
+    },
+    {
+      "path": "candidate_H2/parameters.json",
+      "sha256": "2915b69fe15608fe4d3508340109e2e701a09d9ccdc276f2a2a119b8a1a1ab93"
+    },
+    {
+      "path": "candidate_E2/Naiwa_Character.blend",
+      "sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322"
+    },
+    {
+      "path": "candidate_E2/e2_build_report.json",
+      "sha256": "8e4da928a06db5febaa6f00437e44dc1f7f6bff1f47690cf0f1d9321299c4d95"
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "status": "new_fixed_protocol; historical exact algorithm unavailable in authorized sources",
+  "historical_values_background_only": {
+    "E2_front": 18.182,
+    "E2_back": 7.561
+  },
+  "units": "original figure_1_3.jpg pixels",
+  "pixel_center_convention": "integer pixel-index coordinates",
+  "scan_rows": [
+    90,
+    180,
+    220,
+    260,
+    300
+  ],
+  "neck_mean_scan_rows": [
+    220,
+    260,
+    300
+  ],
+  "reference_search_x_half_open": [
+    260,
+    700
+  ],
+  "reference_segmentation": {
+    "saturation_threshold": 0.18,
+    "method": "HSV saturation >= threshold; fill between first and last colored pixel per fixed row"
+  },
+  "model_segmentation": {
+    "input": "shadow-independent white emission body ID on black",
+    "threshold": 0.5,
+    "row_sampling": "linear between source raster rows",
+    "edge_sampling": "linear threshold crossing adjacent source raster pixel centers"
+  },
+  "registration": {
+    "scale": 0.41175526202447044,
+    "translation": [
+      245.38813136509236,
+      -17.159665982101984
+    ]
+  },
+  "signed_error": "model_x_reference_space - reference_x",
+  "mean_algorithm": "unweighted arithmetic mean of absolute signed front/back errors at neck rows",
+  "reference_sha256": "4ec47b76c34f5a0e2a670f7fe6a675d49bd0aaeb524a03d83add37e9f209074d",
+  "reference_rows": [
+    {
+      "reference_y": 90,
+      "reference_front_x": 345.0,
+      "reference_back_x": 489.0
+    },
+    {
+      "reference_y": 180,
+      "reference_front_x": 303.0,
+      "reference_back_x": 545.0
+    },
+    {
+      "reference_y": 220,
+      "reference_front_x": 332.0,
+      "reference_back_x": 568.0
+    },
+    {
+      "reference_y": 260,
+      "reference_front_x": 344.0,
+      "reference_back_x": 591.0
+    },
+    {
+      "reference_y": 300,
+      "reference_front_x": 337.0,
+      "reference_back_x": 612.0
+    }
+  ],
+  "models": {
+    "E2": {
+      "body_id_source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\key\\E2\\E2_common_body_id_50.png",
+      "body_id_sha256": "155b9c0267110fa09576d574d8b53e379f9ac7918d36cf45184dfeb0d57e04d3",
+      "rows": [
+        {
+          "reference_y": 90,
+          "reference_front_x": 345.0,
+          "reference_back_x": 489.0,
+          "model_source_y": 260.25087197485175,
+          "model_front_x": 360.44613656655815,
+          "model_back_x": 475.6732280478932,
+          "front_signed_error_px": 15.446136566558152,
+          "back_signed_error_px": -13.32677195210681
+        },
+        {
+          "reference_y": 180,
+          "reference_front_x": 303.0,
+          "reference_back_x": 545.0,
+          "model_source_y": 478.8273136152049,
+          "model_front_x": 303.9698169921002,
+          "model_back_x": 538.0550339935703,
+          "front_signed_error_px": 0.9698169921002204,
+          "back_signed_error_px": -6.944966006429695
+        },
+        {
+          "reference_y": 220,
+          "reference_front_x": 332.0,
+          "reference_back_x": 568.0,
+          "model_source_y": 575.9723987886953,
+          "model_front_x": 315.2096156028691,
+          "model_back_x": 563.1062361553078,
+          "front_signed_error_px": -16.79038439713088,
+          "back_signed_error_px": -4.8937638446922165
+        },
+        {
+          "reference_y": 260,
+          "reference_front_x": 344.0,
+          "reference_back_x": 591.0,
+          "model_source_y": 673.1174839621855,
+          "model_front_x": 326.2912242657689,
+          "model_back_x": 586.9479324927911,
+          "front_signed_error_px": -17.708775734231097,
+          "back_signed_error_px": -4.052067507208903
+        },
+        {
+          "reference_y": 300,
+          "reference_front_x": 337.0,
+          "reference_back_x": 612.0,
+          "model_source_y": 770.2625691356758,
+          "model_front_x": 314.8163440924317,
+          "model_back_x": 600.4619913200938,
+          "front_signed_error_px": -22.183655907568323,
+          "back_signed_error_px": -11.53800867990617
+        }
+      ],
+      "neck_mean_abs_front_error_px": 18.894272012976767,
+      "neck_mean_abs_back_error_px": 6.827946677269097
+    },
+    "A": {
+      "body_id_source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\key\\A\\A_common_body_id_50.png",
+      "body_id_sha256": "c48bdcebe2ca7d04811939cee11c33ac2d404375b098acccc532dbe5eca8a613",
+      "rows": [
+        {
+          "reference_y": 90,
+          "reference_front_x": 345.0,
+          "reference_back_x": 489.0,
+          "model_source_y": 260.25087197485175,
+          "model_front_x": 360.44613656655815,
+          "model_back_x": 475.6732280478932,
+          "front_signed_error_px": 15.446136566558152,
+          "back_signed_error_px": -13.32677195210681
+        },
+        {
+          "reference_y": 180,
+          "reference_front_x": 303.0,
+          "reference_back_x": 545.0,
+          "model_source_y": 478.8273136152049,
+          "model_front_x": 303.9488321911016,
+          "model_back_x": 538.0550339935703,
+          "front_signed_error_px": 0.9488321911015873,
+          "back_signed_error_px": -6.944966006429695
+        },
+        {
+          "reference_y": 220,
+          "reference_front_x": 332.0,
+          "reference_back_x": 568.0,
+          "model_source_y": 575.9723987886953,
+          "model_front_x": 315.93964751288956,
+          "model_back_x": 563.1062361553078,
+          "front_signed_error_px": -16.060352487110436,
+          "back_signed_error_px": -4.8937638446922165
+        },
+        {
+          "reference_y": 260,
+          "reference_front_x": 344.0,
+          "reference_back_x": 591.0,
+          "model_source_y": 673.1174839621855,
+          "model_front_x": 327.43966908173684,
+          "model_back_x": 586.9479324927911,
+          "front_signed_error_px": -16.560330918263162,
+          "back_signed_error_px": -4.052067507208903
+        },
+        {
+          "reference_y": 300,
+          "reference_front_x": 337.0,
+          "reference_back_x": 612.0,
+          "model_source_y": 770.2625691356758,
+          "model_front_x": 315.7628481685939,
+          "model_back_x": 600.4619913200938,
+          "front_signed_error_px": -21.237151831406095,
+          "back_signed_error_px": -11.53800867990617
+        }
+      ],
+      "neck_mean_abs_front_error_px": 17.95261174559323,
+      "neck_mean_abs_back_error_px": 6.827946677269097,
+      "front_error_improvement_fraction_vs_E2": 0.049838398999273115,
+      "back_error_change_px_vs_E2": 0.0
+    },
+    "B": {
+      "body_id_source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\key\\B\\B_common_body_id_50.png",
+      "body_id_sha256": "fd20f4c7957b8e9e7c93f56d140384a5481e6b78f1275fbfb50df94957b93011",
+      "rows": [
+        {
+          "reference_y": 90,
+          "reference_front_x": 345.0,
+          "reference_back_x": 489.0,
+          "model_source_y": 260.25087197485175,
+          "model_front_x": 360.44613656655815,
+          "model_back_x": 475.6732280478932,
+          "front_signed_error_px": 15.446136566558152,
+          "back_signed_error_px": -13.32677195210681
+        },
+        {
+          "reference_y": 180,
+          "reference_front_x": 303.0,
+          "reference_back_x": 545.0,
+          "model_source_y": 478.8273136152049,
+          "model_front_x": 303.9215710970346,
+          "model_back_x": 538.0550339935703,
+          "front_signed_error_px": 0.9215710970345867,
+          "back_signed_error_px": -6.944966006429695
+        },
+        {
+          "reference_y": 220,
+          "reference_front_x": 332.0,
+          "reference_back_x": 568.0,
+          "model_source_y": 575.9723987886953,
+          "model_front_x": 316.6360060209691,
+          "model_back_x": 563.1062361553078,
+          "front_signed_error_px": -15.363993979030909,
+          "back_signed_error_px": -4.8937638446922165
+        },
+        {
+          "reference_y": 260,
+          "reference_front_x": 344.0,
+          "reference_back_x": 591.0,
+          "model_source_y": 673.1174839621855,
+          "model_front_x": 328.5480007343564,
+          "model_back_x": 586.9479324927911,
+          "front_signed_error_px": -15.451999265643622,
+          "back_signed_error_px": -4.052067507208903
+        },
+        {
+          "reference_y": 300,
+          "reference_front_x": 337.0,
+          "reference_back_x": 612.0,
+          "model_source_y": 770.2625691356758,
+          "model_front_x": 316.7306979476799,
+          "model_back_x": 600.4619913200938,
+          "front_signed_error_px": -20.269302052320086,
+          "back_signed_error_px": -11.53800867990617
+        }
+      ],
+      "neck_mean_abs_front_error_px": 17.028431765664873,
+      "neck_mean_abs_back_error_px": 6.827946677269097,
+      "front_error_improvement_fraction_vs_E2": 0.09875163467692305,
+      "back_error_change_px_vs_E2": 0.0
+    }
+  },
+  "automatic_visual_acceptance": false,
+  "measurement_contract_sha256": "a2c9c54744a1e35060ee6aad2434a5ecab359473a1c12851edf5912af64654ac"
+}

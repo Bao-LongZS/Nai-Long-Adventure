@@ -1,0 +1,15 @@
+00:00.704  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_eye_muzzle_body_delivery\Naiwa_Character.blend"
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+HEAD_RESHAPE_BASELINE_OK 0.1020112181710007 0.4068188483507921 0.11731290089665079
+信息: 已另存为 "Naiwa_Character.blend"
+
+FBX export starting... 'C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\head_reshape_rebuild_check\\Naiwa_Character.fbx'
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+export finished in 2.9862 sec.
+HEAD_RESHAPE_BUILD_OK
+NAIWA_BUILD_OK 6 4

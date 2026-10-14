@@ -1,0 +1,5 @@
+00:01.250  blend            | Read blend: "C:\Users\31314\Desktop\NaiwaCharacter\Naiwa_Character.blend"
+FORWARD_NECK_INDEPENDENT_VALIDATION_OK head_error= 7.748603821078337e-09 height_error=0.0 feature_errors= {'L concentric iris and pupil': 7.748603821078337e-09, 'R concentric iris and pupil': 7.748603821078337e-09, 'Short closed oral seam': 7.152557372769319e-09, 'L eye glint': 7.152557372769319e-09, 'R eye glint': 7.152557372769319e-09} upper_neck_flare= (0.03033435344696045, 0.014253377914428711)
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

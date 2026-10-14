@@ -1,0 +1,23 @@
+{
+  "modified_vertices": 4776,
+  "maximum_displacement": 0.00867307186126709,
+  "lower_z": 2.2,
+  "upper_z": 2.46,
+  "mouth_peak_z": 2.365,
+  "local_lip_bump_removed": true,
+  "all_x_z_exact": true,
+  "eyes": {
+    "L": {
+      "all_x_z_exact": true,
+      "maximum_y_reattachment": 0.008231520652770996,
+      "round_frontal_outline_preserved": true,
+      "color_and_topology_preserved": true
+    },
+    "R": {
+      "all_x_z_exact": true,
+      "maximum_y_reattachment": 0.008235454559326172,
+      "round_frontal_outline_preserved": true,
+      "color_and_topology_preserved": true
+    }
+  }
+}

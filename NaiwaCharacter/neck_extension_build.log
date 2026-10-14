@@ -1,0 +1,35 @@
+00:00.500  blend            | Read blend: "C:\Users\31314\Desktop\NaiwaCharacter\iterations\before_raised_head_neck_revision\Naiwa_Character.blend"
+00:05.015  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_front.png'
+00:05.312  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_side.png'
+00:05.718  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_three_quarter.png'
+C:\Users\31314\Desktop\NaiwaCharacter\revise_neck_extension.py:83: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  material.use_nodes = True
+00:06.015  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_surface_check_side.png'
+00:06.265  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_silhouette_front.png'
+00:06.515  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_silhouette_side.png'
+00:06.750  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_torso_silhouette_front.png'
+00:06.953  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_torso_silhouette_side.png'
+00:07.281  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_face_close.png'
+00:07.609  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_face_side_close.png'
+00:07.922  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_face_three_quarter_close.png'
+00:08.234  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_hand_close.png'
+00:08.593  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_foot_close.png'
+00:08.922  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_foot_side_close.png'
+00:09.250  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_neck_front_close.png'
+00:09.593  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_neck_side_close.png'
+NECK_EXTENSION_SCULPT_OK head_vertices= 30707 neck_vertices= 11438 raise= 0.14
+PROTECTED_BODY_OK 329521 0.0
+信息: 已另存为 "Naiwa_Character.blend"
+
+FBX export starting... 'C:\\Users\\31314\\Desktop\\NaiwaCharacter\\Naiwa_Character.fbx'
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+export finished in 1.4372 sec.
+NECK_EXTENSION_DELIVERABLES_OK 6 meshes 10 bones
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

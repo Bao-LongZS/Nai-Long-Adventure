@@ -1,0 +1,20 @@
+{
+  "file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\final\\comparison_reference_E2_B.png",
+  "sha256": "ca783af0b21dd80a140ae36df0448e8e789d4f71075a60ae74a1592ea4e91c44",
+  "inputs": [
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\references\\figure_1_3.jpg",
+      "sha256": "4ec47b76c34f5a0e2a670f7fe6a675d49bd0aaeb524a03d83add37e9f209074d"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\key\\E2\\E2_common_ORTHO_50.png",
+      "sha256": "153a77bccef3ea3bf2d45e923a5e052d24924163e0e53847838af1068f1b6e9c"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\key\\B\\B_common_ORTHO_50.png",
+      "sha256": "e2553a468fd43337fc05a496a7868d07bfae506f7e256c2fd81acdd69e981186"
+    }
+  ],
+  "display_method": "uniform image scale; no photometric changes",
+  "display_column_width_px": 495
+}

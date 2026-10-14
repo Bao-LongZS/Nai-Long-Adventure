@@ -1,0 +1,14 @@
+00:00.641  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_H2_E2_overall_refinement\candidate_E2\Naiwa_Character.blend"
+
+FBX export starting... 'C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.fbx'
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+export finished in 2.3222 sec.
+SAVED_FBX_EXPORT_OK C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_H2_E2_overall_refinement\candidate_E2\Naiwa_Character.fbx meshes= 6 bones= 10 actions= 4
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

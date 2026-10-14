@@ -1,0 +1,406 @@
+{
+  "candidate": "A",
+  "passed": true,
+  "non_eye_meshes_rig_exact": true,
+  "parents_material_links_modifier_settings_and_animation_curves_exact": true,
+  "eye_and_glint_object_names_preserved": true,
+  "source_action_curve_counts": {
+    "Naiwa_Idle": 30,
+    "Naiwa_Jump": 30,
+    "Naiwa_Laugh": 30,
+    "Naiwa_Walk": 30
+  },
+  "actual_spacing": 0.2345631328663189,
+  "eyes": {
+    "L": {
+      "raw_world_fit": {
+        "fitted_center": [
+          -0.10331035250173526,
+          -0.34430443558359275,
+          2.4886484292379216
+        ],
+        "fitted_radius": 0.07337853806140035,
+        "maximum_absolute_radius_residual": 1.1854820046452996e-07,
+        "maximum_relative_radius_residual": 1.6155704869090382e-06
+      },
+      "raw_mesh_integrity": {
+        "watertight_all_triangulated_edges_incidence_2": true,
+        "duplicate_triangles": 0,
+        "degenerate_triangles": 0,
+        "outward_normals": true,
+        "convex_halfspace_max_violation": 3.705454361818683e-07,
+        "convex_halfspace_float32_tolerance": 7.337853806139122e-07,
+        "no_obvious_self_intersection_closed_convex_within_float32_tolerance": true,
+        "Euler_characteristic": 2
+      },
+      "Idle_frame1_evaluated_world_fit": {
+        "fitted_center": [
+          -0.10331035250173526,
+          -0.34430443558359275,
+          2.4886484292379216
+        ],
+        "fitted_radius": 0.07337853806140035,
+        "maximum_absolute_radius_residual": 1.1854820046452996e-07,
+        "maximum_relative_radius_residual": 1.6155704869090382e-06
+      },
+      "integrity": {
+        "watertight_all_triangulated_edges_incidence_2": true,
+        "duplicate_triangles": 0,
+        "degenerate_triangles": 0,
+        "outward_normals": true,
+        "convex_halfspace_max_violation": 3.705454361818683e-07,
+        "convex_halfspace_float32_tolerance": 7.337853806139122e-07,
+        "no_obvious_self_intersection_closed_convex_within_float32_tolerance": true,
+        "Euler_characteristic": 2
+      },
+      "raw_Idle_eye_topology_exact": true,
+      "maximum_raw_to_Idle_frame1_vertex_displacement": 0.0,
+      "orthogonal_center_sections": [
+        {
+          "axis": "X",
+          "plane_value": -0.10331035250173526,
+          "maximum_relative_circle_endpoint_residual": 1.5143459627090052e-06
+        },
+        {
+          "axis": "Y",
+          "plane_value": -0.34430443558359275,
+          "maximum_relative_circle_endpoint_residual": 1.412261374504918e-06
+        },
+        {
+          "axis": "Z",
+          "plane_value": 2.4886484292379216,
+          "maximum_relative_circle_endpoint_residual": 1.9480449010982413e-07
+        }
+      ],
+      "frontal_metrics": {
+        "aperture": {
+          "area": 0.010760579999999997,
+          "sample_count": 119562,
+          "center": [
+            -0.11728029557883501,
+            2.505195917599275
+          ],
+          "bounds": [
+            [
+              -0.17639999999999997,
+              2.444400000000018
+            ],
+            [
+              -0.05280000000000215,
+              2.562000000000092
+            ]
+          ],
+          "axis_ratio": 1.3807621052704766,
+          "major_axis_degrees": 39.692178076832505,
+          "width_height_ratio": 1.0510204081625847,
+          "covariance_xz": [
+            [
+              0.0009569832296912607,
+              0.0002774237192230633
+            ],
+            [
+              0.0002774237192230633,
+              0.0008529895464905783
+            ]
+          ]
+        },
+        "green": {
+          "area": 0.0077373899999999985,
+          "sample_count": 85971,
+          "center": [
+            -0.12228852636349137,
+            2.5111159402589904
+          ],
+          "bounds": [
+            [
+              -0.17639999999999997,
+              2.444400000000018
+            ],
+            [
+              -0.05280000000000215,
+              2.562000000000092
+            ]
+          ],
+          "axis_ratio": 1.6525844902380105,
+          "major_axis_degrees": 39.80817332804557,
+          "width_height_ratio": 1.0510204081625847,
+          "covariance_xz": [
+            [
+              0.0011449208824185883,
+              0.00048217270191754335
+            ],
+            [
+              0.00048217270191754335,
+              0.0009682147642295653
+            ]
+          ]
+        },
+        "black": {
+          "area": 0.0030231899999999994,
+          "sample_count": 33591,
+          "center": [
+            -0.10446249888363496,
+            2.490044529784675
+          ],
+          "bounds": [
+            [
+              -0.1353000000000007,
+              2.456700000000026
+            ],
+            [
+              -0.07140000000000182,
+              2.520600000000066
+            ]
+          ],
+          "axis_ratio": 1.103567134636192,
+          "major_axis_degrees": 39.772903633509486,
+          "width_height_ratio": 0.9999999999993524,
+          "covariance_xz": [
+            [
+              0.00024749530617851963,
+              2.3489233003799084e-05
+            ],
+            [
+              2.3489233003799084e-05,
+              0.0002388272052739809
+            ]
+          ]
+        },
+        "sampling": {
+          "step": 0.0003,
+          "skin_epsilon": 5e-07,
+          "grid_anchor_xz": [
+            0.0,
+            0.0
+          ]
+        },
+        "visible_surface_gap": {
+          "minimum": 5.960464477539062e-07,
+          "maximum": 0.05339455604553223,
+          "mean": 0.02927693793378859
+        }
+      },
+      "actual_visible_D": 0.11705039931707321,
+      "actual_pupil_ratio": 0.5300476103263047,
+      "shared_black_green_edges": 96,
+      "black_independent_step": 0.0,
+      "effective_weights": "Torso 1.0",
+      "shared_black_green_boundary_Y_plane_range": 0.0,
+      "glint_contact": {
+        "minimum_signed_vertex_sphere_distance": -0.0009500103367442586,
+        "maximum_signed_vertex_sphere_distance": 0.001449970643207954,
+        "crossing_triangle_count": 82,
+        "origin_signed_sphere_distance": 0.0002500099553896934,
+        "local_Y_axis_dot_sphere_normal": 0.9999999999999518,
+        "separate_mesh_excluded_from_sphere_and_aperture_measurements": true
+      },
+      "source_eye_colors_exact": true,
+      "installation": {
+        "exposed_vertices": 1891,
+        "buried_vertices": 3583,
+        "minimum_positive_vertex_face_gap": 3.612041473388672e-05,
+        "visible_ray_minimum_skin_gap": 5.960464477539062e-07,
+        "eye_body_surface_triangle_contacts": 482,
+        "exposed_vertex_connected_component_sizes": [
+          1891
+        ],
+        "minimum_eye_vertex_to_posterior_body_margin": 0.2687344253063202
+      }
+    },
+    "R": {
+      "raw_world_fit": {
+        "fitted_center": [
+          0.10330637048690003,
+          -0.3442212934427375,
+          2.4887515117176773
+        ],
+        "fitted_radius": 0.07339914422664424,
+        "maximum_absolute_radius_residual": 1.1689473559950425e-07,
+        "maximum_relative_radius_residual": 1.5925898977589291e-06
+      },
+      "raw_mesh_integrity": {
+        "watertight_all_triangulated_edges_incidence_2": true,
+        "duplicate_triangles": 0,
+        "degenerate_triangles": 0,
+        "outward_normals": true,
+        "convex_halfspace_max_violation": 3.482130780801951e-07,
+        "convex_halfspace_float32_tolerance": 7.339914422663564e-07,
+        "no_obvious_self_intersection_closed_convex_within_float32_tolerance": true,
+        "Euler_characteristic": 2
+      },
+      "Idle_frame1_evaluated_world_fit": {
+        "fitted_center": [
+          0.10330637048690003,
+          -0.3442212934427375,
+          2.4887515117176773
+        ],
+        "fitted_radius": 0.07339914422664424,
+        "maximum_absolute_radius_residual": 1.1689473559950425e-07,
+        "maximum_relative_radius_residual": 1.5925898977589291e-06
+      },
+      "integrity": {
+        "watertight_all_triangulated_edges_incidence_2": true,
+        "duplicate_triangles": 0,
+        "degenerate_triangles": 0,
+        "outward_normals": true,
+        "convex_halfspace_max_violation": 3.482130780801951e-07,
+        "convex_halfspace_float32_tolerance": 7.339914422663564e-07,
+        "no_obvious_self_intersection_closed_convex_within_float32_tolerance": true,
+        "Euler_characteristic": 2
+      },
+      "raw_Idle_eye_topology_exact": true,
+      "maximum_raw_to_Idle_frame1_vertex_displacement": 0.0,
+      "orthogonal_center_sections": [
+        {
+          "axis": "X",
+          "plane_value": 0.10330637048690003,
+          "maximum_relative_circle_endpoint_residual": 1.5422746897935109e-06
+        },
+        {
+          "axis": "Y",
+          "plane_value": -0.3442212934427375,
+          "maximum_relative_circle_endpoint_residual": 1.5763926676664777e-06
+        },
+        {
+          "axis": "Z",
+          "plane_value": 2.4887515117176773,
+          "maximum_relative_circle_endpoint_residual": 1.8501888281815587e-07
+        }
+      ],
+      "frontal_metrics": {
+        "aperture": {
+          "area": 0.010762109999999998,
+          "sample_count": 119579,
+          "center": [
+            0.11728283728748391,
+            2.5053236253856577
+          ],
+          "bounds": [
+            [
+              0.052800000000000125,
+              2.444400000000018
+            ],
+            [
+              0.1767000000000008,
+              2.562000000000092
+            ]
+          ],
+          "axis_ratio": 1.3812276142832962,
+          "major_axis_degrees": -39.676685735844046,
+          "width_height_ratio": 1.0535714285707705,
+          "covariance_xz": [
+            [
+              0.000957422272698075,
+              -0.00027773525630455645
+            ],
+            [
+              -0.00027773525630455645,
+              0.0008530008343108798
+            ]
+          ]
+        },
+        "green": {
+          "area": 0.007740539999999998,
+          "sample_count": 86006,
+          "center": [
+            0.12228299420970931,
+            2.511246185149821
+          ],
+          "bounds": [
+            [
+              0.052800000000000125,
+              2.444400000000018
+            ],
+            [
+              0.1767000000000008,
+              2.562000000000092
+            ]
+          ],
+          "axis_ratio": 1.6530585937649898,
+          "major_axis_degrees": -39.78349896116745,
+          "width_height_ratio": 1.0535714285707705,
+          "covariance_xz": [
+            [
+              0.0011455244611695756,
+              -0.00048239146338192504
+            ],
+            [
+              -0.00048239146338192504,
+              0.0009678791691679591
+            ]
+          ]
+        },
+        "black": {
+          "area": 0.0030215699999999995,
+          "sample_count": 33573,
+          "center": [
+            0.10447363059603532,
+            2.4901514431238563
+          ],
+          "bounds": [
+            [
+              0.07140000000000023,
+              2.457000000000026
+            ],
+            [
+              0.1353000000000006,
+              2.520600000000066
+            ]
+          ],
+          "axis_ratio": 1.1044420579764709,
+          "major_axis_degrees": -39.75120710334983,
+          "width_height_ratio": 1.004716981131448,
+          "covariance_xz": [
+            [
+              0.0002474256141890011,
+              -2.3661889834178505e-05
+            ],
+            [
+              -2.3661889834178505e-05,
+              0.0002386567325705445
+            ]
+          ]
+        },
+        "sampling": {
+          "step": 0.0003,
+          "skin_epsilon": 5e-07,
+          "grid_anchor_xz": [
+            0.0,
+            0.0
+          ]
+        },
+        "visible_surface_gap": {
+          "minimum": 5.960464477539062e-07,
+          "maximum": 0.05340278148651123,
+          "mean": 0.029296571473344225
+        }
+      },
+      "actual_visible_D": 0.11705872046451618,
+      "actual_pupil_ratio": 0.5298679077520104,
+      "shared_black_green_edges": 96,
+      "black_independent_step": 0.0,
+      "effective_weights": "Torso 1.0",
+      "shared_black_green_boundary_Y_plane_range": 0.0,
+      "glint_contact": {
+        "minimum_signed_vertex_sphere_distance": -0.0009500237343181284,
+        "maximum_signed_vertex_sphere_distance": 0.0014499572636776509,
+        "crossing_triangle_count": 82,
+        "origin_signed_sphere_distance": 0.0002499965667492887,
+        "local_Y_axis_dot_sphere_normal": 0.9999999999998539,
+        "separate_mesh_excluded_from_sphere_and_aperture_measurements": true
+      },
+      "source_eye_colors_exact": true,
+      "installation": {
+        "exposed_vertices": 1891,
+        "buried_vertices": 3583,
+        "minimum_positive_vertex_face_gap": 4.351139068603516e-06,
+        "visible_ray_minimum_skin_gap": 5.960464477539062e-07,
+        "eye_body_surface_triangle_contacts": 484,
+        "exposed_vertex_connected_component_sizes": [
+          1891
+        ],
+        "minimum_eye_vertex_to_posterior_body_margin": 0.26854220032691956
+      }
+    }
+  }
+}

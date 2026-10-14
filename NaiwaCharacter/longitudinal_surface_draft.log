@@ -1,0 +1,14 @@
+00:00.453  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\before_longitudinal_surface_revision\Naiwa_Character.blend"
+00:12.593  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\longitudinal_surface_draft\before_side.png'
+00:12.922  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\longitudinal_surface_draft\before_front.png'
+00:13.218  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\longitudinal_surface_draft\before_three_quarter.png'
+00:13.218  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\before_longitudinal_surface_revision\Naiwa_Character.blend"
+00:14.812  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\longitudinal_surface_draft\after_side.png'
+00:15.109  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\longitudinal_surface_draft\after_front.png'
+00:15.390  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\longitudinal_surface_draft\after_three_quarter.png'
+LONGITUDINAL_SURFACE_SCULPT_OK {'changed_vertex_count': 33131, 'max_x_change': 0.00986635684967041, 'side_projection_exact': True, 'all_heights_exact': True, 'range_z': [1.98, 2.585], 'fair_length': 0.06}
+信息: 已另存为 "Naiwa_Character.blend"
+LONGITUDINAL_SURFACE_DRAFT_OK
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

@@ -1,0 +1,15 @@
+{
+  "recommended": "R1",
+  "native": "candidate_R1/Naiwa_Character.blend",
+  "fbx": "candidate_R1/Naiwa_Character.fbx",
+  "native_sha256": "ea12e9af2c564527d0c473cd31b28974339fcceb15b666502a33f0ffa057bc24",
+  "fbx_sha256": "566f734ef4dc976ba787f5d1600f75250b4b51645a4867fbabcccd819c4d579e",
+  "fixed_N2_sha256": "9397186f3ae13e93e05cc0d492c12ceb68b743ab4d2a9a0d650426a47a66b0cb",
+  "fixed_N2_fbx_sha256": "55f648db74606bca94f4d65cd2b5eb72a2dde2fd95e00127a4e8242b442afa59",
+  "D0": 0.117244812742,
+  "actual_raw_and_Idle_surface_validation": "passed",
+  "visual_acceptance": "passed",
+  "actual_surface_curvature_reduction_fraction": 0.2069246387488507,
+  "complete_original_rig_animation_and_fixed_features_retained": true,
+  "scope": "lower cheek/throat, side neck/back shoulder, rear head/neck; no C1 or eye installation changes"
+}

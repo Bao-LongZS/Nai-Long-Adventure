@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-06",
+  "reason": "Independent A/B default rebuild matched delivery; remove reproducible temporary copies",
+  "removed_directory": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_spherical_eyes\\rebuild_temp",
+  "removed_files": [
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_spherical_eyes\\rebuild_temp\\candidate_A\\Naiwa_Character.blend",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_spherical_eyes\\rebuild_temp\\candidate_A\\Naiwa_Character.fbx",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_spherical_eyes\\rebuild_temp\\candidate_A\\spherical_eye_build_report.json",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_spherical_eyes\\rebuild_temp\\candidate_B\\Naiwa_Character.blend",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_spherical_eyes\\rebuild_temp\\candidate_B\\Naiwa_Character.fbx",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_spherical_eyes\\rebuild_temp\\candidate_B\\spherical_eye_build_report.json"
+  ],
+  "source_versions_preserved": true,
+  "validation_reports_preserved": true
+}

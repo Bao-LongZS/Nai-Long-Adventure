@@ -1,0 +1,26 @@
+{
+  "scope": "neck_only",
+  "status": "complete",
+  "selected_neck": "N2",
+  "recommended_candidate": "N2",
+  "neck_input": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_head_neck_refinement\\candidate_N2\\Naiwa_Character.blend",
+  "neck_sha256": "9397186f3ae13e93e05cc0d492c12ceb68b743ab4d2a9a0d650426a47a66b0cb",
+  "fixed_A": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_spherical_eyes\\candidate_A\\Naiwa_Character.blend",
+  "fixed_A_sha256": "f251f5a0fc00fedf1df76fcc6286bc40e102406a536cb6c676a93e176cb71ca0",
+  "c1_decision": "not_in_scope",
+  "reason": "N2 preserves fixed regions, has a smooth short lower face and continuous shoulder transition, and improves both neck contours more than N1.",
+  "neck_error_reduction_fraction_from_A": [
+    0.4895076648029456,
+    0.544003971528223
+  ],
+  "remaining_error": [
+    21.613474090747673,
+    9.894078330956063
+  ],
+  "validation_report": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_head_neck_refinement\\candidate_N2\\validation_report.json",
+  "reference_review": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_head_neck_refinement\\reference_comparison\\reference_review.json",
+  "recommended_fbx": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_head_neck_refinement\\candidate_N2\\Naiwa_Character.fbx",
+  "recommended_fbx_sha256": "55f648db74606bca94f4d65cd2b5eb72a2dde2fd95e00127a4e8242b442afa59",
+  "rebuild_validation": "passed",
+  "fbx_validation": "passed"
+}

@@ -1,0 +1,298 @@
+{
+  "solver": {
+    "method": "ADMM final periodic-section XY bending + source/prior fidelity; constrained feasible projection within each iteration",
+    "parameterization": "actual frozen star-shaped ray sections; not circles or ellipses",
+    "sigma_Z": 0.013,
+    "sigma_arc": 0.014,
+    "mean_arc_radius_scale": 0.3,
+    "front_initial_inset": 0.0,
+    "front_center_Z": 2.359,
+    "front_sigma_Z": 0.022,
+    "rear_initial_fill": 0.0045,
+    "rear_center_Z": 2.38,
+    "rear_sigma_Z": 0.026,
+    "rho": 60.0,
+    "iterations": 1600,
+    "primal_residual": 0.0003298683441355595,
+    "last_change": 2.0258198240001917e-07,
+    "strict_solver_tolerance_reached": false,
+    "acceptance_policy": "finite feasible solve; actual saved-surface curvature and visual diagnostics determine acceptance, not convergence labels",
+    "source_final_surface_bending_energy": 2254902.9021245246,
+    "result_final_surface_bending_energy": 1910118.2417010763,
+    "grid_shape": [
+      425,
+      192
+    ],
+    "grid_step_Z": 0.0012500000000001954,
+    "mouth_exact_distance": 0.012,
+    "mouth_fade_end": 0.04,
+    "mouth_release": "asymmetric C2 Beta(3,10) CDF on true source oral triangle distance; included in constrained final-surface solve",
+    "shoulder_exact_distance": 0.012,
+    "shoulder_fade_end": 0.062,
+    "eye_exact_sphere_distance": 0.026,
+    "eye_fade_end": 0.071,
+    "boundary_condition": "source XY fixed outside smooth feasible region; periodic theta, reflected numerical Z extension",
+    "Z_policy": "all original float32 vertex Z copied exactly"
+  },
+  "mouth_curvature": {
+    "method": "small Y control correction optimized in actual fixed-X/Z triangle sections; protection weights inside basis and Jacobian",
+    "basis": {
+      "control_z": [
+        2.3302164,
+        2.3400221,
+        2.3490031,
+        2.3571877,
+        2.3646443,
+        2.37145,
+        2.377615,
+        2.3830159
+      ],
+      "sigma_Z": 0.0065,
+      "X_full": 0.04,
+      "X_zero": 0.15,
+      "Z_zero_low": 2.305,
+      "Z_full_low": 2.325,
+      "Z_full_high": 2.395,
+      "Z_zero_high": 2.425,
+      "transverse_modes": [
+        "constant",
+        "linearX",
+        "quadraticX"
+      ],
+      "transverse_scale": 0.08,
+      "weight": "Gaussian Z control functions × wide C2 X/Z envelope × protected front mask inside final-section Jacobian"
+    },
+    "coefficients_Y": [
+      0.0004500267060817911,
+      0.0009727257162494491,
+      -0.005745626288140573,
+      -0.004810492006237782,
+      -0.0013609274089461574,
+      -0.005841133903721121,
+      0.008216115421338984,
+      -0.010249835578209547,
+      -0.0006449796853224142,
+      0.001329513832846573,
+      0.0003175867782569093,
+      0.0011517288998178056,
+      -0.00040057095988143074,
+      0.0011674942061572267,
+      -0.0011439373241451138,
+      0.0006135766879695325,
+      0.0011807194959964152,
+      -0.0029966496620624206,
+      0.004879031920218524,
+      0.002166175244467386,
+      -0.0015860332094388113,
+      0.006071503864306132,
+      -0.009878707418209317,
+      0.011242863113786502
+    ],
+    "iterations": 66,
+    "optimizer": "damped small-variable Gauss-Newton with actual-section curvature hinge and exact interval feasibility",
+    "sampling_step": 0.0005,
+    "fit_half_window_strict": 0.01,
+    "samples_per_window": 39,
+    "target_central_peak": 26.6,
+    "loss": 0.12285702030381518,
+    "sections": [
+      {
+        "X": 0.0,
+        "global_before_neighbor_peak": {
+          "Z": 2.391,
+          "curvature": 32.43783977872399
+        },
+        "final_neighbor_peak": {
+          "Z": 2.392,
+          "curvature": 26.783913192686143
+        },
+        "final_fold_region_peak": {
+          "Z": 2.392,
+          "curvature": 26.783913192686143
+        }
+      },
+      {
+        "X": -0.04,
+        "global_before_neighbor_peak": {
+          "Z": 2.3925,
+          "curvature": 30.723919116209334
+        },
+        "final_neighbor_peak": {
+          "Z": 2.368,
+          "curvature": 30.012580953991954
+        },
+        "final_fold_region_peak": {
+          "Z": 2.368,
+          "curvature": 30.012580953991954
+        }
+      },
+      {
+        "X": 0.04,
+        "global_before_neighbor_peak": {
+          "Z": 2.3925,
+          "curvature": 29.23364982391097
+        },
+        "final_neighbor_peak": {
+          "Z": 2.378,
+          "curvature": 29.298095121661323
+        },
+        "final_fold_region_peak": {
+          "Z": 2.378,
+          "curvature": 29.298095121661323
+        }
+      },
+      {
+        "X": -0.08,
+        "global_before_neighbor_peak": {
+          "Z": 2.382,
+          "curvature": 24.413080736909723
+        },
+        "final_neighbor_peak": {
+          "Z": 2.375,
+          "curvature": 24.47636421889765
+        },
+        "final_fold_region_peak": {
+          "Z": 2.375,
+          "curvature": 24.47636421889765
+        }
+      },
+      {
+        "X": 0.08,
+        "global_before_neighbor_peak": {
+          "Z": 2.3815,
+          "curvature": 24.43608809365951
+        },
+        "final_neighbor_peak": {
+          "Z": 2.3665,
+          "curvature": 24.4897270229901
+        },
+        "final_fold_region_peak": {
+          "Z": 2.3665,
+          "curvature": 24.4897270229901
+        }
+      }
+    ],
+    "maximum_abs_correction_Y": 0.008672241075713003,
+    "RMS_correction_Y": 0.0022884197493273878,
+    "maximum_total_final_displacement": 0.0077208721967321915,
+    "maximum_total_cap_excess": 0.0,
+    "maximum_normal_cap_excess": 0.0,
+    "transverse_curvature": [
+      {
+        "Z": 2.34,
+        "X_range": [
+          -0.15,
+          0.15
+        ],
+        "source_N2_max_curvature": 6.206805691836453,
+        "before_max_curvature": 6.158463286657218,
+        "final_max_curvature": 7.639680119085259,
+        "target_max_curvature": 7.6378265456119205,
+        "source_N2_signed_min_curvature": -3.5187451676848776,
+        "final_signed_min_curvature": -4.33888877876643,
+        "signed_lower_limit": -4.5187451676848776,
+        "same_actual_triangle_section_sampling": true
+      },
+      {
+        "Z": 2.357,
+        "X_range": [
+          -0.15,
+          0.15
+        ],
+        "source_N2_max_curvature": 9.97772926004108,
+        "before_max_curvature": 9.162567652307073,
+        "final_max_curvature": 11.082182709514967,
+        "target_max_curvature": 11.974388649047242,
+        "source_N2_signed_min_curvature": -4.624217665104237,
+        "final_signed_min_curvature": -5.641859826841853,
+        "signed_lower_limit": -5.624217665104237,
+        "same_actual_triangle_section_sampling": true
+      },
+      {
+        "Z": 2.371,
+        "X_range": [
+          -0.15,
+          0.15
+        ],
+        "source_N2_max_curvature": 10.428980470368199,
+        "before_max_curvature": 9.491789334337266,
+        "final_max_curvature": 11.062969595597028,
+        "target_max_curvature": 12.493327540923428,
+        "source_N2_signed_min_curvature": -6.234019071241494,
+        "final_signed_min_curvature": -5.079849007983916,
+        "signed_lower_limit": -7.234019071241494,
+        "same_actual_triangle_section_sampling": true
+      },
+      {
+        "Z": 2.378,
+        "X_range": [
+          -0.15,
+          0.15
+        ],
+        "source_N2_max_curvature": 8.684447733221088,
+        "before_max_curvature": 8.83348737324286,
+        "final_max_curvature": 10.59369065342481,
+        "target_max_curvature": 10.48711489320425,
+        "source_N2_signed_min_curvature": -3.5991567807000617,
+        "final_signed_min_curvature": -4.233335810134219,
+        "signed_lower_limit": -4.599156780700062,
+        "same_actual_triangle_section_sampling": true
+      },
+      {
+        "Z": 2.383,
+        "X_range": [
+          -0.15,
+          0.15
+        ],
+        "source_N2_max_curvature": 8.45099773648592,
+        "before_max_curvature": 9.684057621585234,
+        "final_max_curvature": 10.557179518134395,
+        "target_max_curvature": 10.434057621585234,
+        "source_N2_signed_min_curvature": -2.3980829575785596,
+        "final_signed_min_curvature": -3.51489789809517,
+        "signed_lower_limit": -3.3980829575785596,
+        "same_actual_triangle_section_sampling": true
+      }
+    ],
+    "transverse_weight_C2": true,
+    "transverse_modes_are_low_frequency": true,
+    "absence_of_visible_stripes_requires_render_review": true,
+    "X_Z_policy": "source Z and pre-correction global X unchanged; no final correction masking",
+    "feasible_tolerance": 8e-08,
+    "not_visual_acceptance": true
+  },
+  "surfaces": {
+    "Naiwa unified golden body": {
+      "changed_vertices": 24119,
+      "maximum_total_displacement": 0.007720857964391414,
+      "maximum_abs_X": 0.002568155527114868,
+      "maximum_abs_Z": 0.0,
+      "maximum_abs_source_normal_projection": 0.004528745450353852,
+      "has_custom_normals_before": false,
+      "custom_normals_action": "none; preserve source normals representation and update geometry"
+    },
+    "Head and torso silhouette only": {
+      "changed_vertices": 21834,
+      "maximum_total_displacement": 0.008241327093892884,
+      "maximum_abs_X": 0.002482891082763672,
+      "maximum_abs_Z": 0.0,
+      "maximum_abs_source_normal_projection": 0.004485714364591116,
+      "has_custom_normals_before": false,
+      "custom_normals_action": "none; preserve source normals representation and update geometry"
+    }
+  },
+  "D0": 0.117244812742,
+  "shell_policy": "same frozen global field and same jointly fitted mouth control field; source Z exact; hidden",
+  "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_head_neck_refinement\\candidate_N2\\Naiwa_Character.blend",
+  "source_sha256": "9397186f3ae13e93e05cc0d492c12ceb68b743ab4d2a9a0d650426a47a66b0cb",
+  "options": {
+    "sigma_z": 0.013,
+    "sigma_arc": 0.014,
+    "front_inset": 0.0,
+    "rear_fill": 0.0045,
+    "iterations": 1600,
+    "rho": 60.0
+  },
+  "candidate": "R1",
+  "saved_blend_sha256": "ea12e9af2c564527d0c473cd31b28974339fcceb15b666502a33f0ffa057bc24"
+}

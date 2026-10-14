@@ -1,0 +1,489 @@
+{
+  "schema_version": 1,
+  "baseline_source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "coordinates": {
+    "system": "world",
+    "up": [
+      0,
+      0,
+      1
+    ],
+    "left_right": [
+      1,
+      0,
+      0
+    ],
+    "anatomical_front": [
+      0,
+      -1,
+      0
+    ],
+    "evidence": "mouth and visible-eye surface lie toward negative world Y; rig spine follows positive Z; two eye centers differ along X",
+    "all_world_matrices": {
+      "Head and torso silhouette only": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "L concentric iris and pupil": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "L eye glint": [
+        [
+          -0.8763597011566162,
+          -0.45161986351013184,
+          0.16743119060993195,
+          -0.1376136988401413
+        ],
+        [
+          0.4816572368144989,
+          -0.8217074871063232,
+          0.30463606119155884,
+          -0.3844780921936035
+        ],
+        [
+          -2.2823695644547115e-07,
+          0.34761521220207214,
+          0.9376372694969177,
+          2.518385410308838
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "Naiwa unified golden body": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "Preview floor": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.004999999888241291
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "R concentric iris and pupil": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "R eye glint": [
+        [
+          -0.9757664203643799,
+          0.20381087064743042,
+          -0.07963041216135025,
+          0.1182304248213768
+        ],
+        [
+          -0.2188147008419037,
+          -0.9088594913482666,
+          0.35509800910949707,
+          -0.39113980531692505
+        ],
+        [
+          -1.605540056459631e-08,
+          0.3639170229434967,
+          0.9314313530921936,
+          2.5198233127593994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "Short closed oral seam": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "states": {
+    "Raw": "same saved local vertices transformed in float64; armature not evaluated",
+    "Idle1": {
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "pose_position": "POSE",
+      "NLA": false
+    },
+    "deformation_checks": {
+      "Idle1": [
+        "Naiwa_Idle",
+        1
+      ],
+      "Walk9": [
+        "Naiwa_Walk",
+        9
+      ],
+      "Laugh7": [
+        "Naiwa_Laugh",
+        7
+      ],
+      "Jump6": [
+        "Naiwa_Jump",
+        6
+      ]
+    }
+  },
+  "scale": {
+    "definition": "mean frontal ray-visible eye aperture equal-area diameter",
+    "D": 0.11709836009845984,
+    "left_D": 0.11709444572907227,
+    "right_D": 0.1171022744678474,
+    "historical_D_mean": 0.117114,
+    "sampling_step": 0.0003,
+    "comparison": "new fixed .0003 world-zero sampling E2/candidate; historical values background only"
+  },
+  "scope": {
+    "object": "Naiwa unified golden body",
+    "lower_release_Z": 1.84,
+    "lower_full_Z": 1.93,
+    "highest_crown_Z": 2.6448304653167725,
+    "crown_release_depth": 0.025,
+    "limb_freeze_arm_weight": 0.5,
+    "limb_release_arm_weight": 0.18,
+    "mouth_freeze_distance": 0.005172620363988828,
+    "mouth_release_end": 0.044604122205852845,
+    "mouth_distance_definition": "shortest 3D world Euclidean distance to baseline actual mouth/body intersection segments",
+    "eye_freeze_surface_distance": 0.006648752762796019,
+    "eye_release_surface_distance": 0.027,
+    "all_other_meshes_frozen": true,
+    "weight_formula": "quintic Z boundary * quintic distal-arm release * quintic mouth-contact release * quintic eye-contact release; crown/contact anchors exact zero",
+    "arrays": "baseline/baseline_arrays.npz",
+    "indices": "original mesh vertex indices, paired with object names via snapshot array_prefix"
+  },
+  "sections": {
+    "longitudinal_X": [
+      -0.18,
+      -0.12,
+      -0.08,
+      -0.04,
+      0.0,
+      0.04,
+      0.08,
+      0.12,
+      0.18
+    ],
+    "Z_range": [
+      1.95,
+      2.62
+    ],
+    "Z_sampling_step": 0.0005,
+    "mouth_underturn_Z_range": [
+      2.31,
+      2.4004407502868474
+    ],
+    "resample_arc_step": 0.0005,
+    "polynomial_degree": 3,
+    "fit_half_window_world": 0.009,
+    "angle80_definition": "unwrap tangent angle then accumulate absolute angle changes; shortest contiguous arc containing 80% total absolute turn in fixed mouth-underturn anatomical interval",
+    "historical_protocol_confirmed": false,
+    "historical_0_091_and_29_30": "background only; no direct numeric comparison",
+    "longitudinal_Z_ranges": {
+      "-0.18": [
+        1.95,
+        2.5519999122619628
+      ],
+      "-0.12": [
+        1.95,
+        2.596999988555908
+      ],
+      "-0.08": [
+        1.95,
+        2.615000114440918
+      ],
+      "-0.04": [
+        1.95,
+        2.62
+      ],
+      "0.0": [
+        1.95,
+        2.62
+      ],
+      "0.04": [
+        1.95,
+        2.62
+      ],
+      "0.08": [
+        1.95,
+        2.615000114440918
+      ],
+      "0.12": [
+        1.95,
+        2.596999988555908
+      ],
+      "0.18": [
+        1.95,
+        2.5519999122619628
+      ]
+    },
+    "longitudinal_Z_range_definition": "once-fixed baseline front-ray support per X plane, ending 0.015 world below last measured head surface or Z2.62, whichever is lower; no candidate-specific cropping",
+    "measurement_helper_file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\c3_measurement_utils.py",
+    "measurement_helper_sha256": "7cf1d314d4f15a0e6346b5803ada4c8a9eb85eb15b8c80272d6860b4fa1288e7",
+    "mouth_underturn_anatomical_definition": "baseline lower-jaw entry at fixed Z2.31 through measured central mouth/body contact-curve median Z; the previous trial Z2.15..2.40 included the full front-neck concavity and was diagnosed before candidate generation",
+    "natural_front_neck_Z_range": [
+      2.05,
+      2.31
+    ],
+    "central_mouth_contact_Z_bounds": [
+      2.396920919418335,
+      2.4039595127105713
+    ]
+  },
+  "projection": {
+    "head": {
+      "type": "ORTHO",
+      "yaw": [
+        0,
+        45,
+        90
+      ],
+      "pitch": 0,
+      "target": [
+        0,
+        -0.11999999731779099,
+        2.369999885559082
+      ],
+      "distance": 7,
+      "scale": 0.85,
+      "resolution": [
+        900,
+        1000
+      ]
+    },
+    "reference": {
+      "type": "ORTHO",
+      "yaw": 50,
+      "pitch": -2.5,
+      "target": [
+        0,
+        -0.12,
+        2.425
+      ],
+      "distance": 7,
+      "scale": 0.86,
+      "resolution": [
+        900,
+        900
+      ],
+      "sensor_fit": "HORIZONTAL"
+    },
+    "registration": {
+      "scale": 0.41175526202447044,
+      "translation": [
+        245.38813136509236,
+        -17.159665982101984
+      ],
+      "formula": "reference_pixel = scale * model_pixel + translation",
+      "reference_image": "figure_1_3.jpg 900x1130, original unmodified"
+    },
+    "scan_rows_reference_pixels": [
+      90,
+      180,
+      220,
+      260,
+      300
+    ],
+    "neck_error_rows_reference_pixels": [
+      220,
+      260,
+      300
+    ],
+    "error_algorithm": "mean absolute horizontal difference of left/right registered body contours at fixed original reference scan rows; candidate/E2 same silhouette segmentation and registration",
+    "units": "world for geometry, reference original-image pixels for contour",
+    "reference_contour_protocol_file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement\\c3_reference_contour_protocol.json",
+    "reference_contour_protocol_sha256": "a2c9c54744a1e35060ee6aad2434a5ecab359473a1c12851edf5912af64654ac"
+  },
+  "budgets": {
+    "A": 0.004683934403938394,
+    "B": 0.009367868807876788,
+    "eye_local": 0.002927459002461496,
+    "definition": "final same-index same-Raw-state world Euclidean difference relative E2; eye cap is included in overall budget"
+  },
+  "freeze_priority": [
+    "domain exterior and distal limbs",
+    "actual mouth contact neighborhood",
+    "actual eye contact neighborhood",
+    "crown highest anchors",
+    "smooth release",
+    "head neck shoulder deformation"
+  ],
+  "eye_thresholds": {
+    "diameter_fraction": 0.01,
+    "center_shift_fraction_of_each_eye_D": 0.01,
+    "axis_ratio_abs": 0.02
+  },
+  "protection_conflicts": {
+    "initial_lower_release_conflict": "initial shoulder bone based Z1.735 release overlapped belly paint upper Z1.813; identified before any candidate and corrected once to Z1.84/1.93",
+    "mouth_underturn_not_fully_frozen": true,
+    "notes": "actual triangle-contact vertices and small necessary neighborhood frozen, plus fixed 0.035 world release; full masks frozen before first candidate; no subsequent release shortening",
+    "mouth_freeze_definition_correction": "before any candidate: initial 0.009604122 radius unnecessarily added one median edge to actual contact-face vertex bound; corrected once to bound+1e-6=0.005172620 while retaining release endpoint 0.044604122, widening the release; true mouth-contact face vertices remain independently frozen",
+    "focal_turn_anchors": {
+      "samples": {
+        "central_peak": {
+          "original_vertex_index": 293458,
+          "mouth_curve_distance": 0.005240442871093983,
+          "scope_weight": 5.0754014975304775e-08,
+          "world_position": [
+            -5.895639532127461e-08,
+            -0.4561275243759155,
+            2.391686201095581
+          ]
+        },
+        "X0_08_peak": {
+          "original_vertex_index": 225368,
+          "mouth_curve_distance": 0.007910946192950028,
+          "scope_weight": 0.0030099041123044117,
+          "world_position": [
+            0.07892708480358124,
+            -0.4321052134037018,
+            2.3971238136291504
+          ]
+        },
+        "X0_12_peak": {
+          "original_vertex_index": 225385,
+          "mouth_curve_distance": 0.06265527836102167,
+          "scope_weight": 1.0,
+          "world_position": [
+            0.121278777718544,
+            -0.39496561884880066,
+            2.397752523422241
+          ]
+        }
+      },
+      "constraint": "central peak remains nearly immovable within the real-contact release; target distributes turn downward and into side cheeks, without requiring removal of true contact-adjacent peak"
+    }
+  }
+}

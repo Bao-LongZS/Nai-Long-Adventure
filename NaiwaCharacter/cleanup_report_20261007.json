@@ -1,0 +1,2742 @@
+{
+  "date": "2026-10-07",
+  "scope": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure",
+  "status": "completed",
+  "removal_policy": "Only Python bytecode, generated object/debug/incremental-link files under out/build, and .vs/cmake.db; downloaded dependency sources excluded.",
+  "preservation_policy": "All native models, FBX, formal deliveries, history, reference/diagnostic materials, H2/E2 in-progress research, scripts, validation records, birthday artifacts, game resources/executables/static libraries, IDE preferences/chat history and project Git remain.",
+  "planned_files": 453,
+  "removed_files": [
+    {
+      "path": "NaiwaCharacter/__pycache__/analyze_n2_round_refinement.cpython-312.pyc",
+      "bytes": 56734,
+      "sha256": "eda1a358faa646f196e9f3b4a9723ca0f142f0e42c1f31e9db1dc49dad971dec",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/bounded_c2_profile.cpython-312.pyc",
+      "bytes": 16500,
+      "sha256": "35813ff6235e93ee6c6ae41e8aa9d16c6cb3893478b8f0575dd343bbf181e0be",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/bounded_c2_profile.cpython-313.pyc",
+      "bytes": 16451,
+      "sha256": "c74a2495551b3c4c10a158cff461f79f98c1eadc5717acd13e7d90b3b0ba2a99",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/e2_eye_sculpt.cpython-312.pyc",
+      "bytes": 19061,
+      "sha256": "ae64051926d4b76223752b873aff0152c3cb1eb844e232b4d24f5b08eeb88d34",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/e2_eye_sculpt.cpython-313.pyc",
+      "bytes": 19092,
+      "sha256": "2e326f73aa3f205aa430e460b2d7dbf8d668e11eb80ae2d9fe7f08c925519dcc",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/evaluate_e2_gaze_candidates.cpython-312.pyc",
+      "bytes": 8316,
+      "sha256": "805a22a288657dbda6998b037c53d4dbf0bfe7b7876cd1a03c7f5cf9ddb33862",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/eye_projection_measure.cpython-313.pyc",
+      "bytes": 7807,
+      "sha256": "789b0939c96b436df3c440575466b963a776c75282c004736c49abfe76d3c941",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/geometry_diagnostic_utils.cpython-313.pyc",
+      "bytes": 11176,
+      "sha256": "7e6cc1c4bcc6f894dd5c1aa68fc352dd30fab8b3b90cdcef7d42c4483c9a1327",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/h2_curve_diagnostic_utils.cpython-312.pyc",
+      "bytes": 14217,
+      "sha256": "5ed0dc75a9eb2794d2e18d8e58da26eaeaaed5977743a394965565b72d87669b",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/head_neck_refinement_sculpt.cpython-313.pyc",
+      "bytes": 17497,
+      "sha256": "954b223f0896adeecec7e406f80cd8dd25ace95ebf3091569e4edbed6a140787",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/head_neck_validation_utils.cpython-313.pyc",
+      "bytes": 18029,
+      "sha256": "b7e804c49e4ce272ec40f9967280f0b3a36b3f792c372b497f53a96b76915249",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/inspect_e2_candidates.cpython-312.pyc",
+      "bytes": 9888,
+      "sha256": "ab7880ea701d64acc1b2eaddb9306f9d7be168c14999a830bab6b14be93c2fc6",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/make_head_neck_comparisons.cpython-312.pyc",
+      "bytes": 9698,
+      "sha256": "ae84775d64a10bedf19919aa38f6859b81c7053d8ecac19a39b90be26972c1df",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/make_spherical_eye_comparisons.cpython-312.pyc",
+      "bytes": 15479,
+      "sha256": "98e0b92a25dbbc6e4a072b95b5c4c31cad5e8825d7ee4e0c9597eab3c42ca16f",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/n2_round_diagnostic_utils.cpython-312.pyc",
+      "bytes": 17068,
+      "sha256": "18ff712e0a65c098561002ce0b0f1bb333aa2cb3c4260c4cfdf0d8db10eac77b",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/n2_round_mouth_curvature.cpython-312.pyc",
+      "bytes": 23655,
+      "sha256": "cec931510a7ab115e9b04969c5832c003e015fccfdb136893f7712c12b76d0e2",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/n2_round_mouth_curvature.cpython-313.pyc",
+      "bytes": 23785,
+      "sha256": "322e6f218f89228e562cfeb37b4b3510b9bc8b8c0e15b218f0426bd61942f4ba",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/n2_round_sculpt.cpython-313.pyc",
+      "bytes": 27188,
+      "sha256": "b9be32626d4e248a7aaa08381a6a87f4b0d98a8fad8556ee89d245c4c2d575aa",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/plot_head_geometry_diagnostics.cpython-312.pyc",
+      "bytes": 20287,
+      "sha256": "53cf67e1ae34cc2dcc8427b2103a8fa9f8e8bb8779ae1dbf48de3a97cb5a0ccf",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/r1_validation_utils.cpython-313.pyc",
+      "bytes": 13424,
+      "sha256": "816d2c667c4e5cfc5a3379c513fe9ace5f6a656f0447ef4b8ecf4bc5a1341268",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/render_head_neck_comparisons.cpython-313.pyc",
+      "bytes": 16434,
+      "sha256": "f87c7826bd252217ae422aa06a9a476c1ad4106a63921feab9572fa5686fbcba",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/render_head_reshape_comparison.cpython-313.pyc",
+      "bytes": 18796,
+      "sha256": "251983390e5b704cac60ba3b7804881996c019cbddf9fac7bc500067a63a869c",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/render_n2_round_comparisons.cpython-313.pyc",
+      "bytes": 28756,
+      "sha256": "2c262994eb5da543634a3947354566a22d92ff3ffbe7c1327a6234a03a62cb0a",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/render_surface_diagnostics.cpython-313.pyc",
+      "bytes": 5753,
+      "sha256": "43f3b7222e68ee8c40e031d5fda6206bfbf815e98b85a1119b6d5e1be95946ec",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/revise_e2_eye_refinement.cpython-312.pyc",
+      "bytes": 8042,
+      "sha256": "770f898b27f08eefb26cd8fb02283f4dba2eb2cd5c83f23d77295bc1f130c571",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/saved_delivery_metadata.cpython-313.pyc",
+      "bytes": 8014,
+      "sha256": "9f655ff1d61ee1720b0a33d1adddb191fdf7b260fa4c2221ba823209687b1913",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/spherical_eye_sculpt.cpython-313.pyc",
+      "bytes": 21869,
+      "sha256": "6c2780fecfbd3be70f8ed5e806f35abd9417a62ceba209ab3bd3a0f47ec66578",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/spherical_reference_projection.cpython-313.pyc",
+      "bytes": 5906,
+      "sha256": "1eb23f9b4eeeb125dfc00e97c931f2c6f829f97fdf7b16c061b7cc896af823d4",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "NaiwaCharacter/__pycache__/validate_lip_eye_refinement.cpython-313.pyc",
+      "bytes": 31740,
+      "sha256": "5a64b643ce9c22db37472b3f42b009edf2dc7be6ee6e651ce6878d9795984cef",
+      "category": "python_bytecode_cache"
+    },
+    {
+      "path": "out/build/x64-Debug/Nai-Long-Adventure.ilk",
+      "bytes": 14213076,
+      "sha256": "004d138b7509f38e7de95c89b13b4969369e60e2b54bfce27040cf3ede3db835",
+      "category": "incremental_link_cache"
+    },
+    {
+      "path": "out/build/x64-Debug/Nai-Long-Adventure.pdb",
+      "bytes": 52252672,
+      "sha256": "21cfddb9d8886b27e1c4de59d74bfd78df133e4c540b983470d642bb335c6bae",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Debug/CMakeFiles/4.3.1-msvc1/CompilerIdC/CMakeCCompilerId.obj",
+      "bytes": 1960,
+      "sha256": "0f015647b2476017feba95a420e9994426823a60d4f71fb6f58623cc0908626b",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/CMakeFiles/4.3.1-msvc1/CompilerIdCXX/CMakeCXXCompilerId.obj",
+      "bytes": 2024,
+      "sha256": "6fff1984918549106c252433f77a32b7035aa120e5a5b51bdcff996683c98f5e",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/CMakeFiles/Nai-Long-Adventure.dir/Application.cpp.obj",
+      "bytes": 1286369,
+      "sha256": "8c410b271839bf8712a16aac48c1c0f262b570f8a4be6a605b5d85ecec96a38a",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/CMakeFiles/Nai-Long-Adventure.dir/main.cpp.obj",
+      "bytes": 269104,
+      "sha256": "c900b1d1eb856456e4aaffbfb11f49da6c32eabc6a233987b37ef23b91057d82",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/CMakeFiles/Nai-Long-Adventure.dir/vc140.pdb",
+      "bytes": 2414592,
+      "sha256": "5054da14fab94f6f8c0a79868a06d5603456dea5a1a08b1caea2bf590961155c",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Debug/CMakeFiles/ShowIncludes/main.obj",
+      "bytes": 640,
+      "sha256": "9d22f46b1658aefdffe3fa57c5b137031957619f2a16854c0a27b50dd001eb5e",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/bitmath.c.obj",
+      "bytes": 39999,
+      "sha256": "5b876ec47b8ba533d319fe25db76c2e7cdd00b4d4f0c5c44cd4f44dc67d9fc67",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/bitreader.c.obj",
+      "bytes": 77124,
+      "sha256": "5ff5db8600158910e9d2f7931508d33cfb55e5e5a00dc0b79301a35c62268267",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/bitwriter.c.obj",
+      "bytes": 66111,
+      "sha256": "68e11a16ca40c77695b7ff48990fae2e87cc19c91e2cda749f39891d25bf8c9a",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/cpu.c.obj",
+      "bytes": 44611,
+      "sha256": "712c9880979939c9aed461b706cc2b90de707d2f4bdc39054ff3a4a890438eca",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/crc.c.obj",
+      "bytes": 11923,
+      "sha256": "67f0157100a9b3e12d9c5531ddf756a956c8fa7cf6a0b1699c3e84e9176b33ad",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/fixed_intrin_avx2.c.obj",
+      "bytes": 2828,
+      "sha256": "9a3e9bcd26b7b5de77ee2d15ffc4f4a918e8684bfe73cebedde7b1076a1d1a92",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/fixed_intrin_sse2.c.obj",
+      "bytes": 45409,
+      "sha256": "a74875783d81e70d390d35996c4d6dc03f611d4ed9f9864af7bae5a2f3756b37",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/fixed_intrin_sse42.c.obj",
+      "bytes": 49716,
+      "sha256": "05ec69ff78f6c3b6826873201393814576c4070aa5eea0e7c86abfb51bb2d150",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/fixed_intrin_ssse3.c.obj",
+      "bytes": 45334,
+      "sha256": "daf86721005ebf78f0166c5dfdced187fb83e90b7565bd0a2cec57953ab6f795",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/fixed.c.obj",
+      "bytes": 64127,
+      "sha256": "0b2768f7de285587d170f6cd181efa327fb1b08c6fe5f31e803cecf59ee3975d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/FLAC.pdb",
+      "bytes": 217088,
+      "sha256": "3802c208ec614375b2ccca6426037b987c83b76cc829c067876f79884f314b0e",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/float.c.obj",
+      "bytes": 35258,
+      "sha256": "87d38a68e99e2abcaca8eae0ccf61fb7486026374574b7ab383eceafcdc4dded",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/format.c.obj",
+      "bytes": 68649,
+      "sha256": "34c9c14c11c44847366edf744eaaa112a80029c4ed35aeeb1dd566d6ce9b4489",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/lpc_intrin_avx2.c.obj",
+      "bytes": 2824,
+      "sha256": "9dc2ee82fa75a2c93ebf57e24b5ea39de551a744692ca9876ed0b4941ac6f020",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/lpc_intrin_fma.c.obj",
+      "bytes": 2816,
+      "sha256": "4cfb5220105787555acdc32416bcb3c67fe0b0adc41ef99899560d0099f4757f",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/lpc_intrin_neon.c.obj",
+      "bytes": 2240,
+      "sha256": "93b9160497ee3744300ef4f4e1c8a4f06fb38370b76054a0d472917cc9cd15e4",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/lpc_intrin_sse2.c.obj",
+      "bytes": 32694,
+      "sha256": "2cd5ced883bee9b8610d091eacfcdaac1c07fda78d7c02250239652c1cd522c8",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/lpc_intrin_sse41.c.obj",
+      "bytes": 27157,
+      "sha256": "e7ac172c04eac236eae247b08194450f67f0981fc0de31c6760aca53215691cb",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/lpc.c.obj",
+      "bytes": 79258,
+      "sha256": "5226aedba3982d5f3585f79e18e9adda58249cee5ff04fba51b905fea56cd74a",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/md5.c.obj",
+      "bytes": 55549,
+      "sha256": "c047320a3b30ab717047d56b27fa7e2fbfd302d38c0a5c907ec7438fc91b312f",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/memory.c.obj",
+      "bytes": 44748,
+      "sha256": "9cd2ddbee214df5c676d8448a63f60b41d12454fa00a8a61fb74f52ace8be3d5",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/metadata_iterators.c.obj",
+      "bytes": 190283,
+      "sha256": "c78e3f8ba8c39413fb180416edfa9b79ae250834e396be690093af25f486e620",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/metadata_object.c.obj",
+      "bytes": 128960,
+      "sha256": "69a2866fc7d8382fdf91408afddfd93aee590bde5c681c7d652e2411b682ac96",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/ogg_decoder_aspect.c.obj",
+      "bytes": 15267,
+      "sha256": "4c0fbd3c45354aa033fb52432a4dd69a8ffb3a6f0e47b0a3c161c3bc44a6ebf1",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/ogg_encoder_aspect.c.obj",
+      "bytes": 13614,
+      "sha256": "f72f6687af31473defa3902c19a43d4f7dda88c07ea02c826904df4c1d8427f3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/ogg_helper.c.obj",
+      "bytes": 46386,
+      "sha256": "28a811612b01992be14e5a4dd9444eec5fd2834f67f0a694996dfbb2cc2b9141",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/ogg_mapping.c.obj",
+      "bytes": 3276,
+      "sha256": "bd7e04ad85ccef602a7e43f56a65312736dc0e41f84cbb14d29c5d57c6a2539f",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/stream_decoder.c.obj",
+      "bytes": 185032,
+      "sha256": "3815d0c80b210cf790a3681df4e1c06cb393e499bd14154688123e2e07420e5f",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/stream_encoder_framing.c.obj",
+      "bytes": 66995,
+      "sha256": "7f77d09783020db4a7af598e2b5226cb50bbcfd844092dd20537b4809382bb94",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/stream_encoder_intrin_avx2.c.obj",
+      "bytes": 38516,
+      "sha256": "1874468dfccb071543a9365cf1edcca977e77bee69cc2e91f3d34a73a207fa49",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/stream_encoder_intrin_sse2.c.obj",
+      "bytes": 44238,
+      "sha256": "0129845bc7b6fec70c22c8e1f13c3a70ecf6fd72a9a8a9fb9b0b7270081395eb",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/stream_encoder_intrin_ssse3.c.obj",
+      "bytes": 43568,
+      "sha256": "1d1540dde78e7387afee65e088b97ea7318d6b8cfffb01edd72dbf1ec08984ef",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/stream_encoder.c.obj",
+      "bytes": 210674,
+      "sha256": "5ae910c0d4dc453bc3912d7949082b49e6bfe6b50a5764240acb6054d987221d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/window.c.obj",
+      "bytes": 60575,
+      "sha256": "6b1fc88c6e65075eadb17b15c70805a9188cb0b7e3ad96428b75ff3b891380bc",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/__/share/win_utf8_io/win_utf8_io.c.obj",
+      "bytes": 56907,
+      "sha256": "fbe4c63d24c32e9c0f51c25d57b0e80e1c9931c04b8fafaa6cf06d1d8e77d1a3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/freetype.pdb",
+      "bytes": 544768,
+      "sha256": "b6e8299890977a642c9fbdfb8eb1315cae95f2f15b91e8b38488290bef2b67d1",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/builds/windows/ftdebug.c.obj",
+      "bytes": 15377,
+      "sha256": "b9a95432663a349e8bba481a6f75e3489e9a0abcf028b9d26ada5483f9168e51",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/builds/windows/ftsystem.c.obj",
+      "bytes": 31489,
+      "sha256": "db36cb314b9e7ff2cc5a6a1d72b853292d82051c5291979ce5a4e594d485c26c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/autofit/autofit.c.obj",
+      "bytes": 267237,
+      "sha256": "d589f0080ae1e62e499734682e1d6d8e37493a338fbe1f98551fbc609e7fd7c1",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftbase.c.obj",
+      "bytes": 342292,
+      "sha256": "721770f9f84387978f2cd822d516b4787cbf818837ba1fe85116612d37901ebf",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftbbox.c.obj",
+      "bytes": 21710,
+      "sha256": "a1f40ebcd0130539e0ee20b1733fe2556a5094b355c35ccc1d79346067ad7b59",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftbdf.c.obj",
+      "bytes": 18479,
+      "sha256": "94b91cbe1fdc36586b28b35dd2d5c7125eddef317ed82153764b5984eb68afa4",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftbitmap.c.obj",
+      "bytes": 43765,
+      "sha256": "3c8d3c29083a9ecac6e63edd09fad7bd1c05b6dd1de1a98e320d047a6a3df121",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftcid.c.obj",
+      "bytes": 20485,
+      "sha256": "16ff80d816fb60ff9fd524a61e2c68d89cef3acc6f3bbdaa73cc9996a876cf66",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftfstype.c.obj",
+      "bytes": 18136,
+      "sha256": "5ae1c08191e3cbc324fed9a9d296be3c0f65c3da9c876fb07f2c80a2ab14e6f7",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftgasp.c.obj",
+      "bytes": 18018,
+      "sha256": "2eecd4371d2cc6125145f2907e8f4c2f9513b0439b76735dcf6e6557cf64504d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftglyph.c.obj",
+      "bytes": 42031,
+      "sha256": "73ea6c9d361f6a47611cc5c216c4c201decfe148f85e618b6950c05106652e3c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftgxval.c.obj",
+      "bytes": 19207,
+      "sha256": "30fd835bc1ba4dba5135e03ee515a30b017b7808e0fd606cabf01304a4fc8320",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftinit.c.obj",
+      "bytes": 22597,
+      "sha256": "9d17e787d1d1741bd8ba629067a0bc7ece747cb3e640f5dd66b188c6a15f9ada",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftmm.c.obj",
+      "bytes": 39778,
+      "sha256": "a70ea7a654d65073c2f80db363f1514de592e3ff672aacf130494393248011e0",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftotval.c.obj",
+      "bytes": 17652,
+      "sha256": "96d2074ee9493661a129fb91b2a5010dfc7c8f53542d3cd44ebf57659fd1b7f0",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftpatent.c.obj",
+      "bytes": 16677,
+      "sha256": "576830853c3c0999c16feb9a0fad6e31e66d9dc592c847303f3dfc4a35a5e35c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftpfr.c.obj",
+      "bytes": 19433,
+      "sha256": "022183b005b175a11db50de71c129b3acaaa0f3a3db0ec60ab00a0b478178256",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftstroke.c.obj",
+      "bytes": 86542,
+      "sha256": "bafd3e542db93ca51dbdf82da7df93ed13bdea8de4e280ddd59194d5ef853486",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftsynth.c.obj",
+      "bytes": 19741,
+      "sha256": "d792df499e0dbe285cebe84902972b98620047a70d9c8d76b528314a13f85f0d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/fttype1.c.obj",
+      "bytes": 20376,
+      "sha256": "8d7b82850a2fdc2a1505e537f19c4b53bafb108315de002b68297d643ed49f4c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftwinfnt.c.obj",
+      "bytes": 16771,
+      "sha256": "e0d283bfc0798425ce319829e02271993578a17d87dd1d6bd6388d1d883aa70d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/bdf/bdf.c.obj",
+      "bytes": 106425,
+      "sha256": "f924d816f4a1e8a089d9edd7b041289587cab887635a6265035ccafd186965c1",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/bzip2/ftbzip2.c.obj",
+      "bytes": 12527,
+      "sha256": "e1cd17476d337345b9a2cd304db736e50a64787bb4c8e62632b6458dae113066",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/cache/ftcache.c.obj",
+      "bytes": 111209,
+      "sha256": "095c7c5e4e85874a5b7862df804bccb6c19c087299bac12fcb75b6eaf60747eb",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/cff/cff.c.obj",
+      "bytes": 201978,
+      "sha256": "11b677aed6e1f4ced49c3d7e7b379009669ad223bf2dc12e731ab93bae3276a7",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/cid/type1cid.c.obj",
+      "bytes": 90180,
+      "sha256": "6591824c9d0a79b0b62293b646ec7bc797429f6723324648410310cd1bb1d6e3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/gzip/ftgzip.c.obj",
+      "bytes": 78872,
+      "sha256": "bb33998015a07f2e2c0ce44833d603e417dd7c7cc153132ddf69a4cd789e8caa",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/lzw/ftlzw.c.obj",
+      "bytes": 32129,
+      "sha256": "5ad6ba687a0377f93364751f03e5571eb58fe2a99adeec4f7f4b35bc82d66c48",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/pcf/pcf.c.obj",
+      "bytes": 72338,
+      "sha256": "8db0c7e1fb5361d1fa2cba9cd21778ef1d13781efe5112a3725d2b2d275e78d3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/pfr/pfr.c.obj",
+      "bytes": 106333,
+      "sha256": "765ce65ac732593a312f9856ba44540297b90f18637192abae816e1632ddb71f",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/psaux/psaux.c.obj",
+      "bytes": 313023,
+      "sha256": "dfb0ca91f4e9e1f3d73e3baa68de01f7fb71def4cab886163620c8691c96106f",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/pshinter/pshinter.c.obj",
+      "bytes": 116116,
+      "sha256": "c1857772a61efcdb431485da3019ed617d944a76e0a8999fe4b98024fdfb0539",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/psnames/psnames.c.obj",
+      "bytes": 93865,
+      "sha256": "554284698dba221ead4bee12918a32aeca37c4bb9ca1857ee4fbdf37b2d17d05",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/raster/raster.c.obj",
+      "bytes": 73216,
+      "sha256": "a099d173cbb61a34cdbea34227478eb47256e852db6a0216c15f1425efec02a0",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/sdf/sdf.c.obj",
+      "bytes": 111107,
+      "sha256": "e3c25c0a5ed6e5124edc6b677f7b3d5db87a85108924efacfab0ef2d411aa075",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/sfnt/sfnt.c.obj",
+      "bytes": 343310,
+      "sha256": "943cc5c24479d8abf972f287dd8a7feb05662c268bbe328b0adda339c59f78fc",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/smooth/smooth.c.obj",
+      "bytes": 61994,
+      "sha256": "6e5f20a3c5ae1b5a821b047b1f725086be59551edc7a9c7f5447929c6c3d3170",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/svg/svg.c.obj",
+      "bytes": 26605,
+      "sha256": "354568bc3ac569dab0f59df14091d2522c93e2e0ddf05b28648ec78fc6522fae",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/truetype/truetype.c.obj",
+      "bytes": 378683,
+      "sha256": "89cad3a85fc02cd4317f419f9e09b55cc71c8baabf8122fc3f99eb2461539333",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/type1/type1.c.obj",
+      "bytes": 172749,
+      "sha256": "309635cf79589a28aacee7c03fffe108dbbeae3c474aa6b43cfb1241020617ac",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/type42/type42.c.obj",
+      "bytes": 80354,
+      "sha256": "d84b784bee8ca9f938158d92bbe449fd0c33383875d0131b2ddf4bf0942f3245",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/freetype-build/CMakeFiles/freetype.dir/src/winfonts/winfnt.c.obj",
+      "bytes": 43903,
+      "sha256": "efa52f4490310b08bb366e25c21e6761fee8ce0b43740c88bce865d8008c5fa4",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/ogg-build/CMakeFiles/ogg.dir/ogg.pdb",
+      "bytes": 77824,
+      "sha256": "32514d5e12d3d4bbf619f1efe3f8d15a544d984c89e33b2abc5621bfa87f8794",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/ogg-build/CMakeFiles/ogg.dir/src/bitwise.c.obj",
+      "bytes": 30021,
+      "sha256": "33f15a9053b79b952d9cce49e38efe065fd2f29962d10485c5b48540da3116b7",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/ogg-build/CMakeFiles/ogg.dir/src/framing.c.obj",
+      "bytes": 48083,
+      "sha256": "8c471adefbf20eac0fd617a9f49baae0c871a5be071e0a537ee226944b4ad548",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/lib/sfml-audio-s-d.pdb",
+      "bytes": 2371584,
+      "sha256": "6979878b1670283df46dc120042831aa40b64cca98ccaa4823de7107ab86c5ba",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/lib/sfml-graphics-s-d.pdb",
+      "bytes": 2322432,
+      "sha256": "981242c1504b62fb4c04ab4162b9defd30486df6b7613b86c4c2811e11c10267",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/lib/sfml-main-d.pdb",
+      "bytes": 69632,
+      "sha256": "de50ba02d6f303a6d6d2d0ed7b554f1238e570e612634e03bd0312113fe59bc6",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/lib/sfml-network-s-d.pdb",
+      "bytes": 978944,
+      "sha256": "4f45f331bf1cd32cf9ff5dce608ae32ceac26119c7e08c45c4a2c34eb8744534",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/lib/sfml-system-s-d.pdb",
+      "bytes": 815104,
+      "sha256": "24923fe7ef175985394b81a0b0889cfdadd49b1325a1839a8190714822a9a883",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/lib/sfml-window-s-d.pdb",
+      "bytes": 1503232,
+      "sha256": "5c22239d117417336ac18206cffdfd94423a33c1b717a9bd53fdd14eec94702f",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.obj",
+      "bytes": 1146462,
+      "sha256": "d4433ec2c9815d5e9f00e0de7b0249bab8ba55aa3608e0c7fb6d80984ef406b8",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioResource.cpp.obj",
+      "bytes": 119261,
+      "sha256": "76123ea5a5a318366191b9be38b53c063431bb19c5d88051b03690ea1c55d3cb",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.obj",
+      "bytes": 420570,
+      "sha256": "86a4c34d6c46c16fb7d6a53f8fa56c641e58b50aad510e8431efe6daa8b90287",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.obj",
+      "bytes": 63561,
+      "sha256": "00f00a23bafcebcf75f76ad9807f6532577b1762971e7e297629535da71bb517",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Miniaudio.cpp.obj",
+      "bytes": 2372244,
+      "sha256": "4b8de9cac3379801799ee6503cf23d2b6a683175723056d7fb6b22848bcacc19",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/MiniaudioUtils.cpp.obj",
+      "bytes": 243096,
+      "sha256": "b0732e6b8d812e97113186cd21d3fbff9b253a4ad489a528d5eccb94d50c5a85",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.obj",
+      "bytes": 348584,
+      "sha256": "5668dc0c4d7a40de1972bfc5a6fe8340a88ceaaeffc5fb0724767d77562d5f31",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.obj",
+      "bytes": 161590,
+      "sha256": "aa6dd4c37bc57a388a7e6b8dd6f175a250bb1b34d772d8c24f8d48959ff91e9a",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/PlaybackDevice.cpp.obj",
+      "bytes": 386726,
+      "sha256": "c3721e2dbcbf3bc1e133d9f4b748e4fce7b10a0dfac66a9636bc461407f42cfe",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.obj",
+      "bytes": 308596,
+      "sha256": "21b543e28c4f37c2baffded476a2de2f03a0a7661f0fd14fd9fee125dbfcbb89",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.obj",
+      "bytes": 825618,
+      "sha256": "c4f70d092a6274fb2d58c0398c0264af333a6d12f533811e15c1b978a42e0e19",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.obj",
+      "bytes": 428249,
+      "sha256": "341c8505e9b74aa701784a53b5994e1d7c79fcbd598b8cc6284fe3e7ab0b4fde",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.obj",
+      "bytes": 1608932,
+      "sha256": "f2b5599bb12701b9698c026f46bf7527570df44550f94bde1011f90abe830499",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.obj",
+      "bytes": 439666,
+      "sha256": "a65531f9e8cd97635dafa67111e129c1a12c2f4d18e0edff34e62c2a00365977",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.obj",
+      "bytes": 386439,
+      "sha256": "6e9d437f01260669275127ae34d5fccfab5ff80b33828270e9695818533ece2d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.obj",
+      "bytes": 253969,
+      "sha256": "e2fa8cf6bf02e22a2deca673d44f2195a51d7e93b29fa71f3ca2ee09db62daaa",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.obj",
+      "bytes": 284576,
+      "sha256": "e2bd203e220a8c0177cdddda86ddcb35e9bc46c8dd1198503cf1cd45d0096a3d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.obj",
+      "bytes": 650372,
+      "sha256": "e478efa4a3ddbdddde727b3163ee41b837d3a23e5f5476abd0a628bb24c4fb2b",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.obj",
+      "bytes": 749760,
+      "sha256": "3d7f4b54e8a1d7790fe9df66244982df1ccbf66ab938e48139285643f834cee5",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.obj",
+      "bytes": 963753,
+      "sha256": "48fb8665300568eb1965ad691fa19f6671ff78c54a4253706729c50954e9ba07",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.obj",
+      "bytes": 693419,
+      "sha256": "1c58ec69056376be43fa8d24213de045c0ccce1ea99b2a8899cd3e188ea0dc41",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.obj",
+      "bytes": 89278,
+      "sha256": "8274d56a5a69aa38b790d4c388d2ebbb084d0e4fce3849d7b052bf62b801bd7a",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.obj",
+      "bytes": 453826,
+      "sha256": "53dfb180fd7de04e3bbb01aff099d560e22814d5c9307cfcd97e9ead140cbf89",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.obj",
+      "bytes": 11001,
+      "sha256": "2617fe8ba51b9f2a2234fa6b57260db83033e24c448cf2a9dad83194665a9251",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.obj",
+      "bytes": 95484,
+      "sha256": "199b465fadf3d8e03f26cf058c75b599da7d427f5ca141256af80f043dcfa849",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.obj",
+      "bytes": 196804,
+      "sha256": "1ed288722196b5711ca1718ba3f5ffb907ae06153ee024db876b25ee893fadce",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.obj",
+      "bytes": 1237376,
+      "sha256": "9a33e95f119a8a941808cb5096e809132c9daf2d70766fb5b3a218e7086be367",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.obj",
+      "bytes": 448275,
+      "sha256": "44731ec994babc8d75e230f66b446af64c8e57f0b04ec89f0c3b808916640e92",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.obj",
+      "bytes": 715044,
+      "sha256": "dffecb1a9ee976a1cbdb6e4adf2989ad7346214feaf3ca3fb7ce62279ec4e25b",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.obj",
+      "bytes": 52080,
+      "sha256": "29847b8c2316f395cd785257b81d219dc3ab42ad593855ec851359dd82b248f7",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.obj",
+      "bytes": 1408923,
+      "sha256": "31a75e0fcd2b37018784ef1acf1fea3687a152fca1f6ff04343165af139d63dc",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.obj",
+      "bytes": 89524,
+      "sha256": "8ca5c969f8d7d1821cfa43646d7e6810080e63bb5d3244388861f19855041c4d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.obj",
+      "bytes": 29355,
+      "sha256": "bdd24447aaa72bd42eb5fb4dab8ab92d7f2b101efd0b63c31115faf2f4001adf",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj",
+      "bytes": 832864,
+      "sha256": "f6561351f01a4c0361f765463fb130b2a9c02a12ffb1424093389a06f395f16d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.obj",
+      "bytes": 218283,
+      "sha256": "04f781f7e91333f0ae82b3db06ff32e166e736f1dae76f445061e66d652c3cc6",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.obj",
+      "bytes": 128113,
+      "sha256": "0695a8e086cdb4fc47fb3f016a7b82b46a74e705f42a05dc6a6a2d9b9843d0ca",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj",
+      "bytes": 879447,
+      "sha256": "57008e6e17f13bee479991ce4dc79f17e51ba2b69f908fa258a0d08f7d35a132",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj",
+      "bytes": 183579,
+      "sha256": "28c76ba9bfcd80048b9e4688751d9f9769d89162821b1b6a4e26faebcbb289b5",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.obj",
+      "bytes": 1716659,
+      "sha256": "d723c7a6349cb488f8ba9cb3ed1ae8be4079da7f0617f0fac19967a122eddab2",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.obj",
+      "bytes": 148080,
+      "sha256": "ce74fb3a355448a886bce2c6bf31af478518c85b3416647309d7b55c3f59bb8c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.obj",
+      "bytes": 143223,
+      "sha256": "92114ee1f8ecca3e83e3e23b1a4160d70ccaaa3ca0a25a3344fd738251ae3c73",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/StencilMode.cpp.obj",
+      "bytes": 4336,
+      "sha256": "faa202a5a1f66def1ea81079f64c051eff2c057cae4de8538c24b24b86449318",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.obj",
+      "bytes": 323776,
+      "sha256": "5f39eb8d1d7915eb064a37f8db386dabb3e2c8cfaed089755f4c6768f67bafa3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj",
+      "bytes": 624726,
+      "sha256": "6e1f4cb6fba3ab0ecc2b3c5c149813192e058320d1804b800f98736846b34796",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.obj",
+      "bytes": 85685,
+      "sha256": "673e900a63b85b506824a952f367e1999e91528c13aa10bf7014fc2ec7fc3dd3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.obj",
+      "bytes": 32751,
+      "sha256": "8ecfbb5734f0134e8edf5568d51e55dd8d78b41166b773cbc500f07266cb78c3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.obj",
+      "bytes": 47596,
+      "sha256": "6f7b4c99f5bbeee14951cf1583824f4f900dffb6da80aebb5cb191264a29458e",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj",
+      "bytes": 201896,
+      "sha256": "7ba32c432199e866c6f9369737a68e0d489b874b123fb25e006a9373bfa7b2aa",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj",
+      "bytes": 212813,
+      "sha256": "fcd4c2878af68ec69d9a3133154b4ae2263013238d306a7d8e1b9776446dca60",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.obj",
+      "bytes": 61444,
+      "sha256": "3e701120ffd285d5cab10b0871befde569cf93ac54ce8fed3fd51f7deb6c81d9",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Main/CMakeFiles/sfml-main.dir/MainWin32.cpp.obj",
+      "bytes": 17178,
+      "sha256": "e7e093237b58e8f992685f1610cec386e5858f63ff49d270b202a127661d79e0",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Ftp.cpp.obj",
+      "bytes": 1132071,
+      "sha256": "641895fa3bae2061d98298b5945490137051ce0e2aa65a82ca4c57d2773c2d20",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Http.cpp.obj",
+      "bytes": 962014,
+      "sha256": "2f5b45281d8f3a10eaffea7aa1bac84352a2334b58df5ec94fd56cccf696da3b",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/IpAddress.cpp.obj",
+      "bytes": 385410,
+      "sha256": "34060e5020174678750b58e73f4b7eade5c35c10c3ad633fbc193e01fe60716c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Packet.cpp.obj",
+      "bytes": 419194,
+      "sha256": "3cdf166978eb6f9c26292673da24cf5344275749593ce90430bb53805dabcfdd",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Socket.cpp.obj",
+      "bytes": 99220,
+      "sha256": "97b29224a54e984773ffdd6d8fb483ddce82d5a16cb6f81383f6550877d14017",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/SocketSelector.cpp.obj",
+      "bytes": 143313,
+      "sha256": "10cd915b4a243b472a585a141c20f96ce23d72ecfe9cd8aed14a56b4883edf57",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpListener.cpp.obj",
+      "bytes": 111093,
+      "sha256": "dc7365d3115c69aa7890c764406536094ec21fe389b3be8a83c7cf955781b17d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpSocket.cpp.obj",
+      "bytes": 267404,
+      "sha256": "b8e9976d7afabdf74c4d720ba18c543a0e3eef18e254a9223c370eaf88854027",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/UdpSocket.cpp.obj",
+      "bytes": 223042,
+      "sha256": "a2dd51ef50ef16a35e0f440bf96043eea6a6afbef982b621c1d90060d0a489d8",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Win32/SocketImpl.cpp.obj",
+      "bytes": 27761,
+      "sha256": "76cc6ed6e8b6a2588fbb3e2243cf482854191fdfa424944d60af18ab793cdc12",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.obj",
+      "bytes": 74889,
+      "sha256": "23f812e41dad16ca169f429e6f417f48bc33f2d9ccbc7d5cfeea7d09adb3a861",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.obj",
+      "bytes": 69535,
+      "sha256": "a6b6b15a71d489fb24df36f2bede3ef4390d74c7ac08857365e52e52b2d0db62",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.obj",
+      "bytes": 156600,
+      "sha256": "86884c3a84b1b585fdf6730f2f2d26c1a4e77197e8159e51a0b3f777d2955ab0",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.obj",
+      "bytes": 50099,
+      "sha256": "8c5bc250dc5f8bc8ebdfa1649df26f2729414a93807d8b8a39fe6e2c54eeca94",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.obj",
+      "bytes": 51137,
+      "sha256": "33d677de809f58eeea20cd568fca422a5278e909ee96068d448591b7745e0d30",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.obj",
+      "bytes": 794819,
+      "sha256": "160edc6b0026863bec6636105ea34242526896fdaf5e0e9f179ca08d6214c09e",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Utils.cpp.obj",
+      "bytes": 589388,
+      "sha256": "8c3f64f0a80a8a73bed4560c18895cad402c895b57fac229b5e5c16beae79118",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector2.cpp.obj",
+      "bytes": 91146,
+      "sha256": "2e9764892fe50630d3f344912ee42a50a484bbe94dbf473b62c6fbd0016e3210",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector3.cpp.obj",
+      "bytes": 52090,
+      "sha256": "e8fed81050945c296473a2e1d19c04836bdfdd10dc78125c4a463c22f5923fe9",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/SleepImpl.cpp.obj",
+      "bytes": 69233,
+      "sha256": "117c10871c8f0c6e7525e0ca5c3aca6c1a843cf9182a6dd95bdae154a9bc636f",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.obj",
+      "bytes": 64003,
+      "sha256": "2e2604db17dfde0e956ec0d7e6e246e46c52e522fa9b60b209296354dea8a1c9",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.obj",
+      "bytes": 110978,
+      "sha256": "a10a9dd1255976f822103004bdd60524b2b68127178d5ffda04cad7738ec8cb0",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.obj",
+      "bytes": 145210,
+      "sha256": "314a955113dd6b7f3a38eb52532bebab18eee64267bacba9fcbde1879b5c8ff0",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.obj",
+      "bytes": 938590,
+      "sha256": "c71c08abbcc75b0e91b1665455bc2247fc4e65039d560cb812414b612fa1b1b2",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.obj",
+      "bytes": 41915,
+      "sha256": "f24a0acf4b3734d0cb62b53b5f424360094468559f38f50b4583634751dc6179",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.obj",
+      "bytes": 188420,
+      "sha256": "51ccaace4bf008ebe353709315ce4aa9639bededad16ad1f22407afde93d94e4",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.obj",
+      "bytes": 171123,
+      "sha256": "f618a7ec87ed7bf78d7d4d5b9f390e489f8bb808b1e8fd3a1cafef28d45c6cc3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.obj",
+      "bytes": 67628,
+      "sha256": "784e11910165655d651600dbe597c776f0ec1df3e2062d65e94c2ac2a1fafdf5",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.obj",
+      "bytes": 7841,
+      "sha256": "71b08a57114a6453ba1cff19cecf4dd7e5e75257e8f62f321419117b5afe7afa",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.obj",
+      "bytes": 19747,
+      "sha256": "71867896023a5b597e810f33b969810571c3609389911a66d06b06bec1a1db4f",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.obj",
+      "bytes": 115073,
+      "sha256": "2add981cc02dccfaa8309aacadf0d0faec9dc36b988addde08ee65f7451e9143",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.obj",
+      "bytes": 6618,
+      "sha256": "acf7f7e5498504d5245d5be48cc45bb8ce520384197698c26e38c923301b9aef",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.obj",
+      "bytes": 167723,
+      "sha256": "211f5316b6669dbd165afd2fdda216b41cc5f4d40a76dce908527bb2869329d5",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.obj",
+      "bytes": 29564,
+      "sha256": "660503b9ec29ed44df99b34d771036553bb76186bcaef145b9039ff0573d2e38",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.obj",
+      "bytes": 214976,
+      "sha256": "c609dfab87dbd7f7095ff7f6c320d34cfd658201a78e53a7732e24ce99c25d39",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.obj",
+      "bytes": 207993,
+      "sha256": "457f58e599e9a9c3db85b017fe8f539836668c8d46f629a60ae3616b41cc5192",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.obj",
+      "bytes": 920395,
+      "sha256": "13d98af547610367bd1781a2f026c7b8b92bf4ded5a2b8b5c3613d89d9053ef1",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/ClipboardImpl.cpp.obj",
+      "bytes": 284998,
+      "sha256": "0165695875381dba8e22e667bcbd9fced2a5fbb54476fd0714ec5a2c1968c3a4",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/CursorImpl.cpp.obj",
+      "bytes": 96676,
+      "sha256": "90cb0b2438c8b53e365ec663d66e88914f5d530a278cdb82d631852184efad12",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/InputImpl.cpp.obj",
+      "bytes": 425094,
+      "sha256": "8a0ced4612877f9000a806e668edf8bfbb9f0d45fb8343d13276b2fdaae3d781",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/JoystickImpl.cpp.obj",
+      "bytes": 841991,
+      "sha256": "ca8f400448993347d51ae79c58777f303d397ba5de3ac93efb0375c6c54c1e1b",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/SensorImpl.cpp.obj",
+      "bytes": 8679,
+      "sha256": "4b8266e6d52c4ed7460dd40bd36745b70667b7dbbcf49f1b3ab95bddb02b8b56",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VideoModeImpl.cpp.obj",
+      "bytes": 209545,
+      "sha256": "b4c937638dd404b9dfdb3c5881b4aead02e105b9f27a68030dd89b15e1aebad8",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VulkanImplWin32.cpp.obj",
+      "bytes": 272398,
+      "sha256": "ac9be3e96788a118dbc1e4e06f37fcaa875779ec230d7dbfb7c3a115c46d4217",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WglContext.cpp.obj",
+      "bytes": 566017,
+      "sha256": "6be89d90df76a4d2ea100393931942e73c3b989b6610dc79478532f1819f39c6",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WindowImplWin32.cpp.obj",
+      "bytes": 1044310,
+      "sha256": "0322ab89b1c48bff573e3cd94bade87d0ed5238067d3c26af8b6add6a9814e21",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/analysis.c.obj",
+      "bytes": 8401,
+      "sha256": "4360eb5a50c57d8bb0b27ff66f5b1556ea0de5e08d440c2a247f7e89f756ea28",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/bitrate.c.obj",
+      "bytes": 16072,
+      "sha256": "fe542dc0e96e9f8aa53515e9b8f2bd9eeadeaf32afac090e010c770e571e9aec",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/block.c.obj",
+      "bytes": 42021,
+      "sha256": "322d8116f73fbe7f248b4a56a1a4ddc66d1de9e930f3ea2b94b1687ddac6b8b7",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/codebook.c.obj",
+      "bytes": 21012,
+      "sha256": "79958f8bb140565f0db241466a00e2bc43f3509c3e2bac4b45f6f353f02d2d41",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/envelope.c.obj",
+      "bytes": 23002,
+      "sha256": "0e9339be37e2805a8bdd8891be02a05830a94518dfa74a02b4195c4c2d75cff0",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/floor0.c.obj",
+      "bytes": 17652,
+      "sha256": "1860675b2588da160a433997d7f57f20dcddd73aecae1c1effaea48be5511842",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/floor1.c.obj",
+      "bytes": 48730,
+      "sha256": "5114d88999f1f8fc279e8d73ef386781bd48f40e77f4f4736e5ecae3fbf156c5",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/info.c.obj",
+      "bytes": 39532,
+      "sha256": "34b9c6f18c4049cb0ec8791d13c9457f812c145f2f980c45ebbf0d639878a022",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/lookup.c.obj",
+      "bytes": 3812,
+      "sha256": "8183b563cb21a26c4cbfe40a5c0389a15fef53b7bf58f1761b62c71ac3dcc242",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/lpc.c.obj",
+      "bytes": 11498,
+      "sha256": "bf06ea35f1c035fd6c4db128bf61630ede3608f64d1c72e6ba6c6d9eb074a004",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/lsp.c.obj",
+      "bytes": 18126,
+      "sha256": "a02d75747064476798e78dc32cc8e4cd1de60dbefcddefa5961982ed21f68aef",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/mapping0.c.obj",
+      "bytes": 27576,
+      "sha256": "e1929dc0e996f0cdc22a9eae9ef9665f061fea839b38ed7c7cb7444a31bf2fc8",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/mdct.c.obj",
+      "bytes": 32224,
+      "sha256": "e761dd4fb120e244b5be52e7ea9d3fe757a6d1f203e9266b59928fc626d3feaf",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/psy.c.obj",
+      "bytes": 87925,
+      "sha256": "20a5ef13f69a10fa0d0994f325eeed88c52bc71741538b43fc07725650ece8d8",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/registry.c.obj",
+      "bytes": 6220,
+      "sha256": "db76f2eda2a7ceed75f892670ee76cda3e9edf227a2695c5d4fc5169bc454dc4",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/res0.c.obj",
+      "bytes": 37499,
+      "sha256": "02b58fbf52248b2e5f0b886a987a3d94c470a68ac00b3823b442bd6a3f562a86",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/sharedbook.c.obj",
+      "bytes": 24925,
+      "sha256": "52b4d5cf09d95261132aaff47488d0d6522cd2d983ae069832f53788175715ce",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/smallft.c.obj",
+      "bytes": 50503,
+      "sha256": "210de55de4dada19f6133c4055b60aeeddc0ce0f2272ef542987afdf1de50b6c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/synthesis.c.obj",
+      "bytes": 12681,
+      "sha256": "fbe769407b020dd5906f160677b55c14330741b1f21251ce8a46b788f1b56b44",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/vorbis.pdb",
+      "bytes": 126976,
+      "sha256": "a01a619e41668d01789d3ef0e7c7a59c24e9a4329c411f4a33e0f3470457b281",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/vorbisenc.c.obj",
+      "bytes": 855122,
+      "sha256": "2050052486e6528a8240d94b3eb8d8df76bf76a0f52418d898ce7db70084e134",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/window.c.obj",
+      "bytes": 40245,
+      "sha256": "55c1f421b71021464ecb5dc7db5e4f372e9a188ed629f35a851bf1ec9ed9142a",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbisenc.dir/vorbisenc.c.obj",
+      "bytes": 855130,
+      "sha256": "68c9e1a43a89d666035a7ec4a503fc3d3ea96209728ce9f3bfdc17d80bfdb8b4",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbisenc.dir/vorbisenc.pdb",
+      "bytes": 77824,
+      "sha256": "448db00ffbb0633f561db149e7b6cfeb24b71becf2a95ea86e1ffebd334bd3ee",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbisfile.dir/vorbisfile.c.obj",
+      "bytes": 93607,
+      "sha256": "23b8801574f7c57c3e9bd743d757262d146dbf35af8a88e373e49e5bbb67ebe3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Debug/_deps/vorbis-build/lib/CMakeFiles/vorbisfile.dir/vorbisfile.pdb",
+      "bytes": 77824,
+      "sha256": "76efa7ce964c65bdbb6d60afbb59fa01f0273950a31ebc0896ee08d29b145895",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Release/Nai-Long-Adventure.ilk",
+      "bytes": 13895324,
+      "sha256": "7faee90f7f3c83d7e88280913cadbde9bd990b7965ad5f2b4f4085a54b811a7e",
+      "category": "incremental_link_cache"
+    },
+    {
+      "path": "out/build/x64-Release/Nai-Long-Adventure.pdb",
+      "bytes": 25210880,
+      "sha256": "ad263cb5b12c0143b75cc0de630492eb39e212b39eb6c90b6b7fcd9a7529ef8e",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Release/CMakeFiles/4.3.1-msvc1/CompilerIdC/CMakeCCompilerId.obj",
+      "bytes": 1960,
+      "sha256": "42c34173894417be3dd4b455f6e9c2fcdbd2f83555a2928b0250b46c06256b60",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/CMakeFiles/4.3.1-msvc1/CompilerIdCXX/CMakeCXXCompilerId.obj",
+      "bytes": 2024,
+      "sha256": "057497df30e0c0d765f520849f8397f8690f06d043d76f13f1aef31e77bf6665",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/CMakeFiles/Nai-Long-Adventure.dir/Application.cpp.obj",
+      "bytes": 1186581,
+      "sha256": "5b8f5d91e5bb5997f0a060d1af77109187a13f4e27157795b0a3d138fadf258c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/CMakeFiles/Nai-Long-Adventure.dir/main.cpp.obj",
+      "bytes": 244661,
+      "sha256": "cffde94609fb1aeb03e2bb50a060e18eeaaaf290b28f33ca38f9b7fa66221a20",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/CMakeFiles/Nai-Long-Adventure.dir/vc140.pdb",
+      "bytes": 1601536,
+      "sha256": "ffde1f817d3b9808c141a5610ad538ee97c9dd3fa36c139daf037d9164e0b107",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Release/CMakeFiles/ShowIncludes/main.obj",
+      "bytes": 644,
+      "sha256": "58e82d61291833ca14b1a0bb8681a680944633c3943163133732d9fd4086aec0",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/bitmath.c.obj",
+      "bytes": 39055,
+      "sha256": "69210dfc79eece3a6ac3fb1a3076447766f2df7ddb0c57e4de87f40bf911a167",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/bitreader.c.obj",
+      "bytes": 81263,
+      "sha256": "667c26c8de4a49fb4dce6055f95daca4c220adbefdbc3a5f728f35a629bbe418",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/bitwriter.c.obj",
+      "bytes": 76944,
+      "sha256": "3126952ca35435973fb851a030516795f4655e3a2a178b8c071daa2dd549bd23",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/cpu.c.obj",
+      "bytes": 42794,
+      "sha256": "d98e49e167b96d20f17c2a6821f47ce91eb9337b0dc0f02b422ceaaa548c45e8",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/crc.c.obj",
+      "bytes": 12158,
+      "sha256": "2cd75d7142d000eccc7014b8dcf7a7bec81ae16cfa8fb3d38da4638edd9a3d22",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/fixed_intrin_avx2.c.obj",
+      "bytes": 2851,
+      "sha256": "e279e84e9df568ba339885817d990e15739b5d6d3348ab251b7b9d722da4254c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/fixed_intrin_sse2.c.obj",
+      "bytes": 47414,
+      "sha256": "c808daa4093ce799587564b852619f66a91d46ec04d4c7f27bba83a9095c4292",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/fixed_intrin_sse42.c.obj",
+      "bytes": 47410,
+      "sha256": "752774fe3cd208f3503db86f4b3fb3985f5dcc0a755317f6880e0eec8fff4a55",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/fixed_intrin_ssse3.c.obj",
+      "bytes": 43602,
+      "sha256": "902eef41b6e1b71fd71688fb79386d685264ee42665eb2128ad621e4f370fc91",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/fixed.c.obj",
+      "bytes": 69133,
+      "sha256": "5ceff1aaf04cbb994d0da0f8233619351aaeed370e2cd252f701a20d913e1f23",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/FLAC.pdb",
+      "bytes": 217088,
+      "sha256": "3a70b32fe106dede3db7c7251fc2973b837a04bee0defdef6a9773611904b3b6",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/float.c.obj",
+      "bytes": 35277,
+      "sha256": "96e527157c218b5e36489b1301f4b0048c4953ed262f65671c7282c2134fd417",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/format.c.obj",
+      "bytes": 80297,
+      "sha256": "62d0339a7f231d7e067d5f75c88d401b0b9d844131bdd6ac1dd7249151811456",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/lpc_intrin_avx2.c.obj",
+      "bytes": 2843,
+      "sha256": "5205c89d1774f7bc88b82493cbeea2d251660e54e96e71214246c915306551e7",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/lpc_intrin_fma.c.obj",
+      "bytes": 2839,
+      "sha256": "b96124d0871ae3f2183342b7ae52146e64f5e047f2f12fab4429c3269c7ad86c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/lpc_intrin_neon.c.obj",
+      "bytes": 2251,
+      "sha256": "c505965c805261448907477a7b7dcd8ebc55e62d8245dfda5da65ad5b9d2279e",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/lpc_intrin_sse2.c.obj",
+      "bytes": 39577,
+      "sha256": "5bb0c08deba357d444c20bec5c1ec0efc4bc98446724789a6babda248e7bb514",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/lpc_intrin_sse41.c.obj",
+      "bytes": 23132,
+      "sha256": "d467746a5c46a424dd8a779a00d28d3c272ba8b6c9cea30bb8a9779b17d4e818",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/lpc.c.obj",
+      "bytes": 114067,
+      "sha256": "09fd6415cb4dc727b80193f9fe922b45929b5c6292ce51192a03a060e4fcf25b",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/md5.c.obj",
+      "bytes": 56692,
+      "sha256": "98cd78626ca7924a5c75cebe82de9c6bc5e3f9c6d9f42038e43261fb500ebe2c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/memory.c.obj",
+      "bytes": 46378,
+      "sha256": "61df417e4b2b210622a6aa5cf6296012707345f4146f0eb307c59ded849cb913",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/metadata_iterators.c.obj",
+      "bytes": 259777,
+      "sha256": "c83322500d76aa16cfdfe010e4f925aa207df37ce815d422afdafbf2b3de4058",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/metadata_object.c.obj",
+      "bytes": 171037,
+      "sha256": "b79e151b397a1819b059f2fcc517f4ab75575d0c5ffcf6da6980f89c4ccfc3a3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/ogg_decoder_aspect.c.obj",
+      "bytes": 16172,
+      "sha256": "a1a3a9286c322b52049f8accce94b658c5fd6a5603899160ce129d43887eb463",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/ogg_encoder_aspect.c.obj",
+      "bytes": 13372,
+      "sha256": "64591de0cc09db6dd5196464f4538e705a0247b72e5af259297bd2d39cb63880",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/ogg_helper.c.obj",
+      "bytes": 47618,
+      "sha256": "0757a8b64fcdbdf3bbbc210933b722be07090390f1b6fe6b42f2e924dcee0973",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/ogg_mapping.c.obj",
+      "bytes": 3310,
+      "sha256": "88847777e2013af2d07800d45d1a53856dda7bd7736ead7b04196e6a99109b36",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/stream_decoder.c.obj",
+      "bytes": 224340,
+      "sha256": "277e52f937bba89374ade3ea8e18c27cda658e4b0686afa6a3b3178609a90a5a",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/stream_encoder_framing.c.obj",
+      "bytes": 71952,
+      "sha256": "34a271c0698287a026c5120ca6fd50c3050ae94d32cdc263455b4386e21d1742",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/stream_encoder_intrin_avx2.c.obj",
+      "bytes": 38547,
+      "sha256": "db1408cd3c1ca91d77ec2d090e569744f08fd3dd089a5398709ef5779b759108",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/stream_encoder_intrin_sse2.c.obj",
+      "bytes": 44577,
+      "sha256": "6415bdfe7eb86184ef0480cc8d8db07ee9c44a77f5ca02a59439a54b5d729466",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/stream_encoder_intrin_ssse3.c.obj",
+      "bytes": 43795,
+      "sha256": "d0770004c2d97590d6517a798dcfcb846eab3d5f88a31c83ac7616010623f59d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/stream_encoder.c.obj",
+      "bytes": 260744,
+      "sha256": "8de722017b157a0aef1ed6e301aa67e39ece396cdcca73d0dce0a308161cb9ff",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/window.c.obj",
+      "bytes": 101427,
+      "sha256": "3bd94bf52b6ad31fcfb083906d854f5380ad874c962ab6acabfc2e64c778dc1c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/flac-build/src/libFLAC/CMakeFiles/FLAC.dir/__/share/win_utf8_io/win_utf8_io.c.obj",
+      "bytes": 65534,
+      "sha256": "f1f5877115e8c609a5366b1b787e8a01161342b21496d31ab64294719182c942",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/freetype.pdb",
+      "bytes": 544768,
+      "sha256": "3e81b5f795cd7af833238fa10e101d5a5b6aafe9600aef7a92ce2c02ef4b6bfd",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/builds/windows/ftdebug.c.obj",
+      "bytes": 14972,
+      "sha256": "464a95250dea94a2c77b681d8b0a9cb4c34194b29e1f193fea3c2497e5bd1696",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/builds/windows/ftsystem.c.obj",
+      "bytes": 32835,
+      "sha256": "a3285162c35ac66239558243a1871a78173750e2b7ab54ed48b31a35f96fc106",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/autofit/autofit.c.obj",
+      "bytes": 325508,
+      "sha256": "6c661fd7c5be7de9db8f00038755ccdbdba7b6ff00fd4800f983e547c573fe62",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftbase.c.obj",
+      "bytes": 516164,
+      "sha256": "387ae11b9e4c9bfa9c10b1873281fb1dd38abed7c0d52a98b2e2531cffefbf41",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftbbox.c.obj",
+      "bytes": 26516,
+      "sha256": "79c81fe1a3da41b16e2f714ded756c0ec4c3ab289c0c741867bd45fd75c5ee10",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftbdf.c.obj",
+      "bytes": 18780,
+      "sha256": "9e0d3932cd415afb6766c63154a5325b7f94712b22ab759963e39dc3726917c3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftbitmap.c.obj",
+      "bytes": 54113,
+      "sha256": "6b04694c58ee2776c26b432fa9e569a29d371713d189f7bf8738a0154cabe7d2",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftcid.c.obj",
+      "bytes": 20271,
+      "sha256": "31a33fa51a6a90041d321dab19395e8cae220042b1e0cf39ab9e291fc28b36bb",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftfstype.c.obj",
+      "bytes": 17670,
+      "sha256": "40ddf970b0c968080b642eb9e5c3e8992484d6c8f7f40f1719eabfad120687ed",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftgasp.c.obj",
+      "bytes": 17592,
+      "sha256": "b8ef7a1b7f415fb69384c625c9fe5147c834d63e887504fb537cdebd1740f255",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftglyph.c.obj",
+      "bytes": 54808,
+      "sha256": "7d4acc7608a59fd52e1a20b657d56500fd036f5af796c7813f5407b7f2542fdc",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftgxval.c.obj",
+      "bytes": 20113,
+      "sha256": "d2aca3d08f81b7020b2fdccab2a17928683216032a1b448ac321ab986e7d0977",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftinit.c.obj",
+      "bytes": 25100,
+      "sha256": "d6a849233c19fababc21a362c75f04aa6a4014be3028095a67be469fe05756a1",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftmm.c.obj",
+      "bytes": 46524,
+      "sha256": "d30baf3c88aafe99a552e35787238ffda28bf952238e7e2a2c931fd7463774f3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftotval.c.obj",
+      "bytes": 18903,
+      "sha256": "69560a7e27a3ed8f75d3595ed27ea79f5f618702b10ba0a02e5d0445368c6c07",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftpatent.c.obj",
+      "bytes": 16235,
+      "sha256": "c2871c61bc94954a9d9b543fc4ee3750a5d0e736761da22dfc18afc9b01da6c1",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftpfr.c.obj",
+      "bytes": 21789,
+      "sha256": "06c143ba150d1a930987eb5d85d3c5402b1647f14aca47f97730440798bc47a6",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftstroke.c.obj",
+      "bytes": 106455,
+      "sha256": "2945e6c697724d5ae84d46a7030135f65ea14988a2a1dceef4dd6b4c4049d718",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftsynth.c.obj",
+      "bytes": 20717,
+      "sha256": "7ac8fa5d3acff168bb821319b9bf0f94ae2899f22115256b74f142e29752f2bd",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/fttype1.c.obj",
+      "bytes": 21980,
+      "sha256": "3f2c1a9705b907f48e674a5ab86a4dacc0407ef09b7b0ec5e99a084a01044e28",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/base/ftwinfnt.c.obj",
+      "bytes": 16741,
+      "sha256": "daa5e7159fd1173a00d9d7b648abe56c6d7882c75853cc4d606077f734f4c4ad",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/bdf/bdf.c.obj",
+      "bytes": 129169,
+      "sha256": "c9f7efcfc7020d8f3ed9a9bb33bc638f1084fb9c009fc7c533c19febab5d6d8d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/bzip2/ftbzip2.c.obj",
+      "bytes": 12091,
+      "sha256": "d2d57b668d88b82239a09850888b0a1ec356fea619e415a5bebd1baef73cdbfa",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/cache/ftcache.c.obj",
+      "bytes": 148269,
+      "sha256": "79db1b4c031bb049b529641148c0ab3c3b205740b057a524ca00e83f9b354d3a",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/cff/cff.c.obj",
+      "bytes": 250223,
+      "sha256": "40811ce8d0028e52bca866437278194abaafe4153bf2709cc91735e5b83074d7",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/cid/type1cid.c.obj",
+      "bytes": 109525,
+      "sha256": "1636da5bae1910a87c7de8d1334939cc8d59960c607743d12b4f857b8525f4b5",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/gzip/ftgzip.c.obj",
+      "bytes": 99883,
+      "sha256": "00ca702bec8d5a95ca72c4b598096040bd5ada429e120389919181ec1c5135e3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/lzw/ftlzw.c.obj",
+      "bytes": 40473,
+      "sha256": "06a053f29d561ccf4b399d6ba1c597a9e379afb6764b5161377df1b56066cf52",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/pcf/pcf.c.obj",
+      "bytes": 92466,
+      "sha256": "85c2b305b1790427d295806178964db0d937079ff684b8d6b6d168ee7ebaca6c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/pfr/pfr.c.obj",
+      "bytes": 137522,
+      "sha256": "5ef7b15784da17d6e446bc1b834dab68c238351d1869f2c5ca0ee7a02cd2b360",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/psaux/psaux.c.obj",
+      "bytes": 398846,
+      "sha256": "d20c5e14e0d2ba6d42e4939f8e3e40c8ca8cc239a1db8533e1d32e26f85909d7",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/pshinter/pshinter.c.obj",
+      "bytes": 173408,
+      "sha256": "ecbb8a2a8f4c416406f4902fcc0fdfd185cbced14101e925885bfc5594a27f0c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/psnames/psnames.c.obj",
+      "bytes": 97636,
+      "sha256": "5de93e5a6a8957472056b6e81b88f2efd2853c9c9b131f27d0621b0514721d69",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/raster/raster.c.obj",
+      "bytes": 83724,
+      "sha256": "871e4c158237e9c65c212cbe32f5b4ecb8a1699a1e39db4b1c840ab24c682bc2",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/sdf/sdf.c.obj",
+      "bytes": 150842,
+      "sha256": "be6fe20de165f6ca554f765db516ed07e692f6bd65873a5034607cac79672fce",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/sfnt/sfnt.c.obj",
+      "bytes": 430260,
+      "sha256": "2390317f44a0656c475ac4ebb03a9a49ac55505c03d321f5eee74d38f4679b79",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/smooth/smooth.c.obj",
+      "bytes": 73918,
+      "sha256": "74c745645a83f384a5b7d8e5b0ed60f8ca835d22a796a96b8b6c5602f39f2620",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/svg/svg.c.obj",
+      "bytes": 29187,
+      "sha256": "cde6ae995333cf91a7d07e0db404bf1a49db126316ad0948d2d8879643a5f3dc",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/truetype/truetype.c.obj",
+      "bytes": 501186,
+      "sha256": "1285dc985196c7f495ca5817cb4bb97c20288b024a0e265de2d2f4ecd24e0d4c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/type1/type1.c.obj",
+      "bytes": 206842,
+      "sha256": "2ab516ee12cbceb2097c493412bfdcaf960adc93c224517b8020e9c5495c1350",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/type42/type42.c.obj",
+      "bytes": 89620,
+      "sha256": "fe4dfceb7f96d75d5ac2cd7fbe086a8ffa0ff469859d0fd1da5eba83721f0f62",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/freetype-build/CMakeFiles/freetype.dir/src/winfonts/winfnt.c.obj",
+      "bytes": 49081,
+      "sha256": "37097156b5ee840e0d2edc84e0888ee13dfaa6715f8d4a21c3c90478f649f096",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/ogg-build/CMakeFiles/ogg.dir/ogg.pdb",
+      "bytes": 77824,
+      "sha256": "c6c732f8fb17fcc649dfefb7e8613b6b043f72a454dd3414efa0cc622f63ee56",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/ogg-build/CMakeFiles/ogg.dir/src/bitwise.c.obj",
+      "bytes": 38512,
+      "sha256": "443494e0ab2624158417fd80d6ff376448f6e658fdcd42640b7ef562d12629d2",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/ogg-build/CMakeFiles/ogg.dir/src/framing.c.obj",
+      "bytes": 62541,
+      "sha256": "e9b86bb6e2a029ecad6efaeca0d8e17f3770eebc10bfebabbd283da7a533cf35",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/lib/sfml-audio-s.pdb",
+      "bytes": 2150400,
+      "sha256": "cd18a6df3ea76b184378959583468ad2b05ef621d9951c845491a79f10588836",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/lib/sfml-graphics-s.pdb",
+      "bytes": 1863680,
+      "sha256": "87864f7b1e52f43c1ccd93627da829e8ff04f4d51f8dcfee41043e13fe28ac1d",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/lib/sfml-system-s.pdb",
+      "bytes": 798720,
+      "sha256": "26d44dd8f7b65810c6e2ba1c8658df4e01d212c764783b64212a0368858e0a17",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/lib/sfml-window-s.pdb",
+      "bytes": 1470464,
+      "sha256": "6229edc8bae6ae8cbdeb99092288039e82b4852daf7bce2d0f5ff2ddafa2eafa",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.obj",
+      "bytes": 991001,
+      "sha256": "1d6df62897bd304c63813b7e03ff44e857783b6b6fe761fce4ede59eae15bdef",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioResource.cpp.obj",
+      "bytes": 118505,
+      "sha256": "48d5d1589acd40f5cd9d9d939451c0e07a279033e9408166d2b0ea21bb495128",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.obj",
+      "bytes": 366587,
+      "sha256": "950f6c381417a77fe0b507265a0aa19034388b84c53e1fdba2b91052979c973a",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.obj",
+      "bytes": 63876,
+      "sha256": "72aa8712fd50598283f67cf649b3a2811f19b18833864161cda0149c9aea2c1a",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Miniaudio.cpp.obj",
+      "bytes": 3103406,
+      "sha256": "b94de9bc9921f43ee5abd4b9bea8ad6a40993cfce4d7081d0e614b9ae97a7965",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/MiniaudioUtils.cpp.obj",
+      "bytes": 173681,
+      "sha256": "0f53e9826c93329b2bce0239f9c6ab7146d5d3d7da7e5f6a6737ffaa8af35c8d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.obj",
+      "bytes": 318765,
+      "sha256": "ea48508fe36dcff8770698dfdaf59a3fbb2ac3aaf726b9e9fbe3af4bb9621aad",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.obj",
+      "bytes": 157320,
+      "sha256": "50cffacb8f2c5ef5f19ffad79eb35acf63e6d4c8e43978762128e678ab9644a3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/PlaybackDevice.cpp.obj",
+      "bytes": 302897,
+      "sha256": "ce2be9e48a332da1596c5f08f54c745e87178e82c5a36aec1fb18fe225a62a98",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.obj",
+      "bytes": 292389,
+      "sha256": "3e80b57586d6b4285b6184f539c98d9b9769fa3b1d4b22579b2c4fb33be4ebcd",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.obj",
+      "bytes": 709329,
+      "sha256": "059522e3e5475c65ad92a07a01bb62b469ddcfc092b874bdbd08ba31742dfa8b",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.obj",
+      "bytes": 361310,
+      "sha256": "daeb3abc2e893277919eea20269691b46c71f003c77e331d1369d0a4f908ecfb",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.obj",
+      "bytes": 1331212,
+      "sha256": "ae35e2dd614f497d6282e5b67211cb87264c428dd36588e139a7853a77bd44c6",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.obj",
+      "bytes": 367008,
+      "sha256": "9343134818cf2130b16b87a75d0c6032294fdebc4b2075747c18da855c9e5bb4",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.obj",
+      "bytes": 380613,
+      "sha256": "c629f4e64e85f6fe501a29d056f698487f15e50d4b7ea7482caa404a1d0a1498",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.obj",
+      "bytes": 216124,
+      "sha256": "ef32ed3eb622ccb4a47a36588e91338619bf296308ceedcd409881fedabc2ce6",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.obj",
+      "bytes": 247573,
+      "sha256": "d8001e4a682dd95737b2888b9f4e82e20d9ed82c6d273341e756c2ef54827ab7",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.obj",
+      "bytes": 526374,
+      "sha256": "e0cfcbb2f3385e56a190b2695c2104af16a612c560a428eb28f3fa8835baf516",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.obj",
+      "bytes": 649416,
+      "sha256": "36b9641f2af7615c4a6041bb3900f5b90c20f88626f2c664633cf02adf32a951",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.obj",
+      "bytes": 765188,
+      "sha256": "c1ed1871d533fde44c97becd4a0f4f91fad5bc80f585f8289ada76ba5a46c2f7",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.obj",
+      "bytes": 578721,
+      "sha256": "bbcd40a4386dfb8dd70ba020e383d19d8763ee57a77c478caf440979e3a955a6",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.obj",
+      "bytes": 93276,
+      "sha256": "f1dfa6c08c32412e8a399763e6d4052faf37359cd562327f38692f8aa0806530",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.obj",
+      "bytes": 409675,
+      "sha256": "bddae6c95c61476010e04c3ca9c393a177ace5ef2d34bd7a8dc1b9193765a772",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.obj",
+      "bytes": 9855,
+      "sha256": "bcb5c8ed412d020fe031656f2f651f3acb3ad4e35732121a468c41dbfb3ee078",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.obj",
+      "bytes": 76697,
+      "sha256": "cdda89a65b12bc311d3e580afb7c89b93cac6b400fcf9b2a35994c704db25ec7",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.obj",
+      "bytes": 150220,
+      "sha256": "31ad8798335c9c3ff7e73caa23ab16811a3b67ed9edc41a4952c86692a366b4c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.obj",
+      "bytes": 1027906,
+      "sha256": "3d461c927bbdba26a03c331d9a5781291911731dc51adf50cc2e3b004c7335ee",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.obj",
+      "bytes": 405242,
+      "sha256": "a0889c71ccead0d3e64e0966557e3f89b69b6d12c020f7c25b10fb657fa2d37e",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.obj",
+      "bytes": 878363,
+      "sha256": "171af7c4d35fde5299d79a56bd11aea357e244179e45623fa6d6afd72c8cf168",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.obj",
+      "bytes": 44578,
+      "sha256": "c9b7239c33014fae306aa6449467dcdf5be4312a2a38a088b444ba890a951c90",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.obj",
+      "bytes": 1517506,
+      "sha256": "2939f376905a87aa190d6d5b7a3c5d6211dffd72022ff599aae3fd528b18f239",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.obj",
+      "bytes": 71225,
+      "sha256": "67de336120c6c2999fdb4e514ca171e7ff6ba9f76776241b82e5ba37d9e99f80",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.obj",
+      "bytes": 31170,
+      "sha256": "71f16a45a4463ac07fd4fd1604fb80dd783ed0cac5e1e278511e68bd5860e011",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj",
+      "bytes": 514932,
+      "sha256": "3af29c833454605400930e35e2f31a2b68b4ff1673b4c39c88a438b3c84f9150",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.obj",
+      "bytes": 210022,
+      "sha256": "2f9d3861080460691e45682fc7c17b9929ba0bb81c03d01e71ed7d5586cd53f1",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.obj",
+      "bytes": 96529,
+      "sha256": "7d97e7efc26edb622145da82a358bf1dc48b7d48e03d8c033e7c7a4596c94d00",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj",
+      "bytes": 533770,
+      "sha256": "424d58afd8b35b403e6d5dfc78b9da0f4f30c4b57066548e7cea1e17eb2fb87d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj",
+      "bytes": 149425,
+      "sha256": "142a3dbdaa07352028e9fe6947033d50045b5c7360cbb8ceb71e425908c78769",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.obj",
+      "bytes": 1386587,
+      "sha256": "a7414cee3ee748913e0c68831ce32651e83744b702d7becfc43657ba1d854cea",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.obj",
+      "bytes": 144642,
+      "sha256": "66a07db5cb98ab128632c07b6f25edea602842281e04315b39f745954612b73a",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.obj",
+      "bytes": 131824,
+      "sha256": "058a57ea569ade54e55af1c1e9b2db95b0cdbd49e35771ee98604ffe12362330",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/StencilMode.cpp.obj",
+      "bytes": 4271,
+      "sha256": "5ee2e28422856379b6bc55f8d0f5bb5ecaa645c6150b68eb163695b86e655079",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.obj",
+      "bytes": 283029,
+      "sha256": "bd05be901345e1586dfd9f1df8489d77cf854416df5535cb16dc134e935f183c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj",
+      "bytes": 361290,
+      "sha256": "66b3f54d4eb9b88a68743a418bf2416988c554c1248a4975fcba4ac77fabf711",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.obj",
+      "bytes": 50763,
+      "sha256": "4a8a205e6003e9344e278d1c8b9da5f6d6062c4e1f6996c5df6d8628b4a67ed4",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.obj",
+      "bytes": 28884,
+      "sha256": "3bdd8c50da2ce8109784c80b0e906c03da103d98dd4118dbfd565e73bb984cf2",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.obj",
+      "bytes": 43035,
+      "sha256": "e81c90b8456530709cf76c244294e54c94e9611b3c0c492547af2b6b51b46779",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj",
+      "bytes": 167911,
+      "sha256": "921a76ce6599cbd94784abfca86dc90bd77e47ad5aa12d3c300f3376e303a4dd",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj",
+      "bytes": 132657,
+      "sha256": "7bbab739bc751d6591c73e0eed783678bbe8e82862377231d7d2efcc100d61be",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.obj",
+      "bytes": 50311,
+      "sha256": "20f9e86efb711a3dca336ae9e0dbf7e7ed662c517f855cea745ed64fc4b60537",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.obj",
+      "bytes": 67082,
+      "sha256": "fcddb0ffc5522a6716560a35d18da887f4906c545c971a561c7ddfa073a3e0c9",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.obj",
+      "bytes": 69810,
+      "sha256": "4cfd01bbcd3b2dc8bedd05d815fe45411960ef5cc26c0a7798f836cd754fab16",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.obj",
+      "bytes": 148986,
+      "sha256": "8bba9d5a3b37cc6e8b7b7b6330cb51487a88d22bc674db6127b73890de9e2551",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.obj",
+      "bytes": 46387,
+      "sha256": "b5bfe263f38922589d6bc80d5f44fceceddf0b04fb33ff4f06d3defaa61870d3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.obj",
+      "bytes": 48780,
+      "sha256": "0184abce1a551304f0d3cd0679493ec3ab8807c99691636412695daba15d8952",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.obj",
+      "bytes": 752283,
+      "sha256": "8f5a92c51b462e18cb57e46a536e36d3c166c63c13902c113d876b9d398314a7",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Utils.cpp.obj",
+      "bytes": 556302,
+      "sha256": "75371a05ccb555dc7459075ddadda6cfbf9d99cdd36e9581ac3cdcfe94f6e35c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector2.cpp.obj",
+      "bytes": 58052,
+      "sha256": "ed307960528d182d0de1c3b0022137fc297f786bd7d4a9d391d53b50c22ba6ae",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Vector3.cpp.obj",
+      "bytes": 32338,
+      "sha256": "688e3093438082e4c08a5248b0629549e5229e5e088d2675bdc3a520f56be465",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/SleepImpl.cpp.obj",
+      "bytes": 65721,
+      "sha256": "89e8d6680dbc7bb1ddc883dfd4e1042e8d74f9d22cb8317d3fe20b983e1f9269",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.obj",
+      "bytes": 77736,
+      "sha256": "b3da2c04c84a03923ffc9cb5171e596c600a854cb60824bd9c455f83368f6cd7",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.obj",
+      "bytes": 109341,
+      "sha256": "b8e9be9380bbae2c3a7d67ab31773a32103ab1ee7f42fbfdf642015aac5f3fee",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.obj",
+      "bytes": 146592,
+      "sha256": "2990b7a99e4772358ffcbf00049f5590803112b14ae83e76a26d8603b0dbc017",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.obj",
+      "bytes": 812712,
+      "sha256": "c164da72007c4ffabd6948c7e85a031e198a2587eda8dfe6554987ac7c7d26d8",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.obj",
+      "bytes": 45899,
+      "sha256": "f2133ad5c7652f7948514fc17c858ffcc5669e75c7f9ef13306d4509209446e9",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.obj",
+      "bytes": 169717,
+      "sha256": "4ec8e6a586a125f11213711993c97ff3b8c189643073b15228bccb242adbf840",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.obj",
+      "bytes": 150656,
+      "sha256": "87c8a050bfc08ae2c603bbd8ecaf6850a22a56bee43f7a9accd0917c9b282fbd",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.obj",
+      "bytes": 81364,
+      "sha256": "3bddb5c2c86a306b159c6a280da04b67984dee005519ecf1afcf7468cf1f5af2",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.obj",
+      "bytes": 7961,
+      "sha256": "0a894477b9f6df6b903aaf66c6b9ed64201ca08f0ec37453b9625abec52d0ddd",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.obj",
+      "bytes": 20571,
+      "sha256": "e2961905ad8058eef59169e456a316095b53927d9992cdbb2d88d7f63c1153e9",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.obj",
+      "bytes": 101300,
+      "sha256": "9c77c60c22015a4428eb3700efa7b5d93df97dc921ebde68e0645cd4d9c88285",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.obj",
+      "bytes": 6892,
+      "sha256": "abec3613ed1d4ff003dd3155c86e9894a5e61fbc5905ffd0b40c0d50b122023c",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.obj",
+      "bytes": 135782,
+      "sha256": "026817bb982b6360f6a09c22c459f9faead6ab012952262a0c3cc8611b615a8b",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.obj",
+      "bytes": 28231,
+      "sha256": "5f70c8715a15bb6dca7a41b585dc66deff9482e26631f3fe0c0fd8f50df1e991",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.obj",
+      "bytes": 221053,
+      "sha256": "5bcab72f88b2980a0af0078fd56055633f5b025df0b602c383f7bfa7eb552938",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.obj",
+      "bytes": 181457,
+      "sha256": "865a588214b8b2bc74703b6f8539e54a5b94a175b6e198c07cb74290e9aba94a",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.obj",
+      "bytes": 721283,
+      "sha256": "a265b1fa409fe29507eb3bb6cfd698dad9aa15cbbff071184816c7d8a3376541",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/ClipboardImpl.cpp.obj",
+      "bytes": 228030,
+      "sha256": "5f0748a9e61d8a9e24cc7ac836a8c58d14158ec26afa65e1c5d2782fb7889e1b",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/CursorImpl.cpp.obj",
+      "bytes": 91690,
+      "sha256": "8f337610b2d8e5943e500b41701dd30c0876410ea3ee37002beceedf16c62293",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/InputImpl.cpp.obj",
+      "bytes": 514611,
+      "sha256": "cdc6a39570d94cc69b81745f4f74e901e5c1725f75d64cbdb4287aaf1c33e49b",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/JoystickImpl.cpp.obj",
+      "bytes": 743101,
+      "sha256": "a5773c572688fc186a41409482666c66ea553f29fe7d52448ff44bcd5536b84e",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/SensorImpl.cpp.obj",
+      "bytes": 7843,
+      "sha256": "23d0e8bd365e1f0154b59320e64702868cac4edad86fdbcd1c270158ff2390ae",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VideoModeImpl.cpp.obj",
+      "bytes": 141900,
+      "sha256": "424b95e3492a3981cc400819bd5dc53949393cdc2443c4ca65b012a40712ccd9",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VulkanImplWin32.cpp.obj",
+      "bytes": 222083,
+      "sha256": "62e238aab6fb4b5200275487ee9f9b1e0ec0bd72771e2156889b565e8df45925",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WglContext.cpp.obj",
+      "bytes": 505551,
+      "sha256": "8b3421ebddf7e2cc97a962cc6d414bdf259430c13f29b34652ad79dca1cc81bd",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WindowImplWin32.cpp.obj",
+      "bytes": 758106,
+      "sha256": "cd18d82762d3309b6c5d42afbf982183a1fc46ef58c225f7433d6a097662be16",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/analysis.c.obj",
+      "bytes": 8439,
+      "sha256": "6951188f65ea519467b5cee01784b242d51bc8829819e62b64ae47adaa538646",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/bitrate.c.obj",
+      "bytes": 18949,
+      "sha256": "5ba17926b9056928c98a821eb0bed98c05b1635897743f617048efc75636b6f3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/block.c.obj",
+      "bytes": 57447,
+      "sha256": "4f943b062840f6e9962a8013bd956ba4d627524d15981cfbff8a6ad5c0371710",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/codebook.c.obj",
+      "bytes": 33483,
+      "sha256": "402312acb0aabeae1d09c19f6d501365f0dc16b7b8d5740733196881e42e0ae8",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/envelope.c.obj",
+      "bytes": 27410,
+      "sha256": "faa96bfa0f48a2df1e800196af72af90c7f0f9385edf6764d3c32e6ff61f9fff",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/floor0.c.obj",
+      "bytes": 21169,
+      "sha256": "ab5b4b180a484223ccfd9d34e5c58f109ad796ad463225722d66ed003203970d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/floor1.c.obj",
+      "bytes": 70583,
+      "sha256": "fef734daca985549227f82a64fa82725c1bed859bc624b56ce6a2f1821e0a9b3",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/info.c.obj",
+      "bytes": 51444,
+      "sha256": "d9c48bf7315544949339d0ef55c1605652a797ee2ad0e8f32c5c093331390f23",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/lookup.c.obj",
+      "bytes": 3831,
+      "sha256": "9a3828eeee18734846bf6a10965161fb530e02f3c0358ad4c6fa6b3154528264",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/lpc.c.obj",
+      "bytes": 12779,
+      "sha256": "72ea20caa538b5482e449533224381307e147377c623bfdad6252f02781218e8",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/lsp.c.obj",
+      "bytes": 23267,
+      "sha256": "7959bace2c710632952d3aed209c17ccbbc17595ff372859fa264790ab718b79",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/mapping0.c.obj",
+      "bytes": 32954,
+      "sha256": "6e033a75889a1aa67896fe69b709368718226c04a411f2f99933ab3c1f871449",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/mdct.c.obj",
+      "bytes": 35269,
+      "sha256": "f56fde5f3406e7b78d914b4ea378a270e0d4c07c04dd2ea5a70f5fbecb50e056",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/psy.c.obj",
+      "bytes": 119702,
+      "sha256": "44c714265a2e4e04b73b4049d270f11935eac2ff28bccd9354d9990a6d8eb17b",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/registry.c.obj",
+      "bytes": 6251,
+      "sha256": "30be818d0aa39323fa251c4169010fde586ae815b9d6bcb7f9566c88e74b2e93",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/res0.c.obj",
+      "bytes": 57726,
+      "sha256": "4ea2e723eb7fd6b07caa9b8ee5fd251fef4edb70e14dd259400e7dc371744b5d",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/sharedbook.c.obj",
+      "bytes": 33004,
+      "sha256": "3c2f1ef1caa06cf1b9eacc8d42ea37ef9196ac73bba6e4ee585b5d7cad1c8d53",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/smallft.c.obj",
+      "bytes": 99944,
+      "sha256": "8729a08838a12d75362e823cf91088fb59e39efd835a3c0c8750cdb51c01ccbe",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/synthesis.c.obj",
+      "bytes": 13210,
+      "sha256": "52b4da2b726bb30fec1f334cc8c7c7460bf6e73fdb89ba3586c07af2ec28bdfe",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/vorbis.pdb",
+      "bytes": 126976,
+      "sha256": "930654032b841c724d53253c732d90a32148598d3d7a2e20424976060db4858b",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/vorbisenc.c.obj",
+      "bytes": 873881,
+      "sha256": "cfc61305afe90ba2ef14748d822c6ad549031b9cac531a090a95696d19391e35",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbis.dir/window.c.obj",
+      "bytes": 41128,
+      "sha256": "0fe6ae131e45da54aacbac41cd30f3b4f181d2cee09e13e48d85998fdda94ce9",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbisenc.dir/vorbisenc.c.obj",
+      "bytes": 873889,
+      "sha256": "2d18b845e7c56ad8b825dc386638cd3ea61e3211b5e2a7edc96e61a1bffce3c1",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbisenc.dir/vorbisenc.pdb",
+      "bytes": 77824,
+      "sha256": "744ca51e048bd715a2098b2d50918ee35917989a955bff532bf10603b6715705",
+      "category": "debug_symbols"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbisfile.dir/vorbisfile.c.obj",
+      "bytes": 131899,
+      "sha256": "a2d5fe5d55a7b6649465806c67f64e07eebd5951396fee92a435a9a22a06d75b",
+      "category": "compiler_object"
+    },
+    {
+      "path": "out/build/x64-Release/_deps/vorbis-build/lib/CMakeFiles/vorbisfile.dir/vorbisfile.pdb",
+      "bytes": 69632,
+      "sha256": "fd3fc422a3b1434443b7652e9bede729e9f28156472053f948832a6a2a27bffc",
+      "category": "debug_symbols"
+    },
+    {
+      "path": ".vs/cmake.db",
+      "bytes": 2265088,
+      "sha256": "eeb70248bafdb815206df8f296623f045cd22256d543c961f56644ed07211935",
+      "category": "visual_studio_cmake_cache"
+    }
+  ],
+  "failures": [],
+  "reclaimed_bytes": 215320164,
+  "verification": {
+    "all_targets_resolved_inside_workspace": true,
+    "no_active_model_or_build_application": true,
+    "no_target_reparse_points": true,
+    "protected_file_count": 7601,
+    "protected_files_unchanged": true,
+    "protection_errors": [],
+    "all_removed_targets_absent": true,
+    "remaining_python_cache_directory": false,
+    "R1_native_hash_matches_selection": true,
+    "R1_fbx_hash_matches_selection": true
+  }
+}

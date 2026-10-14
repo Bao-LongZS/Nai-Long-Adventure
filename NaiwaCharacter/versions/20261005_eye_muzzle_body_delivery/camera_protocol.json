@@ -1,0 +1,27 @@
+{
+  "projection": "ORTHO",
+  "lens_mm": 50,
+  "distance": 7,
+  "full_scale": 3.45,
+  "head_scale": 0.85,
+  "full_target": [
+    0,
+    -0.12,
+    1.31
+  ],
+  "head_target": [
+    0,
+    -0.12,
+    2.37
+  ],
+  "views_degrees": {
+    "front": 0,
+    "side": 90,
+    "45": 45
+  },
+  "exposure": -0.4,
+  "key": 550,
+  "fill": 250,
+  "area_size": 4.5,
+  "before_after_identical_camera_framing_lighting_exposure": true
+}

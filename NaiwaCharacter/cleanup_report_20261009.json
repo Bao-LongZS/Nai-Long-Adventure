@@ -1,0 +1,1184 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Shanghai",
+  "scope": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure",
+  "status": "completed",
+  "user_authorization": "按检查建议清理：仅未完成Git临时对象及Python字节码缓存",
+  "preservation_policy": "Preserve all ordinary Git objects, formal and historical models/exports, trials, diagnostics, references, scripts, birthday artifacts, game resources, build/runtime assets, IDE history and attached instruction.",
+  "planned_files": 64,
+  "planned_bytes": 1061030785.0,
+  "candidates": [
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\00\\tmp_obj_FErWG1",
+      "relative_path": ".git\\objects\\00\\tmp_obj_FErWG1",
+      "bytes": 19607552,
+      "last_write_utc": "2026-10-04T02:13:00.7804581Z",
+      "sha256": "13000f0b04a77042db14da96d95b6b6b69f91985d1f25ea1c4490b7e8738c91d",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\02\\tmp_obj_LdSQkp",
+      "relative_path": ".git\\objects\\02\\tmp_obj_LdSQkp",
+      "bytes": 6049792,
+      "last_write_utc": "2026-10-05T11:28:58.2239758Z",
+      "sha256": "b3299b683dd3472b1debf74b5d71c4ec3d473da43a281d21716a74aca1429394",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\07\\tmp_obj_AAcDIk",
+      "relative_path": ".git\\objects\\07\\tmp_obj_AAcDIk",
+      "bytes": 196608,
+      "last_write_utc": "2026-10-06T07:57:38.4110053Z",
+      "sha256": "c621bdca26852671a96bcb65c5a1ebd1909f4b9e85e1e04d95ced574b1ad3f52",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\30\\tmp_obj_FfeP3L",
+      "relative_path": ".git\\objects\\30\\tmp_obj_FfeP3L",
+      "bytes": 114688,
+      "last_write_utc": "2026-10-05T15:33:24.5028998Z",
+      "sha256": "dc961a9ea57d2efec996a03dd673b5d708225f8d4df2a544b0029132ac7505b3",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\38\\tmp_obj_c5jGRT",
+      "relative_path": ".git\\objects\\38\\tmp_obj_c5jGRT",
+      "bytes": 15343616,
+      "last_write_utc": "2026-10-05T11:35:51.8426654Z",
+      "sha256": "27c8744ed089d6b75c2d55c0ccfac8c844a6ddeaf76a4093f8b2d99cfd00afbb",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\38\\tmp_obj_D8rISg",
+      "relative_path": ".git\\objects\\38\\tmp_obj_D8rISg",
+      "bytes": 17399808,
+      "last_write_utc": "2026-10-05T15:01:15.1812976Z",
+      "sha256": "7f9bb6df60864e2bc3e228228b2004f07591d66457109330ddfbbf9b0d0f90f2",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\47\\tmp_obj_gxxBd4",
+      "relative_path": ".git\\objects\\47\\tmp_obj_gxxBd4",
+      "bytes": 8994816,
+      "last_write_utc": "2026-10-06T12:14:08.9142627Z",
+      "sha256": "f847578e5c17587851ee9654ffd0687ec0d5aa7dcf884c21eefe2c3761bfef8f",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\4f\\tmp_obj_1SRnQ6",
+      "relative_path": ".git\\objects\\4f\\tmp_obj_1SRnQ6",
+      "bytes": 16281600,
+      "last_write_utc": "2026-10-05T01:15:46.5672328Z",
+      "sha256": "b4dd52d285ee640ab8f79d9e34d4e4e86e1cb2f9c95d58e2fa5fa358d6dc6717",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\51\\tmp_obj_FbpHZs",
+      "relative_path": ".git\\objects\\51\\tmp_obj_FbpHZs",
+      "bytes": 5996544,
+      "last_write_utc": "2026-10-06T06:53:19.6889895Z",
+      "sha256": "1e2c44bd7b1ef494bd9425cf61071ea1f70aef1d1842713344febbc856bfad5f",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\51\\tmp_obj_TBOmG1",
+      "relative_path": ".git\\objects\\51\\tmp_obj_TBOmG1",
+      "bytes": 12746752,
+      "last_write_utc": "2026-10-06T07:01:14.4053497Z",
+      "sha256": "cf16bdaa79b69929e6f59e2a26c03e3fd9c92c1a9863afcececf4206c206cb58",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_21EdVH",
+      "relative_path": ".git\\objects\\55\\tmp_obj_21EdVH",
+      "bytes": 74387456,
+      "last_write_utc": "2026-10-05T08:45:58.5435102Z",
+      "sha256": "261378a67840b40ffcb02c700ff9b6947d0f18718e636980c9cd9cf81b924ce3",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_4cV9eH",
+      "relative_path": ".git\\objects\\55\\tmp_obj_4cV9eH",
+      "bytes": 71241728,
+      "last_write_utc": "2026-10-05T10:22:13.5961562Z",
+      "sha256": "d91272996ad10b6d48faf30d4accb35054dc33bffa6e8dfbfe33aef4cf81a175",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_bzIKc4",
+      "relative_path": ".git\\objects\\55\\tmp_obj_bzIKc4",
+      "bytes": 54910976,
+      "last_write_utc": "2026-10-05T08:46:32.557298Z",
+      "sha256": "584fc5568a98daeacdc2e2635dec8c470c9a03cf54081711a673104a92afcdc5",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_F9Spol",
+      "relative_path": ".git\\objects\\55\\tmp_obj_F9Spol",
+      "bytes": 67207168,
+      "last_write_utc": "2026-10-05T10:09:02.5199859Z",
+      "sha256": "f2efbec9ba2049c82cb8773066a6fb3b37c7f0b0b1383761349ddb6ef1b29a3f",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_h99sAp",
+      "relative_path": ".git\\objects\\55\\tmp_obj_h99sAp",
+      "bytes": 62169088,
+      "last_write_utc": "2026-10-05T08:39:15.2557082Z",
+      "sha256": "b14dc896c17a893e22e873263a6bb5da52d1c567a142b8495ddb9977a5aeb5c6",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_KxMbcz",
+      "relative_path": ".git\\objects\\55\\tmp_obj_KxMbcz",
+      "bytes": 2715648,
+      "last_write_utc": "2026-10-05T09:54:14.2271285Z",
+      "sha256": "cb3bfec049a36d19bc5c33b9b8678b9fef66598ec93d93fbcc598551cb739083",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_P3gplK",
+      "relative_path": ".git\\objects\\55\\tmp_obj_P3gplK",
+      "bytes": 69365760,
+      "last_write_utc": "2026-10-05T08:49:23.1876289Z",
+      "sha256": "d585a8aa49525722dfd27b946341f20e51c9c7d707ce585dbcff0cb2c40963cc",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_Utm6ep",
+      "relative_path": ".git\\objects\\55\\tmp_obj_Utm6ep",
+      "bytes": 43089920,
+      "last_write_utc": "2026-10-05T08:39:08.6746442Z",
+      "sha256": "62b274392004db0284949dd2a3a385b862fa9325c0f4c421c929fa85603671df",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_V8LO9f",
+      "relative_path": ".git\\objects\\55\\tmp_obj_V8LO9f",
+      "bytes": 2715648,
+      "last_write_utc": "2026-10-05T01:23:52.6293386Z",
+      "sha256": "cb3bfec049a36d19bc5c33b9b8678b9fef66598ec93d93fbcc598551cb739083",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_VyHsNt",
+      "relative_path": ".git\\objects\\55\\tmp_obj_VyHsNt",
+      "bytes": 71438336,
+      "last_write_utc": "2026-10-05T09:23:21.9586695Z",
+      "sha256": "ac28e904bd97976d9a814d423de2df1928b208c5233298446b6bc3838451ee76",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\58\\tmp_obj_8GyO5T",
+      "relative_path": ".git\\objects\\58\\tmp_obj_8GyO5T",
+      "bytes": 708608,
+      "last_write_utc": "2026-10-06T12:55:03.0626419Z",
+      "sha256": "37cd59b6d8f7d48249695bb9c5265a9e7074c2ef391507bc2956a391e5bfc71e",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\84\\tmp_obj_mOplOX",
+      "relative_path": ".git\\objects\\84\\tmp_obj_mOplOX",
+      "bytes": 13680640,
+      "last_write_utc": "2026-10-04T23:52:55.9802341Z",
+      "sha256": "9307e8acdd6d878785c0971d070df24f67a4f1fb41efcd76a10d71974de0f0f2",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\a3\\tmp_obj_jEkXXe",
+      "relative_path": ".git\\objects\\a3\\tmp_obj_jEkXXe",
+      "bytes": 4096,
+      "last_write_utc": "2026-10-06T08:10:57.8870562Z",
+      "sha256": "94332f577ae21af9d2cb23a899a52acad90ec3f428f277d79190ed21aef9d70b",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\ae\\tmp_obj_7ZttJg",
+      "relative_path": ".git\\objects\\ae\\tmp_obj_7ZttJg",
+      "bytes": 73330688,
+      "last_write_utc": "2026-10-05T11:11:45.0952386Z",
+      "sha256": "d4cff82bc0c098bd788754c80a2e2540e5ba62bd53a5828db38158cc50221be1",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\ae\\tmp_obj_PnZEU3",
+      "relative_path": ".git\\objects\\ae\\tmp_obj_PnZEU3",
+      "bytes": 124997632,
+      "last_write_utc": "2026-10-05T11:19:07.8999813Z",
+      "sha256": "5f3ea8c9f0ec8cc800768d361b558410efb817031b0aef700bbe39a4663b85c5",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\b2\\tmp_obj_Gcmcec",
+      "relative_path": ".git\\objects\\b2\\tmp_obj_Gcmcec",
+      "bytes": 131379200,
+      "last_write_utc": "2026-10-04T02:08:11.4685247Z",
+      "sha256": "154d9505645698fdf71e85ff2840fab465b14b7176dd9c433cbf0dbcff1d6752",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\b2\\tmp_obj_O2nmNg",
+      "relative_path": ".git\\objects\\b2\\tmp_obj_O2nmNg",
+      "bytes": 29102080,
+      "last_write_utc": "2026-10-04T02:07:56.4468929Z",
+      "sha256": "471d3fedf0bb981a2bfa1eea88578f83e7cbdb25245bf663ffcc9558dfc11ef8",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\cf\\tmp_obj_Dmka1F",
+      "relative_path": ".git\\objects\\cf\\tmp_obj_Dmka1F",
+      "bytes": 50151424,
+      "last_write_utc": "2026-10-04T15:07:24.1902161Z",
+      "sha256": "81a0e8a0207021c8f35f567a051c03962a02e657b11078ce9bf5e6aa5a3bda15",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\e6\\tmp_obj_vopzKe",
+      "relative_path": ".git\\objects\\e6\\tmp_obj_vopzKe",
+      "bytes": 245760,
+      "last_write_utc": "2026-10-06T10:12:53.4897096Z",
+      "sha256": "b389950e8353cdd1066fd3ad312270594b438a40000c07ec76e2ad1e90ef16ec",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\e9\\tmp_obj_DaBtD7",
+      "relative_path": ".git\\objects\\e9\\tmp_obj_DaBtD7",
+      "bytes": 8888320,
+      "last_write_utc": "2026-10-04T14:25:41.6157732Z",
+      "sha256": "5ebac7957e3f169b024c4e4eb51707ff8a051c5ee9ae67eb4a5eb8cb9ba3d6fb",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\ea\\tmp_obj_6xEnko",
+      "relative_path": ".git\\objects\\ea\\tmp_obj_6xEnko",
+      "bytes": 5885952,
+      "last_write_utc": "2026-10-05T15:32:18.129864Z",
+      "sha256": "07441efb655a52567ad559afa8d8d1d1c8a9cb7d75f647362c56599cb0127c42",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\trials_E2\\20261008_installation_direction_study\\scripts_before_parameterization\\__pycache__\\e2_eye_sculpt.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\trials_E2\\20261008_installation_direction_study\\scripts_before_parameterization\\__pycache__\\e2_eye_sculpt.cpython-313.pyc",
+      "bytes": 27031,
+      "last_write_utc": "2026-10-08T06:50:23.2195834Z",
+      "sha256": "0e746eccabb0f7d945a973ebe9c9df16821528b88fff93db9ce89355868e1248",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\trials_E2\\20261008_installation_direction_study\\scripts_before_parameterization\\e2_eye_sculpt.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\analyze_n2_round_refinement.cpython-312.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\analyze_n2_round_refinement.cpython-312.pyc",
+      "bytes": 56734,
+      "last_write_utc": "2026-10-07T11:21:28.1439776Z",
+      "sha256": "eda1a358faa646f196e9f3b4a9723ca0f142f0e42c1f31e9db1dc49dad971dec",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\analyze_n2_round_refinement.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\e2_eye_sculpt.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\e2_eye_sculpt.cpython-313.pyc",
+      "bytes": 30288,
+      "last_write_utc": "2026-10-08T07:29:14.1500188Z",
+      "sha256": "684945358e26766d7f9b187881d156bdf07ff2c47d21e13965d9adf376fce2ef",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\e2_eye_sculpt.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\eye_projection_measure.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\eye_projection_measure.cpython-313.pyc",
+      "bytes": 11030,
+      "last_write_utc": "2026-10-08T02:21:26.0511413Z",
+      "sha256": "884faae06fd7cc7d84e2cd3e7fdc8d61daea4d53fd9f3f3f0d3d69b6ee6ea698",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\eye_projection_measure.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\geometry_diagnostic_utils.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\geometry_diagnostic_utils.cpython-313.pyc",
+      "bytes": 11176,
+      "last_write_utc": "2026-10-07T11:20:49.4758425Z",
+      "sha256": "7e6cc1c4bcc6f894dd5c1aa68fc352dd30fab8b3b90cdcef7d42c4483c9a1327",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\geometry_diagnostic_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_balanced_turn.cpython-312.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_balanced_turn.cpython-312.pyc",
+      "bytes": 29449,
+      "last_write_utc": "2026-10-08T12:42:44.5848744Z",
+      "sha256": "cb807e9e91dada8f028399f9fe80c4d2160e4689df10c917c88acb692d137ef7",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_balanced_turn.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_balanced_turn.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_balanced_turn.cpython-313.pyc",
+      "bytes": 29676,
+      "last_write_utc": "2026-10-08T12:47:01.0830749Z",
+      "sha256": "67ddaa63f6df0896df66d33971aa48f8554c8169c74ec325b38bb1084bfd8ac4",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_balanced_turn.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_curve_diagnostic_utils.cpython-312.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_curve_diagnostic_utils.cpython-312.pyc",
+      "bytes": 14217,
+      "last_write_utc": "2026-10-07T06:20:30.9676323Z",
+      "sha256": "5ed0dc75a9eb2794d2e18d8e58da26eaeaaed5977743a394965565b72d87669b",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_curve_diagnostic_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_curve_diagnostic_utils.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_curve_diagnostic_utils.cpython-313.pyc",
+      "bytes": 14330,
+      "last_write_utc": "2026-10-07T06:20:22.7475057Z",
+      "sha256": "9c9fb49481ad80bb3c423944bfafc472bea9bed84eeb4de2d6c48b1ef880c090",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_curve_diagnostic_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_integrated_turn.cpython-312.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_integrated_turn.cpython-312.pyc",
+      "bytes": 8212,
+      "last_write_utc": "2026-10-08T03:43:09.2249823Z",
+      "sha256": "4a961cfc6ffd447e9b25bf7317f6220aa12d3a837eaf6569270b275c78b24019",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_integrated_turn.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_integrated_turn.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_integrated_turn.cpython-313.pyc",
+      "bytes": 8281,
+      "last_write_utc": "2026-10-08T03:44:15.8123327Z",
+      "sha256": "32f8747e32c34d2682476a41387a1d7ee5b748093798a7d75293a992a4596231",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_integrated_turn.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_overall_sculpt.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_overall_sculpt.cpython-313.pyc",
+      "bytes": 63821,
+      "last_write_utc": "2026-10-08T12:46:57.8008981Z",
+      "sha256": "6f57da0246b0aaa5917ef2c3ff3225436ee2025e89aeb2b3a052258ff4ed6093",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_overall_sculpt.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_validation_utils.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_validation_utils.cpython-313.pyc",
+      "bytes": 8333,
+      "last_write_utc": "2026-10-07T11:21:51.3941232Z",
+      "sha256": "5a311873c55444e9050a38c426761a598e78c884c94b84120f9eebcc3c77568d",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_validation_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\head_neck_validation_utils.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\head_neck_validation_utils.cpython-313.pyc",
+      "bytes": 18029,
+      "last_write_utc": "2026-10-07T11:21:51.3781024Z",
+      "sha256": "b7e804c49e4ce272ec40f9967280f0b3a36b3f792c372b497f53a96b76915249",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\head_neck_validation_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\inspect_e2_candidates.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\inspect_e2_candidates.cpython-313.pyc",
+      "bytes": 11460,
+      "last_write_utc": "2026-10-08T03:42:58.6270108Z",
+      "sha256": "bdbc76ad71db4a01e178dd254e4a1e7eff6c3937b94058ea83a62149b24289f8",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\inspect_e2_candidates.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\make_spherical_eye_comparisons.cpython-312.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\make_spherical_eye_comparisons.cpython-312.pyc",
+      "bytes": 15479,
+      "last_write_utc": "2026-10-08T03:17:09.2366768Z",
+      "sha256": "98e0b92a25dbbc6e4a072b95b5c4c31cad5e8825d7ee4e0c9597eab3c42ca16f",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\make_spherical_eye_comparisons.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\n2_round_diagnostic_utils.cpython-312.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\n2_round_diagnostic_utils.cpython-312.pyc",
+      "bytes": 17068,
+      "last_write_utc": "2026-10-07T06:20:30.9756352Z",
+      "sha256": "18ff712e0a65c098561002ce0b0f1bb333aa2cb3c4260c4cfdf0d8db10eac77b",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\n2_round_diagnostic_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\n2_round_diagnostic_utils.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\n2_round_diagnostic_utils.cpython-313.pyc",
+      "bytes": 16987,
+      "last_write_utc": "2026-10-07T06:20:22.7515057Z",
+      "sha256": "8542221d6e23c00e0ae40feb02514fffe12a3ff135c4bf2a2f4983514888f6fc",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\n2_round_diagnostic_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\n2_round_mouth_curvature.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\n2_round_mouth_curvature.cpython-313.pyc",
+      "bytes": 23785,
+      "last_write_utc": "2026-10-07T11:19:46.9566254Z",
+      "sha256": "322e6f218f89228e562cfeb37b4b3510b9bc8b8c0e15b218f0426bd61942f4ba",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\n2_round_mouth_curvature.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\n2_round_sculpt.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\n2_round_sculpt.cpython-313.pyc",
+      "bytes": 27188,
+      "last_write_utc": "2026-10-07T11:19:46.9521098Z",
+      "sha256": "b9be32626d4e248a7aaa08381a6a87f4b0d98a8fad8556ee89d245c4c2d575aa",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\n2_round_sculpt.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\r1_validation_utils.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\r1_validation_utils.cpython-313.pyc",
+      "bytes": 13424,
+      "last_write_utc": "2026-10-07T11:21:51.3931208Z",
+      "sha256": "816d2c667c4e5cfc5a3379c513fe9ace5f6a656f0447ef4b8ecf4bc5a1341268",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\r1_validation_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\render_h2_e2_comparisons.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\render_h2_e2_comparisons.cpython-313.pyc",
+      "bytes": 13087,
+      "last_write_utc": "2026-10-07T11:34:28.2404978Z",
+      "sha256": "6b97b25ce3c1cf61ec2df23788353940dfeb86d88444b43f1e99aa294d8e6424",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\render_h2_e2_comparisons.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\render_h2_shape_gate.cpython-312.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\render_h2_shape_gate.cpython-312.pyc",
+      "bytes": 6028,
+      "last_write_utc": "2026-10-08T12:39:06.8112766Z",
+      "sha256": "de063ee008efd82b728d942676cc6494308cb139ab5cfcd6d632585640f0123a",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\render_h2_shape_gate.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\render_head_neck_comparisons.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\render_head_neck_comparisons.cpython-313.pyc",
+      "bytes": 16434,
+      "last_write_utc": "2026-10-07T11:20:49.4290633Z",
+      "sha256": "f87c7826bd252217ae422aa06a9a476c1ad4106a63921feab9572fa5686fbcba",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\render_head_neck_comparisons.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\render_head_reshape_comparison.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\render_head_reshape_comparison.cpython-313.pyc",
+      "bytes": 18796,
+      "last_write_utc": "2026-10-07T11:20:49.4237616Z",
+      "sha256": "251983390e5b704cac60ba3b7804881996c019cbddf9fac7bc500067a63a869c",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\render_head_reshape_comparison.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\render_n2_round_comparisons.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\render_n2_round_comparisons.cpython-313.pyc",
+      "bytes": 28756,
+      "last_write_utc": "2026-10-07T11:20:49.4798415Z",
+      "sha256": "2c262994eb5da543634a3947354566a22d92ff3ffbe7c1327a6234a03a62cb0a",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\render_n2_round_comparisons.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\render_surface_diagnostics.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\render_surface_diagnostics.cpython-313.pyc",
+      "bytes": 5753,
+      "last_write_utc": "2026-10-07T11:20:49.4260231Z",
+      "sha256": "43f3b7222e68ee8c40e031d5fda6206bfbf815e98b85a1119b6d5e1be95946ec",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\render_surface_diagnostics.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\saved_delivery_metadata.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\saved_delivery_metadata.cpython-313.pyc",
+      "bytes": 8014,
+      "last_write_utc": "2026-10-07T11:21:51.3751016Z",
+      "sha256": "9f655ff1d61ee1720b0a33d1adddb191fdf7b260fa4c2221ba823209687b1913",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\saved_delivery_metadata.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\spherical_eye_sculpt.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\spherical_eye_sculpt.cpython-313.pyc",
+      "bytes": 21869,
+      "last_write_utc": "2026-10-07T11:45:22.4642909Z",
+      "sha256": "6c2780fecfbd3be70f8ed5e806f35abd9417a62ceba209ab3bd3a0f47ec66578",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\spherical_eye_sculpt.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\spherical_reference_projection.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\spherical_reference_projection.cpython-313.pyc",
+      "bytes": 5906,
+      "last_write_utc": "2026-10-07T11:20:49.4313875Z",
+      "sha256": "1eb23f9b4eeeb125dfc00e97c931f2c6f829f97fdf7b16c061b7cc896af823d4",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\spherical_reference_projection.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\validate_e2_refinement.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\validate_e2_refinement.cpython-313.pyc",
+      "bytes": 40473,
+      "last_write_utc": "2026-10-08T12:36:17.8289727Z",
+      "sha256": "be2e344c8b850716b4dd553411cd494a24052c2b4e20e678df9497a567e76369",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\validate_e2_refinement.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\validate_lip_eye_refinement.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\validate_lip_eye_refinement.cpython-313.pyc",
+      "bytes": 31740,
+      "last_write_utc": "2026-10-07T11:21:51.3826075Z",
+      "sha256": "5a64b643ce9c22db37472b3f42b009edf2dc7be6ee6e651ce6878d9795984cef",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\validate_lip_eye_refinement.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\validate_n2_round_refinement.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\validate_n2_round_refinement.cpython-313.pyc",
+      "bytes": 30027,
+      "last_write_utc": "2026-10-07T11:21:51.3896195Z",
+      "sha256": "6dbb38bbb9a7920e0c461ba3c6e55ec999c7750eecaceb1cd2bcab8c3b6a73d4",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\validate_n2_round_refinement.py"
+    }
+  ],
+  "protected_assets": [
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_H2\\Naiwa_Character.blend",
+      "relative_path": "NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/candidate_H2/Naiwa_Character.blend",
+      "sha256_before": "7b2233033e755b614bf9b15f49e7f8a459e12ff775dc278215cbb34049193a49",
+      "sha256_after": "7b2233033e755b614bf9b15f49e7f8a459e12ff775dc278215cbb34049193a49",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_H2\\Naiwa_Character.fbx",
+      "relative_path": "NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/candidate_H2/Naiwa_Character.fbx",
+      "sha256_before": "370cb8c9a95aa63b0088905ff67849a146c093c15d9ac876098330700bbb1b9d",
+      "sha256_after": "370cb8c9a95aa63b0088905ff67849a146c093c15d9ac876098330700bbb1b9d",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.blend",
+      "relative_path": "NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/candidate_E2/Naiwa_Character.blend",
+      "sha256_before": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "sha256_after": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.fbx",
+      "relative_path": "NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/candidate_E2/Naiwa_Character.fbx",
+      "sha256_before": "8dae9ce28c4b44465dcb8e73dd462804c3a561daee9eebaf79842900a3005147",
+      "sha256_after": "8dae9ce28c4b44465dcb8e73dd462804c3a561daee9eebaf79842900a3005147",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_N2_round_refinement\\candidate_R1\\Naiwa_Character.blend",
+      "relative_path": "NaiwaCharacter/versions/20261007_N2_round_refinement/candidate_R1/Naiwa_Character.blend",
+      "sha256_before": "ea12e9af2c564527d0c473cd31b28974339fcceb15b666502a33f0ffa057bc24",
+      "sha256_after": "ea12e9af2c564527d0c473cd31b28974339fcceb15b666502a33f0ffa057bc24",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\Naiwa_E2对照原图评估与整体修改指令_20261008.md",
+      "relative_path": "Naiwa_E2对照原图评估与整体修改指令_20261008.md",
+      "sha256_before": "85550026bf045181d22b1c4da5d82f3e462a9999a49f43b4dc6b51817c45eb91",
+      "sha256_after": "85550026bf045181d22b1c4da5d82f3e462a9999a49f43b4dc6b51817c45eb91",
+      "unchanged": true
+    }
+  ],
+  "removed_files": [
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\trials_E2\\20261008_installation_direction_study\\scripts_before_parameterization\\__pycache__\\e2_eye_sculpt.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\trials_E2\\20261008_installation_direction_study\\scripts_before_parameterization\\__pycache__\\e2_eye_sculpt.cpython-313.pyc",
+      "bytes": 27031,
+      "last_write_utc": "2026-10-08T06:50:23.2195834Z",
+      "sha256": "0e746eccabb0f7d945a973ebe9c9df16821528b88fff93db9ce89355868e1248",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\trials_E2\\20261008_installation_direction_study\\scripts_before_parameterization\\e2_eye_sculpt.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\analyze_n2_round_refinement.cpython-312.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\analyze_n2_round_refinement.cpython-312.pyc",
+      "bytes": 56734,
+      "last_write_utc": "2026-10-07T11:21:28.1439776Z",
+      "sha256": "eda1a358faa646f196e9f3b4a9723ca0f142f0e42c1f31e9db1dc49dad971dec",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\analyze_n2_round_refinement.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\e2_eye_sculpt.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\e2_eye_sculpt.cpython-313.pyc",
+      "bytes": 30288,
+      "last_write_utc": "2026-10-08T07:29:14.1500188Z",
+      "sha256": "684945358e26766d7f9b187881d156bdf07ff2c47d21e13965d9adf376fce2ef",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\e2_eye_sculpt.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\eye_projection_measure.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\eye_projection_measure.cpython-313.pyc",
+      "bytes": 11030,
+      "last_write_utc": "2026-10-08T02:21:26.0511413Z",
+      "sha256": "884faae06fd7cc7d84e2cd3e7fdc8d61daea4d53fd9f3f3f0d3d69b6ee6ea698",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\eye_projection_measure.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\geometry_diagnostic_utils.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\geometry_diagnostic_utils.cpython-313.pyc",
+      "bytes": 11176,
+      "last_write_utc": "2026-10-07T11:20:49.4758425Z",
+      "sha256": "7e6cc1c4bcc6f894dd5c1aa68fc352dd30fab8b3b90cdcef7d42c4483c9a1327",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\geometry_diagnostic_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_balanced_turn.cpython-312.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_balanced_turn.cpython-312.pyc",
+      "bytes": 29449,
+      "last_write_utc": "2026-10-08T12:42:44.5848744Z",
+      "sha256": "cb807e9e91dada8f028399f9fe80c4d2160e4689df10c917c88acb692d137ef7",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_balanced_turn.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_balanced_turn.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_balanced_turn.cpython-313.pyc",
+      "bytes": 29676,
+      "last_write_utc": "2026-10-08T12:47:01.0830749Z",
+      "sha256": "67ddaa63f6df0896df66d33971aa48f8554c8169c74ec325b38bb1084bfd8ac4",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_balanced_turn.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_curve_diagnostic_utils.cpython-312.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_curve_diagnostic_utils.cpython-312.pyc",
+      "bytes": 14217,
+      "last_write_utc": "2026-10-07T06:20:30.9676323Z",
+      "sha256": "5ed0dc75a9eb2794d2e18d8e58da26eaeaaed5977743a394965565b72d87669b",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_curve_diagnostic_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_curve_diagnostic_utils.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_curve_diagnostic_utils.cpython-313.pyc",
+      "bytes": 14330,
+      "last_write_utc": "2026-10-07T06:20:22.7475057Z",
+      "sha256": "9c9fb49481ad80bb3c423944bfafc472bea9bed84eeb4de2d6c48b1ef880c090",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_curve_diagnostic_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_integrated_turn.cpython-312.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_integrated_turn.cpython-312.pyc",
+      "bytes": 8212,
+      "last_write_utc": "2026-10-08T03:43:09.2249823Z",
+      "sha256": "4a961cfc6ffd447e9b25bf7317f6220aa12d3a837eaf6569270b275c78b24019",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_integrated_turn.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_integrated_turn.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_integrated_turn.cpython-313.pyc",
+      "bytes": 8281,
+      "last_write_utc": "2026-10-08T03:44:15.8123327Z",
+      "sha256": "32f8747e32c34d2682476a41387a1d7ee5b748093798a7d75293a992a4596231",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_integrated_turn.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_overall_sculpt.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_overall_sculpt.cpython-313.pyc",
+      "bytes": 63821,
+      "last_write_utc": "2026-10-08T12:46:57.8008981Z",
+      "sha256": "6f57da0246b0aaa5917ef2c3ff3225436ee2025e89aeb2b3a052258ff4ed6093",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_overall_sculpt.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\h2_validation_utils.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\h2_validation_utils.cpython-313.pyc",
+      "bytes": 8333,
+      "last_write_utc": "2026-10-07T11:21:51.3941232Z",
+      "sha256": "5a311873c55444e9050a38c426761a598e78c884c94b84120f9eebcc3c77568d",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\h2_validation_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\head_neck_validation_utils.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\head_neck_validation_utils.cpython-313.pyc",
+      "bytes": 18029,
+      "last_write_utc": "2026-10-07T11:21:51.3781024Z",
+      "sha256": "b7e804c49e4ce272ec40f9967280f0b3a36b3f792c372b497f53a96b76915249",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\head_neck_validation_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\inspect_e2_candidates.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\inspect_e2_candidates.cpython-313.pyc",
+      "bytes": 11460,
+      "last_write_utc": "2026-10-08T03:42:58.6270108Z",
+      "sha256": "bdbc76ad71db4a01e178dd254e4a1e7eff6c3937b94058ea83a62149b24289f8",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\inspect_e2_candidates.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\make_spherical_eye_comparisons.cpython-312.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\make_spherical_eye_comparisons.cpython-312.pyc",
+      "bytes": 15479,
+      "last_write_utc": "2026-10-08T03:17:09.2366768Z",
+      "sha256": "98e0b92a25dbbc6e4a072b95b5c4c31cad5e8825d7ee4e0c9597eab3c42ca16f",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\make_spherical_eye_comparisons.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\n2_round_diagnostic_utils.cpython-312.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\n2_round_diagnostic_utils.cpython-312.pyc",
+      "bytes": 17068,
+      "last_write_utc": "2026-10-07T06:20:30.9756352Z",
+      "sha256": "18ff712e0a65c098561002ce0b0f1bb333aa2cb3c4260c4cfdf0d8db10eac77b",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\n2_round_diagnostic_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\n2_round_diagnostic_utils.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\n2_round_diagnostic_utils.cpython-313.pyc",
+      "bytes": 16987,
+      "last_write_utc": "2026-10-07T06:20:22.7515057Z",
+      "sha256": "8542221d6e23c00e0ae40feb02514fffe12a3ff135c4bf2a2f4983514888f6fc",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\n2_round_diagnostic_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\n2_round_mouth_curvature.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\n2_round_mouth_curvature.cpython-313.pyc",
+      "bytes": 23785,
+      "last_write_utc": "2026-10-07T11:19:46.9566254Z",
+      "sha256": "322e6f218f89228e562cfeb37b4b3510b9bc8b8c0e15b218f0426bd61942f4ba",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\n2_round_mouth_curvature.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\n2_round_sculpt.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\n2_round_sculpt.cpython-313.pyc",
+      "bytes": 27188,
+      "last_write_utc": "2026-10-07T11:19:46.9521098Z",
+      "sha256": "b9be32626d4e248a7aaa08381a6a87f4b0d98a8fad8556ee89d245c4c2d575aa",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\n2_round_sculpt.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\r1_validation_utils.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\r1_validation_utils.cpython-313.pyc",
+      "bytes": 13424,
+      "last_write_utc": "2026-10-07T11:21:51.3931208Z",
+      "sha256": "816d2c667c4e5cfc5a3379c513fe9ace5f6a656f0447ef4b8ecf4bc5a1341268",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\r1_validation_utils.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\render_h2_e2_comparisons.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\render_h2_e2_comparisons.cpython-313.pyc",
+      "bytes": 13087,
+      "last_write_utc": "2026-10-07T11:34:28.2404978Z",
+      "sha256": "6b97b25ce3c1cf61ec2df23788353940dfeb86d88444b43f1e99aa294d8e6424",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\render_h2_e2_comparisons.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\render_h2_shape_gate.cpython-312.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\render_h2_shape_gate.cpython-312.pyc",
+      "bytes": 6028,
+      "last_write_utc": "2026-10-08T12:39:06.8112766Z",
+      "sha256": "de063ee008efd82b728d942676cc6494308cb139ab5cfcd6d632585640f0123a",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\render_h2_shape_gate.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\render_head_neck_comparisons.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\render_head_neck_comparisons.cpython-313.pyc",
+      "bytes": 16434,
+      "last_write_utc": "2026-10-07T11:20:49.4290633Z",
+      "sha256": "f87c7826bd252217ae422aa06a9a476c1ad4106a63921feab9572fa5686fbcba",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\render_head_neck_comparisons.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\render_head_reshape_comparison.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\render_head_reshape_comparison.cpython-313.pyc",
+      "bytes": 18796,
+      "last_write_utc": "2026-10-07T11:20:49.4237616Z",
+      "sha256": "251983390e5b704cac60ba3b7804881996c019cbddf9fac7bc500067a63a869c",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\render_head_reshape_comparison.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\render_n2_round_comparisons.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\render_n2_round_comparisons.cpython-313.pyc",
+      "bytes": 28756,
+      "last_write_utc": "2026-10-07T11:20:49.4798415Z",
+      "sha256": "2c262994eb5da543634a3947354566a22d92ff3ffbe7c1327a6234a03a62cb0a",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\render_n2_round_comparisons.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\render_surface_diagnostics.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\render_surface_diagnostics.cpython-313.pyc",
+      "bytes": 5753,
+      "last_write_utc": "2026-10-07T11:20:49.4260231Z",
+      "sha256": "43f3b7222e68ee8c40e031d5fda6206bfbf815e98b85a1119b6d5e1be95946ec",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\render_surface_diagnostics.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\saved_delivery_metadata.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\saved_delivery_metadata.cpython-313.pyc",
+      "bytes": 8014,
+      "last_write_utc": "2026-10-07T11:21:51.3751016Z",
+      "sha256": "9f655ff1d61ee1720b0a33d1adddb191fdf7b260fa4c2221ba823209687b1913",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\saved_delivery_metadata.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\spherical_eye_sculpt.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\spherical_eye_sculpt.cpython-313.pyc",
+      "bytes": 21869,
+      "last_write_utc": "2026-10-07T11:45:22.4642909Z",
+      "sha256": "6c2780fecfbd3be70f8ed5e806f35abd9417a62ceba209ab3bd3a0f47ec66578",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\spherical_eye_sculpt.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\spherical_reference_projection.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\spherical_reference_projection.cpython-313.pyc",
+      "bytes": 5906,
+      "last_write_utc": "2026-10-07T11:20:49.4313875Z",
+      "sha256": "1eb23f9b4eeeb125dfc00e97c931f2c6f829f97fdf7b16c061b7cc896af823d4",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\spherical_reference_projection.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\validate_e2_refinement.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\validate_e2_refinement.cpython-313.pyc",
+      "bytes": 40473,
+      "last_write_utc": "2026-10-08T12:36:17.8289727Z",
+      "sha256": "be2e344c8b850716b4dd553411cd494a24052c2b4e20e678df9497a567e76369",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\validate_e2_refinement.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\validate_lip_eye_refinement.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\validate_lip_eye_refinement.cpython-313.pyc",
+      "bytes": 31740,
+      "last_write_utc": "2026-10-07T11:21:51.3826075Z",
+      "sha256": "5a64b643ce9c22db37472b3f42b009edf2dc7be6ee6e651ce6878d9795984cef",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\validate_lip_eye_refinement.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__\\validate_n2_round_refinement.cpython-313.pyc",
+      "relative_path": "NaiwaCharacter\\__pycache__\\validate_n2_round_refinement.cpython-313.pyc",
+      "bytes": 30027,
+      "last_write_utc": "2026-10-07T11:21:51.3896195Z",
+      "sha256": "6dbb38bbb9a7920e0c461ba3c6e55ec999c7750eecaceb1cd2bcab8c3b6a73d4",
+      "category": "python_bytecode_cache",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\validate_n2_round_refinement.py"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\00\\tmp_obj_FErWG1",
+      "relative_path": ".git\\objects\\00\\tmp_obj_FErWG1",
+      "bytes": 19607552,
+      "last_write_utc": "2026-10-04T02:13:00.7804581Z",
+      "sha256": "13000f0b04a77042db14da96d95b6b6b69f91985d1f25ea1c4490b7e8738c91d",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\02\\tmp_obj_LdSQkp",
+      "relative_path": ".git\\objects\\02\\tmp_obj_LdSQkp",
+      "bytes": 6049792,
+      "last_write_utc": "2026-10-05T11:28:58.2239758Z",
+      "sha256": "b3299b683dd3472b1debf74b5d71c4ec3d473da43a281d21716a74aca1429394",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\07\\tmp_obj_AAcDIk",
+      "relative_path": ".git\\objects\\07\\tmp_obj_AAcDIk",
+      "bytes": 196608,
+      "last_write_utc": "2026-10-06T07:57:38.4110053Z",
+      "sha256": "c621bdca26852671a96bcb65c5a1ebd1909f4b9e85e1e04d95ced574b1ad3f52",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\30\\tmp_obj_FfeP3L",
+      "relative_path": ".git\\objects\\30\\tmp_obj_FfeP3L",
+      "bytes": 114688,
+      "last_write_utc": "2026-10-05T15:33:24.5028998Z",
+      "sha256": "dc961a9ea57d2efec996a03dd673b5d708225f8d4df2a544b0029132ac7505b3",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\38\\tmp_obj_c5jGRT",
+      "relative_path": ".git\\objects\\38\\tmp_obj_c5jGRT",
+      "bytes": 15343616,
+      "last_write_utc": "2026-10-05T11:35:51.8426654Z",
+      "sha256": "27c8744ed089d6b75c2d55c0ccfac8c844a6ddeaf76a4093f8b2d99cfd00afbb",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\38\\tmp_obj_D8rISg",
+      "relative_path": ".git\\objects\\38\\tmp_obj_D8rISg",
+      "bytes": 17399808,
+      "last_write_utc": "2026-10-05T15:01:15.1812976Z",
+      "sha256": "7f9bb6df60864e2bc3e228228b2004f07591d66457109330ddfbbf9b0d0f90f2",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\47\\tmp_obj_gxxBd4",
+      "relative_path": ".git\\objects\\47\\tmp_obj_gxxBd4",
+      "bytes": 8994816,
+      "last_write_utc": "2026-10-06T12:14:08.9142627Z",
+      "sha256": "f847578e5c17587851ee9654ffd0687ec0d5aa7dcf884c21eefe2c3761bfef8f",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\4f\\tmp_obj_1SRnQ6",
+      "relative_path": ".git\\objects\\4f\\tmp_obj_1SRnQ6",
+      "bytes": 16281600,
+      "last_write_utc": "2026-10-05T01:15:46.5672328Z",
+      "sha256": "b4dd52d285ee640ab8f79d9e34d4e4e86e1cb2f9c95d58e2fa5fa358d6dc6717",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\51\\tmp_obj_FbpHZs",
+      "relative_path": ".git\\objects\\51\\tmp_obj_FbpHZs",
+      "bytes": 5996544,
+      "last_write_utc": "2026-10-06T06:53:19.6889895Z",
+      "sha256": "1e2c44bd7b1ef494bd9425cf61071ea1f70aef1d1842713344febbc856bfad5f",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\51\\tmp_obj_TBOmG1",
+      "relative_path": ".git\\objects\\51\\tmp_obj_TBOmG1",
+      "bytes": 12746752,
+      "last_write_utc": "2026-10-06T07:01:14.4053497Z",
+      "sha256": "cf16bdaa79b69929e6f59e2a26c03e3fd9c92c1a9863afcececf4206c206cb58",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_21EdVH",
+      "relative_path": ".git\\objects\\55\\tmp_obj_21EdVH",
+      "bytes": 74387456,
+      "last_write_utc": "2026-10-05T08:45:58.5435102Z",
+      "sha256": "261378a67840b40ffcb02c700ff9b6947d0f18718e636980c9cd9cf81b924ce3",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_4cV9eH",
+      "relative_path": ".git\\objects\\55\\tmp_obj_4cV9eH",
+      "bytes": 71241728,
+      "last_write_utc": "2026-10-05T10:22:13.5961562Z",
+      "sha256": "d91272996ad10b6d48faf30d4accb35054dc33bffa6e8dfbfe33aef4cf81a175",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_bzIKc4",
+      "relative_path": ".git\\objects\\55\\tmp_obj_bzIKc4",
+      "bytes": 54910976,
+      "last_write_utc": "2026-10-05T08:46:32.557298Z",
+      "sha256": "584fc5568a98daeacdc2e2635dec8c470c9a03cf54081711a673104a92afcdc5",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_F9Spol",
+      "relative_path": ".git\\objects\\55\\tmp_obj_F9Spol",
+      "bytes": 67207168,
+      "last_write_utc": "2026-10-05T10:09:02.5199859Z",
+      "sha256": "f2efbec9ba2049c82cb8773066a6fb3b37c7f0b0b1383761349ddb6ef1b29a3f",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_h99sAp",
+      "relative_path": ".git\\objects\\55\\tmp_obj_h99sAp",
+      "bytes": 62169088,
+      "last_write_utc": "2026-10-05T08:39:15.2557082Z",
+      "sha256": "b14dc896c17a893e22e873263a6bb5da52d1c567a142b8495ddb9977a5aeb5c6",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_KxMbcz",
+      "relative_path": ".git\\objects\\55\\tmp_obj_KxMbcz",
+      "bytes": 2715648,
+      "last_write_utc": "2026-10-05T09:54:14.2271285Z",
+      "sha256": "cb3bfec049a36d19bc5c33b9b8678b9fef66598ec93d93fbcc598551cb739083",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_P3gplK",
+      "relative_path": ".git\\objects\\55\\tmp_obj_P3gplK",
+      "bytes": 69365760,
+      "last_write_utc": "2026-10-05T08:49:23.1876289Z",
+      "sha256": "d585a8aa49525722dfd27b946341f20e51c9c7d707ce585dbcff0cb2c40963cc",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_Utm6ep",
+      "relative_path": ".git\\objects\\55\\tmp_obj_Utm6ep",
+      "bytes": 43089920,
+      "last_write_utc": "2026-10-05T08:39:08.6746442Z",
+      "sha256": "62b274392004db0284949dd2a3a385b862fa9325c0f4c421c929fa85603671df",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_V8LO9f",
+      "relative_path": ".git\\objects\\55\\tmp_obj_V8LO9f",
+      "bytes": 2715648,
+      "last_write_utc": "2026-10-05T01:23:52.6293386Z",
+      "sha256": "cb3bfec049a36d19bc5c33b9b8678b9fef66598ec93d93fbcc598551cb739083",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\55\\tmp_obj_VyHsNt",
+      "relative_path": ".git\\objects\\55\\tmp_obj_VyHsNt",
+      "bytes": 71438336,
+      "last_write_utc": "2026-10-05T09:23:21.9586695Z",
+      "sha256": "ac28e904bd97976d9a814d423de2df1928b208c5233298446b6bc3838451ee76",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\58\\tmp_obj_8GyO5T",
+      "relative_path": ".git\\objects\\58\\tmp_obj_8GyO5T",
+      "bytes": 708608,
+      "last_write_utc": "2026-10-06T12:55:03.0626419Z",
+      "sha256": "37cd59b6d8f7d48249695bb9c5265a9e7074c2ef391507bc2956a391e5bfc71e",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\84\\tmp_obj_mOplOX",
+      "relative_path": ".git\\objects\\84\\tmp_obj_mOplOX",
+      "bytes": 13680640,
+      "last_write_utc": "2026-10-04T23:52:55.9802341Z",
+      "sha256": "9307e8acdd6d878785c0971d070df24f67a4f1fb41efcd76a10d71974de0f0f2",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\a3\\tmp_obj_jEkXXe",
+      "relative_path": ".git\\objects\\a3\\tmp_obj_jEkXXe",
+      "bytes": 4096,
+      "last_write_utc": "2026-10-06T08:10:57.8870562Z",
+      "sha256": "94332f577ae21af9d2cb23a899a52acad90ec3f428f277d79190ed21aef9d70b",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\ae\\tmp_obj_7ZttJg",
+      "relative_path": ".git\\objects\\ae\\tmp_obj_7ZttJg",
+      "bytes": 73330688,
+      "last_write_utc": "2026-10-05T11:11:45.0952386Z",
+      "sha256": "d4cff82bc0c098bd788754c80a2e2540e5ba62bd53a5828db38158cc50221be1",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\ae\\tmp_obj_PnZEU3",
+      "relative_path": ".git\\objects\\ae\\tmp_obj_PnZEU3",
+      "bytes": 124997632,
+      "last_write_utc": "2026-10-05T11:19:07.8999813Z",
+      "sha256": "5f3ea8c9f0ec8cc800768d361b558410efb817031b0aef700bbe39a4663b85c5",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\b2\\tmp_obj_Gcmcec",
+      "relative_path": ".git\\objects\\b2\\tmp_obj_Gcmcec",
+      "bytes": 131379200,
+      "last_write_utc": "2026-10-04T02:08:11.4685247Z",
+      "sha256": "154d9505645698fdf71e85ff2840fab465b14b7176dd9c433cbf0dbcff1d6752",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\b2\\tmp_obj_O2nmNg",
+      "relative_path": ".git\\objects\\b2\\tmp_obj_O2nmNg",
+      "bytes": 29102080,
+      "last_write_utc": "2026-10-04T02:07:56.4468929Z",
+      "sha256": "471d3fedf0bb981a2bfa1eea88578f83e7cbdb25245bf663ffcc9558dfc11ef8",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\cf\\tmp_obj_Dmka1F",
+      "relative_path": ".git\\objects\\cf\\tmp_obj_Dmka1F",
+      "bytes": 50151424,
+      "last_write_utc": "2026-10-04T15:07:24.1902161Z",
+      "sha256": "81a0e8a0207021c8f35f567a051c03962a02e657b11078ce9bf5e6aa5a3bda15",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\e6\\tmp_obj_vopzKe",
+      "relative_path": ".git\\objects\\e6\\tmp_obj_vopzKe",
+      "bytes": 245760,
+      "last_write_utc": "2026-10-06T10:12:53.4897096Z",
+      "sha256": "b389950e8353cdd1066fd3ad312270594b438a40000c07ec76e2ad1e90ef16ec",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\e9\\tmp_obj_DaBtD7",
+      "relative_path": ".git\\objects\\e9\\tmp_obj_DaBtD7",
+      "bytes": 8888320,
+      "last_write_utc": "2026-10-04T14:25:41.6157732Z",
+      "sha256": "5ebac7957e3f169b024c4e4eb51707ff8a051c5ee9ae67eb4a5eb8cb9ba3d6fb",
+      "category": "incomplete_git_temporary_object"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.git\\objects\\ea\\tmp_obj_6xEnko",
+      "relative_path": ".git\\objects\\ea\\tmp_obj_6xEnko",
+      "bytes": 5885952,
+      "last_write_utc": "2026-10-05T15:32:18.129864Z",
+      "sha256": "07441efb655a52567ad559afa8d8d1d1c8a9cb7d75f647362c56599cb0127c42",
+      "category": "incomplete_git_temporary_object"
+    }
+  ],
+  "removed_empty_cache_directories": [
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\__pycache__",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\trials_E2\\20261008_installation_direction_study\\scripts_before_parameterization\\__pycache__"
+  ],
+  "failures": [],
+  "verification": {
+    "remaining_git_temporary_objects": 0,
+    "remaining_python_bytecode_files": 0,
+    "protected_asset_changes": [],
+    "git_connectivity_exit_code": 0,
+    "preserved_dangling_blobs": 787,
+    "unexpected_git_diagnostics": []
+  },
+  "git_temporary_integrity_precheck": {
+    "independently_rechecked": true,
+    "files": 31,
+    "incomplete_zlib_streams": 31,
+    "payloads_shorter_than_declared": 31,
+    "complete_objects": 0,
+    "active_git_processes": 0,
+    "git_locks": 0
+  },
+  "approval_attempts": [
+    {
+      "attempt": 1,
+      "executed": false,
+      "result": "Automatic approval review connection failure; no action executed"
+    },
+    {
+      "attempt": 2,
+      "executed": true,
+      "result": "approved_and_completed"
+    }
+  ],
+  "removed_file_count": 64,
+  "reclaimed_bytes": 1061030785.0
+}

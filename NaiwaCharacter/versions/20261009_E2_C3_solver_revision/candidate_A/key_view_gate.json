@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "candidate_sha256": "e1ddefe39361dd092b0dae2190430004ea0c82ab2eb4aff34b146efd754909cb",
+  "decision": "direction_correct_amplitude_insufficient",
+  "same_target_and_scope_for_B": true,
+  "new_defects": false,
+  "review_basis": "Saved Idle1 fixed-camera gray/color 0/45/90 views, fixed50 reference and full45; saved Raw actual sections, frozen raster contour protocol; root and independent agent visual review",
+  "front_error_improvement_fraction": 0.049838398999273115,
+  "back_error_change_px": 0.0,
+  "central_angle80_width_change_fraction": 0.20371611731795003,
+  "central_curvature_peak_change_fraction": -0.007398756978012955,
+  "observations": [
+    "90 degree upper-mouth to neck transition slightly broader; anterior neck moves inward and retains natural concave arc",
+    "45 degree wedge and concentrated turn remain obvious; only small visible relaxation",
+    "Frontal under-mouth dark concentration remains; removal of all shadow is not the acceptance target",
+    "No visible new horizontal ledge, rear-shoulder kink, crown change, sharp eye rim or visible aperture change in key views",
+    "Mouth seam location and apparent continuity preserved; actual contact still requires selected validation",
+    "Full-body change is small; X=-0.12 turn width decreases 2.40 percent and its curvature peak decreases 1.07 percent"
+  ],
+  "B_requirement": "Generate once from fixed E2 with the identical frozen field and masks at scale1.0; evaluate whether actual wedge/turn improves, not contour error alone",
+  "formal_acceptance": false,
+  "complete_asset_animation_contact_validation": "not performed for A"
+}

@@ -1,0 +1,15 @@
+00:01.719  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\candidate_N2\Naiwa_Character.blend"
+R1_SOLVER_PROGRESS 200 primal= 0.0007308740243601054 change= 6.491734523018617e-06
+R1_SOLVER_PROGRESS 400 primal= 0.0005803805527167151 change= 1.2806979857132812e-06
+R1_SOLVER_PROGRESS 600 primal= 0.0005009192791394959 change= 7.008254823985271e-07
+R1_SOLVER_PROGRESS 800 primal= 0.000447806312798936 change= 1.6694836562450368e-07
+R1_SOLVER_PROGRESS 1000 primal= 0.00040833309398379154 change= 2.854804608265482e-06
+R1_SOLVER_PROGRESS 1200 primal= 0.0003771544590560564 change= 1.3187169783696876e-07
+R1_SOLVER_PROGRESS 1400 primal= 0.00035152891764506496 change= 6.982369965430662e-08
+R1_SOLVER_PROGRESS 1600 primal= 0.0003298683441355595 change= 2.0258198240001917e-07
+R1_ACTUAL_MOUTH_CURVATURE [{'X': 0.0, 'global_before_neighbor_peak': {'Z': 2.391, 'curvature': 32.43783977872399}, 'final_neighbor_peak': {'Z': 2.392, 'curvature': 26.783913192686143}, 'final_fold_region_peak': {'Z': 2.392, 'curvature': 26.783913192686143}}, {'X': -0.04, 'global_before_neighbor_peak': {'Z': 2.3925, 'curvature': 30.723919116209334}, 'final_neighbor_peak': {'Z': 2.368, 'curvature': 30.012580953991954}, 'final_fold_region_peak': {'Z': 2.368, 'curvature': 30.012580953991954}}, {'X': 0.04, 'global_before_neighbor_peak': {'Z': 2.3925, 'curvature': 29.23364982391097}, 'final_neighbor_peak': {'Z': 2.378, 'curvature': 29.298095121661323}, 'final_fold_region_peak': {'Z': 2.378, 'curvature': 29.298095121661323}}, {'X': -0.08, 'global_before_neighbor_peak': {'Z': 2.382, 'curvature': 24.413080736909723}, 'final_neighbor_peak': {'Z': 2.375, 'curvature': 24.47636421889765}, 'final_fold_region_peak': {'Z': 2.375, 'curvature': 24.47636421889765}}, {'X': 0.08, 'global_before_neighbor_peak': {'Z': 2.3815, 'curvature': 24.43608809365951}, 'final_neighbor_peak': {'Z': 2.3665, 'curvature': 24.4897270229901}, 'final_fold_region_peak': {'Z': 2.3665, 'curvature': 24.4897270229901}}]
+信息: 已另存为 "Naiwa_Character.blend"
+N2_ROUND_REFINEMENT_BUILD_OK {"Naiwa unified golden body": {"changed_vertices": 24119, "maximum_total_displacement": 0.007720857964391414, "maximum_abs_X": 0.002568155527114868, "maximum_abs_Z": 0.0, "maximum_abs_source_normal_projection": 0.004528745450353852, "has_custom_normals_before": false, "custom_normals_action": "none; preserve source normals representation and update geometry"}, "Head and torso silhouette only": {"changed_vertices": 21834, "maximum_total_displacement": 0.008241327093892884, "maximum_abs_X": 0.002482891082763672, "maximum_abs_Z": 0.0, "maximum_abs_source_normal_projection": 0.004485714364591116, "has_custom_normals_before": false, "custom_normals_action": "none; preserve source normals representation and update geometry"}}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

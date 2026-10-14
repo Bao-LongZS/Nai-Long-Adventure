@@ -1,0 +1,79 @@
+{
+  "contract_sha256": "4ba8ad0b958a41efcbcb02045e1d0e57d267a4a146e12ad5a1340207452ea109",
+  "photometric_changes": false,
+  "candidate_camera_refitted": false,
+  "files": [
+    {
+      "file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\selected_panels\\comparison_grazing_A.png",
+      "sha256": "aea3809ced1807f8d0efa141e93f6826a4a9b23ceabf81c2e9fcc74bf21e2433",
+      "inputs": [
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\selected\\E2\\E2_grazing_A_three_quarter.png",
+          "sha256": "f5022db1eeb1db8e195f3f07b1f03464fcc84b2590eca489e6c35bff2fb6f1ce"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\selected\\B\\B_grazing_A_three_quarter.png",
+          "sha256": "3e16e07fd17f6df4addc49d455fd5321854fabd5481045763b7623aaf403bbdb"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\selected\\E2\\E2_grazing_A_side.png",
+          "sha256": "ee841a4f83aaea0a4a18cdc0ac92ae6694b82ba307ebffe80685f078459586b5"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\selected\\B\\B_grazing_A_side.png",
+          "sha256": "c494a873d23395557bf92cc9d09c1714e4286fa1dffcaf4bbba1391701504a2f"
+        }
+      ],
+      "display_method": "uniform image scale; no photometric changes",
+      "display_column_width_px": 495
+    },
+    {
+      "file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\selected_panels\\comparison_grazing_B.png",
+      "sha256": "0fcf1b1ecafb4a8c412bf361a348706562971b29411e269106a17ae489711598",
+      "inputs": [
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\selected\\E2\\E2_grazing_B_three_quarter.png",
+          "sha256": "92a28d32b1d7122b504553828c014c3593ff0e220f335cbcacd844fd07c7e509"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\selected\\B\\B_grazing_B_three_quarter.png",
+          "sha256": "e93e2a9f51ff53f6ffc9cec8dbc497a001995ed531ca3b298d140d3d5a1e0b9e"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\selected\\E2\\E2_grazing_B_side.png",
+          "sha256": "50b60f6b6e9dc93c33031eeb1f4944ce9a07b5b4f9159e1047fd628a28692a17"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\selected\\B\\B_grazing_B_side.png",
+          "sha256": "ec6c7d7de0b83eccda14d38727d78f1c583bf666a55ff26ca26084e7ec7062f6"
+        }
+      ],
+      "display_method": "uniform image scale; no photometric changes",
+      "display_column_width_px": 495
+    },
+    {
+      "file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\selected_panels\\comparison_reflection.png",
+      "sha256": "e55d6ac7ea7de141cfc4e47b1d9914e5f0bf05881a07a39633673e8c609a131b",
+      "inputs": [
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\selected\\E2\\E2_reflection_three_quarter.png",
+          "sha256": "9b522b8cfc2d6d0dce7ad47e5490fbe1985c244001553dd0152aae90f8ea99d3"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\selected\\B\\B_reflection_three_quarter.png",
+          "sha256": "84ab9eafd5b274fac1b83f590ad90871e78cf72359f532447fba6ae240796d1f"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\selected\\E2\\E2_reflection_side.png",
+          "sha256": "e1a8bc0604443ff972369cd2e49d2bb025c90a7a0dd23f21b8552622b067660e"
+        },
+        {
+          "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\review\\selected\\B\\B_reflection_side.png",
+          "sha256": "d877d69014132a74ad0949820b89a2512500a67ddd2339f1f5b6b27eaa530476"
+        }
+      ],
+      "display_method": "uniform image scale; no photometric changes",
+      "display_column_width_px": 495
+    }
+  ]
+}

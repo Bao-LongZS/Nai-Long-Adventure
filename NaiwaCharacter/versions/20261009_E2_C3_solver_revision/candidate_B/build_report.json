@@ -1,0 +1,33 @@
+{
+  "label": "B",
+  "fixed_source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.blend",
+  "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "candidate_sha256": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+  "field_sha256": "242e78360a1a9440ecb2afd91159210e286c71a337ad9f7ea88a556fd14043c5",
+  "measurement_protocol_sha256": "da275f5db5421384fd0bca8b6748c07b936d81bdbe8ed8d081c1af025452ccfc",
+  "amplitude_scale": 1.0,
+  "maximum_total_world_displacement": 0.007371504125862908,
+  "maximum_eye_local_world_displacement": 0.0,
+  "changed_vertices": 14554,
+  "delta_world_ranges": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      -0.0012844651937484741,
+      0.007371485233306885
+    ],
+    [
+      -0.0054819583892822266,
+      0.0020837783813476562
+    ]
+  ],
+  "frozen_vertices": 313233,
+  "only_changed_object": "Naiwa unified golden body",
+  "source_unchanged": true,
+  "geometry_only": true,
+  "visual_acceptance": "pending key views",
+  "independent_validation": "pending",
+  "FBX": "native-only candidate; no export requested"
+}

@@ -1,0 +1,12 @@
+00:00.469  blend            | Read blend: "C:\Users\31314\Desktop\NaiwaCharacter\Naiwa_Character.blend"
+FEATURE_TRANSFORM_ERROR L concentric iris and pupil 0.0
+FEATURE_TRANSFORM_ERROR R concentric iris and pupil 0.0
+FEATURE_TRANSFORM_ERROR Short closed oral seam 0.0
+FEATURE_TRANSFORM_ERROR L eye glint 0.0
+FEATURE_TRANSFORM_ERROR R eye glint 0.0
+SEAM_CURVATURE upper_chest {'height': 2.08, 'curvature_peak_before': [11.051393093043929, 6.906232970366333, 10.402189812716], 'curvature_peak_after': [5.019327258631564, 0.8176377117363518, 2.359486309373834], 'columns': ['side_width', 'front', 'rear']}
+SEAM_CURVATURE head_root {'height': 2.325, 'curvature_peak_before': [15.623785132883965, 8.132932895869015, 10.38531329833178], 'curvature_peak_after': [1.000289321998214, 11.090325801684314, 2.6140198376124992], 'columns': ['side_width', 'front', 'rear']}
+BROAD_NECK_INDEPENDENT_VALIDATION_OK core= 2681 normal_error= 1.7881393432617188e-07
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

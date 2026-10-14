@@ -1,0 +1,13 @@
+00:00.547  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\before_continuous_front_face\Naiwa_Character.blend"
+00:02.984  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\continuous_front_face_draft\after_gray_side.png'
+00:03.250  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\continuous_front_face_draft\after_gray_front.png'
+00:03.515  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\continuous_front_face_draft\after_gray_three_quarter.png'
+00:03.797  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\continuous_front_face_draft\after_side.png'
+00:04.094  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\continuous_front_face_draft\after_front.png'
+00:04.390  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\continuous_front_face_draft\after_three_quarter.png'
+CONTINUOUS_FRONT_FACE_SCULPT_OK {'modified_vertices': 4776, 'maximum_displacement': 0.00867307186126709, 'lower_z': 2.2, 'upper_z': 2.46, 'mouth_peak_z': 2.365, 'local_lip_bump_removed': True, 'all_x_z_exact': True, 'eyes': {'L': {'all_x_z_exact': True, 'maximum_y_reattachment': 0.008231520652770996, 'round_frontal_outline_preserved': True, 'color_and_topology_preserved': True}, 'R': {'all_x_z_exact': True, 'maximum_y_reattachment': 0.008235454559326172, 'round_frontal_outline_preserved': True, 'color_and_topology_preserved': True}}}
+信息: 已另存为 "Naiwa_Character.blend"
+CONTINUOUS_FRONT_FACE_DRAFT_OK
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

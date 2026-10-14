@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "candidate_sha256": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+  "decision": "selected_for_validation",
+  "new_visible_defects_in_key_views": false,
+  "review_basis": "E2/A/B fixed key panels, 900x1000 E2/B gray originals; root and independent agent actual visual review; saved Raw sections and frozen reference raster protocol",
+  "front_error_improvement_fraction": 0.09875163467692305,
+  "back_error_change_px": 0.0,
+  "central_angle80_width_change_fraction": 0.298210853921596,
+  "central_curvature_peak_change_fraction": -0.0203630079107269,
+  "observations": [
+    "45 degree wedge lower tip slightly shorter and less tightly downward focused; turn starts to distribute into the side-neck earlier",
+    "90 degree upper-mouth to neck transition is broader; anterior concave arc slightly deeper but retained",
+    "Frontal dark concentration remains and becomes flatter/wider; this is residual, not claimed resolved",
+    "No visible new rear-shoulder kink, protruding lip, crown or aperture change; apparent mouth seam continuity preserved",
+    "Full-body appearance preserved; exact assets and contacts are pending validation"
+  ],
+  "selected_validation_focus": "Horizontal gray band from under-mouth to side-neck is slightly more evident; use two grazing directions, 45/90 reflections and saved Raw/Idle sections to exclude new narrow ridge, ledge or concentrated return",
+  "formal_acceptance": false,
+  "failure_branch": "Reject B and retain E2 if selected geometry/contact/animation/reproduction or diagnostic visual checks fail; no third candidate"
+}

@@ -1,0 +1,24 @@
+00:00.625  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_eye_muzzle_body_delivery\Naiwa_Character.blend"
+C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\render_head_reshape_comparison.py:112: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes = True
+00:04.453  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\before_head_front.png'
+00:05.406  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\before_head_side.png'
+00:06.359  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\before_head_three_quarter.png'
+00:07.234  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\before_full_front.png'
+C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\render_head_reshape_comparison.py:165: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  gray.use_nodes = True
+00:08.125  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\before_head_gray_front.png'
+00:08.968  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\before_head_gray_side.png'
+00:09.750  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\before_head_gray_three_quarter.png'
+00:09.750  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\Naiwa_Character.blend"
+00:11.906  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\after_head_front.png'
+00:12.843  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\after_head_side.png'
+00:13.812  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\after_head_three_quarter.png'
+00:14.703  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\after_full_front.png'
+00:15.515  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\after_head_gray_front.png'
+00:16.375  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\after_head_gray_side.png'
+00:17.203  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape\after_head_gray_three_quarter.png'
+HEAD_RESHAPE_COMPARISON_OK 14 renders C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_reshape
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

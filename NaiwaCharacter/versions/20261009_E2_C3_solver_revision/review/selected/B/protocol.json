@@ -1,0 +1,464 @@
+{
+  "label": "B",
+  "mode": "selected",
+  "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\candidate_B\\Naiwa_Character.blend",
+  "source_sha256": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+  "contract_sha256": "4ba8ad0b958a41efcbcb02045e1d0e57d267a4a146e12ad5a1340207452ea109",
+  "script_sha256": "9d2af9ab9426a2df2a82918b2c15b64209b9a7ae63a4468fdf5b5b7621ea14f6",
+  "saved_source_model": false,
+  "complete": true,
+  "expected_image_count": 6,
+  "common_reference_camera": {
+    "type": "ORTHO",
+    "yaw": 50.0,
+    "pitch": -2.5,
+    "target": [
+      0,
+      -0.12,
+      2.425
+    ],
+    "distance": 7.0,
+    "scale": 0.86,
+    "lens": 50.0,
+    "resolution": [
+      900,
+      900
+    ]
+  },
+  "fixed_reference_registration": {
+    "scale": 0.41175526202447044,
+    "translation": [
+      245.38813136509236,
+      -17.159665982101984
+    ]
+  },
+  "geometry": "evaluated saved mesh at Idle frame1; Raw is measured separately",
+  "automatic_visual_acceptance": false,
+  "files": [
+    {
+      "file": "B_grazing_A_three_quarter.png",
+      "sha256": "3e16e07fd17f6df4addc49d455fd5321854fabd5481045763b7623aaf403bbdb",
+      "model": "B",
+      "mode": "grazing_A",
+      "view": "three_quarter",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 45,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.11999999731779099,
+          2.369999885559082
+        ],
+        "distance": 7.0,
+        "scale": 0.85,
+        "lens": 50.0,
+        "resolution": [
+          900,
+          1000
+        ],
+        "sensor_fit": "AUTO"
+      },
+      "location": [
+        4.949747562408447,
+        -5.069747447967529,
+        2.369999885559082
+      ],
+      "source_sha256": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "engine": "BLENDER_EEVEE",
+      "view_transform": "Standard",
+      "exposure": -0.4000000059604645,
+      "gamma": 1.0,
+      "diagnostic": {
+        "light_A": [
+          4.0,
+          -2.0,
+          2.34
+        ],
+        "light_B": [
+          -4.0,
+          2.0,
+          2.34
+        ],
+        "target": [
+          0.0,
+          0.0,
+          2.34
+        ],
+        "area_shape": "RECTANGLE",
+        "size": 0.08,
+        "size_y": 3.0,
+        "power": 500.0,
+        "world_rgba": [
+          0.1,
+          0.1,
+          0.1,
+          1.0
+        ],
+        "world_strength": 0.35,
+        "gray_roughness": 1.0,
+        "gray_specular": 0.0,
+        "variant": "A",
+        "location": [
+          4.0,
+          -2.0,
+          2.3399999141693115
+        ]
+      }
+    },
+    {
+      "file": "B_grazing_A_side.png",
+      "sha256": "c494a873d23395557bf92cc9d09c1714e4286fa1dffcaf4bbba1391701504a2f",
+      "model": "B",
+      "mode": "grazing_A",
+      "view": "side",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 90,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.11999999731779099,
+          2.369999885559082
+        ],
+        "distance": 7.0,
+        "scale": 0.85,
+        "lens": 50.0,
+        "resolution": [
+          900,
+          1000
+        ],
+        "sensor_fit": "AUTO"
+      },
+      "location": [
+        7.0,
+        -0.11999999731779099,
+        2.369999885559082
+      ],
+      "source_sha256": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "engine": "BLENDER_EEVEE",
+      "view_transform": "Standard",
+      "exposure": -0.4000000059604645,
+      "gamma": 1.0,
+      "diagnostic": {
+        "light_A": [
+          4.0,
+          -2.0,
+          2.34
+        ],
+        "light_B": [
+          -4.0,
+          2.0,
+          2.34
+        ],
+        "target": [
+          0.0,
+          0.0,
+          2.34
+        ],
+        "area_shape": "RECTANGLE",
+        "size": 0.08,
+        "size_y": 3.0,
+        "power": 500.0,
+        "world_rgba": [
+          0.1,
+          0.1,
+          0.1,
+          1.0
+        ],
+        "world_strength": 0.35,
+        "gray_roughness": 1.0,
+        "gray_specular": 0.0,
+        "variant": "A",
+        "location": [
+          4.0,
+          -2.0,
+          2.3399999141693115
+        ]
+      }
+    },
+    {
+      "file": "B_grazing_B_three_quarter.png",
+      "sha256": "e93e2a9f51ff53f6ffc9cec8dbc497a001995ed531ca3b298d140d3d5a1e0b9e",
+      "model": "B",
+      "mode": "grazing_B",
+      "view": "three_quarter",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 45,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.11999999731779099,
+          2.369999885559082
+        ],
+        "distance": 7.0,
+        "scale": 0.85,
+        "lens": 50.0,
+        "resolution": [
+          900,
+          1000
+        ],
+        "sensor_fit": "AUTO"
+      },
+      "location": [
+        4.949747562408447,
+        -5.069747447967529,
+        2.369999885559082
+      ],
+      "source_sha256": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "engine": "BLENDER_EEVEE",
+      "view_transform": "Standard",
+      "exposure": -0.4000000059604645,
+      "gamma": 1.0,
+      "diagnostic": {
+        "light_A": [
+          4.0,
+          -2.0,
+          2.34
+        ],
+        "light_B": [
+          -4.0,
+          2.0,
+          2.34
+        ],
+        "target": [
+          0.0,
+          0.0,
+          2.34
+        ],
+        "area_shape": "RECTANGLE",
+        "size": 0.08,
+        "size_y": 3.0,
+        "power": 500.0,
+        "world_rgba": [
+          0.1,
+          0.1,
+          0.1,
+          1.0
+        ],
+        "world_strength": 0.35,
+        "gray_roughness": 1.0,
+        "gray_specular": 0.0,
+        "variant": "B",
+        "location": [
+          -4.0,
+          2.0,
+          2.3399999141693115
+        ]
+      }
+    },
+    {
+      "file": "B_grazing_B_side.png",
+      "sha256": "ec6c7d7de0b83eccda14d38727d78f1c583bf666a55ff26ca26084e7ec7062f6",
+      "model": "B",
+      "mode": "grazing_B",
+      "view": "side",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 90,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.11999999731779099,
+          2.369999885559082
+        ],
+        "distance": 7.0,
+        "scale": 0.85,
+        "lens": 50.0,
+        "resolution": [
+          900,
+          1000
+        ],
+        "sensor_fit": "AUTO"
+      },
+      "location": [
+        7.0,
+        -0.11999999731779099,
+        2.369999885559082
+      ],
+      "source_sha256": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "engine": "BLENDER_EEVEE",
+      "view_transform": "Standard",
+      "exposure": -0.4000000059604645,
+      "gamma": 1.0,
+      "diagnostic": {
+        "light_A": [
+          4.0,
+          -2.0,
+          2.34
+        ],
+        "light_B": [
+          -4.0,
+          2.0,
+          2.34
+        ],
+        "target": [
+          0.0,
+          0.0,
+          2.34
+        ],
+        "area_shape": "RECTANGLE",
+        "size": 0.08,
+        "size_y": 3.0,
+        "power": 500.0,
+        "world_rgba": [
+          0.1,
+          0.1,
+          0.1,
+          1.0
+        ],
+        "world_strength": 0.35,
+        "gray_roughness": 1.0,
+        "gray_specular": 0.0,
+        "variant": "B",
+        "location": [
+          -4.0,
+          2.0,
+          2.3399999141693115
+        ]
+      }
+    },
+    {
+      "file": "B_reflection_three_quarter.png",
+      "sha256": "84ab9eafd5b274fac1b83f590ad90871e78cf72359f532447fba6ae240796d1f",
+      "model": "B",
+      "mode": "reflection",
+      "view": "three_quarter",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 45,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.11999999731779099,
+          2.369999885559082
+        ],
+        "distance": 7.0,
+        "scale": 0.85,
+        "lens": 50.0,
+        "resolution": [
+          900,
+          1000
+        ],
+        "sensor_fit": "AUTO"
+      },
+      "location": [
+        4.949747562408447,
+        -5.069747447967529,
+        2.369999885559082
+      ],
+      "source_sha256": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "engine": "CYCLES",
+      "view_transform": "Standard",
+      "exposure": -0.4000000059604645,
+      "gamma": 1.0,
+      "diagnostic": {
+        "type": "incident equirectangular world radiance; not a surface texture",
+        "size": [
+          1024,
+          512
+        ],
+        "bands": 12,
+        "white_fraction": 0.4,
+        "white_radiance": 3.0,
+        "dark_radiance": 0.012,
+        "azimuth_rotation_degrees": 11.0,
+        "material_rgba": [
+          0.38,
+          0.38,
+          0.38,
+          1.0
+        ],
+        "roughness": 0.2,
+        "metallic": 0.7,
+        "engine": "CYCLES",
+        "samples": 32,
+        "camera_background_rgba": [
+          0.055,
+          0.055,
+          0.055,
+          1.0
+        ],
+        "environment_pixel_sha256": "a5f8d197cc351167245c68c5e9c3366bff629f95ad20666a00f118258fda8d01"
+      }
+    },
+    {
+      "file": "B_reflection_side.png",
+      "sha256": "d877d69014132a74ad0949820b89a2512500a67ddd2339f1f5b6b27eaa530476",
+      "model": "B",
+      "mode": "reflection",
+      "view": "side",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 90,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.11999999731779099,
+          2.369999885559082
+        ],
+        "distance": 7.0,
+        "scale": 0.85,
+        "lens": 50.0,
+        "resolution": [
+          900,
+          1000
+        ],
+        "sensor_fit": "AUTO"
+      },
+      "location": [
+        7.0,
+        -0.11999999731779099,
+        2.369999885559082
+      ],
+      "source_sha256": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "engine": "CYCLES",
+      "view_transform": "Standard",
+      "exposure": -0.4000000059604645,
+      "gamma": 1.0,
+      "diagnostic": {
+        "type": "incident equirectangular world radiance; not a surface texture",
+        "size": [
+          1024,
+          512
+        ],
+        "bands": 12,
+        "white_fraction": 0.4,
+        "white_radiance": 3.0,
+        "dark_radiance": 0.012,
+        "azimuth_rotation_degrees": 11.0,
+        "material_rgba": [
+          0.38,
+          0.38,
+          0.38,
+          1.0
+        ],
+        "roughness": 0.2,
+        "metallic": 0.7,
+        "engine": "CYCLES",
+        "samples": 32,
+        "camera_background_rgba": [
+          0.055,
+          0.055,
+          0.055,
+          1.0
+        ],
+        "environment_pixel_sha256": "a5f8d197cc351167245c68c5e9c3366bff629f95ad20666a00f118258fda8d01"
+      }
+    }
+  ],
+  "source_hash_verified_after_render": true
+}

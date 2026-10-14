@@ -1,0 +1,8 @@
+{
+  "status": "rejected_before_selection",
+  "reason": "Initial per-span zero slopes produced horizontal under-mouth folds and posterior neck rings in color and gray views",
+  "N1_front_error_reduction": 0.3533532149902059,
+  "N2_front_error_reduction": 0.4862658921883569,
+  "source_A_unchanged": true,
+  "corrective_action": "Use shared monotone interior slopes with bounded quintic Bezier controls; widen shoulder protection feather without moving protected roots; regenerate both candidates from fixed A"
+}

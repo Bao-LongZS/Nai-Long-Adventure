@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "candidate_sha256": "ea12e9af2c564527d0c473cd31b28974339fcceb15b666502a33f0ffa057bc24",
+  "review": "Root review of final actual color/gray/reflection/grazing/full-body panels, combined with independent saved-surface and fixed-reference checks",
+  "four_regions": {
+    "嘴下与下颊": "45°下脸外形及接入喉部的转折变宽缓，窄横梁的反射折向减弱；短圆下脸体块保留。",
+    "侧颈与后肩": "90°原彩色、灰模与灯位A的斜向浅波纹明显减少；反射条纹的尖锐折向减弱。",
+    "后脑与后颈": "后侧反射S形收腰更平缓，没有看到独立后脑球。",
+    "肩根与全身": "全身比例及肩关节外形保持；没有看到新的肩根硬折线。"
+  },
+  "new_artifact_review": {
+    "明显新纵沟": "未见",
+    "新颈环": "未见",
+    "硬矩形补丁": "未见",
+    "新下唇厚壳或硬檐": "未见新增；嘴下转折更圆缓",
+    "主体与隐藏代理壳重叠": "渲染中代理壳保持隐藏"
+  },
+  "remaining_visible_details": [
+    "强反射诊断仍显出既有細小锯齿与浅纵纹，不能声称全部消失。",
+    "受保护嘴缝及直接附着区域仍有细线。",
+    "嘴下自然阴影保留，验收目标是宽缓过渡而非完全无暗影。",
+    "灯位B是逆向掠射，正面较暗，主要用于边缘及后侧衔接连续性检查。"
+  ],
+  "curvature_interpretation": "Original narrow curvature peak is spread into wider lower peaks; same-Z curvature increases and transverse changes are recorded, not asserted absent",
+  "claim_completely_smooth": false,
+  "reviewed_panels": [
+    "comparisons/comparison_head.png",
+    "comparisons/comparison_head_gray.png",
+    "comparisons/comparison_lowerface_detail.png",
+    "comparisons/comparison_reflection.png",
+    "comparisons/comparison_reflection_detail.png",
+    "comparisons/comparison_grazing_A.png",
+    "comparisons/comparison_grazing_B.png",
+    "comparisons/comparison_full.png"
+  ],
+  "acceptance": "Adopt R1 as the current local round refinement; preserve fixed N2 and its FBX"
+}

@@ -1,0 +1,60 @@
+{
+  "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_N2_round_refinement\\candidate_R1\\Naiwa_Character.blend",
+  "source_sha256": "ea12e9af2c564527d0c473cd31b28974339fcceb15b666502a33f0ffa057bc24",
+  "source_unchanged": true,
+  "animation": "Naiwa_Idle",
+  "frame": 1,
+  "engine": "BLENDER_EEVEE",
+  "same_materials_lighting_exposure_and_scale": true,
+  "view_transform": "Standard",
+  "exposure": -0.4000000059604645,
+  "views": [
+    {
+      "view": "front",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 0.0,
+        "pitch": 0.0,
+        "target": [
+          0.0,
+          -0.12,
+          1.31
+        ],
+        "distance": 7.0,
+        "scale": 3.05,
+        "lens": 50.0,
+        "resolution": [
+          1100,
+          1500
+        ],
+        "sensor_fit": "VERTICAL"
+      },
+      "file": "R1_full_front.png",
+      "sha256": "e7cc723e0c8c061f7d71b9ae1b95e6a4a2a107d259c1b54c99f3a712f35a20b0"
+    },
+    {
+      "view": "side",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 90.0,
+        "pitch": 0.0,
+        "target": [
+          0.0,
+          -0.12,
+          1.31
+        ],
+        "distance": 7.0,
+        "scale": 3.05,
+        "lens": 50.0,
+        "resolution": [
+          1100,
+          1500
+        ],
+        "sensor_fit": "VERTICAL"
+      },
+      "file": "R1_full_side.png",
+      "sha256": "ba59f7bd65010caee9a60c9a94a2795a4d3f8c2c5df9e5e03595231f74d035af"
+    }
+  ],
+  "render_script_sha256": "669dc4f2b03423af038296bcbfe67147dc036aed304e72346cc6b3d17bd48768"
+}

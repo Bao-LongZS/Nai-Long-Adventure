@@ -1,0 +1,10 @@
+00:00.656  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_H2_E2_overall_refinement\candidate_E2\Naiwa_Character.blend"
+C3_EARLY_PROFILE_READY C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_reference_refinement\baseline
+C3_BASELINE_STATE Idle1
+C3_BASELINE_STATE Walk9
+C3_BASELINE_STATE Laugh7
+C3_BASELINE_STATE Jump6
+C3_BASELINE_OK {"D": 0.11709836009845984, "scope": {"object": "Naiwa unified golden body", "scope_vertex_count": 66949, "frozen_vertex_count": 304717, "release_vertex_count": 30815, "all_other_meshes_frozen": true, "priority": ["domain exterior and distal limbs", "actual mouth contact neighborhood", "actual eye contact neighborhood", "crown highest anchors", "smooth release", "head neck shoulder deformation"]}, "mouth": {"method": "actual triangle-triangle surface intersection, not mouth center or bounds", "mouth_contact_segment_count": 657, "body_contact_vertex_ids_array": "body_contact_vertex_ids", "mouth_contact_vertex_ids_array": "mouth_contact_vertex_ids", "segments_array": "mouth_contact_segments", "contact_local_median_edge_length": 0.004432501841864013, "freeze_distance": 0.009604122205852841, "release_end": 0.044604122205852845, "maximum_contact_vertex_curve_distance": 0.005171620363988828, "prior_saved_protection_definition": "No complete executable mouth-protection definition in E2 metadata; historic parameter text is not adopted as a mask"}, "root": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_reference_refinement"}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

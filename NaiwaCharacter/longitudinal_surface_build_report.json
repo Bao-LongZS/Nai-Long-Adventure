@@ -1,0 +1,11 @@
+{
+  "changed_vertex_count": 33131,
+  "max_x_change": 0.00986635684967041,
+  "side_projection_exact": true,
+  "all_heights_exact": true,
+  "range_z": [
+    1.98,
+    2.585
+  ],
+  "fair_length": 0.06
+}

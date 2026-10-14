@@ -1,0 +1,14 @@
+[
+  {
+    "file": "stage_face_raise.blend",
+    "coordinates_exact": true,
+    "bytes_before": 81494140,
+    "bytes_after": 20132760
+  },
+  {
+    "file": "stage_muzzle.blend",
+    "coordinates_exact": true,
+    "bytes_before": 81494140,
+    "bytes_after": 20132837
+  }
+]

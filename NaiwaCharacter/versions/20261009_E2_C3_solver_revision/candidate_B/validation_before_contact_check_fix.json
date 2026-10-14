@@ -1,0 +1,552 @@
+{
+  "schema_version": 1,
+  "label": "B",
+  "candidate": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\candidate_B\\Naiwa_Character.blend",
+  "candidate_sha256": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+  "E2_source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.blend",
+  "E2_source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "baseline_cache_sha256": {
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\baseline\\snapshot.json": "853860788ad2061ac267e1c93f05accb75a1f0c4ef4333a000b08141042cfd1a",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\baseline\\baseline_arrays.npz": "c4f01f4996ea0b254e3c454f49579ec6ae66ddd3a20cc15a6ed9e643a46d7857",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\measurement_protocol.json": "da275f5db5421384fd0bca8b6748c07b936d81bdbe8ed8d081c1af025452ccfc",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\c3_measurement_utils.py": "7cf1d314d4f15a0e6346b5803ada4c8a9eb85eb15b8c80272d6860b4fa1288e7",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\candidate_B\\build_report.json": "2a2788aca6ca0ef04beb20326ca0ef17a31e87666078f921cc0340d0023cc063",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\c3_field_report.json": "925dde98bbee532a8d474f4a9f34694401f49120026dee75f0c9cd279cd08e82",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\c3_field.npz": "242e78360a1a9440ecb2afd91159210e286c71a337ad9f7ea88a556fd14043c5"
+  },
+  "saved_generation_provenance_verified": true,
+  "validation_scope": "one saved selected candidate; no rendering/export/model mutation",
+  "passed": false,
+  "objects": {
+    "Head and torso silhouette only": {
+      "topology_UV_colors_weights_transform_shading_exact": true,
+      "maximum_final_world_displacement": 0.0,
+      "changed_vertex_count": 0,
+      "all_coordinates_bit_exact": true
+    },
+    "L concentric iris and pupil": {
+      "topology_UV_colors_weights_transform_shading_exact": true,
+      "maximum_final_world_displacement": 0.0,
+      "changed_vertex_count": 0,
+      "all_coordinates_bit_exact": true
+    },
+    "L eye glint": {
+      "topology_UV_colors_weights_transform_shading_exact": true,
+      "maximum_final_world_displacement": 0.0,
+      "changed_vertex_count": 0,
+      "all_coordinates_bit_exact": true
+    },
+    "Naiwa unified golden body": {
+      "topology_UV_colors_weights_transform_shading_exact": true,
+      "maximum_final_world_displacement": 0.007371504125862908,
+      "changed_vertex_count": 14554,
+      "frozen_vertex_count": 313233,
+      "frozen_coordinates_bit_exact": true,
+      "outside_scope_coordinates_bit_exact": true,
+      "scope_vertex_count": 58433,
+      "saved_coordinates_match_frozen_direction_and_amplitude_bit_exact": true,
+      "eye_local_coordinates_bit_exact": true,
+      "release_vertex_count": 23716,
+      "eye_local_vertex_count": 4987,
+      "eye_local_maximum_world_displacement": 0.0,
+      "maximum_final_axis_displacements": [
+        0.0,
+        0.007371485233306885,
+        0.0054819583892822266
+      ],
+      "maximum_displacement_original_vertex_index": 132172,
+      "Raw_surface_integrity": {
+        "checked_triangle_count": 29835,
+        "collision_scope": "changed faces against all body triangles",
+        "finite_coordinates": true,
+        "minimum_triangle_area": 2.5028435183965547e-06,
+        "minimum_source_target_normal_dot": 0.9831949236303549,
+        "source_degenerate_triangle_count": 0,
+        "new_degenerate_triangle_count": 0,
+        "same_indexed_connectivity_and_source_coincident_seams_preserved": true,
+        "source_exact_coincidence_groups_checked": 0,
+        "source_coincident_vertices_at_1e_7": 0,
+        "target_coincident_vertices_at_1e_7": 0,
+        "source_nonadjacent_intersection_count": 0,
+        "target_nonadjacent_intersection_count": 0,
+        "new_nonadjacent_intersection_count": 0
+      }
+    },
+    "Preview floor": {
+      "topology_UV_colors_weights_transform_shading_exact": true,
+      "maximum_final_world_displacement": 0.0,
+      "changed_vertex_count": 0,
+      "all_coordinates_bit_exact": true
+    },
+    "R concentric iris and pupil": {
+      "topology_UV_colors_weights_transform_shading_exact": true,
+      "maximum_final_world_displacement": 0.0,
+      "changed_vertex_count": 0,
+      "all_coordinates_bit_exact": true
+    },
+    "R eye glint": {
+      "topology_UV_colors_weights_transform_shading_exact": true,
+      "maximum_final_world_displacement": 0.0,
+      "changed_vertex_count": 0,
+      "all_coordinates_bit_exact": true
+    },
+    "Short closed oral seam": {
+      "topology_UV_colors_weights_transform_shading_exact": true,
+      "maximum_final_world_displacement": 0.0,
+      "changed_vertex_count": 0,
+      "all_coordinates_bit_exact": true
+    }
+  },
+  "poses": {
+    "Idle1": {
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "same_state_E2_difference": true,
+      "frozen_body_coordinates_bit_exact": true,
+      "all_other_meshes_coordinates_bit_exact": true,
+      "maximum_world_difference_diagnostic_only": 0.007371504125862908,
+      "integrity": {
+        "checked_triangle_count": 29835,
+        "collision_scope": "changed faces against all body triangles",
+        "finite_coordinates": true,
+        "minimum_triangle_area": 2.5028435183965547e-06,
+        "minimum_source_target_normal_dot": 0.9831949663019472,
+        "source_degenerate_triangle_count": 0,
+        "new_degenerate_triangle_count": 0,
+        "same_indexed_connectivity_and_source_coincident_seams_preserved": true,
+        "source_exact_coincidence_groups_checked": 0,
+        "source_coincident_vertices_at_1e_7": 0,
+        "target_coincident_vertices_at_1e_7": 0,
+        "source_nonadjacent_intersection_count": 0,
+        "target_nonadjacent_intersection_count": 0,
+        "new_nonadjacent_intersection_count": 0
+      },
+      "contacts": {
+        "mouth": {
+          "source_body_mouth_triangle_contacts": 657,
+          "candidate_body_mouth_triangle_contacts": 657,
+          "actual_contact_triangle_pairs_exact": true,
+          "actual_contact_curve_maximum_point_displacement": 0.0,
+          "actual_mouth_vertices_to_body_surface_maximum_gap_delta": 0.0,
+          "existing_source_maximum_distance": 0.0010573333129286766,
+          "candidate_maximum_distance": 0.0010573333129286766,
+          "gap_units": "world Euclidean units",
+          "gap_comparison_tolerance": 5e-07,
+          "fixed_body_contact_vertex_count": 120,
+          "body_contact_to_mouth_surface_maximum_gap_delta": 0.0
+        },
+        "eyes": {
+          "L": {
+            "source_body_globe_triangle_contacts": 434,
+            "candidate_body_globe_triangle_contacts": 434,
+            "added_body_globe_contact_pairs": 0,
+            "removed_body_globe_contact_pairs": 0,
+            "globe_glint_coordinates_exact": true,
+            "highlight_surface_contact_preserved": true,
+            "source_glint_minimum_unsigned_surface_distance": 6.652329602729878e-07,
+            "candidate_glint_minimum_unsigned_surface_distance": 6.652329602729878e-07,
+            "highlight_vertex_surface_distance_maximum_delta": 0.0
+          },
+          "R": {
+            "source_body_globe_triangle_contacts": 425,
+            "candidate_body_globe_triangle_contacts": 425,
+            "added_body_globe_contact_pairs": 0,
+            "removed_body_globe_contact_pairs": 0,
+            "globe_glint_coordinates_exact": true,
+            "highlight_surface_contact_preserved": true,
+            "source_glint_minimum_unsigned_surface_distance": 2.927651621575933e-06,
+            "candidate_glint_minimum_unsigned_surface_distance": 2.927651621575933e-06,
+            "highlight_vertex_surface_distance_maximum_delta": 0.0
+          }
+        },
+        "other_fixed_asset_intersections": {
+          "checked_objects": [],
+          "new_intersection_count": 0,
+          "scope": "changed body triangles vs fixed visible mesh inventory, bounding-box broad phase"
+        }
+      }
+    },
+    "Walk9": {
+      "action": "Naiwa_Walk",
+      "frame": 9,
+      "same_state_E2_difference": true,
+      "frozen_body_coordinates_bit_exact": true,
+      "all_other_meshes_coordinates_bit_exact": true,
+      "maximum_world_difference_diagnostic_only": 0.007365157842320681,
+      "integrity": {
+        "checked_triangle_count": 29769,
+        "collision_scope": "changed faces against all body triangles",
+        "finite_coordinates": true,
+        "minimum_triangle_area": 2.5405204938652338e-06,
+        "minimum_source_target_normal_dot": 0.9841855022005691,
+        "source_degenerate_triangle_count": 0,
+        "new_degenerate_triangle_count": 0,
+        "same_indexed_connectivity_and_source_coincident_seams_preserved": true,
+        "source_exact_coincidence_groups_checked": 0,
+        "source_coincident_vertices_at_1e_7": 0,
+        "target_coincident_vertices_at_1e_7": 0,
+        "source_nonadjacent_intersection_count": 0,
+        "target_nonadjacent_intersection_count": 0,
+        "new_nonadjacent_intersection_count": 0
+      },
+      "contacts": {
+        "mouth": {
+          "source_body_mouth_triangle_contacts": 260,
+          "candidate_body_mouth_triangle_contacts": 260,
+          "actual_contact_triangle_pairs_exact": true,
+          "actual_contact_curve_maximum_point_displacement": 0.0,
+          "actual_mouth_vertices_to_body_surface_maximum_gap_delta": 8.777715265750885e-08,
+          "existing_source_maximum_distance": 0.004155296832323074,
+          "candidate_maximum_distance": 0.004155296832323074,
+          "gap_units": "world Euclidean units",
+          "gap_comparison_tolerance": 5e-07,
+          "fixed_body_contact_vertex_count": 120,
+          "body_contact_to_mouth_surface_maximum_gap_delta": 0.0
+        },
+        "eyes": {
+          "L": {
+            "source_body_globe_triangle_contacts": 438,
+            "candidate_body_globe_triangle_contacts": 438,
+            "added_body_globe_contact_pairs": 0,
+            "removed_body_globe_contact_pairs": 0,
+            "globe_glint_coordinates_exact": true,
+            "highlight_surface_contact_preserved": true,
+            "source_glint_minimum_unsigned_surface_distance": 7.73713281887467e-07,
+            "candidate_glint_minimum_unsigned_surface_distance": 7.73713281887467e-07,
+            "highlight_vertex_surface_distance_maximum_delta": 0.0
+          },
+          "R": {
+            "source_body_globe_triangle_contacts": 427,
+            "candidate_body_globe_triangle_contacts": 427,
+            "added_body_globe_contact_pairs": 0,
+            "removed_body_globe_contact_pairs": 0,
+            "globe_glint_coordinates_exact": true,
+            "highlight_surface_contact_preserved": true,
+            "source_glint_minimum_unsigned_surface_distance": 2.9263335363793885e-06,
+            "candidate_glint_minimum_unsigned_surface_distance": 2.9263335363793885e-06,
+            "highlight_vertex_surface_distance_maximum_delta": 0.0
+          }
+        },
+        "other_fixed_asset_intersections": {
+          "checked_objects": [],
+          "new_intersection_count": 0,
+          "scope": "changed body triangles vs fixed visible mesh inventory, bounding-box broad phase"
+        }
+      }
+    },
+    "Laugh7": {
+      "action": "Naiwa_Laugh",
+      "frame": 7,
+      "same_state_E2_difference": true,
+      "frozen_body_coordinates_bit_exact": true,
+      "all_other_meshes_coordinates_bit_exact": true,
+      "maximum_world_difference_diagnostic_only": 0.007367841847145802,
+      "integrity": {
+        "checked_triangle_count": 29795,
+        "collision_scope": "changed faces against all body triangles",
+        "finite_coordinates": true,
+        "minimum_triangle_area": 2.480819967154481e-06,
+        "minimum_source_target_normal_dot": 0.9833462095191223,
+        "source_degenerate_triangle_count": 0,
+        "new_degenerate_triangle_count": 0,
+        "same_indexed_connectivity_and_source_coincident_seams_preserved": true,
+        "source_exact_coincidence_groups_checked": 0,
+        "source_coincident_vertices_at_1e_7": 0,
+        "target_coincident_vertices_at_1e_7": 0,
+        "source_nonadjacent_intersection_count": 0,
+        "target_nonadjacent_intersection_count": 0,
+        "new_nonadjacent_intersection_count": 0
+      }
+    }
+  },
+  "visual_acceptance_required": [
+    "same-camera gray and colored views",
+    "45/90 degree stripe reflections and two grazing light directions",
+    "protection/release boundary narrow ridges or ring marks",
+    "natural front-neck concavity, wedge reduction and posterior shoulder continuity",
+    "reference contour improvement and remaining similarity"
+  ],
+  "automated_geometry_does_not_replace_visual_acceptance": true,
+  "asset_links_materials_complete_animation_curves_and_rig_exact": true,
+  "displacement_contract": {
+    "state": "Raw mesh",
+    "method": "same original vertex index; final world Euclidean candidate-minus-E2",
+    "D_visible_aperture_mean": 0.11709836009845984,
+    "main_limit": 0.009367868807876788,
+    "eye_local_limit": 0.002927459002461496,
+    "eye_limit_is_included_in_main_limit": true,
+    "numerical_tolerance_world": 2e-08
+  },
+  "eyes": {
+    "L": {
+      "sampling_step": 0.0003,
+      "E2_visible_D": 0.11709444572907227,
+      "candidate_visible_D": 0.11709444572907227,
+      "absolute_diameter_fraction_change": 0.0,
+      "center_delta_world_XZ": [
+        0.0,
+        0.0
+      ],
+      "center_shift": 0.0,
+      "center_shift_fraction_of_E2_eye_D": 0.0,
+      "absolute_axis_ratio_delta": 0.0,
+      "orthographic_metric_equivalence": "world XZ normalized by D equals common orthographic pixel normalization",
+      "candidate_metrics": {
+        "aperture": {
+          "area": 0.010768679999999997,
+          "sample_count": 119652,
+          "center": [
+            -0.11727890632832334,
+            2.5051899959883572
+          ],
+          "bounds": [
+            [
+              -0.17640000000000006,
+              2.4474000000000213
+            ],
+            [
+              -0.057900000000002144,
+              2.5632000000000943
+            ]
+          ],
+          "axis_ratio": 1.1001595391137409,
+          "major_axis_degrees": 39.491927189337616,
+          "width_height_ratio": 1.023316062175503,
+          "covariance_xz": [
+            [
+              0.0008765318715248417,
+              8.041687284066133e-05
+            ],
+            [
+              8.041687284066133e-05,
+              0.0008452219212827691
+            ]
+          ]
+        },
+        "green": {
+          "area": 0.007739099999999999,
+          "sample_count": 85990,
+          "center": [
+            -0.113794224909838,
+            2.50584522270024
+          ],
+          "bounds": [
+            [
+              -0.17640000000000006,
+              2.4474000000000213
+            ],
+            [
+              -0.057900000000002144,
+              2.5632000000000943
+            ]
+          ],
+          "axis_ratio": 1.095150895798448,
+          "major_axis_degrees": 43.470301689283986,
+          "width_height_ratio": 1.023316062175503,
+          "covariance_xz": [
+            [
+              0.0010861040924768585,
+              9.783378628226664e-05
+            ],
+            [
+              9.783378628226664e-05,
+              0.0010756461792372303
+            ]
+          ]
+        },
+        "black": {
+          "area": 0.0030295799999999996,
+          "sample_count": 33662,
+          "center": [
+            -0.12618056859367685,
+            2.5035162111579012
+          ],
+          "bounds": [
+            [
+              -0.1563000000000004,
+              2.472000000000037
+            ],
+            [
+              -0.09600000000000147,
+              2.5353000000000767
+            ]
+          ],
+          "axis_ratio": 1.0805424794046334,
+          "major_axis_degrees": 62.818501960642216,
+          "width_height_ratio": 0.9526066350704732,
+          "covariance_xz": [
+            [
+              0.00023091796387371972,
+              1.5193075464377494e-05
+            ],
+            [
+              1.5193075464377494e-05,
+              0.00025270200830556885
+            ]
+          ]
+        },
+        "sampling": {
+          "step": 0.0003,
+          "skin_epsilon": 5e-07,
+          "grid_anchor_xz": [
+            0.0,
+            0.0
+          ]
+        },
+        "aperture_topology": {
+          "visible_component_count": 1,
+          "visible_component_sample_counts": [
+            119652
+          ],
+          "enclosed_skin_hole_count": 0,
+          "significant_enclosed_skin_holes": 0,
+          "significant_hole_minimum_area": 1e-06,
+          "maximum_enclosed_skin_hole_area": 0.0,
+          "enclosed_skin_hole_total_area": 0.0,
+          "method": "four-neighbor components of independently ray-visible aperture; external occlusion is excluded"
+        },
+        "visible_surface_gap": {
+          "minimum": 5.960464477539062e-07,
+          "maximum": 0.019422411918640137,
+          "mean": 0.01010167224514079
+        }
+      }
+    },
+    "R": {
+      "sampling_step": 0.0003,
+      "E2_visible_D": 0.1171022744678474,
+      "candidate_visible_D": 0.1171022744678474,
+      "absolute_diameter_fraction_change": 0.0,
+      "center_delta_world_XZ": [
+        0.0,
+        0.0
+      ],
+      "center_shift": 0.0,
+      "center_shift_fraction_of_E2_eye_D": 0.0,
+      "absolute_axis_ratio_delta": 0.0,
+      "orthographic_metric_equivalence": "world XZ normalized by D equals common orthographic pixel normalization",
+      "candidate_metrics": {
+        "aperture": {
+          "area": 0.010770119999999998,
+          "sample_count": 119668,
+          "center": [
+            0.11728282247551709,
+            2.505334194605053
+          ],
+          "bounds": [
+            [
+              0.05790000000000019,
+              2.4474000000000213
+            ],
+            [
+              0.17640000000000083,
+              2.5635000000000945
+            ]
+          ],
+          "axis_ratio": 1.0997350748271038,
+          "major_axis_degrees": -39.58720626386679,
+          "width_height_ratio": 1.0206718346246855,
+          "covariance_xz": [
+            [
+              0.000876288466840822,
+              -8.015300514403245e-05
+            ],
+            [
+              -8.015300514403245e-05,
+              0.0008456342580790103
+            ]
+          ]
+        },
+        "green": {
+          "area": 0.007739549999999999,
+          "sample_count": 85995,
+          "center": [
+            0.11378973312400587,
+            2.5059866108494497
+          ],
+          "bounds": [
+            [
+              0.05790000000000019,
+              2.4474000000000213
+            ],
+            [
+              0.17640000000000083,
+              2.5635000000000945
+            ]
+          ],
+          "axis_ratio": 1.0947178695891209,
+          "major_axis_degrees": -43.624361184716946,
+          "width_height_ratio": 1.0206718346246855,
+          "covariance_xz": [
+            [
+              0.0010856125863756556,
+              -9.74419508260528e-05
+            ],
+            [
+              -9.74419508260528e-05,
+              0.0010762472855846623
+            ]
+          ]
+        },
+        "black": {
+          "area": 0.0030305699999999994,
+          "sample_count": 33673,
+          "center": [
+            0.12620356665577523,
+            2.5036680367059096
+          ],
+          "bounds": [
+            [
+              0.0960000000000004,
+              2.472000000000037
+            ],
+            [
+              0.1566000000000007,
+              2.5353000000000767
+            ]
+          ],
+          "axis_ratio": 1.0810566146135634,
+          "major_axis_degrees": -62.75287798518579,
+          "width_height_ratio": 0.9573459715633827,
+          "covariance_xz": [
+            [
+              0.0002309703483991467,
+              -1.5316630570745593e-05
+            ],
+            [
+              -1.5316630570745593e-05,
+              0.00025282548474793464
+            ]
+          ]
+        },
+        "sampling": {
+          "step": 0.0003,
+          "skin_epsilon": 5e-07,
+          "grid_anchor_xz": [
+            0.0,
+            0.0
+          ]
+        },
+        "aperture_topology": {
+          "visible_component_count": 1,
+          "visible_component_sample_counts": [
+            119668
+          ],
+          "enclosed_skin_hole_count": 0,
+          "significant_enclosed_skin_holes": 0,
+          "significant_hole_minimum_area": 1e-06,
+          "maximum_enclosed_skin_hole_area": 0.0,
+          "enclosed_skin_hole_total_area": 0.0,
+          "method": "four-neighbor components of independently ray-visible aperture; external occlusion is excluded"
+        },
+        "visible_surface_gap": {
+          "minimum": 7.152557373046875e-07,
+          "maximum": 0.019324064254760742,
+          "mean": 0.010040841655233597
+        }
+      }
+    }
+  },
+  "error": "('Missing actual mouth/body contact curve', 'Laugh7')",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\validate_c3_saved.py\", line 527, in run_validation\n    report['poses'][pose]['contacts'] = verify_contacts(snapshot, cache, pose_world, pose)\n                                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\validate_c3_saved.py\", line 235, in verify_contacts\n    assert old_pairs and new_pairs, ('Missing actual mouth/body contact curve', pose)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ('Missing actual mouth/body contact curve', 'Laugh7')\n"
+}

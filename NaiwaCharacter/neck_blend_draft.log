@@ -1,0 +1,10 @@
+00:00.453  blend            | Read blend: "C:\Users\31314\Desktop\NaiwaCharacter\iterations\before_broad_neck_blending_revision\Naiwa_Character.blend"
+00:08.969  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\neck_blend_draft_front.png'
+00:09.297  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\neck_blend_draft_side.png'
+00:09.656  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\neck_blend_draft_three_quarter.png'
+信息: 应用的修改器不是第一个，可能导致不可预料的结果
+BROAD_NECK_BLEND_OK {'changed_vertex_count': 33246, 'fixed_vertex_count': 338420, 'max_displacement': 0.019783869430697546}
+NECK_BLEND_DRAFT_OK
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

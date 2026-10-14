@@ -1,0 +1,5590 @@
+{
+  "resolution": [
+    600,
+    600
+  ],
+  "view_transform": "Standard",
+  "exposure": -0.4,
+  "reference_source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\references\\20261005\\pdf_page03_image03_IM60.jpg",
+  "reference_landmarks": {
+    "near_eye": [
+      380.5,
+      128.0
+    ],
+    "far_visible_eye_centroid_approx": [
+      314.5,
+      137.0
+    ],
+    "mouth_approx": [
+      325.0,
+      180.0
+    ],
+    "crown": [
+      419.2567567567568,
+      68.0
+    ]
+  },
+  "manual_reference_boundary_uncertainty_px": 2,
+  "grid_yaw": [
+    40,
+    50,
+    60,
+    70,
+    80
+  ],
+  "grid_pitch": [
+    -5,
+    0,
+    5
+  ],
+  "reference_far_visible_D_over_near_D_approx": 0.34857921966844974,
+  "pose_score_note": "Grid and fine neighbors selected by position score; final ranking adds 1.5*far-visible-D-ratio error and 0.5*near-eye log-axis-ratio error. Approximate far contour 11x34 px; reference camera unknown.",
+  "records": [
+    {
+      "candidate": "A",
+      "filename": "A_ortho_yaw40_pitch-5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 40,
+        "pitch": -5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 735,
+            "center_pixels": [
+              121.64625850340136,
+              232.8108843537415
+            ],
+            "bbox_pixels": [
+              [
+                94.0,
+                200.0
+              ],
+              [
+                156.0,
+                278.0
+              ]
+            ],
+            "D_pixels": 61.18271211315643,
+            "principal_axis_ratio": 2.144610489241915
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 279,
+            "center_pixels": [
+              113.75627240143369,
+              245.33333333333334
+            ],
+            "bbox_pixels": [
+              [
+                98.0,
+                224.0
+              ],
+              [
+                130.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 37.69529588588531,
+            "principal_axis_ratio": 1.369734682341185
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1416,
+            "center_pixels": [
+              252.8502824858757,
+              229.3135593220339
+            ],
+            "bbox_pixels": [
+              [
+                206.0,
+                192.0
+              ],
+              [
+                298.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 84.92130934800736,
+            "principal_axis_ratio": 1.1976699961916015
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 282,
+            "center_pixels": [
+              225.4822695035461,
+              237.24822695035462
+            ],
+            "bbox_pixels": [
+              [
+                208.0,
+                216.0
+              ],
+              [
+                242.0,
+                260.0
+              ]
+            ],
+            "D_pixels": 37.89741688375691,
+            "principal_axis_ratio": 1.278645853860077
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        292.2810954812294,
+        146.02635632827386
+      ],
+      "mouth_pixels": [
+        149.3859183416154,
+        301.42552117817667
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6927299735852442,
+      "body_landmark_translation_to_reference": [
+        219.15038896889192,
+        -30.981663642855693
+      ],
+      "body_C_M_error_over_reference_D": 0.05792321130779864,
+      "near_eye_position_error_over_reference_D": 0.24888305615104267,
+      "far_visible_position_error_over_reference_D": 0.2334726595418873,
+      "near_D_after_body_fit_pixels": 58.82753638146949,
+      "pose_score": 1.161260884187775,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.7204635983935409,
+      "position_only_score": 0.5402789270007287
+    },
+    {
+      "candidate": "A",
+      "filename": "A_ortho_yaw40_pitch0.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 40,
+        "pitch": 0,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 790,
+            "center_pixels": [
+              122.37721518987341,
+              240.03037974683545
+            ],
+            "bbox_pixels": [
+              [
+                94.0,
+                206.0
+              ],
+              [
+                156.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 63.43056803594868,
+            "principal_axis_ratio": 2.0086367765716258
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 277,
+            "center_pixels": [
+              113.81949458483754,
+              254.33935018050542
+            ],
+            "bbox_pixels": [
+              [
+                98.0,
+                234.0
+              ],
+              [
+                130.0,
+                276.0
+              ]
+            ],
+            "D_pixels": 37.55994429663814,
+            "principal_axis_ratio": 1.3108508277163107
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1486,
+            "center_pixels": [
+              252.72409152086138,
+              245.2893674293405
+            ],
+            "bbox_pixels": [
+              [
+                206.0,
+                206.0
+              ],
+              [
+                298.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 86.99503350137758,
+            "principal_axis_ratio": 1.1404541411038183
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 283,
+            "center_pixels": [
+              225.6113074204947,
+              254.70671378091873
+            ],
+            "bbox_pixels": [
+              [
+                208.0,
+                234.0
+              ],
+              [
+                242.0,
+                276.0
+              ]
+            ],
+            "D_pixels": 37.96455142155909,
+            "principal_axis_ratio": 1.290210669375835
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        291.30268317063167,
+        146.93880837854044
+      ],
+      "mouth_pixels": [
+        149.3859183416154,
+        317.1347329782884
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6605686305039056,
+      "body_landmark_translation_to_reference": [
+        226.5758453885652,
+        -29.276211833589002
+      ],
+      "body_C_M_error_over_reference_D": 0.005996170008024884,
+      "near_eye_position_error_over_reference_D": 0.24979325927505858,
+      "far_visible_position_error_over_reference_D": 0.18887095351009786,
+      "near_D_after_body_fit_pixels": 57.46619014064637,
+      "pose_score": 1.0541641370305332,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.7291286120942094,
+      "position_only_score": 0.4446603827931813
+    },
+    {
+      "candidate": "A",
+      "filename": "A_ortho_yaw40_pitch5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 40,
+        "pitch": 5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 824,
+            "center_pixels": [
+              123.05825242718447,
+              247.5121359223301
+            ],
+            "bbox_pixels": [
+              [
+                94.0,
+                212.0
+              ],
+              [
+                156.0,
+                292.0
+              ]
+            ],
+            "D_pixels": 64.78115111239609,
+            "principal_axis_ratio": 1.9421891933761664
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 274,
+            "center_pixels": [
+              113.76642335766424,
+              263.81021897810217
+            ],
+            "bbox_pixels": [
+              [
+                98.0,
+                244.0
+              ],
+              [
+                130.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 37.355997390375464,
+            "principal_axis_ratio": 1.2837975559425558
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1556,
+            "center_pixels": [
+              252.6272493573265,
+              261.6002570694087
+            ],
+            "bbox_pixels": [
+              [
+                206.0,
+                220.0
+              ],
+              [
+                298.0,
+                304.0
+              ]
+            ],
+            "D_pixels": 89.02046352626823,
+            "principal_axis_ratio": 1.0924374077132863
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 287,
+            "center_pixels": [
+              225.55400696864112,
+              272.4668989547038
+            ],
+            "bbox_pixels": [
+              [
+                208.0,
+                252.0
+              ],
+              [
+                242.0,
+                294.0
+              ]
+            ],
+            "D_pixels": 38.231910720705116,
+            "principal_axis_ratio": 1.3390645285690914
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        289.32276188429574,
+        147.9433035369272
+      ],
+      "mouth_pixels": [
+        149.3859183416154,
+        332.71353911420067
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6307291660680078,
+      "body_landmark_translation_to_reference": [
+        233.77519836553577,
+        -27.582144765113753
+      ],
+      "body_C_M_error_over_reference_D": 0.06776957769067467,
+      "near_eye_position_error_over_reference_D": 0.2837389303829047,
+      "far_visible_position_error_over_reference_D": 0.1626077981344461,
+      "near_D_after_body_fit_pixels": 56.14780272291066,
+      "pose_score": 1.099985715646822,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.7277107818392836,
+      "position_only_score": 0.5141163062080254
+    },
+    {
+      "candidate": "A",
+      "filename": "A_ortho_yaw50_pitch-5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50,
+        "pitch": -5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 601,
+            "center_pixels": [
+              108.2396006655574,
+              233.9434276206323
+            ],
+            "bbox_pixels": [
+              [
+                84.0,
+                202.0
+              ],
+              [
+                142.0,
+                280.0
+              ]
+            ],
+            "D_pixels": 55.3251106238689,
+            "principal_axis_ratio": 2.452251984203877
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 229,
+            "center_pixels": [
+              98.02620087336244,
+              248.04366812227073
+            ],
+            "bbox_pixels": [
+              [
+                86.0,
+                228.0
+              ],
+              [
+                112.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 34.15095054280933,
+            "principal_axis_ratio": 1.5993809030885036
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1370,
+            "center_pixels": [
+              221.35474452554743,
+              230.1109489051095
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                192.0
+              ],
+              [
+                266.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 83.53054953218428,
+            "principal_axis_ratio": 1.2136093868712088
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 240,
+            "center_pixels": [
+              191.56666666666666,
+              238.84166666666667
+            ],
+            "bbox_pixels": [
+              [
+                178.0,
+                218.0
+              ],
+              [
+                204.0,
+                260.0
+              ]
+            ],
+            "D_pixels": 34.961549778946534,
+            "principal_axis_ratio": 1.5355911755387621
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        290.97965774650885,
+        146.16467883977472
+      ],
+      "mouth_pixels": [
+        120.50512708834243,
+        303.9426479909957
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6253215744287819,
+      "body_landmark_translation_to_reference": [
+        243.47322162516951,
+        -16.730911137873818
+      ],
+      "body_C_M_error_over_reference_D": 0.1637893342914473,
+      "near_eye_position_error_over_reference_D": 0.029268402241447205,
+      "far_visible_position_error_over_reference_D": 0.14702982745289742,
+      "near_D_after_body_fit_pixels": 52.233454746366824,
+      "pose_score": 0.8804853435913482,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6623338519106972,
+      "position_only_score": 0.3400875639857919
+    },
+    {
+      "candidate": "A",
+      "filename": "A_ortho_yaw50_pitch0.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50,
+        "pitch": 0,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 642,
+            "center_pixels": [
+              108.98442367601245,
+              238.57632398753893
+            ],
+            "bbox_pixels": [
+              [
+                84.0,
+                206.0
+              ],
+              [
+                142.0,
+                284.0
+              ]
+            ],
+            "D_pixels": 57.181108339030104,
+            "principal_axis_ratio": 2.3170672826261502
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 231,
+            "center_pixels": [
+              98.01731601731602,
+              254.21645021645023
+            ],
+            "bbox_pixels": [
+              [
+                86.0,
+                234.0
+              ],
+              [
+                112.0,
+                276.0
+              ]
+            ],
+            "D_pixels": 34.29975713230766,
+            "principal_axis_ratio": 1.5571678689006154
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1437,
+            "center_pixels": [
+              221.37926235212248,
+              245.2999304105776
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                206.0
+              ],
+              [
+                266.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 85.54870485949928,
+            "principal_axis_ratio": 1.1570546688778904
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 241,
+            "center_pixels": [
+              191.551867219917,
+              254.7219917012448
+            ],
+            "bbox_pixels": [
+              [
+                178.0,
+                234.0
+              ],
+              [
+                204.0,
+                276.0
+              ]
+            ],
+            "D_pixels": 35.03431062722223,
+            "principal_axis_ratio": 1.5537224581636058
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        289.63494092297805,
+        146.93880837854041
+      ],
+      "mouth_pixels": [
+        120.50512708834243,
+        317.1347329782884
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6080012314731303,
+      "body_landmark_translation_to_reference": [
+        247.44554516470026,
+        -17.078642319524306
+      ],
+      "body_C_M_error_over_reference_D": 0.10894144485232647,
+      "near_eye_position_error_over_reference_D": 0.07836337177553243,
+      "far_visible_position_error_over_reference_D": 0.16327791751188517,
+      "near_D_after_body_fit_pixels": 52.01371790550694,
+      "pose_score": 0.8762253500032633,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6684041381215691,
+      "position_only_score": 0.35058273413974406
+    },
+    {
+      "candidate": "A",
+      "filename": "A_ortho_yaw50_pitch5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50,
+        "pitch": 5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 690,
+            "center_pixels": [
+              109.71884057971015,
+              243.4927536231884
+            ],
+            "bbox_pixels": [
+              [
+                84.0,
+                210.0
+              ],
+              [
+                142.0,
+                290.0
+              ]
+            ],
+            "D_pixels": 59.28019183056891,
+            "principal_axis_ratio": 2.195985494639325
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 227,
+            "center_pixels": [
+              98.05286343612335,
+              261.215859030837
+            ],
+            "bbox_pixels": [
+              [
+                86.0,
+                242.0
+              ],
+              [
+                112.0,
+                284.0
+              ]
+            ],
+            "D_pixels": 34.00149271163735,
+            "principal_axis_ratio": 1.4963444510299957
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1496,
+            "center_pixels": [
+              221.29144385026737,
+              260.7232620320856
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                220.0
+              ],
+              [
+                266.0,
+                302.0
+              ]
+            ],
+            "D_pixels": 87.28725815200758,
+            "principal_axis_ratio": 1.1139677744292362
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 243,
+            "center_pixels": [
+              191.3744855967078,
+              271.1687242798354
+            ],
+            "bbox_pixels": [
+              [
+                178.0,
+                250.0
+              ],
+              [
+                204.0,
+                294.0
+              ]
+            ],
+            "D_pixels": 35.17938085701024,
+            "principal_axis_ratio": 1.5896193500036881
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        287.1729423824919,
+        147.75478100759173
+      ],
+      "mouth_pixels": [
+        120.50512708834243,
+        330.1964123013816
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5918963304627928,
+      "body_landmark_translation_to_reference": [
+        251.4768017134072,
+        -17.448778729947094
+      ],
+      "body_C_M_error_over_reference_D": 0.053628198367278106,
+      "near_eye_position_error_over_reference_D": 0.16377029432118428,
+      "far_visible_position_error_over_reference_D": 0.18931427322469288,
+      "near_D_after_body_fit_pixels": 51.66500779633178,
+      "pose_score": 0.9294831148582258,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6791391216268314,
+      "position_only_score": 0.4067127659131553
+    },
+    {
+      "candidate": "A",
+      "filename": "A_ortho_yaw60_pitch-5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 60,
+        "pitch": -5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 479,
+            "center_pixels": [
+              100.43423799582463,
+              234.73068893528185
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                204.0
+              ],
+              [
+                136.0,
+                282.0
+              ]
+            ],
+            "D_pixels": 49.391567779455755,
+            "principal_axis_ratio": 2.8434213853216854
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 175,
+            "center_pixels": [
+              87.81714285714285,
+              251.13142857142856
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                232.0
+              ],
+              [
+                98.0,
+                274.0
+              ]
+            ],
+            "D_pixels": 29.854106607209232,
+            "principal_axis_ratio": 2.010683810825759
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1287,
+            "center_pixels": [
+              191.90831390831391,
+              231.3224553224553
+            ],
+            "bbox_pixels": [
+              [
+                150.0,
+                194.0
+              ],
+              [
+                234.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 80.96071378327032,
+            "principal_axis_ratio": 1.2714207402580822
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 189,
+            "center_pixels": [
+              160.79365079365078,
+              240.8042328042328
+            ],
+            "bbox_pixels": [
+              [
+                150.0,
+                220.0
+              ],
+              [
+                170.0,
+                262.0
+              ]
+            ],
+            "D_pixels": 31.025297674958463,
+            "principal_axis_ratio": 1.9846973463284119
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        289.05796136135314,
+        146.29931739350167
+      ],
+      "mouth_pixels": [
+        97.07819671970192,
+        306.85862847557746
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5759995515771353,
+      "body_landmark_translation_to_reference": [
+        260.9212514271756,
+        -6.509386807102686
+      ],
+      "body_C_M_error_over_reference_D": 0.22931046678036962,
+      "near_eye_position_error_over_reference_D": 0.16453056310871386,
+      "far_visible_position_error_over_reference_D": 0.1683259244821575,
+      "near_D_after_body_fit_pixels": 46.633334834528505,
+      "pose_score": 1.0474344994331444,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6100683340277319,
+      "position_only_score": 0.562166954371241
+    },
+    {
+      "candidate": "A",
+      "filename": "A_ortho_yaw60_pitch0.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 60,
+        "pitch": 0,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 516,
+            "center_pixels": [
+              100.9922480620155,
+              236.86046511627907
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                206.0
+              ],
+              [
+                136.0,
+                284.0
+              ]
+            ],
+            "D_pixels": 51.26369495396695,
+            "principal_axis_ratio": 2.6851330237760047
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 176,
+            "center_pixels": [
+              87.82954545454545,
+              253.8409090909091
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                234.0
+              ],
+              [
+                98.0,
+                276.0
+              ]
+            ],
+            "D_pixels": 29.93928254807644,
+            "principal_axis_ratio": 1.9560917931109583
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1352,
+            "center_pixels": [
+              192.01183431952663,
+              245.17307692307693
+            ],
+            "bbox_pixels": [
+              [
+                150.0,
+                206.0
+              ],
+              [
+                234.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 82.979994323498,
+            "principal_axis_ratio": 1.2209779234954385
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 190,
+            "center_pixels": [
+              160.6315789473684,
+              254.83157894736843
+            ],
+            "bbox_pixels": [
+              [
+                150.0,
+                234.0
+              ],
+              [
+                170.0,
+                276.0
+              ]
+            ],
+            "D_pixels": 31.10726690017501,
+            "principal_axis_ratio": 1.9939493989690091
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        288.28213575040684,
+        146.93880837854041
+      ],
+      "mouth_pixels": [
+        97.07819671970192,
+        317.1347329782884
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5659499075824453,
+      "body_landmark_translation_to_reference": [
+        263.0810561046792,
+        -7.321188921177708
+      ],
+      "body_C_M_error_over_reference_D": 0.1891580521618912,
+      "near_eye_position_error_over_reference_D": 0.16942728383425557,
+      "far_visible_position_error_over_reference_D": 0.2120429508057387,
+      "near_D_after_body_fit_pixels": 46.96252011857553,
+      "pose_score": 1.0472275809748743,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6177837847772696,
+      "position_only_score": 0.5706282868018855
+    },
+    {
+      "candidate": "A",
+      "filename": "A_ortho_yaw60_pitch5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 60,
+        "pitch": 5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 557,
+            "center_pixels": [
+              101.83842010771993,
+              239.02692998204668
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                206.0
+              ],
+              [
+                136.0,
+                284.0
+              ]
+            ],
+            "D_pixels": 53.26140915963398,
+            "principal_axis_ratio": 2.5164874312329393
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 179,
+            "center_pixels": [
+              87.85474860335195,
+              257.9329608938547
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                238.0
+              ],
+              [
+                98.0,
+                280.0
+              ]
+            ],
+            "D_pixels": 30.19336870954244,
+            "principal_axis_ratio": 1.93340586293152
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1412,
+            "center_pixels": [
+              192.29603399433427,
+              259.25779036827197
+            ],
+            "bbox_pixels": [
+              [
+                150.0,
+                218.0
+              ],
+              [
+                234.0,
+                302.0
+              ]
+            ],
+            "D_pixels": 84.80127916879674,
+            "principal_axis_ratio": 1.1795390171792397
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 188,
+            "center_pixels": [
+              160.62765957446808,
+              269.3404255319149
+            ],
+            "bbox_pixels": [
+              [
+                150.0,
+                248.0
+              ],
+              [
+                170.0,
+                292.0
+              ]
+            ],
+            "D_pixels": 30.943111311580196,
+            "principal_axis_ratio": 2.022670319140309
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        286.35750447148484,
+        147.5583899842843
+      ],
+      "mouth_pixels": [
+        97.07819671970192,
+        327.28043181679993
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5573400710765083,
+      "body_landmark_translation_to_reference": [
+        265.27633790079494,
+        -8.32335134625086
+      ],
+      "body_C_M_error_over_reference_D": 0.14706585488368465,
+      "near_eye_position_error_over_reference_D": 0.20674486851958546,
+      "far_visible_position_error_over_reference_D": 0.25699073888680296,
+      "near_D_after_body_fit_pixels": 47.26315095931599,
+      "pose_score": 1.085570643009102,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6280731809907876,
+      "position_only_score": 0.610801462290073
+    },
+    {
+      "candidate": "A",
+      "filename": "A_ortho_yaw70_pitch-5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 70,
+        "pitch": -5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 345,
+            "center_pixels": [
+              98.35362318840579,
+              234.15072463768115
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                206.0
+              ],
+              [
+                132.0,
+                272.0
+              ]
+            ],
+            "D_pixels": 41.917425633434654,
+            "principal_axis_ratio": 3.324695908089335
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 110,
+            "center_pixels": [
+              84.36363636363636,
+              252.0909090909091
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                234.0
+              ],
+              [
+                92.0,
+                272.0
+              ]
+            ],
+            "D_pixels": 23.66908109081279,
+            "principal_axis_ratio": 2.54979224852208
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1183,
+            "center_pixels": [
+              165.614539306847,
+              232.77430262045647
+            ],
+            "bbox_pixels": [
+              [
+                128.0,
+                194.0
+              ],
+              [
+                204.0,
+                272.0
+              ]
+            ],
+            "D_pixels": 77.620677178744,
+            "principal_axis_ratio": 1.3714546365204743
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 128,
+            "center_pixels": [
+              134.265625,
+              243.203125
+            ],
+            "bbox_pixels": [
+              [
+                128.0,
+                222.0
+              ],
+              [
+                140.0,
+                264.0
+              ]
+            ],
+            "D_pixels": 25.532305945691693,
+            "principal_axis_ratio": 3.0351187863858238
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        287.7454781781314,
+        146.50406953842926
+      ],
+      "mouth_pixels": [
+        79.81694266034626,
+        310.0848620404551
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5417648107582016,
+      "body_landmark_translation_to_reference": [
+        272.5621856946862,
+        0.31809194443812316
+      ],
+      "body_C_M_error_over_reference_D": 0.26807123759291024,
+      "near_eye_position_error_over_reference_D": 0.32951644382412504,
+      "far_visible_position_error_over_reference_D": 0.27056335159094325,
+      "near_D_after_body_fit_pixels": 42.0521514826657,
+      "pose_score": 1.2862282434842638,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.540029115398049,
+      "position_only_score": 0.8681510330079786
+    },
+    {
+      "candidate": "A",
+      "filename": "A_ortho_yaw70_pitch0.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 70,
+        "pitch": 0,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 390,
+            "center_pixels": [
+              98.70769230769231,
+              234.2153846153846
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                206.0
+              ],
+              [
+                134.0,
+                276.0
+              ]
+            ],
+            "D_pixels": 44.56740613707347,
+            "principal_axis_ratio": 3.0868294425624554
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 118,
+            "center_pixels": [
+              84.44067796610169,
+              253.3050847457627
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                234.0
+              ],
+              [
+                92.0,
+                276.0
+              ]
+            ],
+            "D_pixels": 24.514670406003766,
+            "principal_axis_ratio": 2.658970800712203
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1242,
+            "center_pixels": [
+              165.82608695652175,
+              244.91143317230274
+            ],
+            "bbox_pixels": [
+              [
+                128.0,
+                206.0
+              ],
+              [
+                204.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 79.53272319142788,
+            "principal_axis_ratio": 1.3177273809926617
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 128,
+            "center_pixels": [
+              134.265625,
+              254.984375
+            ],
+            "bbox_pixels": [
+              [
+                128.0,
+                234.0
+              ],
+              [
+                140.0,
+                276.0
+              ]
+            ],
+            "D_pixels": 25.532305945691693,
+            "principal_axis_ratio": 3.026142516460618
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        287.28537195353414,
+        146.93880837854044
+      ],
+      "mouth_pixels": [
+        79.81694266034626,
+        317.1347329782884
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5362776151139155,
+      "body_landmark_translation_to_reference": [
+        273.69400148641336,
+        -0.4361259981545942
+      ],
+      "body_C_M_error_over_reference_D": 0.24161914480753952,
+      "near_eye_position_error_over_reference_D": 0.3264538969368347,
+      "far_visible_position_error_over_reference_D": 0.30540621544135965,
+      "near_D_after_body_fit_pixels": 42.651619116614135,
+      "pose_score": 1.302079578097683,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.5603656501211943,
+      "position_only_score": 0.8734792571857339
+    },
+    {
+      "candidate": "A",
+      "filename": "A_ortho_yaw70_pitch5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 70,
+        "pitch": 5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 437,
+            "center_pixels": [
+              99.84439359267735,
+              233.7025171624714
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                204.0
+              ],
+              [
+                136.0,
+                276.0
+              ]
+            ],
+            "D_pixels": 47.17650606177894,
+            "principal_axis_ratio": 2.9741493611577674
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 120,
+            "center_pixels": [
+              84.43333333333334,
+              253.91666666666666
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                234.0
+              ],
+              [
+                92.0,
+                274.0
+              ]
+            ],
+            "D_pixels": 24.721548929484133,
+            "principal_axis_ratio": 2.532530142782936
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1297,
+            "center_pixels": [
+              165.98612181958364,
+              256.9730146491904
+            ],
+            "bbox_pixels": [
+              [
+                128.0,
+                216.0
+              ],
+              [
+                204.0,
+                300.0
+              ]
+            ],
+            "D_pixels": 81.2746378526907,
+            "principal_axis_ratio": 1.278814387771376
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 128,
+            "center_pixels": [
+              134.140625,
+              267.296875
+            ],
+            "bbox_pixels": [
+              [
+                128.0,
+                246.0
+              ],
+              [
+                140.0,
+                288.0
+              ]
+            ],
+            "D_pixels": 25.532305945691693,
+            "principal_axis_ratio": 3.0464631040391073
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        285.7290115920511,
+        147.34781427086634
+      ],
+      "mouth_pixels": [
+        79.81694266034626,
+        324.0541982519222
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5324245576281713,
+      "body_landmark_translation_to_reference": [
+        274.8155568855782,
+        -1.4930039912376714
+      ],
+      "body_C_M_error_over_reference_D": 0.2127825593079084,
+      "near_eye_position_error_over_reference_D": 0.3387859367663338,
+      "far_visible_position_error_over_reference_D": 0.35107622373637776,
+      "near_D_after_body_fit_pixels": 43.272613105108675,
+      "pose_score": 1.3463958325552765,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.5804579055434954,
+      "position_only_score": 0.90264471981062
+    },
+    {
+      "candidate": "A",
+      "filename": "A_ortho_yaw80_pitch-5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 80,
+        "pitch": -5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 191,
+            "center_pixels": [
+              100.76439790575917,
+              233.1413612565445
+            ],
+            "bbox_pixels": [
+              [
+                84.0,
+                210.0
+              ],
+              [
+                126.0,
+                262.0
+              ]
+            ],
+            "D_pixels": 31.18902069924069,
+            "principal_axis_ratio": 3.903572039375507
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 37,
+            "center_pixels": [
+              87.02702702702703,
+              250.1081081081081
+            ],
+            "bbox_pixels": [
+              [
+                84.0,
+                238.0
+              ],
+              [
+                90.0,
+                262.0
+              ]
+            ],
+            "D_pixels": 13.727325035155395,
+            "principal_axis_ratio": 3.409099471360453
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1065,
+            "center_pixels": [
+              142.81126760563382,
+              234.45446009389673
+            ],
+            "bbox_pixels": [
+              [
+                108.0,
+                196.0
+              ],
+              [
+                178.0,
+                274.0
+              ]
+            ],
+            "D_pixels": 73.64781368494107,
+            "principal_axis_ratio": 1.510278787195555
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 80,
+            "center_pixels": [
+              112.425,
+              246.125
+            ],
+            "bbox_pixels": [
+              [
+                108.0,
+                226.0
+              ],
+              [
+                116.0,
+                266.0
+              ]
+            ],
+            "D_pixels": 20.185060176161283,
+            "principal_axis_ratio": 4.225754016933036
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        286.4221087879317,
+        146.68325471495902
+      ],
+      "mouth_pixels": [
+        69.24583938025293,
+        313.5233212113129
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5220776425548223,
+      "body_landmark_translation_to_reference": [
+        279.28523642240015,
+        3.868217876092558
+      ],
+      "body_C_M_error_over_reference_D": 0.282941143725188,
+      "near_eye_position_error_over_reference_D": 0.4814761843736741,
+      "far_visible_position_error_over_reference_D": 0.374964230489724,
+      "near_D_after_body_fit_pixels": 38.44987694795081,
+      "pose_score": 1.4308593768677706,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.4234887519222852,
+      "position_only_score": 1.1393815585885863
+    },
+    {
+      "candidate": "A",
+      "filename": "A_ortho_yaw80_pitch0.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 80,
+        "pitch": 0,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 257,
+            "center_pixels": [
+              102.43579766536965,
+              230.3501945525292
+            ],
+            "bbox_pixels": [
+              [
+                84.0,
+                206.0
+              ],
+              [
+                134.0,
+                264.0
+              ]
+            ],
+            "D_pixels": 36.17858830838687,
+            "principal_axis_ratio": 3.603955454327327
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 47,
+            "center_pixels": [
+              86.93617021276596,
+              249.19148936170214
+            ],
+            "bbox_pixels": [
+              [
+                84.0,
+                234.0
+              ],
+              [
+                90.0,
+                264.0
+              ]
+            ],
+            "D_pixels": 15.471555655790098,
+            "principal_axis_ratio": 3.8300228973855717
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1119,
+            "center_pixels": [
+              143.08489722966934,
+              244.39857015192135
+            ],
+            "bbox_pixels": [
+              [
+                108.0,
+                206.0
+              ],
+              [
+                178.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 75.4918552046152,
+            "principal_axis_ratio": 1.4592194516710737
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 83,
+            "center_pixels": [
+              112.43373493975903,
+              255.5421686746988
+            ],
+            "bbox_pixels": [
+              [
+                108.0,
+                234.0
+              ],
+              [
+                116.0,
+                276.0
+              ]
+            ],
+            "D_pixels": 20.56004690782767,
+            "principal_axis_ratio": 4.241668072044843
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        286.67493569594103,
+        146.93880837854044
+      ],
+      "mouth_pixels": [
+        69.24583938025293,
+        317.1347329782884
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5188225839246099,
+      "body_landmark_translation_to_reference": [
+        279.798510279638,
+        3.6140830711028684
+      ],
+      "body_C_M_error_over_reference_D": 0.2712291812538809,
+      "near_eye_position_error_over_reference_D": 0.47901535030276404,
+      "far_visible_position_error_over_reference_D": 0.4160196594214278,
+      "near_D_after_body_fit_pixels": 39.16687938252097,
+      "pose_score": 1.5241700352794614,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.479238299420877,
+      "position_only_score": 1.1662641909780729
+    },
+    {
+      "candidate": "A",
+      "filename": "A_ortho_yaw80_pitch5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 80,
+        "pitch": 5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 313,
+            "center_pixels": [
+              103.73801916932908,
+              227.6038338658147
+            ],
+            "bbox_pixels": [
+              [
+                84.0,
+                202.0
+              ],
+              [
+                140.0,
+                264.0
+              ]
+            ],
+            "D_pixels": 39.926130666625134,
+            "principal_axis_ratio": 3.4098738162715923
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 55,
+            "center_pixels": [
+              86.94545454545455,
+              248.1818181818182
+            ],
+            "bbox_pixels": [
+              [
+                84.0,
+                232.0
+              ],
+              [
+                90.0,
+                264.0
+              ]
+            ],
+            "D_pixels": 16.73656774376801,
+            "principal_axis_ratio": 3.986432861008604
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1167,
+            "center_pixels": [
+              143.4018851756641,
+              254.51756640959726
+            ],
+            "bbox_pixels": [
+              [
+                108.0,
+                214.0
+              ],
+              [
+                178.0,
+                296.0
+              ]
+            ],
+            "D_pixels": 77.09398287041434,
+            "principal_axis_ratio": 1.4147575653636557
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 84,
+            "center_pixels": [
+              112.4047619047619,
+              264.6190476190476
+            ],
+            "bbox_pixels": [
+              [
+                108.0,
+                244.0
+              ],
+              [
+                116.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 20.683531783305643,
+            "principal_axis_ratio": 4.29494738336237
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        284.93674869155905,
+        147.12699905656623
+      ],
+      "mouth_pixels": [
+        69.24583938025293,
+        320.61573908106436
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5189322835606481,
+      "body_landmark_translation_to_reference": [
+        280.22998876561553,
+        2.636596389664561
+      ],
+      "body_C_M_error_over_reference_D": 0.25411432835519776,
+      "near_eye_position_error_over_reference_D": 0.4814675424369,
+      "far_visible_position_error_over_reference_D": 0.45842491475018704,
+      "near_D_after_body_fit_pixels": 40.006556579729605,
+      "pose_score": 1.5944170343994732,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.5178890644907546,
+      "position_only_score": 1.194006785542285
+    },
+    {
+      "candidate": "A",
+      "filename": "A_refine_0_ORTHO.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 45,
+        "pitch": -5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 671,
+            "center_pixels": [
+              114.32488822652758,
+              233.30551415797316
+            ],
+            "bbox_pixels": [
+              [
+                88.0,
+                200.0
+              ],
+              [
+                148.0,
+                280.0
+              ]
+            ],
+            "D_pixels": 58.45831795449795,
+            "principal_axis_ratio": 2.3057436080789175
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 251,
+            "center_pixels": [
+              105.16334661354581,
+              246.25498007968127
+            ],
+            "bbox_pixels": [
+              [
+                92.0,
+                226.0
+              ],
+              [
+                120.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 35.75377606511099,
+            "principal_axis_ratio": 1.5117296849744801
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1393,
+            "center_pixels": [
+              236.83560660445082,
+              229.64967695620962
+            ],
+            "bbox_pixels": [
+              [
+                192.0,
+                192.0
+              ],
+              [
+                282.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 84.2287999633399,
+            "principal_axis_ratio": 1.190285828424754
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 260,
+            "center_pixels": [
+              208.2923076923077,
+              237.96153846153845
+            ],
+            "bbox_pixels": [
+              [
+                192.0,
+                218.0
+              ],
+              [
+                222.0,
+                260.0
+              ]
+            ],
+            "D_pixels": 36.38913473173784,
+            "principal_axis_ratio": 1.394356035038483
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        291.7898692493473,
+        146.10340068168878
+      ],
+      "mouth_pixels": [
+        134.315041425948,
+        302.6291345195522
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6566906801379397,
+      "body_landmark_translation_to_reference": [
+        232.21881657764052,
+        -23.33923687066249
+      ],
+      "body_C_M_error_over_reference_D": 0.11704400936965965,
+      "near_eye_position_error_over_reference_D": 0.13096567258806974,
+      "far_visible_position_error_over_reference_D": 0.18270380096537697,
+      "near_D_after_body_fit_pixels": 55.31226793512815,
+      "pose_score": 1.0089706562761684,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6940419189154019,
+      "position_only_score": 0.43071348292310635
+    },
+    {
+      "candidate": "A",
+      "filename": "A_refine_1_ORTHO.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 55,
+        "pitch": -5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 535,
+            "center_pixels": [
+              103.44672897196261,
+              234.52336448598132
+            ],
+            "bbox_pixels": [
+              [
+                80.0,
+                202.0
+              ],
+              [
+                138.0,
+                280.0
+              ]
+            ],
+            "D_pixels": 52.198971500722585,
+            "principal_axis_ratio": 2.62606076511043
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 204,
+            "center_pixels": [
+              92.0,
+              249.55882352941177
+            ],
+            "bbox_pixels": [
+              [
+                80.0,
+                230.0
+              ],
+              [
+                104.0,
+                272.0
+              ]
+            ],
+            "D_pixels": 32.23295624828558,
+            "principal_axis_ratio": 1.8215278865279882
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1330,
+            "center_pixels": [
+              206.41052631578947,
+              230.62255639097745
+            ],
+            "bbox_pixels": [
+              [
+                164.0,
+                192.0
+              ],
+              [
+                250.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 82.30209218477417,
+            "principal_axis_ratio": 1.2311790721673759
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 212,
+            "center_pixels": [
+              175.71698113207546,
+              239.69811320754718
+            ],
+            "bbox_pixels": [
+              [
+                164.0,
+                220.0
+              ],
+              [
+                188.0,
+                262.0
+              ]
+            ],
+            "D_pixels": 32.85889733292062,
+            "principal_axis_ratio": 1.6755329240804302
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        289.9542851068553,
+        146.25223303595172
+      ],
+      "mouth_pixels": [
+        108.06127711556209,
+        305.3560649618684
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5987125960222849,
+      "body_landmark_translation_to_reference": [
+        252.979913120652,
+        -11.191788239740276
+      ],
+      "body_C_M_error_over_reference_D": 0.20046745820497672,
+      "near_eye_position_error_over_reference_D": 0.07379809617536794,
+      "far_visible_position_error_over_reference_D": 0.14042507654645925,
+      "near_D_after_body_fit_pixels": 49.275299270011544,
+      "pose_score": 0.9201287401515603,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6342362644139362,
+      "position_only_score": 0.4146906309268039
+    },
+    {
+      "candidate": "A",
+      "filename": "A_refine_2_ORTHO.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50,
+        "pitch": -7.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 578,
+            "center_pixels": [
+              107.90311418685121,
+              231.62629757785467
+            ],
+            "bbox_pixels": [
+              [
+                84.0,
+                200.0
+              ],
+              [
+                142.0,
+                278.0
+              ]
+            ],
+            "D_pixels": 54.25615013459485,
+            "principal_axis_ratio": 2.524632225022202
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 227,
+            "center_pixels": [
+              97.90308370044053,
+              244.99559471365637
+            ],
+            "bbox_pixels": [
+              [
+                86.0,
+                224.0
+              ],
+              [
+                112.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 34.00149271163735,
+            "principal_axis_ratio": 1.6252582837312324
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1327,
+            "center_pixels": [
+              221.24039186134138,
+              222.65410700828937
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                186.0
+              ],
+              [
+                266.0,
+                260.0
+              ]
+            ],
+            "D_pixels": 82.20921787399661,
+            "principal_axis_ratio": 1.2391435753645454
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 237,
+            "center_pixels": [
+              191.55274261603375,
+              230.65822784810126
+            ],
+            "bbox_pixels": [
+              [
+                178.0,
+                210.0
+              ],
+              [
+                204.0,
+                252.0
+              ]
+            ],
+            "D_pixels": 34.74235294865525,
+            "principal_axis_ratio": 1.522257545418123
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        291.5093190437601,
+        145.8037870287199
+      ],
+      "mouth_pixels": [
+        120.50512708834243,
+        297.3290603887475
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6338629607355108,
+      "body_landmark_translation_to_reference": [
+        241.5480300328303,
+        -16.442749331596644
+      ],
+      "body_C_M_error_over_reference_D": 0.19210403538091175,
+      "near_eye_position_error_over_reference_D": 0.0640032209372915,
+      "far_visible_position_error_over_reference_D": 0.1449030874019669,
+      "near_D_after_body_fit_pixels": 52.109378241362165,
+      "pose_score": 0.9482828597161901,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6599764787660931,
+      "position_only_score": 0.40101034372017014
+    },
+    {
+      "candidate": "A",
+      "filename": "A_refine_3_ORTHO.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50,
+        "pitch": -2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 620,
+            "center_pixels": [
+              108.62903225806451,
+              236.16129032258064
+            ],
+            "bbox_pixels": [
+              [
+                84.0,
+                204.0
+              ],
+              [
+                142.0,
+                282.0
+              ]
+            ],
+            "D_pixels": 56.19282935520513,
+            "principal_axis_ratio": 2.3862593691650456
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 228,
+            "center_pixels": [
+              97.93859649122807,
+              251.25438596491227
+            ],
+            "bbox_pixels": [
+              [
+                86.0,
+                232.0
+              ],
+              [
+                112.0,
+                274.0
+              ]
+            ],
+            "D_pixels": 34.07630356711932,
+            "principal_axis_ratio": 1.5887554412484586
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1403,
+            "center_pixels": [
+              221.399857448325,
+              237.48681397006416
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                198.0
+              ],
+              [
+                266.0,
+                278.0
+              ]
+            ],
+            "D_pixels": 84.53058810308688,
+            "principal_axis_ratio": 1.183086231878192
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 240,
+            "center_pixels": [
+              191.5,
+              246.74166666666667
+            ],
+            "bbox_pixels": [
+              [
+                178.0,
+                226.0
+              ],
+              [
+                204.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 34.961549778946534,
+            "principal_axis_ratio": 1.5444890552353656
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        289.90127594548665,
+        146.5501952910503
+      ],
+      "mouth_pixels": [
+        120.50512708834243,
+        310.5487305387076
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6176328930367057,
+      "body_landmark_translation_to_reference": [
+        245.38813136509236,
+        -17.159665982101984
+      ],
+      "body_C_M_error_over_reference_D": 0.13433405817116523,
+      "near_eye_position_error_over_reference_D": 0.040198171153645434,
+      "far_visible_position_error_over_reference_D": 0.15394377480952792,
+      "near_D_after_body_fit_pixels": 52.208871680203686,
+      "pose_score": 0.8597816921135395,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6647632604504863,
+      "position_only_score": 0.3284760041343386
+    },
+    {
+      "candidate": "A",
+      "filename": "A_refine_4_PERSP.png",
+      "pose": {
+        "type": "PERSP",
+        "yaw": 50,
+        "pitch": -5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 2.1500000000000004,
+        "scale": 0.86,
+        "lens": 90.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 526,
+            "center_pixels": [
+              100.47528517110266,
+              230.06463878326997
+            ],
+            "bbox_pixels": [
+              [
+                76.0,
+                198.0
+              ],
+              [
+                136.0,
+                278.0
+              ]
+            ],
+            "D_pixels": 51.758052534101225,
+            "principal_axis_ratio": 2.7841102834736136
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 203,
+            "center_pixels": [
+              88.1576354679803,
+              245.0935960591133
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                224.0
+              ],
+              [
+                100.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 32.15385684991696,
+            "principal_axis_ratio": 1.9454580984486247
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1668,
+            "center_pixels": [
+              211.41127098321343,
+              221.6306954436451
+            ],
+            "bbox_pixels": [
+              [
+                162.0,
+                180.0
+              ],
+              [
+                260.0,
+                264.0
+              ]
+            ],
+            "D_pixels": 92.16861853403796,
+            "principal_axis_ratio": 1.2512640176229204
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 280,
+            "center_pixels": [
+              176.7357142857143,
+              230.60714285714286
+            ],
+            "bbox_pixels": [
+              [
+                162.0,
+                206.0
+              ],
+              [
+                190.0,
+                256.0
+              ]
+            ],
+            "D_pixels": 37.762789755305185,
+            "principal_axis_ratio": 1.6551032503275716
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        292.56379528452305,
+        144.47130206875917
+      ],
+      "mouth_pixels": [
+        100.33432266669637,
+        304.3857045543377
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5762409097658732,
+      "body_landmark_translation_to_reference": [
+        258.92639391162334,
+        -5.324884925639935
+      ],
+      "body_C_M_error_over_reference_D": 0.23271232725019345,
+      "near_eye_position_error_over_reference_D": 0.10125836718644472,
+      "far_visible_position_error_over_reference_D": 0.1807038263101632,
+      "near_D_after_body_fit_pixels": 53.111328595917755,
+      "pose_score": 0.9191866545416457,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.5615582977951105,
+      "position_only_score": 0.5146745207468014
+    },
+    {
+      "candidate": "A",
+      "filename": "A_refine_5_PERSP.png",
+      "pose": {
+        "type": "PERSP",
+        "yaw": 50,
+        "pitch": -5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 3.2249999999999996,
+        "scale": 0.86,
+        "lens": 135.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 549,
+            "center_pixels": [
+              103.13661202185793,
+              231.4207650273224
+            ],
+            "bbox_pixels": [
+              [
+                80.0,
+                200.0
+              ],
+              [
+                140.0,
+                280.0
+              ]
+            ],
+            "D_pixels": 52.877538144645285,
+            "principal_axis_ratio": 2.6656576182737313
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 216,
+            "center_pixels": [
+              91.39814814814815,
+              246.38888888888889
+            ],
+            "bbox_pixels": [
+              [
+                80.0,
+                226.0
+              ],
+              [
+                104.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 33.16743834924821,
+            "principal_axis_ratio": 1.8193137406113489
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1555,
+            "center_pixels": [
+              215.01864951768488,
+              224.66495176848875
+            ],
+            "bbox_pixels": [
+              [
+                168.0,
+                184.0
+              ],
+              [
+                262.0,
+                266.0
+              ]
+            ],
+            "D_pixels": 88.99185338137819,
+            "principal_axis_ratio": 1.2333430983814602
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 265,
+            "center_pixels": [
+              182.1056603773585,
+              233.40377358490565
+            ],
+            "bbox_pixels": [
+              [
+                168.0,
+                212.0
+              ],
+              [
+                196.0,
+                258.0
+              ]
+            ],
+            "D_pixels": 36.73736405104852,
+            "principal_axis_ratio": 1.5988677647834526
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        292.03683305433594,
+        145.233775661564
+      ],
+      "mouth_pixels": [
+        107.54344865074069,
+        304.2273543707545
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5933740268826883,
+      "body_landmark_translation_to_reference": [
+        253.57809796924823,
+        -9.349280327260203
+      ],
+      "body_C_M_error_over_reference_D": 0.2100723594329123,
+      "near_eye_position_error_over_reference_D": 0.07377909839460413,
+      "far_visible_position_error_over_reference_D": 0.16284231248121386,
+      "near_D_after_body_fit_pixels": 52.80545440066216,
+      "pose_score": 0.892931600550724,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.5941840307340994,
+      "position_only_score": 0.44669377030873025
+    },
+    {
+      "candidate": "B",
+      "filename": "B_ortho_yaw40_pitch-5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 40,
+        "pitch": -5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 873,
+            "center_pixels": [
+              117.97250859106529,
+              232.28636884306988
+            ],
+            "bbox_pixels": [
+              [
+                88.0,
+                198.0
+              ],
+              [
+                154.0,
+                278.0
+              ]
+            ],
+            "D_pixels": 66.67947577939698,
+            "principal_axis_ratio": 1.757897816313788
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 277,
+            "center_pixels": [
+              106.75090252707581,
+              240.4837545126354
+            ],
+            "bbox_pixels": [
+              [
+                92.0,
+                220.0
+              ],
+              [
+                122.0,
+                262.0
+              ]
+            ],
+            "D_pixels": 37.55994429663814,
+            "principal_axis_ratio": 1.3223038755159586
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1386,
+            "center_pixels": [
+              249.45165945165945,
+              228.78932178932178
+            ],
+            "bbox_pixels": [
+              [
+                206.0,
+                190.0
+              ],
+              [
+                294.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 84.01690327554178,
+            "principal_axis_ratio": 1.1402724426147697
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 282,
+            "center_pixels": [
+              224.4468085106383,
+              231.9078014184397
+            ],
+            "bbox_pixels": [
+              [
+                208.0,
+                212.0
+              ],
+              [
+                240.0,
+                252.0
+              ]
+            ],
+            "D_pixels": 37.89741688375691,
+            "principal_axis_ratio": 1.2825395035563032
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        292.2810954812294,
+        146.02635632827386
+      ],
+      "mouth_pixels": [
+        149.3859183416154,
+        301.42552117817667
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6927299735852442,
+      "body_landmark_translation_to_reference": [
+        219.15038896889192,
+        -30.981663642855693
+      ],
+      "body_C_M_error_over_reference_D": 0.05792321130779864,
+      "near_eye_position_error_over_reference_D": 0.2066270524052594,
+      "far_visible_position_error_over_reference_D": 0.27670316097386083,
+      "near_D_after_body_fit_pixels": 58.201027186780074,
+      "pose_score": 1.2474499617672286,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.7936435786107828,
+      "position_only_score": 0.5412534246869188
+    },
+    {
+      "candidate": "B",
+      "filename": "B_ortho_yaw40_pitch0.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 40,
+        "pitch": 0,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 907,
+            "center_pixels": [
+              118.44542447629549,
+              240.04630650496142
+            ],
+            "bbox_pixels": [
+              [
+                88.0,
+                206.0
+              ],
+              [
+                154.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 67.96552852953599,
+            "principal_axis_ratio": 1.6875378886089065
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 280,
+            "center_pixels": [
+              106.65714285714286,
+              250.0
+            ],
+            "bbox_pixels": [
+              [
+                92.0,
+                230.0
+              ],
+              [
+                122.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 37.762789755305185,
+            "principal_axis_ratio": 1.291666340667606
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1429,
+            "center_pixels": [
+              249.46396081175646,
+              245.39818054583625
+            ],
+            "bbox_pixels": [
+              [
+                206.0,
+                206.0
+              ],
+              [
+                294.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 85.31024110683424,
+            "principal_axis_ratio": 1.1066950860280391
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 282,
+            "center_pixels": [
+              224.34751773049646,
+              249.9290780141844
+            ],
+            "bbox_pixels": [
+              [
+                208.0,
+                230.0
+              ],
+              [
+                240.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 37.89741688375691,
+            "principal_axis_ratio": 1.2847664708492652
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        291.30268317063167,
+        146.93880837854044
+      ],
+      "mouth_pixels": [
+        149.3859183416154,
+        317.1347329782884
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6605686305039056,
+      "body_landmark_translation_to_reference": [
+        226.5758453885652,
+        -29.276211833589002
+      ],
+      "body_C_M_error_over_reference_D": 0.005996170008024884,
+      "near_eye_position_error_over_reference_D": 0.21427007496615424,
+      "far_visible_position_error_over_reference_D": 0.22308901108677068,
+      "near_D_after_body_fit_pixels": 56.35326913589948,
+      "pose_score": 1.1391718486232287,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.7966866304412688,
+      "position_only_score": 0.44335525606094983
+    },
+    {
+      "candidate": "B",
+      "filename": "B_ortho_yaw40_pitch5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 40,
+        "pitch": 5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 951,
+            "center_pixels": [
+              119.1335436382755,
+              247.9621451104101
+            ],
+            "bbox_pixels": [
+              [
+                88.0,
+                212.0
+              ],
+              [
+                154.0,
+                294.0
+              ]
+            ],
+            "D_pixels": 69.59456320843287,
+            "principal_axis_ratio": 1.6090707100528912
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 277,
+            "center_pixels": [
+              106.7725631768953,
+              259.913357400722
+            ],
+            "bbox_pixels": [
+              [
+                92.0,
+                240.0
+              ],
+              [
+                122.0,
+                280.0
+              ]
+            ],
+            "D_pixels": 37.55994429663814,
+            "principal_axis_ratio": 1.3225257874173801
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1476,
+            "center_pixels": [
+              249.53116531165313,
+              262.23848238482384
+            ],
+            "bbox_pixels": [
+              [
+                206.0,
+                222.0
+              ],
+              [
+                294.0,
+                304.0
+              ]
+            ],
+            "D_pixels": 86.70182392612281,
+            "principal_axis_ratio": 1.0768538060202044
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 282,
+            "center_pixels": [
+              224.45390070921985,
+              268.3829787234043
+            ],
+            "bbox_pixels": [
+              [
+                208.0,
+                248.0
+              ],
+              [
+                240.0,
+                290.0
+              ]
+            ],
+            "D_pixels": 37.89741688375691,
+            "principal_axis_ratio": 1.3007134528255375
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        289.32276188429574,
+        147.9433035369272
+      ],
+      "mouth_pixels": [
+        149.3859183416154,
+        332.71353911420067
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6307291660680078,
+      "body_landmark_translation_to_reference": [
+        233.77519836553577,
+        -27.582144765113753
+      ],
+      "body_C_M_error_over_reference_D": 0.06776957769067467,
+      "near_eye_position_error_over_reference_D": 0.26125884653207226,
+      "far_visible_position_error_over_reference_D": 0.17859473507234094,
+      "near_D_after_body_fit_pixels": 54.68536910149869,
+      "pose_score": 1.19877540021393,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.8026885716698792,
+      "position_only_score": 0.5076231592950878
+    },
+    {
+      "candidate": "B",
+      "filename": "B_ortho_yaw50_pitch-5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50,
+        "pitch": -5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 746,
+            "center_pixels": [
+              103.72654155495978,
+              234.04825737265415
+            ],
+            "bbox_pixels": [
+              [
+                76.0,
+                202.0
+              ],
+              [
+                140.0,
+                280.0
+              ]
+            ],
+            "D_pixels": 61.63884166245928,
+            "principal_axis_ratio": 1.9481116987554261
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 234,
+            "center_pixels": [
+              90.42735042735043,
+              243.7948717948718
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                224.0
+              ],
+              [
+                104.0,
+                264.0
+              ]
+            ],
+            "D_pixels": 34.52176435050956,
+            "principal_axis_ratio": 1.5629493154965737
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1348,
+            "center_pixels": [
+              217.33382789317508,
+              229.51483679525222
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                190.0
+              ],
+              [
+                260.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 82.85715192553988,
+            "principal_axis_ratio": 1.1578267468691137
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 240,
+            "center_pixels": [
+              189.15833333333333,
+              233.14166666666668
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                212.0
+              ],
+              [
+                202.0,
+                254.0
+              ]
+            ],
+            "D_pixels": 34.961549778946534,
+            "principal_axis_ratio": 1.5641199889168673
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        290.97965774650885,
+        146.16467883977472
+      ],
+      "mouth_pixels": [
+        120.50512708834243,
+        303.9426479909957
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6253215744287819,
+      "body_landmark_translation_to_reference": [
+        243.47322162516951,
+        -16.730911137873818
+      ],
+      "body_C_M_error_over_reference_D": 0.1637893342914473,
+      "near_eye_position_error_over_reference_D": 0.029762910507182806,
+      "far_visible_position_error_over_reference_D": 0.17325835621746577,
+      "near_D_after_body_fit_pixels": 51.812364694763374,
+      "pose_score": 1.0060559974977865,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.743916973128058,
+      "position_only_score": 0.36681060101609586
+    },
+    {
+      "candidate": "B",
+      "filename": "B_ortho_yaw50_pitch0.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50,
+        "pitch": 0,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 787,
+            "center_pixels": [
+              104.57941550190597,
+              238.68106734434562
+            ],
+            "bbox_pixels": [
+              [
+                76.0,
+                206.0
+              ],
+              [
+                140.0,
+                284.0
+              ]
+            ],
+            "D_pixels": 63.310015691249774,
+            "principal_axis_ratio": 1.8614469633216233
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 233,
+            "center_pixels": [
+              90.21459227467811,
+              250.07725321888412
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                230.0
+              ],
+              [
+                104.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 34.44792091974742,
+            "principal_axis_ratio": 1.5438513123473874
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1400,
+            "center_pixels": [
+              217.48142857142858,
+              245.13
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                206.0
+              ],
+              [
+                260.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 84.44016491289504,
+            "principal_axis_ratio": 1.1184568314172032
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 240,
+            "center_pixels": [
+              189.10833333333332,
+              250.0
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                230.0
+              ],
+              [
+                202.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 34.961549778946534,
+            "principal_axis_ratio": 1.5348562804874273
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        289.63494092297805,
+        146.93880837854041
+      ],
+      "mouth_pixels": [
+        120.50512708834243,
+        317.1347329782884
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6080012314731303,
+      "body_landmark_translation_to_reference": [
+        247.44554516470026,
+        -17.078642319524306
+      ],
+      "body_C_M_error_over_reference_D": 0.10894144485232647,
+      "near_eye_position_error_over_reference_D": 0.07292406527596425,
+      "far_visible_position_error_over_reference_D": 0.17319329775783018,
+      "near_D_after_body_fit_pixels": 51.3397242528344,
+      "pose_score": 0.9857741212517788,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.7497618669570073,
+      "position_only_score": 0.3550588078861209
+    },
+    {
+      "candidate": "B",
+      "filename": "B_ortho_yaw50_pitch5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50,
+        "pitch": 5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 831,
+            "center_pixels": [
+              105.14801444043322,
+              244.03128760529484
+            ],
+            "bbox_pixels": [
+              [
+                76.0,
+                210.0
+              ],
+              [
+                140.0,
+                290.0
+              ]
+            ],
+            "D_pixels": 65.05573185123414,
+            "principal_axis_ratio": 1.7827564879857514
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 236,
+            "center_pixels": [
+              90.35593220338983,
+              256.7542372881356
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                236.0
+              ],
+              [
+                104.0,
+                278.0
+              ]
+            ],
+            "D_pixels": 34.668979365276876,
+            "principal_axis_ratio": 1.5871346431294115
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1436,
+            "center_pixels": [
+              217.68384401114207,
+              260.966573816156
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                220.0
+              ],
+              [
+                260.0,
+                302.0
+              ]
+            ],
+            "D_pixels": 85.51893325433132,
+            "principal_axis_ratio": 1.092474261833195
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 239,
+            "center_pixels": [
+              189.05439330543933,
+              267.0376569037657
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                246.0
+              ],
+              [
+                202.0,
+                288.0
+              ]
+            ],
+            "D_pixels": 34.88863718700998,
+            "principal_axis_ratio": 1.5634043589549873
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        287.1729423824919,
+        147.75478100759173
+      ],
+      "mouth_pixels": [
+        120.50512708834243,
+        330.1964123013816
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5918963304627928,
+      "body_landmark_translation_to_reference": [
+        251.4768017134072,
+        -17.448778729947094
+      ],
+      "body_C_M_error_over_reference_D": 0.053628198367278106,
+      "near_eye_position_error_over_reference_D": 0.16254792741112004,
+      "far_visible_position_error_over_reference_D": 0.18093837114427744,
+      "near_D_after_body_fit_pixels": 50.618342778331204,
+      "pose_score": 1.0325105484770047,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.7607172982123142,
+      "position_only_score": 0.3971144969226756
+    },
+    {
+      "candidate": "B",
+      "filename": "B_ortho_yaw60_pitch-5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 60,
+        "pitch": -5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 633,
+            "center_pixels": [
+              95.30805687203791,
+              235.27330173775673
+            ],
+            "bbox_pixels": [
+              [
+                70.0,
+                204.0
+              ],
+              [
+                130.0,
+                282.0
+              ]
+            ],
+            "D_pixels": 56.77889156429026,
+            "principal_axis_ratio": 2.1997362774495133
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 184,
+            "center_pixels": [
+              80.3695652173913,
+              246.93478260869566
+            ],
+            "bbox_pixels": [
+              [
+                70.0,
+                226.0
+              ],
+              [
+                90.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 30.612159429303247,
+            "principal_axis_ratio": 1.9856232482838407
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1297,
+            "center_pixels": [
+              187.5497301464919,
+              230.55821125674635
+            ],
+            "bbox_pixels": [
+              [
+                148.0,
+                192.0
+              ],
+              [
+                230.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 81.2746378526907,
+            "principal_axis_ratio": 1.2048405879720308
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 183,
+            "center_pixels": [
+              157.3224043715847,
+              235.1693989071038
+            ],
+            "bbox_pixels": [
+              [
+                148.0,
+                214.0
+              ],
+              [
+                168.0,
+                256.0
+              ]
+            ],
+            "D_pixels": 30.52886088189566,
+            "principal_axis_ratio": 2.0415577544120853
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        289.05796136135314,
+        146.29931739350167
+      ],
+      "mouth_pixels": [
+        97.07819671970192,
+        306.85862847557746
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5759995515771353,
+      "body_landmark_translation_to_reference": [
+        260.9212514271756,
+        -6.509386807102686
+      ],
+      "body_C_M_error_over_reference_D": 0.22931046678036962,
+      "near_eye_position_error_over_reference_D": 0.2104513964804127,
+      "far_visible_position_error_over_reference_D": 0.14600153471321572,
+      "near_D_after_body_fit_pixels": 46.814154957743916,
+      "pose_score": 1.1769425188039353,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6986052852945505,
+      "position_only_score": 0.585763397973998
+    },
+    {
+      "candidate": "B",
+      "filename": "B_ortho_yaw60_pitch0.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 60,
+        "pitch": 0,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 668,
+            "center_pixels": [
+              96.04491017964072,
+              237.22754491017963
+            ],
+            "bbox_pixels": [
+              [
+                70.0,
+                206.0
+              ],
+              [
+                132.0,
+                284.0
+              ]
+            ],
+            "D_pixels": 58.32748977568257,
+            "principal_axis_ratio": 2.0924903701807227
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 183,
+            "center_pixels": [
+              80.30601092896175,
+              250.0
+            ],
+            "bbox_pixels": [
+              [
+                70.0,
+                230.0
+              ],
+              [
+                90.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 30.52886088189566,
+            "principal_axis_ratio": 1.9443112222554528
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1337,
+            "center_pixels": [
+              187.82198952879583,
+              244.69409124906508
+            ],
+            "bbox_pixels": [
+              [
+                148.0,
+                206.0
+              ],
+              [
+                230.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 82.51839240583672,
+            "principal_axis_ratio": 1.170067893824568
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 183,
+            "center_pixels": [
+              157.27868852459017,
+              250.0
+            ],
+            "bbox_pixels": [
+              [
+                148.0,
+                230.0
+              ],
+              [
+                168.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 30.52886088189566,
+            "principal_axis_ratio": 2.000227640126305
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        288.28213575040684,
+        146.93880837854041
+      ],
+      "mouth_pixels": [
+        97.07819671970192,
+        317.1347329782884
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5659499075824453,
+      "body_landmark_translation_to_reference": [
+        263.0810561046792,
+        -7.321188921177708
+      ],
+      "body_C_M_error_over_reference_D": 0.1891580521618912,
+      "near_eye_position_error_over_reference_D": 0.20840537854360172,
+      "far_visible_position_error_over_reference_D": 0.18893995329245133,
+      "near_D_after_body_fit_pixels": 46.70127655593525,
+      "pose_score": 1.175395272702664,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.7068422938830414,
+      "position_only_score": 0.5865033839979443
+    },
+    {
+      "candidate": "B",
+      "filename": "B_ortho_yaw60_pitch5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 60,
+        "pitch": 5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 703,
+            "center_pixels": [
+              96.73684210526316,
+              239.72972972972974
+            ],
+            "bbox_pixels": [
+              [
+                70.0,
+                208.0
+              ],
+              [
+                132.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 59.836022593378296,
+            "principal_axis_ratio": 2.013168473401299
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 186,
+            "center_pixels": [
+              80.26881720430107,
+              253.61290322580646
+            ],
+            "bbox_pixels": [
+              [
+                70.0,
+                232.0
+              ],
+              [
+                90.0,
+                274.0
+              ]
+            ],
+            "D_pixels": 30.77808020788433,
+            "principal_axis_ratio": 1.9789411105206083
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1379,
+            "center_pixels": [
+              188.0203045685279,
+              259.03118201595356
+            ],
+            "bbox_pixels": [
+              [
+                148.0,
+                218.0
+              ],
+              [
+                230.0,
+                300.0
+              ]
+            ],
+            "D_pixels": 83.80447081605585,
+            "principal_axis_ratio": 1.1418542608086624
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 183,
+            "center_pixels": [
+              157.33333333333334,
+              265.0601092896175
+            ],
+            "bbox_pixels": [
+              [
+                148.0,
+                244.0
+              ],
+              [
+                168.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 30.52886088189566,
+            "principal_axis_ratio": 2.0410358014054446
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        286.35750447148484,
+        147.5583899842843
+      ],
+      "mouth_pixels": [
+        97.07819671970192,
+        327.28043181679993
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5573400710765083,
+      "body_landmark_translation_to_reference": [
+        265.27633790079494,
+        -8.32335134625086
+      ],
+      "body_C_M_error_over_reference_D": 0.14706585488368465,
+      "near_eye_position_error_over_reference_D": 0.23745931246926966,
+      "far_visible_position_error_over_reference_D": 0.2274181828465194,
+      "near_D_after_body_fit_pixels": 46.70758972114974,
+      "pose_score": 1.1993610380047919,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.7139955901005998,
+      "position_only_score": 0.6119433501994737
+    },
+    {
+      "candidate": "B",
+      "filename": "B_ortho_yaw70_pitch-5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 70,
+        "pitch": -5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 500,
+            "center_pixels": [
+              92.88,
+              235.148
+            ],
+            "bbox_pixels": [
+              [
+                70.0,
+                206.0
+              ],
+              [
+                128.0,
+                278.0
+              ]
+            ],
+            "D_pixels": 50.4626504404032,
+            "principal_axis_ratio": 2.483446548290061
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 130,
+            "center_pixels": [
+              77.0,
+              250.0
+            ],
+            "bbox_pixels": [
+              [
+                70.0,
+                230.0
+              ],
+              [
+                84.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 25.731003930322746,
+            "principal_axis_ratio": 2.723052437694111
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1221,
+            "center_pixels": [
+              160.62899262899262,
+              231.9082719082719
+            ],
+            "bbox_pixels": [
+              [
+                122.0,
+                194.0
+              ],
+              [
+                200.0,
+                272.0
+              ]
+            ],
+            "D_pixels": 78.85747863384002,
+            "principal_axis_ratio": 1.272612888225905
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 128,
+            "center_pixels": [
+              129.5625,
+              237.671875
+            ],
+            "bbox_pixels": [
+              [
+                122.0,
+                218.0
+              ],
+              [
+                136.0,
+                258.0
+              ]
+            ],
+            "D_pixels": 25.532305945691693,
+            "principal_axis_ratio": 2.7805653790961404
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        287.7454781781314,
+        146.50406953842926
+      ],
+      "mouth_pixels": [
+        79.81694266034626,
+        310.0848620404551
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5417648107582016,
+      "body_landmark_translation_to_reference": [
+        272.5621856946862,
+        0.31809194443812316
+      ],
+      "body_C_M_error_over_reference_D": 0.26807123759291024,
+      "near_eye_position_error_over_reference_D": 0.37877157868188,
+      "far_visible_position_error_over_reference_D": 0.22548375021243133,
+      "near_D_after_body_fit_pixels": 42.72220698893126,
+      "pose_score": 1.4028435012583564,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6399221901922213,
+      "position_only_score": 0.8723265664872215
+    },
+    {
+      "candidate": "B",
+      "filename": "B_ortho_yaw70_pitch0.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 70,
+        "pitch": 0,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 544,
+            "center_pixels": [
+              93.52573529411765,
+              235.05514705882354
+            ],
+            "bbox_pixels": [
+              [
+                70.0,
+                206.0
+              ],
+              [
+                130.0,
+                278.0
+              ]
+            ],
+            "D_pixels": 52.63619713983633,
+            "principal_axis_ratio": 2.3809116238400887
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 128,
+            "center_pixels": [
+              76.96875,
+              250.0
+            ],
+            "bbox_pixels": [
+              [
+                70.0,
+                230.0
+              ],
+              [
+                84.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 25.532305945691693,
+            "principal_axis_ratio": 2.6504408001766535
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1257,
+            "center_pixels": [
+              161.0230708035004,
+              244.24821002386633
+            ],
+            "bbox_pixels": [
+              [
+                122.0,
+                206.0
+              ],
+              [
+                200.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 80.01155185926841,
+            "principal_axis_ratio": 1.2321498398997117
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 126,
+            "center_pixels": [
+              129.65079365079364,
+              250.0
+            ],
+            "bbox_pixels": [
+              [
+                122.0,
+                230.0
+              ],
+              [
+                136.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 25.332049473868512,
+            "principal_axis_ratio": 2.833466569777952
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        287.28537195353414,
+        146.93880837854044
+      ],
+      "mouth_pixels": [
+        79.81694266034626,
+        317.1347329782884
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5362776151139155,
+      "body_landmark_translation_to_reference": [
+        273.69400148641336,
+        -0.4361259981545942
+      ],
+      "body_C_M_error_over_reference_D": 0.24161914480753952,
+      "near_eye_position_error_over_reference_D": 0.37150727022215163,
+      "far_visible_position_error_over_reference_D": 0.2654897748009243,
+      "near_D_after_body_fit_pixels": 42.90840421265183,
+      "pose_score": 1.4198801963779792,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6578574707864391,
+      "position_only_score": 0.8786161898306154
+    },
+    {
+      "candidate": "B",
+      "filename": "B_ortho_yaw70_pitch5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 70,
+        "pitch": 5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 590,
+            "center_pixels": [
+              94.46101694915254,
+              234.5491525423729
+            ],
+            "bbox_pixels": [
+              [
+                70.0,
+                204.0
+              ],
+              [
+                130.0,
+                278.0
+              ]
+            ],
+            "D_pixels": 54.816469473826785,
+            "principal_axis_ratio": 2.268576272487491
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 129,
+            "center_pixels": [
+              76.94573643410853,
+              250.04651162790697
+            ],
+            "bbox_pixels": [
+              [
+                70.0,
+                230.0
+              ],
+              [
+                84.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 25.631847476983474,
+            "principal_axis_ratio": 2.7565728801979814
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1295,
+            "center_pixels": [
+              161.24478764478764,
+              256.7150579150579
+            ],
+            "bbox_pixels": [
+              [
+                122.0,
+                216.0
+              ],
+              [
+                200.0,
+                298.0
+              ]
+            ],
+            "D_pixels": 81.21195011652007,
+            "principal_axis_ratio": 1.210373404179482
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 128,
+            "center_pixels": [
+              129.53125,
+              262.625
+            ],
+            "bbox_pixels": [
+              [
+                122.0,
+                242.0
+              ],
+              [
+                136.0,
+                284.0
+              ]
+            ],
+            "D_pixels": 25.532305945691693,
+            "principal_axis_ratio": 2.8181288141080048
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        285.7290115920511,
+        147.34781427086634
+      ],
+      "mouth_pixels": [
+        79.81694266034626,
+        324.0541982519222
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5324245576281713,
+      "body_landmark_translation_to_reference": [
+        274.8155568855782,
+        -1.4930039912376714
+      ],
+      "body_C_M_error_over_reference_D": 0.2127825593079084,
+      "near_eye_position_error_over_reference_D": 0.3802512016629606,
+      "far_visible_position_error_over_reference_D": 0.3110852583625807,
+      "near_D_after_body_fit_pixels": 43.239236614909316,
+      "pose_score": 1.4621515402352427,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6749803371939478,
+      "position_only_score": 0.9041190193334497
+    },
+    {
+      "candidate": "B",
+      "filename": "B_ortho_yaw80_pitch-5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 80,
+        "pitch": -5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 332,
+            "center_pixels": [
+              95.40361445783132,
+              234.289156626506
+            ],
+            "bbox_pixels": [
+              [
+                76.0,
+                210.0
+              ],
+              [
+                126.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 41.12009381565534,
+            "principal_axis_ratio": 2.9114885784998776
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 71,
+            "center_pixels": [
+              79.85915492957747,
+              251.85915492957747
+            ],
+            "bbox_pixels": [
+              [
+                76.0,
+                234.0
+              ],
+              [
+                84.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 19.015783725757565,
+            "principal_axis_ratio": 3.6651209994109055
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1127,
+            "center_pixels": [
+              137.63087843833185,
+              233.4463176574978
+            ],
+            "bbox_pixels": [
+              [
+                102.0,
+                196.0
+              ],
+              [
+                176.0,
+                274.0
+              ]
+            ],
+            "D_pixels": 75.76122931728413,
+            "principal_axis_ratio": 1.3700330015812203
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 81,
+            "center_pixels": [
+              106.51851851851852,
+              240.34567901234567
+            ],
+            "bbox_pixels": [
+              [
+                102.0,
+                220.0
+              ],
+              [
+                110.0,
+                260.0
+              ]
+            ],
+            "D_pixels": 20.310825007719227,
+            "principal_axis_ratio": 4.134861299978143
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        286.4221087879317,
+        146.68325471495902
+      ],
+      "mouth_pixels": [
+        69.24583938025293,
+        313.5233212113129
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5220776425548223,
+      "body_landmark_translation_to_reference": [
+        279.28523642240015,
+        3.868217876092558
+      ],
+      "body_C_M_error_over_reference_D": 0.282941143725188,
+      "near_eye_position_error_over_reference_D": 0.5307741190701304,
+      "far_visible_position_error_over_reference_D": 0.3273944556187009,
+      "near_D_after_body_fit_pixels": 39.55324399902299,
+      "pose_score": 1.5627632865215122,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.5427590627317634,
+      "position_only_score": 1.1411097184140193
+    },
+    {
+      "candidate": "B",
+      "filename": "B_ortho_yaw80_pitch0.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 80,
+        "pitch": 0,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 404,
+            "center_pixels": [
+              97.06435643564356,
+              231.4009900990099
+            ],
+            "bbox_pixels": [
+              [
+                76.0,
+                206.0
+              ],
+              [
+                132.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 45.36028113109555,
+            "principal_axis_ratio": 2.7207134368999095
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 77,
+            "center_pixels": [
+              79.94805194805195,
+              249.5064935064935
+            ],
+            "bbox_pixels": [
+              [
+                76.0,
+                230.0
+              ],
+              [
+                84.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 19.802974013476614,
+            "principal_axis_ratio": 4.086226916733114
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1161,
+            "center_pixels": [
+              137.95865633074936,
+              243.60723514211887
+            ],
+            "bbox_pixels": [
+              [
+                102.0,
+                206.0
+              ],
+              [
+                176.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 76.89554243095041,
+            "principal_axis_ratio": 1.3318486786202635
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 81,
+            "center_pixels": [
+              106.44444444444444,
+              250.0
+            ],
+            "bbox_pixels": [
+              [
+                102.0,
+                230.0
+              ],
+              [
+                110.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 20.310825007719227,
+            "principal_axis_ratio": 4.107919181288749
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        286.67493569594103,
+        146.93880837854044
+      ],
+      "mouth_pixels": [
+        69.24583938025293,
+        317.1347329782884
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5188225839246099,
+      "body_landmark_translation_to_reference": [
+        279.798510279638,
+        3.6140830711028684
+      ],
+      "body_C_M_error_over_reference_D": 0.2712291812538809,
+      "near_eye_position_error_over_reference_D": 0.5262141679233129,
+      "far_visible_position_error_over_reference_D": 0.3706448938890801,
+      "near_D_after_body_fit_pixels": 39.89514401631017,
+      "pose_score": 1.646311993348659,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.5898948066050452,
+      "position_only_score": 1.1680882430662738
+    },
+    {
+      "candidate": "B",
+      "filename": "B_ortho_yaw80_pitch5.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 80,
+        "pitch": 5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 463,
+            "center_pixels": [
+              98.22894168466523,
+              228.58315334773218
+            ],
+            "bbox_pixels": [
+              [
+                76.0,
+                202.0
+              ],
+              [
+                136.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 48.559650295791066,
+            "principal_axis_ratio": 2.570246213577148
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 78,
+            "center_pixels": [
+              79.97435897435898,
+              246.48717948717947
+            ],
+            "bbox_pixels": [
+              [
+                76.0,
+                226.0
+              ],
+              [
+                84.0,
+                266.0
+              ]
+            ],
+            "D_pixels": 19.931149940667517,
+            "principal_axis_ratio": 4.165667654727032
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1203,
+            "center_pixels": [
+              138.29925187032418,
+              253.77888611803823
+            ],
+            "bbox_pixels": [
+              [
+                102.0,
+                214.0
+              ],
+              [
+                176.0,
+                296.0
+              ]
+            ],
+            "D_pixels": 78.27406140775885,
+            "principal_axis_ratio": 1.292744263617588
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 80,
+            "center_pixels": [
+              106.475,
+              259.825
+            ],
+            "bbox_pixels": [
+              [
+                102.0,
+                240.0
+              ],
+              [
+                110.0,
+                280.0
+              ]
+            ],
+            "D_pixels": 20.185060176161283,
+            "principal_axis_ratio": 4.14913027999786
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        284.93674869155905,
+        147.12699905656623
+      ],
+      "mouth_pixels": [
+        69.24583938025293,
+        320.61573908106436
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5189322835606481,
+      "body_landmark_translation_to_reference": [
+        280.22998876561553,
+        2.636596389664561
+      ],
+      "body_C_M_error_over_reference_D": 0.25411432835519776,
+      "near_eye_position_error_over_reference_D": 0.5262581570443615,
+      "far_visible_position_error_over_reference_D": 0.41374591716676196,
+      "near_D_after_body_fit_pixels": 40.6189374298947,
+      "pose_score": 1.7031693814614264,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6203798477100312,
+      "position_only_score": 1.1941184025663212
+    },
+    {
+      "candidate": "B",
+      "filename": "B_refine_0_ORTHO.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 45,
+        "pitch": 0,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 845,
+            "center_pixels": [
+              110.95384615384616,
+              239.38934911242603
+            ],
+            "bbox_pixels": [
+              [
+                82.0,
+                206.0
+              ],
+              [
+                146.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 65.60144557252416,
+            "principal_axis_ratio": 1.7826546494823183
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 259,
+            "center_pixels": [
+              97.76061776061776,
+              250.1158301158301
+            ],
+            "bbox_pixels": [
+              [
+                84.0,
+                230.0
+              ],
+              [
+                112.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 36.319088209172165,
+            "principal_axis_ratio": 1.4209340937672656
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1412,
+            "center_pixels": [
+              233.1331444759207,
+              245.342776203966
+            ],
+            "bbox_pixels": [
+              [
+                190.0,
+                206.0
+              ],
+              [
+                276.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 84.80127916879674,
+            "principal_axis_ratio": 1.1125170473476123
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 260,
+            "center_pixels": [
+              206.37692307692308,
+              249.96153846153845
+            ],
+            "bbox_pixels": [
+              [
+                192.0,
+                230.0
+              ],
+              [
+                220.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 36.38913473173784,
+            "principal_axis_ratio": 1.411825679338567
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        290.43240445722853,
+        146.93880837854036
+      ],
+      "mouth_pixels": [
+        134.315041425948,
+        317.1347329782884
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6332492202327049,
+      "body_landmark_translation_to_reference": [
+        237.64288392770112,
+        -22.93710409742087
+      ],
+      "body_C_M_error_over_reference_D": 0.056310204364038656,
+      "near_eye_position_error_over_reference_D": 0.11734451738752097,
+      "far_visible_position_error_over_reference_D": 0.19171016649169517,
+      "near_D_after_body_fit_pixels": 53.70034390837646,
+      "pose_score": 1.0291604021867202,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.7735902832543909,
+      "position_only_score": 0.3653648882432548
+    },
+    {
+      "candidate": "B",
+      "filename": "B_refine_1_ORTHO.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 55,
+        "pitch": 0,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 730,
+            "center_pixels": [
+              99.4904109589041,
+              238.07397260273973
+            ],
+            "bbox_pixels": [
+              [
+                72.0,
+                206.0
+              ],
+              [
+                134.0,
+                284.0
+              ]
+            ],
+            "D_pixels": 60.97425252208243,
+            "principal_axis_ratio": 1.9652924303383406
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 208,
+            "center_pixels": [
+              84.6923076923077,
+              250.0
+            ],
+            "bbox_pixels": [
+              [
+                74.0,
+                230.0
+              ],
+              [
+                96.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 32.54743156102575,
+            "principal_axis_ratio": 1.7526290149229646
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1363,
+            "center_pixels": [
+              202.25825385179752,
+              244.97285399853266
+            ],
+            "bbox_pixels": [
+              [
+                160.0,
+                206.0
+              ],
+              [
+                244.0,
+                286.0
+              ]
+            ],
+            "D_pixels": 83.31687702918363,
+            "principal_axis_ratio": 1.1382108570104148
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 210,
+            "center_pixels": [
+              172.78095238095239,
+              250.0
+            ],
+            "bbox_pixels": [
+              [
+                162.0,
+                230.0
+              ],
+              [
+                184.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 32.703535245865034,
+            "principal_axis_ratio": 1.7478170672144984
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        288.91636174689756,
+        146.93880837854044
+      ],
+      "mouth_pixels": [
+        108.06127711556209,
+        317.1347329782884
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5854662628117966,
+      "body_landmark_translation_to_reference": [
+        255.91987105605074,
+        -11.849700964009145
+      ],
+      "body_C_M_error_over_reference_D": 0.15291116384628117,
+      "near_eye_position_error_over_reference_D": 0.12843713120488845,
+      "far_visible_position_error_over_reference_D": 0.17071528707696024,
+      "near_D_after_body_fit_pixels": 48.77922062342616,
+      "pose_score": 1.0646432698869268,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.7318355499657628,
+      "position_only_score": 0.4520635821281299
+    },
+    {
+      "candidate": "B",
+      "filename": "B_refine_2_ORTHO.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50,
+        "pitch": -2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 764,
+            "center_pixels": [
+              104.14921465968587,
+              236.3193717277487
+            ],
+            "bbox_pixels": [
+              [
+                76.0,
+                204.0
+              ],
+              [
+                140.0,
+                282.0
+              ]
+            ],
+            "D_pixels": 62.37804139848138,
+            "principal_axis_ratio": 1.908180734760269
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 236,
+            "center_pixels": [
+              90.28813559322033,
+              246.78813559322035
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                226.0
+              ],
+              [
+                104.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 34.668979365276876,
+            "principal_axis_ratio": 1.6029944087312935
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1369,
+            "center_pixels": [
+              217.4390065741417,
+              237.30314097881666
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                198.0
+              ],
+              [
+                260.0,
+                276.0
+              ]
+            ],
+            "D_pixels": 83.50005836506793,
+            "principal_axis_ratio": 1.1368209212519826
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 238,
+            "center_pixels": [
+              189.0672268907563,
+              241.57983193277312
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                220.0
+              ],
+              [
+                202.0,
+                262.0
+              ]
+            ],
+            "D_pixels": 34.815571898044055,
+            "principal_axis_ratio": 1.534023956216357
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        289.90127594548665,
+        146.5501952910503
+      ],
+      "mouth_pixels": [
+        120.50512708834243,
+        310.5487305387076
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6176328930367057,
+      "body_landmark_translation_to_reference": [
+        245.38813136509236,
+        -17.159665982101984
+      ],
+      "body_C_M_error_over_reference_D": 0.13433405817116523,
+      "near_eye_position_error_over_reference_D": 0.0292955748693117,
+      "far_visible_position_error_over_reference_D": 0.17115014671071377,
+      "near_D_after_body_fit_pixels": 51.57238261675068,
+      "pose_score": 0.9695580249290452,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.747041889788392,
+      "position_only_score": 0.33477977975119066
+    },
+    {
+      "candidate": "B",
+      "filename": "B_refine_3_ORTHO.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50,
+        "pitch": 2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 810,
+            "center_pixels": [
+              104.94074074074074,
+              241.20246913580246
+            ],
+            "bbox_pixels": [
+              [
+                76.0,
+                208.0
+              ],
+              [
+                140.0,
+                288.0
+              ]
+            ],
+            "D_pixels": 64.22846818149976,
+            "principal_axis_ratio": 1.8187935533481403
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 235,
+            "center_pixels": [
+              90.28085106382979,
+              253.30212765957447
+            ],
+            "bbox_pixels": [
+              [
+                78.0,
+                232.0
+              ],
+              [
+                104.0,
+                274.0
+              ]
+            ],
+            "D_pixels": 34.595450164018,
+            "principal_axis_ratio": 1.5906130219263808
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1418,
+            "center_pixels": [
+              217.5768688293371,
+              252.93229901269393
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                212.0
+              ],
+              [
+                260.0,
+                294.0
+              ]
+            ],
+            "D_pixels": 84.98126086225035,
+            "principal_axis_ratio": 1.1045245077986132
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 238,
+            "center_pixels": [
+              189.0672268907563,
+              258.4201680672269
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                238.0
+              ],
+              [
+                202.0,
+                280.0
+              ]
+            ],
+            "D_pixels": 34.815571898044055,
+            "principal_axis_ratio": 1.5340239562163571
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        288.2186441987162,
+        147.3427195554927
+      ],
+      "mouth_pixels": [
+        120.50512708834243,
+        323.6881184797704
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6003968346623059,
+      "body_landmark_translation_to_reference": [
+        249.43014911238325,
+        -17.40271209235263
+      ],
+      "body_C_M_error_over_reference_D": 0.08007017676769253,
+      "near_eye_position_error_over_reference_D": 0.11665228051636635,
+      "far_visible_position_error_over_reference_D": 0.17673412271308364,
+      "near_D_after_body_fit_pixels": 51.022480027306806,
+      "pose_score": 1.0069550969116063,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.7557956604763767,
+      "position_only_score": 0.37345657999714255
+    },
+    {
+      "candidate": "B",
+      "filename": "B_refine_4_PERSP.png",
+      "pose": {
+        "type": "PERSP",
+        "yaw": 50,
+        "pitch": 0,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 2.1500000000000004,
+        "scale": 0.86,
+        "lens": 90.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 752,
+            "center_pixels": [
+              95.38829787234043,
+              235.25797872340425
+            ],
+            "bbox_pixels": [
+              [
+                68.0,
+                202.0
+              ],
+              [
+                132.0,
+                284.0
+              ]
+            ],
+            "D_pixels": 61.88622262316039,
+            "principal_axis_ratio": 2.0528933750711915
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 218,
+            "center_pixels": [
+              79.1743119266055,
+              247.55963302752295
+            ],
+            "bbox_pixels": [
+              [
+                68.0,
+                226.0
+              ],
+              [
+                90.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 33.32063749403756,
+            "principal_axis_ratio": 1.8919246365388849
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1757,
+            "center_pixels": [
+              206.65338645418328,
+              238.0113830392715
+            ],
+            "bbox_pixels": [
+              [
+                160.0,
+                194.0
+              ],
+              [
+                256.0,
+                284.0
+              ]
+            ],
+            "D_pixels": 94.59559989977717,
+            "principal_axis_ratio": 1.144612042086496
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 280,
+            "center_pixels": [
+              172.88571428571427,
+              242.54285714285714
+            ],
+            "bbox_pixels": [
+              [
+                160.0,
+                218.0
+              ],
+              [
+                186.0,
+                266.0
+              ]
+            ],
+            "D_pixels": 37.762789755305185,
+            "principal_axis_ratio": 1.7362314800564103
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        290.5582599396396,
+        145.1921758268867
+      ],
+      "mouth_pixels": [
+        100.47049127473994,
+        319.04725632458076
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5634330600352263,
+      "body_landmark_translation_to_reference": [
+        261.96911544914286,
+        -6.783921923058557
+      ],
+      "body_C_M_error_over_reference_D": 0.17152655702921918,
+      "near_eye_position_error_over_reference_D": 0.039712515293076296,
+      "far_visible_position_error_over_reference_D": 0.20362790940746825,
+      "near_D_after_body_fit_pixels": 53.2982883173994,
+      "pose_score": 0.913825661398239,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6542188292978538,
+      "position_only_score": 0.4148669817297637
+    },
+    {
+      "candidate": "B",
+      "filename": "B_refine_5_PERSP.png",
+      "pose": {
+        "type": "PERSP",
+        "yaw": 50,
+        "pitch": 0,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 3.2249999999999996,
+        "scale": 0.86,
+        "lens": 135.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 751,
+            "center_pixels": [
+              98.68175765645806,
+              236.37017310252995
+            ],
+            "bbox_pixels": [
+              [
+                72.0,
+                204.0
+              ],
+              [
+                134.0,
+                284.0
+              ]
+            ],
+            "D_pixels": 61.84506118021413,
+            "principal_axis_ratio": 1.9900564659101458
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 224,
+            "center_pixels": [
+              83.04464285714286,
+              248.36607142857142
+            ],
+            "bbox_pixels": [
+              [
+                72.0,
+                226.0
+              ],
+              [
+                94.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 33.77606596515802,
+            "principal_axis_ratio": 1.8372298738849755
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1622,
+            "center_pixels": [
+              210.596794081381,
+              240.6177558569667
+            ],
+            "bbox_pixels": [
+              [
+                166.0,
+                198.0
+              ],
+              [
+                258.0,
+                284.0
+              ]
+            ],
+            "D_pixels": 90.88882310956467,
+            "principal_axis_ratio": 1.1308347287566003
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 264,
+            "center_pixels": [
+              178.84848484848484,
+              245.34848484848484
+            ],
+            "bbox_pixels": [
+              [
+                166.0,
+                222.0
+              ],
+              [
+                192.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 36.667982753900326,
+            "principal_axis_ratio": 1.67064835480523
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        290.7135977204547,
+        145.96170414467326
+      ],
+      "mouth_pixels": [
+        107.62781129338225,
+        318.36401247827916
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5781849921040636,
+      "body_landmark_translation_to_reference": [
+        256.9708661656849,
+        -10.233080399677704
+      ],
+      "body_C_M_error_over_reference_D": 0.15250455313297745,
+      "near_eye_position_error_over_reference_D": 0.0356206158216835,
+      "far_visible_position_error_over_reference_D": 0.19066363654130092,
+      "near_D_after_body_fit_pixels": 52.55055347195128,
+      "pose_score": 0.911035458171143,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6804473758633791,
+      "position_only_score": 0.37878880549596183
+    }
+  ],
+  "selected_per_candidate": {
+    "A": {
+      "candidate": "A",
+      "filename": "A_refine_3_ORTHO.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50,
+        "pitch": -2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 620,
+            "center_pixels": [
+              108.62903225806451,
+              236.16129032258064
+            ],
+            "bbox_pixels": [
+              [
+                84.0,
+                204.0
+              ],
+              [
+                142.0,
+                282.0
+              ]
+            ],
+            "D_pixels": 56.19282935520513,
+            "principal_axis_ratio": 2.3862593691650456
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 228,
+            "center_pixels": [
+              97.93859649122807,
+              251.25438596491227
+            ],
+            "bbox_pixels": [
+              [
+                86.0,
+                232.0
+              ],
+              [
+                112.0,
+                274.0
+              ]
+            ],
+            "D_pixels": 34.07630356711932,
+            "principal_axis_ratio": 1.5887554412484586
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1403,
+            "center_pixels": [
+              221.399857448325,
+              237.48681397006416
+            ],
+            "bbox_pixels": [
+              [
+                176.0,
+                198.0
+              ],
+              [
+                266.0,
+                278.0
+              ]
+            ],
+            "D_pixels": 84.53058810308688,
+            "principal_axis_ratio": 1.183086231878192
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 240,
+            "center_pixels": [
+              191.5,
+              246.74166666666667
+            ],
+            "bbox_pixels": [
+              [
+                178.0,
+                226.0
+              ],
+              [
+                204.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 34.961549778946534,
+            "principal_axis_ratio": 1.5444890552353656
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        289.90127594548665,
+        146.5501952910503
+      ],
+      "mouth_pixels": [
+        120.50512708834243,
+        310.5487305387076
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.6176328930367057,
+      "body_landmark_translation_to_reference": [
+        245.38813136509236,
+        -17.159665982101984
+      ],
+      "body_C_M_error_over_reference_D": 0.13433405817116523,
+      "near_eye_position_error_over_reference_D": 0.040198171153645434,
+      "far_visible_position_error_over_reference_D": 0.15394377480952792,
+      "near_D_after_body_fit_pixels": 52.208871680203686,
+      "pose_score": 0.8597816921135395,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6647632604504863,
+      "position_only_score": 0.3284760041343386
+    },
+    "B": {
+      "candidate": "B",
+      "filename": "B_refine_5_PERSP.png",
+      "pose": {
+        "type": "PERSP",
+        "yaw": 50,
+        "pitch": 0,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 3.2249999999999996,
+        "scale": 0.86,
+        "lens": 135.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 751,
+            "center_pixels": [
+              98.68175765645806,
+              236.37017310252995
+            ],
+            "bbox_pixels": [
+              [
+                72.0,
+                204.0
+              ],
+              [
+                134.0,
+                284.0
+              ]
+            ],
+            "D_pixels": 61.84506118021413,
+            "principal_axis_ratio": 1.9900564659101458
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 224,
+            "center_pixels": [
+              83.04464285714286,
+              248.36607142857142
+            ],
+            "bbox_pixels": [
+              [
+                72.0,
+                226.0
+              ],
+              [
+                94.0,
+                270.0
+              ]
+            ],
+            "D_pixels": 33.77606596515802,
+            "principal_axis_ratio": 1.8372298738849755
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1622,
+            "center_pixels": [
+              210.596794081381,
+              240.6177558569667
+            ],
+            "bbox_pixels": [
+              [
+                166.0,
+                198.0
+              ],
+              [
+                258.0,
+                284.0
+              ]
+            ],
+            "D_pixels": 90.88882310956467,
+            "principal_axis_ratio": 1.1308347287566003
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 264,
+            "center_pixels": [
+              178.84848484848484,
+              245.34848484848484
+            ],
+            "bbox_pixels": [
+              [
+                166.0,
+                222.0
+              ],
+              [
+                192.0,
+                268.0
+              ]
+            ],
+            "D_pixels": 36.667982753900326,
+            "principal_axis_ratio": 1.67064835480523
+          },
+          "sampling_step_pixels": 2
+        }
+      },
+      "crown_pixels": [
+        290.7135977204547,
+        145.96170414467326
+      ],
+      "mouth_pixels": [
+        107.62781129338225,
+        318.36401247827916
+      ],
+      "body_landmark_uniform_scale_to_reference": 0.5781849921040636,
+      "body_landmark_translation_to_reference": [
+        256.9708661656849,
+        -10.233080399677704
+      ],
+      "body_C_M_error_over_reference_D": 0.15250455313297745,
+      "near_eye_position_error_over_reference_D": 0.0356206158216835,
+      "far_visible_position_error_over_reference_D": 0.19066363654130092,
+      "near_D_after_body_fit_pixels": 52.55055347195128,
+      "pose_score": 0.911035458171143,
+      "fit_method": "Uniform scale + translation from unchanged yellow crown and mouth. No per-candidate eye-size normalization.",
+      "far_D_over_near_D": 0.6804473758633791,
+      "position_only_score": 0.37878880549596183
+    }
+  }
+}

@@ -1,0 +1,10 @@
+FBX version: 7400
+IMPORTED_ACTIONS ['Naiwa_Rig|Naiwa_Rig|Naiwa_Idle', 'Naiwa_Rig|Naiwa_Rig|Naiwa_Jump', 'Naiwa_Rig|Naiwa_Rig|Naiwa_Laugh', 'Naiwa_Rig|Naiwa_Rig|Naiwa_Walk']
+IMPORTED_VERTEX_COLORS [('L concentric iris and pupil', ['EyeColor']), ('Naiwa unified golden body', ['NaiwaColor']), ('R concentric iris and pupil', ['EyeColor'])]
+IMPORTED_EYE_COLOR L L concentric iris and pupil EyeColor 22080
+IMPORTED_EYE_COLOR R R concentric iris and pupil EyeColor 22080
+FBX_REIMPORT_OK meshes= 6 bones= 10 actions= ['Naiwa_Rig|Naiwa_Rig|Naiwa_Idle', 'Naiwa_Rig|Naiwa_Rig|Naiwa_Jump', 'Naiwa_Rig|Naiwa_Rig|Naiwa_Laugh', 'Naiwa_Rig|Naiwa_Rig|Naiwa_Walk']
+HEAD_NECK_FBX_REIMPORT_OK
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

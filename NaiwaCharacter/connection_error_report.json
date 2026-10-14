@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-05",
+  "timezone": "Asia/Shanghai",
+  "failure_layer": "Codex remote response stream and automatic approval transport",
+  "observed_error": "stream disconnected before completion: Transport error: network error: error decoding response body",
+  "latest_repeated_failure_stage": "remote conversation compaction",
+  "repeated_compaction_failure_times_local": [
+    "19:18:46",
+    "19:25:35",
+    "19:35:19"
+  ],
+  "exact_underlying_network_or_server_cause": "Not established by available logs",
+  "current_conversation_recovered": true,
+  "project_log_review": "76 project logs reviewed; no outstanding Blender/Python exception found",
+  "local_project_check": "runtime_recovery_check.json",
+  "source_model_modified": false,
+  "mitigation": [
+    "Persist task checkpoint",
+    "Run small independent stages",
+    "Store full logs on disk and return short status",
+    "Require Blender Python nonzero exit and an explicit stage completion marker"
+  ],
+  "latest_approval_result": {
+    "action": "Blender read-only D0/W0 measurement through revise_head_reshape.py --measure-only",
+    "status": "recovered_after_user_authorized_resubmission",
+    "error": "Automatic approval review failed: stream disconnected before completion: error sending request",
+    "safety_determination": "None; approval connection failed before review completed",
+    "next_step": "Completed measurement, generation, comparison renders, FBX import and rebuild equality through automatic approval"
+  },
+  "user_authorized_retry_limit": 2,
+  "local_script_fault": {
+    "error": "Reference mesh had no evaluated data because it was not linked to the Blender scene before ray casting",
+    "fix": "Link reference mesh into scene and update dependency graph before surface sampling",
+    "status": "fixed_and_generation_passed"
+  },
+  "new_head_version": "versions/20261005_head_reshape/Naiwa_Character.blend",
+  "generator_rebuild": "independent geometry, colors, bones and weights exactly matched",
+  "final_independent_head_validation": "passed",
+  "final_fbx_import": "passed",
+  "final_repeat_build_geometry_colors_weights_bones": "exact match",
+  "final_comparison_renders": 14,
+  "final_head_version_completed": true
+}

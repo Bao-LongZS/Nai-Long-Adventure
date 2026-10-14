@@ -1,0 +1,24 @@
+00:01.141  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\candidate_B\Naiwa_Character.blend"
+C3_VALIDATION_RAW_ASSETS_OK B
+C3_VALIDATION_VISIBLE_EYES_OK B
+C3_VALIDATION_STATE_OK B Idle1
+C3_VALIDATION_STATE_OK B Walk9
+Traceback (most recent call last):
+  File "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\validate_c3_saved.py", line 554, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\validate_c3_saved.py", line 329, in main
+    run_validation(args)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\validate_c3_saved.py", line 527, in run_validation
+    report['poses'][pose]['contacts'] = verify_contacts(snapshot, cache, pose_world, pose)
+                                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\validate_c3_saved.py", line 235, in verify_contacts
+    assert old_pairs and new_pairs, ('Missing actual mouth/body contact curve', pose)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Missing actual mouth/body contact curve', 'Laugh7')
+
+Error: script failed, file: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\validate_c3_saved.py', exiting.
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

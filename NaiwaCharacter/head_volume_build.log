@@ -1,0 +1,33 @@
+00:00.500  blend            | Read blend: "C:\Users\31314\Desktop\NaiwaCharacter\iterations\before_smaller_head_depth_revision\Naiwa_Character.blend"
+00:14.391  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_front.png'
+00:14.703  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_side.png'
+00:15.078  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_three_quarter.png'
+C:\Users\31314\Desktop\NaiwaCharacter\revise_head_volume.py:78: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  material.use_nodes = True
+00:15.360  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_surface_check_side.png'
+00:15.610  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_silhouette_front.png'
+00:15.875  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_silhouette_side.png'
+00:16.094  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_torso_silhouette_front.png'
+00:16.297  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_torso_silhouette_side.png'
+00:16.641  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_face_close.png'
+00:16.969  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_face_side_close.png'
+00:17.266  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_face_three_quarter_close.png'
+00:17.578  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_hand_close.png'
+00:17.922  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_foot_close.png'
+00:18.219  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\naiwa_foot_side_close.png'
+HEAD_VOLUME_SCULPT_OK 51764 vertices; body protected below 2.0
+PROTECTED_BODY_OK 319902 0.0
+信息: 已另存为 "Naiwa_Character.blend"
+
+FBX export starting... 'C:\\Users\\31314\\Desktop\\NaiwaCharacter\\Naiwa_Character.fbx'
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+export finished in 1.4439 sec.
+HEAD_VOLUME_DELIVERABLES_OK 6 meshes 10 bones
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

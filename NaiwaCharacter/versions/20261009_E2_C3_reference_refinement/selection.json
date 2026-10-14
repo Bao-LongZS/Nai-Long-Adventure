@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Shanghai",
+  "status": "stopped_not_adopted",
+  "recommended": "E2",
+  "recommended_native": "../20261007_H2_E2_overall_refinement/candidate_E2/Naiwa_Character.blend",
+  "recommended_native_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "candidate_A": {
+    "native": "candidate_A/Naiwa_Character.blend",
+    "native_sha256": "956933529196426afa0645b27f33519b62704a83339bc3c92af20384121f013e",
+    "status": "rejected_at_key_gate",
+    "maximum_actual_world_displacement": 0.004120370705368141,
+    "budget_world": 0.004683934403938394,
+    "decision": "candidate_A/key_view_gate.json",
+    "full_delivery_validation_completed": false
+  },
+  "candidate_B": null,
+  "instruction_stop_branch": 3,
+  "result_report": "README_本轮结果.md",
+  "reference_comparison": "review/assembled/comparison_reference_50.png",
+  "numeric_and_visual_evidence_recorded_separately": true
+}

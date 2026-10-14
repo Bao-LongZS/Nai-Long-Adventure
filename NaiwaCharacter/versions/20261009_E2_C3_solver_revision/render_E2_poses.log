@@ -1,0 +1,17 @@
+00:00.625  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_H2_E2_overall_refinement\candidate_E2\Naiwa_Character.blend"
+00:02.532  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\poses\E2\E2_Naiwa_Walk_9_gray_three_quarter.png'
+C3_REVIEW_IMAGE E2 poses E2_Naiwa_Walk_9_gray_three_quarter.png
+00:02.797  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\poses\E2\E2_Naiwa_Walk_9_gray_side.png'
+C3_REVIEW_IMAGE E2 poses E2_Naiwa_Walk_9_gray_side.png
+00:03.079  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\poses\E2\E2_Naiwa_Laugh_7_gray_three_quarter.png'
+C3_REVIEW_IMAGE E2 poses E2_Naiwa_Laugh_7_gray_three_quarter.png
+00:03.344  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\poses\E2\E2_Naiwa_Laugh_7_gray_side.png'
+C3_REVIEW_IMAGE E2 poses E2_Naiwa_Laugh_7_gray_side.png
+00:03.610  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\poses\E2\E2_Naiwa_Jump_6_gray_three_quarter.png'
+C3_REVIEW_IMAGE E2 poses E2_Naiwa_Jump_6_gray_three_quarter.png
+00:03.875  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\poses\E2\E2_Naiwa_Jump_6_gray_side.png'
+C3_REVIEW_IMAGE E2 poses E2_Naiwa_Jump_6_gray_side.png
+C3_REVIEW_OK E2 poses 6 C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\poses\E2
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

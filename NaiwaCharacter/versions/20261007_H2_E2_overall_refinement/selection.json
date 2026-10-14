@@ -1,0 +1,43 @@
+{
+  "recommended": "E2",
+  "fixed_R1_sha256": "ea12e9af2c564527d0c473cd31b28974339fcceb15b666502a33f0ffa057bc24",
+  "models": {
+    "H2": {
+      "native": "candidate_H2/Naiwa_Character.blend",
+      "fbx": "candidate_H2/Naiwa_Character.fbx",
+      "native_sha256": "7b2233033e755b614bf9b15f49e7f8a459e12ff775dc278215cbb34049193a49",
+      "fbx_sha256": "370cb8c9a95aa63b0088905ff67849a146c093c15d9ac876098330700bbb1b9d",
+      "native_geometry_asset_animation_validation": "passed",
+      "visual_acceptance": "passed",
+      "independent_rebuild": "passed",
+      "FBX_actual_surface_weights_colors_actions_validation": "passed",
+      "neck_reference_error_pixels": [
+        18.182180240543744,
+        7.56079851281739
+      ]
+    },
+    "E2": {
+      "native": "candidate_E2/Naiwa_Character.blend",
+      "fbx": "candidate_E2/Naiwa_Character.fbx",
+      "native_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "fbx_sha256": "8dae9ce28c4b44465dcb8e73dd462804c3a561daee9eebaf79842900a3005147",
+      "native_geometry_asset_animation_validation": "passed",
+      "visual_acceptance": "passed",
+      "independent_rebuild": "passed",
+      "FBX_actual_surface_weights_colors_actions_validation": "passed",
+      "neck_reference_error_pixels": [
+        18.182180240543744,
+        7.56079851281739
+      ]
+    }
+  },
+  "stage_order": [
+    "R1 -> H2 overall surface",
+    "selected H2 -> E2 eyes"
+  ],
+  "numeric_and_visual_acceptance_recorded_separately": true,
+  "native": "candidate_E2/Naiwa_Character.blend",
+  "fbx": "candidate_E2/Naiwa_Character.fbx",
+  "native_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "fbx_sha256": "8dae9ce28c4b44465dcb8e73dd462804c3a561daee9eebaf79842900a3005147"
+}

@@ -1,0 +1,39 @@
+00:00.765  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_side_continuity\Naiwa_Character.blend"
+00:02.062  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_side_continuity\Naiwa_Character.blend"
+EYE_CALIBRATED A L 0.0733785384739086 0.038847461545010425 0.11705039931707321 0.5300476103263047
+EYE_CALIBRATED A R 0.07339914405059544 0.03885837037972699 0.11705872046451618 0.5298679077520104
+00:10.953  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_side_continuity\Naiwa_Character.blend"
+信息: 已另存为 "Naiwa_Character.blend"
+
+FBX export starting... 'C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_spherical_eyes\\rebuild_temp\\candidate_A\\Naiwa_Character.fbx'
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+export finished in 1.4286 sec.
+EYE_CALIBRATED B L 0.06557014163344717 0.05117669590903194 0.11708857383148168 0.5300561718370747
+EYE_CALIBRATED B R 0.06557980597404962 0.05118423880901434 0.11707829730206529 0.5301026974354797
+信息: 已另存为 "Naiwa_Character.blend"
+
+FBX export starting... 'C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_spherical_eyes\\rebuild_temp\\candidate_B\\Naiwa_Character.fbx'
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+export finished in 1.3570 sec.
+SPHERICAL_EYES_BUILD_OK
+00:19.328  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\candidate_A\Naiwa_Character.blend"
+00:24.109  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\rebuild_temp\candidate_A\Naiwa_Character.blend"
+00:32.203  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\candidate_B\Naiwa_Character.blend"
+00:37.625  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\rebuild_temp\candidate_B\Naiwa_Character.blend"
+NAIWA_BUILD_OK 6 4
+DELIVERY_REBUILD_INDEPENDENT_MATCH_OK
+DELIVERY_REBUILD_INDEPENDENT_MATCH_OK
+SPHERICAL_DEFAULT_REBUILD_MATCH_OK
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

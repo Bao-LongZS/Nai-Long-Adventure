@@ -1,0 +1,110 @@
+{
+  "changed_vertex_count": 33246,
+  "fixed_vertex_count": 338420,
+  "max_displacement": 0.019783869430697546,
+  "revision": "Broad blending across both raised-neck seams",
+  "blend_height_range": [
+    1.94,
+    2.44
+  ],
+  "fixed_neck_middle_height_range": [
+    2.18,
+    2.255
+  ],
+  "fixed_neck_middle_vertex_count": 2681,
+  "height": 2.6448304653167725,
+  "independent_validation": "passed",
+  "protected_vertices": 334036,
+  "protected_position_error": 0.0,
+  "five_facial_features_preserved": true,
+  "topology_bones_weights_colors_preserved": true,
+  "neck_core_sections": [
+    {
+      "height": 2.195,
+      "before": [
+        0.32654714584350586,
+        -0.39749813079833984,
+        0.23895490169525146
+      ],
+      "after": [
+        0.32654714584350586,
+        -0.39749813079833984,
+        0.23895490169525146
+      ],
+      "max_error": 0.0
+    },
+    {
+      "height": 2.22,
+      "before": [
+        0.31854069232940674,
+        -0.4007200002670288,
+        0.23267066478729248
+      ],
+      "after": [
+        0.31854069232940674,
+        -0.4007200002670288,
+        0.23267066478729248
+      ],
+      "max_error": 0.0
+    },
+    {
+      "height": 2.24,
+      "before": [
+        0.31186139583587646,
+        -0.4058678150177002,
+        0.22719144821166992
+      ],
+      "after": [
+        0.31186139583587646,
+        -0.4058678150177002,
+        0.22719144821166992
+      ],
+      "max_error": 0.0
+    }
+  ],
+  "seam_curvature": {
+    "upper_chest": {
+      "height": 2.08,
+      "curvature_peak_before": [
+        11.051393093043929,
+        6.906232970366333,
+        10.402189812716
+      ],
+      "curvature_peak_after": [
+        5.019327258631564,
+        0.8176377117363518,
+        2.359486309373834
+      ],
+      "columns": [
+        "side_width",
+        "front",
+        "rear"
+      ]
+    },
+    "head_root": {
+      "height": 2.325,
+      "curvature_peak_before": [
+        15.623785132883965,
+        8.132932895869015,
+        10.38531329833178
+      ],
+      "curvature_peak_after": [
+        1.000289321998214,
+        11.090325801684314,
+        2.6140198376124992
+      ],
+      "columns": [
+        "side_width",
+        "front",
+        "rear"
+      ]
+    }
+  },
+  "normals": {
+    "custom_normals": false,
+    "sharp_edges": 0,
+    "all_faces_smooth": true,
+    "maximum_unit_length_error": 1.7881393432617188e-07,
+    "minimum_outward_radial_dot": 0.21696187712147832
+  }
+}

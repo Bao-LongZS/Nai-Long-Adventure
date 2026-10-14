@@ -1,0 +1,42 @@
+00:00.735  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\candidate_N1\Naiwa_Character.blend"
+00:02.797  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N1_head_front.png'
+00:03.110  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N1_head_three_quarter.png'
+00:03.422  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N1_head_side.png'
+00:03.735  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N1_full_front.png'
+00:04.032  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\N1_common_ORTHO.png'
+00:04.969  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N1_head_gray_front.png'
+00:05.250  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N1_head_gray_three_quarter.png'
+00:05.516  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N1_head_gray_side.png'
+00:05.797  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\N1_common_gray_ORTHO.png'
+C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\render_head_neck_comparisons.py:64: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+00:06.016  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N1_body_id_front.png'
+00:06.282  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N1_body_id_three_quarter.png'
+00:06.532  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N1_body_id_side.png'
+00:06.782  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\N1_common_body_id.png'
+00:07.079  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\N1_extra_yaw45_pitch-5.png'
+00:07.375  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\N1_extra_yaw55_pitch0.png'
+00:07.657  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\N1_extra_lens135.png'
+HEAD_NECK_MODEL_RENDER_OK N1
+00:07.938  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\candidate_N2\Naiwa_Character.blend"
+00:08.672  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N2_head_front.png'
+00:09.016  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N2_head_three_quarter.png'
+00:09.360  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N2_head_side.png'
+00:09.672  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N2_full_front.png'
+00:09.969  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\N2_common_ORTHO.png'
+00:10.875  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N2_head_gray_front.png'
+00:11.157  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N2_head_gray_three_quarter.png'
+00:11.422  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N2_head_gray_side.png'
+00:11.688  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\N2_common_gray_ORTHO.png'
+00:11.938  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N2_body_id_front.png'
+00:12.188  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N2_body_id_three_quarter.png'
+00:12.438  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\comparisons\N2_body_id_side.png'
+00:12.688  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\N2_common_body_id.png'
+00:12.969  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\N2_extra_yaw45_pitch-5.png'
+00:13.282  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\N2_extra_yaw55_pitch0.png'
+00:13.594  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_head_neck_refinement\reference_comparison\N2_extra_lens135.png'
+HEAD_NECK_MODEL_RENDER_OK N2
+HEAD_NECK_COMPARISONS_OK ['N1', 'N2']
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

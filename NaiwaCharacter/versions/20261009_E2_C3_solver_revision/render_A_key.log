@@ -1,0 +1,23 @@
+00:00.610  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\candidate_A\Naiwa_Character.blend"
+00:02.625  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\key\A\A_head_color_front.png'
+C3_REVIEW_IMAGE A key A_head_color_front.png
+00:02.953  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\key\A\A_head_color_three_quarter.png'
+C3_REVIEW_IMAGE A key A_head_color_three_quarter.png
+00:03.453  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\key\A\A_head_color_side.png'
+C3_REVIEW_IMAGE A key A_head_color_side.png
+00:03.922  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\key\A\A_full_color_three_quarter.png'
+C3_REVIEW_IMAGE A key A_full_color_three_quarter.png
+00:04.391  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\key\A\A_common_ORTHO_50.png'
+C3_REVIEW_IMAGE A key A_common_ORTHO_50.png
+00:04.813  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\key\A\A_head_gray_front.png'
+C3_REVIEW_IMAGE A key A_head_gray_front.png
+00:05.235  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\key\A\A_head_gray_three_quarter.png'
+C3_REVIEW_IMAGE A key A_head_gray_three_quarter.png
+00:05.625  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\key\A\A_head_gray_side.png'
+C3_REVIEW_IMAGE A key A_head_gray_side.png
+00:05.985  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\key\A\A_common_body_id_50.png'
+C3_REVIEW_IMAGE A key A_common_body_id_50.png
+C3_REVIEW_OK A key 9 C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261009_E2_C3_solver_revision\review\key\A
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

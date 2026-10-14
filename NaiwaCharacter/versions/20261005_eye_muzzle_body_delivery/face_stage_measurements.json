@@ -1,0 +1,22 @@
+{
+  "stage_paths": {
+    "face_raise": "stage_face_raise.blend",
+    "muzzle": "stage_muzzle.blend"
+  },
+  "mouth_z": 2.4004400309061453,
+  "throat_z": 2.3082969118983243,
+  "fixed_D": 0.10238124334202339,
+  "expected_muzzle_advance": 0.03583343516970818,
+  "expected_throat_retraction": 0.015357186501303507,
+  "measured_during_build": {
+    "mouth_z": 2.4004400309061453,
+    "throat_z": 2.3082969118983243,
+    "mouth_Y_before": -0.4394111633300781,
+    "mouth_Y_after": -0.475180983543396,
+    "throat_Y_before": -0.42487621307373047,
+    "throat_Y_after": -0.4095190763473511,
+    "mouth_F_advance": 0.03576982021331787,
+    "throat_minus_F_retraction": 0.015357136726379395,
+    "X_Z_exact": true
+  }
+}

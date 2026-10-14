@@ -1,0 +1,13 @@
+00:00.484  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\before_lip_eye_refinement\Naiwa_Character.blend"
+00:04.062  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\lip_eye_draft\after_gray_side.png'
+00:04.328  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\lip_eye_draft\after_gray_front.png'
+00:04.593  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\lip_eye_draft\after_gray_three_quarter.png'
+00:04.875  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\lip_eye_draft\after_side.png'
+00:05.187  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\lip_eye_draft\after_front.png'
+00:05.484  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\lip_eye_draft\after_three_quarter.png'
+LIP_EYE_SCULPT_OK {'body': {'modified_vertices': 5716, 'maximum_displacement': 0.026897042989730835, 'lateral_contour_and_all_heights_exact': True, 'mouth_base_retraction': 0.024, 'lip_height': 0.004, 'lip_vertical_radius': 0.015, 'lower_z': 2.18, 'upper_z': 2.435}, 'mouth': {'width': 0.10976628586649895, 'center_z': 2.359487533569336, 'central_thickness': 0.00132, 'tip_thickness': 0.00016}, 'eyes': {'L': {'aperture_center': [-0.08799989365944327, 2.464250777615328], 'aperture_area_target': 0.00812484, 'black_area_target': 0.0030646799999999993, 'ellipse_vertical_ratio': 1.04, 'axes': [0.04986729404187823, 0.05186198580355336], 'pupil_radius': 0.031233282600292584, 'pupil_x_z_exact': True, 'complete_closed_eye_volume': True}, 'R': {'aperture_center': [0.0879565498604527, 2.464375058698446], 'aperture_area_target': 0.00812628, 'black_area_target': 0.003067199999999999, 'ellipse_vertical_ratio': 1.04, 'axes': [0.049871712942555206, 0.051866581460257424], 'pupil_radius': 0.031246121085711145, 'pupil_x_z_exact': True, 'complete_closed_eye_volume': True}}}
+信息: 已另存为 "Naiwa_Character.blend"
+LIP_EYE_DRAFT_OK
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

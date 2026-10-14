@@ -1,0 +1,316 @@
+{
+  "independent_validation": "passed",
+  "baseline": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\iterations\\before_eye_muzzle_body_revision",
+  "target": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261005_eye_muzzle_body_delivery\\Naiwa_Character.blend",
+  "H_before": 2.6368305683135986,
+  "H_after": 2.6368305683135986,
+  "D_fixed": 0.10238124334202339,
+  "body_X_exact": true,
+  "crown_exact": true,
+  "belly_volume_and_legs_feet_exact": true,
+  "standing_pose_bones_weights_and_actions_preserved": true,
+  "body_changed_vertices": 33290,
+  "face_Z_maximum": 0.040952444076538086,
+  "eyes": {
+    "L": {
+      "actual_outer_diameter": 0.10202344930353877,
+      "actual_pupil_diameter": 0.05425990475555603,
+      "actual_maximum_F_projection": 0.02047625184059143,
+      "forehead_in_D": 1.3637965881913034,
+      "center_X_Z": [
+        -0.08799989365944327,
+        2.5052032749521373
+      ],
+      "visible_metrics": {
+        "aperture": {
+          "area": 0.00817504,
+          "sample_count": 51094,
+          "center": [
+            -0.08800271656162813,
+            2.505196633655594
+          ],
+          "bounds": [
+            [
+              -0.13879999999999945,
+              2.454399999999998
+            ],
+            [
+              -0.03719999999999654,
+              2.5559999999999867
+            ]
+          ],
+          "axis_ratio": 1.0002839375403592,
+          "major_axis_degrees": -37.602805655790974,
+          "width_height_ratio": 1.0000000000001388,
+          "covariance_xz": [
+            [
+              0.0006505961330674547,
+              -1.7856631402121493e-07
+            ],
+            [
+              -1.7856631402121493e-07,
+              0.0006505018119736895
+            ]
+          ]
+        },
+        "green": {
+          "area": 0.00586272,
+          "sample_count": 36642,
+          "center": [
+            -0.08855650892418412,
+            2.505799847169907
+          ],
+          "bounds": [
+            [
+              -0.13879999999999945,
+              2.454399999999998
+            ],
+            [
+              -0.03719999999999654,
+              2.5559999999999867
+            ]
+          ],
+          "axis_ratio": 1.0011096989463015,
+          "major_axis_degrees": 42.022219040707654,
+          "width_height_ratio": 1.0000000000001388,
+          "covariance_xz": [
+            [
+              0.0008334681352715889,
+              9.192905286289462e-07
+            ],
+            [
+              9.192905286289462e-07,
+              0.0008332763342377104
+            ]
+          ]
+        },
+        "black": {
+          "area": 0.00231232,
+          "sample_count": 14452,
+          "center": [
+            -0.08659861610849669,
+            2.5036672294492006
+          ],
+          "bounds": [
+            [
+              -0.11359999999999873,
+              2.4767999999999954
+            ],
+            [
+              -0.05959999999999718,
+              2.5307999999999895
+            ]
+          ],
+          "axis_ratio": 1.0009936025475767,
+          "major_axis_degrees": 5.09141223851239,
+          "width_height_ratio": 1.0000000000001388,
+          "covariance_xz": [
+            [
+              0.00018418832911169537,
+              3.230662960252703e-08
+            ],
+            [
+              3.230662960252703e-08,
+              0.00018382860502812965
+            ]
+          ]
+        },
+        "sampling": {
+          "step": 0.0004,
+          "skin_epsilon": 5e-07,
+          "grid_anchor_xz": [
+            0.0,
+            0.0
+          ]
+        },
+        "visible_surface_gap": {
+          "minimum": 1.1920928955078125e-06,
+          "maximum": 0.020468831062316895,
+          "mean": 0.010771559428649812
+        }
+      },
+      "integrity": {
+        "duplicate_vertices_at_1e_7": 0,
+        "duplicate_faces": 0,
+        "degenerate_faces": 0,
+        "nonadjacent_intersections": 0,
+        "normal_unit_error": 1.1920928955078125e-07,
+        "custom_normals": false,
+        "sharp_edges": 0,
+        "all_faces_smooth": true
+      }
+    },
+    "R": {
+      "actual_outer_diameter": 0.10201346491772628,
+      "actual_pupil_diameter": 0.05426178196861184,
+      "actual_maximum_F_projection": 0.02047625184059143,
+      "forehead_in_D": 1.3625826833874426,
+      "center_X_Z": [
+        0.0879565498604527,
+        2.5053275560352555
+      ],
+      "visible_metrics": {
+        "aperture": {
+          "area": 0.00817344,
+          "sample_count": 51084,
+          "center": [
+            0.08796126380079816,
+            2.505317892099266
+          ],
+          "bounds": [
+            [
+              0.03720000000000005,
+              2.454399999999998
+            ],
+            [
+              0.1388000000000003,
+              2.5559999999999867
+            ]
+          ],
+          "axis_ratio": 1.0004919347182972,
+          "major_axis_degrees": 18.027932487670057,
+          "width_height_ratio": 1.0000000000001128,
+          "covariance_xz": [
+            [
+              0.0006506801720462811,
+              1.8827665973826155e-07
+            ],
+            [
+              1.8827665973826155e-07,
+              0.0006501629521301321
+            ]
+          ]
+        },
+        "green": {
+          "area": 0.00586096,
+          "sample_count": 36631,
+          "center": [
+            0.08849862684611355,
+            2.505967142584142
+          ],
+          "bounds": [
+            [
+              0.03720000000000005,
+              2.454399999999998
+            ],
+            [
+              0.1388000000000003,
+              2.5559999999999867
+            ]
+          ],
+          "axis_ratio": 1.0013352326352079,
+          "major_axis_degrees": -30.765814086626676,
+          "width_height_ratio": 1.0000000000001128,
+          "covariance_xz": [
+            [
+              0.0008337175529178037,
+              -9.773233798699045e-07
+            ],
+            [
+              -9.773233798699045e-07,
+              0.0008326576629851007
+            ]
+          ]
+        },
+        "black": {
+          "area": 0.00231248,
+          "sample_count": 14453,
+          "center": [
+            0.08659932194008071,
+            2.5036723725178063
+          ],
+          "bounds": [
+            [
+              0.05960000000000011,
+              2.4767999999999954
+            ],
+            [
+              0.11360000000000026,
+              2.5307999999999895
+            ]
+          ],
+          "axis_ratio": 1.000905040139549,
+          "major_axis_degrees": 2.954183756097507,
+          "width_height_ratio": 1.0000000000001128,
+          "covariance_xz": [
+            [
+              0.00018418681473431886,
+              1.7136182846095484e-08
+            ],
+            [
+              1.7136182846095484e-08,
+              0.00018385564092892828
+            ]
+          ]
+        },
+        "sampling": {
+          "step": 0.0004,
+          "skin_epsilon": 5e-07,
+          "grid_anchor_xz": [
+            0.0,
+            0.0
+          ]
+        },
+        "visible_surface_gap": {
+          "minimum": 1.1920928955078125e-06,
+          "maximum": 0.020467281341552734,
+          "mean": 0.010773305110350425
+        }
+      },
+      "integrity": {
+        "duplicate_vertices_at_1e_7": 0,
+        "duplicate_faces": 0,
+        "degenerate_faces": 0,
+        "nonadjacent_intersections": 0,
+        "normal_unit_error": 1.1920928955078125e-07,
+        "custom_normals": false,
+        "sharp_edges": 0,
+        "all_faces_smooth": true
+      }
+    }
+  },
+  "mouth": {
+    "width": 0.12797655165195465,
+    "central_opening": 0.006142854690551758,
+    "center_z": 2.400440216064453,
+    "skin_gap_range": [
+      0.00034999847412109375,
+      0.00034999847412109375
+    ],
+    "face_center_gap_range": [
+      0.0001456141471862793,
+      0.0005477666854858398
+    ],
+    "closed_cavity_integrity": {
+      "duplicate_vertices_at_1e_7": 0,
+      "duplicate_faces": 0,
+      "degenerate_faces": 0,
+      "nonadjacent_intersections": 0,
+      "normal_unit_error": 1.1920928955078125e-07,
+      "custom_normals": false,
+      "sharp_edges": 0,
+      "all_faces_smooth": true
+    }
+  },
+  "body_integrity": {
+    "duplicate_vertices_at_1e_7": 0,
+    "duplicate_faces": 0,
+    "degenerate_faces": 0,
+    "nonadjacent_intersections": 0,
+    "normal_unit_error": 1.1920928955078125e-07,
+    "custom_normals": false,
+    "sharp_edges": 0,
+    "all_faces_smooth": true
+  },
+  "shell_integrity": {
+    "duplicate_vertices_at_1e_7": 0,
+    "duplicate_faces": 0,
+    "degenerate_faces": 0,
+    "nonadjacent_intersections": 0,
+    "normal_unit_error": 1.7881393432617188e-07,
+    "custom_normals": false,
+    "sharp_edges": 0,
+    "all_faces_smooth": true
+  },
+  "entire_feet_brown": true
+}

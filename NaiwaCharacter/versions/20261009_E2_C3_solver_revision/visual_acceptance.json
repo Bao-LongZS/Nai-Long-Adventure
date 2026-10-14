@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "passed": false,
+  "selected_candidate": "B",
+  "candidate_sha256": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+  "decision": "reject_B_and_retain_E2",
+  "stop_branch": "instruction_section6_B_selected_visual_validation_failed; no_third_candidate",
+  "key_gate": "Small but visible under-mouth/neck improvement allowed selected validation",
+  "saved_geometry_assets_animation_validation": true,
+  "independent_reproduction": true,
+  "source_E2_and_candidate_hashes_verified": true,
+  "visual_review": {
+    "ordinary_gray_color": "45 degree wedge lower tail shortens; 90 degree upper turn broadens; frontal dark region remains flatter/wider",
+    "two_grazing_directions": "No obvious new sharp ridge, horizontal ledge or shoulder kink in reviewed images",
+    "stripe_reflection": "Existing side-neck return becomes shorter and more closed near original900px X360..425 Y535..640",
+    "localized_actual_mesh": "Same-state actual triangle patch measurements show increased curvature and more concentrated turning at that reflection region; cannot confirm required non-degradation",
+    "poses": "Walk9/Laugh7/Jump6 reviewed. E2/B same-condition Laugh7 images retain the same tiny mouth-front projection; fixed mouth evaluated coordinates and contact relationship pass same-state checks"
+  },
+  "local_diagnostic": {
+    "report": "selected_patch_diagnostic.json",
+    "global_measurement_protocol_changed": false,
+    "fixed_line_count": 35,
+    "maximum_local_curvature_E2_B": [16.464, 21.499],
+    "horizontal_y595_peak_E2_B": [10.9246, 14.8848],
+    "horizontal_y595_angle80_width_E2_B": [0.052312, 0.038346],
+    "central_diagonal_peak_E2_B": [7.8311, 17.5945],
+    "central_diagonal_009_window_turn_fraction_E2_B": [0.1693, 0.2747],
+    "limitation": "Supplementary local fixed-camera section fitting, not a proof of whole-body sharp ridges; source/candidate surface locations move and the 0.009world fit smooths triangle detail"
+  },
+  "residuals": [
+    "Frontal under-mouth concentration and 45 degree wedge remain",
+    "Side-neck existing stripe return becomes more closed; supplemental local curvature and turn concentration increase",
+    "Existing eye sockets, strong reflection microtexture, remote-eye reference exposure difference and Laugh7 tiny mouth-front projection remain"
+  ],
+  "cause_inference": "Current solve constrains longitudinal mouth-underturn curvature primarily at Z2.31..2.40044; observed local peak near Z2.28961 and transverse/diagonal turn were not jointly constrained. This is a solver diagnosis inference, not an independently established sole cause",
+  "candidate_A": "Direction correct but amplitude insufficient at key gate; no full selected asset/animation validation and not promoted",
+  "new_FBX_exported": false,
+  "recommended": "E2"
+}

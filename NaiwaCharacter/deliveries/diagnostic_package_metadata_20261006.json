@@ -1,0 +1,246 @@
+{
+  "original_archive": "deliveries/Naiwa_Head_Diagnostics_20261006.zip",
+  "archive_sha256": "36552ee89a98ce6d438b6926e3c26e5daa5421952e5c12a1653489c1a0556381",
+  "note": "Original package notes and manifest preserved; file contents remain at the mapped project paths.",
+  "entries": [
+    {
+      "entry": "diagnostics/DIAGNOSTIC_CHECKPOINT.md",
+      "retained_file": "diagnostics/20261005_head_geometry/DIAGNOSTIC_CHECKPOINT.md",
+      "sha256": "868bd4f04f3dc1d93686afd06f7bc7ed25d40320bb4324c83984cc955cfd9409",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/DIAGNOSTIC_REPORT.md",
+      "retained_file": "diagnostics/20261005_head_geometry/DIAGNOSTIC_REPORT.md",
+      "sha256": "04c1f14f81d8b2bafb3183c815804d08b5f64bdaea35885afb1cc4daceff608e",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/HEAD_GENERATION_PARAMETERS.md",
+      "retained_file": "diagnostics/20261005_head_geometry/HEAD_GENERATION_PARAMETERS.md",
+      "sha256": "ad1fdd1ed6a2dc691bc156ebaa6091ffa00d26e03be2991e79e6b3b63f03fa07",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/SHA256SUMS.json",
+      "retained_file": "diagnostics/20261005_head_geometry/SHA256SUMS.json",
+      "sha256": "0aacbb8f4dc33ebe2fab55aa9097a6e18da265c8485cc6bfa6f4062dda45c56e",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/diagnostic_validation.json",
+      "retained_file": "diagnostics/20261005_head_geometry/diagnostic_validation.json",
+      "sha256": "26cea444ad58aa831e4b78f68870efddf5aee1017aa2dc3a8ac5a7059b54f2f1",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/eye_gray_camera_protocol.json",
+      "retained_file": "diagnostics/20261005_head_geometry/eye_gray_camera_protocol.json",
+      "sha256": "4b2637682b8e36ff4a7eec1ecad033a187fdf7352b420a7252f0366a8d172a8a",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/eye_gray_curvature.png",
+      "retained_file": "diagnostics/20261005_head_geometry/eye_gray_curvature.png",
+      "sha256": "cf8430000611aef4f975653593ac70231a33f8de317452800cf91a4b57d3a03b",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/eye_gray_front_close.png",
+      "retained_file": "diagnostics/20261005_head_geometry/eye_gray_front_close.png",
+      "sha256": "2c83adfc784492ed0e62dbc16240fc6b7ba603f55ec0b66f790caa30655cb97f",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/eye_gray_oblique_close.png",
+      "retained_file": "diagnostics/20261005_head_geometry/eye_gray_oblique_close.png",
+      "sha256": "7c045570d21b7e7dd29bdb1b12ef79e7493f50cec109b179908a752e5e00a6d1",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/eye_gray_render.log",
+      "retained_file": "diagnostics/20261005_head_geometry/eye_gray_render.log",
+      "sha256": "135718946bfbbea5fb1c0cb8e2623bb96deff9b09c633671f9743258867fab82",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/eye_measurements.csv",
+      "retained_file": "diagnostics/20261005_head_geometry/eye_measurements.csv",
+      "sha256": "3eb03db7365c169278e48b5ed6642b43eeff210e1fcf60b51f7df0f440a7e0ad",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/eye_side_sections.png",
+      "retained_file": "diagnostics/20261005_head_geometry/eye_side_sections.png",
+      "sha256": "729aa47eb3e038cad3eefc02bfb192f2b65ea8e1600ecfbec5fed13cec370d16",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/head_generation_code.zip",
+      "retained_file": "diagnostics/20261005_head_geometry/head_generation_code.zip",
+      "sha256": "d4465de30c62651574249d6e1136a08c40da8f58ddc7dc98075e803a1578da84",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/head_generation_parameters.json",
+      "retained_file": "diagnostics/20261005_head_geometry/head_generation_parameters.json",
+      "sha256": "286c213dde121549b2d67b4554ba41caf3ee1cc2a6f156ecb94b5c7ee70b0ac3",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/head_generation_source_manifest.json",
+      "retained_file": "diagnostics/20261005_head_geometry/head_generation_source_manifest.json",
+      "sha256": "a8528ad3a0eb02896f44be29805a2fd2ae4d4a7751eb9e5c8d036bb93b4add59",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/head_geometry_baseline.json",
+      "retained_file": "diagnostics/20261005_head_geometry/head_geometry_baseline.json",
+      "sha256": "78209c2321c21abdf77caa22122c8702493ca4a070c03672332fff0d8c0f00c4",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/head_geometry_measurements.json",
+      "retained_file": "diagnostics/20261005_head_geometry/head_geometry_measurements.json",
+      "sha256": "a8d54addafbea4dc89d338000d901288a83d6507d029490d352b50c609cc29f8",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/head_geometry_sections.json",
+      "retained_file": "diagnostics/20261005_head_geometry/head_geometry_sections.json",
+      "sha256": "05a698977015dd6c53ab34fc86cb33bb56e9adf1a08a83011b4913aac76417a1",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/head_horizontal_sections.png",
+      "retained_file": "diagnostics/20261005_head_geometry/head_horizontal_sections.png",
+      "sha256": "ea691583056041892eab192732a916946da4bceef3f1b6e1ae98bae0537837bb",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/head_midline_section.png",
+      "retained_file": "diagnostics/20261005_head_geometry/head_midline_section.png",
+      "sha256": "bdc481db481b8bcb8facbd0c126fd3ef5201841613f6c37a4fe8eab29f73d079",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/head_section_measurements.csv",
+      "retained_file": "diagnostics/20261005_head_geometry/head_section_measurements.csv",
+      "sha256": "99e13de2c9a91f4c227f74a36a77534ac0bc9f2555ded2ebc4f065e24a7ac44f",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/independent_data_validation.json",
+      "retained_file": "diagnostics/20261005_head_geometry/independent_data_validation.json",
+      "sha256": "bfb103d5cf1473d7fa542ab16427a37c2ecbca3e5f283c35142b4d8882f8d898",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/index.html",
+      "retained_file": "diagnostics/20261005_head_geometry/index.html",
+      "sha256": "ec1f02e32909b4926939f93be7f01433def54089047447c72e1631e7b8fca7ea",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/measurement.log",
+      "retained_file": "diagnostics/20261005_head_geometry/measurement.log",
+      "sha256": "9d1c84454abc348f60dcec9d2f9591b21a11af0efc7348a3ab4dae0e9c43f0e3",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/plotted_section_dimensions.json",
+      "retained_file": "diagnostics/20261005_head_geometry/plotted_section_dimensions.json",
+      "sha256": "1b5bbbd8a20f14f2638152736eea54363dbee2139fda90d751ab8e6b4d84cc01",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/reference_alignment.json",
+      "retained_file": "diagnostics/20261005_head_geometry/reference_alignment.json",
+      "sha256": "3aec02b5a1ee526efa34672449cbf3d10372afbaf24368cf1f1ac0b415199271",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/reference_alignment.md",
+      "retained_file": "diagnostics/20261005_head_geometry/reference_alignment.md",
+      "sha256": "095524049d692c1e565471961483aa7deee9bf8f32c269f7364de87db2a9d407",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/reference_camera_candidates.png",
+      "retained_file": "diagnostics/20261005_head_geometry/reference_camera_candidates.png",
+      "sha256": "892fa9b92f63b2eabc6546be2a4dd813982250491ff896f95a3707440a11fb09",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/reference_camera_render.log",
+      "retained_file": "diagnostics/20261005_head_geometry/reference_camera_render.log",
+      "sha256": "c75097023bfb6d8a926e03a154312f22c462acaed56abe53855c0cc60bfb2381",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/reference_camera_yaw70_pitch00.png",
+      "retained_file": "diagnostics/20261005_head_geometry/reference_camera_yaw70_pitch00.png",
+      "sha256": "81ddc617680f42ee8592cf38f87ebc9914ca0088f860948043a05b345be20ca8",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/reference_camera_yaw80_pitch-5.png",
+      "retained_file": "diagnostics/20261005_head_geometry/reference_camera_yaw80_pitch-5.png",
+      "sha256": "d7a5fa5456357f875501ab9815294bd2d57f39d33eff2ad972c1a42d51eb2e50",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/reference_camera_yaw80_pitch00.png",
+      "retained_file": "diagnostics/20261005_head_geometry/reference_camera_yaw80_pitch00.png",
+      "sha256": "335aad1ab0588349bc56752c834f7c2c4e2e71833a99c6029f4e39534244412d",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/reference_camera_yaw85_pitch00.png",
+      "retained_file": "diagnostics/20261005_head_geometry/reference_camera_yaw85_pitch00.png",
+      "sha256": "5d74872b210ededff5d15033ecb17e542c77c25c5edda6119f31ba452c690279",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/reference_candidate_cameras.json",
+      "retained_file": "diagnostics/20261005_head_geometry/reference_candidate_cameras.json",
+      "sha256": "6c44c32e086009b2005ec26440ef951d7ed8322eea5d73d23cad8710bbf0857d",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/reference_head_comparison.png",
+      "retained_file": "diagnostics/20261005_head_geometry/reference_head_comparison.png",
+      "sha256": "d51513760d13005d7efea9a82c82cf2ad4eed5fffc032d3a1657a1c120208715",
+      "exact_match": true
+    },
+    {
+      "entry": "diagnostics/reference_pitch_refinement.log",
+      "retained_file": "diagnostics/20261005_head_geometry/reference_pitch_refinement.log",
+      "sha256": "b7b1bf8337f228c887d789fb4ee551d83878922be126cc7fef5ab0fcdaf866f1",
+      "exact_match": true
+    },
+    {
+      "entry": "model/Naiwa_Character.blend",
+      "retained_file": "versions/20261005_head_side_continuity/Naiwa_Character.blend",
+      "sha256": "a95a5c7efb25cb6f379897dd6ec4af98a201bc2619dc8caa2bb5b5de8ea3dfd5",
+      "exact_match": true
+    },
+    {
+      "entry": "model/Naiwa_Character.fbx",
+      "retained_file": "versions/20261005_head_side_continuity/Naiwa_Character.fbx",
+      "sha256": "997763e0da6a36a32c33a27dc03683be2f78d933926cf9f642a1ee9a871d8def",
+      "exact_match": true
+    },
+    {
+      "entry": "reference/PDF_fig1_3_original.jpg",
+      "retained_file": "references/20261005/pdf_page03_image03_IM60.jpg",
+      "sha256": "4ec47b76c34f5a0e2a670f7fe6a675d49bd0aaeb524a03d83add37e9f209074d",
+      "exact_match": true
+    }
+  ],
+  "unique_metadata": {
+    "README_先看这里.md": "# 奶蛙头部诊断交付包\n\n2026-10-06。当前模型几何、尺寸和位置保持，没有追加造型修改。\n\n## 从这里打开\n\n- Blender工程：[model/Naiwa_Character.blend](model/Naiwa_Character.blend)\n- FBX：[model/Naiwa_Character.fbx](model/Naiwa_Character.fbx)\n- 浏览器图文总览：[diagnostics/index.html](diagnostics/index.html)\n- 中文诊断报告：[diagnostics/DIAGNOSTIC_REPORT.md](diagnostics/DIAGNOSTIC_REPORT.md)\n\n请先解压整个ZIP，再打开index.html。全部图片使用本地相对路径，无需网络。\n\n## 包内材料\n\n- diagnostics：眼球侧剖面、眼部灰模、头部正中侧剖面、4个水平截面、参考并排图及相机候选；测量CSV/JSON、相机协议、诊断报告和校验记录。\n- diagnostics/HEAD_GENERATION_PARAMETERS.md：头部、眼体及形变权重说明。\n- diagnostics/head_generation_parameters.json：完整控制截面、构造参数与当前形变系数。\n- diagnostics/head_generation_code.zip：原始生成脚本及本地依赖快照，保留原项目路径。\n- reference/PDF_fig1_3_original.jpg：PDF图1.3原始嵌入图，900×1130；没有拉伸。\n- model：当前侧面连续性版本的原生工程和FBX；MODEL_VERSION.json记录版本及校验值。\n- SHA256SUMS.json：包内各文件的SHA256校验值。\n\n## 主要测量\n\nD=0.117244812742工程单位，两眼水平中心距0.234625801793=2.00116147D。\n绿区最前点相对同XZ脸面的凸出约0.0569D，绿区最大局部凸出约0.1499D，整个眼冠最大局部凸出约0.2001D。\n黑瞳与绿色眼体共用连续网格，独立几何台阶为0。\n眼体代表法线厚度L/R=0.089451166256/0.087780646393，含埋入部分。\n参考近似观察角度为偏航80°、仰角−5°、滚转0°。完整测量定义、四个截面尺寸和无法同时对齐的部位见中文报告。\n\n## 使用说明\n\n工程默认实体视图可能不显示黑瞳颜色。进入材质预览或渲染视图可查看绿色眼体和黑瞳；灰模诊断图统一使用灰色材质。\n代码包用于核查生成来源。当前默认生成器依赖固定历史工程；如需精确重新生成，请使用原项目中保留的固定输入。此交付包仅附当前工程，不复制全部历史版本。\n\n独立数值复核104/104项通过，原blend和FBX校验保持一致。\n",
+    "SHA256SUMS.json": "{\n  \"README_先看这里.md\": \"6982ee56b7993fc5753fb5e7cbc60fb7d902ad1db62a38987a2b74fbc41cee14\",\n  \"diagnostics/DIAGNOSTIC_CHECKPOINT.md\": \"868bd4f04f3dc1d93686afd06f7bc7ed25d40320bb4324c83984cc955cfd9409\",\n  \"diagnostics/DIAGNOSTIC_REPORT.md\": \"04c1f14f81d8b2bafb3183c815804d08b5f64bdaea35885afb1cc4daceff608e\",\n  \"diagnostics/HEAD_GENERATION_PARAMETERS.md\": \"ad1fdd1ed6a2dc691bc156ebaa6091ffa00d26e03be2991e79e6b3b63f03fa07\",\n  \"diagnostics/SHA256SUMS.json\": \"0aacbb8f4dc33ebe2fab55aa9097a6e18da265c8485cc6bfa6f4062dda45c56e\",\n  \"diagnostics/diagnostic_validation.json\": \"26cea444ad58aa831e4b78f68870efddf5aee1017aa2dc3a8ac5a7059b54f2f1\",\n  \"diagnostics/eye_gray_camera_protocol.json\": \"4b2637682b8e36ff4a7eec1ecad033a187fdf7352b420a7252f0366a8d172a8a\",\n  \"diagnostics/eye_gray_curvature.png\": \"cf8430000611aef4f975653593ac70231a33f8de317452800cf91a4b57d3a03b\",\n  \"diagnostics/eye_gray_front_close.png\": \"2c83adfc784492ed0e62dbc16240fc6b7ba603f55ec0b66f790caa30655cb97f\",\n  \"diagnostics/eye_gray_oblique_close.png\": \"7c045570d21b7e7dd29bdb1b12ef79e7493f50cec109b179908a752e5e00a6d1\",\n  \"diagnostics/eye_gray_render.log\": \"135718946bfbbea5fb1c0cb8e2623bb96deff9b09c633671f9743258867fab82\",\n  \"diagnostics/eye_measurements.csv\": \"3eb03db7365c169278e48b5ed6642b43eeff210e1fcf60b51f7df0f440a7e0ad\",\n  \"diagnostics/eye_side_sections.png\": \"729aa47eb3e038cad3eefc02bfb192f2b65ea8e1600ecfbec5fed13cec370d16\",\n  \"diagnostics/head_generation_code.zip\": \"d4465de30c62651574249d6e1136a08c40da8f58ddc7dc98075e803a1578da84\",\n  \"diagnostics/head_generation_parameters.json\": \"286c213dde121549b2d67b4554ba41caf3ee1cc2a6f156ecb94b5c7ee70b0ac3\",\n  \"diagnostics/head_generation_source_manifest.json\": \"a8528ad3a0eb02896f44be29805a2fd2ae4d4a7751eb9e5c8d036bb93b4add59\",\n  \"diagnostics/head_geometry_baseline.json\": \"78209c2321c21abdf77caa22122c8702493ca4a070c03672332fff0d8c0f00c4\",\n  \"diagnostics/head_geometry_measurements.json\": \"a8d54addafbea4dc89d338000d901288a83d6507d029490d352b50c609cc29f8\",\n  \"diagnostics/head_geometry_sections.json\": \"05a698977015dd6c53ab34fc86cb33bb56e9adf1a08a83011b4913aac76417a1\",\n  \"diagnostics/head_horizontal_sections.png\": \"ea691583056041892eab192732a916946da4bceef3f1b6e1ae98bae0537837bb\",\n  \"diagnostics/head_midline_section.png\": \"bdc481db481b8bcb8facbd0c126fd3ef5201841613f6c37a4fe8eab29f73d079\",\n  \"diagnostics/head_section_measurements.csv\": \"99e13de2c9a91f4c227f74a36a77534ac0bc9f2555ded2ebc4f065e24a7ac44f\",\n  \"diagnostics/independent_data_validation.json\": \"bfb103d5cf1473d7fa542ab16427a37c2ecbca3e5f283c35142b4d8882f8d898\",\n  \"diagnostics/index.html\": \"ec1f02e32909b4926939f93be7f01433def54089047447c72e1631e7b8fca7ea\",\n  \"diagnostics/measurement.log\": \"9d1c84454abc348f60dcec9d2f9591b21a11af0efc7348a3ab4dae0e9c43f0e3\",\n  \"diagnostics/plotted_section_dimensions.json\": \"1b5bbbd8a20f14f2638152736eea54363dbee2139fda90d751ab8e6b4d84cc01\",\n  \"diagnostics/reference_alignment.json\": \"3aec02b5a1ee526efa34672449cbf3d10372afbaf24368cf1f1ac0b415199271\",\n  \"diagnostics/reference_alignment.md\": \"095524049d692c1e565471961483aa7deee9bf8f32c269f7364de87db2a9d407\",\n  \"diagnostics/reference_camera_candidates.png\": \"892fa9b92f63b2eabc6546be2a4dd813982250491ff896f95a3707440a11fb09\",\n  \"diagnostics/reference_camera_render.log\": \"c75097023bfb6d8a926e03a154312f22c462acaed56abe53855c0cc60bfb2381\",\n  \"diagnostics/reference_camera_yaw70_pitch00.png\": \"81ddc617680f42ee8592cf38f87ebc9914ca0088f860948043a05b345be20ca8\",\n  \"diagnostics/reference_camera_yaw80_pitch-5.png\": \"d7a5fa5456357f875501ab9815294bd2d57f39d33eff2ad972c1a42d51eb2e50\",\n  \"diagnostics/reference_camera_yaw80_pitch00.png\": \"335aad1ab0588349bc56752c834f7c2c4e2e71833a99c6029f4e39534244412d\",\n  \"diagnostics/reference_camera_yaw85_pitch00.png\": \"5d74872b210ededff5d15033ecb17e542c77c25c5edda6119f31ba452c690279\",\n  \"diagnostics/reference_candidate_cameras.json\": \"6c44c32e086009b2005ec26440ef951d7ed8322eea5d73d23cad8710bbf0857d\",\n  \"diagnostics/reference_head_comparison.png\": \"d51513760d13005d7efea9a82c82cf2ad4eed5fffc032d3a1657a1c120208715\",\n  \"diagnostics/reference_pitch_refinement.log\": \"b7b1bf8337f228c887d789fb4ee551d83878922be126cc7fef5ab0fcdaf866f1\",\n  \"model/MODEL_VERSION.json\": \"89341c38e0f1fa66c3f8a31256106ae2c3f2b5e3ddb057942eaeac76b59f8758\",\n  \"model/Naiwa_Character.blend\": \"a95a5c7efb25cb6f379897dd6ec4af98a201bc2619dc8caa2bb5b5de8ea3dfd5\",\n  \"model/Naiwa_Character.fbx\": \"997763e0da6a36a32c33a27dc03683be2f78d933926cf9f642a1ee9a871d8def\",\n  \"reference/PDF_fig1_3_original.jpg\": \"4ec47b76c34f5a0e2a670f7fe6a675d49bd0aaeb524a03d83add37e9f209074d\"\n}",
+    "model/MODEL_VERSION.json": "{\n  \"original_version\": \"versions/20261005_head_side_continuity\",\n  \"diagnostic_date\": \"2026-10-06\",\n  \"model_geometry_changed_this_round\": false,\n  \"files\": {\n    \"Naiwa_Character.blend\": \"a95a5c7efb25cb6f379897dd6ec4af98a201bc2619dc8caa2bb5b5de8ea3dfd5\",\n    \"Naiwa_Character.fbx\": \"997763e0da6a36a32c33a27dc03683be2f78d933926cf9f642a1ee9a871d8def\"\n  },\n  \"generator_reproduction_note\": \"Code snapshot is supplied in diagnostics/head_generation_code.zip. Full reproduction requires original pinned historical inputs listed in HEAD_GENERATION_PARAMETERS.md; historical blend files are not copied into this diagnostic package.\"\n}"
+  }
+}

@@ -1,0 +1,1174 @@
+{
+  "common_pose": {
+    "type": "ORTHO",
+    "yaw": 50.0,
+    "pitch": -2.5,
+    "target": [
+      0,
+      -0.12,
+      2.425
+    ],
+    "distance": 7.0,
+    "scale": 0.86,
+    "lens": 50.0
+  },
+  "resolution": [
+    900,
+    900
+  ],
+  "all_body_geometry_unchanged": true,
+  "gaze_variants_material_only": true,
+  "base_saved_gaze": "F=-Y, 0 degrees",
+  "view_transform": "Standard",
+  "exposure": -0.4,
+  "records": [
+    {
+      "model": "original",
+      "gaze_degrees": 0,
+      "filename": "original_common_ORTHO.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50.0,
+        "pitch": -2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 809,
+            "center_pixels": [
+              168.93943139678615,
+              362.2768850432633
+            ],
+            "bbox_pixels": [
+              [
+                136.0,
+                304.0
+              ],
+              [
+                214.0,
+                422.0
+              ]
+            ],
+            "D_pixels": 64.18880873456825,
+            "principal_axis_ratio": 4.086186171927623
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 162,
+            "center_pixels": [
+              156.25925925925927,
+              361.641975308642
+            ],
+            "bbox_pixels": [
+              [
+                138.0,
+                332.0
+              ],
+              [
+                174.0,
+                392.0
+              ]
+            ],
+            "D_pixels": 28.723844188903154,
+            "principal_axis_ratio": 6.216770731073182
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 3191,
+            "center_pixels": [
+              333.92416170479476,
+              354.91820745847696
+            ],
+            "bbox_pixels": [
+              [
+                256.0,
+                296.0
+              ],
+              [
+                408.0,
+                414.0
+              ]
+            ],
+            "D_pixels": 127.48187929662637,
+            "principal_axis_ratio": 1.755205775510043
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 875,
+            "center_pixels": [
+              314.768,
+              354.0868571428571
+            ],
+            "bbox_pixels": [
+              [
+                276.0,
+                324.0
+              ],
+              [
+                354.0,
+                384.0
+              ]
+            ],
+            "D_pixels": 66.75581178124546,
+            "principal_axis_ratio": 1.76562630656921
+          },
+          "sampling_step_pixels": 2
+        }
+      }
+    },
+    {
+      "model": "original",
+      "gaze_degrees": 0,
+      "filename": "original_common_PERSP.png",
+      "pose": {
+        "type": "PERSP",
+        "yaw": 50.0,
+        "pitch": -2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 3.2249999999999996,
+        "scale": 0.86,
+        "lens": 135.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 676,
+            "center_pixels": [
+              160.02366863905326,
+              359.83727810650885
+            ],
+            "bbox_pixels": [
+              [
+                128.0,
+                304.0
+              ],
+              [
+                206.0,
+                420.0
+              ]
+            ],
+            "D_pixels": 58.67571668896666,
+            "principal_axis_ratio": 4.785265912184085
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 102,
+            "center_pixels": [
+              148.07843137254903,
+              358.6862745098039
+            ],
+            "bbox_pixels": [
+              [
+                128.0,
+                330.0
+              ],
+              [
+                166.0,
+                390.0
+              ]
+            ],
+            "D_pixels": 22.792141940852034,
+            "principal_axis_ratio": 9.696302114860043
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 3600,
+            "center_pixels": [
+              324.64944444444444,
+              347.91777777777776
+            ],
+            "bbox_pixels": [
+              [
+                242.0,
+                286.0
+              ],
+              [
+                406.0,
+                410.0
+              ]
+            ],
+            "D_pixels": 135.4055000514615,
+            "principal_axis_ratio": 1.8283768400947185
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 999,
+            "center_pixels": [
+              303.12712712712715,
+              345.7157157157157
+            ],
+            "bbox_pixels": [
+              [
+                260.0,
+                312.0
+              ],
+              [
+                346.0,
+                378.0
+              ]
+            ],
+            "D_pixels": 71.32927323870412,
+            "principal_axis_ratio": 1.840264083136863
+          },
+          "sampling_step_pixels": 2
+        }
+      }
+    },
+    {
+      "model": "A",
+      "gaze_degrees": 0,
+      "filename": "A_common_ORTHO.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50.0,
+        "pitch": -2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1401,
+            "center_pixels": [
+              163.06495360456816,
+              354.32976445396145
+            ],
+            "bbox_pixels": [
+              [
+                124.0,
+                304.0
+              ],
+              [
+                214.0,
+                426.0
+              ]
+            ],
+            "D_pixels": 84.47031673135749,
+            "principal_axis_ratio": 2.401478914177744
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 519,
+            "center_pixels": [
+              146.77842003853564,
+              376.70520231213874
+            ],
+            "bbox_pixels": [
+              [
+                128.0,
+                346.0
+              ],
+              [
+                168.0,
+                412.0
+              ]
+            ],
+            "D_pixels": 51.41250134811764,
+            "principal_axis_ratio": 1.5956027598203184
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 3153,
+            "center_pixels": [
+              332.0545512210593,
+              356.5182366000634
+            ],
+            "bbox_pixels": [
+              [
+                264.0,
+                298.0
+              ],
+              [
+                398.0,
+                416.0
+              ]
+            ],
+            "D_pixels": 126.72054741911381,
+            "principal_axis_ratio": 1.1845170682048194
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 545,
+            "center_pixels": [
+              287.2330275229358,
+              370.21651376146787
+            ],
+            "bbox_pixels": [
+              [
+                266.0,
+                338.0
+              ],
+              [
+                308.0,
+                404.0
+              ]
+            ],
+            "D_pixels": 52.68455378498194,
+            "principal_axis_ratio": 1.5284660321949999
+          },
+          "sampling_step_pixels": 2
+        }
+      }
+    },
+    {
+      "model": "A",
+      "gaze_degrees": 0,
+      "filename": "A_common_PERSP.png",
+      "pose": {
+        "type": "PERSP",
+        "yaw": 50.0,
+        "pitch": -2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 3.2249999999999996,
+        "scale": 0.86,
+        "lens": 135.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1297,
+            "center_pixels": [
+              155.03006939090207,
+              350.6260601387818
+            ],
+            "bbox_pixels": [
+              [
+                118.0,
+                302.0
+              ],
+              [
+                208.0,
+                424.0
+              ]
+            ],
+            "D_pixels": 81.2746378526907,
+            "principal_axis_ratio": 2.5807691956404946
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 490,
+            "center_pixels": [
+              136.77551020408163,
+              373.9632653061224
+            ],
+            "bbox_pixels": [
+              [
+                118.0,
+                342.0
+              ],
+              [
+                156.0,
+                410.0
+              ]
+            ],
+            "D_pixels": 49.955475252277594,
+            "principal_axis_ratio": 1.8176588599506265
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 3605,
+            "center_pixels": [
+              322.5542302357836,
+              349.1095700416089
+            ],
+            "bbox_pixels": [
+              [
+                250.0,
+                286.0
+              ],
+              [
+                394.0,
+                412.0
+              ]
+            ],
+            "D_pixels": 135.49949902151317,
+            "principal_axis_ratio": 1.2096359367695226
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 603,
+            "center_pixels": [
+              273.09452736318406,
+              363.1442786069652
+            ],
+            "bbox_pixels": [
+              [
+                252.0,
+                328.0
+              ],
+              [
+                294.0,
+                400.0
+              ]
+            ],
+            "D_pixels": 55.41708925865028,
+            "principal_axis_ratio": 1.6354725348920867
+          },
+          "sampling_step_pixels": 2
+        }
+      }
+    },
+    {
+      "model": "A",
+      "gaze_degrees": 20,
+      "filename": "A_gaze20_common_ORTHO.png",
+      "front_filename": "A_gaze20_front.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50.0,
+        "pitch": -2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "gaze_axis": [
+            -0.3420201433256687,
+            -0.9396926207859084,
+            0.0
+          ],
+          "pupil_cap_half_angle_degrees": 25.870838418292678,
+          "analytic_frontal_pupil_ratio": 0.530030806966455,
+          "reference_pixels": {
+            "aperture": {
+              "visible": true,
+              "sample_count": 1401,
+              "center_pixels": [
+                163.06495360456816,
+                354.32976445396145
+              ],
+              "bbox_pixels": [
+                [
+                  124.0,
+                  304.0
+                ],
+                [
+                  214.0,
+                  426.0
+                ]
+              ],
+              "D_pixels": 84.47031673135749,
+              "principal_axis_ratio": 2.401478914177744
+            },
+            "pupil": {
+              "visible": true,
+              "sample_count": 303,
+              "center_pixels": [
+                135.67656765676568,
+                379.5181518151815
+              ],
+              "bbox_pixels": [
+                [
+                  124.0,
+                  348.0
+                ],
+                [
+                  146.0,
+                  412.0
+                ]
+              ],
+              "D_pixels": 39.28315578233268,
+              "principal_axis_ratio": 2.8619359966227393
+            },
+            "sampling_step_pixels": 2
+          }
+        },
+        "R": {
+          "gaze_axis": [
+            0.3420201433256687,
+            -0.9396926207859084,
+            0.0
+          ],
+          "pupil_cap_half_angle_degrees": 25.863241717356207,
+          "analytic_frontal_pupil_ratio": 0.5300042507645746,
+          "reference_pixels": {
+            "aperture": {
+              "visible": true,
+              "sample_count": 3153,
+              "center_pixels": [
+                332.0545512210593,
+                356.5182366000634
+              ],
+              "bbox_pixels": [
+                [
+                  264.0,
+                  298.0
+                ],
+                [
+                  398.0,
+                  416.0
+                ]
+              ],
+              "D_pixels": 126.72054741911381,
+              "principal_axis_ratio": 1.1845170682048194
+            },
+            "pupil": {
+              "visible": true,
+              "sample_count": 756,
+              "center_pixels": [
+                305.28306878306876,
+                370.44444444444446
+              ],
+              "bbox_pixels": [
+                [
+                  278.0,
+                  338.0
+                ],
+                [
+                  334.0,
+                  402.0
+                ]
+              ],
+              "D_pixels": 62.050595349916925,
+              "principal_axis_ratio": 1.1562289157856886
+            },
+            "sampling_step_pixels": 2
+          }
+        }
+      },
+      "geometry_unchanged": true,
+      "saved_as_model": false,
+      "color_method": "Temporary attached EyePupilCos corner attribute + shader threshold, no sphere displacement"
+    },
+    {
+      "model": "A",
+      "gaze_degrees": 35,
+      "filename": "A_gaze35_common_ORTHO.png",
+      "front_filename": "A_gaze35_front.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50.0,
+        "pitch": -2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "gaze_axis": [
+            -0.573576436351046,
+            -0.8191520442889918,
+            0.0
+          ],
+          "pupil_cap_half_angle_degrees": 27.8787406456081,
+          "analytic_frontal_pupil_ratio": 0.5299992940910762,
+          "reference_pixels": {
+            "aperture": {
+              "visible": true,
+              "sample_count": 1401,
+              "center_pixels": [
+                163.06495360456816,
+                354.32976445396145
+              ],
+              "bbox_pixels": [
+                [
+                  124.0,
+                  304.0
+                ],
+                [
+                  214.0,
+                  426.0
+                ]
+              ],
+              "D_pixels": 84.47031673135749,
+              "principal_axis_ratio": 2.401478914177744
+            },
+            "pupil": {
+              "visible": true,
+              "sample_count": 157,
+              "center_pixels": [
+                130.828025477707,
+                380.2547770700637
+              ],
+              "bbox_pixels": [
+                [
+                  124.0,
+                  346.0
+                ],
+                [
+                  136.0,
+                  414.0
+                ]
+              ],
+              "D_pixels": 28.277100878514442,
+              "principal_axis_ratio": 5.29485412427982
+            },
+            "sampling_step_pixels": 2
+          }
+        },
+        "R": {
+          "gaze_axis": [
+            0.573576436351046,
+            -0.8191520442889918,
+            0.0
+          ],
+          "pupil_cap_half_angle_degrees": 27.854425648360124,
+          "analytic_frontal_pupil_ratio": 0.5300042507645746,
+          "reference_pixels": {
+            "aperture": {
+              "visible": true,
+              "sample_count": 3153,
+              "center_pixels": [
+                332.0545512210593,
+                356.5182366000634
+              ],
+              "bbox_pixels": [
+                [
+                  264.0,
+                  298.0
+                ],
+                [
+                  398.0,
+                  416.0
+                ]
+              ],
+              "D_pixels": 126.72054741911381,
+              "principal_axis_ratio": 1.1845170682048194
+            },
+            "pupil": {
+              "visible": true,
+              "sample_count": 973,
+              "center_pixels": [
+                322.0369989722508,
+                370.3001027749229
+              ],
+              "bbox_pixels": [
+                [
+                  288.0,
+                  336.0
+                ],
+                [
+                  356.0,
+                  406.0
+                ]
+              ],
+              "D_pixels": 70.39494518862311,
+              "principal_axis_ratio": 1.0308540302937368
+            },
+            "sampling_step_pixels": 2
+          }
+        }
+      },
+      "geometry_unchanged": true,
+      "saved_as_model": false,
+      "color_method": "Temporary attached EyePupilCos corner attribute + shader threshold, no sphere displacement"
+    },
+    {
+      "model": "B",
+      "gaze_degrees": 0,
+      "filename": "B_common_ORTHO.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50.0,
+        "pitch": -2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1731,
+            "center_pixels": [
+              156.38012709416523,
+              354.24378971692664
+            ],
+            "bbox_pixels": [
+              [
+                114.0,
+                304.0
+              ],
+              [
+                210.0,
+                426.0
+              ]
+            ],
+            "D_pixels": 93.89308072348179,
+            "principal_axis_ratio": 1.9190831240220512
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 533,
+            "center_pixels": [
+              135.5234521575985,
+              370.10881801125703
+            ],
+            "bbox_pixels": [
+              [
+                116.0,
+                338.0
+              ],
+              [
+                156.0,
+                402.0
+              ]
+            ],
+            "D_pixels": 52.10131197364772,
+            "principal_axis_ratio": 1.5521293268467065
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 3099,
+            "center_pixels": [
+              326.1406905453372,
+              355.8502742820265
+            ],
+            "bbox_pixels": [
+              [
+                262.0,
+                296.0
+              ],
+              [
+                392.0,
+                416.0
+              ]
+            ],
+            "D_pixels": 125.63071836353193,
+            "principal_axis_ratio": 1.1389439092112887
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 532,
+            "center_pixels": [
+              283.7894736842105,
+              362.3533834586466
+            ],
+            "bbox_pixels": [
+              [
+                264.0,
+                330.0
+              ],
+              [
+                304.0,
+                394.0
+              ]
+            ],
+            "D_pixels": 52.05241350020599,
+            "principal_axis_ratio": 1.5350981687975067
+          },
+          "sampling_step_pixels": 2
+        }
+      }
+    },
+    {
+      "model": "B",
+      "gaze_degrees": 0,
+      "filename": "B_common_PERSP.png",
+      "pose": {
+        "type": "PERSP",
+        "yaw": 50.0,
+        "pitch": -2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 3.2249999999999996,
+        "scale": 0.86,
+        "lens": 135.0
+      },
+      "eyes": {
+        "L": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 1658,
+            "center_pixels": [
+              147.6984318455971,
+              350.81423401688784
+            ],
+            "bbox_pixels": [
+              [
+                106.0,
+                302.0
+              ],
+              [
+                204.0,
+                424.0
+              ]
+            ],
+            "D_pixels": 91.8919183643676,
+            "principal_axis_ratio": 2.0336852842014927
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 502,
+            "center_pixels": [
+              124.97211155378486,
+              367.50597609561754
+            ],
+            "bbox_pixels": [
+              [
+                106.0,
+                334.0
+              ],
+              [
+                144.0,
+                400.0
+              ]
+            ],
+            "D_pixels": 50.56347501733051,
+            "principal_axis_ratio": 1.763148966152229
+          },
+          "sampling_step_pixels": 2
+        },
+        "R": {
+          "aperture": {
+            "visible": true,
+            "sample_count": 3573,
+            "center_pixels": [
+              315.7441925552757,
+              348.1416176882172
+            ],
+            "bbox_pixels": [
+              [
+                248.0,
+                284.0
+              ],
+              [
+                386.0,
+                412.0
+              ]
+            ],
+            "D_pixels": 134.89677376926014,
+            "principal_axis_ratio": 1.1499016108550697
+          },
+          "pupil": {
+            "visible": true,
+            "sample_count": 591,
+            "center_pixels": [
+              268.35871404399325,
+              354.29441624365484
+            ],
+            "bbox_pixels": [
+              [
+                248.0,
+                320.0
+              ],
+              [
+                288.0,
+                388.0
+              ]
+            ],
+            "D_pixels": 54.86290444147051,
+            "principal_axis_ratio": 1.6702656332366288
+          },
+          "sampling_step_pixels": 2
+        }
+      }
+    },
+    {
+      "model": "B",
+      "gaze_degrees": 20,
+      "filename": "B_gaze20_common_ORTHO.png",
+      "front_filename": "B_gaze20_front.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50.0,
+        "pitch": -2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "gaze_axis": [
+            -0.3420201433256687,
+            -0.9396926207859084,
+            0.0
+          ],
+          "pupil_cap_half_angle_degrees": 29.222369569434257,
+          "analytic_frontal_pupil_ratio": 0.5300031896101441,
+          "reference_pixels": {
+            "aperture": {
+              "visible": true,
+              "sample_count": 1731,
+              "center_pixels": [
+                156.38012709416523,
+                354.24378971692664
+              ],
+              "bbox_pixels": [
+                [
+                  114.0,
+                  304.0
+                ],
+                [
+                  210.0,
+                  426.0
+                ]
+              ],
+              "D_pixels": 93.89308072348179,
+              "principal_axis_ratio": 1.9190831240220512
+            },
+            "pupil": {
+              "visible": true,
+              "sample_count": 309,
+              "center_pixels": [
+                125.26860841423948,
+                371.0744336569579
+              ],
+              "bbox_pixels": [
+                [
+                  114.0,
+                  338.0
+                ],
+                [
+                  136.0,
+                  404.0
+                ]
+              ],
+              "D_pixels": 39.67019129387532,
+              "principal_axis_ratio": 2.776342453979112
+            },
+            "sampling_step_pixels": 2
+          }
+        },
+        "R": {
+          "gaze_axis": [
+            0.3420201433256687,
+            -0.9396926207859084,
+            0.0
+          ],
+          "pupil_cap_half_angle_degrees": 29.22831514294884,
+          "analytic_frontal_pupil_ratio": 0.5300042507645746,
+          "reference_pixels": {
+            "aperture": {
+              "visible": true,
+              "sample_count": 3099,
+              "center_pixels": [
+                326.1406905453372,
+                355.8502742820265
+              ],
+              "bbox_pixels": [
+                [
+                  262.0,
+                  296.0
+                ],
+                [
+                  392.0,
+                  416.0
+                ]
+              ],
+              "D_pixels": 125.63071836353193,
+              "principal_axis_ratio": 1.1389439092112887
+            },
+            "pupil": {
+              "visible": true,
+              "sample_count": 761,
+              "center_pixels": [
+                299.9737187910644,
+                361.9185282522996
+              ],
+              "bbox_pixels": [
+                [
+                  272.0,
+                  330.0
+                ],
+                [
+                  328.0,
+                  394.0
+                ]
+              ],
+              "D_pixels": 62.255450959525106,
+              "principal_axis_ratio": 1.1508471458001552
+            },
+            "sampling_step_pixels": 2
+          }
+        }
+      },
+      "geometry_unchanged": true,
+      "saved_as_model": false,
+      "color_method": "Temporary attached EyePupilCos corner attribute + shader threshold, no sphere displacement"
+    },
+    {
+      "model": "B",
+      "gaze_degrees": 35,
+      "filename": "B_gaze35_common_ORTHO.png",
+      "front_filename": "B_gaze35_front.png",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50.0,
+        "pitch": -2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0
+      },
+      "eyes": {
+        "L": {
+          "gaze_axis": [
+            -0.573576436351046,
+            -0.8191520442889918,
+            0.0
+          ],
+          "pupil_cap_half_angle_degrees": 31.56211811263267,
+          "analytic_frontal_pupil_ratio": 0.5299716708809907,
+          "reference_pixels": {
+            "aperture": {
+              "visible": true,
+              "sample_count": 1731,
+              "center_pixels": [
+                156.38012709416523,
+                354.24378971692664
+              ],
+              "bbox_pixels": [
+                [
+                  114.0,
+                  304.0
+                ],
+                [
+                  210.0,
+                  426.0
+                ]
+              ],
+              "D_pixels": 93.89308072348179,
+              "principal_axis_ratio": 1.9190831240220512
+            },
+            "pupil": {
+              "visible": true,
+              "sample_count": 174,
+              "center_pixels": [
+                120.83908045977012,
+                371.8735632183908
+              ],
+              "bbox_pixels": [
+                [
+                  114.0,
+                  338.0
+                ],
+                [
+                  126.0,
+                  406.0
+                ]
+              ],
+              "D_pixels": 29.768686956862464,
+              "principal_axis_ratio": 4.605957955244524
+            },
+            "sampling_step_pixels": 2
+          }
+        },
+        "R": {
+          "gaze_axis": [
+            0.573576436351046,
+            -0.8191520442889918,
+            0.0
+          ],
+          "pupil_cap_half_angle_degrees": 31.555531275562778,
+          "analytic_frontal_pupil_ratio": 0.5299727394680893,
+          "reference_pixels": {
+            "aperture": {
+              "visible": true,
+              "sample_count": 3099,
+              "center_pixels": [
+                326.1406905453372,
+                355.8502742820265
+              ],
+              "bbox_pixels": [
+                [
+                  262.0,
+                  296.0
+                ],
+                [
+                  392.0,
+                  416.0
+                ]
+              ],
+              "D_pixels": 125.63071836353193,
+              "principal_axis_ratio": 1.1389439092112887
+            },
+            "pupil": {
+              "visible": true,
+              "sample_count": 973,
+              "center_pixels": [
+                314.8735868448099,
+                361.56423432682425
+              ],
+              "bbox_pixels": [
+                [
+                  282.0,
+                  326.0
+                ],
+                [
+                  348.0,
+                  396.0
+                ]
+              ],
+              "D_pixels": 70.39494518862311,
+              "principal_axis_ratio": 1.0423424019086989
+            },
+            "sampling_step_pixels": 2
+          }
+        }
+      },
+      "geometry_unchanged": true,
+      "saved_as_model": false,
+      "color_method": "Temporary attached EyePupilCos corner attribute + shader threshold, no sphere displacement"
+    }
+  ]
+}

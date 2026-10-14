@@ -1,0 +1,9 @@
+{
+  "selected_trial": "H2_O_distributed_contact",
+  "source_sha256": "7b2233033e755b614bf9b15f49e7f8a459e12ff775dc278215cbb34049193a49",
+  "formal_candidate_sha256": "7b2233033e755b614bf9b15f49e7f8a459e12ff775dc278215cbb34049193a49",
+  "byte_identical_copy": true,
+  "independent_native_validation": "passed",
+  "shape_gate_review": "visual_review_pending.json",
+  "complete_visual_FBX_rebuild_acceptance": "passed"
+}

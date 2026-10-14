@@ -1,0 +1,89 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>奶蛙独立球面眼体 A/B</title>
+<style>body{margin:0;background:#f6f5ef;color:#252a26;font:16px/1.7 "Microsoft YaHei",sans-serif}main{max-width:1240px;margin:auto;padding:32px}h1{font-size:32px;margin-bottom:8px}h2{font-size:22px;margin-top:36px}a{color:#376139}nav{display:flex;flex-wrap:wrap;gap:8px 20px;padding:18px 0;border-block:1px solid #d9ded4}.intro{max-width:900px}.models{display:flex;gap:18px;flex-wrap:wrap}.model{background:white;border:1px solid #d9ded4;border-radius:10px;padding:18px 26px;display:flex;gap:18px;align-items:center}.pass{background:#e3eddc;border-radius:10px;padding:16px 22px}table{border-collapse:collapse;background:white;width:100%;font-variant-numeric:tabular-nums}td,th{padding:10px;border-bottom:1px solid #d9ded4;text-align:right}td:first-child,th:first-child{text-align:left}.table{overflow:auto}section img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid #d9ded4}pre{white-space:pre-wrap;font:inherit;background:white;padding:24px;border-radius:10px}small{color:#647063}</style>
+<main><small>NAIWA CHARACTER · 2026-10-06</small><h1>独立球面眼体 A / B</h1><p class="intro">从固定头身工程重建完整球面，保持主体、嘴与绑定。三列同机位图、实际球面验收、参考视角复核和完整参数集中于本页。</p>
+<div class="models"><div class="model"><b>候选 A</b><a href="candidate_A/Naiwa_Character.blend">Blender 工程</a><a href="candidate_A/Naiwa_Character.fbx">FBX</a><a href="candidate_A/validation_report.json">验收报告</a></div><div class="model"><b>候选 B</b><a href="candidate_B/Naiwa_Character.blend">Blender 工程</a><a href="candidate_B/Naiwa_Character.fbx">FBX</a><a href="candidate_B/validation_report.json">验收报告</a></div></div><p><a href="README_交付说明.md">完整中文交付说明</a> · <a href="修改指令.md">修改指令</a> · <a href="generation_scripts.zip">脚本快照</a> · <a href="calibrated_parameters.csv">实际参数 CSV</a> · <a href="delivery_validation.json">交付验收</a></p>
+<div class="pass">A/B 原始与 Idle 第1帧球面拟合、几何验收、固定区域核查、FBX 重导入及独立复建通过。基础工程保持正面注视。<p>建议以 A 作为下一轮继续打磨的基准：参考视角下露出较克制、远眼暴露较少。B 的正面与斜侧近眼更圆，保留供比较。两者仍有远眼遮挡与头部轮廓残差，本轮没有据此缩头或修改颈部。</p></div><h2>校准后实际参数</h2><p>D0=0.117244812742；h 沿局部安装法线，A/B 初值是构造对照。</p><div class="table"><table><thead><tr><th>方案/眼</th><th>R</th><th>h 沿法线</th><th>可见 D</th><th>D 偏差</th><th>黑瞳比</th><th>Idle 相对残差</th></tr></thead><tbody><tr><td>A/L</td><td>0.07337854</td><td>0.03884746</td><td>0.11705040</td><td>-0.1658%</td><td>0.530048</td><td>1.62e-06</td></tr><tr><td>A/R</td><td>0.07339914</td><td>0.03885837</td><td>0.11705872</td><td>-0.1587%</td><td>0.529868</td><td>1.59e-06</td></tr><tr><td>B/L</td><td>0.06557014</td><td>0.05117670</td><td>0.11708857</td><td>-0.1333%</td><td>0.530056</td><td>1.72e-06</td></tr><tr><td>B/R</td><td>0.06557981</td><td>0.05118424</td><td>0.11707830</td><td>-0.1420%</td><td>0.530103</td><td>1.87e-06</td></tr></tbody></table></div>
+<h2>对比索引</h2><nav><a href="#view0">头部彩色三视图</a><a href="#view1">头部灰模三视图</a><a href="#view2">眼部彩色近景</a><a href="#view3">眼部灰模近景</a><a href="#view4">全身正面，同一尺度</a><a href="#view5">原版与 A/B 眼体侧剖面</a><a href="#view6">三个经过球心的正交剖面</a><a href="#view7">原版与 A/B 实际测量表</a><a href="#view8">参考图与原版/A/B，稳定整体尺度</a><a href="#view9">正面注视与外展注视诊断</a></nav><section id="view0"><h2>头部彩色三视图</h2><a href="comparisons/comparison_head.png"><img loading="lazy" src="comparisons/comparison_head.png" alt="头部彩色三视图"></a></section><section id="view1"><h2>头部灰模三视图</h2><a href="comparisons/comparison_head_gray.png"><img loading="lazy" src="comparisons/comparison_head_gray.png" alt="头部灰模三视图"></a></section><section id="view2"><h2>眼部彩色近景</h2><a href="comparisons/comparison_eye.png"><img loading="lazy" src="comparisons/comparison_eye.png" alt="眼部彩色近景"></a></section><section id="view3"><h2>眼部灰模近景</h2><a href="comparisons/comparison_eye_gray.png"><img loading="lazy" src="comparisons/comparison_eye_gray.png" alt="眼部灰模近景"></a></section><section id="view4"><h2>全身正面，同一尺度</h2><a href="comparisons/comparison_full.png"><img loading="lazy" src="comparisons/comparison_full.png" alt="全身正面，同一尺度"></a></section><section id="view5"><h2>原版与 A/B 眼体侧剖面</h2><a href="comparisons/eye_side_sections.png"><img loading="lazy" src="comparisons/eye_side_sections.png" alt="原版与 A/B 眼体侧剖面"></a></section><section id="view6"><h2>三个经过球心的正交剖面</h2><a href="comparisons/sphere_center_sections.png"><img loading="lazy" src="comparisons/sphere_center_sections.png" alt="三个经过球心的正交剖面"></a></section><section id="view7"><h2>原版与 A/B 实际测量表</h2><a href="comparisons/eye_measurements.png"><img loading="lazy" src="comparisons/eye_measurements.png" alt="原版与 A/B 实际测量表"></a></section><section id="view8"><h2>参考图与原版/A/B，稳定整体尺度</h2><a href="reference_comparison/reference_stable_comparison.png"><img loading="lazy" src="reference_comparison/reference_stable_comparison.png" alt="参考图与原版/A/B，稳定整体尺度"></a></section><section id="view9"><h2>正面注视与外展注视诊断</h2><a href="reference_comparison/reference_gaze_comparison.png"><img loading="lazy" src="reference_comparison/reference_gaze_comparison.png" alt="正面注视与外展注视诊断"></a></section><h2>参考复核与残差记录</h2><p><a href="reference_comparison/reference_review.md">单独阅读参考复核说明</a></p><pre># 图1.3参考视角复核与 A/B 造型判断
+
+**综合建议继续以 A 作为下一轮主候选，同时保留 B。** B 的正面黑瞳更居中，斜侧近眼外缘更接近圆；A 的眼球露出较低，参考视角的远眼暴露较少，更接近图1.3的遮挡关系。两者都改善了原眼体的斜长轮廓，但基础注视与远眼遮挡仍未同时吻合参考。本轮没有修改黄色头部、后脑、冠顶或颈前。
+
+## 主参考与原始像素
+
+已查看整页 `pdf_page03_fig1_3.png`：图1.3是页底“奶蛙经典形象”，对应 `pdf_page03_image03_IM60.jpg`，不是图1.1或图1.2。随本报告保留[原始嵌入图](reference_figure13.jpg)，分辨率900×1130；SHA256为 `4ec47b76c34f5a0e2a670f7fe6a675d49bd0aaeb524a03d83add37e9f209074d`。
+
+以下坐标都来自这张900×1130原图，横轴向右、纵轴向下：
+
+| 原图特征 | 像素测量 | 定义或精度 |
+| --- | --- | --- |
+| 近眼外缘 | 包围框(352,101)至(409,155)，中心(380.5,128) | 目测外缘椭圆57×54px，包含黑瞳；等面积直径55.4797px |
+| 远眼可见区 | 约(309,120)至(320,154)，中心约(314.5,137) | 可见片段，不是被遮挡眼球的完整中心；椭圆等面积直径约19.339px |
+| 头顶 | (419.2568,68) | 黄色轮廓最高位置的平均横坐标 |
+| 嘴缝近似中心 | (325,180) | 人工近似标记 |
+| 近眼黑色内部中心 | 约(374.9410,130.6402) | 原像素暗色阈值求中心，仅辅助判断注视；阈值面积不作为黑瞳外径 |
+
+近眼边界和人工标记约有±2px误差。远/近可见外径比约0.3486，远眼的11×34px椭圆只是遮挡片段的近似。严格绿/黑色阈值会漏掉光照和模糊边缘，因此没有用颜色核心面积替代外缘面积。
+
+## 相机搜索与统一注册
+
+相机搜索包含 A、B 各15组正交图：偏航40°、50°、60°、70°、80°，每个偏航都测试仰角−5°、0°、5°；随后在50°附近测试45°、55°及±2.5°仰角细调，并增加90mm、135mm长焦透视。原始相机与像素测量保存在 `../reference_search/camera_search.json`，完整15方向拼图分别为 [A](reference_camera_grid_A.png) 与 [B](reference_camera_grid_B.png)。
+
+本报告共用的观察方向为：**偏航50°、仰角−2.5°、滚转0°；正交尺度0.86；目标(0,−0.12,2.425)，距离7；900×900输出；Standard、曝光−0.4。** 偏航从正前方F=−Y开始，正角度移向+X。原模型、A、B保持同一相机、灯光、曝光。长焦透视另保留在原始搜索中；B的个别评分最好值为135mm、50°/0°，但它没有提供足以代替共同正交相机的联合匹配。
+
+原模型、A、B的主体和嘴相同，所以只从未改黄色冠顶和嘴求**一次**整体等比缩放与平移。900px模型原渲染到900×1130参考坐标的注册为：
+
+```text
+reference_x = 0.411755262024 × model_x + 245.388131365092
+reference_y = 0.411755262024 × model_y − 17.159665982102
+```
+
+三个模型使用完全相同的系数，没有按每个候选的近眼直径重新放大。显示拼版再将参考坐标等比放大1.5倍，裁剪原点(270,40)，每栏620×470px；没有拉伸或镜像。原始渲染像素、注册系数、来源工程SHA256和参考原像素都保存在 [reference_review.json](reference_review.json)。工程SHA核对为 A `f251f5a0fc00fedf1df76fcc6286bc40e102406a536cb6c676a93e176cb71ca0`，B `d381f9ce3d505372467814d2dcb56e97e70b54864396a19453e60b93be8824fb`，对照渲染晚于两工程的保存时间。
+
+![固定主体尺度的参考、原模型、A、B对照](reference_stable_comparison.png)
+
+| 同一参考相机、同一主体尺度 | 原模型 | A | B | 图1.3原图 |
+| --- | ---: | ---: | ---: | ---: |
+| 注册后近眼外径(px) | 52.49 | 52.18 | 51.73 | 55.48 |
+| 近眼可见区主轴比 | 1.755 | 1.185 | 1.139 | 约1.056 |
+| 远/近可见外径比 | 0.504 | 0.667 | 0.747 | 约0.349 |
+| 近眼外缘中心相对原图偏差(px) | (+2.38,+0.98) | (+1.61,+1.64) | (−0.82,+1.36) | — |
+| 远眼可见区中心相对原图偏差(px) | (+0.45,−4.99) | (−1.97,−8.26) | (−4.72,−8.30) | — |
+
+此表的外径是**斜视参考相机**下的可见投影；它与正面固定D0的±3%几何验收不同。共同主体尺度下近眼投影比参考小约6%–7%，不能靠逐候选眼径归一化消除。新球体近眼圆度改善，同时会暴露更多远眼；旧眼体虽然远眼片段较小，但近眼斜长明显，因此不能以单个远眼指标把旧构造判断为更正确。
+
+## 正面、45°、90°及参考视角的判断
+
+- **正面**：两者保持规定的可见等面积直径、中心距和高度，未再次放大整只眼。B的可见绿区与黑瞳关系更均衡；A下内侧被皮肤遮挡较多，黑瞳更靠该边。可见外缘都受皮肤遮挡，不能要求投影一定是完整圆，也不能将遮挡边的斜线认作眼网格已拉成叶片。
+- **45°**：两种独立球体均较原模型厚实且近眼轮廓更圆。B近眼更圆、球冠更明显；A露出较克制。正面注视F=−Y会令近侧瞳孔在斜视图中靠向画面左侧，这属于视轴与安装法线分离后的投影效果。
+- **90°**：两者的主体、嘴和头颈轮廓相同，差别来自眼球露出。A较低露出避免过强的凸球感，B更明显地突出于脸面；基础正面注视使黑瞳在侧面只剩靠前的一部分。A作为较保守的继续打磨基准更合适；B有助于保留更厚露出的构造对照。
+- **共同参考视角50°/−2.5°**：B近眼圆度更接近参考，A远眼暴露较少。A的诊断评分为0.860，B在同角度约0.970；结合视觉判断和远眼遮挡，综合建议 A，但两者远眼仍明显大于参考。
+
+评分把冠顶/嘴拟合残差、近眼位置、远眼位置、远/近可见外径比及近眼主轴比合在一起；远眼比差权重1.5，主轴比对数差权重0.5。它是人工权重的诊断排序，**不是参考真实相机的恢复**。仅偏向远眼遮挡可以选择更大的偏航，却会牺牲近眼圆度和嘴/眼/冠顶位置；例如80°/−5°的 A 远/近比降至约0.423，但近眼主轴比约1.510，位置残差也增大。旧80°/−5°不能沿用为已知参考相机。
+
+## 注视对照
+
+基础 A/B 工程保留正面注视F=−Y。另做镜像外展20°、35°，只改变同一球面的黑瞳材质分区与高光球面接触点，并分别输出共同参考相机和正面。渲染器核对眼球坐标哈希不变；测试没有保存进工程。
+
+![基础、20度、35度临时注视对照](reference_gaze_comparison.png)
+
+原图暗色内部中心相对近眼外缘中心约(−5.56,+2.64)px；基础 A、B 在共同注册下分别约(−18.46,+5.64)、(−17.44,+2.68)px。35°测试使近侧黑瞳更居中，更接近这张原图的注视观感，但远侧黑瞳变窄，而且无法修正远眼绿区遮挡。参考三维瞳孔视轴未知，所以这些测试仅说明后续可以独立调整注视；没有据此改变本轮基础候选。
+
+## 未调整头部的稳定残差
+
+以下都在上述**固定主体注册**下量取，单位为参考原图px；正X向右、正Y向下。三个模型的黄色头颈主体相同，表中的主体残差共用。
+
+| 部位或参考图水平行 | 原图位置 | 注册后模型位置 | 模型−原图 |
+| --- | --- | --- | --- |
+| 头顶C | (419.26,68.00) | (424.44,73.35) | (+5.18,+5.35)px |
+| 嘴M | (325.00,180.00) | (319.82,174.65) | (−5.18,−5.35)px |
+| y=90上部头廓：前/后界X | 344 / 490 | 365.21 / 475.56 | +21.21 / −14.44px |
+| y=180嘴高度：前/后界X | 302 / 546 | 300.15 / 530.32 | −1.85 / −15.68px |
+| y=220上颈：前/后界X | 331 / 569 | 294.39 / 551.32 | −36.61 / −17.68px |
+| y=260颈前回收处：前/后界X | 344 / 592 | 296.45 / 568.20 | −47.55 / −23.80px |
+| y=300下颈：前/后界X | 336 / 612 | 292.74 / 587.97 | −43.26 / −24.03px |
+
+轮廓界用原始RGB黄色阈值 `R&gt;1.02G、G&gt;1.15B、R&gt;100`，采样水平行±1原像素；界面和背景造成约±3注册像素误差。原始行号与阈值像素边界保存在JSON。这是屏幕轮廓残差，不能视为准确的世界坐标位移。
+
+稳定对照显示：上部后脑轮廓偏向画面左侧约14–16px；颈前在y=220–300向前伸出约37–48px，参考的回收凹曲更明确；后颈边界也比参考偏左约18–24px。头顶在当前两特征注册下略偏右下。这组结果与旧的“按近眼归一化后头顶距离比”不同，**不能直接用作整头缩小倍率**。它们只记录下一轮应单独核对的局部位置与轮廓，没有用于本轮主体变形。
+
+汇总图由工程根目录 `compose_spherical_reference_review.py` 重复生成；它只读取原渲染与工程哈希，写参考报告和拼版，不保存任何Blender工程。
+</pre><p><a href="reference_comparison/reference_review.json">原始像素与稳定对照 JSON</a> · <a href="comparisons/camera_protocol.json">三视图相机协议</a> · <a href="SHA256SUMS.json">SHA256 校验清单</a></p></main></html>

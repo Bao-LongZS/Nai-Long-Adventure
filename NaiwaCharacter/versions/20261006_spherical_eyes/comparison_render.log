@@ -1,0 +1,49 @@
+00:00.781  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261005_head_side_continuity\Naiwa_Character.blend"
+00:02.609  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\original_head_front.png'
+00:02.906  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\original_head_three_quarter.png'
+00:03.188  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\original_head_side.png'
+00:03.453  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\original_eye_front.png'
+00:03.734  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\original_eye_three_quarter.png'
+00:04.000  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\original_eye_side.png'
+00:04.266  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\original_full_front.png'
+00:04.531  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\original_head_gray_front.png'
+00:04.781  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\original_head_gray_three_quarter.png'
+00:05.031  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\original_head_gray_side.png'
+00:05.266  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\original_eye_gray_front.png'
+00:05.500  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\original_eye_gray_three_quarter.png'
+00:05.719  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\original_eye_gray_side.png'
+SPHERE_COMPARE_MODEL_COMPLETE original
+00:05.719  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\candidate_A\Naiwa_Character.blend"
+00:06.406  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\A_head_front.png'
+00:06.688  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\A_head_three_quarter.png'
+00:07.000  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\A_head_side.png'
+00:07.281  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\A_eye_front.png'
+00:07.563  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\A_eye_three_quarter.png'
+00:07.813  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\A_eye_side.png'
+00:08.094  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\A_full_front.png'
+00:08.344  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\A_head_gray_front.png'
+00:08.594  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\A_head_gray_three_quarter.png'
+00:08.859  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\A_head_gray_side.png'
+00:09.094  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\A_eye_gray_front.png'
+00:09.969  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\A_eye_gray_three_quarter.png'
+00:10.203  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\A_eye_gray_side.png'
+SPHERE_COMPARE_MODEL_COMPLETE A
+00:10.219  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\candidate_B\Naiwa_Character.blend"
+00:10.719  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\B_head_front.png'
+00:11.000  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\B_head_three_quarter.png'
+00:11.297  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\B_head_side.png'
+00:11.578  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\B_eye_front.png'
+00:11.859  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\B_eye_three_quarter.png'
+00:12.109  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\B_eye_side.png'
+00:12.391  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\B_full_front.png'
+00:12.641  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\B_head_gray_front.png'
+00:12.891  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\B_head_gray_three_quarter.png'
+00:13.141  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\B_head_gray_side.png'
+00:13.375  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\B_eye_gray_front.png'
+00:13.641  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\B_eye_gray_three_quarter.png'
+00:13.859  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261006_spherical_eyes\comparisons\B_eye_gray_side.png'
+SPHERE_COMPARE_MODEL_COMPLETE B
+SPHERICAL_EYE_COMPARISON_OK
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

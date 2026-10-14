@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "purpose": "limited key gate evidence from actual saved Raw BODY; not full delivery validation",
+  "candidate": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261009_E2_C3_solver_revision\\candidate_B\\Naiwa_Character.blend",
+  "candidate_sha256": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+  "baseline_source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "measurement_protocol_sha256": "da275f5db5421384fd0bca8b6748c07b936d81bdbe8ed8d081c1af025452ccfc",
+  "state": "Raw",
+  "only_object_read": "Naiwa unified golden body",
+  "comparison": {
+    "0.0": {
+      "E2_angle80_width": 0.060507468422358435,
+      "candidate_angle80_width": 0.07855145224922394,
+      "width_fraction_change": 0.29821085392159596,
+      "E2_absolute_curvature_peak": 31.5144627864388,
+      "candidate_absolute_curvature_peak": 30.872733531416237,
+      "peak_fraction_change": -0.02036300791072687,
+      "E2_peak_world": [
+        0.0,
+        -0.456132862326378,
+        2.3917599325274383
+      ],
+      "candidate_peak_world": [
+        0.0,
+        -0.45613859727772704,
+        2.3917940953261656
+      ],
+      "E2_natural_neck_recess": 0.10122134106412806,
+      "candidate_natural_neck_recess": 0.1059399823743657,
+      "neck_recess_fraction_change": 0.04661705980805153,
+      "E2_natural_neck_signed_curvature_range": [
+        -21.68361763687015,
+        9.669102264548671
+      ],
+      "candidate_natural_neck_signed_curvature_range": [
+        -19.334238894304804,
+        9.392155641321454
+      ]
+    },
+    "-0.08": {
+      "E2_angle80_width": 0.05447794072004675,
+      "candidate_angle80_width": 0.07302876335094477,
+      "width_fraction_change": 0.34051989457949006,
+      "E2_absolute_curvature_peak": 58.60561274166071,
+      "candidate_absolute_curvature_peak": 58.116689946141214,
+      "peak_fraction_change": -0.008342593356624572,
+      "E2_peak_world": [
+        -0.07999999821186066,
+        -0.4306678969679014,
+        2.3997088064181114
+      ],
+      "candidate_peak_world": [
+        -0.07999999821186066,
+        -0.43060045494844906,
+        2.3999959575533985
+      ],
+      "E2_natural_neck_recess": 0.09002912716349298,
+      "candidate_natural_neck_recess": 0.0941295629119488,
+      "neck_recess_fraction_change": 0.04554565702952362,
+      "E2_natural_neck_signed_curvature_range": [
+        -21.418986284808827,
+        9.26485354953347
+      ],
+      "candidate_natural_neck_signed_curvature_range": [
+        -20.940373242767322,
+        8.78551470316439
+      ]
+    },
+    "0.08": {
+      "E2_angle80_width": 0.04754203116220457,
+      "candidate_angle80_width": 0.07278858415118244,
+      "width_fraction_change": 0.5310364822832523,
+      "E2_absolute_curvature_peak": 59.87841728656199,
+      "candidate_absolute_curvature_peak": 59.37326511780468,
+      "peak_fraction_change": -0.00843629794588241,
+      "E2_peak_world": [
+        0.07999999821186066,
+        -0.43088068519391765,
+        2.3994160435589835
+      ],
+      "candidate_peak_world": [
+        0.07999999821186066,
+        -0.43090746761395615,
+        2.3993005199592807
+      ],
+      "E2_natural_neck_recess": 0.09015278226757095,
+      "candidate_natural_neck_recess": 0.09426108962185664,
+      "neck_recess_fraction_change": 0.045570499888648364,
+      "E2_natural_neck_signed_curvature_range": [
+        -21.41510300428328,
+        9.117580042842713
+      ],
+      "candidate_natural_neck_signed_curvature_range": [
+        -20.917858423485363,
+        8.643757458106466
+      ]
+    },
+    "-0.12": {
+      "E2_angle80_width": 0.051526760172833475,
+      "candidate_angle80_width": 0.05755710318601459,
+      "width_fraction_change": 0.11703322686995765,
+      "E2_absolute_curvature_peak": 58.72101362562424,
+      "candidate_absolute_curvature_peak": 57.09295022914506,
+      "peak_fraction_change": -0.02772539668437768,
+      "E2_peak_world": [
+        -0.11999999731779099,
+        -0.3959393310546024,
+        2.3965315007548567
+      ],
+      "candidate_peak_world": [
+        -0.11999999731779099,
+        -0.39615977086957765,
+        2.396402508889632
+      ],
+      "E2_natural_neck_recess": 0.07837495386469012,
+      "candidate_natural_neck_recess": 0.08148458063471614,
+      "neck_recess_fraction_change": 0.039676281984096784,
+      "E2_natural_neck_signed_curvature_range": [
+        -21.373966173162795,
+        8.805529020346993
+      ],
+      "candidate_natural_neck_signed_curvature_range": [
+        -20.877311746653746,
+        8.58095400079689
+      ]
+    },
+    "0.12": {
+      "E2_angle80_width": 0.044908373931181245,
+      "candidate_angle80_width": 0.0534491112915052,
+      "width_fraction_change": 0.19018139853854432,
+      "E2_absolute_curvature_peak": 58.85565388552381,
+      "candidate_absolute_curvature_peak": 57.11039768389394,
+      "peak_fraction_change": -0.029653161360239877,
+      "E2_peak_world": [
+        0.11999999731779099,
+        -0.3958329260720826,
+        2.3964830586960644
+      ],
+      "candidate_peak_world": [
+        0.11999999731779099,
+        -0.3959987481991325,
+        2.395885390613042
+      ],
+      "E2_natural_neck_recess": 0.07804588437218152,
+      "candidate_natural_neck_recess": 0.08133263479347669,
+      "neck_recess_fraction_change": 0.042113052440042376,
+      "E2_natural_neck_signed_curvature_range": [
+        -21.44502746532983,
+        8.91943610603308
+      ],
+      "candidate_natural_neck_signed_curvature_range": [
+        -20.960151099085202,
+        8.690673484518307
+      ]
+    }
+  },
+  "source_E2_reopened": false
+}

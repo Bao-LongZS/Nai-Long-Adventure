@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "status": "new_fixed_protocol; historical exact algorithm unavailable in authorized sources",
+  "historical_values_background_only": {
+    "E2_front": 18.182,
+    "E2_back": 7.561
+  },
+  "units": "original figure_1_3.jpg pixels",
+  "pixel_center_convention": "integer pixel-index coordinates",
+  "scan_rows": [
+    90,
+    180,
+    220,
+    260,
+    300
+  ],
+  "neck_mean_scan_rows": [
+    220,
+    260,
+    300
+  ],
+  "reference_search_x_half_open": [
+    260,
+    700
+  ],
+  "reference_segmentation": {
+    "saturation_threshold": 0.18,
+    "method": "HSV saturation >= threshold; fill between first and last colored pixel per fixed row"
+  },
+  "model_segmentation": {
+    "input": "shadow-independent white emission body ID on black",
+    "threshold": 0.5,
+    "row_sampling": "linear between source raster rows",
+    "edge_sampling": "linear threshold crossing adjacent source raster pixel centers"
+  },
+  "registration": {
+    "scale": 0.41175526202447044,
+    "translation": [
+      245.38813136509236,
+      -17.159665982101984
+    ]
+  },
+  "signed_error": "model_x_reference_space - reference_x",
+  "mean_algorithm": "unweighted arithmetic mean of absolute signed front/back errors at neck rows",
+  "reference_sha256": "4ec47b76c34f5a0e2a670f7fe6a675d49bd0aaeb524a03d83add37e9f209074d",
+  "reference_rows": [
+    {
+      "reference_y": 90,
+      "reference_front_x": 345.0,
+      "reference_back_x": 489.0
+    },
+    {
+      "reference_y": 180,
+      "reference_front_x": 303.0,
+      "reference_back_x": 545.0
+    },
+    {
+      "reference_y": 220,
+      "reference_front_x": 332.0,
+      "reference_back_x": 568.0
+    },
+    {
+      "reference_y": 260,
+      "reference_front_x": 344.0,
+      "reference_back_x": 591.0
+    },
+    {
+      "reference_y": 300,
+      "reference_front_x": 337.0,
+      "reference_back_x": 612.0
+    }
+  ]
+}

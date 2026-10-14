@@ -1,0 +1,9 @@
+00:00.484  blend            | Read blend: "C:\Users\31314\Desktop\NaiwaCharacter\iterations\before_forward_neck_direction_revision\Naiwa_Character.blend"
+00:09.234  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\neck_direction_draft_front.png'
+00:09.562  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\neck_direction_draft_side.png'
+00:09.922  render           | Saved: 'C:\Users\31314\Desktop\NaiwaCharacter\neck_direction_draft_three_quarter.png'
+FORWARD_NECK_SCULPT_OK head= 25662 neck= 26957
+FORWARD_NECK_DRAFT_OK
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

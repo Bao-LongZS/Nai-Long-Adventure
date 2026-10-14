@@ -1,0 +1,89 @@
+{
+  "review_date": "2026-10-08",
+  "numeric_and_visual_acceptance_separate": true,
+  "automatic_acceptance_from_curvature": false,
+  "models": {
+    "H2": {
+      "passed": true,
+      "candidate_sha256": "7b2233033e755b614bf9b15f49e7f8a459e12ff775dc278215cbb34049193a49",
+      "review_report": "candidate_H2/final_visual_review.json",
+      "actual_manual_review": {
+        "review_date": "2026-10-08",
+        "reviewer": "independent H2 delivery visual review",
+        "candidate_sha256": "7b2233033e755b614bf9b15f49e7f8a459e12ff775dc278215cbb34049193a49",
+        "fixed_source_sha256": "ea12e9af2c564527d0c473cd31b28974339fcceb15b666502a33f0ffa057bc24",
+        "passed": true,
+        "surface_and_motion_visual_passed": true,
+        "recommended_for_adoption": true,
+        "scope": "Extends visual_review_pending.json's O/H2 shape gate with the saved formal H2 standard 33-image protocol and all six fixed Walk9/Laugh7/Jump6 views. Reviewed all H2 reflection and dual-direction grazing views at 0/45/90, paired R1 reflection90 and grazing_A45/B90, and paired R1 Walk9/Jump6 side views. Native validation, FBX reimport and repeat-build acceptance remain separate reports.",
+        "conclusion": "正式H2通过本轮曲面与动作视觉检查。嘴下转前颈的弧线展开，保留自然凹弧；后壳到肩背的外轮廓连贯。双向掠射未显示新增贯穿头颈的窄折脊；动作中未出现新的横台、颈柱或局部分离体块。反射回转和浅细纹仍可见，不能宣称全部消失。",
+        "observations": [
+          "H2 reflection90相对R1：下颌反射回转跨越更宽的曲面，后壳上部条纹连续，没有此前M版本的后上壳折肩。自然凸凹过渡仍使条纹回转。",
+          "H2 grazing_A45相对R1：R1已有嘴下到前颈的浅纵纹；H2仍保留较弱、位置随曲面改变的浅纹。没有观察到新生成、锐利、贯穿整个颈部的横向折脊。",
+          "H2 grazing_A90：前颈凹弧与下颌展开的弧面连接，未重新出现宽横台或长直颈接短急弯的侧面轮廓。",
+          "H2 grazing_B90相对R1：后脑向后颈、肩背的外缘过渡更均匀，未出现新台阶。",
+          "H2 grazing_A/B0与reflection0：嘴部接触线仍可见，下面是局部光影与凸凹回转；未读成一根独立横梁压在颈上。",
+          "Walk9、Laugh7、Jump6的45/90六视图均保留连续的头颈肩体块；嘴下改形随原有动作运动，未出现新撕裂、分离或颈柱。"
+        ],
+        "residuals": [
+          "反射中的细锯齿与条纹回转仍存在；同灯位R1也可见对应细纹。此次通过不代表微纹完全消失。",
+          "本检查不把视觉通过等同于精确参考图完全匹配；参考残差由reference_fit_report.json单独报告。"
+        ],
+        "protocol": "../render_protocol.json",
+        "pose_protocol": "../pose_comparison/pose_protocol.json",
+        "additional_modeling_recommended": false,
+        "delivery_acceptance_not_evaluated_here": [
+          "Independent repeat build",
+          "Combined H2/E2 package"
+        ]
+      },
+      "independent_native_validation": "passed",
+      "FBX_reimport": "passed",
+      "independent_rebuild": "passed"
+    },
+    "E2": {
+      "passed": true,
+      "candidate_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "review_report": "candidate_E2/final_visual_review.json",
+      "actual_manual_review": {
+        "review_date": "2026-10-08",
+        "reviewer": "independent E2 delivery visual review with root review concurrence",
+        "candidate_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+        "source_H2_sha256": "7b2233033e755b614bf9b15f49e7f8a459e12ff775dc278215cbb34049193a49",
+        "passed": true,
+        "surface_and_motion_visual_passed": true,
+        "recommended_for_adoption": true,
+        "exact_reference_match": false,
+        "scope": "Actual formal E2 saved-file renders: colored head and full body 0/45/90, fixed reference50 colored, gray head0/45, all reflection and dual grazing0/45/90, all six Walk9/Laugh7/Jump6 views. Paired H2 colored45/reference50/gray0/grazing_B45 and previously reviewed H2 full surface/motion images. This is a limited visual acceptance, separate from native geometry, FBX and repeat-build validation.",
+        "conclusion": "E2通过本轮有限度视觉验收。正常彩色与灰模下眼孔更圆，20/10瞳向自然，眼球埋入后的宽缓眼窝可接受；没有观察到独立鼻梁柱、锐利窄眼眶、完整突起亮环或动作中新裂缝。固定50度远眼仍比参考显示得更多，眼窝浅暗斑与反射集中回转仍存在，不能声称完全参考匹配或没有眼圈。",
+        "observations": [
+          "彩色正面：两眼孔更圆而对称，瞳孔各自稍偏外，但没有明显散开的斜视观感。",
+          "彩色45度与固定50度：近眼绿色孔与黑瞳外形自然；远眼为更窄的椭圆片，黑瞳可见。相对H2，孔的倾斜椭圆与瞳孔向鼻侧挤压减轻。",
+          "彩色90度：眼部进入侧面壳体，未增加新的外伸眼台阶；头颈肩采用H2连续形体。",
+          "正常灰模0/45度：眼球周围仍有宽缓凹弧，眼间过渡没有成为独立鼻梁柱，没有读成附加眼眶体块。",
+          "掠射A0/45度：眼孔下方、内侧的眼窝凹弧比H2更明显，额头眼上方有浅暗斑。这些是可见残留，并未观察到锐利的窄折脊或突起完整亮环。",
+          "掠射B0/45/90度：局部弧面产生亮暗边界，但未观察到眼圈新撕裂或强硬折脊；B45下前脸弧线延续H2，眼部局部变化使其上端移位。",
+          "反射0/45/90度：眼周条纹回转比H2集中。该模式不能单独证明锐利折脊；正常灰模、彩色和双方向掠射共同显示宽缓眼窝。",
+          "Walk9、Laugh7、Jump6的45/90六视图：眼孔/球连接稳定，头颈肩保形；未出现新缝隙、分離体块、变形颈柱或新增眼眶折脊。"
+        ],
+        "residuals": [
+          "远眼可见片段仍比参考0.35更多，不能称为完全匹配。实际三角测量与固定参考残差单独报告。",
+          "眼窝宽缓凹弧、眼上浅暗斑和集中反射回转仍存在；视觉通过不代表所有眼圈、坑或反射回转消失。",
+          "H2/R1共有的嘴下前颈细纹与反射细锯齿仍可见，E2未据此额外改变身体曲面。"
+        ],
+        "protocol": "../render_protocol.json",
+        "pose_protocol": "../pose_comparison/pose_protocol.json",
+        "additional_modeling_recommended": false,
+        "delivery_acceptance_not_evaluated_here": [
+          "Independent repeat build",
+          "Combined H2/E2 package"
+        ]
+      },
+      "independent_native_validation": "passed",
+      "FBX_reimport": "passed",
+      "independent_rebuild": "passed"
+    }
+  },
+  "reference_exact_match_claimed": false,
+  "residuals_disclosed": true
+}

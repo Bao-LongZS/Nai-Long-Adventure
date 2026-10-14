@@ -1,0 +1,41 @@
+{
+  "label": "A",
+  "candidate_sha256": "956933529196426afa0645b27f33519b62704a83339bc3c92af20384121f013e",
+  "E2_source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "measurement_protocol_sha256": "da275f5db5421384fd0bca8b6748c07b936d81bdbe8ed8d081c1af025452ccfc",
+  "decision": "stop_A_ineffective_reference_worse_local_turn_sharper",
+  "instruction_branch": "section 6, branch 3: A ineffective, degraded or wrong target direction; stop further candidates",
+  "key_visual_review": {
+    "mouth_wedge_clearly_improved": false,
+    "natural_front_neck_concavity_retained": true,
+    "obvious_new_crown_or_rear_shoulder_corner_in_key_views": false,
+    "full_geometry_integrity_not_assessed": true
+  },
+  "actual_saved_Raw_sections": {
+    "central_angle80_E2": 0.060507468422358435,
+    "central_angle80_A": 0.07172615878551103,
+    "central_curvature_peak_E2": 31.5144627864388,
+    "central_curvature_peak_A": 36.12708808497519,
+    "central_peak_fraction_increase": 0.14636534754834152,
+    "near_mouth_lateral_peak_also_increased": true,
+    "evidence": "key_actual_sections_summary.json"
+  },
+  "fixed_reference_new_protocol_pixels": {
+    "front_E2": 18.894272,
+    "front_A": 19.219076,
+    "rear_E2": 6.827947,
+    "rear_A": 6.909058,
+    "older_protocol_values_not_compared": true
+  },
+  "new_defects": true,
+  "new_defect_reason": "Measured central and near-mouth lateral turn peaks increased. This is a local shape regression, not an assertion of self-intersection or asset damage.",
+  "same_target_and_scope_for_B": true,
+  "B_generated": false,
+  "B_additional_block": "Both scales are 1.9172652078976653 because the eye-local budget limits the common direction; B would repeat A geometry.",
+  "selected_candidate": null,
+  "recommended": "E2",
+  "full_selected_validation": "not run: A failed the key gate",
+  "FBX_export": "not run",
+  "independent_selected_rebuild": "not run",
+  "source_E2_unchanged": true
+}

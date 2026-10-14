@@ -1,0 +1,22 @@
+00:00.766  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\candidate_R1\Naiwa_Character.blend"
+00:02.531  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\comparisons\R1_head_front.png'
+00:02.813  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\comparisons\R1_head_three_quarter.png'
+00:03.094  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\comparisons\R1_head_side.png'
+00:03.360  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\comparisons\R1_full_front.png'
+00:03.641  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\reference_comparison\R1_common_ORTHO.png'
+00:04.531  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\comparisons\R1_head_gray_front.png'
+00:04.766  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\comparisons\R1_head_gray_three_quarter.png'
+00:05.016  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\comparisons\R1_head_gray_side.png'
+00:05.250  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\reference_comparison\R1_common_gray_ORTHO.png'
+00:05.453  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\comparisons\R1_body_id_front.png'
+00:05.672  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\comparisons\R1_body_id_three_quarter.png'
+00:05.906  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\comparisons\R1_body_id_side.png'
+00:06.125  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\reference_comparison\R1_common_body_id.png'
+00:06.406  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\reference_comparison\R1_extra_yaw45_pitch-5.png'
+00:06.688  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\reference_comparison\R1_extra_yaw55_pitch0.png'
+00:06.985  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_N2_round_refinement\reference_comparison\R1_extra_lens135.png'
+N2_ROUND_MODEL_RENDER_OK R1
+N2_ROUND_COMPARISONS_OK ['R1']
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

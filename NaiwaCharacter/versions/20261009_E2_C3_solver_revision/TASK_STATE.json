@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Shanghai",
+  "phase": "complete_stopped_not_adopted",
+  "user_authorized": "Correct the solving method and continue modification from E2",
+  "fixed_E2_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "baseline": "Copied immutable E2 measurement cache from the prior C3 round; protocol and arrays hashes match",
+  "old_candidate_A_reused_as_input": false,
+  "driver": "../../revise_c3_joint_reference.py",
+  "solver": "../../c3_joint_curve_solver.py",
+  "candidate_A": {
+    "status": "direction_correct_amplitude_insufficient; not_formally_validated; not_adopted",
+    "sha256": "e1ddefe39361dd092b0dae2190430004ea0c82ab2eb4aff34b146efd754909cb",
+    "native": "candidate_A/Naiwa_Character.blend"
+  },
+  "candidate_B": {
+    "sha256": "fdb943e031ae2d625894a1632d616fce81a198d966d2130879a4d2873d89499d",
+    "status": "numeric_assets_animation_and_reproduction_passed; selected_visual_gate_failed_local_turn_concentration; not_adopted",
+    "native": "candidate_B/Naiwa_Character.blend"
+  },
+  "recommended_until_validation": "E2",
+  "scope": "BODY only; existing mouth contact/frozen domain unchanged; eye-local vertices exact; X may remain unchanged and YZ jointly solved",
+  "target_revision": "Reference-directed front-neck inset at lateral shoulder/neck, limited under-mouth fill, final protected curvature constraints in the same solve",
+  "next": "This A/B round stopped under section6; no third candidate or budget increase; E2 retained",
+  "final_decision": "retain_E2",
+  "source_E2_unchanged": true
+}

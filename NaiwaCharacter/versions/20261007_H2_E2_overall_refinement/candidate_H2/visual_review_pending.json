@@ -1,0 +1,33 @@
+{
+  "review_date": "2026-10-08",
+  "reviewer": "independent H2 shape review",
+  "candidate_sha256": "7b2233033e755b614bf9b15f49e7f8a459e12ff775dc278215cbb34049193a49",
+  "fixed_source_sha256": "ea12e9af2c564527d0c473cd31b28974339fcceb15b666502a33f0ffa057bc24",
+  "scope": "O shape_gate eight real renders: head/full gray 0/45/90 and reflection45/90; compared with matching R1 and N renders. O saved Raw/Idle longitudinal sections, Raw tangent-angle and signed-curvature plots also inspected. No new mesh generation, FBX or action acceptance in this review.",
+  "recommended_for_adoption": true,
+  "shape_gate_passed": true,
+  "formal_visual_acceptance": false,
+  "conclusion": "O解决了N嘴下长直段后集中急弯的形体问题，可作为正式H2进入余下验收。反射仍有凸凹交接产生的回转，不能宣称所有钩形图案消失；现在回转所在的下颌弧较宽，灰模和真实剖面未显示对应独立窄折脊。",
+  "actual_shape_observations": [
+    "头部正面宽横台已消除为局部自然阴影；45度不再读成横梁压在颈上。",
+    "相对N，侧面嘴下转喉部的弧线展开得更宽，前颈凹弧保留。",
+    "下颌外填形成连续面，未观察到分离的下巴球、二次下巴轮廓或新增颈柱。",
+    "N中已改善的后壳曲线保留；后脑到后颈的腰缩与上肩鼓包未重新出现。",
+    "全身头身比例保留，0/45/90灰模下均未出现新的头颈分段体块。",
+    "45/90反射的回转图案仍可见，但其位置与宽缓凸凹交接相符；两版共有细锯齿仍存在，不据此宣称完全无微纹。"
+  ],
+  "actual_section_support_not_standalone_acceptance": {
+    "central_underface_half_turn_arc_width_N_O": [0.0395, 0.05],
+    "central_underface_80pct_turn_arc_width_N_O": [0.0765, 0.091],
+    "central_long_straight_run_N_arc": 0.0555,
+    "central_long_straight_run_O_count": 0,
+    "central_straight_sharp_adjacent_pairs_O_count": 0,
+    "central_peak_curvature_N_O": [34.98805394555935, 29.302226434001334],
+    "interpretation": "采用理由是灰模下整段弧线和形体的改善；这些真实剖面量测交叉支持转向已经分散，非仅最大曲率降低。"
+  },
+  "remaining_required_for_formal_acceptance": [
+    "正式完整协议的主体ID与双方向掠射复核。",
+    "资产、动作、FBX和可复建验收由根代理完成。"
+  ],
+  "additional_modeling_recommended": false
+}

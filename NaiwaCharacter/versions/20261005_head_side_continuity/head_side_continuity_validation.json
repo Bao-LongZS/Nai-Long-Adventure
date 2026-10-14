@@ -1,0 +1,114 @@
+{
+  "independent_validation": "passed",
+  "baseline": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261005_head_reshape\\Naiwa_Character.blend",
+  "target": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261005_head_side_continuity\\Naiwa_Character.blend",
+  "baseline_source_sha256": "68d2bca82f7edac3df46b3906a43b86c749b4a636bf385ab4f5b80be8d8e1e76",
+  "D": 0.11724481274201151,
+  "eye_z": 2.5052654154936964,
+  "mouth_z": 2.400440216064453,
+  "correction_z_range": [
+    2.3066443658708438,
+    2.470091971671093
+  ],
+  "maximum_allowed_displacement": 0.014069377529041381,
+  "saved_target_structure_before_baseline_load": {
+    "bound_mesh_count": 6,
+    "bone_count": 10,
+    "action_count": 4,
+    "bound_mesh_names": [
+      "L concentric iris and pupil",
+      "L eye glint",
+      "Naiwa unified golden body",
+      "R concentric iris and pupil",
+      "R eye glint",
+      "Short closed oral seam"
+    ],
+    "action_names": [
+      "Naiwa_Idle",
+      "Naiwa_Jump",
+      "Naiwa_Laugh",
+      "Naiwa_Walk"
+    ]
+  },
+  "meshes": {
+    "Naiwa unified golden body": {
+      "all_Y_and_Z_exact": true,
+      "middle_face_throat_strip_exact": true,
+      "outside_correction_band_exact": true,
+      "crown_and_below_2_17_exact": true,
+      "topology_and_weights_exact": true,
+      "color_attributes_exact": [
+        "NaiwaColor"
+      ],
+      "weight_sha256": "6c92449d54947db55ceff8032792e6542af3616acebcf40acd8dcd03a768060d",
+      "changed_vertex_count": 7143,
+      "actual_modified_bounds_xyz": [
+        [
+          -0.28184401988983154,
+          -0.4217180013656616,
+          2.308095693588257
+        ],
+        [
+          0.28184401988983154,
+          0.035644493997097015,
+          2.46927809715271
+        ]
+      ],
+      "maximum_euclidean_displacement": 0.004244387149810791,
+      "maximum_old_normal_projection": 0.004134747948624284,
+      "eye_line_width_before": 0.447500209892115,
+      "eye_line_width_after": 0.447500209892115,
+      "surface_integrity": {
+        "duplicate_vertices_at_1e_7": 0,
+        "duplicate_faces": 0,
+        "degenerate_faces": 0,
+        "nonadjacent_intersections": 0,
+        "normal_unit_error": 1.1920928955078125e-07,
+        "custom_normals": false,
+        "sharp_edges": 0,
+        "all_faces_smooth": true
+      }
+    },
+    "Head and torso silhouette only": {
+      "all_Y_and_Z_exact": true,
+      "middle_face_throat_strip_exact": true,
+      "outside_correction_band_exact": true,
+      "crown_and_below_2_17_exact": true,
+      "topology_and_weights_exact": true,
+      "color_attributes_exact": [],
+      "weight_sha256": "ff6e55542335447dbaa064d86e1a2917600eccd3bd662174747599b807d16781",
+      "changed_vertex_count": 0,
+      "actual_modified_bounds_xyz": null,
+      "maximum_euclidean_displacement": 0.0,
+      "maximum_old_normal_projection": 0.0,
+      "eye_line_width_before": 0.4063601984444424,
+      "eye_line_width_after": 0.4063601984444424,
+      "surface_integrity": {
+        "unchanged_shell": true
+      }
+    }
+  },
+  "visible_eyes": {
+    "L concentric iris and pupil": {
+      "aperture_green_pupil_projection_exact": true,
+      "visible_outer_equivalent_diameter_before": 0.1172416362896114,
+      "visible_outer_equivalent_diameter_after": 0.1172416362896114,
+      "sampling_step": 0.0003
+    },
+    "R concentric iris and pupil": {
+      "aperture_green_pupil_projection_exact": true,
+      "visible_outer_equivalent_diameter_before": 0.11724798919441162,
+      "visible_outer_equivalent_diameter_after": 0.11724798919441162,
+      "sampling_step": 0.0003
+    }
+  },
+  "eyes_glints_mouth_all_coordinates_and_matrices_exact": [
+    "L concentric iris and pupil",
+    "R concentric iris and pupil",
+    "L eye glint",
+    "R eye glint",
+    "Short closed oral seam"
+  ],
+  "all_mesh_topology_colors_weights_and_Y_Z_exact": true,
+  "rig_rest_bones_and_parents_exact": true
+}

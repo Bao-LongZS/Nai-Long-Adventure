@@ -1,0 +1,35 @@
+{
+  "source_root": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter",
+  "files": {
+    "body_finish_sculpt.py": "ead7050d5afcbcc9cd177f8ed78151c3d0c6260387e0a83b8d5581b3291a057d",
+    "broad_face_arc_sculpt.py": "5c41eb0d1b06ddb2644c4c657699260e7401cef00774fbbe5c19e9b761e62183",
+    "build_naiwa.py": "6084c677f95e773bab76a9e1de605060aaef19303e30a5c60afe10b37275b385",
+    "check_blender_runtime.py": "1a84492e98c9cf67e3f414ee47b0370e988a6fcf2a27ad7b72e2d3a85e18f182",
+    "connection_sculpt.py": "c5dc77ac73212b2625a8ace2975e334edaa416594ee6ce51c4f10f6ddd3d64d9",
+    "continuous_front_face_sculpt.py": "e8b452a022d7b6e0a7f62f82b4163ff0782f3180bb000efd9ec468ab8fe3f279",
+    "eye_muzzle_sculpt.py": "8e0c82d1b9b734422aa7925f982ea6cbef5e514be29aa40884d67b373dcff64c",
+    "eye_projection_measure.py": "050114c26bbbbab3cc1b1088088ee402365e71941fad21aeff58398b658808f0",
+    "head_reshape_sculpt.py": "d537a8548f1c3e1f826cf3155aa4bdc239a5be51436691b86062950ffd92ffb5",
+    "head_volume_sculpt.py": "d3e5a2e9e0063dc7174d21504dd5ea550057fd288253cec6a83caffd844b0308",
+    "lip_eye_sculpt.py": "80165aff660bdd9d9e93fd7b467962b3370a594f75fdcae020bb55226210f86b",
+    "longitudinal_surface_sculpt.py": "57ef9d0ebf299d71bb4c237bbc909748318880ce88a04d92f88eb1e21a542003",
+    "make_head_reshape_comparisons.py": "63ddb25bc7cc732dbbcbd60161623e731cdc4758a3c2ddfae6c4daeb0e740f75",
+    "neck_blend_sculpt.py": "94d0cb1496e68a637e913c9816f35581779c114ce7155c04ba9e218ecd9ebf93",
+    "neck_direction_sculpt.py": "a56fb9e30d3f8bc7129cdd9a6e7cd48dfc1b1ca3477fe468fca5290c5dd24897",
+    "neck_extension_sculpt.py": "f23e59a1be7ca6d8b9b79009a0f5c4383ce8e5aa3c4ad6016933155bd9678140",
+    "render_head_reshape_comparison.py": "87503177e1afa4712a4f15aea44b1496fd962231ae96ac3aecc47b88fc859d96",
+    "render_surface_diagnostics.py": "be24b388e33bfb43f08751d9d6cafb8a0d335a220bd29571518ecc271c50ae79",
+    "revise_head_reshape.py": "978cd29aab56ba5f0fb95fa25613db1ffde789d790f89162480a86e6c0d6ffc7",
+    "run_blender_stage.ps1": "7955a66056463326ad743cf3c6f1546a807f9e26776e94319d770cf91b77353a",
+    "short_round_face_sculpt.py": "bd3d2f023bab9438f03a332be2233355e368a7015930cfbb8ca1017307632d5e",
+    "validate_delivery_rebuild.py": "e5174471511b44dee1510bbddf2db8078a5662dd66a8873c53ba143e68729f7b",
+    "validate_fbx.py": "4711bba5650f355083e20d5926472d764546580e29a879e5633f8254dd8b7f87",
+    "validate_head_reshape.py": "bc74a703fc6e1d93f40987b9efbcf7bd3676e2ca459d72db4589ecddc1f3ef09",
+    "validate_head_revision.py": "a0417155adb30cfa5f75229bf9b2b1ef6e0346b845c25f4d8b885134b33c799b",
+    "validate_lip_eye_refinement.py": "26eab26fc2f80f2b11ca78c0d1906f835347366538831b93a7a5445f3613b8cf"
+  },
+  "fixed_inputs": {
+    "versions/20261005_eye_muzzle_body_delivery/Naiwa_Character.blend": "f1ccb3ef65318d7e5db008ecd3f5f805bd8f9576ea1ee8f24be044c6c7b12391",
+    "versions/20261005_eye_muzzle_body_delivery/stage_face_raise.blend": "08b2197f06f7ac934c3adf5e2e9357b99d7c09e298cd84bff66c814cfc04a7f1"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "projection": "ORTHO",
+  "lens_mm": 50,
+  "distance": 7,
+  "full_body_scale": 3.45,
+  "neutral_close_scale": 1.03,
+  "views": {
+    "front": 0,
+    "side": 90,
+    "three_quarter": 35
+  },
+  "camera_elevation_degrees": 0,
+  "same_scene_lighting_for_each_triplet": true,
+  "soft_lights": {
+    "key_power": 550,
+    "fill_power": 250,
+    "area_size": 4.5,
+    "exposure": -0.4
+  }
+}

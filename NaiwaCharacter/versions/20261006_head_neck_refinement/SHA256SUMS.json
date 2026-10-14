@@ -1,0 +1,622 @@
+{
+  "scope": "neck_only",
+  "relative_root": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter",
+  "fixed_A_sha256": "f251f5a0fc00fedf1df76fcc6286bc40e102406a536cb6c676a93e176cb71ca0",
+  "files": [
+    {
+      "path": "versions/20261006_head_neck_refinement/baseline_head_neck_inspection.json",
+      "bytes": 6011521,
+      "sha256": "895e9ef5ee5d00708ff8d10550a7e478e4e106137408e1137c1caa7ff2433543"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/baseline_inspection.log",
+      "bytes": 16779,
+      "sha256": "bbbeb4631465d79cbc75c1620ba8bae65b7850ce899489e7a8f883874fa127ba"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/baseline_validation.log",
+      "bytes": 279,
+      "sha256": "c9714bf361d7e5803c9ca69781070806e072fd87084555346513df6dcf9b9f73"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/build_neck.log",
+      "bytes": 642,
+      "sha256": "69804dbf99ae697ae6d69f9ce92ed112bae0c6ff263dc172893aeb910316dfa6"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/candidate_N1/build_report.json",
+      "bytes": 132708,
+      "sha256": "eaba280a91db57b18edb29b3b6d95e409143cf2a641b1034001195c75848e4c3"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/candidate_N1/deformation_mask.npz",
+      "bytes": 4723172,
+      "sha256": "5e9bc438e75bcc7c5e243e3ac11d9d67c014a509c55b19376eb72021699b2dbe"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/candidate_N1/Naiwa_Character.blend",
+      "bytes": 23894244,
+      "sha256": "f4dba962dc5a38480e96381118bac8b0bf88c55de248bbf8e0c97dcea01ce845"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/candidate_N1/rebuild_validation.json",
+      "bytes": 4589,
+      "sha256": "3a01b8c896646fd552fcc4a93f959d1c2b849f20717c75c77c83698a32c6a81d"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/candidate_N1/validation_report.json",
+      "bytes": 8690076,
+      "sha256": "606a5ee96d041d1eb60da7daacf9619768cfefa5ba2e4c14a2cf45705d0b8123"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/candidate_N2/build_report.json",
+      "bytes": 132697,
+      "sha256": "95864e24a7a2e0a6a6bc2fe10e7ec3f94d315b159b9fb8ab4dfcc7e85bb4b53d"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/candidate_N2/deformation_mask.npz",
+      "bytes": 4725134,
+      "sha256": "4486a26f86e05c42bba4fa7cb2ef7a998cf8d1431d38c408383806c73b9f75cf"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/candidate_N2/fbx_validation.json",
+      "bytes": 1329,
+      "sha256": "ccf49a0fd110849015f882c04327ba111e2aca5fb9588ef3b6782c6d37dab329"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/candidate_N2/Naiwa_Character.blend",
+      "bytes": 23893338,
+      "sha256": "9397186f3ae13e93e05cc0d492c12ceb68b743ab4d2a9a0d650426a47a66b0cb"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/candidate_N2/Naiwa_Character.fbx",
+      "bytes": 20352572,
+      "sha256": "55f648db74606bca94f4d65cd2b5eb72a2dde2fd95e00127a4e8242b442afa59"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/candidate_N2/rebuild_validation.json",
+      "bytes": 4589,
+      "sha256": "7d4a6ed2a9fbfa2a01391c92bfadc9ed3a508d4cc0a3539b3c00c661b4979865"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/candidate_N2/validation_report.json",
+      "bytes": 8689134,
+      "sha256": "22093ba20d94fa49f4f632e1550b3de82ad39b7cd186e0e534e404b31edcca14"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/checkpoint.json",
+      "bytes": 479,
+      "sha256": "9be6f060702577f01ac6cbe9581d432ec359f4595a6507c4f29de93e9293dbf4"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/A_body_id_front.png",
+      "bytes": 258933,
+      "sha256": "a9d533223020989ee715b7b4465d2654c9229d0bf4135e411ac1c286a65256bd"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/A_body_id_side.png",
+      "bytes": 266480,
+      "sha256": "0cf76aa91f8545a29217f260f81657ed4773d6035fd4c8d2d89fc10f9b39ef76"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/A_body_id_three_quarter.png",
+      "bytes": 265943,
+      "sha256": "e12387d11e97ef897c046631dafe07a48948f51eea34a9d2c5fec5ade1c10044"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/A_full_front.png",
+      "bytes": 573695,
+      "sha256": "b65e8ee6a0e3c9dd083f7506e999334f94f640d4ff99f5a6da42ec190dfb3773"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/A_head_front.png",
+      "bytes": 640574,
+      "sha256": "78c0afc961c6b8883b68efd1e2d3d4e44cc77021dea77a85249c9456cba4000a"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/A_head_gray_front.png",
+      "bytes": 544816,
+      "sha256": "512e09427e7a396c32a9ba3036b2db21e12348b26642be76f0f45def720f355a"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/A_head_gray_side.png",
+      "bytes": 511098,
+      "sha256": "7f2d0b61309e4864e7ee7b5cc2784d562a15576dd4d894342a1bf6db959ad2de"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/A_head_gray_three_quarter.png",
+      "bytes": 530155,
+      "sha256": "1ad14db249f5c47d00ad27832409ccf8b8603fed7e5a2bb938b73abd88175aad"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/A_head_side.png",
+      "bytes": 657101,
+      "sha256": "b1a24fba722544fa670210737e2428de029d5901a29f3f1de9e6e603c85c783f"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/A_head_three_quarter.png",
+      "bytes": 653044,
+      "sha256": "adadae309c0bbddc36eebda0597c60cc9f3384130ecf2b0c6bcbfb6825c76b3a"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/assembly_protocol.json",
+      "bytes": 2768,
+      "sha256": "198caf75471f4f310130d2bb556f2481366a24d94a81cf525c94ca9ade4d1c74"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/camera_protocol.json",
+      "bytes": 28928,
+      "sha256": "720732819862eb16dfc3ab57978b9c43b652260ed9dcbc1ff51e3a6da5341616"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/comparison_body_id.png",
+      "bytes": 549672,
+      "sha256": "903f5685e05265ef1896767aa3ebec7cbd27cd9ce457bcc56e9e0d05dcd7c9fb"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/comparison_full.png",
+      "bytes": 390985,
+      "sha256": "1bf9544e6b0cf6fbf4d51e428919a08c929ef378ef73d042c9bf35d114967512"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/comparison_head.png",
+      "bytes": 1839995,
+      "sha256": "c18da357c474b051d7b7fe0133816c163d8ea2637b0f7c717cab89a3ffe46a35"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/comparison_head_gray.png",
+      "bytes": 1373178,
+      "sha256": "b6c8361c7998db05a05ca588fde1b07e89f6e12a2ce6ca2a9e825596a2b0ffdb"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/comparison_horizontal_sections.png",
+      "bytes": 238098,
+      "sha256": "874c278c14745138490e24cbfb3ea21d3d99f473d468ceaa8c1df218961cc430"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/comparison_midline_sections.png",
+      "bytes": 96236,
+      "sha256": "d2378fb9adc40ac4641f2a607b6a967034505607a340131b3f7715cf17821b5c"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/deformation_masks.png",
+      "bytes": 301229,
+      "sha256": "10df2c8391592281bfec67cfbfe4beb88e35184402f47ea95f0772d7a4161eeb"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N1_body_id_front.png",
+      "bytes": 258940,
+      "sha256": "c1d7512b8b9feb5de16139b6c54876fa44161692de9dbc07ef7e2b40c2d7cfda"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N1_body_id_side.png",
+      "bytes": 262308,
+      "sha256": "d63e8533b185b6f94ac271292a46ea1689fac219b8ef3418fac241a36d762b1d"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N1_body_id_three_quarter.png",
+      "bytes": 265902,
+      "sha256": "5ca7d59ff4089672233cceb6e0b74a7d40e223a4d85f55f1dd633802a451e4af"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N1_full_front.png",
+      "bytes": 575142,
+      "sha256": "f9f3b374c696a0e694111766242a175922aa6f44dd1e58689444b8556eef351c"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N1_head_front.png",
+      "bytes": 652539,
+      "sha256": "b4dcd54ad542637671676aadaaf10fd7cc69fb8be117ad1425a759dfb85ff2f3"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N1_head_gray_front.png",
+      "bytes": 549235,
+      "sha256": "e537c6cc3e9f0360a8ed575f28a559cdb30ec5ecd1304895910cf61cdd4730d0"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N1_head_gray_side.png",
+      "bytes": 508971,
+      "sha256": "a54fe929adcbbf112951b33064c457694384f395d4ea6cc139e9e9817a7c4a68"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N1_head_gray_three_quarter.png",
+      "bytes": 530715,
+      "sha256": "f9daa45035e0f278934fb9512bb2f9968e0ef539b2387cc491aa887ce4017054"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N1_head_side.png",
+      "bytes": 656778,
+      "sha256": "85ab822bf35c132442b8ede0b98a11e33640b96cdcd40d2a0b8e4dcdf579a863"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N1_head_three_quarter.png",
+      "bytes": 658130,
+      "sha256": "50bfad1f30cd0f259b46753d8b3fe32fcd2db81ca8c79caf8f20de5d653b8eda"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N2_body_id_front.png",
+      "bytes": 258940,
+      "sha256": "ea25aef8b60ea4e9d083c627a2b93cd3e6e4a6aaae3c62cb27ac6e79fd4d2c13"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N2_body_id_side.png",
+      "bytes": 259944,
+      "sha256": "b35cfa2ba5aeb2d5b8388f06af456184bda8b9230cd73f7430f546a212a0905f"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N2_body_id_three_quarter.png",
+      "bytes": 263362,
+      "sha256": "6ee210d25bf576aa94663d8e489c20df6123bdf33b107ca5277cef4c2ffbd26a"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N2_full_front.png",
+      "bytes": 575568,
+      "sha256": "09fc494de403d6121654505cfb4d80118e4cccdf74de9f3b683ae80bd4ef7498"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N2_head_front.png",
+      "bytes": 656414,
+      "sha256": "04a7d5aa017b1d840c39ea0d12ea7c8be3f5309dd9ce654acaba9c97a9e40f8f"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N2_head_gray_front.png",
+      "bytes": 550976,
+      "sha256": "1de598e81b16755f187fbdc446185be7d2e80373fa6eec72c9ddbba7f38f26b3"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N2_head_gray_side.png",
+      "bytes": 508058,
+      "sha256": "e421cf406431582437a35786e46af025dbfa34322c65f8ba0577a288c5b9398b"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N2_head_gray_three_quarter.png",
+      "bytes": 531385,
+      "sha256": "eed0490953082cc88a8e3ede6fa5a8c28f095c2fa5be44344d62f6007ccb307a"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N2_head_side.png",
+      "bytes": 657634,
+      "sha256": "982f495c1afa8e50e64dea7902331defe8865451274e8740d0e91ad7d78f744a"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/N2_head_three_quarter.png",
+      "bytes": 659863,
+      "sha256": "7e3d374f43622685ed6d618e635fe045883fc927800d7bc7240f6224610cca13"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/plotted_section_measurements.json",
+      "bytes": 10441,
+      "sha256": "b6643f39c71a87416da0d908012f157664fefd0b99795df13f5bafe3afad51d0"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/section_measurements.csv",
+      "bytes": 4678,
+      "sha256": "3f43d0deca1f83aab18cbe420fcb4d17cd3ad677e9aa4db003ecd9d831fd84ec"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/comparisons/section_measurements.png",
+      "bytes": 177525,
+      "sha256": "74c7e2f83bf65cb67a418db47ed83a5df9b6e1b26dd8d2e6f3e77233c6e9ab4d"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/export_N2.log",
+      "bytes": 924,
+      "sha256": "1e9afc7365245c45697de735e0b54760c704112742d507022471d55ae17f8bdf"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/fbx_validation_N2.log",
+      "bytes": 763,
+      "sha256": "7e3b30f8e97e7b0fd20528c00c1d8e16b6665d7e7188971eced390665e42d1cf"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/head_neck_validation.json",
+      "bytes": 19944925,
+      "sha256": "e6775df598c67e6b445fede5cd1f1a4f932a139a58ed3cf0c19da6f163a024ca"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/initial_visual_rejection.json",
+      "bytes": 519,
+      "sha256": "a6bd914c9e2135295d4ad33720ae10b1ba4d6836beb2c4bdc81346a5f2616b78"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/parameters.json",
+      "bytes": 1430,
+      "sha256": "5ccfc7509f8ac999427109a9a1c233125a86e98b4cbb393b294cb7ff3a32e6bf"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/README_交付说明.md",
+      "bytes": 3492,
+      "sha256": "bb0ca5ec12d900d7a8bd728ab9c7ec5e2c39221e7776fce4b4007cc43009979c"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/rebuild_match_N1.log",
+      "bytes": 491,
+      "sha256": "b564bc065c42b46e36369b781cf0171c28b0eb1f9bd3338089d3acbf48e18a0c"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/rebuild_match_N2.log",
+      "bytes": 491,
+      "sha256": "213f2b8d70f971077f7c9e703b3c0f058c1171a2682a669be621167f6a51d809"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/rebuild_neck.log",
+      "bytes": 642,
+      "sha256": "2e4c0bce0a4b7434491734c4b03cdefa85952fef9700bc349132d8d125e69235"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/A_common_body_binary.png",
+      "bytes": 3934,
+      "sha256": "88f23a779f66c5a05c6970fe14bf81d8e9d6e505838bcfd3901c9bd5d3d78e76"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/A_common_body_id.png",
+      "bytes": 234234,
+      "sha256": "adc28610e47091ec6c1675fea9cbc09c9e12ee8dd8e7a77e62635cbd1388dd21"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/A_common_gray_ORTHO.png",
+      "bytes": 455489,
+      "sha256": "c00954dac01d4cbc7a41d17ab69595696b5e94385cdccef4b0a1d2b0d7a436fa"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/A_common_ORTHO.png",
+      "bytes": 557609,
+      "sha256": "f3ede89e82fd7849dcbede456347d2ec4f5b5804e37de87d55b0d0ca5241f885"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/A_extra_lens135.png",
+      "bytes": 566537,
+      "sha256": "69068a7e2f91cf11557d4aba5236782ec9db809449c32c22b3c1b8a991c03d47"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/A_extra_yaw45_pitch-5.png",
+      "bytes": 555200,
+      "sha256": "60f32bc127eecbd7dba4d20f567267ec2bf66b79a5f2ef6e62f9cdeaf35b2c3e"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/A_extra_yaw55_pitch0.png",
+      "bytes": 557734,
+      "sha256": "9af24b27f3dd71c5b8d4678660853b957d04488dc65afe27bd5bbcd8aac373f5"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/body_ID_contour_comparison.png",
+      "bytes": 218887,
+      "sha256": "7d9ce1fa6bf6c2efd202756c16cee8e66e3cdfb466bc37066625850ee6ba6f65"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/N1_common_body_binary.png",
+      "bytes": 4053,
+      "sha256": "346b7cc5bd821190561e638984ee389b4be51b37687f05ffe749f8d5b522c530"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/N1_common_body_id.png",
+      "bytes": 234069,
+      "sha256": "e3f6a02db6e93da1d1ee1171bd7addd389d94976c0d5bf0106d3f078769d950a"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/N1_common_gray_ORTHO.png",
+      "bytes": 456774,
+      "sha256": "5101892d04e73ee8e036cbc044c9662f68c812ab051f4ce293fa9a4e970b56f1"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/N1_common_ORTHO.png",
+      "bytes": 561969,
+      "sha256": "833f3e2206deb5895a615a7a21c200918425ed5645d3016a0b9fee7762493411"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/N1_extra_lens135.png",
+      "bytes": 572342,
+      "sha256": "813cb0d61ad485d67c057b5c933a5e29938afb7a2648d79f1e72e98bc5836132"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/N1_extra_yaw45_pitch-5.png",
+      "bytes": 561024,
+      "sha256": "812fd9efd6693fedab79228115721997c155319bf3937bb896399aaa874449b3"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/N1_extra_yaw55_pitch0.png",
+      "bytes": 562916,
+      "sha256": "945ded14bdb6a087deaf5b83f57c9a353eb338ef7a6f550a05825d3596b30559"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/N2_common_body_binary.png",
+      "bytes": 4082,
+      "sha256": "ad7e4659c6c0009c983b601d3fca28238cc1dd06c96920cf431cec944594c911"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/N2_common_body_id.png",
+      "bytes": 233849,
+      "sha256": "4aafe3a70d73aaadc05cf4c929bd680e6eb9333082fa7b2bff486e800555755b"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/N2_common_gray_ORTHO.png",
+      "bytes": 457656,
+      "sha256": "57e70e5c1e47646c6f8bdf61005ab67010736c99efeabc35576396601f432b00"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/N2_common_ORTHO.png",
+      "bytes": 563230,
+      "sha256": "b4b558583b29e9cd223e0ef87d92b2c039512b8b01b50615ffddd44ef93c29b1"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/N2_extra_lens135.png",
+      "bytes": 573753,
+      "sha256": "c0f5d68bf9453b76cbadb2c1c8eb859cea1aeb7086b329597996b08bcd0b07ca"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/N2_extra_yaw45_pitch-5.png",
+      "bytes": 561847,
+      "sha256": "1cf392fabb2171e6bb410ff6831573abf31970bce6c4aa1374fd9186adcfa5a3"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/N2_extra_yaw55_pitch0.png",
+      "bytes": 564372,
+      "sha256": "36b2e44edb23ab070df13dbfbc04380fc106e3d73aa73be2bf0d9fb2d9631824"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/reference_figure13.jpg",
+      "bytes": 34544,
+      "sha256": "4ec47b76c34f5a0e2a670f7fe6a675d49bd0aaeb524a03d83add37e9f209074d"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/reference_review.json",
+      "bytes": 22147,
+      "sha256": "c3ec7d579ac0c5edecd32030e93caf0bcc63e342261989a344d816e5b2b9565a"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/reference_review.md",
+      "bytes": 4745,
+      "sha256": "35f953396fbce736a7f6ffc59ac59ffd9cad49cd8581f92c24fcdcd55d2f36fa"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/reference_stable_comparison.png",
+      "bytes": 652785,
+      "sha256": "0f55eb73433d7a5b5f3abb18fb002a7ec716d21b870a60aea2061e4057636154"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/reference_comparison/visual_assessment.json",
+      "bytes": 1058,
+      "sha256": "7147c1e4a0327085b1d6982112290dab8c20dfae2958647b6057abcdb4f4b274"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/render_neck.log",
+      "bytes": 6308,
+      "sha256": "3144f738e4f77501076ef3a973fdd49e9340424f37afc2e49293e6940efab59b"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/render_protocol.json",
+      "bytes": 54765,
+      "sha256": "cfe96d4872bab6863734aa00b54e8ed01a5d7dab498cb8c4892c5efd738b4be7"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/section_raw.json",
+      "bytes": 4562420,
+      "sha256": "811a2efd55ec120d8b86b4027392948ec70f3f53929741fd0ce728b6e051d36c"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/selection.json",
+      "bytes": 1635,
+      "sha256": "23640fcd0f6b23f915767748dc5c4e40395acb77021bae87dbadcb9219ce0de2"
+    },
+    {
+      "path": "versions/20261006_head_neck_refinement/validation_neck.log",
+      "bytes": 976,
+      "sha256": "7b9282237efeca7b382f490db03ad464a1af312ff7634ae5d56ac0dbc5277fdd"
+    },
+    {
+      "path": "validate_delivery_rebuild.py",
+      "bytes": 5448,
+      "sha256": "9f80ff599f9255db64c607e7bdbeb5d41296e02e1a04b9e3d42e568403dcebe4"
+    },
+    {
+      "path": "saved_delivery_metadata.py",
+      "bytes": 3613,
+      "sha256": "817e71966e346407632e378339b7b0109d05ba0ab88bb2eb7e6fc9862d34dda5"
+    },
+    {
+      "path": "validate_lip_eye_refinement.py",
+      "bytes": 17912,
+      "sha256": "26eab26fc2f80f2b11ca78c0d1906f835347366538831b93a7a5445f3613b8cf"
+    },
+    {
+      "path": "eye_projection_measure.py",
+      "bytes": 4749,
+      "sha256": "050114c26bbbbab3cc1b1088088ee402365e71941fad21aeff58398b658808f0"
+    },
+    {
+      "path": "validate_head_neck_fbx.py",
+      "bytes": 2124,
+      "sha256": "de826304b84c5b07d5d44987d73bce7ba4e3aad74ad466c988dac2a18d9d15a6"
+    },
+    {
+      "path": "export_saved_fbx.py",
+      "bytes": 2643,
+      "sha256": "769c9dd0b8067a7cf9311fb08914c06eb71642b5b919932e9dc3871532171786"
+    },
+    {
+      "path": "plot_head_neck_sections.py",
+      "bytes": 10521,
+      "sha256": "25b396a2a9f6e4f89bd79ad3505566e840b9839ad49ed71e1d0c335cd33abd02"
+    },
+    {
+      "path": "plot_head_geometry_diagnostics.py",
+      "bytes": 10534,
+      "sha256": "929c50681955aee75633123060760247a0ad7d2293b7311b44a32c66e6315659"
+    },
+    {
+      "path": "make_head_neck_comparisons.py",
+      "bytes": 6306,
+      "sha256": "773050cf6fd4bc00feb1f214493d07c674bade9dda3a38430e1796f623e277e9"
+    },
+    {
+      "path": "make_spherical_eye_comparisons.py",
+      "bytes": 11140,
+      "sha256": "2cadd93a877f4888087e2a646f6b3d7082399d7aa4ffd3221660174b163bc7c7"
+    },
+    {
+      "path": "analyze_head_neck_reference.py",
+      "bytes": 18196,
+      "sha256": "6e5648145fc3910c4aa44d529faa6911b14a2d338566171c26b4af0828db808e"
+    },
+    {
+      "path": "render_head_neck_comparisons.py",
+      "bytes": 9644,
+      "sha256": "62c8f911db4d6907a2b3128e7395c6d0cb8d1e03f9600c9125fc598f2af61d0f"
+    },
+    {
+      "path": "geometry_diagnostic_utils.py",
+      "bytes": 5447,
+      "sha256": "340a66b5088e522ab9998f3e99ec021af673b171b346260df00edac53a026129"
+    },
+    {
+      "path": "spherical_reference_projection.py",
+      "bytes": 2591,
+      "sha256": "be03a489b9559808bac895b1f40de6ec7cd1f23c248cc03962febe20f09770cf"
+    },
+    {
+      "path": "render_head_reshape_comparison.py",
+      "bytes": 11387,
+      "sha256": "cf8ab661c39a29a2d91554fa94e57e92bda90b58914c788ea3b4b1e3d4e4c9bd"
+    },
+    {
+      "path": "render_surface_diagnostics.py",
+      "bytes": 2476,
+      "sha256": "be24b388e33bfb43f08751d9d6cafb8a0d335a220bd29571518ecc271c50ae79"
+    },
+    {
+      "path": "validate_head_neck_refinement.py",
+      "bytes": 15007,
+      "sha256": "df251f4c45b993df7f1b162b6d487f0c51788e859df6945d5270162c3c4863ad"
+    },
+    {
+      "path": "head_neck_validation_utils.py",
+      "bytes": 8384,
+      "sha256": "c1e38e63219dd00214759741d7c0883c9c340eb69b3c9e77442b451a317a2220"
+    },
+    {
+      "path": "revise_head_neck_refinement.py",
+      "bytes": 4326,
+      "sha256": "9ff4655d4615ed5853d51fc2ce36680196b2bd92cb93d02dad473e78005564c5"
+    },
+    {
+      "path": "head_neck_refinement_sculpt.py",
+      "bytes": 10169,
+      "sha256": "692f5cc66444e3e2a143b8932c0584b8cd3781f5c23804904edad4e4befc70a2"
+    },
+    {
+      "path": "bounded_c2_profile.py",
+      "bytes": 9808,
+      "sha256": "ce85648f241ab5e37824f9d7813290cf42afebfebf6b86a0ab1931b7f55b3218"
+    },
+    {
+      "path": "validate_fbx.py",
+      "bytes": 1746,
+      "sha256": "4711bba5650f355083e20d5926472d764546580e29a879e5633f8254dd8b7f87"
+    },
+    {
+      "path": "run_blender_stage.ps1",
+      "bytes": 1635,
+      "sha256": "7955a66056463326ad743cf3c6f1546a807f9e26776e94319d770cf91b77353a"
+    }
+  ]
+}

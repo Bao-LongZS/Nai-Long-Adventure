@@ -1,0 +1,27 @@
+{
+  "review_date": "2026-10-08",
+  "reviewer": "independent H2 delivery visual review",
+  "candidate_sha256": "7b2233033e755b614bf9b15f49e7f8a459e12ff775dc278215cbb34049193a49",
+  "fixed_source_sha256": "ea12e9af2c564527d0c473cd31b28974339fcceb15b666502a33f0ffa057bc24",
+  "passed": true,
+  "surface_and_motion_visual_passed": true,
+  "recommended_for_adoption": true,
+  "scope": "Extends visual_review_pending.json's O/H2 shape gate with the saved formal H2 standard 33-image protocol and all six fixed Walk9/Laugh7/Jump6 views. Reviewed all H2 reflection and dual-direction grazing views at 0/45/90, paired R1 reflection90 and grazing_A45/B90, and paired R1 Walk9/Jump6 side views. Native validation, FBX reimport and repeat-build acceptance remain separate reports.",
+  "conclusion": "正式H2通过本轮曲面与动作视觉检查。嘴下转前颈的弧线展开，保留自然凹弧；后壳到肩背的外轮廓连贯。双向掠射未显示新增贯穿头颈的窄折脊；动作中未出现新的横台、颈柱或局部分离体块。反射回转和浅细纹仍可见，不能宣称全部消失。",
+  "observations": [
+    "H2 reflection90相对R1：下颌反射回转跨越更宽的曲面，后壳上部条纹连续，没有此前M版本的后上壳折肩。自然凸凹过渡仍使条纹回转。",
+    "H2 grazing_A45相对R1：R1已有嘴下到前颈的浅纵纹；H2仍保留较弱、位置随曲面改变的浅纹。没有观察到新生成、锐利、贯穿整个颈部的横向折脊。",
+    "H2 grazing_A90：前颈凹弧与下颌展开的弧面连接，未重新出现宽横台或长直颈接短急弯的侧面轮廓。",
+    "H2 grazing_B90相对R1：后脑向后颈、肩背的外缘过渡更均匀，未出现新台阶。",
+    "H2 grazing_A/B0与reflection0：嘴部接触线仍可见，下面是局部光影与凸凹回转；未读成一根独立横梁压在颈上。",
+    "Walk9、Laugh7、Jump6的45/90六视图均保留连续的头颈肩体块；嘴下改形随原有动作运动，未出现新撕裂、分离或颈柱。"
+  ],
+  "residuals": [
+    "反射中的细锯齿与条纹回转仍存在；同灯位R1也可见对应细纹。此次通过不代表微纹完全消失。",
+    "本检查不把视觉通过等同于精确参考图完全匹配；参考残差由reference_fit_report.json单独报告。"
+  ],
+  "protocol": "../render_protocol.json",
+  "pose_protocol": "../pose_comparison/pose_protocol.json",
+  "additional_modeling_recommended": false,
+  "delivery_acceptance_not_evaluated_here": ["Independent repeat build", "Combined H2/E2 package"]
+}

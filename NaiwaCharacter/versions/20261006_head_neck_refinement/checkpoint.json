@@ -1,0 +1,11 @@
+{
+  "scope": "neck_only",
+  "status": "complete",
+  "stage": "下脸—颈部 N1/N2",
+  "recommended_candidate": "N2",
+  "selected_neck_sha256": "9397186f3ae13e93e05cc0d492c12ceb68b743ab4d2a9a0d650426a47a66b0cb",
+  "source_sha256": "f251f5a0fc00fedf1df76fcc6286bc40e102406a536cb6c676a93e176cb71ca0",
+  "geometry_visual_rebuild_fbx_validation": "passed",
+  "C1": "not_generated; outside current user scope",
+  "next": "No further modification authorized in this run"
+}

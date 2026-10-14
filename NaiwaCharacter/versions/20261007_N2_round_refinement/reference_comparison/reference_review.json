@@ -1,0 +1,258 @@
+{
+  "fixed_registration": {
+    "scale": 0.41175526202447044,
+    "translation": [
+      245.38813136509236,
+      -17.159665982101984
+    ],
+    "recalculated": false,
+    "common_pose": {
+      "type": "ORTHO",
+      "yaw": 50.0,
+      "pitch": -2.5,
+      "target": [
+        0,
+        -0.12,
+        2.425
+      ],
+      "distance": 7.0,
+      "scale": 0.86,
+      "lens": 50.0,
+      "resolution": [
+        900,
+        900
+      ]
+    }
+  },
+  "reference_bounds_original_pixels": {
+    "90": [
+      344.0,
+      490.0
+    ],
+    "180": [
+      302.0,
+      546.0
+    ],
+    "220": [
+      331.0,
+      569.0
+    ],
+    "260": [
+      344.0,
+      592.0
+    ],
+    "300": [
+      336.0,
+      612.0
+    ]
+  },
+  "sample_rows": {
+    "N2": {
+      "sample_rows": {
+        "90": {
+          "raw_model_row_pixels": 260,
+          "raw_model_front_back_x_pixels": [
+            292,
+            559
+          ],
+          "registered_front_back_x_pixels": [
+            365.62066787623775,
+            475.55932283677134
+          ],
+          "front_back_error_pixels": [
+            21.620667876237746,
+            -14.440677163228656
+          ]
+        },
+        "180": {
+          "raw_model_row_pixels": 479,
+          "raw_model_front_back_x_pixels": [
+            133,
+            693
+          ],
+          "registered_front_back_x_pixels": [
+            300.15158121434695,
+            530.7345279480503
+          ],
+          "front_back_error_pixels": [
+            -1.8484187856530525,
+            -15.2654720519497
+          ]
+        },
+        "220": {
+          "raw_model_row_pixels": 576,
+          "raw_model_front_back_x_pixels": [
+            166,
+            768
+          ],
+          "registered_front_back_x_pixels": [
+            313.73950486115444,
+            561.6161725998857
+          ],
+          "front_back_error_pixels": [
+            -17.260495138845556,
+            -7.383827400114342
+          ]
+        },
+        "260": {
+          "raw_model_row_pixels": 673,
+          "raw_model_front_back_x_pixels": [
+            182,
+            816
+          ],
+          "registered_front_back_x_pixels": [
+            320.327589053546,
+            581.3804251770603
+          ],
+          "front_back_error_pixels": [
+            -23.672410946454022,
+            -10.61957482293974
+          ]
+        },
+        "300": {
+          "raw_model_row_pixels": 770,
+          "raw_model_front_back_x_pixels": [
+            162,
+            862
+          ],
+          "registered_front_back_x_pixels": [
+            312.09248381305656,
+            600.3211672301859
+          ],
+          "front_back_error_pixels": [
+            -23.90751618694344,
+            -11.678832769814107
+          ]
+        }
+      },
+      "neck_mean_absolute_front_back_error_pixels": [
+        21.613474090747673,
+        9.894078330956063
+      ],
+      "neck_error_reduction_fraction_from_A": [
+        0.4895076648029456,
+        0.544003971528223
+      ],
+      "source_sha256": "9397186f3ae13e93e05cc0d492c12ceb68b743ab4d2a9a0d650426a47a66b0cb",
+      "ID_sha256": "8022eb1f50002a89820480a331585b18202fb78e84b765919f7a643fff2d4b4b",
+      "raw_mask_resolution": [
+        900,
+        900
+      ]
+    },
+    "R1": {
+      "sample_rows": {
+        "90": {
+          "raw_model_row_pixels": 260,
+          "raw_model_front_back_x_pixels": [
+            292,
+            559
+          ],
+          "registered_front_back_x_pixels": [
+            365.62066787623775,
+            475.55932283677134
+          ],
+          "front_back_error_pixels": [
+            21.620667876237746,
+            -14.440677163228656
+          ]
+        },
+        "180": {
+          "raw_model_row_pixels": 479,
+          "raw_model_front_back_x_pixels": [
+            133,
+            695
+          ],
+          "registered_front_back_x_pixels": [
+            300.15158121434695,
+            531.5580384720993
+          ],
+          "front_back_error_pixels": [
+            -1.8484187856530525,
+            -14.44196152790073
+          ]
+        },
+        "220": {
+          "raw_model_row_pixels": 576,
+          "raw_model_front_back_x_pixels": [
+            166,
+            768
+          ],
+          "registered_front_back_x_pixels": [
+            313.73950486115444,
+            561.6161725998857
+          ],
+          "front_back_error_pixels": [
+            -17.260495138845556,
+            -7.383827400114342
+          ]
+        },
+        "260": {
+          "raw_model_row_pixels": 673,
+          "raw_model_front_back_x_pixels": [
+            182,
+            816
+          ],
+          "registered_front_back_x_pixels": [
+            320.327589053546,
+            581.3804251770603
+          ],
+          "front_back_error_pixels": [
+            -23.672410946454022,
+            -10.61957482293974
+          ]
+        },
+        "300": {
+          "raw_model_row_pixels": 770,
+          "raw_model_front_back_x_pixels": [
+            162,
+            861
+          ],
+          "registered_front_back_x_pixels": [
+            312.09248381305656,
+            599.9094119681614
+          ],
+          "front_back_error_pixels": [
+            -23.90751618694344,
+            -12.090588031838593
+          ]
+        }
+      },
+      "neck_mean_absolute_front_back_error_pixels": [
+        21.613474090747673,
+        10.031330084964225
+      ],
+      "neck_error_reduction_fraction_from_A": [
+        0.4895076648029456,
+        0.5376783439523133
+      ],
+      "source_sha256": "ea12e9af2c564527d0c473cd31b28974339fcceb15b666502a33f0ffa057bc24",
+      "ID_sha256": "b133ecac46e5a6617b06a22fc0c05290d260237b827022e8ae72638c5f5ecafa",
+      "raw_mask_resolution": [
+        900,
+        900
+      ]
+    }
+  },
+  "absolute_error_deterioration_R1_from_N2_pixels": {
+    "220": [
+      0.0,
+      0.0
+    ],
+    "260": [
+      0.0,
+      0.0
+    ],
+    "300": [
+      0.0,
+      0.4117552620244851
+    ]
+  },
+  "constraints": {
+    "per_row_edge_deterioration_max_pixels": 3.0,
+    "front_mean_error_reduction_from_A_min_fraction": 0.4,
+    "passed": true
+  },
+  "numeric_pass_is_not_visual_acceptance": true,
+  "method": "Unlit unified body ID; threshold128; fixed raw image row +/-1; old registration and reference bounds unchanged."
+}

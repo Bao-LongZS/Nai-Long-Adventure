@@ -1,0 +1,65 @@
+{
+  "status": "Unadopted numerical trials; all temporary trial geometry removed after final R1 validation",
+  "final_accepted_sha256": "ea12e9af2c564527d0c473cd31b28974339fcceb15b666502a33f0ffa057bc24",
+  "trials": [
+    {
+      "name": "initial_quintic_180",
+      "adopted": false,
+      "native_sha256": "96f8c54b243bf7d013d5d04fe38bb51af2f0cf54715a21aaf6b3a6c7f393d2e7",
+      "parameters": {
+        "sigma_z": 0.013,
+        "sigma_arc": 0.014,
+        "front_inset": 0.0048,
+        "rear_fill": 0.0045,
+        "iterations": 180
+      },
+      "central_actual_curvature_peak": 36.5205718858,
+      "reason": "Not selected: central curvature or transverse fairness required further joint optimization"
+    },
+    {
+      "name": "converged_without_inset",
+      "adopted": false,
+      "native_sha256": "35be6d60d7b2cc4f1ff33611c547e632f58864a227aa23efacf56c2e6ebeddbe",
+      "parameters": {
+        "sigma_z": 0.013,
+        "sigma_arc": 0.014,
+        "front_inset": 0.0,
+        "rear_fill": 0.0045,
+        "iterations": 1600,
+        "rho": 60.0
+      },
+      "central_actual_curvature_peak": 30.9509932421,
+      "reason": "Not selected: central curvature or transverse fairness required further joint optimization"
+    },
+    {
+      "name": "Beta3_6_final_bending",
+      "adopted": false,
+      "native_sha256": "a608ab80dfde720250980c9c0e242c4384cc4ec668d59fdbcf1122db078d5565",
+      "parameters": {
+        "sigma_z": 0.013,
+        "sigma_arc": 0.014,
+        "front_inset": 0.0,
+        "rear_fill": 0.0045,
+        "iterations": 1600,
+        "rho": 60.0
+      },
+      "central_actual_curvature_peak": 32.0402803685,
+      "reason": "Not selected: central curvature or transverse fairness required further joint optimization"
+    },
+    {
+      "name": "mouth_longitudinal_only",
+      "adopted": false,
+      "native_sha256": "e7ed227f7f9c17ade7d104c08b141ea452a279aead93dd6942070a7cc64da7e1",
+      "parameters": {
+        "sigma_z": 0.013,
+        "sigma_arc": 0.014,
+        "front_inset": 0.0,
+        "rear_fill": 0.0045,
+        "iterations": 1600,
+        "rho": 60.0
+      },
+      "central_actual_curvature_peak": 26.0046341059,
+      "reason": "Not selected: central curvature or transverse fairness required further joint optimization"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "D0": 0.117244812742,
+  "axes": {
+    "X": "right",
+    "Y": "rear",
+    "Z": "up",
+    "F": [
+      0,
+      -1,
+      0
+    ]
+  },
+  "neck_Z": [
+    2.03,
+    2.12,
+    2.22,
+    2.31,
+    2.35,
+    2.38
+  ],
+  "neck_front": {
+    "N1": [
+      0,
+      0.045,
+      0.055,
+      0.044,
+      0.015,
+      0
+    ],
+    "N2": [
+      0,
+      0.06,
+      0.075,
+      0.06,
+      0.021,
+      0
+    ]
+  },
+  "neck_rear": {
+    "N1": [
+      0,
+      0.025,
+      0.025,
+      0.018,
+      0.006,
+      0
+    ],
+    "N2": [
+      0,
+      0.035,
+      0.035,
+      0.025,
+      0.008,
+      0
+    ]
+  },
+  "C1_rear_Z": [
+    2.38,
+    2.43,
+    2.52,
+    2.58,
+    2.635
+  ],
+  "C1_rear_Y": [
+    0,
+    0.02,
+    0.02,
+    0.015,
+    0
+  ],
+  "C1_front_Z": [
+    2.565,
+    2.6,
+    2.635
+  ],
+  "C1_front_Y": [
+    0,
+    -0.02,
+    0
+  ],
+  "midline_sampling_step_Z": 0.0005,
+  "registration": {
+    "scale": 0.41175526202447044,
+    "translation": [
+      245.38813136509236,
+      -17.159665982101984
+    ]
+  },
+  "executed_candidates": [
+    "N1",
+    "N2"
+  ],
+  "scope": "neck_only",
+  "fixed_A": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_spherical_eyes\\candidate_A\\Naiwa_Character.blend",
+  "fixed_A_sha256": "f251f5a0fc00fedf1df76fcc6286bc40e102406a536cb6c676a93e176cb71ca0"
+}

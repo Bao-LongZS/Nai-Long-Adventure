@@ -1,0 +1,8 @@
+{
+  "sigma_z": 0.013,
+  "sigma_arc": 0.014,
+  "front_inset": 0.0,
+  "rear_fill": 0.0045,
+  "iterations": 1600,
+  "rho": 60.0
+}

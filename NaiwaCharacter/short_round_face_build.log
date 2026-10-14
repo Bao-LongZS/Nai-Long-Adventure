@@ -1,0 +1,37 @@
+00:00.469  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\before_short_round_face_revision\Naiwa_Character.blend"
+00:14.766  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_front.png'
+00:15.219  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_side.png'
+00:15.516  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_three_quarter.png'
+00:15.766  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_surface_check_side.png'
+00:16.016  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_silhouette_front.png'
+00:16.281  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_silhouette_side.png'
+00:16.500  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_torso_silhouette_front.png'
+00:16.703  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_torso_silhouette_side.png'
+00:17.016  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_face_close.png'
+00:17.344  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_face_side_close.png'
+00:17.641  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_face_three_quarter_close.png'
+00:17.922  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_hand_close.png'
+00:18.266  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_foot_close.png'
+00:18.547  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_foot_side_close.png'
+00:18.844  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_neck_front_close.png'
+00:19.156  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_neck_side_close.png'
+00:19.422  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_neck_gray_three_quarter.png'
+00:19.719  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_surface_gray_side.png'
+00:20.000  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_surface_gray_front.png'
+00:20.281  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_surface_gray_three_quarter.png'
+SHORT_ROUND_FACE_SCULPT_OK {'modified_vertices': 40316, 'maximum_displacement': 0.0657452642917633, 'all_heights_exact': True, 'root_z': 1.98, 'width_join_z': 2.425, 'front_join_z': 2.48, 'rear_join_z': 2.54, 'front_face_extension': 0.037, 'throat_z': 2.185, 'eyes': {'L': {'old_center': [-0.0566723607480526, -0.31622833013534546, 2.436984062194824], 'new_center': [-0.057492394000291824, -0.3183445632457733, 2.432865858078003], 'radius': 0.09306373039453648, 'pupil_x_z_preserved': True, 'rigid_rotation': [0.9997287392616272, -0.02164478227496147, 0.008335589431226254, 0.0021278965286910534]}, 'R': {'old_center': [0.05666298791766167, -0.31619033217430115, 2.4370808601379395], 'new_center': [0.05746595561504364, -0.31827205419540405, 2.4330224990844727], 'radius': 0.09306372976907626, 'pupil_x_z_preserved': True, 'rigid_rotation': [0.9997367858886719, -0.021323638036847115, -0.008204670622944832, -0.0020802130457013845]}}}
+信息: 已另存为 "Naiwa_Character.blend"
+
+FBX export starting... 'C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\Naiwa_Character.fbx'
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+export finished in 1.4030 sec.
+SHORT_ROUND_FACE_DELIVERABLES_OK 6 meshes 10 bones
+SHORT_ROUND_FACE_REVISION_OK
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

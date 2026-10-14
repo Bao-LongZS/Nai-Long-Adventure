@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-07",
+  "stage_order": [
+    "H2 overall shape",
+    "H2 geometry and multi-view acceptance",
+    "E2 eye correction",
+    "native rebuild and FBX validation"
+  ],
+  "inputs": [
+    {
+      "role": "fixed_R1",
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_N2_round_refinement\\candidate_R1\\Naiwa_Character.blend",
+      "bytes": 23901979,
+      "sha256": "ea12e9af2c564527d0c473cd31b28974339fcceb15b666502a33f0ffa057bc24"
+    },
+    {
+      "role": "user_modification_brief",
+      "path": "C:\\Users\\31314\\Documents\\Codex\\2026-10-05\\li\\outputs\\Naiwa_R1整体阶梯修正指令_20261007.md",
+      "bytes": 12865,
+      "sha256": "acf701bda698932fd29a4421ce7cf727b5ab786888e852e60eab0706d851ead1"
+    },
+    {
+      "role": "original_reference_PDF",
+      "path": "C:\\xwechat_files\\wxid_qw66cmn0djs112_f8a7\\msg\\file\\2026-09\\《捧腹大笑思想与奶龙学概论》(3).pdf",
+      "bytes": 7605055,
+      "sha256": "4b99320ed69d8d1df25134163b79c1534e133161fad0b1f4ba74161a10f1ba35"
+    },
+    {
+      "role": "figure_1_3",
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\references\\20261005\\pdf_page03_image03_IM60.jpg",
+      "bytes": 34544,
+      "sha256": "4ec47b76c34f5a0e2a670f7fe6a675d49bd0aaeb524a03d83add37e9f209074d"
+    },
+    {
+      "role": "figure_6_2",
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\references\\20261005\\pdf_page08_fig6_2.png",
+      "bytes": 416176,
+      "sha256": "bd331174ac6e510965b4111b20969442bb5ba02d8fd7ead5fe49e55b3f410ec7"
+    },
+    {
+      "role": "figure_6_5",
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\references\\20261005\\pdf_page09_fig6_5.png",
+      "bytes": 377934,
+      "sha256": "48c23c8638731ee6520ba209477c5cf868fbc6752296acdec9a487843c52af49"
+    },
+    {
+      "role": "original_camera_protocol",
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261006_spherical_eyes\\comparisons\\camera_protocol.json",
+      "bytes": 18688,
+      "sha256": "e9c8c9a9755497f673b83be28fb70591fd75b71a990c574c0c9a33e08583d0b3"
+    }
+  ],
+  "D0": 0.117244812742,
+  "H2_limits": {
+    "X": 0.008,
+    "section_width_fraction": 0.05,
+    "Z": 0.01,
+    "total": 0.035
+  },
+  "fixed_reference_registration": {
+    "translation": [
+      245.38813136509236,
+      -17.159665982101984
+    ],
+    "scale": 0.41175526202447044,
+    "recalculated": false
+  }
+}

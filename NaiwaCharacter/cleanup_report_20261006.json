@@ -1,0 +1,1515 @@
+{
+  "date": "2026-10-06",
+  "scope": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter",
+  "total_files": 73,
+  "reclaimed_bytes": 484899368,
+  "reclaimed_project_bytes": 464615607,
+  "removed_project_files": 70,
+  "fbx_restore_verification": {
+    "status": "passed",
+    "source": "iterations/before_eye_muzzle_body_revision/Naiwa_Character.blend",
+    "source_unchanged": true,
+    "bound_meshes": 6,
+    "bones": 10,
+    "actions": [
+      "Idle",
+      "Walk",
+      "Laugh",
+      "Jump"
+    ],
+    "body_and_eye_vertex_colors_preserved": true,
+    "export_log": "00:00.844  blend            | Read blend: \"C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\iterations\\before_eye_muzzle_body_revision\\Naiwa_Character.blend\"\n\nFBX export starting... 'C:\\\\Users\\\\31314\\\\Desktop\\\\Nai-Long-Adventure\\\\NaiwaCharacter\\\\.cleanup_export_check\\\\Naiwa_Character.fbx'\n(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')\n(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')\n(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')\n(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')\n(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')\n(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')\nexport finished in 1.8862 sec.\nSAVED_FBX_EXPORT_OK C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\.cleanup_export_check\\Naiwa_Character.fbx meshes= 6 bones= 10 actions= 4\nBlender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)\n\nBlender quit\n",
+    "reimport_log": "FBX version: 7400\nIMPORTED_ACTIONS ['Naiwa_Rig|Naiwa_Rig|Naiwa_Idle', 'Naiwa_Rig|Naiwa_Rig|Naiwa_Jump', 'Naiwa_Rig|Naiwa_Rig|Naiwa_Laugh', 'Naiwa_Rig|Naiwa_Rig|Naiwa_Walk']\nIMPORTED_VERTEX_COLORS [('L concentric iris and pupil', ['EyeColor']), ('Naiwa unified golden body', ['NaiwaColor']), ('R concentric iris and pupil', ['EyeColor'])]\nIMPORTED_EYE_COLOR L L concentric iris and pupil EyeColor 22080\nIMPORTED_EYE_COLOR R R concentric iris and pupil EyeColor 22080\nFBX_REIMPORT_OK meshes= 6 bones= 10 actions= ['Naiwa_Rig|Naiwa_Rig|Naiwa_Idle', 'Naiwa_Rig|Naiwa_Rig|Naiwa_Jump', 'Naiwa_Rig|Naiwa_Rig|Naiwa_Laugh', 'Naiwa_Rig|Naiwa_Rig|Naiwa_Walk']\nBlender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)\n\nBlender quit\n"
+  },
+  "archive_checks": [
+    {
+      "archive": "Naiwa_Character_Delivery_20261005.zip",
+      "entries": [
+        {
+          "entry": "after_full_45.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/after_full_45.png",
+          "sha256": "85725e6eca866960dac6e6f894f1542b29402ae3cf88921befd8695ee67237d0",
+          "exact_match": true
+        },
+        {
+          "entry": "after_full_front.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/after_full_front.png",
+          "sha256": "c43f963cb33f0dbf2170713b841444ec748dc7009c4d71ecf03de7ca213d75ba",
+          "exact_match": true
+        },
+        {
+          "entry": "after_full_side.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/after_full_side.png",
+          "sha256": "0bb31ee83555d4e8c0d468e7eb81589e39509ada01a769be1e5ba4882c7df747",
+          "exact_match": true
+        },
+        {
+          "entry": "after_head_45.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/after_head_45.png",
+          "sha256": "b4615fcb9470501db12764f1e8e0c7f994f5e4e8a07feb459907e16bf137a8a9",
+          "exact_match": true
+        },
+        {
+          "entry": "after_head_front.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/after_head_front.png",
+          "sha256": "e98074767a5c130c047c9f4c429543d33acc1d4c48102d17f2e961c02455516b",
+          "exact_match": true
+        },
+        {
+          "entry": "after_head_side.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/after_head_side.png",
+          "sha256": "667fb13484eae2f089f5673bb8d1988075e4e1107dcbc0c6b120b83ec448e867",
+          "exact_match": true
+        },
+        {
+          "entry": "baseline_dimensions.json",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/baseline_dimensions.json",
+          "sha256": "27699fb11be76e27b18776ade0a4de04f5925a2950990a1c1c0aefd5c6069de9",
+          "exact_match": true
+        },
+        {
+          "entry": "baseline_measurement.log",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/baseline_measurement.log",
+          "sha256": "46f5e96d791909d87d652f25863827a136e20725b8e6d356f8b812958bf5a89c",
+          "exact_match": true
+        },
+        {
+          "entry": "before_full_45.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/before_full_45.png",
+          "sha256": "69732e5a054be3a58d8f4e2d0381b800e34fc2f311b51fa8f4d9e22b49e13ea8",
+          "exact_match": true
+        },
+        {
+          "entry": "before_full_front.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/before_full_front.png",
+          "sha256": "f81766c848d4c2f11d7626dfb0456beecf54f982b27ef1535590ca6d05a551df",
+          "exact_match": true
+        },
+        {
+          "entry": "before_full_side.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/before_full_side.png",
+          "sha256": "75ba26f4d156c1cdf405268c9f28c9f2a45774939f3fc1321009a9395645eac9",
+          "exact_match": true
+        },
+        {
+          "entry": "before_head_45.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/before_head_45.png",
+          "sha256": "ab90d5084e1e341e871b44d3a60d3cabcc03e26594427bccbc2af3b48486e3a5",
+          "exact_match": true
+        },
+        {
+          "entry": "before_head_front.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/before_head_front.png",
+          "sha256": "c63480c3207c07973a809fb01feec014598583689620a473b2dcb4c8d03f8d97",
+          "exact_match": true
+        },
+        {
+          "entry": "before_head_side.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/before_head_side.png",
+          "sha256": "53aa2bec969cf5d9bdfc927da637d8b2e1692d71abf7a9972f0cb856f7a1797e",
+          "exact_match": true
+        },
+        {
+          "entry": "build.log",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/build.log",
+          "sha256": "fa05a61e59ef1d779f838d5c97bea714ca37091ef2bd2da90a7a8febfde1db94",
+          "exact_match": true
+        },
+        {
+          "entry": "camera_protocol.json",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/camera_protocol.json",
+          "sha256": "852c9d27327386f8895ceba2ac8ef7f43db5e282cdf0fb59284c1ee3214379c4",
+          "exact_match": true
+        },
+        {
+          "entry": "comparison_full.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/comparison_full.png",
+          "sha256": "d22aed7f914b54ac9b6d4a3a80e10fb2577f0e8d8de6b02d3ac4a0590c27107d",
+          "exact_match": true
+        },
+        {
+          "entry": "comparison_head.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/comparison_head.png",
+          "sha256": "9f55fb96257b093e5a6b74bd3a5159ca3217429927ddcb7478ab8c85587c39e9",
+          "exact_match": true
+        },
+        {
+          "entry": "delivery_validation.json",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/delivery_validation.json",
+          "sha256": "558cfb17ff3b5fbbd3af0a4b34066c334d3bebd75d2685488d9043ef3d9212e0",
+          "exact_match": true
+        },
+        {
+          "entry": "delivery_validation.log",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/delivery_validation.log",
+          "sha256": "361495013281e7867afe8c692dd64953a4f76ecf34fe60756a6c78c54e6e216f",
+          "exact_match": true
+        },
+        {
+          "entry": "eye_muzzle_build_report.json",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/eye_muzzle_build_report.json",
+          "sha256": "dcd33a4a16f8cac9d05a511091577c4862fdcdfe017b194101f5a5feb3301469",
+          "exact_match": true
+        },
+        {
+          "entry": "eye_muzzle_validation.json",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/eye_muzzle_validation.json",
+          "sha256": "4af52fe398cc06680d1a66af249730a2bea0da2190837cf08edeb2e9ebf47a3b",
+          "exact_match": true
+        },
+        {
+          "entry": "face_stage_measurements.json",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/face_stage_measurements.json",
+          "sha256": "c93e05ad1ce2b3c79d296a740f18660fa4b7377aae0ba11a7d8850d87d167eea",
+          "exact_match": true
+        },
+        {
+          "entry": "fbx_validation.log",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/fbx_validation.log",
+          "sha256": "45167862c0671bcf95eb7cd95fea8adfddfe93179abeb73811be9da510aa0ee2",
+          "exact_match": true
+        },
+        {
+          "entry": "Naiwa_Character.blend",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/Naiwa_Character.blend",
+          "sha256": "f1ccb3ef65318d7e5db008ecd3f5f805bd8f9576ea1ee8f24be044c6c7b12391",
+          "exact_match": true
+        },
+        {
+          "entry": "Naiwa_Character.fbx",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/Naiwa_Character.fbx",
+          "sha256": "0920bf7244dc76f20e27506d3d1af80194fde1af4fe5c00dbed5c084e4aad7b9",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_face_close.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_face_close.png",
+          "sha256": "cb83748a15dfbc565e2fd6d870200d864e8086f7d87a15f092bc6b3b78ea1965",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_face_side_close.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_face_side_close.png",
+          "sha256": "9a5889238c8530128dfb148eee43fbc6a26f8651df5025da05668ee98041aeb1",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_face_three_quarter_close.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_face_three_quarter_close.png",
+          "sha256": "ca98ade47d2b132aae73efce319fb55cdf0cc340cbab1857e5c6381fee4b3495",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_foot_close.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_foot_close.png",
+          "sha256": "5b24f55aea59081f68074a82e90a057f1b61e1dc5740151088fbb77060d64b5e",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_foot_side_close.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_foot_side_close.png",
+          "sha256": "c0e902fb999aee7b31da838f05e84160a43996736842a965b74e2f24d3c9aa8f",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_front.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_front.png",
+          "sha256": "4091678af70ac2c6bcafcf22602f7c1a4317c989745c6b5c399508685d0b3484",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_hand_close.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_hand_close.png",
+          "sha256": "3b98108f6431730becd8871cac7b6c0e0062798fd89399a49bca2a9b79a5c734",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_neck_front_close.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_neck_front_close.png",
+          "sha256": "67bbf55626404f99d4856bb536e72115206a23a71c770c73b34bf036212a3203",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_neck_gray_three_quarter.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_neck_gray_three_quarter.png",
+          "sha256": "845ccf0f323a2d083cb77b785a1798b1f789424f37e2fbd48ee7a5bebe825ce7",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_neck_side_close.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_neck_side_close.png",
+          "sha256": "9b862894415f6976bb091dac25cfa939bdebb3b2bb315152ddec97f5b40c5fa5",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_review_front.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_review_front.png",
+          "sha256": "6554d26ee0f34aead775e39540b6c9c1e6143c1cdbc80282d76fbaf3d0f2d0bb",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_review_side.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_review_side.png",
+          "sha256": "a1813073b078b96919171566f07fbc005d46d1f0f4bc276fffd438a5f3b1b14a",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_review_three_quarter.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_review_three_quarter.png",
+          "sha256": "3115f47349c9813faf59dd1a9cadadb894c7c579f1e5a39fcd9332ed552b3c8a",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_side.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_side.png",
+          "sha256": "71c679aa1199ac8c78dcf77aad7d7d6be62a341d0b66077e05c2536ed99842ee",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_silhouette_front.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_silhouette_front.png",
+          "sha256": "69018134aa5b1da488141c1182ae24475c3b67e54fc01b92a3b9a69b6bda5a37",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_silhouette_side.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_silhouette_side.png",
+          "sha256": "ca5625e8f34541596073cf1784c18d7ba20069f256650346be7ba46a19b044c2",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_surface_check_side.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_surface_check_side.png",
+          "sha256": "f630fc7c97d00d71d08809bcca7bf47e6c09c1092cf82fa634157627859bdac9",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_surface_gray_front.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_surface_gray_front.png",
+          "sha256": "5e49eae50992555afffc1ba03e47ea95c7a2a6a9f0e6b5931b5e4d77cd10241e",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_surface_gray_side.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_surface_gray_side.png",
+          "sha256": "d8a15a39e647ced662e4af313b580abf231cc6daa41b06dba9d87ce83867cbb3",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_surface_gray_three_quarter.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_surface_gray_three_quarter.png",
+          "sha256": "68b9c85db98695cb664fa644340059aea27fca9fd180a5648768ccf237a30fb7",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_three_quarter.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_three_quarter.png",
+          "sha256": "984b897db588c5aab5d60a60b83a6dbca3bea8b87d71b24862d494e2f4ff8dd5",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_torso_silhouette_front.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_torso_silhouette_front.png",
+          "sha256": "1359e8c686cf2010db8f9085f7665838680e7e4e738867d785d2a293e8af7120",
+          "exact_match": true
+        },
+        {
+          "entry": "naiwa_torso_silhouette_side.png",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/naiwa_torso_silhouette_side.png",
+          "sha256": "98a15157b7e584983d5069b385da0d56c105945cbd9b60bef069f7cd0075feee",
+          "exact_match": true
+        },
+        {
+          "entry": "README_交付说明.md",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/README_交付说明.md",
+          "sha256": "47642f22590e9beb255bbad9ff8740838ef701b9cced2210f9a1425967a9c905",
+          "exact_match": true
+        },
+        {
+          "entry": "rebuild_build.log",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/rebuild_build.log",
+          "sha256": "db93cceada7ef635cf26f1b803ddbd9f0ac0aac8f3d7116879b7d2204a6309ff",
+          "exact_match": true
+        },
+        {
+          "entry": "rebuild_validation.json",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/rebuild_validation.json",
+          "sha256": "cb09ecf710b2ed623a12113f1da7eed5e90014e6c3863f1db3e889b78fef2eaa",
+          "exact_match": true
+        },
+        {
+          "entry": "rebuild_validation.log",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/rebuild_validation.log",
+          "sha256": "52667787f19e22ebfac50f0f875324be140470566d8fe31dfacc3734dde96914",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/body_finish_sculpt.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/body_finish_sculpt.py",
+          "sha256": "ead7050d5afcbcc9cd177f8ed78151c3d0c6260387e0a83b8d5581b3291a057d",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/broad_face_arc_sculpt.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/broad_face_arc_sculpt.py",
+          "sha256": "5c41eb0d1b06ddb2644c4c657699260e7401cef00774fbbe5c19e9b761e62183",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/build_naiwa.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/build_naiwa.py",
+          "sha256": "667b32ecf1221e04e2ad390588fe61cd9adaa7d20735fafdc366869857fedf63",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/connection_sculpt.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/connection_sculpt.py",
+          "sha256": "c5dc77ac73212b2625a8ace2975e334edaa416594ee6ce51c4f10f6ddd3d64d9",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/continuous_front_face_sculpt.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/continuous_front_face_sculpt.py",
+          "sha256": "e8b452a022d7b6e0a7f62f82b4163ff0782f3180bb000efd9ec468ab8fe3f279",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/eye_muzzle_baseline.json",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/eye_muzzle_baseline.json",
+          "sha256": "c56a9928904f5609725563520573bc78e493c0a5222bf1402f59d64583a6c6da",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/eye_muzzle_sculpt.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/eye_muzzle_sculpt.py",
+          "sha256": "c6e20754ecb2c3d1908b53ebf0332af2ce2b6eb5714e2f2c6785d8c7b3972cc0",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/eye_projection_measure.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/eye_projection_measure.py",
+          "sha256": "050114c26bbbbab3cc1b1088088ee402365e71941fad21aeff58398b658808f0",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/head_volume_sculpt.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/head_volume_sculpt.py",
+          "sha256": "d3e5a2e9e0063dc7174d21504dd5ea550057fd288253cec6a83caffd844b0308",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/inspect_eye_muzzle_baseline.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/inspect_eye_muzzle_baseline.py",
+          "sha256": "042321f612813912cd35ab82a997756eb6eeaf78b99b48667af0d29a26fa15d1",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/iterations/before_eye_muzzle_body_revision/baseline_dimensions.json",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/iterations/before_eye_muzzle_body_revision/baseline_dimensions.json",
+          "sha256": "c56a9928904f5609725563520573bc78e493c0a5222bf1402f59d64583a6c6da",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/iterations/before_eye_muzzle_body_revision/build_naiwa.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/iterations/before_eye_muzzle_body_revision/build_naiwa.py",
+          "sha256": "0454c105f6b8f0639d934df3c973a7b26fb967b057f61edcaa5b20e278566f73",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/iterations/before_eye_muzzle_body_revision/Naiwa_Character.blend",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/iterations/before_eye_muzzle_body_revision/Naiwa_Character.blend",
+          "sha256": "876ac1dd36d5fab881f2cce08d7ee546bc03cef740ae5ab4bbd1c0d107fd72f1",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/iterations/before_eye_muzzle_body_revision/README_使用说明.md",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/iterations/before_eye_muzzle_body_revision/README_使用说明.md",
+          "sha256": "56a3cb1b667cd469768f7fe60f3ecde564381cf8831a24fcfc27f96f4873ab54",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/lip_eye_sculpt.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/lip_eye_sculpt.py",
+          "sha256": "80165aff660bdd9d9e93fd7b467962b3370a594f75fdcae020bb55226210f86b",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/longitudinal_surface_sculpt.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/longitudinal_surface_sculpt.py",
+          "sha256": "57ef9d0ebf299d71bb4c237bbc909748318880ce88a04d92f88eb1e21a542003",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/make_delivery_comparisons.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/make_delivery_comparisons.py",
+          "sha256": "296ccca28dee7aef2a415e9a60f5c3ab583773d9440a73a5fd5367d1bb67de51",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/neck_blend_sculpt.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/neck_blend_sculpt.py",
+          "sha256": "94d0cb1496e68a637e913c9816f35581779c114ce7155c04ba9e218ecd9ebf93",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/neck_direction_sculpt.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/neck_direction_sculpt.py",
+          "sha256": "a56fb9e30d3f8bc7129cdd9a6e7cd48dfc1b1ca3477fe468fca5290c5dd24897",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/neck_extension_sculpt.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/neck_extension_sculpt.py",
+          "sha256": "f23e59a1be7ca6d8b9b79009a0f5c4383ce8e5aa3c4ad6016933155bd9678140",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/package_eye_muzzle_delivery.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/package_eye_muzzle_delivery.py",
+          "sha256": "33d3a2dad6d0933f48ca3efbfa905b714bb76e7b518930e1feabc8a446469411",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/render_character_delivery.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/render_character_delivery.py",
+          "sha256": "10f76bf206bbeda945ccf04b9e7ae22a8a43f7317e7c2892ccd4b3d65074289b",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/render_eye_muzzle_comparison.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/render_eye_muzzle_comparison.py",
+          "sha256": "8bc6dc59336440a47c9ad4cd05b0293409363b24dc0a754032a024207a9630f9",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/render_surface_diagnostics.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/render_surface_diagnostics.py",
+          "sha256": "be24b388e33bfb43f08751d9d6cafb8a0d335a220bd29571518ecc271c50ae79",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/revise_eye_muzzle_body.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/revise_eye_muzzle_body.py",
+          "sha256": "743db27edd68de062c78043686dafb1386316cca33fd21307efa1635aeb6bdf7",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/short_round_face_sculpt.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/short_round_face_sculpt.py",
+          "sha256": "bd3d2f023bab9438f03a332be2233355e368a7015930cfbb8ca1017307632d5e",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/validate_delivery_rebuild.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/validate_delivery_rebuild.py",
+          "sha256": "e5174471511b44dee1510bbddf2db8078a5662dd66a8873c53ba143e68729f7b",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/validate_eye_muzzle_delivery.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/validate_eye_muzzle_delivery.py",
+          "sha256": "22c7248be66d71317638a7432215f8d384b9cfdec16b4415d408e990b7e5247d",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/validate_eye_muzzle_revision.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/validate_eye_muzzle_revision.py",
+          "sha256": "14752b14955aff8a63aa7f3cd1e02121a6c7b5864022e82654678394e9842371",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/validate_fbx.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/validate_fbx.py",
+          "sha256": "4711bba5650f355083e20d5926472d764546580e29a879e5633f8254dd8b7f87",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/validate_head_revision.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/validate_head_revision.py",
+          "sha256": "e0ed3b018fdc260d4eab7fea069436dc8557f06455c1e8a0d53076899e106a9d",
+          "exact_match": true
+        },
+        {
+          "entry": "scripts/validate_lip_eye_refinement.py",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/scripts/validate_lip_eye_refinement.py",
+          "sha256": "26eab26fc2f80f2b11ca78c0d1906f835347366538831b93a7a5445f3613b8cf",
+          "exact_match": true
+        },
+        {
+          "entry": "stage_compaction.json",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/stage_compaction.json",
+          "sha256": "845f6780d2fd82d6955ea1d4f74c2c823c8c161434a7fedf0009dc6d97e46cb2",
+          "exact_match": true
+        },
+        {
+          "entry": "stage_compaction.log",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/stage_compaction.log",
+          "sha256": "1fe343e9b79c6ee46f9eb984c8f67786e7a6b3a822e960824da6f3b518af68d5",
+          "exact_match": true
+        },
+        {
+          "entry": "stage_face_raise.blend",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/stage_face_raise.blend",
+          "sha256": "08b2197f06f7ac934c3adf5e2e9357b99d7c09e298cd84bff66c814cfc04a7f1",
+          "exact_match": true
+        },
+        {
+          "entry": "stage_muzzle.blend",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/stage_muzzle.blend",
+          "sha256": "badf56b0f91d4efbdf9ea47e24152cd6ee38ab64423afb1d8fc9c862b6966aaf",
+          "exact_match": true
+        },
+        {
+          "entry": "SHA256SUMS.json",
+          "retained_file": "versions/20261005_eye_muzzle_body_delivery/SHA256SUMS.json",
+          "sha256": "96fc32180072ec8b344493fdb14fbf261526cd09a22300b09236e90b9e76383f",
+          "exact_match": true
+        }
+      ],
+      "differences": []
+    },
+    {
+      "archive": "deliveries/Naiwa_Head_Diagnostics_20261006.zip",
+      "entries": [
+        {
+          "entry": "diagnostics/DIAGNOSTIC_CHECKPOINT.md",
+          "retained_file": "diagnostics/20261005_head_geometry/DIAGNOSTIC_CHECKPOINT.md",
+          "sha256": "868bd4f04f3dc1d93686afd06f7bc7ed25d40320bb4324c83984cc955cfd9409",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/DIAGNOSTIC_REPORT.md",
+          "retained_file": "diagnostics/20261005_head_geometry/DIAGNOSTIC_REPORT.md",
+          "sha256": "04c1f14f81d8b2bafb3183c815804d08b5f64bdaea35885afb1cc4daceff608e",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/HEAD_GENERATION_PARAMETERS.md",
+          "retained_file": "diagnostics/20261005_head_geometry/HEAD_GENERATION_PARAMETERS.md",
+          "sha256": "ad1fdd1ed6a2dc691bc156ebaa6091ffa00d26e03be2991e79e6b3b63f03fa07",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/SHA256SUMS.json",
+          "retained_file": "diagnostics/20261005_head_geometry/SHA256SUMS.json",
+          "sha256": "0aacbb8f4dc33ebe2fab55aa9097a6e18da265c8485cc6bfa6f4062dda45c56e",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/diagnostic_validation.json",
+          "retained_file": "diagnostics/20261005_head_geometry/diagnostic_validation.json",
+          "sha256": "26cea444ad58aa831e4b78f68870efddf5aee1017aa2dc3a8ac5a7059b54f2f1",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/eye_gray_camera_protocol.json",
+          "retained_file": "diagnostics/20261005_head_geometry/eye_gray_camera_protocol.json",
+          "sha256": "4b2637682b8e36ff4a7eec1ecad033a187fdf7352b420a7252f0366a8d172a8a",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/eye_gray_curvature.png",
+          "retained_file": "diagnostics/20261005_head_geometry/eye_gray_curvature.png",
+          "sha256": "cf8430000611aef4f975653593ac70231a33f8de317452800cf91a4b57d3a03b",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/eye_gray_front_close.png",
+          "retained_file": "diagnostics/20261005_head_geometry/eye_gray_front_close.png",
+          "sha256": "2c83adfc784492ed0e62dbc16240fc6b7ba603f55ec0b66f790caa30655cb97f",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/eye_gray_oblique_close.png",
+          "retained_file": "diagnostics/20261005_head_geometry/eye_gray_oblique_close.png",
+          "sha256": "7c045570d21b7e7dd29bdb1b12ef79e7493f50cec109b179908a752e5e00a6d1",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/eye_gray_render.log",
+          "retained_file": "diagnostics/20261005_head_geometry/eye_gray_render.log",
+          "sha256": "135718946bfbbea5fb1c0cb8e2623bb96deff9b09c633671f9743258867fab82",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/eye_measurements.csv",
+          "retained_file": "diagnostics/20261005_head_geometry/eye_measurements.csv",
+          "sha256": "3eb03db7365c169278e48b5ed6642b43eeff210e1fcf60b51f7df0f440a7e0ad",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/eye_side_sections.png",
+          "retained_file": "diagnostics/20261005_head_geometry/eye_side_sections.png",
+          "sha256": "729aa47eb3e038cad3eefc02bfb192f2b65ea8e1600ecfbec5fed13cec370d16",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/head_generation_code.zip",
+          "retained_file": "diagnostics/20261005_head_geometry/head_generation_code.zip",
+          "sha256": "d4465de30c62651574249d6e1136a08c40da8f58ddc7dc98075e803a1578da84",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/head_generation_parameters.json",
+          "retained_file": "diagnostics/20261005_head_geometry/head_generation_parameters.json",
+          "sha256": "286c213dde121549b2d67b4554ba41caf3ee1cc2a6f156ecb94b5c7ee70b0ac3",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/head_generation_source_manifest.json",
+          "retained_file": "diagnostics/20261005_head_geometry/head_generation_source_manifest.json",
+          "sha256": "a8528ad3a0eb02896f44be29805a2fd2ae4d4a7751eb9e5c8d036bb93b4add59",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/head_geometry_baseline.json",
+          "retained_file": "diagnostics/20261005_head_geometry/head_geometry_baseline.json",
+          "sha256": "78209c2321c21abdf77caa22122c8702493ca4a070c03672332fff0d8c0f00c4",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/head_geometry_measurements.json",
+          "retained_file": "diagnostics/20261005_head_geometry/head_geometry_measurements.json",
+          "sha256": "a8d54addafbea4dc89d338000d901288a83d6507d029490d352b50c609cc29f8",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/head_geometry_sections.json",
+          "retained_file": "diagnostics/20261005_head_geometry/head_geometry_sections.json",
+          "sha256": "05a698977015dd6c53ab34fc86cb33bb56e9adf1a08a83011b4913aac76417a1",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/head_horizontal_sections.png",
+          "retained_file": "diagnostics/20261005_head_geometry/head_horizontal_sections.png",
+          "sha256": "ea691583056041892eab192732a916946da4bceef3f1b6e1ae98bae0537837bb",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/head_midline_section.png",
+          "retained_file": "diagnostics/20261005_head_geometry/head_midline_section.png",
+          "sha256": "bdc481db481b8bcb8facbd0c126fd3ef5201841613f6c37a4fe8eab29f73d079",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/head_section_measurements.csv",
+          "retained_file": "diagnostics/20261005_head_geometry/head_section_measurements.csv",
+          "sha256": "99e13de2c9a91f4c227f74a36a77534ac0bc9f2555ded2ebc4f065e24a7ac44f",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/independent_data_validation.json",
+          "retained_file": "diagnostics/20261005_head_geometry/independent_data_validation.json",
+          "sha256": "bfb103d5cf1473d7fa542ab16427a37c2ecbca3e5f283c35142b4d8882f8d898",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/index.html",
+          "retained_file": "diagnostics/20261005_head_geometry/index.html",
+          "sha256": "ec1f02e32909b4926939f93be7f01433def54089047447c72e1631e7b8fca7ea",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/measurement.log",
+          "retained_file": "diagnostics/20261005_head_geometry/measurement.log",
+          "sha256": "9d1c84454abc348f60dcec9d2f9591b21a11af0efc7348a3ab4dae0e9c43f0e3",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/plotted_section_dimensions.json",
+          "retained_file": "diagnostics/20261005_head_geometry/plotted_section_dimensions.json",
+          "sha256": "1b5bbbd8a20f14f2638152736eea54363dbee2139fda90d751ab8e6b4d84cc01",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/reference_alignment.json",
+          "retained_file": "diagnostics/20261005_head_geometry/reference_alignment.json",
+          "sha256": "3aec02b5a1ee526efa34672449cbf3d10372afbaf24368cf1f1ac0b415199271",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/reference_alignment.md",
+          "retained_file": "diagnostics/20261005_head_geometry/reference_alignment.md",
+          "sha256": "095524049d692c1e565471961483aa7deee9bf8f32c269f7364de87db2a9d407",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/reference_camera_candidates.png",
+          "retained_file": "diagnostics/20261005_head_geometry/reference_camera_candidates.png",
+          "sha256": "892fa9b92f63b2eabc6546be2a4dd813982250491ff896f95a3707440a11fb09",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/reference_camera_render.log",
+          "retained_file": "diagnostics/20261005_head_geometry/reference_camera_render.log",
+          "sha256": "c75097023bfb6d8a926e03a154312f22c462acaed56abe53855c0cc60bfb2381",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/reference_camera_yaw70_pitch00.png",
+          "retained_file": "diagnostics/20261005_head_geometry/reference_camera_yaw70_pitch00.png",
+          "sha256": "81ddc617680f42ee8592cf38f87ebc9914ca0088f860948043a05b345be20ca8",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/reference_camera_yaw80_pitch-5.png",
+          "retained_file": "diagnostics/20261005_head_geometry/reference_camera_yaw80_pitch-5.png",
+          "sha256": "d7a5fa5456357f875501ab9815294bd2d57f39d33eff2ad972c1a42d51eb2e50",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/reference_camera_yaw80_pitch00.png",
+          "retained_file": "diagnostics/20261005_head_geometry/reference_camera_yaw80_pitch00.png",
+          "sha256": "335aad1ab0588349bc56752c834f7c2c4e2e71833a99c6029f4e39534244412d",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/reference_camera_yaw85_pitch00.png",
+          "retained_file": "diagnostics/20261005_head_geometry/reference_camera_yaw85_pitch00.png",
+          "sha256": "5d74872b210ededff5d15033ecb17e542c77c25c5edda6119f31ba452c690279",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/reference_candidate_cameras.json",
+          "retained_file": "diagnostics/20261005_head_geometry/reference_candidate_cameras.json",
+          "sha256": "6c44c32e086009b2005ec26440ef951d7ed8322eea5d73d23cad8710bbf0857d",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/reference_head_comparison.png",
+          "retained_file": "diagnostics/20261005_head_geometry/reference_head_comparison.png",
+          "sha256": "d51513760d13005d7efea9a82c82cf2ad4eed5fffc032d3a1657a1c120208715",
+          "exact_match": true
+        },
+        {
+          "entry": "diagnostics/reference_pitch_refinement.log",
+          "retained_file": "diagnostics/20261005_head_geometry/reference_pitch_refinement.log",
+          "sha256": "b7b1bf8337f228c887d789fb4ee551d83878922be126cc7fef5ab0fcdaf866f1",
+          "exact_match": true
+        },
+        {
+          "entry": "model/Naiwa_Character.blend",
+          "retained_file": "versions/20261005_head_side_continuity/Naiwa_Character.blend",
+          "sha256": "a95a5c7efb25cb6f379897dd6ec4af98a201bc2619dc8caa2bb5b5de8ea3dfd5",
+          "exact_match": true
+        },
+        {
+          "entry": "model/Naiwa_Character.fbx",
+          "retained_file": "versions/20261005_head_side_continuity/Naiwa_Character.fbx",
+          "sha256": "997763e0da6a36a32c33a27dc03683be2f78d933926cf9f642a1ee9a871d8def",
+          "exact_match": true
+        },
+        {
+          "entry": "reference/PDF_fig1_3_original.jpg",
+          "retained_file": "references/20261005/pdf_page03_image03_IM60.jpg",
+          "sha256": "4ec47b76c34f5a0e2a670f7fe6a675d49bd0aaeb524a03d83add37e9f209074d",
+          "exact_match": true
+        }
+      ],
+      "differences": [],
+      "unique_metadata": {
+        "README_先看这里.md": "# 奶蛙头部诊断交付包\n\n2026-10-06。当前模型几何、尺寸和位置保持，没有追加造型修改。\n\n## 从这里打开\n\n- Blender工程：[model/Naiwa_Character.blend](model/Naiwa_Character.blend)\n- FBX：[model/Naiwa_Character.fbx](model/Naiwa_Character.fbx)\n- 浏览器图文总览：[diagnostics/index.html](diagnostics/index.html)\n- 中文诊断报告：[diagnostics/DIAGNOSTIC_REPORT.md](diagnostics/DIAGNOSTIC_REPORT.md)\n\n请先解压整个ZIP，再打开index.html。全部图片使用本地相对路径，无需网络。\n\n## 包内材料\n\n- diagnostics：眼球侧剖面、眼部灰模、头部正中侧剖面、4个水平截面、参考并排图及相机候选；测量CSV/JSON、相机协议、诊断报告和校验记录。\n- diagnostics/HEAD_GENERATION_PARAMETERS.md：头部、眼体及形变权重说明。\n- diagnostics/head_generation_parameters.json：完整控制截面、构造参数与当前形变系数。\n- diagnostics/head_generation_code.zip：原始生成脚本及本地依赖快照，保留原项目路径。\n- reference/PDF_fig1_3_original.jpg：PDF图1.3原始嵌入图，900×1130；没有拉伸。\n- model：当前侧面连续性版本的原生工程和FBX；MODEL_VERSION.json记录版本及校验值。\n- SHA256SUMS.json：包内各文件的SHA256校验值。\n\n## 主要测量\n\nD=0.117244812742工程单位，两眼水平中心距0.234625801793=2.00116147D。\n绿区最前点相对同XZ脸面的凸出约0.0569D，绿区最大局部凸出约0.1499D，整个眼冠最大局部凸出约0.2001D。\n黑瞳与绿色眼体共用连续网格，独立几何台阶为0。\n眼体代表法线厚度L/R=0.089451166256/0.087780646393，含埋入部分。\n参考近似观察角度为偏航80°、仰角−5°、滚转0°。完整测量定义、四个截面尺寸和无法同时对齐的部位见中文报告。\n\n## 使用说明\n\n工程默认实体视图可能不显示黑瞳颜色。进入材质预览或渲染视图可查看绿色眼体和黑瞳；灰模诊断图统一使用灰色材质。\n代码包用于核查生成来源。当前默认生成器依赖固定历史工程；如需精确重新生成，请使用原项目中保留的固定输入。此交付包仅附当前工程，不复制全部历史版本。\n\n独立数值复核104/104项通过，原blend和FBX校验保持一致。\n",
+        "SHA256SUMS.json": "{\n  \"README_先看这里.md\": \"6982ee56b7993fc5753fb5e7cbc60fb7d902ad1db62a38987a2b74fbc41cee14\",\n  \"diagnostics/DIAGNOSTIC_CHECKPOINT.md\": \"868bd4f04f3dc1d93686afd06f7bc7ed25d40320bb4324c83984cc955cfd9409\",\n  \"diagnostics/DIAGNOSTIC_REPORT.md\": \"04c1f14f81d8b2bafb3183c815804d08b5f64bdaea35885afb1cc4daceff608e\",\n  \"diagnostics/HEAD_GENERATION_PARAMETERS.md\": \"ad1fdd1ed6a2dc691bc156ebaa6091ffa00d26e03be2991e79e6b3b63f03fa07\",\n  \"diagnostics/SHA256SUMS.json\": \"0aacbb8f4dc33ebe2fab55aa9097a6e18da265c8485cc6bfa6f4062dda45c56e\",\n  \"diagnostics/diagnostic_validation.json\": \"26cea444ad58aa831e4b78f68870efddf5aee1017aa2dc3a8ac5a7059b54f2f1\",\n  \"diagnostics/eye_gray_camera_protocol.json\": \"4b2637682b8e36ff4a7eec1ecad033a187fdf7352b420a7252f0366a8d172a8a\",\n  \"diagnostics/eye_gray_curvature.png\": \"cf8430000611aef4f975653593ac70231a33f8de317452800cf91a4b57d3a03b\",\n  \"diagnostics/eye_gray_front_close.png\": \"2c83adfc784492ed0e62dbc16240fc6b7ba603f55ec0b66f790caa30655cb97f\",\n  \"diagnostics/eye_gray_oblique_close.png\": \"7c045570d21b7e7dd29bdb1b12ef79e7493f50cec109b179908a752e5e00a6d1\",\n  \"diagnostics/eye_gray_render.log\": \"135718946bfbbea5fb1c0cb8e2623bb96deff9b09c633671f9743258867fab82\",\n  \"diagnostics/eye_measurements.csv\": \"3eb03db7365c169278e48b5ed6642b43eeff210e1fcf60b51f7df0f440a7e0ad\",\n  \"diagnostics/eye_side_sections.png\": \"729aa47eb3e038cad3eefc02bfb192f2b65ea8e1600ecfbec5fed13cec370d16\",\n  \"diagnostics/head_generation_code.zip\": \"d4465de30c62651574249d6e1136a08c40da8f58ddc7dc98075e803a1578da84\",\n  \"diagnostics/head_generation_parameters.json\": \"286c213dde121549b2d67b4554ba41caf3ee1cc2a6f156ecb94b5c7ee70b0ac3\",\n  \"diagnostics/head_generation_source_manifest.json\": \"a8528ad3a0eb02896f44be29805a2fd2ae4d4a7751eb9e5c8d036bb93b4add59\",\n  \"diagnostics/head_geometry_baseline.json\": \"78209c2321c21abdf77caa22122c8702493ca4a070c03672332fff0d8c0f00c4\",\n  \"diagnostics/head_geometry_measurements.json\": \"a8d54addafbea4dc89d338000d901288a83d6507d029490d352b50c609cc29f8\",\n  \"diagnostics/head_geometry_sections.json\": \"05a698977015dd6c53ab34fc86cb33bb56e9adf1a08a83011b4913aac76417a1\",\n  \"diagnostics/head_horizontal_sections.png\": \"ea691583056041892eab192732a916946da4bceef3f1b6e1ae98bae0537837bb\",\n  \"diagnostics/head_midline_section.png\": \"bdc481db481b8bcb8facbd0c126fd3ef5201841613f6c37a4fe8eab29f73d079\",\n  \"diagnostics/head_section_measurements.csv\": \"99e13de2c9a91f4c227f74a36a77534ac0bc9f2555ded2ebc4f065e24a7ac44f\",\n  \"diagnostics/independent_data_validation.json\": \"bfb103d5cf1473d7fa542ab16427a37c2ecbca3e5f283c35142b4d8882f8d898\",\n  \"diagnostics/index.html\": \"ec1f02e32909b4926939f93be7f01433def54089047447c72e1631e7b8fca7ea\",\n  \"diagnostics/measurement.log\": \"9d1c84454abc348f60dcec9d2f9591b21a11af0efc7348a3ab4dae0e9c43f0e3\",\n  \"diagnostics/plotted_section_dimensions.json\": \"1b5bbbd8a20f14f2638152736eea54363dbee2139fda90d751ab8e6b4d84cc01\",\n  \"diagnostics/reference_alignment.json\": \"3aec02b5a1ee526efa34672449cbf3d10372afbaf24368cf1f1ac0b415199271\",\n  \"diagnostics/reference_alignment.md\": \"095524049d692c1e565471961483aa7deee9bf8f32c269f7364de87db2a9d407\",\n  \"diagnostics/reference_camera_candidates.png\": \"892fa9b92f63b2eabc6546be2a4dd813982250491ff896f95a3707440a11fb09\",\n  \"diagnostics/reference_camera_render.log\": \"c75097023bfb6d8a926e03a154312f22c462acaed56abe53855c0cc60bfb2381\",\n  \"diagnostics/reference_camera_yaw70_pitch00.png\": \"81ddc617680f42ee8592cf38f87ebc9914ca0088f860948043a05b345be20ca8\",\n  \"diagnostics/reference_camera_yaw80_pitch-5.png\": \"d7a5fa5456357f875501ab9815294bd2d57f39d33eff2ad972c1a42d51eb2e50\",\n  \"diagnostics/reference_camera_yaw80_pitch00.png\": \"335aad1ab0588349bc56752c834f7c2c4e2e71833a99c6029f4e39534244412d\",\n  \"diagnostics/reference_camera_yaw85_pitch00.png\": \"5d74872b210ededff5d15033ecb17e542c77c25c5edda6119f31ba452c690279\",\n  \"diagnostics/reference_candidate_cameras.json\": \"6c44c32e086009b2005ec26440ef951d7ed8322eea5d73d23cad8710bbf0857d\",\n  \"diagnostics/reference_head_comparison.png\": \"d51513760d13005d7efea9a82c82cf2ad4eed5fffc032d3a1657a1c120208715\",\n  \"diagnostics/reference_pitch_refinement.log\": \"b7b1bf8337f228c887d789fb4ee551d83878922be126cc7fef5ab0fcdaf866f1\",\n  \"model/MODEL_VERSION.json\": \"89341c38e0f1fa66c3f8a31256106ae2c3f2b5e3ddb057942eaeac76b59f8758\",\n  \"model/Naiwa_Character.blend\": \"a95a5c7efb25cb6f379897dd6ec4af98a201bc2619dc8caa2bb5b5de8ea3dfd5\",\n  \"model/Naiwa_Character.fbx\": \"997763e0da6a36a32c33a27dc03683be2f78d933926cf9f642a1ee9a871d8def\",\n  \"reference/PDF_fig1_3_original.jpg\": \"4ec47b76c34f5a0e2a670f7fe6a675d49bd0aaeb524a03d83add37e9f209074d\"\n}",
+        "model/MODEL_VERSION.json": "{\n  \"original_version\": \"versions/20261005_head_side_continuity\",\n  \"diagnostic_date\": \"2026-10-06\",\n  \"model_geometry_changed_this_round\": false,\n  \"files\": {\n    \"Naiwa_Character.blend\": \"a95a5c7efb25cb6f379897dd6ec4af98a201bc2619dc8caa2bb5b5de8ea3dfd5\",\n    \"Naiwa_Character.fbx\": \"997763e0da6a36a32c33a27dc03683be2f78d933926cf9f642a1ee9a871d8def\"\n  },\n  \"generator_reproduction_note\": \"Code snapshot is supplied in diagnostics/head_generation_code.zip. Full reproduction requires original pinned historical inputs listed in HEAD_GENERATION_PARAMETERS.md; historical blend files are not copied into this diagnostic package.\"\n}"
+      }
+    }
+  ],
+  "intentionally_preserved_exports": [
+    {
+      "path": "iterations/before_broad_neck_blending_revision/Naiwa_Character.fbx",
+      "reason": "Local historical validator reads this export"
+    },
+    {
+      "path": "iterations/before_continuous_head_torso_revision/Naiwa_Character.fbx",
+      "reason": "Local historical validator reads this export"
+    },
+    {
+      "path": "iterations/before_forward_neck_direction_revision/Naiwa_Character.fbx",
+      "reason": "Local historical validator reads this export"
+    },
+    {
+      "path": "iterations/before_raised_head_neck_revision/Naiwa_Character.fbx",
+      "reason": "Local historical validator reads this export"
+    },
+    {
+      "path": "iterations/before_smaller_head_depth_revision/Naiwa_Character.fbx",
+      "reason": "Local historical validator reads this export"
+    }
+  ],
+  "preservation_policy": "All native .blend files, current/version FBX, reference material, diagnostics, in-progress head/neck work, source and historical snapshots, validation logs and small source ZIPs remain unchanged.",
+  "status": "completed",
+  "verification": {
+    "protected_file_count": 1072,
+    "preserved_files_unchanged": true,
+    "all_targets_removed": true,
+    "delivery_checksums": [
+      {
+        "manifest": "versions/20261005_eye_muzzle_body_delivery/SHA256SUMS.json",
+        "errors": []
+      },
+      {
+        "manifest": "versions/20261005_head_reshape/SHA256SUMS.json",
+        "errors": []
+      },
+      {
+        "manifest": "versions/20261005_head_side_continuity/SHA256SUMS.json",
+        "errors": []
+      },
+      {
+        "manifest": "versions/20261006_spherical_eyes/SHA256SUMS.json",
+        "errors": []
+      },
+      {
+        "manifest": "diagnostics/20261005_head_geometry/SHA256SUMS.json",
+        "errors": []
+      }
+    ]
+  },
+  "removed_files": [
+    {
+      "path": "__pycache__/analyze_head_neck_reference.cpython-312.pyc",
+      "bytes": 25261,
+      "sha256": "fcf32db8813788262661accb09aa0ded22fae96ea201e2642511f4600cb4c302",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/connection_sculpt.cpython-313.pyc",
+      "bytes": 10419,
+      "sha256": "ac9abd1d063b68024d639db3764a9c7c749967cdb34caccab5642840fee5ecce",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/eye_muzzle_sculpt.cpython-313.pyc",
+      "bytes": 25293,
+      "sha256": "57f509b20caca31f5c260ec7ab24192a9093a7140f89c4dda2d6bf2c29aeeca8",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/eye_projection_measure.cpython-313.pyc",
+      "bytes": 7807,
+      "sha256": "789b0939c96b436df3c440575466b963a776c75282c004736c49abfe76d3c941",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/geometry_diagnostic_utils.cpython-313.pyc",
+      "bytes": 11176,
+      "sha256": "7e6cc1c4bcc6f894dd5c1aa68fc352dd30fab8b3b90cdcef7d42c4483c9a1327",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/head_neck_refinement_sculpt.cpython-312.pyc",
+      "bytes": 17310,
+      "sha256": "13cd8b420580b2dc776dd4b1d9a4153234e8b8d54014ece49250c8098bcbd374",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/head_neck_validation_utils.cpython-313.pyc",
+      "bytes": 14276,
+      "sha256": "d461ee5d8a4751b7b96a6b9d3dadbbc587ef58aa12c9a097d488c6a5608c5e11",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/head_reshape_sculpt.cpython-313.pyc",
+      "bytes": 11602,
+      "sha256": "a0baa179b75362bf1aeada8434ef4a67a6cae26580d4e15297707f3f2a949b70",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/head_side_continuity_sculpt.cpython-313.pyc",
+      "bytes": 10273,
+      "sha256": "b33e6bd61ea23f0cdd821384ddb5d45615d6b7df6ec7ccc5a28be456e9bd708b",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/head_volume_sculpt.cpython-313.pyc",
+      "bytes": 11123,
+      "sha256": "2ee835badea9b28706d8d77df0a7960b82cd5db1926741f7225b0c163bed18b4",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/longitudinal_surface_sculpt.cpython-313.pyc",
+      "bytes": 9521,
+      "sha256": "282e65b0daefcc7c3d0e193d9e3ce7f7184873245ef32f54023b9f48ccc541d6",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/make_head_neck_comparisons.cpython-312.pyc",
+      "bytes": 9392,
+      "sha256": "94abec96af6e4e6b9b5ba637f0931d442c8ce35dc62ea94d264b9635f6d0eabf",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/make_spherical_eye_comparisons.cpython-312.pyc",
+      "bytes": 15479,
+      "sha256": "98e0b92a25dbbc6e4a072b95b5c4c31cad5e8825d7ee4e0c9597eab3c42ca16f",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/neck_direction_sculpt.cpython-313.pyc",
+      "bytes": 16840,
+      "sha256": "e348d70ef8d6c8e83155a7e8688e0c0875d11a8866c42e1a49c927970ee67233",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/package_spherical_eye_delivery.cpython-312.pyc",
+      "bytes": 22492,
+      "sha256": "2668ce460b3af43ba873dc51d2591580f13e904333a44cc14fe1f539a4c65496",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/plot_head_neck_sections.cpython-312.pyc",
+      "bytes": 16894,
+      "sha256": "1b9e5fb68243441720e9e029a8987f3270bcddc90c0dad23dbfc6b63c7b1c0e7",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/render_head_neck_comparisons.cpython-312.pyc",
+      "bytes": 16412,
+      "sha256": "42d63b65851c16bf6dc6decd4db2f7ac20797342bbdbcbb6a1d455ec5a2aec61",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/render_head_reshape_comparison.cpython-313.pyc",
+      "bytes": 18796,
+      "sha256": "251983390e5b704cac60ba3b7804881996c019cbddf9fac7bc500067a63a869c",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/render_surface_diagnostics.cpython-313.pyc",
+      "bytes": 5753,
+      "sha256": "43f3b7222e68ee8c40e031d5fda6206bfbf815e98b85a1119b6d5e1be95946ec",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/revise_head_neck_refinement.cpython-312.pyc",
+      "bytes": 5943,
+      "sha256": "12310a4cc0c938190c3718c8dbb9354f8aa589960e77d63507f03eda13ec60c2",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/saved_delivery_metadata.cpython-313.pyc",
+      "bytes": 8014,
+      "sha256": "9f655ff1d61ee1720b0a33d1adddb191fdf7b260fa4c2221ba823209687b1913",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/short_round_face_sculpt.cpython-313.pyc",
+      "bytes": 13476,
+      "sha256": "b93094e37f5558e1d696d0d1b56783114b951d65b05a7cb227647a2461643e3e",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/spherical_eye_sculpt.cpython-313.pyc",
+      "bytes": 21867,
+      "sha256": "b8d7ba9484ee7d785f6ecdaad76c3611038578f52e1279c148d63a8f3a78d73e",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/spherical_reference_projection.cpython-313.pyc",
+      "bytes": 5906,
+      "sha256": "1eb23f9b4eeeb125dfc00e97c931f2c6f829f97fdf7b16c061b7cc896af823d4",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": "__pycache__/validate_lip_eye_refinement.cpython-313.pyc",
+      "bytes": 31740,
+      "sha256": "5a64b643ce9c22db37472b3f42b009edf2dc7be6ee6e651ce6878d9795984cef",
+      "category": "python_cache",
+      "evidence": "Compiled cache; original Python source retained"
+    },
+    {
+      "path": ".cleanup_export_check/export.log",
+      "bytes": 853,
+      "sha256": "a481ecb547ad31669455be87a83800242d48f448d4def8edcaec0e35ca24a787",
+      "category": "cleanup_export_test",
+      "evidence": "Temporary export/reimport test; final validation result recorded in cleanup report"
+    },
+    {
+      "path": ".cleanup_export_check/Naiwa_Character.fbx",
+      "bytes": 20282172,
+      "sha256": "964b14c8d952a934b11479449096cae878c038ec3b433a01975dcc5896dee01c",
+      "category": "cleanup_export_test",
+      "evidence": "Temporary export/reimport test; final validation result recorded in cleanup report"
+    },
+    {
+      "path": ".cleanup_export_check/reimport.log",
+      "bytes": 736,
+      "sha256": "45167862c0671bcf95eb7cd95fea8adfddfe93179abeb73811be9da510aa0ee2",
+      "category": "cleanup_export_test",
+      "evidence": "Temporary export/reimport test; final validation result recorded in cleanup report"
+    },
+    {
+      "path": "Naiwa_Character_Delivery_20261005.zip",
+      "bytes": 131295755,
+      "sha256": "5a350bbf7db7ca267b9979fdd6a2f9f58511c2a470c51e011d91d9f598242882",
+      "category": "duplicate_full_archive",
+      "evidence": "All archive members match the expanded delivery byte for byte"
+    },
+    {
+      "path": "deliveries/Naiwa_Head_Diagnostics_20261006.zip",
+      "bytes": 49381001,
+      "sha256": "36552ee89a98ce6d438b6926e3c26e5daa5421952e5c12a1653489c1a0556381",
+      "category": "duplicate_full_archive",
+      "evidence": "All content retained; three unique text metadata entries saved separately"
+    },
+    {
+      "path": "iterations/before_broad_face_arc_refinement/Naiwa_Character.fbx",
+      "bytes": 20297564,
+      "sha256": "aeeb1d171548ecc9b157eefe95f1f020748e43b343755b7c98e224b9dfffa2e3",
+      "category": "unused_historical_fbx",
+      "evidence": {
+        "native_source": "iterations/before_broad_face_arc_refinement/Naiwa_Character.blend",
+        "native_sha256": "e93db6b13858b031993c005d32fe7b42593766f01b62689ed5a5113686534c86",
+        "restore_script": "export_saved_fbx.py",
+        "reason": "Derived export in a before-version; no local FBX validator; all native meshes/rig/actions retained"
+      }
+    },
+    {
+      "path": "iterations/before_broad_face_belly_palm_revision/Naiwa_Character.fbx",
+      "bytes": 19831116,
+      "sha256": "a6b7279414e9f61eb2d6fab8c809b0666a4fd922d903fad28d36b44341d6d129",
+      "category": "unused_historical_fbx",
+      "evidence": {
+        "native_source": "iterations/before_broad_face_belly_palm_revision/Naiwa_Character.blend",
+        "native_sha256": "e1ec89a595b97d33e9d52d39fb7db2571a3fa82343109ccafd6ecfd62b5a5999",
+        "restore_script": "export_saved_fbx.py",
+        "reason": "Derived export in a before-version; no local FBX validator; all native meshes/rig/actions retained"
+      }
+    },
+    {
+      "path": "iterations/before_broad_neck_blending_revision/neck_draft_side.png",
+      "bytes": 799676,
+      "sha256": "e576a52e419b91e99adec8085afa42f4f6ea114341069b776c3cfdb82c81e0df",
+      "category": "obsolete_draft_preview",
+      "evidence": "Old neck draft; historical native project and standard previews retained"
+    },
+    {
+      "path": "iterations/before_broad_neck_blending_revision/neck_draft_three_quarter.png",
+      "bytes": 835309,
+      "sha256": "98ba36dc9cd3f2a64882b1d518eff291753868ce9944ff7e2e64f5a1ad473003",
+      "category": "obsolete_draft_preview",
+      "evidence": "Old neck draft; historical native project and standard previews retained"
+    },
+    {
+      "path": "iterations/before_compact_round_head_revision/Naiwa_Character.fbx",
+      "bytes": 20292060,
+      "sha256": "bde1a9a34b3d3a28ab5647942ffc2ea7acd2d9a5649e398c188249aa3b67480a",
+      "category": "unused_historical_fbx",
+      "evidence": {
+        "native_source": "iterations/before_compact_round_head_revision/Naiwa_Character.blend",
+        "native_sha256": "d454e73d06a494c1b282528cdf816740a3bf9e6ddb5eda3d2f1a33351d63fd89",
+        "restore_script": "export_saved_fbx.py",
+        "reason": "Derived export in a before-version; no local FBX validator; all native meshes/rig/actions retained"
+      }
+    },
+    {
+      "path": "iterations/before_continuous_front_face/Naiwa_Character.fbx",
+      "bytes": 20282316,
+      "sha256": "8e8feeadf3180225a7d3a116773593c7075295670fbe424ebf73832bd5c6f16e",
+      "category": "unused_historical_fbx",
+      "evidence": {
+        "native_source": "iterations/before_continuous_front_face/Naiwa_Character.blend",
+        "native_sha256": "ce360d5fbc4428f0d8019a11016c6f87d53d40f20b1b58cd590aaf9d61a311a0",
+        "restore_script": "export_saved_fbx.py",
+        "reason": "Derived export in a before-version; no local FBX validator; all native meshes/rig/actions retained"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/Naiwa_Character.fbx",
+      "bytes": 20282124,
+      "sha256": "81e7394fc3e801fdba2e92bccdeded5d05b31a92856d36cc5503ccd18f8fd978",
+      "category": "unused_historical_fbx",
+      "evidence": {
+        "native_source": "iterations/before_eye_muzzle_body_revision/Naiwa_Character.blend",
+        "native_sha256": "876ac1dd36d5fab881f2cce08d7ee546bc03cef740ae5ab4bbd1c0d107fd72f1",
+        "restore_script": "export_saved_fbx.py",
+        "reason": "Derived export in a before-version; no local FBX validator; all native meshes/rig/actions retained"
+      }
+    },
+    {
+      "path": "iterations/before_forward_foot_revision/Naiwa_Character.fbx",
+      "bytes": 22378684,
+      "sha256": "854f6d462e0020d66e516cb3b6ce6a870352ad2ac43a4b3e755ef6f18ab8102c",
+      "category": "unused_historical_fbx",
+      "evidence": {
+        "native_source": "iterations/before_forward_foot_revision/Naiwa_Character.blend",
+        "native_sha256": "b6090f5a44f29d0c37afeacbddf74c10ea8f960510016bfd1750f04dfef83ed0",
+        "restore_script": "export_saved_fbx.py",
+        "reason": "Derived export in a before-version; no local FBX validator; all native meshes/rig/actions retained"
+      }
+    },
+    {
+      "path": "iterations/before_forward_neck_direction_revision/neck_blend_draft_front.png",
+      "bytes": 836375,
+      "sha256": "49ed771e961834d1d127b13155a42a0eee89101388fe3ec6f16579af80e1ecca",
+      "category": "obsolete_draft_preview",
+      "evidence": "Old neck draft; historical native project and standard previews retained"
+    },
+    {
+      "path": "iterations/before_forward_neck_direction_revision/neck_blend_draft_side.png",
+      "bytes": 797371,
+      "sha256": "a4be4ea9e8c6ea7bbafb4f562d0b4873c0ec69d66d902fc1355eb83f35cd6f3d",
+      "category": "obsolete_draft_preview",
+      "evidence": "Old neck draft; historical native project and standard previews retained"
+    },
+    {
+      "path": "iterations/before_forward_neck_direction_revision/neck_blend_draft_three_quarter.png",
+      "bytes": 834690,
+      "sha256": "a55270886676b50272211ba780124986d569e5e66657b7625abfb8a2b06e50fd",
+      "category": "obsolete_draft_preview",
+      "evidence": "Old neck draft; historical native project and standard previews retained"
+    },
+    {
+      "path": "iterations/before_forward_neck_direction_revision/neck_draft_side.png",
+      "bytes": 799676,
+      "sha256": "e576a52e419b91e99adec8085afa42f4f6ea114341069b776c3cfdb82c81e0df",
+      "category": "obsolete_draft_preview",
+      "evidence": "Old neck draft; historical native project and standard previews retained"
+    },
+    {
+      "path": "iterations/before_forward_neck_direction_revision/neck_draft_three_quarter.png",
+      "bytes": 835309,
+      "sha256": "98ba36dc9cd3f2a64882b1d518eff291753868ce9944ff7e2e64f5a1ad473003",
+      "category": "obsolete_draft_preview",
+      "evidence": "Old neck draft; historical native project and standard previews retained"
+    },
+    {
+      "path": "iterations/before_integrated_face_chest_eyes_revision/Naiwa_Character.fbx",
+      "bytes": 19532108,
+      "sha256": "fa14dcdba36fced5dffc7d4a2c5859583c8f269135cee424c4c4995b2ebf345f",
+      "category": "unused_historical_fbx",
+      "evidence": {
+        "native_source": "iterations/before_integrated_face_chest_eyes_revision/Naiwa_Character.blend",
+        "native_sha256": "f576bff6f0168e9c585463124d457fc13464efb8c1edae1f772d2af2490a4dea",
+        "restore_script": "export_saved_fbx.py",
+        "reason": "Derived export in a before-version; no local FBX validator; all native meshes/rig/actions retained"
+      }
+    },
+    {
+      "path": "iterations/before_lifted_torso_small_head_revision/Naiwa_Character.fbx",
+      "bytes": 19950044,
+      "sha256": "b16e9ba56f850bccfa7b59ea189a3614ea83b93987888072a739966b32ea7bb8",
+      "category": "unused_historical_fbx",
+      "evidence": {
+        "native_source": "iterations/before_lifted_torso_small_head_revision/Naiwa_Character.blend",
+        "native_sha256": "68983d37845f058d68ad41b45bdaa31a00ea89a7eac4b157ec8d7171fe724efe",
+        "restore_script": "export_saved_fbx.py",
+        "reason": "Derived export in a before-version; no local FBX validator; all native meshes/rig/actions retained"
+      }
+    },
+    {
+      "path": "iterations/before_lip_eye_refinement/Naiwa_Character.fbx",
+      "bytes": 20296732,
+      "sha256": "df81b6892561bcb39ca04386a21d85a8daaa9a337353221db7974e04f97ac20e",
+      "category": "unused_historical_fbx",
+      "evidence": {
+        "native_source": "iterations/before_lip_eye_refinement/Naiwa_Character.blend",
+        "native_sha256": "ef9c3b10a253f9f2d1c0231655552a4c7c4887817df9e07c9b0b7f5dfad7a96c",
+        "restore_script": "export_saved_fbx.py",
+        "reason": "Derived export in a before-version; no local FBX validator; all native meshes/rig/actions retained"
+      }
+    },
+    {
+      "path": "iterations/before_lower_belly_cross_sections_revision/Naiwa_Character.fbx",
+      "bytes": 19524284,
+      "sha256": "9e7d37129aacb769448458dba920e1a8c7267eb7d94dc40c36a23f0aee6cfeac",
+      "category": "unused_historical_fbx",
+      "evidence": {
+        "native_source": "iterations/before_lower_belly_cross_sections_revision/Naiwa_Character.blend",
+        "native_sha256": "b8c0d3e9d7af017a055c79d0f3502a509ce9602b6cc9fa072260367391d3b764",
+        "restore_script": "export_saved_fbx.py",
+        "reason": "Derived export in a before-version; no local FBX validator; all native meshes/rig/actions retained"
+      }
+    },
+    {
+      "path": "iterations/before_short_face_revision/Naiwa_Character.fbx",
+      "bytes": 19798700,
+      "sha256": "5c894f3dd1a6684e669c33ba323a40cee57b616f4de36d63f14819ec1bf20cb8",
+      "category": "unused_historical_fbx",
+      "evidence": {
+        "native_source": "iterations/before_short_face_revision/Naiwa_Character.blend",
+        "native_sha256": "b615a67377b532086c574ad1fdc46124b2a26d1812267fe24ff4598d3e7a32a0",
+        "restore_script": "export_saved_fbx.py",
+        "reason": "Derived export in a before-version; no local FBX validator; all native meshes/rig/actions retained"
+      }
+    },
+    {
+      "path": "iterations/before_short_round_face_revision/Naiwa_Character.fbx",
+      "bytes": 20291852,
+      "sha256": "39d68c58937ea8012f1a61367dd5ece71f96138d340667f9bac74cf4b2613f3f",
+      "category": "unused_historical_fbx",
+      "evidence": {
+        "native_source": "iterations/before_short_round_face_revision/Naiwa_Character.blend",
+        "native_sha256": "8292514a94b59ef3b14ccce02c26264eb4a4c40c9988af021337411061cdae30",
+        "restore_script": "export_saved_fbx.py",
+        "reason": "Derived export in a before-version; no local FBX validator; all native meshes/rig/actions retained"
+      }
+    },
+    {
+      "path": "iterations/repository_before_longitudinal_surface_revision/Naiwa_Character.fbx",
+      "bytes": 20295292,
+      "sha256": "db767dacf4c91b15248f992fee0ed4b3c299e24be3655b5542df2e02ace956a7",
+      "category": "unused_historical_fbx",
+      "evidence": {
+        "native_source": "iterations/repository_before_longitudinal_surface_revision/Naiwa_Character.blend",
+        "native_sha256": "8fbf4664218b80ecf5849049e0e528e64a3820c1d7108f8162b4b75657888a9d",
+        "restore_script": "export_saved_fbx.py",
+        "reason": "Derived export in a before-version; no local FBX validator; all native meshes/rig/actions retained"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_face_close.png",
+      "bytes": 594196,
+      "sha256": "bb44b54cd53b4f4dbd55f6bf95e176b86c27085dd35862a9c887d9d341991843",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_face_close.png",
+        "sha256": "bb44b54cd53b4f4dbd55f6bf95e176b86c27085dd35862a9c887d9d341991843"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_face_side_close.png",
+      "bytes": 641760,
+      "sha256": "27181a3ca057fd65def51ee7b702ee3160187e475b68dd7a65f35219dd8a1d99",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_face_side_close.png",
+        "sha256": "27181a3ca057fd65def51ee7b702ee3160187e475b68dd7a65f35219dd8a1d99"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_face_three_quarter_close.png",
+      "bytes": 614674,
+      "sha256": "097de0e5fc8ef27f069ce63793f15e657cbceb233f080948b27d26a6d88e16d0",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_face_three_quarter_close.png",
+        "sha256": "097de0e5fc8ef27f069ce63793f15e657cbceb233f080948b27d26a6d88e16d0"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_foot_close.png",
+      "bytes": 1043618,
+      "sha256": "c3043b3583fdb2659c1fafa04ecbdf22a29a31bd8955a0b58cad76366cd2cc68",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_foot_close.png",
+        "sha256": "c3043b3583fdb2659c1fafa04ecbdf22a29a31bd8955a0b58cad76366cd2cc68"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_foot_side_close.png",
+      "bytes": 596082,
+      "sha256": "184113d9e80b408b6df1c6142250f8277b3e93a5fd6d69b46174d01e401e999e",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_foot_side_close.png",
+        "sha256": "184113d9e80b408b6df1c6142250f8277b3e93a5fd6d69b46174d01e401e999e"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_front.png",
+      "bytes": 642141,
+      "sha256": "a77a9be75d5b52a8e7505d6e4c49d2db8a7d31ce3743e111bbf0d7003d9ffb41",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_front.png",
+        "sha256": "a77a9be75d5b52a8e7505d6e4c49d2db8a7d31ce3743e111bbf0d7003d9ffb41"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_hand_close.png",
+      "bytes": 695804,
+      "sha256": "46aa9b09e2a75ebf27b5374dfb6201e028438a6089cb6916e74f568c3702e2ee",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_hand_close.png",
+        "sha256": "46aa9b09e2a75ebf27b5374dfb6201e028438a6089cb6916e74f568c3702e2ee"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_neck_front_close.png",
+      "bytes": 674070,
+      "sha256": "69b4bc8a0c5b94867b5224e3e910d6b678cf0a860aec0280739cdfbb764c8e42",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_neck_front_close.png",
+        "sha256": "69b4bc8a0c5b94867b5224e3e910d6b678cf0a860aec0280739cdfbb764c8e42"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_neck_gray_three_quarter.png",
+      "bytes": 506280,
+      "sha256": "2112bf154542def1a3cfaf063d5dada652f0a10190afa82a6fa131b709e6a42e",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_neck_gray_three_quarter.png",
+        "sha256": "2112bf154542def1a3cfaf063d5dada652f0a10190afa82a6fa131b709e6a42e"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_neck_side_close.png",
+      "bytes": 717802,
+      "sha256": "d1d048796193c7de73067c4bfdf74cfec40eb8b0f9d6600baf35cb4461bbe1f7",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_neck_side_close.png",
+        "sha256": "d1d048796193c7de73067c4bfdf74cfec40eb8b0f9d6600baf35cb4461bbe1f7"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_review_front.png",
+      "bytes": 761167,
+      "sha256": "13444e44e9a3745a454dc756e78c1b06a6ebf53e6486910458afe5a94372476a",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_review_front.png",
+        "sha256": "13444e44e9a3745a454dc756e78c1b06a6ebf53e6486910458afe5a94372476a"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_review_side.png",
+      "bytes": 790365,
+      "sha256": "7428c181dc50192e6db34cf84bb61ed3193d6511ca21da32c32e9bf35082ea3b",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_review_side.png",
+        "sha256": "7428c181dc50192e6db34cf84bb61ed3193d6511ca21da32c32e9bf35082ea3b"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_review_three_quarter.png",
+      "bytes": 774008,
+      "sha256": "d21b304434c1f4cd56d0638c554b439d56048cb81367fce1150e182c6ca3d8da",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_review_three_quarter.png",
+        "sha256": "d21b304434c1f4cd56d0638c554b439d56048cb81367fce1150e182c6ca3d8da"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_side.png",
+      "bytes": 592224,
+      "sha256": "749831f9739a820ae68ac3ef4f5cba3df4b864aec43b315b29357108b1dd4645",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_side.png",
+        "sha256": "749831f9739a820ae68ac3ef4f5cba3df4b864aec43b315b29357108b1dd4645"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_silhouette_front.png",
+      "bytes": 543611,
+      "sha256": "9a7ea420c08dbbd784fdb0216e6bcb577b40355ffd217813bc74888d04cf5e62",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_silhouette_front.png",
+        "sha256": "9a7ea420c08dbbd784fdb0216e6bcb577b40355ffd217813bc74888d04cf5e62"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_silhouette_side.png",
+      "bytes": 499566,
+      "sha256": "82f5627168c6d121855a0e29dc3a88d0e0e71a1a8ef25155ed9dfc6b608772fd",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_silhouette_side.png",
+        "sha256": "82f5627168c6d121855a0e29dc3a88d0e0e71a1a8ef25155ed9dfc6b608772fd"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_surface_check_side.png",
+      "bytes": 587688,
+      "sha256": "5a4334eba692c463eb0e026a47a0baa3473363a7ef4b07b17340c411f5bd90b5",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_surface_check_side.png",
+        "sha256": "5a4334eba692c463eb0e026a47a0baa3473363a7ef4b07b17340c411f5bd90b5"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_surface_gray_front.png",
+      "bytes": 644031,
+      "sha256": "bbafe9d95292f367a0ceb8b0f77da53441666af1469f5c7c733556b1d9c8ed3a",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_surface_gray_front.png",
+        "sha256": "bbafe9d95292f367a0ceb8b0f77da53441666af1469f5c7c733556b1d9c8ed3a"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_surface_gray_side.png",
+      "bytes": 603557,
+      "sha256": "14d1b685a103adf46c401ebbc1646e0daf0c24a6c54559c7e53fefb8e9e3119b",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_surface_gray_side.png",
+        "sha256": "14d1b685a103adf46c401ebbc1646e0daf0c24a6c54559c7e53fefb8e9e3119b"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_surface_gray_three_quarter.png",
+      "bytes": 631200,
+      "sha256": "80fbafd76120f9ed215c1b128eaefd42de32986699e32aa198c64c3e39f3ff34",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_surface_gray_three_quarter.png",
+        "sha256": "80fbafd76120f9ed215c1b128eaefd42de32986699e32aa198c64c3e39f3ff34"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_three_quarter.png",
+      "bytes": 629526,
+      "sha256": "ecc5706f0e0a7c86daba92e4ce0f7f771c26734fe60864a4defc96468b535c6e",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_three_quarter.png",
+        "sha256": "ecc5706f0e0a7c86daba92e4ce0f7f771c26734fe60864a4defc96468b535c6e"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_torso_silhouette_front.png",
+      "bytes": 511827,
+      "sha256": "60a3a40d4e374cb4f245bc7937a0a928216b0b3c094c62e4707ad64fa84e0f4d",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_torso_silhouette_front.png",
+        "sha256": "60a3a40d4e374cb4f245bc7937a0a928216b0b3c094c62e4707ad64fa84e0f4d"
+      }
+    },
+    {
+      "path": "iterations/before_eye_muzzle_body_revision/naiwa_torso_silhouette_side.png",
+      "bytes": 489307,
+      "sha256": "8ea3abe5c9f9dfc95f1447caff90ec4f25679adb2fe29cc8b48856ee2f0daa4f",
+      "category": "duplicate_preview",
+      "evidence": {
+        "exact_retained_copy": "naiwa_torso_silhouette_side.png",
+        "sha256": "8ea3abe5c9f9dfc95f1447caff90ec4f25679adb2fe29cc8b48856ee2f0daa4f"
+      }
+    }
+  ]
+}

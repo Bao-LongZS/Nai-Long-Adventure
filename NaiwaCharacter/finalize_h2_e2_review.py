@@ -1,0 +1,106 @@
+"""Record reviewed, hash-closed H2/E2 acceptance and readable delivery notes."""
+import hashlib
+import json
+from pathlib import Path
+
+ROOT=Path(__file__).resolve().parent
+OUT=ROOT/'versions/20261007_H2_E2_overall_refinement'
+read=lambda p: json.loads(p.read_text(encoding='utf-8-sig'))
+sha=lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+write=lambda p,v: p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+
+def main():
+    visual={'review_date':'2026-10-08','numeric_and_visual_acceptance_separate':True,
+        'automatic_acceptance_from_curvature':False,'models':{},
+        'reference_exact_match_claimed':False,'residuals_disclosed':True}
+    for label in ('H2','E2'):
+        folder=OUT/f'candidate_{label}'
+        native=folder/'Naiwa_Character.blend'
+        review=read(folder/'final_visual_review.json')
+        validation=read(folder/'validation_report.json')
+        fbx=read(folder/'fbx_validation.json')
+        rebuild=read(folder/'rebuild_validation.json')
+        expected=sha(native)
+        assert review['passed'] and review['candidate_sha256']==expected
+        assert validation['passed'] and validation['candidate_sha256']==expected
+        assert fbx['status']=='passed' and fbx['source_blend_sha256']==expected
+        assert fbx['fbx_sha256']==sha(folder/'Naiwa_Character.fbx')
+        assert rebuild['independent_validation']=='passed' and rebuild['target_sha256']==expected
+        assert rebuild['rebuild_sha256']==sha(Path(rebuild['rebuild']))
+        visual['models'][label]={'passed':True,'candidate_sha256':expected,
+            'review_report':f'candidate_{label}/final_visual_review.json',
+            'actual_manual_review':review,'independent_native_validation':'passed',
+            'FBX_reimport':'passed','independent_rebuild':'passed'}
+    write(OUT/'visual_acceptance.json',visual)
+    h2=read(OUT/'candidate_H2/validation_report.json')
+    e2=read(OUT/'candidate_E2/validation_report.json')
+    reference=read(OUT/'reference_comparison/overall_reference_review.json')
+    model=h2['objects']['Naiwa unified golden body']
+    rows=[]
+    for side in ('L','R'):
+        eye=e2['eyes'][side]
+        rows.append(f"| {side} | {eye['actual_visible_D']:.9f} | {eye['actual_frontal_metrics']['aperture']['axis_ratio']:.6f} | {eye['visible_center_displacement_from_H2']:.8f} | {eye['actual_pupil_ratio']:.6f} |")
+    near=e2['multi_view_actual_triangle_measurements']['reference50']
+    offset=near['eyes']['R']['pupil_offset_registered_reference_pixels']
+    text=f'''# 奶蛙 R1 → H2 → E2 整体修正交付
+
+2026-10-08：H2 与 E2 的实际曲面、多视图、原生资产/动作、FBX 重导入及独立复建均通过。推荐 E2；H2 保留为独立形体阶段。原固定 R1 和全部历史工程保留。
+
+## 推荐文件
+
+- [E2 原生工程](candidate_E2/Naiwa_Character.blend) / [E2 FBX](candidate_E2/Naiwa_Character.fbx)：头颈肩整体修正加眼部校正。
+- [H2 原生工程](candidate_H2/Naiwa_Character.blend) / [H2 FBX](candidate_H2/Naiwa_Character.fbx)：保留原球眼的形体阶段。
+- [三版本图文总览](index.html) / [推荐和哈希](selection.json) / [逐文件校验](file_manifest.json)。
+
+固定 R1 SHA256：`ea12e9af2c564527d0c473cd31b28974339fcceb15b666502a33f0ffa057bc24`。
+H2 SHA256：`{visual['models']['H2']['candidate_sha256']}`。
+E2 SHA256：`{visual['models']['E2']['candidate_sha256']}`。
+依据见 [固定指令](修改指令_固定输入.md) / [固定输入](input_manifest.json)。
+
+## 修改与独立验收
+
+H2 采用 O 的联合 XYZ 目标：前侧将嘴下转角分布展开，保留自然前颈凹弧；后侧用同一宽缓曲线连至 Z2.61，消除后上壳折肩。允许中央下颌外围低幅填形；真实嘴部接触、冠顶最高点、H2 球眼、骨架和动作保持。解除旧全体 Z 锁、三条水平端点锁和过宽眼安装皮肤锁，保留拓扑、UV、材质及有效权重。此前 N 的嘴下长直段接急弯未通过，最终采用记录在 H2 的形体审核中。
+
+主体相对 R1 最大总位移 {model['maximum_total_displacement']:.8f}，最大 X {model['maximum_absolute_X_displacement']:.8f}、Z {model['maximum_absolute_Z_displacement']:.8f}；真实横截面总宽最大变化 {100*h2['actual_section_widths_raw']['maximum_fraction_change']:.4f}%。原定上限分别为0.035、0.008、0.010及5%，未使用放宽版本。固定特征坐标和远端肢体精确保持。
+
+实际 Raw/Idle 全段纵剖面覆盖 X=0、±0.04、±0.08、±0.12、±0.18，另测左右外轮廓和16条横截面。中央嘴下转角的80%弧宽由 N 的0.0765展开至0.091，原0.0555长直段不再存在；中央曲率峰29.30仍略高于 R1 的27.49。采用依据是整体弧线和多视图改善，不能仅据单峰值判断。[实际曲面数据](diagnostics/overall_surface_diagnostics.json) / [弧长 CSV](diagnostics/actual_arc_samples.csv)。
+
+E2 从上述固定 H2 独立生成。使用完整真实球面、五阶接触圈及阻尼外延；半径倍数1.063，孔形目标轴比1.10，过渡宽度0.065。安装基于 H2 实际孔心，球心 XZ 按孔心向内0.015、向下0.014定位，再拟合 Y 埋深。黑瞳局部轴左右镜像外展20°、上抬10°。参数和实际球心/半径见 [构建报告](candidate_E2/e2_build_report.json)。黑绿颜色写入真实球面 EyeColor，实体高光与球面接触，FBX可用。
+
+| 眼 | 正面可见等面积直径 | 实际孔轴比 | 相对H2孔心XZ位移 | 黑瞳直径比 |
+| --- | ---: | ---: | ---: | ---: |
+{chr(10).join(rows)}
+
+E2 局部眼圈皮肤相对 H2 最大 Y 位移 {e2['skin']['maximum_total_displacement']:.8f}；皮肤 X/Z、作用区之外的 H2 曲面、拓扑、UV、颜色和权重保持。该值属于独立眼部阶段，不混同 H2 的头颈位移预算。眼球保持闭合真球，原生与 Idle 求值及三动作检查无新增自穿插或眼体脱离。
+
+每个版本提供同条件33张标准图：全身/头部0°、45°、90°彩色、灰模、主体ID，以及真实条纹反射、双方向掠射、固定参考和补充机位。另有每个版本 Walk9、Laugh7、Jump6 的45°/90°六动作图。原相机、灯光、曝光与参考注册保持；数值检查和人工形体结论分别记录在 [视觉审核](visual_acceptance.json) 及各候选 `validation_report.json`。
+
+两份 FBX 均以步长0.25、简化0导出并实际重导入；真实三角表面、全部有效权重、EyeColor、10骨和4动作通过。独立复建从固定 R1 重新生成 H2，再由新 H2 生成 E2；分别重开原生工程，几何、求值、权重、UV、材质、骨架及动作关系精确一致。报告见各候选 `fbx_validation.json` / `rebuild_validation.json`。独立工程保留在 `rebuild_20261008_final`。
+
+## 保留的差异
+
+固定参考前/后颈平均误差由 R1 的21.613/10.031px改善至 H2/E2 的18.182/7.561px，前颈仍未达到约16px软目标。参考相机尚未唯一确定，未改变注册来压低误差。[固定参考诊断](reference_comparison/overall_reference_review.json)。
+
+E2 固定50°远/近可见眼径比约 {near['far_near_visible_D_ratio']:.4f}，仍高于参考中约0.35的遮挡片段。近眼黑瞳注册偏移约({offset[0]:.3f}, {offset[1]:.3f})px，参考约(-5.6,+2.6)px。正面、斜侧自然性优先，未把该参考片段作为硬缩眼目标。
+
+强反射中的细锯齿、真实嘴部接触细线和自然凸凹条纹回转仍可见。E2 在掠射下有比 H2 更明显的宽缓眼窝凹弧、眼上浅暗斑和眼周条纹回转；正常彩色/灰模及双方向掠射未观察到新增锐利窄眼眶或独立鼻梁柱。此次通过表示本轮整体形体与眼部目标通过，不表示完全无微纹或完全匹配参考。
+
+## 复建与资料
+
+在项目根目录运行：
+
+```powershell
+& 'NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/rebuild_command.ps1' -Output 'NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/rebuild_new'
+```
+
+输出必须为新目录。脚本读取保存的实际参数，顺序复建、独立原生比对及FBX检查；可用 `-Blender` 指定相同版本的 Blender（本次5.2.2 LTS）。
+
+源码与本地导入闭包在 `source_scripts.zip`，固定依赖在 `input_dependency_manifest.json`；分析 Python 需要 NumPy 与 Pillow。原 PDF 图1.3为主要参考，图6.2/6.5交叉检查，参考提取图随包保留。早期候选与诊断仍在 `trials_H2` / `trials_E2`，不作为推荐；生日视频与游戏资产继续独立保存。
+'''
+    (OUT/'README_交付说明.md').write_text(text,encoding='utf-8')
+    provenance=read(OUT/'candidate_H2/promotion_provenance.json')
+    provenance['complete_visual_FBX_rebuild_acceptance']='passed'
+    write(OUT/'candidate_H2/promotion_provenance.json',provenance)
+    print('H2_E2_REVIEW_AND_NOTES_FINALIZED')
+
+if __name__=='__main__':main()

@@ -1,0 +1,40 @@
+00:00.469  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\iterations\before_continuous_front_face\Naiwa_Character.blend"
+00:04.484  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_front.png'
+00:04.781  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_side.png'
+00:05.062  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_three_quarter.png'
+00:05.312  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_surface_check_side.png'
+00:05.562  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_silhouette_front.png'
+00:05.828  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_silhouette_side.png'
+00:06.031  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_torso_silhouette_front.png'
+00:06.234  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_torso_silhouette_side.png'
+00:06.547  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_face_close.png'
+00:06.859  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_face_side_close.png'
+00:07.156  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_face_three_quarter_close.png'
+00:07.453  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_hand_close.png'
+00:07.797  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_foot_close.png'
+00:08.094  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_foot_side_close.png'
+00:08.406  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_neck_front_close.png'
+00:08.734  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_neck_side_close.png'
+00:09.000  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_neck_gray_three_quarter.png'
+00:09.312  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_surface_gray_side.png'
+00:09.641  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_surface_gray_front.png'
+00:09.922  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_surface_gray_three_quarter.png'
+00:10.250  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_review_side.png'
+00:10.578  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_review_front.png'
+00:10.906  render           | Saved: 'C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\naiwa_review_three_quarter.png'
+CONTINUOUS_FRONT_FACE_SCULPT_OK {'modified_vertices': 4776, 'maximum_displacement': 0.00867307186126709, 'lower_z': 2.2, 'upper_z': 2.46, 'mouth_peak_z': 2.365, 'local_lip_bump_removed': True, 'all_x_z_exact': True, 'eyes': {'L': {'all_x_z_exact': True, 'maximum_y_reattachment': 0.008231520652770996, 'round_frontal_outline_preserved': True, 'color_and_topology_preserved': True}, 'R': {'all_x_z_exact': True, 'maximum_y_reattachment': 0.008235454559326172, 'round_frontal_outline_preserved': True, 'color_and_topology_preserved': True}}}
+信息: 已另存为 "Naiwa_Character.blend"
+
+FBX export starting... 'C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\Naiwa_Character.fbx'
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+(bpy.data.armatures['Naiwa_Skeleton'], 'POSE')
+export finished in 1.4561 sec.
+CONTINUOUS_FRONT_FACE_DELIVERABLES_OK 6 meshes 10 bones
+CONTINUOUS_FRONT_FACE_REVISION_OK
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

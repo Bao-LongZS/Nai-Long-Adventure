@@ -1,0 +1,382 @@
+{
+  "label": "E2",
+  "mode": "key",
+  "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.blend",
+  "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "contract_sha256": "4ba8ad0b958a41efcbcb02045e1d0e57d267a4a146e12ad5a1340207452ea109",
+  "script_sha256": "9d2af9ab9426a2df2a82918b2c15b64209b9a7ae63a4468fdf5b5b7621ea14f6",
+  "saved_source_model": false,
+  "complete": true,
+  "expected_image_count": 9,
+  "common_reference_camera": {
+    "type": "ORTHO",
+    "yaw": 50.0,
+    "pitch": -2.5,
+    "target": [
+      0,
+      -0.12,
+      2.425
+    ],
+    "distance": 7.0,
+    "scale": 0.86,
+    "lens": 50.0,
+    "resolution": [
+      900,
+      900
+    ]
+  },
+  "fixed_reference_registration": {
+    "scale": 0.41175526202447044,
+    "translation": [
+      245.38813136509236,
+      -17.159665982101984
+    ]
+  },
+  "geometry": "evaluated saved mesh at Idle frame1; Raw is measured separately",
+  "automatic_visual_acceptance": false,
+  "files": [
+    {
+      "file": "E2_head_color_front.png",
+      "sha256": "329bb3521b12faa2fbad31647ab75b1b7f90ee440e0e1c2cdabb3780f0db6956",
+      "model": "E2",
+      "mode": "head_color",
+      "view": "front",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 0,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.11999999731779099,
+          2.369999885559082
+        ],
+        "distance": 7.0,
+        "scale": 0.85,
+        "lens": 50.0,
+        "resolution": [
+          900,
+          1000
+        ],
+        "sensor_fit": "AUTO"
+      },
+      "location": [
+        0.0,
+        -7.119999885559082,
+        2.369999885559082
+      ],
+      "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "engine": "BLENDER_EEVEE",
+      "view_transform": "Standard",
+      "exposure": -0.4000000059604645,
+      "gamma": 1.0,
+      "diagnostic": null
+    },
+    {
+      "file": "E2_head_color_three_quarter.png",
+      "sha256": "0322e199646e101dbba9939eb5376ae8eb10ebb77b1e4e9bdace62faeeb0c089",
+      "model": "E2",
+      "mode": "head_color",
+      "view": "three_quarter",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 45,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.11999999731779099,
+          2.369999885559082
+        ],
+        "distance": 7.0,
+        "scale": 0.85,
+        "lens": 50.0,
+        "resolution": [
+          900,
+          1000
+        ],
+        "sensor_fit": "AUTO"
+      },
+      "location": [
+        4.949747562408447,
+        -5.069747447967529,
+        2.369999885559082
+      ],
+      "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "engine": "BLENDER_EEVEE",
+      "view_transform": "Standard",
+      "exposure": -0.4000000059604645,
+      "gamma": 1.0,
+      "diagnostic": null
+    },
+    {
+      "file": "E2_head_color_side.png",
+      "sha256": "5618150d283f1a6981755db26afa6b2b7262b52ffc531289be4157eeae8383d3",
+      "model": "E2",
+      "mode": "head_color",
+      "view": "side",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 90,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.11999999731779099,
+          2.369999885559082
+        ],
+        "distance": 7.0,
+        "scale": 0.85,
+        "lens": 50.0,
+        "resolution": [
+          900,
+          1000
+        ],
+        "sensor_fit": "AUTO"
+      },
+      "location": [
+        7.0,
+        -0.11999999731779099,
+        2.369999885559082
+      ],
+      "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "engine": "BLENDER_EEVEE",
+      "view_transform": "Standard",
+      "exposure": -0.4000000059604645,
+      "gamma": 1.0,
+      "diagnostic": null
+    },
+    {
+      "file": "E2_full_color_three_quarter.png",
+      "sha256": "9471022a7c084078cdf43b75173411a3f7ec41d328cb8992d319bfd290989acc",
+      "model": "E2",
+      "mode": "full_color",
+      "view": "three_quarter",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 45.0,
+        "pitch": 0.0,
+        "target": [
+          0.0,
+          -0.11999999731779099,
+          1.309999942779541
+        ],
+        "distance": 7.0,
+        "scale": 3.45,
+        "lens": 50.0,
+        "resolution": [
+          900,
+          1000
+        ],
+        "sensor_fit": "AUTO"
+      },
+      "location": [
+        4.949747562408447,
+        -5.069747447967529,
+        1.309999942779541
+      ],
+      "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "engine": "BLENDER_EEVEE",
+      "view_transform": "Standard",
+      "exposure": -0.4000000059604645,
+      "gamma": 1.0,
+      "diagnostic": null
+    },
+    {
+      "file": "E2_common_ORTHO_50.png",
+      "sha256": "153a77bccef3ea3bf2d45e923a5e052d24924163e0e53847838af1068f1b6e9c",
+      "model": "E2",
+      "mode": "common_ORTHO",
+      "view": "50",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50.0,
+        "pitch": -2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0,
+        "resolution": [
+          900,
+          900
+        ],
+        "sensor_fit": "HORIZONTAL"
+      },
+      "location": [
+        5.357207298278809,
+        -4.615230560302734,
+        2.119664192199707
+      ],
+      "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "engine": "BLENDER_EEVEE",
+      "view_transform": "Standard",
+      "exposure": -0.4000000059604645,
+      "gamma": 1.0,
+      "diagnostic": null
+    },
+    {
+      "file": "E2_head_gray_front.png",
+      "sha256": "5fe64ae96921347708832329a08f6843f2bb00d1e7285968b5a71a84313a1409",
+      "model": "E2",
+      "mode": "head_gray",
+      "view": "front",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 0,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.11999999731779099,
+          2.369999885559082
+        ],
+        "distance": 7.0,
+        "scale": 0.85,
+        "lens": 50.0,
+        "resolution": [
+          900,
+          1000
+        ],
+        "sensor_fit": "AUTO"
+      },
+      "location": [
+        0.0,
+        -7.119999885559082,
+        2.369999885559082
+      ],
+      "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "engine": "BLENDER_EEVEE",
+      "view_transform": "Standard",
+      "exposure": -0.4000000059604645,
+      "gamma": 1.0,
+      "diagnostic": null
+    },
+    {
+      "file": "E2_head_gray_three_quarter.png",
+      "sha256": "bd899a8e13a7642d858cf4761c5a277b34c207d67c5e9b5a39298e2deb3a3497",
+      "model": "E2",
+      "mode": "head_gray",
+      "view": "three_quarter",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 45,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.11999999731779099,
+          2.369999885559082
+        ],
+        "distance": 7.0,
+        "scale": 0.85,
+        "lens": 50.0,
+        "resolution": [
+          900,
+          1000
+        ],
+        "sensor_fit": "AUTO"
+      },
+      "location": [
+        4.949747562408447,
+        -5.069747447967529,
+        2.369999885559082
+      ],
+      "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "engine": "BLENDER_EEVEE",
+      "view_transform": "Standard",
+      "exposure": -0.4000000059604645,
+      "gamma": 1.0,
+      "diagnostic": null
+    },
+    {
+      "file": "E2_head_gray_side.png",
+      "sha256": "0bd932ba76f28ee004c4e8caf9f18734340f7c4cffa8f2b11dd29e41a9d559e8",
+      "model": "E2",
+      "mode": "head_gray",
+      "view": "side",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 90,
+        "pitch": 0,
+        "target": [
+          0.0,
+          -0.11999999731779099,
+          2.369999885559082
+        ],
+        "distance": 7.0,
+        "scale": 0.85,
+        "lens": 50.0,
+        "resolution": [
+          900,
+          1000
+        ],
+        "sensor_fit": "AUTO"
+      },
+      "location": [
+        7.0,
+        -0.11999999731779099,
+        2.369999885559082
+      ],
+      "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "engine": "BLENDER_EEVEE",
+      "view_transform": "Standard",
+      "exposure": -0.4000000059604645,
+      "gamma": 1.0,
+      "diagnostic": null
+    },
+    {
+      "file": "E2_common_body_id_50.png",
+      "sha256": "155b9c0267110fa09576d574d8b53e379f9ac7918d36cf45184dfeb0d57e04d3",
+      "model": "E2",
+      "mode": "common_body_id",
+      "view": "50",
+      "pose": {
+        "type": "ORTHO",
+        "yaw": 50.0,
+        "pitch": -2.5,
+        "target": [
+          0,
+          -0.12,
+          2.425
+        ],
+        "distance": 7.0,
+        "scale": 0.86,
+        "lens": 50.0,
+        "resolution": [
+          900,
+          900
+        ],
+        "sensor_fit": "HORIZONTAL"
+      },
+      "location": [
+        5.357207298278809,
+        -4.615230560302734,
+        2.119664192199707
+      ],
+      "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "action": "Naiwa_Idle",
+      "frame": 1,
+      "engine": "BLENDER_EEVEE",
+      "view_transform": "Standard",
+      "exposure": 0.0,
+      "gamma": 1.0,
+      "diagnostic": null
+    }
+  ],
+  "source_hash_verified_after_render": true
+}

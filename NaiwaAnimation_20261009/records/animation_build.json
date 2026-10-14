@@ -1,0 +1,191 @@
+{
+  "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.blend",
+  "source_version": "E2",
+  "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "source_unchanged": true,
+  "geometry_unchanged": true,
+  "blender_version": "5.2.2 LTS",
+  "saved_project": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaAnimation_20261009\\Naiwa_E2_Greeting_10s.blend",
+  "action": "Naiwa_E2_Greeting_10s",
+  "fps": 24,
+  "frames": 240,
+  "duration_seconds": 10.0,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "engine": "BLENDER_EEVEE",
+  "bound_meshes": 6,
+  "bones": 10,
+  "character_geometry_sha256": {
+    "L concentric iris and pupil": "7de9e0192794fd2bfdd877eb982ac95c0146b11b1015f7b04fe4d4649b9e143b",
+    "L eye glint": "b55deb4eadde23cef9c21305ab965898f71856aa542b331902f582e295330fd8",
+    "Naiwa unified golden body": "4318245669c5b124c7b878d4c3c413fb2759463aaa8697e99e5ecbe3afaf9200",
+    "R concentric iris and pupil": "8716ba1873649bf0182e46beea29ef843f4125080a93e8c9515033a1c2acd225",
+    "R eye glint": "b55deb4eadde23cef9c21305ab965898f71856aa542b331902f582e295330fd8",
+    "Short closed oral seam": "9f3f33af8e9161a1f45d29e93128ccd07b410218927d9e9f7357d84f432aa379"
+  },
+  "motion": "Happy sway with small forearm accents, two hops, playful twist, small bow",
+  "pose_samples": [
+    {
+      "frame": 1,
+      "time": 0.0,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 0.0,
+      "cheer": 0.0
+    },
+    {
+      "frame": 13,
+      "time": 0.5,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 0.0,
+      "cheer": 0.0
+    },
+    {
+      "frame": 25,
+      "time": 1.0,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 0.49999999999999994,
+      "cheer": 0.0
+    },
+    {
+      "frame": 37,
+      "time": 1.5,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 1.0,
+      "cheer": 0.0
+    },
+    {
+      "frame": 49,
+      "time": 2.0,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 1.0,
+      "cheer": 0.0
+    },
+    {
+      "frame": 61,
+      "time": 2.5,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 1.0,
+      "cheer": 0.0
+    },
+    {
+      "frame": 73,
+      "time": 3.0,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 1.0,
+      "cheer": 0.0
+    },
+    {
+      "frame": 85,
+      "time": 3.5,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 0.9967349913726424,
+      "cheer": 0.0
+    },
+    {
+      "frame": 97,
+      "time": 4.0,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 0.06947997858035382,
+      "cheer": 0.0
+    },
+    {
+      "frame": 109,
+      "time": 4.5,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 0.0,
+      "cheer": 0.0
+    },
+    {
+      "frame": 121,
+      "time": 5.0,
+      "hop_height": 0.2887111111111111,
+      "feet_world_z": 0.2887111008167267,
+      "wave": 0.0,
+      "cheer": 0.0
+    },
+    {
+      "frame": 133,
+      "time": 5.5,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 0.0,
+      "cheer": 0.0
+    },
+    {
+      "frame": 145,
+      "time": 6.0,
+      "hop_height": 0.23333333333333375,
+      "feet_world_z": 0.23333333432674408,
+      "wave": 0.0,
+      "cheer": 0.0
+    },
+    {
+      "frame": 157,
+      "time": 6.5,
+      "hop_height": 0.3370370370370367,
+      "feet_world_z": 0.33703702688217163,
+      "wave": 0.0,
+      "cheer": 0.0
+    },
+    {
+      "frame": 169,
+      "time": 7.0,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 0.0,
+      "cheer": 0.6533805941358019
+    },
+    {
+      "frame": 181,
+      "time": 7.5,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 0.0,
+      "cheer": 1.0
+    },
+    {
+      "frame": 193,
+      "time": 8.0,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 0.0,
+      "cheer": 1.0
+    },
+    {
+      "frame": 205,
+      "time": 8.5,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 0.0,
+      "cheer": 0.4281685892273771
+    },
+    {
+      "frame": 217,
+      "time": 9.0,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 0.0,
+      "cheer": 0.0
+    },
+    {
+      "frame": 229,
+      "time": 9.5,
+      "hop_height": 0,
+      "feet_world_z": 0.0,
+      "wave": 0.0,
+      "cheer": 0.0
+    }
+  ]
+}

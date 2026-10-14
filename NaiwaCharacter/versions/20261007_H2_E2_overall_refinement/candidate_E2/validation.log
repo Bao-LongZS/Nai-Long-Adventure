@@ -1,0 +1,6 @@
+00:00.735  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_H2_E2_overall_refinement\candidate_H2\Naiwa_Character.blend"
+00:22.407  blend            | Read blend: "C:\Users\31314\Desktop\Nai-Long-Adventure\NaiwaCharacter\versions\20261007_H2_E2_overall_refinement\candidate_E2\Naiwa_Character.blend"
+E2_REFINEMENT_VALIDATION_OK {"passed": true, "candidate_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322", "visible_eye_spacing": 0.23456641447875087, "eyes": {"L": {"D": 0.11711010268327617, "axis_ratio": 1.1001348470183654, "center_shift": 1.4804564211469045e-05, "pupil_ratio": 0.530478752601521}, "R": {"D": 0.11711793037546346, "axis_ratio": 1.0999697815152616, "center_shift": 1.3687127530322333e-05, "pupil_ratio": 0.5302857791029258}}}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit
