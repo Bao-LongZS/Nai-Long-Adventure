@@ -1,0 +1,285 @@
+{
+  "phase": "import",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.fbx",
+  "importer": "Legacy FBX",
+  "warnings": [],
+  "source_sha256": "8dae9ce28c4b44465dcb8e73dd462804c3a561daee9eebaf79842900a3005147",
+  "imported_paths": [
+    "/Game/Naiwa/SK_Naiwa.SK_Naiwa"
+  ],
+  "assets": [
+    {
+      "path": "/Game/Naiwa/SK_Naiwa.SK_Naiwa",
+      "class": "SkeletalMesh",
+      "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+      "materials": [
+        "L single eye surface",
+        "Eye glints",
+        "Soft ochre yellow skin",
+        "R single eye surface",
+        "Recessed mouth deep brown_001"
+      ],
+      "bounds": {
+        "origin": [
+          -2.288818359375e-05,
+          7.04417610168457,
+          132.6415308713913
+        ],
+        "extent": [
+          88.10216522216797,
+          65.83743858337402,
+          131.84153187274933
+        ]
+      },
+      "available_mesh_methods": [
+        "get_bounds",
+        "get_imported_bounds",
+        "get_min_lod_for_quality_levels",
+        "get_overlay_material",
+        "get_overlay_material_max_draw_distance",
+        "has_vertex_colors",
+        "lod_settings",
+        "materials",
+        "negative_bounds_extension",
+        "overlay_material",
+        "overlay_material_max_draw_distance",
+        "positive_bounds_extension",
+        "regenerate_lod",
+        "set_min_lod_for_quality_levels",
+        "set_overlay_material",
+        "set_overlay_material_max_draw_distance"
+      ]
+    },
+    {
+      "path": "/Game/Naiwa/AS_Naiwa_Idle.AS_Naiwa_Idle",
+      "class": "AnimSequence",
+      "action": "Idle",
+      "duration": 1.25,
+      "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton"
+    },
+    {
+      "path": "/Game/Naiwa/AS_Naiwa_Jump.AS_Naiwa_Jump",
+      "class": "AnimSequence",
+      "action": "Jump",
+      "duration": 0.7916666865348816,
+      "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton"
+    },
+    {
+      "path": "/Game/Naiwa/AS_Naiwa_Laugh.AS_Naiwa_Laugh",
+      "class": "AnimSequence",
+      "action": "Laugh",
+      "duration": 1.0,
+      "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton"
+    },
+    {
+      "path": "/Game/Naiwa/AS_Naiwa_Walk.AS_Naiwa_Walk",
+      "class": "AnimSequence",
+      "action": "Walk",
+      "duration": 1.3333333730697632,
+      "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton"
+    },
+    {
+      "path": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+      "class": "Skeleton"
+    }
+  ],
+  "api": {
+    "EditorSkeletalMeshLibrary": [
+      "acquire_editor_element_handle",
+      "call_method",
+      "cast",
+      "create_physics_asset",
+      "get_class",
+      "get_default_object",
+      "get_editor_property",
+      "get_fname",
+      "get_full_name",
+      "get_lod_build_settings",
+      "get_lod_count",
+      "get_name",
+      "get_num_verts",
+      "get_outer",
+      "get_outermost",
+      "get_package",
+      "get_path_name",
+      "get_typed_outer",
+      "get_world",
+      "import_lod",
+      "is_editor_property_overridden",
+      "is_package_external",
+      "modify",
+      "regenerate_lod",
+      "reimport_all_custom_lo_ds",
+      "reimport_all_custom_lods",
+      "remove_lo_ds",
+      "remove_lods",
+      "rename",
+      "rename_socket",
+      "reset_editor_property",
+      "set_editor_properties",
+      "set_editor_property",
+      "set_lod_build_settings",
+      "static_class",
+      "strip_lod_geometry"
+    ],
+    "AnimBlueprintFactory": [
+      "acquire_editor_element_handle",
+      "asset_import_task",
+      "automated_import_data",
+      "call_method",
+      "cast",
+      "context_class",
+      "create_new",
+      "edit_after_new",
+      "editor_import",
+      "formats",
+      "get_class",
+      "get_default_object",
+      "get_editor_property",
+      "get_fname",
+      "get_full_name",
+      "get_name",
+      "get_outer",
+      "get_outermost",
+      "get_package",
+      "get_path_name",
+      "get_typed_outer",
+      "get_world",
+      "is_editor_property_overridden",
+      "is_package_external",
+      "modify",
+      "rename",
+      "reset_editor_property",
+      "script_factory_can_import",
+      "script_factory_create_file",
+      "set_editor_properties",
+      "set_editor_property",
+      "static_class",
+      "supported_class",
+      "supported_workflows",
+      "text"
+    ],
+    "InputMappingContext": [
+      "acquire_editor_element_handle",
+      "call_method",
+      "cast",
+      "context_description",
+      "default_key_mappings",
+      "get_class",
+      "get_default_object",
+      "get_editor_property",
+      "get_fname",
+      "get_full_name",
+      "get_name",
+      "get_outer",
+      "get_outermost",
+      "get_package",
+      "get_path_name",
+      "get_typed_outer",
+      "get_world",
+      "input_mode_filter_options",
+      "input_mode_query_override",
+      "is_editor_property_overridden",
+      "is_package_external",
+      "map_key",
+      "mapping_profile_overrides",
+      "mappings",
+      "modify",
+      "registration_tracking_mode",
+      "rename",
+      "reset_editor_property",
+      "set_editor_properties",
+      "set_editor_property",
+      "static_class",
+      "unmap_all",
+      "unmap_all_keys_from_action",
+      "unmap_key"
+    ],
+    "InputAction": [
+      "accumulation_behavior",
+      "acquire_editor_element_handle",
+      "action_description",
+      "call_method",
+      "cast",
+      "consume_input",
+      "consumes_action_and_axis_mappings",
+      "get_class",
+      "get_default_object",
+      "get_editor_property",
+      "get_fname",
+      "get_full_name",
+      "get_name",
+      "get_outer",
+      "get_outermost",
+      "get_package",
+      "get_path_name",
+      "get_typed_outer",
+      "get_world",
+      "is_editor_property_overridden",
+      "is_package_external",
+      "modifiers",
+      "modify",
+      "player_mappable_key_settings",
+      "rename",
+      "reserve_all_mappings",
+      "reset_editor_property",
+      "set_editor_properties",
+      "set_editor_property",
+      "static_class",
+      "trigger_events_that_consume_legacy_keys",
+      "trigger_when_paused",
+      "triggers",
+      "value_type"
+    ]
+  },
+  "source_unchanged": true,
+  "status": "imported_pending_UE_visual_runtime_validation",
+  "engine_warnings": [
+    {
+      "channel": "FBXImport",
+      "message": "此FBX场景中未发现平滑组信息。导出文件前必须在FBX导出器插件中启用“导出平滑组（Export Smoothing Groups）”选项。对不支持平滑组的工具而言，导出时FBX导出器仍将生成正确的平滑数据，从而在导入时推断出正确的顶点法线。",
+      "log_lines": [
+        1708,
+        1797
+      ]
+    },
+    {
+      "channel": "FBXImport",
+      "message": "网格体“L concentric iris and pupil”没有UV集。正在创建一个默认集。",
+      "log_lines": [
+        1709,
+        1798
+      ]
+    },
+    {
+      "channel": "FBXImport",
+      "message": "网格体“Naiwa unified golden body”没有UV集。正在创建一个默认集。",
+      "log_lines": [
+        1710,
+        1799
+      ]
+    },
+    {
+      "channel": "FBXImport",
+      "message": "网格体“R concentric iris and pupil”没有UV集。正在创建一个默认集。",
+      "log_lines": [
+        1711,
+        1800
+      ]
+    },
+    {
+      "channel": "FBXImport",
+      "message": "网格体“Short closed oral seam”没有UV集。正在创建一个默认集。",
+      "log_lines": [
+        1712,
+        1801
+      ]
+    }
+  ],
+  "engine_warnings_source": {
+    "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\import_e2.log",
+    "unique_warning_count": 5,
+    "note": "Parsed from the completed Unreal import log; repeated warning-summary entries are deduplicated. Existing warnings retains script option-setting exceptions."
+  }
+}

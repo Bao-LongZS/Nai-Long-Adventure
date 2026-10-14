@@ -1,0 +1,568 @@
+{
+  "source_run_id": "20261012T064857Z_282460",
+  "round": 1,
+  "method": "At most eight evenly distributed chronological actual screenshot viewports per case.",
+  "limits": "Selected screenshots provide sampled sequence review; no claim that the MP4 was played or every rendered frame was viewed.",
+  "sheets": [
+    {
+      "case": "flat_start_stop",
+      "source_image_count": 5,
+      "selected_count": 5,
+      "sheet": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\gameplay_sequences\\flat_start_stop.png",
+      "selected_frames": [
+        {
+          "frame_name": "frame_000000.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000000.png",
+          "wall_time_s": 15.013173200190067,
+          "round": 1,
+          "case": "flat_start_stop",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000001.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000001.png",
+          "wall_time_s": 15.628502000123262,
+          "round": 1,
+          "case": "flat_start_stop",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000002.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000002.png",
+          "wall_time_s": 15.754740301519632,
+          "round": 1,
+          "case": "flat_start_stop",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000003.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000003.png",
+          "wall_time_s": 15.883630599826574,
+          "round": 1,
+          "case": "flat_start_stop",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000004.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000004.png",
+          "wall_time_s": 17.35433490201831,
+          "round": 1,
+          "case": "flat_start_stop",
+          "file_exists": true
+        }
+      ],
+      "crop": "None; full viewport"
+    },
+    {
+      "case": "reverse",
+      "source_image_count": 13,
+      "selected_count": 8,
+      "sheet": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\gameplay_sequences\\reverse.png",
+      "selected_frames": [
+        {
+          "frame_name": "frame_000005.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000005.png",
+          "wall_time_s": 19.375078801065683,
+          "round": 1,
+          "case": "reverse",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000007.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000007.png",
+          "wall_time_s": 20.31029850244522,
+          "round": 1,
+          "case": "reverse",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000008.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000008.png",
+          "wall_time_s": 20.587568800896406,
+          "round": 1,
+          "case": "reverse",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000010.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000010.png",
+          "wall_time_s": 20.845975499600172,
+          "round": 1,
+          "case": "reverse",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000012.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000012.png",
+          "wall_time_s": 21.28452780097723,
+          "round": 1,
+          "case": "reverse",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000014.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000014.png",
+          "wall_time_s": 21.546255100518465,
+          "round": 1,
+          "case": "reverse",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000015.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000015.png",
+          "wall_time_s": 21.676791600883007,
+          "round": 1,
+          "case": "reverse",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000017.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000017.png",
+          "wall_time_s": 22.191317699849606,
+          "round": 1,
+          "case": "reverse",
+          "file_exists": true
+        }
+      ],
+      "crop": "None; full viewport"
+    },
+    {
+      "case": "wall_collision",
+      "source_image_count": 29,
+      "selected_count": 8,
+      "sheet": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\gameplay_sequences\\wall_collision.png",
+      "selected_frames": [
+        {
+          "frame_name": "frame_000018.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000018.png",
+          "wall_time_s": 22.326544102281332,
+          "round": 1,
+          "case": "wall_collision",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000022.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000022.png",
+          "wall_time_s": 22.98987190052867,
+          "round": 1,
+          "case": "wall_collision",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000026.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000026.png",
+          "wall_time_s": 23.72857630252838,
+          "round": 1,
+          "case": "wall_collision",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000030.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000030.png",
+          "wall_time_s": 24.489509601145983,
+          "round": 1,
+          "case": "wall_collision",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000034.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000034.png",
+          "wall_time_s": 25.17044709995389,
+          "round": 1,
+          "case": "wall_collision",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000038.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000038.png",
+          "wall_time_s": 25.852906800806522,
+          "round": 1,
+          "case": "wall_collision",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000042.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000042.png",
+          "wall_time_s": 26.54780190065503,
+          "round": 1,
+          "case": "wall_collision",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000046.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000046.png",
+          "wall_time_s": 27.456072699278593,
+          "round": 1,
+          "case": "wall_collision",
+          "file_exists": true
+        }
+      ],
+      "crop": "None; full viewport"
+    },
+    {
+      "case": "jump_onto_platform",
+      "source_image_count": 26,
+      "selected_count": 8,
+      "sheet": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\gameplay_sequences\\jump_onto_platform.png",
+      "selected_frames": [
+        {
+          "frame_name": "frame_000047.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000047.png",
+          "wall_time_s": 27.586616799235344,
+          "round": 1,
+          "case": "jump_onto_platform",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000051.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000051.png",
+          "wall_time_s": 28.33083299919963,
+          "round": 1,
+          "case": "jump_onto_platform",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000054.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000054.png",
+          "wall_time_s": 28.844195999205112,
+          "round": 1,
+          "case": "jump_onto_platform",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000058.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000058.png",
+          "wall_time_s": 29.410001900047064,
+          "round": 1,
+          "case": "jump_onto_platform",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000061.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000061.png",
+          "wall_time_s": 29.88331450149417,
+          "round": 1,
+          "case": "jump_onto_platform",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000065.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000065.png",
+          "wall_time_s": 30.551218699663877,
+          "round": 1,
+          "case": "jump_onto_platform",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000068.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000068.png",
+          "wall_time_s": 31.046356100589037,
+          "round": 1,
+          "case": "jump_onto_platform",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000072.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000072.png",
+          "wall_time_s": 31.827172201126814,
+          "round": 1,
+          "case": "jump_onto_platform",
+          "file_exists": true
+        }
+      ],
+      "crop": "None; full viewport"
+    },
+    {
+      "case": "platform_drop",
+      "source_image_count": 21,
+      "selected_count": 8,
+      "sheet": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\gameplay_sequences\\platform_drop.png",
+      "selected_frames": [
+        {
+          "frame_name": "frame_000073.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000073.png",
+          "wall_time_s": 31.979296699166298,
+          "round": 1,
+          "case": "platform_drop",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000076.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000076.png",
+          "wall_time_s": 32.426867101341486,
+          "round": 1,
+          "case": "platform_drop",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000079.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000079.png",
+          "wall_time_s": 32.877838399261236,
+          "round": 1,
+          "case": "platform_drop",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000082.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000082.png",
+          "wall_time_s": 33.30779730156064,
+          "round": 1,
+          "case": "platform_drop",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000084.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000084.png",
+          "wall_time_s": 33.65181780233979,
+          "round": 1,
+          "case": "platform_drop",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000087.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000087.png",
+          "wall_time_s": 34.13542149960995,
+          "round": 1,
+          "case": "platform_drop",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000090.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000090.png",
+          "wall_time_s": 34.62116800248623,
+          "round": 1,
+          "case": "platform_drop",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000093.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000093.png",
+          "wall_time_s": 35.274433799088,
+          "round": 1,
+          "case": "platform_drop",
+          "file_exists": true
+        }
+      ],
+      "crop": "None; full viewport"
+    },
+    {
+      "case": "long_airborne",
+      "source_image_count": 17,
+      "selected_count": 8,
+      "sheet": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\gameplay_sequences\\long_airborne.png",
+      "selected_frames": [
+        {
+          "frame_name": "frame_000094.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000094.png",
+          "wall_time_s": 35.498630702495575,
+          "round": 1,
+          "case": "long_airborne",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000096.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000096.png",
+          "wall_time_s": 35.80766690149903,
+          "round": 1,
+          "case": "long_airborne",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000099.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000099.png",
+          "wall_time_s": 36.238723799586296,
+          "round": 1,
+          "case": "long_airborne",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000101.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000101.png",
+          "wall_time_s": 36.53207900002599,
+          "round": 1,
+          "case": "long_airborne",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000103.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000103.png",
+          "wall_time_s": 36.8222527988255,
+          "round": 1,
+          "case": "long_airborne",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000105.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000105.png",
+          "wall_time_s": 37.19818130135536,
+          "round": 1,
+          "case": "long_airborne",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000108.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000108.png",
+          "wall_time_s": 37.70535299926996,
+          "round": 1,
+          "case": "long_airborne",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000110.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000110.png",
+          "wall_time_s": 38.170804399996996,
+          "round": 1,
+          "case": "long_airborne",
+          "file_exists": true
+        }
+      ],
+      "crop": "None; full viewport"
+    },
+    {
+      "case": "early_landing",
+      "source_image_count": 26,
+      "selected_count": 8,
+      "sheet": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\gameplay_sequences\\early_landing.png",
+      "selected_frames": [
+        {
+          "frame_name": "frame_000111.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000111.png",
+          "wall_time_s": 38.39323550090194,
+          "round": 1,
+          "case": "early_landing",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000115.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000115.png",
+          "wall_time_s": 39.01006430014968,
+          "round": 1,
+          "case": "early_landing",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000118.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000118.png",
+          "wall_time_s": 39.53285630047321,
+          "round": 1,
+          "case": "early_landing",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000122.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000122.png",
+          "wall_time_s": 40.224944699555635,
+          "round": 1,
+          "case": "early_landing",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000125.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000125.png",
+          "wall_time_s": 40.7540820017457,
+          "round": 1,
+          "case": "early_landing",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000129.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000129.png",
+          "wall_time_s": 41.369736202061176,
+          "round": 1,
+          "case": "early_landing",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000132.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000132.png",
+          "wall_time_s": 41.856931302696466,
+          "round": 1,
+          "case": "early_landing",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000136.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000136.png",
+          "wall_time_s": 42.58188360184431,
+          "round": 1,
+          "case": "early_landing",
+          "file_exists": true
+        }
+      ],
+      "crop": "None; full viewport"
+    },
+    {
+      "case": "reset",
+      "source_image_count": 24,
+      "selected_count": 8,
+      "sheet": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\gameplay_sequences\\reset.png",
+      "selected_frames": [
+        {
+          "frame_name": "frame_000137.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000137.png",
+          "wall_time_s": 42.82521979883313,
+          "round": 1,
+          "case": "reset",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000140.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000140.png",
+          "wall_time_s": 43.2318974994123,
+          "round": 1,
+          "case": "reset",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000144.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000144.png",
+          "wall_time_s": 43.782143998891115,
+          "round": 1,
+          "case": "reset",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000147.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000147.png",
+          "wall_time_s": 44.18754630163312,
+          "round": 1,
+          "case": "reset",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000150.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000150.png",
+          "wall_time_s": 44.70041989907622,
+          "round": 1,
+          "case": "reset",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000153.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000153.png",
+          "wall_time_s": 45.148179702460766,
+          "round": 1,
+          "case": "reset",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000157.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000157.png",
+          "wall_time_s": 45.796465899795294,
+          "round": 1,
+          "case": "reset",
+          "file_exists": true
+        },
+        {
+          "frame_name": "frame_000160.png",
+          "path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460/Frames/frame_000160.png",
+          "wall_time_s": 46.44290539994836,
+          "round": 1,
+          "case": "reset",
+          "file_exists": true
+        }
+      ],
+      "crop": "None; full viewport"
+    }
+  ]
+}

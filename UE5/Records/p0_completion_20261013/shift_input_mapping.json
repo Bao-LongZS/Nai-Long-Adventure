@@ -1,0 +1,143 @@
+{
+  "status": "saved_shift_plus_arrows_pending_runtime_validation",
+  "keyboard_movement": "Hold either Shift and Left/Right; A/D removed; arrows alone do not move.",
+  "other_controls_preserved": true,
+  "scene_character_and_animation_unchanged": true,
+  "mapping": "/Game/Naiwa/Input/IMC_Naiwa.IMC_Naiwa",
+  "gate_action": "/Game/Naiwa/Input/IA_NaiwaShiftGate.IA_NaiwaShiftGate",
+  "before": [
+    {
+      "key": "D",
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "modifiers": [],
+      "triggers": []
+    },
+    {
+      "key": "Right",
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "modifiers": [],
+      "triggers": []
+    },
+    {
+      "key": "A",
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "modifiers": [
+        "InputModifierNegate"
+      ],
+      "triggers": []
+    },
+    {
+      "key": "Left",
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "modifiers": [
+        "InputModifierNegate"
+      ],
+      "triggers": []
+    },
+    {
+      "key": "Gamepad_LeftX",
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "modifiers": [],
+      "triggers": []
+    },
+    {
+      "key": "SpaceBar",
+      "action": "/Game/Naiwa/Input/IA_NaiwaJump.IA_NaiwaJump",
+      "modifiers": [],
+      "triggers": []
+    },
+    {
+      "key": "Gamepad_FaceButton_Bottom",
+      "action": "/Game/Naiwa/Input/IA_NaiwaJump.IA_NaiwaJump",
+      "modifiers": [],
+      "triggers": []
+    },
+    {
+      "key": "Escape",
+      "action": "/Game/Naiwa/Input/IA_NaiwaPause.IA_NaiwaPause",
+      "modifiers": [],
+      "triggers": []
+    },
+    {
+      "key": "P",
+      "action": "/Game/Naiwa/Input/IA_NaiwaPause.IA_NaiwaPause",
+      "modifiers": [],
+      "triggers": []
+    },
+    {
+      "key": "R",
+      "action": "/Game/Naiwa/Input/IA_NaiwaReset.IA_NaiwaReset",
+      "modifiers": [],
+      "triggers": []
+    }
+  ],
+  "after": [
+    {
+      "key": "Gamepad_LeftX",
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "modifiers": [],
+      "triggers": []
+    },
+    {
+      "key": "SpaceBar",
+      "action": "/Game/Naiwa/Input/IA_NaiwaJump.IA_NaiwaJump",
+      "modifiers": [],
+      "triggers": []
+    },
+    {
+      "key": "Gamepad_FaceButton_Bottom",
+      "action": "/Game/Naiwa/Input/IA_NaiwaJump.IA_NaiwaJump",
+      "modifiers": [],
+      "triggers": []
+    },
+    {
+      "key": "Escape",
+      "action": "/Game/Naiwa/Input/IA_NaiwaPause.IA_NaiwaPause",
+      "modifiers": [],
+      "triggers": []
+    },
+    {
+      "key": "P",
+      "action": "/Game/Naiwa/Input/IA_NaiwaPause.IA_NaiwaPause",
+      "modifiers": [],
+      "triggers": []
+    },
+    {
+      "key": "R",
+      "action": "/Game/Naiwa/Input/IA_NaiwaReset.IA_NaiwaReset",
+      "modifiers": [],
+      "triggers": []
+    },
+    {
+      "key": "LeftShift",
+      "action": "/Game/Naiwa/Input/IA_NaiwaShiftGate.IA_NaiwaShiftGate",
+      "modifiers": [],
+      "triggers": []
+    },
+    {
+      "key": "RightShift",
+      "action": "/Game/Naiwa/Input/IA_NaiwaShiftGate.IA_NaiwaShiftGate",
+      "modifiers": [],
+      "triggers": []
+    },
+    {
+      "key": "Left",
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "modifiers": [
+        "InputModifierNegate"
+      ],
+      "triggers": [
+        "InputTriggerChordAction"
+      ]
+    },
+    {
+      "key": "Right",
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "modifiers": [],
+      "triggers": [
+        "InputTriggerChordAction"
+      ]
+    }
+  ],
+  "backup": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\IMC_Naiwa_before_shift.uasset"
+}

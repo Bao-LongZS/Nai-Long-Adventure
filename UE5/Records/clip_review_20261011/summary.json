@@ -1,0 +1,16 @@
+{
+  "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308",
+  "sampled_poses": 80,
+  "maximum_surface_extents_cm": {
+    "front_extent_from_actor_cm": 81.89523316207584,
+    "rear_extent_from_actor_cm": 44.39997008264973
+  },
+  "scope": "Held animation phases, not player movement, hardware input, or full continuous playback.",
+  "sheets": [
+    "UE5\\Records\\clip_review_20261011\\AS_Naiwa_Idle.png",
+    "UE5\\Records\\clip_review_20261011\\AS_Naiwa_Jump.png",
+    "UE5\\Records\\clip_review_20261011\\AS_Naiwa_Laugh.png",
+    "UE5\\Records\\clip_review_20261011\\AS_Naiwa_Run.png",
+    "UE5\\Records\\clip_review_20261011\\AS_Naiwa_Walk.png"
+  ]
+}

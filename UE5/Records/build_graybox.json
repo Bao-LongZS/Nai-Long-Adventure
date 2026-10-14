@@ -1,0 +1,128 @@
+{
+  "phase": "saved_graybox",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "assets": {
+    "material_slots": [
+      {
+        "slot": "l single eye surface",
+        "material": "/Game/Naiwa/Materials/M_NaiwaEye.M_NaiwaEye"
+      },
+      {
+        "slot": "eye glints",
+        "material": "/Game/Naiwa/Materials/M_NaiwaGlint.M_NaiwaGlint"
+      },
+      {
+        "slot": "soft ochre yellow skin",
+        "material": "/Game/Naiwa/Materials/M_NaiwaBody.M_NaiwaBody"
+      },
+      {
+        "slot": "r single eye surface",
+        "material": "/Game/Naiwa/Materials/M_NaiwaEye.M_NaiwaEye"
+      },
+      {
+        "slot": "recessed mouth deep brown_001",
+        "material": "/Game/Naiwa/Materials/M_NaiwaMouth.M_NaiwaMouth"
+      }
+    ],
+    "mesh": "/Game/Naiwa/SK_Naiwa.SK_Naiwa",
+    "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+    "character": "/Game/Naiwa/Blueprints/BP_NaiwaCharacter.BP_NaiwaCharacter",
+    "animation_blueprint": "/Game/Naiwa/Blueprints/ABP_Naiwa.ABP_Naiwa",
+    "game_mode": "/Game/Naiwa/Blueprints/BP_NaiwaGameMode.BP_NaiwaGameMode",
+    "input_mapping": "/Game/Naiwa/Input/IMC_Naiwa.IMC_Naiwa",
+    "map": "/Game/Naiwa/Maps/L_NaiwaGraybox"
+  },
+  "parameters": {
+    "imported_height_cm": 263.68306374549866,
+    "height_cm": 180.0,
+    "mesh_uniform_scale": 0.6826376993773563,
+    "source_min_z_cm": 0.7999989986419678,
+    "mesh_offset_z_cm": -90.54610947593714,
+    "capsule_radius_cm": 42.0,
+    "capsule_half_height_cm": 90.0,
+    "plane_y_cm": 0.0,
+    "plane_y_tolerance_cm": 0.1,
+    "idle_foot_gap_tolerance_cm": 3.0,
+    "stop_speed_tolerance_cm_s": 1.0,
+    "target_fps": 60,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "move_speed_cm_s": 300.0,
+    "jump_z_velocity_cm_s": 650.0,
+    "gravity_scale": 1.6,
+    "animation_transition_seconds": 0.12,
+    "mesh_right_yaw_degrees": -90.0,
+    "camera_relative_location_cm": [
+      0.0,
+      900.0,
+      40.0
+    ],
+    "camera_relative_rotation_degrees": [
+      0.0,
+      -90.0,
+      0.0
+    ],
+    "camera_fov_degrees": 40.0
+  },
+  "geometry": [
+    {
+      "name": "Ground",
+      "x": 1700.0,
+      "top_z": 0.0,
+      "width": 5800.0,
+      "depth": 1200.0,
+      "thickness": 100.0
+    },
+    {
+      "name": "Wall_Right",
+      "x": 900.0,
+      "top_z": 180.0,
+      "width": 80.0,
+      "depth": 450.0,
+      "thickness": 180.0
+    },
+    {
+      "name": "Wall_Left",
+      "x": -700.0,
+      "top_z": 300.0,
+      "width": 80.0,
+      "depth": 450.0,
+      "thickness": 300.0
+    },
+    {
+      "name": "LowPlatform",
+      "x": 1150.0,
+      "top_z": 80.0,
+      "width": 200.0,
+      "depth": 700.0,
+      "thickness": 100.0
+    },
+    {
+      "name": "JumpPlatform",
+      "x": 1700.0,
+      "top_z": 180.0,
+      "width": 400.0,
+      "depth": 700.0,
+      "thickness": 100.0
+    },
+    {
+      "name": "DropPlatform",
+      "x": 2350.0,
+      "top_z": 300.0,
+      "width": 350.0,
+      "depth": 700.0,
+      "thickness": 100.0
+    },
+    {
+      "name": "EarlyLandingPlatform",
+      "x": 3750.0,
+      "top_z": 250.0,
+      "width": 300.0,
+      "depth": 700.0,
+      "thickness": 100.0
+    }
+  ],
+  "status": "saved_pending_visual_and_runtime_validation"
+}

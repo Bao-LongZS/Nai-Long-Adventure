@@ -1,0 +1,293 @@
+{
+  "runs": [
+    {
+      "summary_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaTests\\20261012T064857Z_282460\\summary.json",
+      "run_id": "20261012T064857Z_282460",
+      "status": "PASS",
+      "complete": true,
+      "planned_cases": 24,
+      "completed_cases": 24,
+      "screenshots_saved": true,
+      "output_write_failed": false,
+      "failed_cases": [],
+      "csv_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaTests\\20261012T064857Z_282460\\frames.csv",
+      "simulation_frame_time": {
+        "sample_count": 2612,
+        "median_ms": 10.5343,
+        "p95_ms": 114.6031
+      },
+      "wall_frame_time": {
+        "sample_count": 2612,
+        "median_ms": 10.6365,
+        "p95_ms": 114.6751
+      },
+      "timing_limit": "Positive finite case CSV samples; excludes zero paused simulation ticks. Includes case screenshots/CPU skin extraction and startup effects, so this is a regression cadence record, not a stable performance baseline. P95 uses nearest rank.",
+      "performance_samples": [
+        {
+          "mode": "mesh_visible_animation_enabled",
+          "warmup_s": 2,
+          "sample_window_s": 5,
+          "sampled_frames": 194,
+          "motion": "Actual EnhancedInput A/D running on flat ground, turn at X=-450/350 cm; identical path policy in both phases",
+          "mean_wall_frame_ms": 25.69603969909481,
+          "mean_game_ms": 3.176753605763937,
+          "mean_render_ms": 25.68094389217416,
+          "mean_gpu_ms": 23.67285415806721,
+          "gpu_timer_available": true,
+          "p95_wall_frame_ms": 27.432799339294434,
+          "median_wall_frame_ms": 25.658801198005676
+        },
+        {
+          "mode": "mesh_hidden_animation_tick_disabled",
+          "warmup_s": 2,
+          "sample_window_s": 5,
+          "sampled_frames": 248,
+          "motion": "Actual EnhancedInput A/D running on flat ground, turn at X=-450/350 cm; identical path policy in both phases",
+          "mean_wall_frame_ms": 20.080183467437184,
+          "mean_game_ms": 3.0052358863815183,
+          "mean_render_ms": 20.066478567738688,
+          "mean_gpu_ms": 17.02747587234743,
+          "gpu_timer_available": true,
+          "p95_wall_frame_ms": 30.859697610139847,
+          "median_wall_frame_ms": 19.898798316717148
+        }
+      ]
+    },
+    {
+      "summary_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaTests\\20261013T002931Z_40560\\summary.json",
+      "run_id": "20261013T002931Z_40560",
+      "status": "INCOMPLETE",
+      "complete": false,
+      "planned_cases": 24,
+      "completed_cases": 22,
+      "screenshots_saved": false,
+      "output_write_failed": false,
+      "failed_cases": [],
+      "csv_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaTests\\20261013T002931Z_40560\\frames.csv",
+      "simulation_frame_time": {
+        "sample_count": 2162,
+        "median_ms": 33.3335,
+        "p95_ms": 33.3336
+      },
+      "wall_frame_time": {
+        "sample_count": 2162,
+        "median_ms": 33.3325,
+        "p95_ms": 33.4583
+      },
+      "timing_limit": "Positive finite case CSV samples; excludes zero paused simulation ticks. Includes case screenshots/CPU skin extraction and startup effects, so this is a regression cadence record, not a stable performance baseline. P95 uses nearest rank.",
+      "performance_samples": []
+    },
+    {
+      "summary_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaTests\\20261013T003433Z_23096\\summary.json",
+      "run_id": "20261013T003433Z_23096",
+      "status": "PASS",
+      "complete": true,
+      "planned_cases": 24,
+      "completed_cases": 24,
+      "screenshots_saved": true,
+      "output_write_failed": false,
+      "failed_cases": [],
+      "csv_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaTests\\20261013T003433Z_23096\\frames.csv",
+      "simulation_frame_time": {
+        "sample_count": 2379,
+        "median_ms": 33.3335,
+        "p95_ms": 33.3336
+      },
+      "wall_frame_time": {
+        "sample_count": 2379,
+        "median_ms": 33.3348,
+        "p95_ms": 33.4718
+      },
+      "timing_limit": "Positive finite case CSV samples; excludes zero paused simulation ticks. Includes case screenshots/CPU skin extraction and startup effects, so this is a regression cadence record, not a stable performance baseline. P95 uses nearest rank.",
+      "performance_samples": [
+        {
+          "mode": "mesh_visible_animation_enabled",
+          "warmup_s": 2,
+          "sample_window_s": 5,
+          "sampled_frames": 150,
+          "motion": "Actual EnhancedInput A/D running on flat ground, turn at X=-450/350 cm; identical path policy in both phases",
+          "mean_wall_frame_ms": 33.3310146878163,
+          "mean_game_ms": 1.8426746646563212,
+          "mean_render_ms": 4.065470004081726,
+          "mean_gpu_ms": 5.560088659922282,
+          "gpu_timer_available": true,
+          "p95_wall_frame_ms": 33.48109871149063,
+          "median_wall_frame_ms": 33.33039954304695
+        },
+        {
+          "mode": "mesh_hidden_animation_tick_disabled",
+          "warmup_s": 2,
+          "sample_window_s": 5,
+          "sampled_frames": 150,
+          "motion": "Actual EnhancedInput A/D running on flat ground, turn at X=-450/350 cm; identical path policy in both phases",
+          "mean_wall_frame_ms": 33.333368649085365,
+          "mean_game_ms": 1.6679646674791972,
+          "mean_render_ms": 3.707691332499186,
+          "mean_gpu_ms": 4.60293667157491,
+          "gpu_timer_available": true,
+          "p95_wall_frame_ms": 33.46499800682068,
+          "median_wall_frame_ms": 33.332500606775284
+        }
+      ]
+    },
+    {
+      "summary_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaTests\\20261013T003721Z_12492\\summary.json",
+      "run_id": "20261013T003721Z_12492",
+      "status": "PASS",
+      "complete": true,
+      "planned_cases": 24,
+      "completed_cases": 24,
+      "screenshots_saved": true,
+      "output_write_failed": false,
+      "failed_cases": [],
+      "csv_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaTests\\20261013T003721Z_12492\\frames.csv",
+      "simulation_frame_time": {
+        "sample_count": 4755,
+        "median_ms": 16.6668,
+        "p95_ms": 16.6669
+      },
+      "wall_frame_time": {
+        "sample_count": 4755,
+        "median_ms": 16.6672,
+        "p95_ms": 16.8112
+      },
+      "timing_limit": "Positive finite case CSV samples; excludes zero paused simulation ticks. Includes case screenshots/CPU skin extraction and startup effects, so this is a regression cadence record, not a stable performance baseline. P95 uses nearest rank.",
+      "performance_samples": [
+        {
+          "mode": "mesh_visible_animation_enabled",
+          "warmup_s": 2,
+          "sample_window_s": 5,
+          "sampled_frames": 300,
+          "motion": "Actual EnhancedInput A/D running on flat ground, turn at X=-450/350 cm; identical path policy in both phases",
+          "mean_wall_frame_ms": 16.667788326740265,
+          "mean_game_ms": 1.8566406647364297,
+          "mean_render_ms": 3.975485333601634,
+          "mean_gpu_ms": 5.273488330841064,
+          "gpu_timer_available": true,
+          "p95_wall_frame_ms": 16.81719720363617,
+          "median_wall_frame_ms": 16.667600721120834
+        },
+        {
+          "mode": "mesh_hidden_animation_tick_disabled",
+          "warmup_s": 2,
+          "sample_window_s": 5,
+          "sampled_frames": 299,
+          "motion": "Actual EnhancedInput A/D running on flat ground, turn at X=-450/350 cm; identical path policy in both phases",
+          "mean_wall_frame_ms": 16.66703578520778,
+          "mean_game_ms": 1.6766073596118685,
+          "mean_render_ms": 3.845215055854823,
+          "mean_gpu_ms": 4.5908531807736805,
+          "gpu_timer_available": true,
+          "p95_wall_frame_ms": 16.793198883533478,
+          "median_wall_frame_ms": 16.665101051330566
+        }
+      ]
+    },
+    {
+      "summary_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaTests\\20261013T010057Z_42096\\summary.json",
+      "run_id": "20261013T010057Z_42096",
+      "status": "PASS",
+      "complete": true,
+      "planned_cases": 24,
+      "completed_cases": 24,
+      "screenshots_saved": true,
+      "output_write_failed": false,
+      "failed_cases": [],
+      "csv_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaTests\\20261013T010057Z_42096\\frames.csv",
+      "simulation_frame_time": {
+        "sample_count": 4755,
+        "median_ms": 16.6668,
+        "p95_ms": 16.6669
+      },
+      "wall_frame_time": {
+        "sample_count": 4755,
+        "median_ms": 16.6692,
+        "p95_ms": 17.0445
+      },
+      "timing_limit": "Positive finite case CSV samples; excludes zero paused simulation ticks. Includes case screenshots/CPU skin extraction and startup effects, so this is a regression cadence record, not a stable performance baseline. P95 uses nearest rank.",
+      "performance_samples": [
+        {
+          "mode": "mesh_visible_animation_enabled",
+          "warmup_s": 2,
+          "sample_window_s": 5,
+          "sampled_frames": 300,
+          "motion": "Actual EnhancedInput Shift + Left/Right running on flat ground, turn at X=-450/350 cm; identical path policy in both phases",
+          "mean_wall_frame_ms": 16.66703333457311,
+          "mean_game_ms": 2.1491586697101592,
+          "mean_render_ms": 4.188294664223989,
+          "mean_gpu_ms": 5.398572335243225,
+          "gpu_timer_available": true,
+          "p95_wall_frame_ms": 16.975101083517075,
+          "median_wall_frame_ms": 16.67189970612526
+        },
+        {
+          "mode": "mesh_hidden_animation_tick_disabled",
+          "warmup_s": 2,
+          "sample_window_s": 5,
+          "sampled_frames": 299,
+          "motion": "Actual EnhancedInput Shift + Left/Right running on flat ground, turn at X=-450/350 cm; identical path policy in both phases",
+          "mean_wall_frame_ms": 16.668940143641024,
+          "mean_game_ms": 2.0910655515249754,
+          "mean_render_ms": 4.2980585265717774,
+          "mean_gpu_ms": 4.659686618026682,
+          "gpu_timer_available": true,
+          "p95_wall_frame_ms": 16.89710095524788,
+          "median_wall_frame_ms": 16.665998846292496
+        }
+      ]
+    },
+    {
+      "summary_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaTests\\20261013T053123Z_44908\\summary.json",
+      "run_id": "20261013T053123Z_44908",
+      "status": "PASS",
+      "complete": true,
+      "planned_cases": 24,
+      "completed_cases": 24,
+      "screenshots_saved": true,
+      "output_write_failed": false,
+      "failed_cases": [],
+      "csv_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaTests\\20261013T053123Z_44908\\frames.csv",
+      "simulation_frame_time": {
+        "sample_count": 3645,
+        "median_ms": 21.8363,
+        "p95_ms": 24.6603
+      },
+      "wall_frame_time": {
+        "sample_count": 3645,
+        "median_ms": 21.8246,
+        "p95_ms": 24.7036
+      },
+      "timing_limit": "Positive finite case CSV samples; excludes zero paused simulation ticks. Includes case screenshots/CPU skin extraction and startup effects, so this is a regression cadence record, not a stable performance baseline. P95 uses nearest rank.",
+      "performance_samples": [
+        {
+          "mode": "mesh_visible_animation_enabled",
+          "warmup_s": 2,
+          "sample_window_s": 5,
+          "sampled_frames": 214,
+          "motion": "Actual EnhancedInput A/D running on flat ground, turn at X=-450/350 cm; identical path policy in both phases",
+          "mean_wall_frame_ms": 23.425171952520575,
+          "mean_game_ms": 2.788147665629877,
+          "mean_render_ms": 23.423645304742262,
+          "mean_gpu_ms": 21.630664460012845,
+          "gpu_timer_available": true,
+          "p95_wall_frame_ms": 25.224797427654266,
+          "median_wall_frame_ms": 23.285500705242157
+        },
+        {
+          "mode": "mesh_hidden_animation_tick_disabled",
+          "warmup_s": 2,
+          "sample_window_s": 5,
+          "sampled_frames": 280,
+          "motion": "Actual EnhancedInput A/D running on flat ground, turn at X=-450/350 cm; identical path policy in both phases",
+          "mean_wall_frame_ms": 17.870769995663846,
+          "mean_game_ms": 2.4129460679633277,
+          "mean_render_ms": 10.456132851328169,
+          "mean_gpu_ms": 16.179064985683986,
+          "gpu_timer_available": true,
+          "p95_wall_frame_ms": 23.459699004888535,
+          "median_wall_frame_ms": 16.696099191904068
+        }
+      ]
+    }
+  ]
+}

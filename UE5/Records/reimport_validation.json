@@ -1,0 +1,795 @@
+{
+  "phase": "mesh_only_reimport_validation",
+  "timestamp_utc": "2026-10-11T01:57:57.153359+00:00",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "status": "mesh_reimport_data_stable_pending_visual_runtime_validation",
+  "importer": "Legacy FbxFactory / ReimportFbxSkeletalMeshFactory",
+  "checks": {
+    "task_returned_existing_mesh_only": {
+      "status": "passed",
+      "reason": "The import task may return only the existing mesh, with no new Skeleton/clip/material objects"
+    },
+    "actual_reimport_success_log": {
+      "status": "passed",
+      "reason": "Factory returning an existing object is insufficient; require atomic reimport and successful import log messages"
+    },
+    "mesh.path.stable": {
+      "status": "passed",
+      "reason": "Mesh property compared before/after same-source reimport"
+    },
+    "mesh.skeleton.stable": {
+      "status": "passed",
+      "reason": "Mesh property compared before/after same-source reimport"
+    },
+    "mesh.bounds.stable": {
+      "status": "passed",
+      "reason": "Mesh property compared before/after same-source reimport"
+    },
+    "mesh.has_vertex_colors.stable": {
+      "status": "passed",
+      "reason": "Mesh property compared before/after same-source reimport"
+    },
+    "mesh.render_counts.stable": {
+      "status": "passed",
+      "reason": "Mesh property compared before/after same-source reimport"
+    },
+    "mesh.bones.stable": {
+      "status": "passed",
+      "reason": "Mesh property compared before/after same-source reimport"
+    },
+    "mesh.materials.stable": {
+      "status": "passed",
+      "reason": "Mesh property compared before/after same-source reimport"
+    },
+    "clip.Idle.data_unchanged": {
+      "status": "passed",
+      "reason": "Path, Skeleton, duration, tracks, frame count and every-bone/every-frame pose fingerprint must remain unchanged"
+    },
+    "clip.Walk.data_unchanged": {
+      "status": "passed",
+      "reason": "Path, Skeleton, duration, tracks, frame count and every-bone/every-frame pose fingerprint must remain unchanged"
+    },
+    "clip.Jump.data_unchanged": {
+      "status": "passed",
+      "reason": "Path, Skeleton, duration, tracks, frame count and every-bone/every-frame pose fingerprint must remain unchanged"
+    },
+    "clip.Laugh.data_unchanged": {
+      "status": "passed",
+      "reason": "Path, Skeleton, duration, tracks, frame count and every-bone/every-frame pose fingerprint must remain unchanged"
+    },
+    "dependent_references_unchanged": {
+      "status": "passed",
+      "reason": "ABP Skeleton and character mesh/class/sequence references must remain unchanged"
+    },
+    "asset_paths_unchanged": {
+      "status": "passed",
+      "reason": "Mesh-only reimport must not create duplicate animation/material/skeleton assets"
+    },
+    "mesh_saved": {
+      "status": "passed",
+      "reason": "Save only the mesh; the four animation packages are not saved or reimported"
+    },
+    "clip.Idle.package_bytes_unchanged": {
+      "status": "passed",
+      "reason": "Every animation package/sidecar SHA256 is identical before and after the mesh reimport"
+    },
+    "clip.Walk.package_bytes_unchanged": {
+      "status": "passed",
+      "reason": "Every animation package/sidecar SHA256 is identical before and after the mesh reimport"
+    },
+    "clip.Jump.package_bytes_unchanged": {
+      "status": "passed",
+      "reason": "Every animation package/sidecar SHA256 is identical before and after the mesh reimport"
+    },
+    "clip.Laugh.package_bytes_unchanged": {
+      "status": "passed",
+      "reason": "Every animation package/sidecar SHA256 is identical before and after the mesh reimport"
+    },
+    "only_mesh_package_changed": {
+      "status": "passed",
+      "reason": "Only SK_Naiwa package/sidecars may change; unrelated assets must remain byte-for-byte unchanged"
+    },
+    "pinned_sources_unchanged": {
+      "status": "passed",
+      "reason": "Original FBX and Blender source bytes remain unchanged"
+    }
+  },
+  "warnings": [
+    "[2026.10.11-01.58.17:562][  0]FBXImport: Warning: 此FBX场景中未发现平滑组信息。导出文件前必须在FBX导出器插件中启用“导出平滑组（Export Smoothing Groups）”选项。对不支持平滑组的工具而言，导出时FBX导出器仍将生成正确的平滑数据，从而在导入时推断出正确的顶点法线。 ",
+    "[2026.10.11-01.58.17:562][  0]FBXImport: Warning: 网格体“L concentric iris and pupil”没有UV集。正在创建一个默认集。 ",
+    "[2026.10.11-01.58.17:562][  0]FBXImport: Warning: 网格体“Naiwa unified golden body”没有UV集。正在创建一个默认集。 ",
+    "[2026.10.11-01.58.17:562][  0]FBXImport: Warning: 网格体“R concentric iris and pupil”没有UV集。正在创建一个默认集。 ",
+    "[2026.10.11-01.58.17:563][  0]FBXImport: Warning: 网格体“Short closed oral seam”没有UV集。正在创建一个默认集。 "
+  ],
+  "unverified": [
+    "rendered material equivalence and runtime behavior after reimport"
+  ],
+  "sources_before": {
+    "fbx": {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.fbx",
+      "sha256": "8dae9ce28c4b44465dcb8e73dd462804c3a561daee9eebaf79842900a3005147"
+    },
+    "blend": {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.blend",
+      "sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322"
+    }
+  },
+  "before": {
+    "mesh": {
+      "path": "/Game/Naiwa/SK_Naiwa.SK_Naiwa",
+      "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+      "bounds": {
+        "origin": [
+          -2.288818359375e-05,
+          7.04417610168457,
+          132.6415308713913
+        ],
+        "extent": [
+          88.10216522216797,
+          65.83743858337402,
+          131.84153187274933
+        ]
+      },
+      "has_vertex_colors": true,
+      "render_counts": {
+        "Vertices": 387974,
+        "Triangles": 775296,
+        "Bones": 11,
+        "LODs": 1
+      },
+      "bones": [
+        {
+          "name": "Naiwa_Rig",
+          "parent": "None"
+        },
+        {
+          "name": "Root",
+          "parent": "Naiwa_Rig"
+        },
+        {
+          "name": "Torso",
+          "parent": "Root"
+        },
+        {
+          "name": "UpperArm_L",
+          "parent": "Torso"
+        },
+        {
+          "name": "Forearm_L",
+          "parent": "UpperArm_L"
+        },
+        {
+          "name": "UpperArm_R",
+          "parent": "Torso"
+        },
+        {
+          "name": "Forearm_R",
+          "parent": "UpperArm_R"
+        },
+        {
+          "name": "Thigh_L",
+          "parent": "Root"
+        },
+        {
+          "name": "Shin_L",
+          "parent": "Thigh_L"
+        },
+        {
+          "name": "Thigh_R",
+          "parent": "Root"
+        },
+        {
+          "name": "Shin_R",
+          "parent": "Thigh_R"
+        }
+      ],
+      "materials": [
+        {
+          "slot": "L single eye surface",
+          "material": "/Game/Naiwa/Materials/M_NaiwaEye.M_NaiwaEye",
+          "base_color_node": "MaterialExpressionVertexColor",
+          "base_color_output": "",
+          "skeletal_mesh_usage": true
+        },
+        {
+          "slot": "Eye glints",
+          "material": "/Game/Naiwa/Materials/M_NaiwaGlint.M_NaiwaGlint",
+          "base_color_node": "MaterialExpressionConstant3Vector",
+          "base_color_output": "",
+          "skeletal_mesh_usage": true
+        },
+        {
+          "slot": "Soft ochre yellow skin",
+          "material": "/Game/Naiwa/Materials/M_NaiwaBody.M_NaiwaBody",
+          "base_color_node": "MaterialExpressionVertexColor",
+          "base_color_output": "",
+          "skeletal_mesh_usage": true
+        },
+        {
+          "slot": "R single eye surface",
+          "material": "/Game/Naiwa/Materials/M_NaiwaEye.M_NaiwaEye",
+          "base_color_node": "MaterialExpressionVertexColor",
+          "base_color_output": "",
+          "skeletal_mesh_usage": true
+        },
+        {
+          "slot": "Recessed mouth deep brown_001",
+          "material": "/Game/Naiwa/Materials/M_NaiwaMouth.M_NaiwaMouth",
+          "base_color_node": "MaterialExpressionConstant3Vector",
+          "base_color_output": "",
+          "skeletal_mesh_usage": true
+        }
+      ]
+    },
+    "animations": {
+      "Idle": {
+        "path": "/Game/Naiwa/AS_Naiwa_Idle.AS_Naiwa_Idle",
+        "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+        "duration_seconds": 1.25,
+        "frame_intervals": 120,
+        "sampled_keys": 121,
+        "tracks": [
+          "naiwa_rig",
+          "root",
+          "torso",
+          "upperarm_l",
+          "forearm_l",
+          "upperarm_r",
+          "forearm_r",
+          "thigh_l",
+          "shin_l",
+          "thigh_r",
+          "shin_r"
+        ],
+        "all_bone_all_frame_pose_sha256": "668f6e69dac93c6ae4ab1925d0b7f5e6f551bc5a27a6049caeb8918dc92d5eec"
+      },
+      "Walk": {
+        "path": "/Game/Naiwa/AS_Naiwa_Walk.AS_Naiwa_Walk",
+        "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+        "duration_seconds": 1.3333333730697632,
+        "frame_intervals": 128,
+        "sampled_keys": 129,
+        "tracks": [
+          "naiwa_rig",
+          "root",
+          "torso",
+          "upperarm_l",
+          "forearm_l",
+          "upperarm_r",
+          "forearm_r",
+          "thigh_l",
+          "shin_l",
+          "thigh_r",
+          "shin_r"
+        ],
+        "all_bone_all_frame_pose_sha256": "4f041dbae417e824c0668b070f9a9ae1bb86da990bf074f0204badac3d0b68af"
+      },
+      "Jump": {
+        "path": "/Game/Naiwa/AS_Naiwa_Jump.AS_Naiwa_Jump",
+        "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+        "duration_seconds": 0.7916666865348816,
+        "frame_intervals": 76,
+        "sampled_keys": 77,
+        "tracks": [
+          "naiwa_rig",
+          "root",
+          "torso",
+          "upperarm_l",
+          "forearm_l",
+          "upperarm_r",
+          "forearm_r",
+          "thigh_l",
+          "shin_l",
+          "thigh_r",
+          "shin_r"
+        ],
+        "all_bone_all_frame_pose_sha256": "52978880853fdb1748eb9d006d99bf3254fec1094b201cc1f8b74fa27f4f19fc"
+      },
+      "Laugh": {
+        "path": "/Game/Naiwa/AS_Naiwa_Laugh.AS_Naiwa_Laugh",
+        "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+        "duration_seconds": 1.0,
+        "frame_intervals": 96,
+        "sampled_keys": 97,
+        "tracks": [
+          "naiwa_rig",
+          "root",
+          "torso",
+          "upperarm_l",
+          "forearm_l",
+          "upperarm_r",
+          "forearm_r",
+          "thigh_l",
+          "shin_l",
+          "thigh_r",
+          "shin_r"
+        ],
+        "all_bone_all_frame_pose_sha256": "f68098a390ea5d861400a6319aee18da71598deac208f16bb2ca2811a4b63d7a"
+      }
+    },
+    "dependent_references": {
+      "ABP_Naiwa": {
+        "present": true,
+        "path": "/Game/Naiwa/Blueprints/ABP_Naiwa.ABP_Naiwa",
+        "target_skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+        "idle_sequence": "/Game/Naiwa/AS_Naiwa_Idle.AS_Naiwa_Idle",
+        "walk_sequence": "/Game/Naiwa/AS_Naiwa_Walk.AS_Naiwa_Walk",
+        "jump_sequence": "/Game/Naiwa/AS_Naiwa_Jump.AS_Naiwa_Jump",
+        "laugh_sequence": "/Game/Naiwa/AS_Naiwa_Laugh.AS_Naiwa_Laugh"
+      },
+      "BP_NaiwaCharacter": {
+        "present": true,
+        "path": "/Game/Naiwa/Blueprints/BP_NaiwaCharacter.BP_NaiwaCharacter",
+        "skeletal_mesh_asset": "/Game/Naiwa/SK_Naiwa.SK_Naiwa",
+        "animation_class": "/Game/Naiwa/Blueprints/ABP_Naiwa.ABP_Naiwa_C",
+        "idle_sequence": "/Game/Naiwa/AS_Naiwa_Idle.AS_Naiwa_Idle",
+        "walk_sequence": "/Game/Naiwa/AS_Naiwa_Walk.AS_Naiwa_Walk",
+        "jump_sequence": "/Game/Naiwa/AS_Naiwa_Jump.AS_Naiwa_Jump",
+        "laugh_sequence": "/Game/Naiwa/AS_Naiwa_Laugh.AS_Naiwa_Laugh"
+      }
+    },
+    "asset_paths": [
+      "/Game/Naiwa/AS_Naiwa_Idle.AS_Naiwa_Idle",
+      "/Game/Naiwa/AS_Naiwa_Jump.AS_Naiwa_Jump",
+      "/Game/Naiwa/AS_Naiwa_Laugh.AS_Naiwa_Laugh",
+      "/Game/Naiwa/AS_Naiwa_Walk.AS_Naiwa_Walk",
+      "/Game/Naiwa/Blueprints/ABP_Naiwa.ABP_Naiwa",
+      "/Game/Naiwa/Blueprints/BP_NaiwaCharacter.BP_NaiwaCharacter",
+      "/Game/Naiwa/Blueprints/BP_NaiwaGameMode.BP_NaiwaGameMode",
+      "/Game/Naiwa/Input/IA_NaiwaJump.IA_NaiwaJump",
+      "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "/Game/Naiwa/Input/IA_NaiwaPause.IA_NaiwaPause",
+      "/Game/Naiwa/Input/IA_NaiwaReset.IA_NaiwaReset",
+      "/Game/Naiwa/Input/IMC_Naiwa.IMC_Naiwa",
+      "/Game/Naiwa/Maps/L_NaiwaGraybox.L_NaiwaGraybox",
+      "/Game/Naiwa/Materials/M_GrayboxFloor.M_GrayboxFloor",
+      "/Game/Naiwa/Materials/M_GrayboxPlatform.M_GrayboxPlatform",
+      "/Game/Naiwa/Materials/M_NaiwaBody.M_NaiwaBody",
+      "/Game/Naiwa/Materials/M_NaiwaEye.M_NaiwaEye",
+      "/Game/Naiwa/Materials/M_NaiwaGlint.M_NaiwaGlint",
+      "/Game/Naiwa/Materials/M_NaiwaMouth.M_NaiwaMouth",
+      "/Game/Naiwa/SK_Naiwa.SK_Naiwa",
+      "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton"
+    ]
+  },
+  "files_before": {
+    "AS_Naiwa_Idle.uasset": {
+      "sha256": "6de2597d637db1ac2838042faedf0de5629c36ed2b9f7b155eeec1e2b691ab62",
+      "bytes": 23314
+    },
+    "AS_Naiwa_Jump.uasset": {
+      "sha256": "7571f30d94d59a4e8654f83af02a6735c6fc59e5f9bedd4ce38c562ecbdd1889",
+      "bytes": 26831
+    },
+    "AS_Naiwa_Laugh.uasset": {
+      "sha256": "a684835f09fcce92cc0565e8cced0feaedc01c3f04949abb1022c74de6e69558",
+      "bytes": 28756
+    },
+    "AS_Naiwa_Walk.uasset": {
+      "sha256": "e7e0c9eaae2c072728defd1181aaabd48c2804dee61c527ab64d89daf55db4ff",
+      "bytes": 44210
+    },
+    "Blueprints/ABP_Naiwa.uasset": {
+      "sha256": "7810a35620eac55fa0f70eea6e0855338c2c85caf05cea7215f43134ee5185d9",
+      "bytes": 24912
+    },
+    "Blueprints/BP_NaiwaCharacter.uasset": {
+      "sha256": "d818138f06e5602904c715f847df9ab7000459ec753d0b5bac05447579d779f9",
+      "bytes": 27919
+    },
+    "Blueprints/BP_NaiwaGameMode.uasset": {
+      "sha256": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+      "bytes": 21249
+    },
+    "Input/IA_NaiwaJump.uasset": {
+      "sha256": "63dc4387280e60af5941fc91a63b3686328b8c8168d69449d2774e9f35ba58fc",
+      "bytes": 1142
+    },
+    "Input/IA_NaiwaMove.uasset": {
+      "sha256": "35b3afd3e028bb34def27ad0833a725156dc44e7d4ab3af9e46dc66d86e5a15d",
+      "bytes": 1338
+    },
+    "Input/IA_NaiwaPause.uasset": {
+      "sha256": "981a93df5d5959e12da9d00fcaebe5ce9c793dcd11323564236f3ff9d2014b47",
+      "bytes": 1219
+    },
+    "Input/IA_NaiwaReset.uasset": {
+      "sha256": "75678d69dbf1a180a5e2f9d1c3e0e7b034b4612b3c46a07c80f9ba27d9581340",
+      "bytes": 1219
+    },
+    "Input/IMC_Naiwa.uasset": {
+      "sha256": "8b12ba6a7fd366dd688f582a0f157eb05388a8b88b81fd624d7d755e1aaafecb",
+      "bytes": 6078
+    },
+    "Maps/L_NaiwaGraybox.umap": {
+      "sha256": "bb98bc93769e153eb7bc41a754ec4f928e13de712308caf06416e736fd54512e",
+      "bytes": 29744
+    },
+    "Materials/M_GrayboxFloor.uasset": {
+      "sha256": "95d242ccfa840a44c9759aebe7dc71fe6c15cdb4721d23f5b0a13fcc4714e19f",
+      "bytes": 6084
+    },
+    "Materials/M_GrayboxPlatform.uasset": {
+      "sha256": "298583ec51b0a779e7e141a3a17b69f41158974cbdaa48c366111753129ce087",
+      "bytes": 6099
+    },
+    "Materials/M_NaiwaBody.uasset": {
+      "sha256": "194eebeff2367ee3971d6f3b11048f1d65dc2f2ebc9eed24bb280eda4f9b1577",
+      "bytes": 5983
+    },
+    "Materials/M_NaiwaEye.uasset": {
+      "sha256": "1638f0b2b946898f8bbf719ba3f29a454f0535d168fbde9c662e631bb20daf5a",
+      "bytes": 5978
+    },
+    "Materials/M_NaiwaGlint.uasset": {
+      "sha256": "41351e9ae1522af1b28a724ec4ce0aea60217e8ad1989ede35cabeb3e9e04f66",
+      "bytes": 6074
+    },
+    "Materials/M_NaiwaMouth.uasset": {
+      "sha256": "60298f966b1b0c235d0468a83dd367fd78c796755a314a38850a5f6206ee35fb",
+      "bytes": 6074
+    },
+    "SK_Naiwa.uasset": {
+      "sha256": "5e0b97db7828a03ac5ecbbc6991429ee9d01fd12d5e49bebcc11004fc4413cf1",
+      "bytes": 91530652
+    },
+    "SK_Naiwa_Skeleton.uasset": {
+      "sha256": "3cec7958d87684427f2d5d4af7922f18c973a2657d41313c5f48c64a8c347dce",
+      "bytes": 4061
+    }
+  },
+  "backup": {
+    "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\ReimportBackups\\20261011T015757_153359Z\\Content\\Naiwa",
+    "files": 21,
+    "restore_instruction": "Stop all editors for NaiwaP0 before copying affected backup files back to Content/Naiwa."
+  },
+  "imported_object_paths": [
+    "/Game/Naiwa/SK_Naiwa.SK_Naiwa"
+  ],
+  "task_result_paths": [
+    "/Game/Naiwa/SK_Naiwa.SK_Naiwa"
+  ],
+  "import_log_evidence": {
+    "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\reimport.log",
+    "atomic_reimport_logged": true,
+    "import_success_logged": true,
+    "import_failure_logged": false
+  },
+  "after": {
+    "mesh": {
+      "path": "/Game/Naiwa/SK_Naiwa.SK_Naiwa",
+      "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+      "bounds": {
+        "origin": [
+          -2.288818359375e-05,
+          7.04417610168457,
+          132.6415308713913
+        ],
+        "extent": [
+          88.10216522216797,
+          65.83743858337402,
+          131.84153187274933
+        ]
+      },
+      "has_vertex_colors": true,
+      "render_counts": {
+        "Vertices": 387974,
+        "Triangles": 775296,
+        "Bones": 11,
+        "LODs": 1
+      },
+      "bones": [
+        {
+          "name": "Naiwa_Rig",
+          "parent": "None"
+        },
+        {
+          "name": "Root",
+          "parent": "Naiwa_Rig"
+        },
+        {
+          "name": "Torso",
+          "parent": "Root"
+        },
+        {
+          "name": "UpperArm_L",
+          "parent": "Torso"
+        },
+        {
+          "name": "Forearm_L",
+          "parent": "UpperArm_L"
+        },
+        {
+          "name": "UpperArm_R",
+          "parent": "Torso"
+        },
+        {
+          "name": "Forearm_R",
+          "parent": "UpperArm_R"
+        },
+        {
+          "name": "Thigh_L",
+          "parent": "Root"
+        },
+        {
+          "name": "Shin_L",
+          "parent": "Thigh_L"
+        },
+        {
+          "name": "Thigh_R",
+          "parent": "Root"
+        },
+        {
+          "name": "Shin_R",
+          "parent": "Thigh_R"
+        }
+      ],
+      "materials": [
+        {
+          "slot": "L single eye surface",
+          "material": "/Game/Naiwa/Materials/M_NaiwaEye.M_NaiwaEye",
+          "base_color_node": "MaterialExpressionVertexColor",
+          "base_color_output": "",
+          "skeletal_mesh_usage": true
+        },
+        {
+          "slot": "Eye glints",
+          "material": "/Game/Naiwa/Materials/M_NaiwaGlint.M_NaiwaGlint",
+          "base_color_node": "MaterialExpressionConstant3Vector",
+          "base_color_output": "",
+          "skeletal_mesh_usage": true
+        },
+        {
+          "slot": "Soft ochre yellow skin",
+          "material": "/Game/Naiwa/Materials/M_NaiwaBody.M_NaiwaBody",
+          "base_color_node": "MaterialExpressionVertexColor",
+          "base_color_output": "",
+          "skeletal_mesh_usage": true
+        },
+        {
+          "slot": "R single eye surface",
+          "material": "/Game/Naiwa/Materials/M_NaiwaEye.M_NaiwaEye",
+          "base_color_node": "MaterialExpressionVertexColor",
+          "base_color_output": "",
+          "skeletal_mesh_usage": true
+        },
+        {
+          "slot": "Recessed mouth deep brown_001",
+          "material": "/Game/Naiwa/Materials/M_NaiwaMouth.M_NaiwaMouth",
+          "base_color_node": "MaterialExpressionConstant3Vector",
+          "base_color_output": "",
+          "skeletal_mesh_usage": true
+        }
+      ]
+    },
+    "animations": {
+      "Idle": {
+        "path": "/Game/Naiwa/AS_Naiwa_Idle.AS_Naiwa_Idle",
+        "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+        "duration_seconds": 1.25,
+        "frame_intervals": 120,
+        "sampled_keys": 121,
+        "tracks": [
+          "naiwa_rig",
+          "root",
+          "torso",
+          "upperarm_l",
+          "forearm_l",
+          "upperarm_r",
+          "forearm_r",
+          "thigh_l",
+          "shin_l",
+          "thigh_r",
+          "shin_r"
+        ],
+        "all_bone_all_frame_pose_sha256": "668f6e69dac93c6ae4ab1925d0b7f5e6f551bc5a27a6049caeb8918dc92d5eec"
+      },
+      "Walk": {
+        "path": "/Game/Naiwa/AS_Naiwa_Walk.AS_Naiwa_Walk",
+        "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+        "duration_seconds": 1.3333333730697632,
+        "frame_intervals": 128,
+        "sampled_keys": 129,
+        "tracks": [
+          "naiwa_rig",
+          "root",
+          "torso",
+          "upperarm_l",
+          "forearm_l",
+          "upperarm_r",
+          "forearm_r",
+          "thigh_l",
+          "shin_l",
+          "thigh_r",
+          "shin_r"
+        ],
+        "all_bone_all_frame_pose_sha256": "4f041dbae417e824c0668b070f9a9ae1bb86da990bf074f0204badac3d0b68af"
+      },
+      "Jump": {
+        "path": "/Game/Naiwa/AS_Naiwa_Jump.AS_Naiwa_Jump",
+        "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+        "duration_seconds": 0.7916666865348816,
+        "frame_intervals": 76,
+        "sampled_keys": 77,
+        "tracks": [
+          "naiwa_rig",
+          "root",
+          "torso",
+          "upperarm_l",
+          "forearm_l",
+          "upperarm_r",
+          "forearm_r",
+          "thigh_l",
+          "shin_l",
+          "thigh_r",
+          "shin_r"
+        ],
+        "all_bone_all_frame_pose_sha256": "52978880853fdb1748eb9d006d99bf3254fec1094b201cc1f8b74fa27f4f19fc"
+      },
+      "Laugh": {
+        "path": "/Game/Naiwa/AS_Naiwa_Laugh.AS_Naiwa_Laugh",
+        "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+        "duration_seconds": 1.0,
+        "frame_intervals": 96,
+        "sampled_keys": 97,
+        "tracks": [
+          "naiwa_rig",
+          "root",
+          "torso",
+          "upperarm_l",
+          "forearm_l",
+          "upperarm_r",
+          "forearm_r",
+          "thigh_l",
+          "shin_l",
+          "thigh_r",
+          "shin_r"
+        ],
+        "all_bone_all_frame_pose_sha256": "f68098a390ea5d861400a6319aee18da71598deac208f16bb2ca2811a4b63d7a"
+      }
+    },
+    "dependent_references": {
+      "ABP_Naiwa": {
+        "present": true,
+        "path": "/Game/Naiwa/Blueprints/ABP_Naiwa.ABP_Naiwa",
+        "target_skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+        "idle_sequence": "/Game/Naiwa/AS_Naiwa_Idle.AS_Naiwa_Idle",
+        "walk_sequence": "/Game/Naiwa/AS_Naiwa_Walk.AS_Naiwa_Walk",
+        "jump_sequence": "/Game/Naiwa/AS_Naiwa_Jump.AS_Naiwa_Jump",
+        "laugh_sequence": "/Game/Naiwa/AS_Naiwa_Laugh.AS_Naiwa_Laugh"
+      },
+      "BP_NaiwaCharacter": {
+        "present": true,
+        "path": "/Game/Naiwa/Blueprints/BP_NaiwaCharacter.BP_NaiwaCharacter",
+        "skeletal_mesh_asset": "/Game/Naiwa/SK_Naiwa.SK_Naiwa",
+        "animation_class": "/Game/Naiwa/Blueprints/ABP_Naiwa.ABP_Naiwa_C",
+        "idle_sequence": "/Game/Naiwa/AS_Naiwa_Idle.AS_Naiwa_Idle",
+        "walk_sequence": "/Game/Naiwa/AS_Naiwa_Walk.AS_Naiwa_Walk",
+        "jump_sequence": "/Game/Naiwa/AS_Naiwa_Jump.AS_Naiwa_Jump",
+        "laugh_sequence": "/Game/Naiwa/AS_Naiwa_Laugh.AS_Naiwa_Laugh"
+      }
+    },
+    "asset_paths": [
+      "/Game/Naiwa/AS_Naiwa_Idle.AS_Naiwa_Idle",
+      "/Game/Naiwa/AS_Naiwa_Jump.AS_Naiwa_Jump",
+      "/Game/Naiwa/AS_Naiwa_Laugh.AS_Naiwa_Laugh",
+      "/Game/Naiwa/AS_Naiwa_Walk.AS_Naiwa_Walk",
+      "/Game/Naiwa/Blueprints/ABP_Naiwa.ABP_Naiwa",
+      "/Game/Naiwa/Blueprints/BP_NaiwaCharacter.BP_NaiwaCharacter",
+      "/Game/Naiwa/Blueprints/BP_NaiwaGameMode.BP_NaiwaGameMode",
+      "/Game/Naiwa/Input/IA_NaiwaJump.IA_NaiwaJump",
+      "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "/Game/Naiwa/Input/IA_NaiwaPause.IA_NaiwaPause",
+      "/Game/Naiwa/Input/IA_NaiwaReset.IA_NaiwaReset",
+      "/Game/Naiwa/Input/IMC_Naiwa.IMC_Naiwa",
+      "/Game/Naiwa/Maps/L_NaiwaGraybox.L_NaiwaGraybox",
+      "/Game/Naiwa/Materials/M_GrayboxFloor.M_GrayboxFloor",
+      "/Game/Naiwa/Materials/M_GrayboxPlatform.M_GrayboxPlatform",
+      "/Game/Naiwa/Materials/M_NaiwaBody.M_NaiwaBody",
+      "/Game/Naiwa/Materials/M_NaiwaEye.M_NaiwaEye",
+      "/Game/Naiwa/Materials/M_NaiwaGlint.M_NaiwaGlint",
+      "/Game/Naiwa/Materials/M_NaiwaMouth.M_NaiwaMouth",
+      "/Game/Naiwa/SK_Naiwa.SK_Naiwa",
+      "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton"
+    ]
+  },
+  "files_after": {
+    "AS_Naiwa_Idle.uasset": {
+      "sha256": "6de2597d637db1ac2838042faedf0de5629c36ed2b9f7b155eeec1e2b691ab62",
+      "bytes": 23314
+    },
+    "AS_Naiwa_Jump.uasset": {
+      "sha256": "7571f30d94d59a4e8654f83af02a6735c6fc59e5f9bedd4ce38c562ecbdd1889",
+      "bytes": 26831
+    },
+    "AS_Naiwa_Laugh.uasset": {
+      "sha256": "a684835f09fcce92cc0565e8cced0feaedc01c3f04949abb1022c74de6e69558",
+      "bytes": 28756
+    },
+    "AS_Naiwa_Walk.uasset": {
+      "sha256": "e7e0c9eaae2c072728defd1181aaabd48c2804dee61c527ab64d89daf55db4ff",
+      "bytes": 44210
+    },
+    "Blueprints/ABP_Naiwa.uasset": {
+      "sha256": "7810a35620eac55fa0f70eea6e0855338c2c85caf05cea7215f43134ee5185d9",
+      "bytes": 24912
+    },
+    "Blueprints/BP_NaiwaCharacter.uasset": {
+      "sha256": "d818138f06e5602904c715f847df9ab7000459ec753d0b5bac05447579d779f9",
+      "bytes": 27919
+    },
+    "Blueprints/BP_NaiwaGameMode.uasset": {
+      "sha256": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+      "bytes": 21249
+    },
+    "Input/IA_NaiwaJump.uasset": {
+      "sha256": "63dc4387280e60af5941fc91a63b3686328b8c8168d69449d2774e9f35ba58fc",
+      "bytes": 1142
+    },
+    "Input/IA_NaiwaMove.uasset": {
+      "sha256": "35b3afd3e028bb34def27ad0833a725156dc44e7d4ab3af9e46dc66d86e5a15d",
+      "bytes": 1338
+    },
+    "Input/IA_NaiwaPause.uasset": {
+      "sha256": "981a93df5d5959e12da9d00fcaebe5ce9c793dcd11323564236f3ff9d2014b47",
+      "bytes": 1219
+    },
+    "Input/IA_NaiwaReset.uasset": {
+      "sha256": "75678d69dbf1a180a5e2f9d1c3e0e7b034b4612b3c46a07c80f9ba27d9581340",
+      "bytes": 1219
+    },
+    "Input/IMC_Naiwa.uasset": {
+      "sha256": "8b12ba6a7fd366dd688f582a0f157eb05388a8b88b81fd624d7d755e1aaafecb",
+      "bytes": 6078
+    },
+    "Maps/L_NaiwaGraybox.umap": {
+      "sha256": "bb98bc93769e153eb7bc41a754ec4f928e13de712308caf06416e736fd54512e",
+      "bytes": 29744
+    },
+    "Materials/M_GrayboxFloor.uasset": {
+      "sha256": "95d242ccfa840a44c9759aebe7dc71fe6c15cdb4721d23f5b0a13fcc4714e19f",
+      "bytes": 6084
+    },
+    "Materials/M_GrayboxPlatform.uasset": {
+      "sha256": "298583ec51b0a779e7e141a3a17b69f41158974cbdaa48c366111753129ce087",
+      "bytes": 6099
+    },
+    "Materials/M_NaiwaBody.uasset": {
+      "sha256": "194eebeff2367ee3971d6f3b11048f1d65dc2f2ebc9eed24bb280eda4f9b1577",
+      "bytes": 5983
+    },
+    "Materials/M_NaiwaEye.uasset": {
+      "sha256": "1638f0b2b946898f8bbf719ba3f29a454f0535d168fbde9c662e631bb20daf5a",
+      "bytes": 5978
+    },
+    "Materials/M_NaiwaGlint.uasset": {
+      "sha256": "41351e9ae1522af1b28a724ec4ce0aea60217e8ad1989ede35cabeb3e9e04f66",
+      "bytes": 6074
+    },
+    "Materials/M_NaiwaMouth.uasset": {
+      "sha256": "60298f966b1b0c235d0468a83dd367fd78c796755a314a38850a5f6206ee35fb",
+      "bytes": 6074
+    },
+    "SK_Naiwa.uasset": {
+      "sha256": "67f807019e6fceafe8a5b7c78037221f7fcf66c8dd515fcae52b8bee039a0734",
+      "bytes": 91530289
+    },
+    "SK_Naiwa_Skeleton.uasset": {
+      "sha256": "3cec7958d87684427f2d5d4af7922f18c973a2657d41313c5f48c64a8c347dce",
+      "bytes": 4061
+    }
+  },
+  "changed_content_files": [
+    "SK_Naiwa.uasset"
+  ],
+  "sources_after": {
+    "fbx": {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.fbx",
+      "sha256": "8dae9ce28c4b44465dcb8e73dd462804c3a561daee9eebaf79842900a3005147"
+    },
+    "blend": {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.blend",
+      "sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322"
+    }
+  }
+}

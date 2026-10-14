@@ -1,0 +1,117 @@
+{
+  "run_id": "20261011T074412Z_287152",
+  "functional_status": "PASS",
+  "late_idle_definition": "At least 0.2 seconds continuously in Idle in one case; the configured crossfade is 0.12 seconds.",
+  "morph_runtime": [
+    {
+      "state": "Jump",
+      "morph": "Belly_Compress",
+      "samples": 1401,
+      "minimum": 0.0,
+      "maximum": 0.253015,
+      "maximum_curve_component_error": 0.0
+    },
+    {
+      "state": "Jump",
+      "morph": "Belly_Rebound",
+      "samples": 1401,
+      "minimum": 0.0,
+      "maximum": 0.237091,
+      "maximum_curve_component_error": 0.0
+    },
+    {
+      "state": "Jump",
+      "morph": "Belly_SoftLag",
+      "samples": 1401,
+      "minimum": -0.199377,
+      "maximum": 0.194322,
+      "maximum_curve_component_error": 0.0
+    },
+    {
+      "state": "Walk",
+      "morph": "Belly_Compress",
+      "samples": 906,
+      "minimum": 0.000197,
+      "maximum": 0.999487,
+      "maximum_curve_component_error": 0.0
+    },
+    {
+      "state": "Walk",
+      "morph": "Belly_Rebound",
+      "samples": 906,
+      "minimum": 0.0,
+      "maximum": 0.998588,
+      "maximum_curve_component_error": 0.0
+    },
+    {
+      "state": "Walk",
+      "morph": "Belly_SoftLag",
+      "samples": 906,
+      "minimum": -0.693583,
+      "maximum": 0.799733,
+      "maximum_curve_component_error": 0.0
+    },
+    {
+      "state": "Idle",
+      "morph": "Belly_Compress",
+      "samples": 1699,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "maximum_curve_component_error": 0.0
+    },
+    {
+      "state": "Idle",
+      "morph": "Belly_Rebound",
+      "samples": 1699,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "maximum_curve_component_error": 0.0
+    },
+    {
+      "state": "Idle",
+      "morph": "Belly_SoftLag",
+      "samples": 1699,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "maximum_curve_component_error": 0.0
+    }
+  ],
+  "performance": [
+    {
+      "mode": "mesh_visible_animation_enabled",
+      "warmup_s": 2,
+      "sample_window_s": 5,
+      "sampled_frames": 377,
+      "motion": "Actual EnhancedInput A/D running on flat ground, turn at X=-450/350 cm; identical path policy in both phases",
+      "mean_wall_frame_ms": 13.255667109388256,
+      "mean_game_ms": 2.0111212192859194,
+      "mean_render_ms": 13.24658698934459,
+      "mean_gpu_ms": 11.226761553584739,
+      "gpu_timer_available": true,
+      "p95_wall_frame_ms": 15.569400042295456,
+      "median_wall_frame_ms": 13.761300593614578
+    },
+    {
+      "mode": "mesh_hidden_animation_tick_disabled",
+      "warmup_s": 2,
+      "sample_window_s": 5,
+      "sampled_frames": 432,
+      "motion": "Actual EnhancedInput A/D running on flat ground, turn at X=-450/350 cm; identical path policy in both phases",
+      "mean_wall_frame_ms": 11.587905093889546,
+      "mean_game_ms": 2.086501158222004,
+      "mean_render_ms": 11.577000883994279,
+      "mean_gpu_ms": 9.265250468695605,
+      "gpu_timer_available": true,
+      "p95_wall_frame_ms": 18.424898386001587,
+      "median_wall_frame_ms": 10.59969887137413
+    }
+  ],
+  "limitations": [
+    "Curve observations are actual component render weights after animation evaluation. Manual GetMorphTarget values alone are not evidence for animation-driven morphs.",
+    "Walk is the existing native state name; with Run assigned its actual sampled moving clip is AS_Naiwa_Run.",
+    "This editor/game performance comparison uses actual flat-ground movement and excludes screenshot capture. It does not establish packaged performance or other-device results."
+  ],
+  "three_morphs_animate_in_game": true,
+  "late_idle_weights_return_zero": true,
+  "component_weights_match_anim_curves": true
+}

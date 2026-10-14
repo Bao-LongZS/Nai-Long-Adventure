@@ -1,0 +1,147 @@
+{
+  "status": "passed_ordinary_Windows_walk_run_toggle_and_actual_movement",
+  "source_session": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\gait_input.jsonl",
+  "auto_test_mode": false,
+  "gait_toggle_events": 6,
+  "modes": {
+    "walk": {
+      "stable_moving_samples": 133,
+      "speed_cm_s": 150.0,
+      "actual_proxy_clip": "/Game/Naiwa/AS_Naiwa_Walk.AS_Naiwa_Walk",
+      "first_sample_utc": "2026-10-13T05:40:02.038Z",
+      "example": {
+        "event": "sample",
+        "timestamp_utc": "2026-10-13T05:40:02.038Z",
+        "wall_time_s": 239.29091270267963,
+        "world_time_s": 236.72096001257887,
+        "move_events": 63,
+        "jump_events": 0,
+        "pause_events": 0,
+        "reset_events": 0,
+        "gait_events": 1,
+        "running_gait": false,
+        "max_walk_speed_cm_s": 150,
+        "paused": false,
+        "auto_test_mode": false,
+        "viewport_focused": true,
+        "viewport_foreground": true,
+        "animation_state": "Walk",
+        "moving_sequence": "/Game/Naiwa/AS_Naiwa_Walk.AS_Naiwa_Walk",
+        "x_cm": 307.24120384091907,
+        "y_cm": 0,
+        "z_cm": 92.2,
+        "speed_cm_s": 150,
+        "velocity_x_cm_s": 150,
+        "velocity_y_cm_s": 0,
+        "velocity_z_cm_s": 0,
+        "is_falling": false,
+        "gravity_during_jump_hold": false,
+        "mesh_yaw_deg": -89.99999999999999
+      }
+    },
+    "run": {
+      "stable_moving_samples": 100,
+      "speed_cm_s": 300.0,
+      "actual_proxy_clip": "/Game/Naiwa/Gameplay/AS_Naiwa_Run.AS_Naiwa_Run",
+      "first_sample_utc": "2026-10-13T05:40:00.823Z",
+      "example": {
+        "event": "sample",
+        "timestamp_utc": "2026-10-13T05:40:00.823Z",
+        "wall_time_s": 238.07737320289016,
+        "world_time_s": 235.5075062130927,
+        "move_events": 17,
+        "jump_events": 0,
+        "pause_events": 0,
+        "reset_events": 0,
+        "gait_events": 0,
+        "running_gait": true,
+        "max_walk_speed_cm_s": 300,
+        "paused": false,
+        "auto_test_mode": false,
+        "viewport_focused": true,
+        "viewport_foreground": true,
+        "animation_state": "Walk",
+        "moving_sequence": "/Game/Naiwa/Gameplay/AS_Naiwa_Run.AS_Naiwa_Run",
+        "x_cm": 64.09600031693839,
+        "y_cm": 0,
+        "z_cm": 92.2,
+        "speed_cm_s": 300,
+        "velocity_x_cm_s": 300,
+        "velocity_y_cm_s": 0,
+        "velocity_z_cm_s": 0,
+        "is_falling": false,
+        "gravity_during_jump_hold": false,
+        "mesh_yaw_deg": -89.99999999999999
+      }
+    }
+  },
+  "toggle_timeline": [
+    {
+      "timestamp_utc": "2026-10-13T05:40:02.007Z",
+      "gait_events": 1,
+      "running_gait": false,
+      "max_walk_speed_cm_s": 150
+    },
+    {
+      "timestamp_utc": "2026-10-13T05:40:03.493Z",
+      "gait_events": 2,
+      "running_gait": true,
+      "max_walk_speed_cm_s": 300
+    },
+    {
+      "timestamp_utc": "2026-10-13T05:40:04.141Z",
+      "gait_events": 3,
+      "running_gait": false,
+      "max_walk_speed_cm_s": 150
+    },
+    {
+      "timestamp_utc": "2026-10-13T05:40:08.382Z",
+      "gait_events": 4,
+      "running_gait": true,
+      "max_walk_speed_cm_s": 300
+    },
+    {
+      "timestamp_utc": "2026-10-13T05:40:16.681Z",
+      "gait_events": 5,
+      "running_gait": false,
+      "max_walk_speed_cm_s": 150
+    },
+    {
+      "timestamp_utc": "2026-10-13T05:40:44.134Z",
+      "gait_events": 6,
+      "running_gait": true,
+      "max_walk_speed_cm_s": 300
+    }
+  ],
+  "last_sample": {
+    "event": "sample",
+    "timestamp_utc": "2026-10-13T05:44:07.929Z",
+    "wall_time_s": 485.18183460086584,
+    "world_time_s": 480.68753671547165,
+    "move_events": 2276,
+    "jump_events": 19,
+    "pause_events": 3,
+    "reset_events": 1,
+    "gait_events": 6,
+    "running_gait": true,
+    "max_walk_speed_cm_s": 300,
+    "paused": false,
+    "auto_test_mode": false,
+    "viewport_focused": true,
+    "viewport_foreground": false,
+    "animation_state": "Idle",
+    "moving_sequence": "/Game/Naiwa/Gameplay/AS_Naiwa_Run.AS_Naiwa_Run",
+    "x_cm": -10.202921743696518,
+    "y_cm": 0,
+    "z_cm": 92.15000320825061,
+    "speed_cm_s": 0,
+    "velocity_x_cm_s": 0,
+    "velocity_y_cm_s": 0,
+    "velocity_z_cm_s": 0,
+    "is_falling": false,
+    "gravity_during_jump_hold": false,
+    "mesh_yaw_deg": 89.99999999999999
+  },
+  "method": "Read real ordinary-window JSONL, including user hardware interaction. Tool short modifier taps initially did not invoke the gait callback; subsequent user interaction supplied the stable moving samples.",
+  "limits": "Sampled runtime evidence, not every rendered frame. Speed thresholds exclude acceleration, braking, and airborne transitions."
+}

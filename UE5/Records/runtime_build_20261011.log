@@ -1,0 +1,130 @@
+Log started at 10/11/2026 10:30:14 (2026-10-11T02:30:14Z)
+Resolved project argument C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Nai_Long.uproject to C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Nai_Long.uproject
+No config file at C:\ProgramData\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+No config file at C:\Users\31314\AppData\Local\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+No config file at C:\Users\31314\Documents\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Configuration will be read from:
+  C:\Users\31314\AppData\Roaming\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Reading configuration file from cache (C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Intermediate\Build\XmlConfigCache.bin): C:\Users\31314\AppData\Roaming\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Reading configuration file from cache (C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Intermediate\Build\XmlConfigCache.bin): C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Saved\UnrealBuildTool\BuildConfiguration.xml
+Reading configuration file from cache (C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Intermediate\Build\XmlConfigCache.bin): C:\Users\31314\AppData\Local\UnrealEngine\Intermediate\Build\UnrealBuildTool.Env.BuildConfiguration.xml
+Setting temp directory to 'C:\Users\31314\AppData\Local\Temp\UnrealBuildTool\eb6d2d82'
+    Registering build platform: UnrealBuildTool.AndroidPlatformFactory
+    Registering build platform: UnrealBuildTool.IOSPlatformFactory
+    Registering build platform: UnrealBuildTool.LinuxPlatformFactory
+    Registering build platform: UnrealBuildTool.MacPlatformFactory
+    Registering build platform: UnrealBuildTool.TVOSPlatformFactory
+    Registering build platform: UnrealBuildTool.WindowsPlatformFactory
+Found Windows 10 SDK root at C:\Program Files (x86)\Windows Kits\10 (1)
+Found Windows 10 SDK root at C:\Program Files (x86)\Windows Kits\10 (2)
+Found Windows 10 SDK version 10.0.26100.0 at C:\Program Files (x86)\Windows Kits\10
+Found Universal CRT version 10.0.26100.0 at C:\Program Files (x86)\Windows Kits\10
+Win64 Installed SDK(s): MinVersion_Sdk=10.0.19041.0, MaxVersion_Sdk=10.9.99999.0, CurrentVersion_Sdk=10.0.26100.0, Version_AutoSdk=10.0.22621.0, CurrentVersion_AutoSdk=
+        Registering build platform: Win64 - buildable: True
+    Registering build platform: UnrealBuildTool.VisionOSPlatformFactory
+Command line: "C:\Program Files\Epic Games\UE_5.8\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Nai_LongEditor Win64 Development -Project=C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Nai_Long.uproject -WaitMutex -NoHotReloadFromIDE
+Log file: C:\Users\31314\AppData\Local\UnrealBuildTool\Log.txt
+
+Determining max actions to execute in parallel (24 physical cores, 24 logical cores)
+  Executing up to 24 processes, one per physical core
+  Requested 1.5 GB memory per action, 31.46 GB available: limiting max parallel actions to 20
+UbaStorageServer - Database loaded from C:\ProgramData\Epic\UnrealBuildAccelerator\cas\casdb (v32) in 1ms (contained 0 entries estimated to 0b)
+UbaServer - Listening on 0.0.0.0:1345
+Skipping C:\Program Files\Epic Games\UE_5.8\Engine\Intermediate\Build\BuildRules\UE5Rules.dll: File is installed
+Skipping C:\Program Files\Epic Games\UE_5.8\Engine\Intermediate\Build\BuildRules\UE5ProgramRules.dll: File is installed
+Available x64 toolchains (1):
+ * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231
+    (Family=14.51.36231, FamilyRank=2, Version=14.51.36256, HostArchitecture=x64, ReleaseChannel=Latest, Architecture=x64)
+Visual Studio compiler version 14.51.36256 is newer than latest preferred version 14.50.35717. Please use caution as this compiler has not been heavily tested
+Building UnrealEditor - Nai_LongEditor - Win64 - Development
+UnrealHeaderTool needs to run because SavedTimestamp is older than HeaderFileTimestamp (C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaAnimInstance.h) for module NaiwaRuntime
+Parsing headers for Nai_LongEditor
+  Running Internal UnrealHeaderTool C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Nai_Long.uproject C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Intermediate\Build\Win64\Nai_LongEditor\Nai_LongEditor.uhtmanifest -WarningsAsErrors -installed
+UHT compiled-in object format Default
+Step - Parse Headers
+Reading engine version from file: C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Launch\Resources\Version.h
+Got engine version 5.8.3
+Step - Populate symbol table
+Step - Exports
+       Exporter Stats skipped
+       Exporter Json skipped
+       Running exporter CodeGen
+UHT processed Nai_LongEditor in 1.8975603 seconds (0 generated files written)
+Deleting outdated item: C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Binaries\Win64\UnrealEditor-NaiwaRuntime.pdb
+Deleting outdated item: C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Intermediate\Build\Win64\x64\UnrealEditor\Development\NaiwaRuntime\UnrealEditor-NaiwaRuntime.lib
+Building Nai_LongEditor...
+===== Toolchain Information =====
+Using ISPC compiler (C:\Program Files\Epic Games\UE_5.8\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+  Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2) 
+Using Visual Studio 14.51.36256 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+Warning: Visual Studio compiler 14.51.36256 is not a preferred version
+=================================
+Using Unreal Build Accelerator local executor to run 7 action(s)
+  CPU 24 physical cores, 24 logical cores
+  Memory 31.46 GB physical, 22.62 GB/39.96 GB committed
+  UBA Storage capacity 40 GB
+  UBA RootDir C:\ProgramData\Epic\UnrealBuildAccelerator
+Cache bucket 2030103074 used. Action: Compile [x64] Module.NaiwaRuntime.gen.cpp ()
+Cache bucket 2766581829 used. Action: Compile [x64] NaiwaAnimInstance.cpp ()
+Cache bucket 416513229 used. Action: Link [x64] UnrealEditor-NaiwaRuntime.dll ()
+All processes queued
+[1/7] Compile [x64] Module.NaiwaRuntime.gen.cpp
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[2/7] Compile [x64] NaiwaAnimInstance.cpp
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[3/7] Compile [x64] NaiwaCharacter.cpp
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[4/7] Compile [x64] NaiwaAutoTestComponent.cpp
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[5/7] Link [x64] UnrealEditor-NaiwaRuntime.lib
+  正在创建库 C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Intermediate/Build/Win64/x64/UnrealEditor/Development/NaiwaRuntime/UnrealEditor-NaiwaRuntime.lib 和对象 C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Intermediate/Build/Win64/x64/UnrealEditor/Development/NaiwaRuntime/UnrealEditor-NaiwaRuntime.exp
+[6/7] Link [x64] UnrealEditor-NaiwaRuntime.dll
+[7/7] WriteMetadata Nai_LongEditor.target [NoUba]
+
+Total time in Unreal Build Accelerator local executor: 5.33 seconds
+Output binary: C:\Program Files\Epic Games\UE_5.8\Engine\Binaries\Win64\UnrealEditor.exe
+UbaStorageServer - Database saved in 2ms (0 file entries, 0 cas entries. deleted 0 dropped cas files)
+WriteFileIfChanged() wrote 0 changed files of 1 requested writes.
+
+Timeline:
+[  0.000]  +0.233 Main
+   0.014          [  0.014]  +0.069 Apply XmlConfig
+   0.085          [  0.085]  +0.038 AddTelemetry
+   0.136          [  0.136]  +0.096 RegisterPlatforms
+[  0.264]  +0.031 ParseCommandLine
+[  0.349]  +0.123 LoadMakefile
+[  0.489]  +0.371 FindPlugins
+[  0.866]  +0.108 MakefileValid
+   0.867          [  0.000]  +0.042 EngineRulesPlugins
+   0.912          [  0.045]  +0.008 EngineRulesFetchDirs
+   0.926          [  0.060]  +0.007 EngineRulesAssembly
+   0.934          [  0.067]  +0.001 ProgramRulesAssembly
+   0.935          [  0.068]  +0.003 ProjectRulesAssembly
+   0.939          [  0.072]  +0.182 CreateTargetRules
+[  1.159]  +0.003 CppDependencyCache
+[  1.173]  +0.143 Nai_LongEditor Win64 Development
+[  1.317]  +2.017 UHTWait
+   1.318          [  0.000]  +0.111 UHTManifest
+   1.429          [  0.112]  +1.901 UHT
+   3.333          [  2.016]  +0.035 UHTTimestamps
+   3.351             2.034          [  0.018]  +0.004 CppDependencyCache
+   3.356             2.038          [  0.022]  +0.052 Preparing ActionGraph
+[  3.418]  +0.210 GarbageCollect
+[  3.628]  +5.120 <unknown>
+[  8.749]  +0.000 Deploying targets
+[  8.750]  +0.000 DisconnectCache
+[  8.754]  +0.013 SaveCasTable
+[  8.770]  +0.054 Saving caches
+[  8.825]  +0.002 TelemetryService.FlushEvents
+[  8.827]
+
+Result: Succeeded
+Total execution time: 8.83 seconds

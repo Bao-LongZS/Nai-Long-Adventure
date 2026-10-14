@@ -1,0 +1,16 @@
+{
+  "auto_test_mode": false,
+  "remaining": "none_within_P0_scope",
+  "log": "ordinary_input.jsonl",
+  "pause_events": 7,
+  "reset_events": 1,
+  "user_reply": "行走改成shift键（原来的键位和其他软件程序冲突），其余正常",
+  "method": "Windows injected keys followed by user physical keyboard interaction",
+  "status": "passed_original_keyboard_pause_focus_and_final_Shift_gait_validated_separately",
+  "move_events": 983,
+  "pause_screenshot": "ordinary_pause_HUD.png",
+  "date": "2026-10-13",
+  "jump_events": 6,
+  "clarified_request": "shift作为切换行走和奔跑的键，其余移动方式和之前一样",
+  "final_gait_evidence": "gait_acceptance.json"
+}

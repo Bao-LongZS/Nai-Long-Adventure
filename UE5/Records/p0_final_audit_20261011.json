@@ -1,0 +1,1145 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-11",
+  "created_utc": "2026-10-11T08:26:02.9421857Z",
+  "status": "saved_data_and_source_audited_P0_pending",
+  "scope": "Read-only inspection of existing records, source, config, logs and current file hashes; only this report and its companion markdown are new. No Unreal/Blender/UI launch in this audit.",
+  "p0_complete": false,
+  "task_state_at_audit": {
+    "phase": "run_and_local_belly_integrated_automated_checks_passed",
+    "run_id": "20261011T074412Z_287152",
+    "p0_complete": false,
+    "remaining_p0": [
+      "physical_keyboard_focus_and_gamepad_validation",
+      "all_four_original_clips_full_visual_review",
+      "full_dynamic_visual_and_final_art_camera_acceptance"
+    ]
+  },
+  "project": {
+    "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Nai_Long.uproject",
+    "engine": "5.8.3-58210709",
+    "engine_association": "5.8",
+    "runtime_module": "NaiwaRuntime",
+    "default_map": "/Game/Naiwa/Maps/L_NaiwaGraybox",
+    "game_mode": "/Game/Naiwa/Blueprints/BP_NaiwaGameMode.BP_NaiwaGameMode_C"
+  },
+  "current_input_hashes": {
+    "NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/candidate_E2/Naiwa_Character.blend": {
+      "sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "expected_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "preserved": true,
+      "size_bytes": 24034709
+    },
+    "NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/candidate_E2/Naiwa_Character.fbx": {
+      "sha256": "8dae9ce28c4b44465dcb8e73dd462804c3a561daee9eebaf79842900a3005147",
+      "expected_sha256": "8dae9ce28c4b44465dcb8e73dd462804c3a561daee9eebaf79842900a3005147",
+      "preserved": true,
+      "size_bytes": 20679580
+    },
+    "UE5/Animation/Run_v1/Naiwa_Elastic_Run.fbx": {
+      "sha256": "f5688581ae103f27901bab67a98ba9deef983156ec985308435bb453e2621d2e",
+      "expected_sha256": "f5688581ae103f27901bab67a98ba9deef983156ec985308435bb453e2621d2e",
+      "preserved": true,
+      "size_bytes": 24395980
+    }
+  },
+  "current_preserved_packages": [
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\SK_Naiwa.uasset",
+      "sha256": "67f807019e6fceafe8a5b7c78037221f7fcf66c8dd515fcae52b8bee039a0734",
+      "expected_sha256": "67f807019e6fceafe8a5b7c78037221f7fcf66c8dd515fcae52b8bee039a0734",
+      "preserved": true
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\AS_Naiwa_Idle.uasset",
+      "sha256": "6de2597d637db1ac2838042faedf0de5629c36ed2b9f7b155eeec1e2b691ab62",
+      "expected_sha256": "6de2597d637db1ac2838042faedf0de5629c36ed2b9f7b155eeec1e2b691ab62",
+      "preserved": true
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\AS_Naiwa_Walk.uasset",
+      "sha256": "e7e0c9eaae2c072728defd1181aaabd48c2804dee61c527ab64d89daf55db4ff",
+      "expected_sha256": "e7e0c9eaae2c072728defd1181aaabd48c2804dee61c527ab64d89daf55db4ff",
+      "preserved": true
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\AS_Naiwa_Jump.uasset",
+      "sha256": "7571f30d94d59a4e8654f83af02a6735c6fc59e5f9bedd4ce38c562ecbdd1889",
+      "expected_sha256": "7571f30d94d59a4e8654f83af02a6735c6fc59e5f9bedd4ce38c562ecbdd1889",
+      "preserved": true
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\AS_Naiwa_Laugh.uasset",
+      "sha256": "a684835f09fcce92cc0565e8cced0feaedc01c3f04949abb1022c74de6e69558",
+      "expected_sha256": "a684835f09fcce92cc0565e8cced0feaedc01c3f04949abb1022c74de6e69558",
+      "preserved": true
+    }
+  ],
+  "import_options": {
+    "provenance": "Read from the successful import scripts; this audit did not launch Unreal or freshly read back FbxImportData properties.",
+    "importer": "Legacy FBX",
+    "configuration_flag": "Interchange.FeatureFlags.Import.FBX=False",
+    "common": {
+      "automated_import_should_detect_type": false,
+      "mesh_type_to_import": "FBXIT_SKELETAL_MESH",
+      "import_as_skeletal": true,
+      "import_mesh": true,
+      "import_animations": true,
+      "create_physics_asset": false,
+      "import_materials": false,
+      "import_textures": false,
+      "vertex_color_import_option": "REPLACE",
+      "normal_import_method": "FBXNIM_IMPORT_NORMALS",
+      "import_uniform_scale": 1.0,
+      "convert_scene": true,
+      "convert_scene_unit": true,
+      "update_skeleton_reference_pose": false,
+      "use_t0_as_ref_pose": false,
+      "use_default_sample_rate": false,
+      "animation_length": "FBXALIT_EXPORTED_TIME",
+      "replace_existing": false
+    },
+    "E2": {
+      "destination_path": "/Game/Naiwa",
+      "destination_name": "SK_Naiwa",
+      "source_sha256": "8dae9ce28c4b44465dcb8e73dd462804c3a561daee9eebaf79842900a3005147",
+      "script_api_warnings": []
+    },
+    "Run": {
+      "destination_path": "/Game/Naiwa/Gameplay",
+      "destination_name": "SK_Naiwa_Elastic",
+      "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+      "import_morph_targets": true,
+      "import_custom_attribute": true,
+      "source_sha256": "f5688581ae103f27901bab67a98ba9deef983156ec985308435bb453e2621d2e",
+      "script_api_warnings": []
+    }
+  },
+  "E2_mesh": {
+    "path": "/Game/Naiwa/SK_Naiwa.SK_Naiwa",
+    "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+    "stats": {
+      "source": "USkeletalMesh asset registry tags from loaded UObject",
+      "vertices": 387974,
+      "triangles": 775296,
+      "bones": 11,
+      "lods": 1
+    },
+    "imported_bounds_cm": {
+      "origin": [
+        -2.288818359375E-05,
+        7.04417610168457,
+        132.6415308713913
+      ],
+      "extent": [
+        88.10216522216797,
+        65.83743858337402,
+        131.84153187274933
+      ],
+      "size": [
+        176.20433044433594,
+        131.67487716674805,
+        263.68306374549866
+      ],
+      "sphere_radius": 171.693766231063
+    },
+    "bone_hierarchy": {
+      "bones": [
+        "Naiwa_Rig",
+        "Root",
+        "Torso",
+        "UpperArm_L",
+        "Forearm_L",
+        "UpperArm_R",
+        "Forearm_R",
+        "Thigh_L",
+        "Shin_L",
+        "Thigh_R",
+        "Shin_R"
+      ],
+      "parents": {
+        "Naiwa_Rig": null,
+        "Root": "Naiwa_Rig",
+        "Torso": "Root",
+        "UpperArm_L": "Torso",
+        "Forearm_L": "UpperArm_L",
+        "UpperArm_R": "Torso",
+        "Forearm_R": "UpperArm_R",
+        "Thigh_L": "Root",
+        "Shin_L": "Thigh_L",
+        "Thigh_R": "Root",
+        "Shin_R": "Thigh_R"
+      },
+      "roots": [
+        "Naiwa_Rig"
+      ],
+      "source_to_ue": {
+        "Root": "Root",
+        "Torso": "Torso",
+        "UpperArm.L": "UpperArm_L",
+        "Forearm.L": "Forearm_L",
+        "UpperArm.R": "UpperArm_R",
+        "Forearm.R": "Forearm_R",
+        "Thigh.L": "Thigh_L",
+        "Shin.L": "Shin_L",
+        "Thigh.R": "Thigh_R",
+        "Shin.R": "Shin_R"
+      },
+      "extra_ue_bones": [
+        "Naiwa_Rig"
+      ],
+      "extra_root_bones": [
+        "Naiwa_Rig"
+      ],
+      "fbx_rig_root_present": true,
+      "source_root_parent": "Naiwa_Rig",
+      "note": "Extra UE root bones are observed from the mesh; the rig object name is not inferred from animation asset names"
+    }
+  },
+  "original_clips": [
+    {
+      "action": "Idle",
+      "path": "/Game/Naiwa/AS_Naiwa_Idle.AS_Naiwa_Idle",
+      "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+      "duration_seconds": 1.25,
+      "frame_intervals": 120,
+      "sampled_keys": 121,
+      "effective_sample_rate_hz": 96.0
+    },
+    {
+      "action": "Walk",
+      "path": "/Game/Naiwa/AS_Naiwa_Walk.AS_Naiwa_Walk",
+      "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+      "duration_seconds": 1.3333333730697632,
+      "frame_intervals": 128,
+      "sampled_keys": 129,
+      "effective_sample_rate_hz": 95.99999713897714
+    },
+    {
+      "action": "Jump",
+      "path": "/Game/Naiwa/AS_Naiwa_Jump.AS_Naiwa_Jump",
+      "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+      "duration_seconds": 0.7916666865348816,
+      "frame_intervals": 76,
+      "sampled_keys": 77,
+      "effective_sample_rate_hz": 95.99999759071758
+    },
+    {
+      "action": "Laugh",
+      "path": "/Game/Naiwa/AS_Naiwa_Laugh.AS_Naiwa_Laugh",
+      "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+      "duration_seconds": 1.0,
+      "frame_intervals": 96,
+      "sampled_keys": 97,
+      "effective_sample_rate_hz": 96.0
+    }
+  ],
+  "saved_graybox_parameters": {
+    "imported_height_cm": 263.68306374549866,
+    "height_cm": 180.0,
+    "mesh_uniform_scale": 0.6826376993773563,
+    "source_min_z_cm": 0.7999989986419678,
+    "mesh_offset_z_cm": -90.54610947593714,
+    "capsule_radius_cm": 42.0,
+    "capsule_half_height_cm": 90.0,
+    "plane_y_cm": 0.0,
+    "plane_y_tolerance_cm": 0.1,
+    "idle_foot_gap_tolerance_cm": 3.0,
+    "stop_speed_tolerance_cm_s": 1.0,
+    "target_fps": 60,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "move_speed_cm_s": 300.0,
+    "jump_z_velocity_cm_s": 650.0,
+    "gravity_scale": 1.6,
+    "animation_transition_seconds": 0.12,
+    "mesh_right_yaw_degrees": -90.0,
+    "camera_relative_location_cm": [
+      0.0,
+      900.0,
+      40.0
+    ],
+    "camera_relative_rotation_degrees": [
+      0.0,
+      -90.0,
+      0.0
+    ],
+    "camera_fov_degrees": 40.0
+  },
+  "graybox_geometry": [
+    {
+      "name": "Ground",
+      "x": 1700.0,
+      "top_z": 0.0,
+      "width": 5800.0,
+      "depth": 1200.0,
+      "thickness": 100.0
+    },
+    {
+      "name": "Wall_Right",
+      "x": 900.0,
+      "top_z": 180.0,
+      "width": 80.0,
+      "depth": 450.0,
+      "thickness": 180.0
+    },
+    {
+      "name": "Wall_Left",
+      "x": -700.0,
+      "top_z": 300.0,
+      "width": 80.0,
+      "depth": 450.0,
+      "thickness": 300.0
+    },
+    {
+      "name": "LowPlatform",
+      "x": 1150.0,
+      "top_z": 80.0,
+      "width": 200.0,
+      "depth": 700.0,
+      "thickness": 100.0
+    },
+    {
+      "name": "JumpPlatform",
+      "x": 1700.0,
+      "top_z": 180.0,
+      "width": 400.0,
+      "depth": 700.0,
+      "thickness": 100.0
+    },
+    {
+      "name": "DropPlatform",
+      "x": 2350.0,
+      "top_z": 300.0,
+      "width": 350.0,
+      "depth": 700.0,
+      "thickness": 100.0
+    },
+    {
+      "name": "EarlyLandingPlatform",
+      "x": 3750.0,
+      "top_z": 250.0,
+      "width": 300.0,
+      "depth": 700.0,
+      "thickness": 100.0
+    }
+  ],
+  "movement": {
+    "provenance": "Native constructor source values. Existing saved graybox dimensions are separately reported. No fresh CDO readback or physical input test in this audit.",
+    "max_walk_speed_cm_s": 300.0,
+    "max_acceleration_cm_s2": 1800.0,
+    "braking_deceleration_walking_cm_s2": 2200.0,
+    "ground_friction": 8.0,
+    "jump_z_velocity_cm_s": 650.0,
+    "gravity_scale": 1.6,
+    "air_control": 0.4,
+    "max_step_height_cm": 45.0,
+    "jump_max_hold_time_s": 0.2,
+    "jump_max_count": 1,
+    "plane_constraint_normal": [
+      0,
+      1,
+      0
+    ],
+    "plane_constraint_origin": [
+      0,
+      0,
+      0
+    ],
+    "snap_to_plane_at_start": true,
+    "mesh_collision": "NoCollision",
+    "physics_interaction": false,
+    "facing": "Only mesh yaw changes when abs(Vx)>3 cm/s. Right=-90 degrees; left=+90 degrees. Actor and attached side camera do not rotate."
+  },
+  "animation": {
+    "provenance": "NaiwaAnimInstance.cpp/.h and saved build_graybox.json; native proxy evaluates three pose states.",
+    "transition_seconds": 0.12,
+    "run_reference_speed_cm_s": 300.0,
+    "jump_air_hold_fraction": 0.55,
+    "moving_state_name": "Walk",
+    "moving_clip": "RunSequence if assigned, otherwise WalkSequence",
+    "assigned_run": "/Game/Naiwa/Gameplay/AS_Naiwa_Run.AS_Naiwa_Run",
+    "run_duration_seconds": 0.6666666865348816,
+    "playback_rate": "clamp(abs(Vx)/max(1,WalkReferenceSpeed),0.1,2.0)",
+    "at_300_cm_s_rate": 1.0,
+    "conditions": [
+      "Jump: CharacterMovement IsFalling",
+      "Walk: grounded and abs(Vx)>3 cm/s",
+      "Idle: grounded and abs(Vx)<=3 cm/s"
+    ],
+    "weights": "Each state weight approaches target 0 or 1 with FInterpConstantTo at 1/TransitionSeconds; three weights normalized; ground Idle/Walk blend followed by ground/Jump blend.",
+    "clocks": "New state clock resets to zero on transition; Idle/Run wrap; Jump clamps at clip length*0.55; landing immediately selects grounded state; Reset generation clears clocks and sets Idle weight.",
+    "root_motion": "IgnoreRootMotion; output compact-pose bone 0 (Naiwa_Rig) forced to reference transform. Source Root below it retains Run bounce.",
+    "laugh": "Assigned and preserved, but not part of the three-state gameplay pose proxy. Gameplay triggering belongs to P1; P0 still needs full independent visual playback.",
+    "morph_names": [
+      "Belly_Compress",
+      "Belly_Rebound",
+      "Belly_SoftLag"
+    ],
+    "run_morph_max_single_shape_game_cm": {
+      "Belly_Compress": 1.5500483512878418,
+      "Belly_Rebound": 1.0679904222488403,
+      "Belly_SoftLag": 2.1176424580667477
+    }
+  },
+  "materials": {
+    "gameplay_slots": [
+      {
+        "slot": "L single eye surface",
+        "material": "/Game/Naiwa/Gameplay/Materials/M_NaiwaEye_Gameplay.M_NaiwaEye_Gameplay"
+      },
+      {
+        "slot": "Eye glints",
+        "material": "/Game/Naiwa/Materials/M_NaiwaGlint.M_NaiwaGlint"
+      },
+      {
+        "slot": "Soft ochre yellow skin",
+        "material": "/Game/Naiwa/Gameplay/Materials/M_NaiwaBody_Gameplay.M_NaiwaBody_Gameplay"
+      },
+      {
+        "slot": "R single eye surface",
+        "material": "/Game/Naiwa/Gameplay/Materials/M_NaiwaEye_Gameplay.M_NaiwaEye_Gameplay"
+      },
+      {
+        "slot": "Recessed mouth deep brown_001",
+        "material": "/Game/Naiwa/Materials/M_NaiwaMouth.M_NaiwaMouth"
+      }
+    ],
+    "body_eye_saved_decode": [
+      {
+        "path": "/Game/Naiwa/Gameplay/Materials/M_NaiwaBody_Gameplay.M_NaiwaBody_Gameplay",
+        "shader": "return float3(\nColorSRGB.r <= 0.04045 ? ColorSRGB.r / 12.92 : pow((ColorSRGB.r + 0.055) / 1.055, 2.4),\nColorSRGB.g <= 0.04045 ? ColorSRGB.g / 12.92 : pow((ColorSRGB.g + 0.055) / 1.055, 2.4),\nColorSRGB.b <= 0.04045 ? ColorSRGB.b / 12.92 : pow((ColorSRGB.b + 0.055) / 1.055, 2.4));",
+        "roughness": 0.65
+      },
+      {
+        "path": "/Game/Naiwa/Gameplay/Materials/M_NaiwaEye_Gameplay.M_NaiwaEye_Gameplay",
+        "shader": "return float3(\nColorSRGB.r <= 0.04045 ? ColorSRGB.r / 12.92 : pow((ColorSRGB.r + 0.055) / 1.055, 2.4),\nColorSRGB.g <= 0.04045 ? ColorSRGB.g / 12.92 : pow((ColorSRGB.g + 0.055) / 1.055, 2.4),\nColorSRGB.b <= 0.04045 ? ColorSRGB.b / 12.92 : pow((ColorSRGB.b + 0.055) / 1.055, 2.4));",
+        "roughness": 0.4
+      }
+    ],
+    "specular_source_default": 0.2,
+    "glint_constant_linear_rgb": [
+      0.95,
+      0.96,
+      0.85
+    ],
+    "glint_roughness": 0.15,
+    "mouth_constant_linear_rgb": [
+      0.035,
+      0.014,
+      0.01
+    ],
+    "mouth_roughness": 0.85,
+    "provenance": "Saved material path/custom shader readback from existing run audit; scalar defaults from creation script, not fresh property readback."
+  },
+  "quality": {
+    "latest_automated_run_id": "20261011T074412Z_287152",
+    "rendering_rhi": "D3D12",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "sg_quality": 3,
+    "screen_percentage": 100,
+    "motion_blur_quality": 0,
+    "vsync": 0,
+    "max_fps": 0,
+    "evidence": "runtime_run_record.log:459,1610-1634; run_stage.ps1",
+    "target_fps": 60,
+    "final_art_settings_frozen": false,
+    "ordinary_launcher": "launch_p0 fixes map and game resolution but does not fix sg/VSync/FPS; do not assume identical quality in a normal launch.",
+    "lighting_source": {
+      "directional_light_location_cm": [
+        0,
+        0,
+        800
+      ],
+      "directional_rotation_degrees": [
+        -45,
+        -30,
+        0
+      ],
+      "directional_intensity": 3.0,
+      "sky_light_location_cm": [
+        0,
+        0,
+        600
+      ],
+      "status": "graybox creation script only; final art light/exposure acceptance pending"
+    }
+  },
+  "warnings": [
+    {
+      "category": "missing_smoothing_groups",
+      "E2_unique_count": 1,
+      "Run_unique_count": 1,
+      "status": "retained_with_imported_normals; full rendered normal/skin validation pending",
+      "evidence": [
+        "import_e2.json.engine_warnings",
+        "import_run.json.engine_warnings",
+        "Scripts/import_e2.py",
+        "Scripts/import_run.py"
+      ]
+    },
+    {
+      "category": "generated_default_uv",
+      "E2_unique_count": 4,
+      "Run_unique_count": 4,
+      "meshes": [
+        "L concentric iris and pupil",
+        "Naiwa unified golden body",
+        "R concentric iris and pupil",
+        "Short closed oral seam"
+      ],
+      "status": "retained; current Body/Eye use vertex color and Glint/Mouth constants; no UV texture acceptance claimed",
+      "evidence": [
+        "import_e2.json.engine_warnings",
+        "import_run.json.engine_warnings",
+        "gameplay_visuals.json",
+        "import_validation.json.mesh.materials"
+      ]
+    },
+    {
+      "category": "partial_shape_bind_pose_missing_deformers",
+      "E2_unique_count": 0,
+      "Run_unique_count": 6,
+      "status": "diagnosed as extra shape-only BindPose; six complete 12-node Skin BindPoses remain valid; UE per-bone reference transform max difference=0; full skin deformation appearance pending",
+      "evidence": [
+        "run_export_diagnostics.md",
+        "runimport.log:1624-1635",
+        "run_import_validation.json.checks.same_reference_pose"
+      ]
+    },
+    {
+      "category": "vertex_color_srgb_linear_mismatch",
+      "status": "fixed only in new gameplay Body/Eye materials with piecewise sRGB-to-linear decode; sampled rendered color reviewed",
+      "evidence": [
+        "run_export_diagnostics.md",
+        "gameplay_visuals.json",
+        "run_import_validation.json.gameplay_material_graphs",
+        "run_visual_review.json"
+      ]
+    },
+    {
+      "category": "material_morph_targets_usage_missing",
+      "status": "observed_in_fresh_rendered_launch_pending_fix_and_saved_reload_verification",
+      "evidence": [
+        "p0_keyboard_initial.log:1630"
+      ],
+      "affected_material": "/Game/Naiwa/Gameplay/Materials/M_NaiwaBody_Gameplay.M_NaiwaBody_Gameplay"
+    }
+  ],
+  "engine_warning_E2_records": [
+    {
+      "channel": "FBXImport",
+      "message": "此FBX场景中未发现平滑组信息。导出文件前必须在FBX导出器插件中启用“导出平滑组（Export Smoothing Groups）”选项。对不支持平滑组的工具而言，导出时FBX导出器仍将生成正确的平滑数据，从而在导入时推断出正确的顶点法线。",
+      "log_lines": [
+        1708,
+        1797
+      ]
+    },
+    {
+      "channel": "FBXImport",
+      "message": "网格体“L concentric iris and pupil”没有UV集。正在创建一个默认集。",
+      "log_lines": [
+        1709,
+        1798
+      ]
+    },
+    {
+      "channel": "FBXImport",
+      "message": "网格体“Naiwa unified golden body”没有UV集。正在创建一个默认集。",
+      "log_lines": [
+        1710,
+        1799
+      ]
+    },
+    {
+      "channel": "FBXImport",
+      "message": "网格体“R concentric iris and pupil”没有UV集。正在创建一个默认集。",
+      "log_lines": [
+        1711,
+        1800
+      ]
+    },
+    {
+      "channel": "FBXImport",
+      "message": "网格体“Short closed oral seam”没有UV集。正在创建一个默认集。",
+      "log_lines": [
+        1712,
+        1801
+      ]
+    }
+  ],
+  "engine_warning_Run_records": [
+    "[2026.10.11-02.43.20:705][  0]LogFbx: Warning: Not valid bind pose for Pose (pear body mesh) - Node L concentric iris and pupil : Not all the deformers are stored in this BindPose",
+    "[2026.10.11-02.43.20:705][  0]LogFbx: Warning: Not valid bind pose for Pose (pear body mesh) - Node L eye glint : Not all the deformers are stored in this BindPose",
+    "[2026.10.11-02.43.20:705][  0]LogFbx: Warning: Not valid bind pose for Pose (pear body mesh) - Node Naiwa unified golden body : Not all the deformers are stored in this BindPose",
+    "[2026.10.11-02.43.20:705][  0]LogFbx: Warning: Not valid bind pose for Pose (pear body mesh) - Node R concentric iris and pupil : Not all the deformers are stored in this BindPose",
+    "[2026.10.11-02.43.20:705][  0]LogFbx: Warning: Not valid bind pose for Pose (pear body mesh) - Node R eye glint : Not all the deformers are stored in this BindPose",
+    "[2026.10.11-02.43.20:706][  0]LogFbx: Warning: Not valid bind pose for Pose (pear body mesh) - Node Short closed oral seam : Not all the deformers are stored in this BindPose",
+    "[2026.10.11-02.44.16:004][  0]FBXImport: Warning: 此FBX场景中未发现平滑组信息。导出文件前必须在FBX导出器插件中启用“导出平滑组（Export Smoothing Groups）”选项。对不支持平滑组的工具而言，导出时FBX导出器仍将生成正确的平滑数据，从而在导入时推断出正确的顶点法线。 ",
+    "[2026.10.11-02.44.16:004][  0]FBXImport: Warning: 网格体“L concentric iris and pupil”没有UV集。正在创建一个默认集。 ",
+    "[2026.10.11-02.44.16:004][  0]FBXImport: Warning: 网格体“Naiwa unified golden body”没有UV集。正在创建一个默认集。 ",
+    "[2026.10.11-02.44.16:004][  0]FBXImport: Warning: 网格体“R concentric iris and pupil”没有UV集。正在创建一个默认集。 ",
+    "[2026.10.11-02.44.16:004][  0]FBXImport: Warning: 网格体“Short closed oral seam”没有UV集。正在创建一个默认集。 "
+  ],
+  "reimport": {
+    "status": "mesh_reimport_data_stable_pending_visual_runtime_validation",
+    "timestamp": "2026-10-11T09:57:57.153359+08:00",
+    "checks": 22,
+    "all_checks_pass": true,
+    "changed_content_files": [
+      "SK_Naiwa.uasset"
+    ],
+    "scope": "same-source E2 mesh only; four clip packages unchanged",
+    "unverified": [
+      "rendered material equivalence and runtime behavior after reimport"
+    ]
+  },
+  "saved_reload": {
+    "status": "existing_independent_process_saved_resource_audit_passed_visible_editor_reopen_pending",
+    "evidence": "runaudit.log:457,1627,1648",
+    "command": "-run=PythonScript -script=validate_run.py -unattended -NullRHI",
+    "marker": "NAIWA_RUN_AUDIT_OK",
+    "timestamp_utc": "2026-10-11T07:47:41.758Z",
+    "scope": "Fresh editor command process reloads saved assets and validates refs/data; NullRHI omits rendered UI; does not verify physical operation after visible editor reopen."
+  },
+  "existing_runtime": {
+    "run_id": "20261011T074412Z_287152",
+    "status": "PASS",
+    "complete": true,
+    "planned_rounds": 3,
+    "planned_cases": 24,
+    "completed_cases": 24,
+    "sampled_frames": 4674,
+    "all_runtime_checks_pass": true,
+    "all_screenshots_saved": true,
+    "maximum_abs_y_cm": 0.0,
+    "input_evidence_limit": "Movement, Jump, Pause and Reset use simulated PlayerController InputKey events through the saved keyboard Enhanced Input mappings. During -NaiwaAutoTest only, viewport OS input is ignored and focus-loss key flushing is disabled to prevent contamination; settings are restored on completion/end. Fixture placement uses teleport/ResetToSpawn. Tests prove the mapping-to-callback-to-gameplay pipeline, not physical hardware or pause UI.",
+    "performance_samples": [
+      {
+        "mode": "mesh_visible_animation_enabled",
+        "warmup_s": 2,
+        "sample_window_s": 5,
+        "sampled_frames": 377,
+        "motion": "Actual EnhancedInput A/D running on flat ground, turn at X=-450/350 cm; identical path policy in both phases",
+        "mean_wall_frame_ms": 13.255667109388256,
+        "mean_game_ms": 2.0111212192859194,
+        "mean_render_ms": 13.24658698934459,
+        "mean_gpu_ms": 11.226761553584739,
+        "gpu_timer_available": true,
+        "p95_wall_frame_ms": 15.569400042295456,
+        "median_wall_frame_ms": 13.761300593614578
+      },
+      {
+        "mode": "mesh_hidden_animation_tick_disabled",
+        "warmup_s": 2,
+        "sample_window_s": 5,
+        "sampled_frames": 432,
+        "motion": "Actual EnhancedInput A/D running on flat ground, turn at X=-450/350 cm; identical path policy in both phases",
+        "mean_wall_frame_ms": 11.587905093889546,
+        "mean_game_ms": 2.086501158222004,
+        "mean_render_ms": 11.577000883994279,
+        "mean_gpu_ms": 9.265250468695605,
+        "gpu_timer_available": true,
+        "p95_wall_frame_ms": 18.424898386001587,
+        "median_wall_frame_ms": 10.59969887137413
+      }
+    ],
+    "performance_limit": "Preliminary 1080p editor-game baseline only. Each mesh-visible/mesh-hidden-and-animation-tick-disabled group discards 2 s warmup then samples 5 s wall frame/Game/Render/GPU time. Screenshots and CPU skin extraction are outside these intervals. Background applications, shader compilation, VSync, frame caps, quality and driver affect values. GPU zero is unavailable, not zero cost."
+  },
+  "existing_morph_runtime": {
+    "run_id": "20261011T074412Z_287152",
+    "three_morphs_animate": true,
+    "late_idle_weights_return_zero": true,
+    "component_weights_match_anim_curves": true,
+    "late_idle_definition": "At least 0.2 seconds continuously in Idle in one case; the configured crossfade is 0.12 seconds.",
+    "morph_runtime": [
+      {
+        "state": "Jump",
+        "morph": "Belly_Compress",
+        "samples": 1401,
+        "minimum": 0.0,
+        "maximum": 0.253015,
+        "maximum_curve_component_error": 0.0
+      },
+      {
+        "state": "Jump",
+        "morph": "Belly_Rebound",
+        "samples": 1401,
+        "minimum": 0.0,
+        "maximum": 0.237091,
+        "maximum_curve_component_error": 0.0
+      },
+      {
+        "state": "Jump",
+        "morph": "Belly_SoftLag",
+        "samples": 1401,
+        "minimum": -0.199377,
+        "maximum": 0.194322,
+        "maximum_curve_component_error": 0.0
+      },
+      {
+        "state": "Walk",
+        "morph": "Belly_Compress",
+        "samples": 906,
+        "minimum": 0.000197,
+        "maximum": 0.999487,
+        "maximum_curve_component_error": 0.0
+      },
+      {
+        "state": "Walk",
+        "morph": "Belly_Rebound",
+        "samples": 906,
+        "minimum": 0.0,
+        "maximum": 0.998588,
+        "maximum_curve_component_error": 0.0
+      },
+      {
+        "state": "Walk",
+        "morph": "Belly_SoftLag",
+        "samples": 906,
+        "minimum": -0.693583,
+        "maximum": 0.799733,
+        "maximum_curve_component_error": 0.0
+      },
+      {
+        "state": "Idle",
+        "morph": "Belly_Compress",
+        "samples": 1699,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "maximum_curve_component_error": 0.0
+      },
+      {
+        "state": "Idle",
+        "morph": "Belly_Rebound",
+        "samples": 1699,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "maximum_curve_component_error": 0.0
+      },
+      {
+        "state": "Idle",
+        "morph": "Belly_SoftLag",
+        "samples": 1699,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "maximum_curve_component_error": 0.0
+      }
+    ]
+  },
+  "existing_visual_review": {
+    "date": "2026-10-11",
+    "run_id": "20261011T074412Z_287152",
+    "method": "Direct inspection of original engine PNGs and Blender key-pose sheet; imported curve and actual render weight observations are separate evidence.",
+    "reviewed_images": [
+      "UE5/Records/Naiwa_Run_Gameplay.png",
+      "UE5/NaiwaP0/Saved/NaiwaTests/20261011T074412Z_287152/Frames/frame_000009.png",
+      "UE5/NaiwaP0/Saved/NaiwaTests/20261011T074412Z_287152/round_01_02_reverse.png",
+      "UE5/NaiwaP0/Saved/NaiwaTests/20261011T074412Z_287152/round_01_04_jump_onto_platform.png",
+      "UE5/NaiwaP0/Saved/NaiwaTests/20261011T074412Z_287152/round_01_06_long_airborne.png",
+      "UE5/Animation/Run_v1/Naiwa_Run_pose_sheet.png"
+    ],
+    "observed": [
+      "New Run shows forward torso lean, bent-elbow arm swing, raised recovering short leg and preserved round body silhouette.",
+      "Accurate sRGB decode makes yellow more saturated than the prior pale screenshot; source vertex colors and official E2 are preserved.",
+      "Motion blur disabled: hands and feet have readable outlines instead of smeared trails.",
+      "Standing screenshots show the feet as the lowest visible body region; floor-contact numeric clearance is about +2.15 cm, within the selected 3 cm tolerance.",
+      "Sampled left/right and platform screenshots keep the whole character in view."
+    ],
+    "belly_runtime_evidence": "run_runtime_validation.json verifies final render weights animate and blend back to zero. This does not replace continuous perceptual review of softness and timing.",
+    "remaining": [
+      "Continuous dynamic perception and final art camera/lighting acceptance",
+      "Full individual visual playback of original Walk and Laugh and the four original clip loops",
+      "Physical keyboard/focus, controller hardware and pause UI"
+    ],
+    "status": "sampled_visual_review_complete_full_p0_pending"
+  },
+  "remaining_evidence": [
+    {
+      "id": "physical_keyboard_focus",
+      "status": "unverified",
+      "needed": "Visible game session with physical A/D/arrows, release, Space, P/Escape/R; held-key focus loss/recovery without stuck movement; timestamped input + image/video evidence",
+      "existing": "DefaultInput.ini sets focus-loss key flushing true; automated tests temporarily disable it and ignore OS input."
+    },
+    {
+      "id": "pause_ui",
+      "status": "source_implemented_pending_rendered_and_physical_validation",
+      "needed": "Visible paused feedback and operation/continue/Reset checks on ground and airborne",
+      "existing": "Current NaiwaHUD.cpp adds keyboard help and a PAUSED overlay with continue/Reset instructions; NaiwaGameMode.cpp assigns ANaiwaHUD. This audit inspected source only; rendered/physical acceptance remains pending."
+    },
+    {
+      "id": "original_four_clips_visual",
+      "status": "unverified",
+      "needed": "Complete playback of original Idle/Walk/Jump/Laugh with front/side game views, loops/end poses, material/normal/eye/skin observations",
+      "existing": "Original four clips all-bone/all-frame data passed; Run replacement does not visually exercise original Walk/Laugh."
+    },
+    {
+      "id": "continuous_dynamic_final_camera",
+      "status": "unverified",
+      "needed": "Continuous starts/stops/reversal/run/jump/landing/drop/Reset review for feet slip, blend, body deformation, eyes, shadows and whole-character camera visibility; final art camera/light/quality recorded",
+      "existing": "Sampled screenshots and 8 fps real UE capture available; perceptual softness/timing and final camera/light freeze remain pending."
+    },
+    {
+      "id": "visible_editor_reopen",
+      "status": "unverified",
+      "needed": "Visible editor reopened from saved project, current map and assets loaded, Play and physical operations repeated",
+      "existing": "Independent NullRHI command process saved-asset audit and fresh game run passed."
+    }
+  ],
+  "finalization_rule": "Do not mark P0 complete until remaining keyboard/focus/UI/full-visual/visible-reopen evidence passes and final source/assets/settings correspond to the tested build. Controller hardware is explicitly excluded from P0 by current user direction. Packaged target-platform validation remains P2.",
+  "source_and_record_manifest": [
+    {
+      "path": "UE5/NaiwaP0/Nai_Long.uproject",
+      "sha256": "955dfa52a4c1ca4f2526bd24c62b5d9b278d75f6f32c20ddc41c0a54962e506f",
+      "size_bytes": 681,
+      "last_write_utc": "2026-10-10T14:46:00.6036620Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaCharacter.cpp",
+      "sha256": "ce2194d4e1895c125a36fee4e34e174c9697de880a1fc50229db1f0450ff2de6",
+      "size_bytes": 13904,
+      "last_write_utc": "2026-10-11T08:27:18.4762810Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaCharacter.h",
+      "sha256": "db55480892db520502ef1eed4c9d64312318d46017d60a32a07c44867547b1af",
+      "size_bytes": 5613,
+      "last_write_utc": "2026-10-11T08:25:23.6489163Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaAnimInstance.cpp",
+      "sha256": "a7dcd275e96d93979181d01783ee717e29ba258e0f6742a19b2d40fa33f4e9a1",
+      "size_bytes": 7241,
+      "last_write_utc": "2026-10-11T02:27:56.5601987Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaAnimInstance.h",
+      "sha256": "6ed89daa9390b1d8c1b2286eae9ab2ab27c8dea5ceded630e5e536ebadd28ac8",
+      "size_bytes": 2691,
+      "last_write_utc": "2026-10-11T02:27:56.0105851Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaGameMode.cpp",
+      "sha256": "af35a823af3117e993fd43142a2dc296ffa412fadfc15bf21f1772d39d57b12a",
+      "size_bytes": 211,
+      "last_write_utc": "2026-10-11T08:25:23.1123158Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Config/DefaultEngine.ini",
+      "sha256": "bc36f5e4ad4746b65f8f3077c529aef17b361dbfaf85379eba5c6ed484b9e537",
+      "size_bytes": 3420,
+      "last_write_utc": "2026-10-11T07:40:24.9160264Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Config/DefaultInput.ini",
+      "sha256": "3bd66794c1306e0844dcfa81cc7c3a3718dd798f373d72868487df4f43e44034",
+      "size_bytes": 9279,
+      "last_write_utc": "2026-10-10T14:47:50.0489726Z"
+    },
+    {
+      "path": "UE5/Scripts/import_e2.py",
+      "sha256": "e8614a0dea8310b27bc376b5d7983568b84cf2198e4b518cc6ba06ef63fa10f2",
+      "size_bytes": 5886,
+      "last_write_utc": "2026-10-10T14:42:32.8157382Z"
+    },
+    {
+      "path": "UE5/Scripts/import_run.py",
+      "sha256": "346859431e0aab853246af8358a51e35504495bedbcb9c5856f37ef7bec694b9",
+      "size_bytes": 6797,
+      "last_write_utc": "2026-10-11T02:42:59.3666427Z"
+    },
+    {
+      "path": "UE5/Scripts/build_graybox.py",
+      "sha256": "33a0a540f5a7642461a7bb9f3abac65d277e107d607c07d38306b7a7210c586b",
+      "size_bytes": 12290,
+      "last_write_utc": "2026-10-11T01:55:16.0152105Z"
+    },
+    {
+      "path": "UE5/Scripts/configure_gameplay_visuals.py",
+      "sha256": "73b3efa14b641b5ddc3251a75491e0d61bddfbef1b8e5291f59edc5394274ca6",
+      "size_bytes": 4569,
+      "last_write_utc": "2026-10-11T08:33:54.8349587Z"
+    },
+    {
+      "path": "UE5/launch_p0.ps1",
+      "sha256": "1622a3f1fe1c3839a0275921f9bce319556a1477afefbdfdb9f967f05b278ae6",
+      "size_bytes": 741,
+      "last_write_utc": "2026-10-11T02:42:39.9219506Z"
+    },
+    {
+      "path": "UE5/run_stage.ps1",
+      "sha256": "deb2898fd22ab55109ff4991dcfaba4d6d11099fc3cbce01b08fdd1045e266da",
+      "size_bytes": 2215,
+      "last_write_utc": "2026-10-11T07:40:25.3739298Z"
+    },
+    {
+      "path": "UE5/Records/TASK_STATE.json",
+      "sha256": "3a02735f2828eac9b614a98133796a4c600f99501f84317b66e513f78a5e59f9",
+      "size_bytes": 1575,
+      "last_write_utc": "2026-10-11T07:52:34.4705198Z"
+    },
+    {
+      "path": "UE5/Records/import_e2.json",
+      "sha256": "e4e3355e5cc50714eaf88fda1241d94ba9efd7b85146991ac6b2cb4d6aec56fc",
+      "size_bytes": 8264,
+      "last_write_utc": "2026-10-11T01:47:02.9475840Z"
+    },
+    {
+      "path": "UE5/Records/import_run.json",
+      "sha256": "10c3050b894a88b3450f6a741f86fc123e1c0073b3b1d75e17a184c4bdb1972f",
+      "size_bytes": 5142,
+      "last_write_utc": "2026-10-11T07:55:52.8491726Z"
+    },
+    {
+      "path": "UE5/Records/import_validation.json",
+      "sha256": "1287d9c9f3f348f5de49f4a7c54121ef471215322f00601ad1f9568bb8a89fa2",
+      "size_bytes": 2773560,
+      "last_write_utc": "2026-10-11T01:59:08.6449975Z"
+    },
+    {
+      "path": "UE5/Records/run_import_validation.json",
+      "sha256": "fbbde31843c094f364bf508b5291fff4087a0f80f61bbd4e1b7441e327fe87d0",
+      "size_bytes": 20856,
+      "last_write_utc": "2026-10-11T07:47:41.7605558Z"
+    },
+    {
+      "path": "UE5/Records/reimport_validation.json",
+      "sha256": "c98ab5d0ec994bcaa327d0f22d948f5a7ba2ecd10d9f3523ec2a38ffb0086e38",
+      "size_bytes": 29177,
+      "last_write_utc": "2026-10-11T01:58:18.4601687Z"
+    },
+    {
+      "path": "UE5/Records/build_graybox.json",
+      "sha256": "18d4074d17c3f587023d02d1e307d1eeb17ac77b7d92b426324c9486462e39e2",
+      "size_bytes": 3331,
+      "last_write_utc": "2026-10-11T01:55:33.3201335Z"
+    },
+    {
+      "path": "UE5/Records/gameplay_visuals.json",
+      "sha256": "2040404ad8d265229d0456dd0b25bdff4b33dcdfcfb1f4790375f480c2d1b139",
+      "size_bytes": 1906,
+      "last_write_utc": "2026-10-11T07:43:04.7681106Z"
+    },
+    {
+      "path": "UE5/Records/runtime_run_summary.json",
+      "sha256": "b349962a68ae3de5b0051bcc5f755c15f4bbb9ad179370f3cde747f991763214",
+      "size_bytes": 338337,
+      "last_write_utc": "2026-10-11T07:46:08.0407440Z"
+    },
+    {
+      "path": "UE5/Records/run_runtime_validation.json",
+      "sha256": "1b846f862efc380bd6d083a5283bdf16087fa85a93a988c085daf2737ec87257",
+      "size_bytes": 3774,
+      "last_write_utc": "2026-10-11T07:47:22.5416886Z"
+    },
+    {
+      "path": "UE5/Records/run_visual_review.json",
+      "sha256": "98faee7be9ecc0304eb81ae59cdb46f229c81bcf3df736682bf9e7c025634b02",
+      "size_bytes": 1854,
+      "last_write_utc": "2026-10-11T07:52:35.3069152Z"
+    },
+    {
+      "path": "UE5/Records/run_export_diagnostics.md",
+      "sha256": "05dc5b6f4232fb568a07a7b35e0a9697730305e4b86ea41c10340959f8293290",
+      "size_bytes": 8414,
+      "last_write_utc": "2026-10-11T07:41:17.7875661Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaHUD.cpp",
+      "sha256": "64183c36c5e45a6c20339e8eb2f9e2221462c4c7e6be7b5627c59e445ffccd92",
+      "size_bytes": 2463,
+      "last_write_utc": "2026-10-11T08:25:22.5813431Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaHUD.h",
+      "sha256": "260f107299f0741d57e9dd387cdf7e22bda7af613ccaeea58fb77edcd15aeb8c",
+      "size_bytes": 451,
+      "last_write_utc": "2026-10-11T08:25:22.0687835Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaRuntime.Build.cs",
+      "sha256": "c0a33cefb66461fe3c878853236f2ec7f5c17402a06af0fad48471bdcfe3ca8c",
+      "size_bytes": 446,
+      "last_write_utc": "2026-10-11T01:44:05.0288656Z"
+    }
+  ],
+  "scope_update": {
+    "date": "2026-10-11",
+    "gamepad": "excluded_from_P0_by_user_direction",
+    "mapping_status": "Existing controller mappings preserved; hardware validation is deferred and does not block P0."
+  },
+  "refreshed_utc": "2026-10-11T08:34:29.7762405Z",
+  "newly_observed_runtime_issue": {
+    "id": "gameplay_body_missing_morph_targets_material_usage",
+    "source": "UE5/Records/p0_keyboard_initial.log:1630",
+    "timestamp_utc": "2026-10-11T08:30:26.680Z",
+    "message": "Material /Game/Naiwa/Gameplay/Materials/M_NaiwaBody_Gameplay.M_NaiwaBody_Gameplay missing usage flag MorphTargets! Default Material will be used in game.",
+    "observed_status": "actual_fresh_game_warning",
+    "correction_status": "root_preparing_MATUSAGE_MORPH_TARGETS_fix_save_and_reopen_validation",
+    "required_evidence": "After setting/saving MorphTargets usage, launch a fresh rendered process; confirm intended Body/Eye materials remain active and no missing-usage/default-material warning, then review rendered color and morph deformation.",
+    "no_resolution_claimed": true
+  },
+  "prior_source_and_record_manifest": [
+    {
+      "path": "UE5/NaiwaP0/Nai_Long.uproject",
+      "sha256": "955dfa52a4c1ca4f2526bd24c62b5d9b278d75f6f32c20ddc41c0a54962e506f",
+      "size_bytes": 681,
+      "last_write_utc": "2026-10-10T14:46:00.603662Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaCharacter.cpp",
+      "sha256": "92af4410e50750bb3f4d3b4e74ac26c748c316a073e0745e9054b6634c480604",
+      "size_bytes": 13309,
+      "last_write_utc": "2026-10-11T08:25:24.1896698Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaCharacter.h",
+      "sha256": "db55480892db520502ef1eed4c9d64312318d46017d60a32a07c44867547b1af",
+      "size_bytes": 5613,
+      "last_write_utc": "2026-10-11T08:25:23.6489163Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaAnimInstance.cpp",
+      "sha256": "a7dcd275e96d93979181d01783ee717e29ba258e0f6742a19b2d40fa33f4e9a1",
+      "size_bytes": 7241,
+      "last_write_utc": "2026-10-11T02:27:56.5601987Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaAnimInstance.h",
+      "sha256": "6ed89daa9390b1d8c1b2286eae9ab2ab27c8dea5ceded630e5e536ebadd28ac8",
+      "size_bytes": 2691,
+      "last_write_utc": "2026-10-11T02:27:56.0105851Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaGameMode.cpp",
+      "sha256": "af35a823af3117e993fd43142a2dc296ffa412fadfc15bf21f1772d39d57b12a",
+      "size_bytes": 211,
+      "last_write_utc": "2026-10-11T08:25:23.1123158Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Config/DefaultEngine.ini",
+      "sha256": "bc36f5e4ad4746b65f8f3077c529aef17b361dbfaf85379eba5c6ed484b9e537",
+      "size_bytes": 3420,
+      "last_write_utc": "2026-10-11T07:40:24.9160264Z"
+    },
+    {
+      "path": "UE5/NaiwaP0/Config/DefaultInput.ini",
+      "sha256": "3bd66794c1306e0844dcfa81cc7c3a3718dd798f373d72868487df4f43e44034",
+      "size_bytes": 9279,
+      "last_write_utc": "2026-10-10T14:47:50.0489726Z"
+    },
+    {
+      "path": "UE5/Scripts/import_e2.py",
+      "sha256": "e8614a0dea8310b27bc376b5d7983568b84cf2198e4b518cc6ba06ef63fa10f2",
+      "size_bytes": 5886,
+      "last_write_utc": "2026-10-10T14:42:32.8157382Z"
+    },
+    {
+      "path": "UE5/Scripts/import_run.py",
+      "sha256": "346859431e0aab853246af8358a51e35504495bedbcb9c5856f37ef7bec694b9",
+      "size_bytes": 6797,
+      "last_write_utc": "2026-10-11T02:42:59.3666427Z"
+    },
+    {
+      "path": "UE5/Scripts/build_graybox.py",
+      "sha256": "33a0a540f5a7642461a7bb9f3abac65d277e107d607c07d38306b7a7210c586b",
+      "size_bytes": 12290,
+      "last_write_utc": "2026-10-11T01:55:16.0152105Z"
+    },
+    {
+      "path": "UE5/Scripts/configure_gameplay_visuals.py",
+      "sha256": "3f36bd5b8b8d5409d511cc2a78a528fe9ebc27b434b32784dc31059acb9e6ef8",
+      "size_bytes": 4195,
+      "last_write_utc": "2026-10-11T07:42:43.678777Z"
+    },
+    {
+      "path": "UE5/launch_p0.ps1",
+      "sha256": "1622a3f1fe1c3839a0275921f9bce319556a1477afefbdfdb9f967f05b278ae6",
+      "size_bytes": 741,
+      "last_write_utc": "2026-10-11T02:42:39.9219506Z"
+    },
+    {
+      "path": "UE5/run_stage.ps1",
+      "sha256": "deb2898fd22ab55109ff4991dcfaba4d6d11099fc3cbce01b08fdd1045e266da",
+      "size_bytes": 2215,
+      "last_write_utc": "2026-10-11T07:40:25.3739298Z"
+    },
+    {
+      "path": "UE5/Records/TASK_STATE.json",
+      "sha256": "3a02735f2828eac9b614a98133796a4c600f99501f84317b66e513f78a5e59f9",
+      "size_bytes": 1575,
+      "last_write_utc": "2026-10-11T07:52:34.4705198Z"
+    },
+    {
+      "path": "UE5/Records/import_e2.json",
+      "sha256": "e4e3355e5cc50714eaf88fda1241d94ba9efd7b85146991ac6b2cb4d6aec56fc",
+      "size_bytes": 8264,
+      "last_write_utc": "2026-10-11T01:47:02.947584Z"
+    },
+    {
+      "path": "UE5/Records/import_run.json",
+      "sha256": "10c3050b894a88b3450f6a741f86fc123e1c0073b3b1d75e17a184c4bdb1972f",
+      "size_bytes": 5142,
+      "last_write_utc": "2026-10-11T07:55:52.8491726Z"
+    },
+    {
+      "path": "UE5/Records/import_validation.json",
+      "sha256": "1287d9c9f3f348f5de49f4a7c54121ef471215322f00601ad1f9568bb8a89fa2",
+      "size_bytes": 2773560,
+      "last_write_utc": "2026-10-11T01:59:08.6449975Z"
+    },
+    {
+      "path": "UE5/Records/run_import_validation.json",
+      "sha256": "fbbde31843c094f364bf508b5291fff4087a0f80f61bbd4e1b7441e327fe87d0",
+      "size_bytes": 20856,
+      "last_write_utc": "2026-10-11T07:47:41.7605558Z"
+    },
+    {
+      "path": "UE5/Records/reimport_validation.json",
+      "sha256": "c98ab5d0ec994bcaa327d0f22d948f5a7ba2ecd10d9f3523ec2a38ffb0086e38",
+      "size_bytes": 29177,
+      "last_write_utc": "2026-10-11T01:58:18.4601687Z"
+    },
+    {
+      "path": "UE5/Records/build_graybox.json",
+      "sha256": "18d4074d17c3f587023d02d1e307d1eeb17ac77b7d92b426324c9486462e39e2",
+      "size_bytes": 3331,
+      "last_write_utc": "2026-10-11T01:55:33.3201335Z"
+    },
+    {
+      "path": "UE5/Records/gameplay_visuals.json",
+      "sha256": "2040404ad8d265229d0456dd0b25bdff4b33dcdfcfb1f4790375f480c2d1b139",
+      "size_bytes": 1906,
+      "last_write_utc": "2026-10-11T07:43:04.7681106Z"
+    },
+    {
+      "path": "UE5/Records/runtime_run_summary.json",
+      "sha256": "b349962a68ae3de5b0051bcc5f755c15f4bbb9ad179370f3cde747f991763214",
+      "size_bytes": 338337,
+      "last_write_utc": "2026-10-11T07:46:08.040744Z"
+    },
+    {
+      "path": "UE5/Records/run_runtime_validation.json",
+      "sha256": "1b846f862efc380bd6d083a5283bdf16087fa85a93a988c085daf2737ec87257",
+      "size_bytes": 3774,
+      "last_write_utc": "2026-10-11T07:47:22.5416886Z"
+    },
+    {
+      "path": "UE5/Records/run_visual_review.json",
+      "sha256": "98faee7be9ecc0304eb81ae59cdb46f229c81bcf3df736682bf9e7c025634b02",
+      "size_bytes": 1854,
+      "last_write_utc": "2026-10-11T07:52:35.3069152Z"
+    },
+    {
+      "path": "UE5/Records/run_export_diagnostics.md",
+      "sha256": "05dc5b6f4232fb568a07a7b35e0a9697730305e4b86ea41c10340959f8293290",
+      "size_bytes": 8414,
+      "last_write_utc": "2026-10-11T07:41:17.7875661Z"
+    }
+  ]
+}

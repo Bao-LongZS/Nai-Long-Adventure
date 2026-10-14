@@ -1,0 +1,109 @@
+{
+  "status": "passed_saved_mapping_final_24_of_24_and_ordinary_walk_run_validation",
+  "movement": "A/D or Left/Right, exactly as before; no Shift chord required",
+  "shift": "Press either Shift once to toggle Walk 150 / Run 300 cm/s; default Run",
+  "gait_action": "/Game/Naiwa/Input/IA_NaiwaGait.IA_NaiwaGait",
+  "character_gait_action": "/Game/Naiwa/Input/IA_NaiwaGait.IA_NaiwaGait",
+  "before": [
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "key": "Gamepad_LeftX"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaJump.IA_NaiwaJump",
+      "key": "SpaceBar"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaJump.IA_NaiwaJump",
+      "key": "Gamepad_FaceButton_Bottom"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaPause.IA_NaiwaPause",
+      "key": "Escape"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaPause.IA_NaiwaPause",
+      "key": "P"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaReset.IA_NaiwaReset",
+      "key": "R"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaShiftGate.IA_NaiwaShiftGate",
+      "key": "LeftShift"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaShiftGate.IA_NaiwaShiftGate",
+      "key": "RightShift"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "key": "Left"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "key": "Right"
+    }
+  ],
+  "after": [
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "key": "Gamepad_LeftX"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaJump.IA_NaiwaJump",
+      "key": "SpaceBar"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaJump.IA_NaiwaJump",
+      "key": "Gamepad_FaceButton_Bottom"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaPause.IA_NaiwaPause",
+      "key": "Escape"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaPause.IA_NaiwaPause",
+      "key": "P"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaReset.IA_NaiwaReset",
+      "key": "R"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "key": "A"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "key": "D"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "key": "Left"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaMove.IA_NaiwaMove",
+      "key": "Right"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaGait.IA_NaiwaGait",
+      "key": "LeftShift"
+    },
+    {
+      "action": "/Game/Naiwa/Input/IA_NaiwaGait.IA_NaiwaGait",
+      "key": "RightShift"
+    }
+  ],
+  "preserved": [
+    "Jump",
+    "Pause",
+    "Reset",
+    "gamepad mappings",
+    "86cm capsule",
+    "scene",
+    "model",
+    "animations"
+  ]
+}

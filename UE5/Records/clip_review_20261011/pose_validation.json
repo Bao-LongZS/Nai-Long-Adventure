@@ -1,0 +1,3224 @@
+{
+  "created_utc": "2026-10-12T05:48:26.996282+00:00",
+  "source_manifest": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\manifest.json",
+  "source_manifest_sha256": "6260ddd37776d4df81e52723e807dbe4d696ffcdba4a29be7dd4a3b32303d167",
+  "method": "Read stored UE component-space positions/quaternions and world surface extrema; 12 held phases plus two near-end/start pairs per clip.",
+  "scope": "Sampled transform data only. No Unreal launch, model change, input validation, continuous playback, new skinning evaluation, or P0 completion claim.",
+  "limits": [
+    "Positions are stored component-space centimeters before gameplay component scaling; they are not world-space foot positions.",
+    "Only position and quaternion were recorded per bone; scale validity cannot be established from this manifest.",
+    "Seam samples are at clip_length-0.00001 seconds versus time zero, rather than the exact terminal sample.",
+    "Surface minima span all CPU-skinned vertices. A foot region attribution requires image review; no per-foot support or slip measurement is available.",
+    "Twelve held phases cannot establish inter-frame acceleration, temporal smoothness, or skin self-intersection absence.",
+    "Jump/Laugh are original demonstration sequences, not automatically certified as intended seamless locomotion loops."
+  ],
+  "entry_count": 80,
+  "clips": [
+    {
+      "clip": "AS_Naiwa_Idle",
+      "asset": "/Game/Naiwa/AS_Naiwa_Idle.AS_Naiwa_Idle",
+      "clip_length_s": 1.25,
+      "bone_count": 11,
+      "bone_names": [
+        "Naiwa_Rig",
+        "Root",
+        "Torso",
+        "UpperArm_L",
+        "Forearm_L",
+        "UpperArm_R",
+        "Forearm_R",
+        "Thigh_L",
+        "Shin_L",
+        "Thigh_R",
+        "Shin_R"
+      ],
+      "all_recorded_position_quaternion_values_finite": true,
+      "maximum_quaternion_norm_error": 1.1102230246251565e-16,
+      "maximum_actual_vs_requested_sample_time_error_s": 0,
+      "actor_maximum_pairwise_location_change_cm": 0.0,
+      "camera_maximum_pairwise_location_change_cm": 0.0,
+      "sampled_cpu_vertex_counts": [
+        387974
+      ],
+      "sampled_bone_motion": [
+        {
+          "bone": "Naiwa_Rig",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              0.0,
+              0.0
+            ],
+            "y": [
+              0.0,
+              0.0
+            ],
+            "z": [
+              0.0,
+              0.0
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "Root",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              0.0,
+              0.0
+            ],
+            "y": [
+              0.0,
+              0.0
+            ],
+            "z": [
+              0.0,
+              0.0
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "Torso",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 1.3684163322039629,
+          "position_bounds_component_cm": {
+            "x": [
+              0.0,
+              0.0
+            ],
+            "y": [
+              1.4210854715202004e-14,
+              1.4210854715202004e-14
+            ],
+            "z": [
+              77.99999713897706,
+              77.99999713897706
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "UpperArm_L",
+          "maximum_pairwise_position_change_component_cm": 2.6153240182956976,
+          "maximum_pairwise_rotation_change_degrees": 1.3684163322028977,
+          "position_bounds_component_cm": {
+            "x": [
+              -45.500001311302185,
+              -45.500001311302185
+            ],
+            "y": [
+              -1.2107352168124805,
+              1.4045877768694197
+            ],
+            "z": [
+              187.49756679130377,
+              187.50643236264995
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Forearm_L",
+          "maximum_pairwise_position_change_component_cm": 1.3852541216175296,
+          "maximum_pairwise_rotation_change_degrees": 1.3684163322039629,
+          "position_bounds_component_cm": {
+            "x": [
+              -72.69999997899995,
+              -72.69999997899995
+            ],
+            "y": [
+              -0.5056813278752728,
+              0.879565597784584
+            ],
+            "z": [
+              135.9954863414864,
+              136.0020262435243
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "UpperArm_R",
+          "maximum_pairwise_position_change_component_cm": 2.6153240182956976,
+          "maximum_pairwise_rotation_change_degrees": 1.3684163322028977,
+          "position_bounds_component_cm": {
+            "x": [
+              45.500001311302185,
+              45.500001311302185
+            ],
+            "y": [
+              -1.2107352168124805,
+              1.4045877768694197
+            ],
+            "z": [
+              187.49756679130377,
+              187.50643236264995
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Forearm_R",
+          "maximum_pairwise_position_change_component_cm": 1.3852541216175296,
+          "maximum_pairwise_rotation_change_degrees": 1.3684163322039629,
+          "position_bounds_component_cm": {
+            "x": [
+              72.69999997899995,
+              72.69999997899995
+            ],
+            "y": [
+              -0.5056813278752728,
+              0.879565597784584
+            ],
+            "z": [
+              135.9954863414864,
+              136.0020262435243
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Thigh_L",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              -31.999999284744263,
+              -31.999999284744263
+            ],
+            "y": [
+              -1.499999966472373,
+              -1.499999966472373
+            ],
+            "z": [
+              93.99999380111696,
+              93.99999380111696
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "Shin_L",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              -34.00000139544357,
+              -34.00000139544357
+            ],
+            "y": [
+              -0.5000003347767574,
+              -0.5000003347767574
+            ],
+            "z": [
+              55.19158974907375,
+              55.19158974907375
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "Thigh_R",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              31.999999284744263,
+              31.999999284744263
+            ],
+            "y": [
+              -1.499999966472373,
+              -1.499999966472373
+            ],
+            "z": [
+              93.99999380111696,
+              93.99999380111696
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "Shin_R",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              34.00000139544357,
+              34.00000139544357
+            ],
+            "y": [
+              -0.5000003347767574,
+              -0.5000003347767574
+            ],
+            "z": [
+              55.19158974907375,
+              55.19158974907375
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        }
+      ],
+      "maximum_pairwise_bone_rotation_change_degrees": 1.3684163322039629,
+      "maximum_pairwise_bone_position_change_component_cm": 2.6153240182956976,
+      "near_end_start_pairs": [
+        {
+          "from_phase": 12,
+          "to_phase": 13,
+          "from_time_s": 1.2499899864196777,
+          "to_time_s": 0,
+          "maximum_bone_position_difference_component_cm": 0.0,
+          "maximum_bone_rotation_difference_degrees": 0.0,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0,
+          "front_extent_difference_cm": 0.0,
+          "rear_extent_difference_cm": 0.0,
+          "morph_weight_maximum_difference": 0
+        },
+        {
+          "from_phase": 14,
+          "to_phase": 15,
+          "from_time_s": 1.2499899864196777,
+          "to_time_s": 0,
+          "maximum_bone_position_difference_component_cm": 0.0,
+          "maximum_bone_rotation_difference_degrees": 0.0,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0,
+          "front_extent_difference_cm": 0.0,
+          "rear_extent_difference_cm": 0.0,
+          "morph_weight_maximum_difference": 0
+        }
+      ],
+      "repeated_end_and_start_samples": [
+        {
+          "from_phase": 12,
+          "to_phase": 14,
+          "from_time_s": 1.2499899864196777,
+          "to_time_s": 1.2499899864196777,
+          "maximum_bone_position_difference_component_cm": 0.0,
+          "maximum_bone_rotation_difference_degrees": 0.0,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0,
+          "front_extent_difference_cm": 0.0,
+          "rear_extent_difference_cm": 0.0,
+          "morph_weight_maximum_difference": 0
+        },
+        {
+          "from_phase": 13,
+          "to_phase": 15,
+          "from_time_s": 0,
+          "to_time_s": 0,
+          "maximum_bone_position_difference_component_cm": 0.0,
+          "maximum_bone_rotation_difference_degrees": 0.0,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0,
+          "front_extent_difference_cm": 0.0,
+          "rear_extent_difference_cm": 0.0,
+          "morph_weight_maximum_difference": 0
+        }
+      ],
+      "near_end_start_maximum_rotation_difference_degrees": 0.0,
+      "near_end_start_maximum_position_difference_component_cm": 0.0,
+      "near_end_start_within_selected_numeric_0_01deg_and_0_01cm_tolerance": true,
+      "surface_minimum_world_z_range_cm": [
+        2.199998250399765,
+        2.199998250399765
+      ],
+      "surface_minimum_world_z_per_phase": [
+        {
+          "phase": 0,
+          "time_s": 0,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 1,
+          "time_s": 0.1041666641831398,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 2,
+          "time_s": 0.2083333283662796,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 3,
+          "time_s": 0.3125,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 4,
+          "time_s": 0.4166666567325592,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 5,
+          "time_s": 0.5208333134651184,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 6,
+          "time_s": 0.625,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 7,
+          "time_s": 0.7291666865348816,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 8,
+          "time_s": 0.8333333134651184,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 9,
+          "time_s": 0.9375,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 10,
+          "time_s": 1.0416666269302368,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 11,
+          "time_s": 1.1458333730697632,
+          "minimum_world_z_cm": 2.199998250399765
+        }
+      ],
+      "front_extent_from_actor_range_cm": [
+        49.748539994544444,
+        50.527303823205
+      ],
+      "rear_extent_from_actor_range_cm": [
+        39.43028513468326,
+        40.13747387558638
+      ],
+      "recorded_morph_weight_ranges": {
+        "Belly_Compress": [
+          0,
+          0
+        ],
+        "Belly_Rebound": [
+          0,
+          0
+        ],
+        "Belly_SoftLag": [
+          0,
+          0
+        ]
+      },
+      "screenshots_saved_in_manifest_and_exist": true,
+      "screenshot_paths": [
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_00.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_01.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_02.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_03.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_04.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_05.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_06.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_07.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_08.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_09.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_10.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_11.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_12.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_13.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_14.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Idle_phase_15.png"
+      ]
+    },
+    {
+      "clip": "AS_Naiwa_Walk",
+      "asset": "/Game/Naiwa/AS_Naiwa_Walk.AS_Naiwa_Walk",
+      "clip_length_s": 1.3333333730697632,
+      "bone_count": 11,
+      "bone_names": [
+        "Naiwa_Rig",
+        "Root",
+        "Torso",
+        "UpperArm_L",
+        "Forearm_L",
+        "UpperArm_R",
+        "Forearm_R",
+        "Thigh_L",
+        "Shin_L",
+        "Thigh_R",
+        "Shin_R"
+      ],
+      "all_recorded_position_quaternion_values_finite": true,
+      "maximum_quaternion_norm_error": 2.220446049250313e-16,
+      "maximum_actual_vs_requested_sample_time_error_s": 0,
+      "actor_maximum_pairwise_location_change_cm": 0.0,
+      "camera_maximum_pairwise_location_change_cm": 0.0,
+      "sampled_cpu_vertex_counts": [
+        387974
+      ],
+      "sampled_bone_motion": [
+        {
+          "bone": "Naiwa_Rig",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              0.0,
+              0.0
+            ],
+            "y": [
+              0.0,
+              0.0
+            ],
+            "z": [
+              0.0,
+              0.0
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "Root",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              0.0,
+              0.0
+            ],
+            "y": [
+              0.0,
+              0.0
+            ],
+            "z": [
+              0.0,
+              0.0
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "Torso",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              0.0,
+              0.0
+            ],
+            "y": [
+              1.4210854715202004e-14,
+              1.4210854715202004e-14
+            ],
+            "z": [
+              77.99999713897706,
+              77.99999713897706
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "UpperArm_L",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 20.581253095664618,
+          "position_bounds_component_cm": {
+            "x": [
+              -45.500001311302185,
+              -45.500001311302185
+            ],
+            "y": [
+              1.5375907018614896,
+              1.5375907018614896
+            ],
+            "z": [
+              187.49577989531258,
+              187.49577989531258
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Forearm_L",
+          "maximum_pairwise_position_change_component_cm": 20.81022294837678,
+          "maximum_pairwise_rotation_change_degrees": 20.58125309566455,
+          "position_bounds_component_cm": {
+            "x": [
+              -76.60013424627462,
+              -67.90025793139844
+            ],
+            "y": [
+              -8.157657479533434,
+              10.129578323596576
+            ],
+            "z": [
+              134.42049262776652,
+              139.21158206000675
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "UpperArm_R",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 20.505328453685596,
+          "position_bounds_component_cm": {
+            "x": [
+              45.500001311302185,
+              45.500001311302185
+            ],
+            "y": [
+              1.5375907018614896,
+              1.5375907018614896
+            ],
+            "z": [
+              187.49577989531258,
+              187.49577989531258
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Forearm_R",
+          "maximum_pairwise_position_change_component_cm": 20.734274098154213,
+          "maximum_pairwise_rotation_change_degrees": 20.505328453685596,
+          "position_bounds_component_cm": {
+            "x": [
+              67.94255311431039,
+              76.6139423801974
+            ],
+            "y": [
+              -8.177781919428753,
+              10.03380613229529
+            ],
+            "z": [
+              134.42294260164886,
+              139.2245247587248
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Thigh_L",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 37.72927186431774,
+          "position_bounds_component_cm": {
+            "x": [
+              -31.999999284744263,
+              -31.999999284744263
+            ],
+            "y": [
+              -1.499999966472373,
+              -1.499999966472373
+            ],
+            "z": [
+              93.99999380111696,
+              93.99999380111696
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Shin_L",
+          "maximum_pairwise_position_change_component_cm": 25.137730767813167,
+          "maximum_pairwise_rotation_change_degrees": 23.951115865591497,
+          "position_bounds_component_cm": {
+            "x": [
+              -34.556273718121176,
+              -33.231612621425434
+            ],
+            "y": [
+              -13.135353715956867,
+              11.961301491787502
+            ],
+            "z": [
+              55.53642402675273,
+              57.55320074038805
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Thigh_R",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 37.71676863720656,
+          "position_bounds_component_cm": {
+            "x": [
+              31.999999284744263,
+              31.999999284744263
+            ],
+            "y": [
+              -1.499999966472373,
+              -1.499999966472373
+            ],
+            "z": [
+              93.99999380111696,
+              93.99999380111696
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Shin_R",
+          "maximum_pairwise_position_change_component_cm": 25.129703360648712,
+          "maximum_pairwise_rotation_change_degrees": 23.93159125007841,
+          "position_bounds_component_cm": {
+            "x": [
+              33.22834943508794,
+              34.553882509060564
+            ],
+            "y": [
+              -13.07466936539933,
+              12.013023556159553
+            ],
+            "z": [
+              55.52541824085441,
+              57.57223537491422
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        }
+      ],
+      "maximum_pairwise_bone_rotation_change_degrees": 37.72927186431774,
+      "maximum_pairwise_bone_position_change_component_cm": 25.137730767813167,
+      "near_end_start_pairs": [
+        {
+          "from_phase": 12,
+          "to_phase": 13,
+          "from_time_s": 1.333323359489441,
+          "to_time_s": 0,
+          "maximum_bone_position_difference_component_cm": 9.961919205095417e-05,
+          "maximum_bone_rotation_difference_degrees": 0.00013311204605156584,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 9.828414381819551e-05
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 9.961919205095417e-05,
+              "rotation_difference_degrees": 9.826930959521188e-05
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 1.707547292503189e-05
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 9.71668468852378e-06,
+              "rotation_difference_degrees": 1.690385577616028e-05
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.00013310109348265345
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 9.031673723352176e-05,
+              "rotation_difference_degrees": 0.00013311204605156584
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 7.644016210929102e-05
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 5.187206070964352e-05,
+              "rotation_difference_degrees": 7.644016210929102e-05
+            }
+          ],
+          "surface_min_world_z_difference_cm": 2.7342589734580258e-05,
+          "front_extent_difference_cm": 0.0,
+          "rear_extent_difference_cm": 5.20811232718188e-06,
+          "morph_weight_maximum_difference": 0
+        },
+        {
+          "from_phase": 14,
+          "to_phase": 15,
+          "from_time_s": 1.333323359489441,
+          "to_time_s": 0,
+          "maximum_bone_position_difference_component_cm": 9.961919205095417e-05,
+          "maximum_bone_rotation_difference_degrees": 0.00013311204605156584,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 9.828414381819551e-05
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 9.961919205095417e-05,
+              "rotation_difference_degrees": 9.826930959521188e-05
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 1.707547292503189e-05
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 9.71668468852378e-06,
+              "rotation_difference_degrees": 1.690385577616028e-05
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.00013310109348265345
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 9.031673723352176e-05,
+              "rotation_difference_degrees": 0.00013311204605156584
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 7.644016210929102e-05
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 5.187206070964352e-05,
+              "rotation_difference_degrees": 7.644016210929102e-05
+            }
+          ],
+          "surface_min_world_z_difference_cm": 2.7342589734580258e-05,
+          "front_extent_difference_cm": 0.0,
+          "rear_extent_difference_cm": 5.20811232718188e-06,
+          "morph_weight_maximum_difference": 0
+        }
+      ],
+      "repeated_end_and_start_samples": [
+        {
+          "from_phase": 12,
+          "to_phase": 14,
+          "from_time_s": 1.333323359489441,
+          "to_time_s": 1.333323359489441,
+          "maximum_bone_position_difference_component_cm": 0.0,
+          "maximum_bone_rotation_difference_degrees": 0.0,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0,
+          "front_extent_difference_cm": 0.0,
+          "rear_extent_difference_cm": 0.0,
+          "morph_weight_maximum_difference": 0
+        },
+        {
+          "from_phase": 13,
+          "to_phase": 15,
+          "from_time_s": 0,
+          "to_time_s": 0,
+          "maximum_bone_position_difference_component_cm": 0.0,
+          "maximum_bone_rotation_difference_degrees": 0.0,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0,
+          "front_extent_difference_cm": 0.0,
+          "rear_extent_difference_cm": 0.0,
+          "morph_weight_maximum_difference": 0
+        }
+      ],
+      "near_end_start_maximum_rotation_difference_degrees": 0.00013311204605156584,
+      "near_end_start_maximum_position_difference_component_cm": 9.961919205095417e-05,
+      "near_end_start_within_selected_numeric_0_01deg_and_0_01cm_tolerance": true,
+      "surface_minimum_world_z_range_cm": [
+        -1.1222865925315553,
+        0.0926701523459399
+      ],
+      "surface_minimum_world_z_per_phase": [
+        {
+          "phase": 0,
+          "time_s": 0,
+          "minimum_world_z_cm": -1.0954797873526636
+        },
+        {
+          "phase": 1,
+          "time_s": 0.1111111119389534,
+          "minimum_world_z_cm": 0.06683547388422983
+        },
+        {
+          "phase": 2,
+          "time_s": 0.2222222238779068,
+          "minimum_world_z_cm": 0.07481365096044512
+        },
+        {
+          "phase": 3,
+          "time_s": 0.3333333432674408,
+          "minimum_world_z_cm": -1.0792952527787554
+        },
+        {
+          "phase": 4,
+          "time_s": 0.4444444477558136,
+          "minimum_world_z_cm": 0.06823531682654971
+        },
+        {
+          "phase": 5,
+          "time_s": 0.5555555820465088,
+          "minimum_world_z_cm": 0.04478042019283679
+        },
+        {
+          "phase": 6,
+          "time_s": 0.6666666865348816,
+          "minimum_world_z_cm": -1.1222865925315553
+        },
+        {
+          "phase": 7,
+          "time_s": 0.7777778506278992,
+          "minimum_world_z_cm": 0.06286640402789234
+        },
+        {
+          "phase": 8,
+          "time_s": 0.8888888955116272,
+          "minimum_world_z_cm": 0.0926701523459399
+        },
+        {
+          "phase": 9,
+          "time_s": 1,
+          "minimum_world_z_cm": -1.0792952527787554
+        },
+        {
+          "phase": 10,
+          "time_s": 1.1111111640930176,
+          "minimum_world_z_cm": 0.07481609226310004
+        },
+        {
+          "phase": 11,
+          "time_s": 1.2222222089767456,
+          "minimum_world_z_cm": 0.06683449736316782
+        }
+      ],
+      "front_extent_from_actor_range_cm": [
+        50.26521598639953,
+        50.50607034923374
+      ],
+      "rear_extent_from_actor_range_cm": [
+        39.22839526424935,
+        39.36790496924524
+      ],
+      "recorded_morph_weight_ranges": {
+        "Belly_Compress": [
+          0,
+          0
+        ],
+        "Belly_Rebound": [
+          0,
+          0
+        ],
+        "Belly_SoftLag": [
+          0,
+          0
+        ]
+      },
+      "screenshots_saved_in_manifest_and_exist": true,
+      "screenshot_paths": [
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_00.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_01.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_02.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_03.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_04.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_05.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_06.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_07.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_08.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_09.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_10.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_11.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_12.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_13.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_14.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Walk_phase_15.png"
+      ]
+    },
+    {
+      "clip": "AS_Naiwa_Jump",
+      "asset": "/Game/Naiwa/AS_Naiwa_Jump.AS_Naiwa_Jump",
+      "clip_length_s": 0.7916666865348816,
+      "bone_count": 11,
+      "bone_names": [
+        "Naiwa_Rig",
+        "Root",
+        "Torso",
+        "UpperArm_L",
+        "Forearm_L",
+        "UpperArm_R",
+        "Forearm_R",
+        "Thigh_L",
+        "Shin_L",
+        "Thigh_R",
+        "Shin_R"
+      ],
+      "all_recorded_position_quaternion_values_finite": true,
+      "maximum_quaternion_norm_error": 2.220446049250313e-16,
+      "maximum_actual_vs_requested_sample_time_error_s": 0,
+      "actor_maximum_pairwise_location_change_cm": 0.0,
+      "camera_maximum_pairwise_location_change_cm": 0.0,
+      "sampled_cpu_vertex_counts": [
+        387974
+      ],
+      "sampled_bone_motion": [
+        {
+          "bone": "Naiwa_Rig",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              0.0,
+              0.0
+            ],
+            "y": [
+              0.0,
+              0.0
+            ],
+            "z": [
+              0.0,
+              0.0
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "Root",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              0.0,
+              0.0
+            ],
+            "y": [
+              0.0,
+              0.0
+            ],
+            "z": [
+              0.0,
+              0.0
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "Torso",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 10.029714654580173,
+          "position_bounds_component_cm": {
+            "x": [
+              0.0,
+              0.0
+            ],
+            "y": [
+              1.4210854715202004e-14,
+              1.4210854715202004e-14
+            ],
+            "z": [
+              77.99999713897706,
+              77.99999713897706
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "UpperArm_L",
+          "maximum_pairwise_position_change_component_cm": 19.144829673726292,
+          "maximum_pairwise_rotation_change_degrees": 10.029714654580465,
+          "position_bounds_component_cm": {
+            "x": [
+              -45.500001311302185,
+              -45.500001311302185
+            ],
+            "y": [
+              -14.848112027169194,
+              4.274219984840769
+            ],
+            "z": [
+              186.49526982777996,
+              187.50433849529435
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Forearm_L",
+          "maximum_pairwise_position_change_component_cm": 10.140408617696645,
+          "maximum_pairwise_rotation_change_degrees": 10.029714654580028,
+          "position_bounds_component_cm": {
+            "x": [
+              -72.69999997899995,
+              -72.69999997899995
+            ],
+            "y": [
+              -7.73019134211178,
+              2.39942235659818
+            ],
+            "z": [
+              135.4847302886884,
+              136.0016792831179
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "UpperArm_R",
+          "maximum_pairwise_position_change_component_cm": 19.144829673726292,
+          "maximum_pairwise_rotation_change_degrees": 10.029714654580465,
+          "position_bounds_component_cm": {
+            "x": [
+              45.500001311302185,
+              45.500001311302185
+            ],
+            "y": [
+              -14.848112027169194,
+              4.274219984840769
+            ],
+            "z": [
+              186.49526982777996,
+              187.50433849529435
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Forearm_R",
+          "maximum_pairwise_position_change_component_cm": 10.140408617696645,
+          "maximum_pairwise_rotation_change_degrees": 10.029714654580028,
+          "position_bounds_component_cm": {
+            "x": [
+              72.69999997899995,
+              72.69999997899995
+            ],
+            "y": [
+              -7.73019134211178,
+              2.39942235659818
+            ],
+            "z": [
+              135.4847302886884,
+              136.0016792831179
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Thigh_L",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 17.773765848748123,
+          "position_bounds_component_cm": {
+            "x": [
+              -31.999999284744263,
+              -31.999999284744263
+            ],
+            "y": [
+              -1.499999966472373,
+              -1.499999966472373
+            ],
+            "z": [
+              93.99999380111696,
+              93.99999380111696
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Shin_L",
+          "maximum_pairwise_position_change_component_cm": 12.010457545785348,
+          "maximum_pairwise_rotation_change_degrees": 17.77376584874804,
+          "position_bounds_component_cm": {
+            "x": [
+              -34.3508154226026,
+              -33.74110019311171
+            ],
+            "y": [
+              -7.845421307857791,
+              4.148715678406994
+            ],
+            "z": [
+              55.183967790009426,
+              55.72073669940308
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Thigh_R",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 17.77358225960274,
+          "position_bounds_component_cm": {
+            "x": [
+              31.999999284744263,
+              31.999999284744263
+            ],
+            "y": [
+              -1.499999966472373,
+              -1.499999966472373
+            ],
+            "z": [
+              93.99999380111696,
+              93.99999380111696
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Shin_R",
+          "maximum_pairwise_position_change_component_cm": 12.010334511996161,
+          "maximum_pairwise_rotation_change_degrees": 17.77358225960274,
+          "position_bounds_component_cm": {
+            "x": [
+              33.74129764720651,
+              34.35081250974453
+            ],
+            "y": [
+              -7.84543335748107,
+              4.14859047852228
+            ],
+            "z": [
+              55.18396759119633,
+              55.720738517944675
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        }
+      ],
+      "maximum_pairwise_bone_rotation_change_degrees": 17.773765848748123,
+      "maximum_pairwise_bone_position_change_component_cm": 19.144829673726292,
+      "near_end_start_pairs": [
+        {
+          "from_phase": 12,
+          "to_phase": 13,
+          "from_time_s": 0.7916566729545593,
+          "to_time_s": 0,
+          "maximum_bone_position_difference_component_cm": 0.00014853615449684902,
+          "maximum_bone_rotation_difference_degrees": 0.00013830078987571873,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 7.770747372650683e-05
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.00014853615449684902,
+              "rotation_difference_degrees": 7.770747372650683e-05
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 7.867488648096422e-05,
+              "rotation_difference_degrees": 7.766994294734274e-05
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.00014853615449684902,
+              "rotation_difference_degrees": 7.770747372650683e-05
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 7.867488648096422e-05,
+              "rotation_difference_degrees": 7.766994294734274e-05
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.00013830078987571873
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 9.378627931234924e-05,
+              "rotation_difference_degrees": 0.0001382902482552243
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0001382902482552243
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 9.379292011949921e-05,
+              "rotation_difference_degrees": 0.00013830078987571873
+            }
+          ],
+          "surface_min_world_z_difference_cm": 6.713582300754695e-06,
+          "front_extent_difference_cm": 3.124867399151299e-05,
+          "rear_extent_difference_cm": 3.124867398440756e-05,
+          "morph_weight_maximum_difference": 0
+        },
+        {
+          "from_phase": 14,
+          "to_phase": 15,
+          "from_time_s": 0.7916566729545593,
+          "to_time_s": 0,
+          "maximum_bone_position_difference_component_cm": 0.00014853615449684902,
+          "maximum_bone_rotation_difference_degrees": 0.00013830078987571873,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 7.770747372650683e-05
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.00014853615449684902,
+              "rotation_difference_degrees": 7.770747372650683e-05
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 7.867488648096422e-05,
+              "rotation_difference_degrees": 7.766994294734274e-05
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.00014853615449684902,
+              "rotation_difference_degrees": 7.770747372650683e-05
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 7.867488648096422e-05,
+              "rotation_difference_degrees": 7.766994294734274e-05
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.00013830078987571873
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 9.378627931234924e-05,
+              "rotation_difference_degrees": 0.0001382902482552243
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0001382902482552243
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 9.379292011949921e-05,
+              "rotation_difference_degrees": 0.00013830078987571873
+            }
+          ],
+          "surface_min_world_z_difference_cm": 6.713582300754695e-06,
+          "front_extent_difference_cm": 3.124867399151299e-05,
+          "rear_extent_difference_cm": 3.124867398440756e-05,
+          "morph_weight_maximum_difference": 0
+        }
+      ],
+      "repeated_end_and_start_samples": [
+        {
+          "from_phase": 12,
+          "to_phase": 14,
+          "from_time_s": 0.7916566729545593,
+          "to_time_s": 0.7916566729545593,
+          "maximum_bone_position_difference_component_cm": 0.0,
+          "maximum_bone_rotation_difference_degrees": 0.0,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0,
+          "front_extent_difference_cm": 0.0,
+          "rear_extent_difference_cm": 0.0,
+          "morph_weight_maximum_difference": 0
+        },
+        {
+          "from_phase": 13,
+          "to_phase": 15,
+          "from_time_s": 0,
+          "to_time_s": 0,
+          "maximum_bone_position_difference_component_cm": 0.0,
+          "maximum_bone_rotation_difference_degrees": 0.0,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0,
+          "front_extent_difference_cm": 0.0,
+          "rear_extent_difference_cm": 0.0,
+          "morph_weight_maximum_difference": 0
+        }
+      ],
+      "near_end_start_maximum_rotation_difference_degrees": 0.00013830078987571873,
+      "near_end_start_maximum_position_difference_component_cm": 0.00014853615449684902,
+      "near_end_start_within_selected_numeric_0_01deg_and_0_01cm_tolerance": true,
+      "surface_minimum_world_z_range_cm": [
+        -1.6260093580067605,
+        2.1987764597977426
+      ],
+      "surface_minimum_world_z_per_phase": [
+        {
+          "phase": 0,
+          "time_s": 0,
+          "minimum_world_z_cm": 2.1987764597977426
+        },
+        {
+          "phase": 1,
+          "time_s": 0.0659722238779068,
+          "minimum_world_z_cm": 0.5360678409580195
+        },
+        {
+          "phase": 2,
+          "time_s": 0.1319444477558136,
+          "minimum_world_z_cm": -1.4004580567345326
+        },
+        {
+          "phase": 3,
+          "time_s": 0.1979166716337204,
+          "minimum_world_z_cm": -1.6260093580067605
+        },
+        {
+          "phase": 4,
+          "time_s": 0.2638888955116272,
+          "minimum_world_z_cm": -0.41669088298751333
+        },
+        {
+          "phase": 5,
+          "time_s": 0.3298611342906952,
+          "minimum_world_z_cm": 1.9154957153334566
+        },
+        {
+          "phase": 6,
+          "time_s": 0.3958333432674408,
+          "minimum_world_z_cm": 2.098336345281443
+        },
+        {
+          "phase": 7,
+          "time_s": 0.4618055820465088,
+          "minimum_world_z_cm": 2.189159110742272
+        },
+        {
+          "phase": 8,
+          "time_s": 0.5277777910232544,
+          "minimum_world_z_cm": 2.143365440360289
+        },
+        {
+          "phase": 9,
+          "time_s": 0.59375,
+          "minimum_world_z_cm": 2.0957567021427645
+        },
+        {
+          "phase": 10,
+          "time_s": 0.6597222685813904,
+          "minimum_world_z_cm": 2.098313722543508
+        },
+        {
+          "phase": 11,
+          "time_s": 0.725694477558136,
+          "minimum_world_z_cm": 2.1610709064882005
+        }
+      ],
+      "front_extent_from_actor_range_cm": [
+        46.139989996029975,
+        50.898449532210186
+      ],
+      "rear_extent_from_actor_range_cm": [
+        39.138914686299806,
+        43.234587243250196
+      ],
+      "recorded_morph_weight_ranges": {
+        "Belly_Compress": [
+          0,
+          0
+        ],
+        "Belly_Rebound": [
+          0,
+          0
+        ],
+        "Belly_SoftLag": [
+          0,
+          0
+        ]
+      },
+      "screenshots_saved_in_manifest_and_exist": true,
+      "screenshot_paths": [
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_00.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_01.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_02.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_03.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_04.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_05.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_06.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_07.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_08.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_09.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_10.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_11.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_12.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_13.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_14.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Jump_phase_15.png"
+      ]
+    },
+    {
+      "clip": "AS_Naiwa_Laugh",
+      "asset": "/Game/Naiwa/AS_Naiwa_Laugh.AS_Naiwa_Laugh",
+      "clip_length_s": 1,
+      "bone_count": 11,
+      "bone_names": [
+        "Naiwa_Rig",
+        "Root",
+        "Torso",
+        "UpperArm_L",
+        "Forearm_L",
+        "UpperArm_R",
+        "Forearm_R",
+        "Thigh_L",
+        "Shin_L",
+        "Thigh_R",
+        "Shin_R"
+      ],
+      "all_recorded_position_quaternion_values_finite": true,
+      "maximum_quaternion_norm_error": 1.1102230246251565e-16,
+      "maximum_actual_vs_requested_sample_time_error_s": 0,
+      "actor_maximum_pairwise_location_change_cm": 0.0,
+      "camera_maximum_pairwise_location_change_cm": 0.0,
+      "sampled_cpu_vertex_counts": [
+        387974
+      ],
+      "sampled_bone_motion": [
+        {
+          "bone": "Naiwa_Rig",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              0.0,
+              0.0
+            ],
+            "y": [
+              0.0,
+              0.0
+            ],
+            "z": [
+              0.0,
+              0.0
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "Root",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              0.0,
+              0.0
+            ],
+            "y": [
+              0.0,
+              0.0
+            ],
+            "z": [
+              0.0,
+              0.0
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "Torso",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 13.805022401137975,
+          "position_bounds_component_cm": {
+            "x": [
+              0.0,
+              0.0
+            ],
+            "y": [
+              1.4210854715202004e-14,
+              1.4210854715202004e-14
+            ],
+            "z": [
+              77.99999713897706,
+              77.99999713897706
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "UpperArm_L",
+          "maximum_pairwise_position_change_component_cm": 26.3210777443364,
+          "maximum_pairwise_rotation_change_degrees": 20.642598933091453,
+          "position_bounds_component_cm": {
+            "x": [
+              -45.500001311302185,
+              -45.500001311302185
+            ],
+            "y": [
+              -16.570317562508023,
+              9.737760718507104
+            ],
+            "z": [
+              186.2456215423067,
+              187.4901241480735
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Forearm_L",
+          "maximum_pairwise_position_change_component_cm": 7.638046060601811,
+          "maximum_pairwise_rotation_change_degrees": 20.642598933091378,
+          "position_bounds_component_cm": {
+            "x": [
+              -72.69955660920094,
+              -69.06104851714318
+            ],
+            "y": [
+              -1.4186648472710885,
+              5.27285695564845
+            ],
+            "z": [
+              135.178172604341,
+              135.97201876716326
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "UpperArm_R",
+          "maximum_pairwise_position_change_component_cm": 26.3210777443364,
+          "maximum_pairwise_rotation_change_degrees": 20.67280446474976,
+          "position_bounds_component_cm": {
+            "x": [
+              45.500001311302185,
+              45.500001311302185
+            ],
+            "y": [
+              -16.570317562508023,
+              9.737760718507104
+            ],
+            "z": [
+              186.2456215423067,
+              187.4901241480735
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Forearm_R",
+          "maximum_pairwise_position_change_component_cm": 7.614419336609616,
+          "maximum_pairwise_rotation_change_degrees": 20.67280446474976,
+          "position_bounds_component_cm": {
+            "x": [
+              69.061158469064,
+              72.7030761690293
+            ],
+            "y": [
+              -1.4189946791920747,
+              5.242084228776946
+            ],
+            "z": [
+              135.17812547344204,
+              135.9720200164869
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Thigh_L",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              -31.999999284744263,
+              -31.999999284744263
+            ],
+            "y": [
+              -1.499999966472373,
+              -1.499999966472373
+            ],
+            "z": [
+              93.99999380111696,
+              93.99999380111696
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "Shin_L",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              -34.00000139544357,
+              -34.00000139544357
+            ],
+            "y": [
+              -0.5000003347767574,
+              -0.5000003347767574
+            ],
+            "z": [
+              55.19158974907375,
+              55.19158974907375
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "Thigh_R",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              31.999999284744263,
+              31.999999284744263
+            ],
+            "y": [
+              -1.499999966472373,
+              -1.499999966472373
+            ],
+            "z": [
+              93.99999380111696,
+              93.99999380111696
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "Shin_R",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              34.00000139544357,
+              34.00000139544357
+            ],
+            "y": [
+              -0.5000003347767574,
+              -0.5000003347767574
+            ],
+            "z": [
+              55.19158974907375,
+              55.19158974907375
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        }
+      ],
+      "maximum_pairwise_bone_rotation_change_degrees": 20.67280446474976,
+      "maximum_pairwise_bone_position_change_component_cm": 26.3210777443364,
+      "near_end_start_pairs": [
+        {
+          "from_phase": 12,
+          "to_phase": 13,
+          "from_time_s": 0.9999899864196777,
+          "to_time_s": 0,
+          "maximum_bone_position_difference_component_cm": 9.88254247311562e-05,
+          "maximum_bone_rotation_difference_degrees": 7.742554944340867e-05,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 5.1707960531970414e-05
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 9.88254247311562e-05,
+              "rotation_difference_degrees": 7.742554944340867e-05
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 2.9185798709831396e-05,
+              "rotation_difference_degrees": 7.742554944340867e-05
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 9.88254247311562e-05,
+              "rotation_difference_degrees": 7.742554944340867e-05
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 2.9185801330216374e-05,
+              "rotation_difference_degrees": 7.742554944340867e-05
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0,
+          "front_extent_difference_cm": 3.124867397730213e-05,
+          "rear_extent_difference_cm": 2.3436505486529313e-05,
+          "morph_weight_maximum_difference": 0
+        },
+        {
+          "from_phase": 14,
+          "to_phase": 15,
+          "from_time_s": 0.9999899864196777,
+          "to_time_s": 0,
+          "maximum_bone_position_difference_component_cm": 9.88254247311562e-05,
+          "maximum_bone_rotation_difference_degrees": 7.742554944340867e-05,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 5.1707960531970414e-05
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 9.88254247311562e-05,
+              "rotation_difference_degrees": 7.742554944340867e-05
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 2.9185798709831396e-05,
+              "rotation_difference_degrees": 7.742554944340867e-05
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 9.88254247311562e-05,
+              "rotation_difference_degrees": 7.742554944340867e-05
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 2.9185801330216374e-05,
+              "rotation_difference_degrees": 7.742554944340867e-05
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0,
+          "front_extent_difference_cm": 3.124867397730213e-05,
+          "rear_extent_difference_cm": 2.3436505486529313e-05,
+          "morph_weight_maximum_difference": 0
+        }
+      ],
+      "repeated_end_and_start_samples": [
+        {
+          "from_phase": 12,
+          "to_phase": 14,
+          "from_time_s": 0.9999899864196777,
+          "to_time_s": 0.9999899864196777,
+          "maximum_bone_position_difference_component_cm": 0.0,
+          "maximum_bone_rotation_difference_degrees": 0.0,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0,
+          "front_extent_difference_cm": 0.0,
+          "rear_extent_difference_cm": 0.0,
+          "morph_weight_maximum_difference": 0
+        },
+        {
+          "from_phase": 13,
+          "to_phase": 15,
+          "from_time_s": 0,
+          "to_time_s": 0,
+          "maximum_bone_position_difference_component_cm": 0.0,
+          "maximum_bone_rotation_difference_degrees": 0.0,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0,
+          "front_extent_difference_cm": 0.0,
+          "rear_extent_difference_cm": 0.0,
+          "morph_weight_maximum_difference": 0
+        }
+      ],
+      "near_end_start_maximum_rotation_difference_degrees": 7.742554944340867e-05,
+      "near_end_start_maximum_position_difference_component_cm": 9.88254247311562e-05,
+      "near_end_start_within_selected_numeric_0_01deg_and_0_01cm_tolerance": true,
+      "surface_minimum_world_z_range_cm": [
+        2.199998250399765,
+        2.199998250399765
+      ],
+      "surface_minimum_world_z_per_phase": [
+        {
+          "phase": 0,
+          "time_s": 0,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 1,
+          "time_s": 0.0833333358168602,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 2,
+          "time_s": 0.1666666716337204,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 3,
+          "time_s": 0.25,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 4,
+          "time_s": 0.3333333432674408,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 5,
+          "time_s": 0.4166666567325592,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 6,
+          "time_s": 0.5,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 7,
+          "time_s": 0.5833333134651184,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 8,
+          "time_s": 0.6666666865348816,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 9,
+          "time_s": 0.75,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 10,
+          "time_s": 0.8333333134651184,
+          "minimum_world_z_cm": 2.199998250399765
+        },
+        {
+          "phase": 11,
+          "time_s": 0.9166666865348816,
+          "minimum_world_z_cm": 2.199998250399765
+        }
+      ],
+      "front_extent_from_actor_range_cm": [
+        45.16887495466874,
+        52.94400335545656
+      ],
+      "rear_extent_from_actor_range_cm": [
+        37.44764791244494,
+        44.39997008264973
+      ],
+      "recorded_morph_weight_ranges": {
+        "Belly_Compress": [
+          0,
+          0
+        ],
+        "Belly_Rebound": [
+          0,
+          0
+        ],
+        "Belly_SoftLag": [
+          0,
+          0
+        ]
+      },
+      "screenshots_saved_in_manifest_and_exist": true,
+      "screenshot_paths": [
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_00.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_01.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_02.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_03.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_04.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_05.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_06.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_07.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_08.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_09.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_10.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_11.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_12.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_13.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_14.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Laugh_phase_15.png"
+      ]
+    },
+    {
+      "clip": "AS_Naiwa_Run",
+      "asset": "/Game/Naiwa/Gameplay/AS_Naiwa_Run.AS_Naiwa_Run",
+      "clip_length_s": 0.6666666865348816,
+      "bone_count": 11,
+      "bone_names": [
+        "Naiwa_Rig",
+        "Root",
+        "Torso",
+        "UpperArm_L",
+        "Forearm_L",
+        "UpperArm_R",
+        "Forearm_R",
+        "Thigh_L",
+        "Shin_L",
+        "Thigh_R",
+        "Shin_R"
+      ],
+      "all_recorded_position_quaternion_values_finite": true,
+      "maximum_quaternion_norm_error": 2.220446049250313e-16,
+      "maximum_actual_vs_requested_sample_time_error_s": 0,
+      "actor_maximum_pairwise_location_change_cm": 0.0,
+      "camera_maximum_pairwise_location_change_cm": 0.0,
+      "sampled_cpu_vertex_counts": [
+        387974
+      ],
+      "sampled_bone_motion": [
+        {
+          "bone": "Naiwa_Rig",
+          "maximum_pairwise_position_change_component_cm": 0.0,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              0.0,
+              0.0
+            ],
+            "y": [
+              0.0,
+              0.0
+            ],
+            "z": [
+              0.0,
+              0.0
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": false
+        },
+        {
+          "bone": "Root",
+          "maximum_pairwise_position_change_component_cm": 16.276370733976364,
+          "maximum_pairwise_rotation_change_degrees": 0.0,
+          "position_bounds_component_cm": {
+            "x": [
+              0.0,
+              0.0
+            ],
+            "y": [
+              0.0,
+              0.0
+            ],
+            "z": [
+              -9.106221795082092,
+              7.170148938894272
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Torso",
+          "maximum_pairwise_position_change_component_cm": 16.276370733976364,
+          "maximum_pairwise_rotation_change_degrees": 1.9170425960623931,
+          "position_bounds_component_cm": {
+            "x": [
+              0.0,
+              0.0
+            ],
+            "y": [
+              1.4210854715202004e-14,
+              1.4210854715202004e-14
+            ],
+            "z": [
+              68.89377534389497,
+              85.17014607787134
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "UpperArm_L",
+          "maximum_pairwise_position_change_component_cm": 15.9106464887072,
+          "maximum_pairwise_rotation_change_degrees": 108.43434358754571,
+          "position_bounds_component_cm": {
+            "x": [
+              -45.500001311302185,
+              -45.500001311302185
+            ],
+            "y": [
+              32.68182595499216,
+              36.15985099666828
+            ],
+            "z": [
+              173.27796944964513,
+              189.13615683104533
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Forearm_L",
+          "maximum_pairwise_position_change_component_cm": 85.65600471385933,
+          "maximum_pairwise_rotation_change_degrees": 80.10028886387055,
+          "position_bounds_component_cm": {
+            "x": [
+              -77.92603925826927,
+              -74.8382781293319
+            ],
+            "y": [
+              -9.635771973457814,
+              73.55400024350851
+            ],
+            "z": [
+              124.81289828333072,
+              167.91315504969742
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "UpperArm_R",
+          "maximum_pairwise_position_change_component_cm": 15.9106464887072,
+          "maximum_pairwise_rotation_change_degrees": 108.42241282581261,
+          "position_bounds_component_cm": {
+            "x": [
+              45.500001311302185,
+              45.500001311302185
+            ],
+            "y": [
+              32.68182595499216,
+              36.15985099666828
+            ],
+            "z": [
+              173.27796944964513,
+              189.13615683104533
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Forearm_R",
+          "maximum_pairwise_position_change_component_cm": 85.74161421212057,
+          "maximum_pairwise_rotation_change_degrees": 80.07204485446472,
+          "position_bounds_component_cm": {
+            "x": [
+              74.83935167997907,
+              77.92639317213253
+            ],
+            "y": [
+              -9.666708965672093,
+              73.55424729708669
+            ],
+            "z": [
+              124.78114274484768,
+              167.94902844741273
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Thigh_L",
+          "maximum_pairwise_position_change_component_cm": 16.276370733976364,
+          "maximum_pairwise_rotation_change_degrees": 96.88465783365689,
+          "position_bounds_component_cm": {
+            "x": [
+              -31.999999284744263,
+              -31.999999284744263
+            ],
+            "y": [
+              -1.499999966472373,
+              -1.499999966472373
+            ],
+            "z": [
+              84.89377200603487,
+              101.17014274001123
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Shin_L",
+          "maximum_pairwise_position_change_component_cm": 60.931216283881476,
+          "maximum_pairwise_rotation_change_degrees": 92.3009254889768,
+          "position_bounds_component_cm": {
+            "x": [
+              -34.00005705451696,
+              -33.99571468646237
+            ],
+            "y": [
+              -8.617340949222406,
+              37.24828146493144
+            ],
+            "z": [
+              46.56948155433833,
+              98.07433999945776
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Thigh_R",
+          "maximum_pairwise_position_change_component_cm": 16.276370733976364,
+          "maximum_pairwise_rotation_change_degrees": 97.04236968589069,
+          "position_bounds_component_cm": {
+            "x": [
+              31.999999284744263,
+              31.999999284744263
+            ],
+            "y": [
+              -1.499999966472373,
+              -1.499999966472373
+            ],
+            "z": [
+              84.89377200603487,
+              101.17014274001123
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        },
+        {
+          "bone": "Shin_R",
+          "maximum_pairwise_position_change_component_cm": 60.872015860201735,
+          "maximum_pairwise_rotation_change_degrees": 92.2095656192472,
+          "position_bounds_component_cm": {
+            "x": [
+              33.99421197055486,
+              34.00192992312191
+            ],
+            "y": [
+              -8.716007925309356,
+              37.248810730604234
+            ],
+            "z": [
+              46.60802905222789,
+              98.0476629645355
+            ]
+          },
+          "nonstatic_transform_at_0_05_deg_or_cm": true
+        }
+      ],
+      "maximum_pairwise_bone_rotation_change_degrees": 108.43434358754571,
+      "maximum_pairwise_bone_position_change_component_cm": 85.74161421212057,
+      "near_end_start_pairs": [
+        {
+          "from_phase": 12,
+          "to_phase": 13,
+          "from_time_s": 0.6666566729545593,
+          "to_time_s": 0,
+          "maximum_bone_position_difference_component_cm": 0.006230178790725039,
+          "maximum_bone_rotation_difference_degrees": 0.007770633682508374,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0014409422874450684,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0014409422874450684,
+              "rotation_difference_degrees": 7.443026089337883e-06
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.001445207097583379,
+              "rotation_difference_degrees": 0.0014053975226403588
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 0.0009635244442746966,
+              "rotation_difference_degrees": 0.0011084573203372981
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.001445207097583379,
+              "rotation_difference_degrees": 0.007770633682508374
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 0.006230178790725039,
+              "rotation_difference_degrees": 0.006235638682044007
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0014409422874450684,
+              "rotation_difference_degrees": 0.0022277596751220236
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0011460338508466567,
+              "rotation_difference_degrees": 0.0005963448490586871
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0014409422874450684,
+              "rotation_difference_degrees": 0.004563016555885668
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0018464849897015358,
+              "rotation_difference_degrees": 0.0031240295214939274
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0008769159136403637,
+          "front_extent_difference_cm": 0.003348816228481155,
+          "rear_extent_difference_cm": 0.00028123806584190447,
+          "morph_weight_maximum_difference": 1.8786638975143433e-05
+        },
+        {
+          "from_phase": 14,
+          "to_phase": 15,
+          "from_time_s": 0.6666566729545593,
+          "to_time_s": 0,
+          "maximum_bone_position_difference_component_cm": 0.006230178790725039,
+          "maximum_bone_rotation_difference_degrees": 0.007770633682508374,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0014409422874450684,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0014409422874450684,
+              "rotation_difference_degrees": 7.443026089337883e-06
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.001445207097583379,
+              "rotation_difference_degrees": 0.0014053975226403588
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 0.0009635244442746966,
+              "rotation_difference_degrees": 0.0011084573203372981
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.001445207097583379,
+              "rotation_difference_degrees": 0.007770633682508374
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 0.006230178790725039,
+              "rotation_difference_degrees": 0.006235638682044007
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0014409422874450684,
+              "rotation_difference_degrees": 0.0022277596751220236
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0011460338508466567,
+              "rotation_difference_degrees": 0.0005963448490586871
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0014409422874450684,
+              "rotation_difference_degrees": 0.004563016555885668
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0018464849897015358,
+              "rotation_difference_degrees": 0.0031240295214939274
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0008769159136403637,
+          "front_extent_difference_cm": 0.003348816228481155,
+          "rear_extent_difference_cm": 0.00028123806584190447,
+          "morph_weight_maximum_difference": 1.8786638975143433e-05
+        }
+      ],
+      "repeated_end_and_start_samples": [
+        {
+          "from_phase": 12,
+          "to_phase": 14,
+          "from_time_s": 0.6666566729545593,
+          "to_time_s": 0.6666566729545593,
+          "maximum_bone_position_difference_component_cm": 0.0,
+          "maximum_bone_rotation_difference_degrees": 0.0,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0,
+          "front_extent_difference_cm": 0.0,
+          "rear_extent_difference_cm": 0.0,
+          "morph_weight_maximum_difference": 0.0
+        },
+        {
+          "from_phase": 13,
+          "to_phase": 15,
+          "from_time_s": 0,
+          "to_time_s": 0,
+          "maximum_bone_position_difference_component_cm": 0.0,
+          "maximum_bone_rotation_difference_degrees": 0.0,
+          "bone_differences": [
+            {
+              "bone": "Naiwa_Rig",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Root",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Torso",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "UpperArm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Forearm_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_L",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Thigh_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            },
+            {
+              "bone": "Shin_R",
+              "position_difference_component_cm": 0.0,
+              "rotation_difference_degrees": 0.0
+            }
+          ],
+          "surface_min_world_z_difference_cm": 0.0,
+          "front_extent_difference_cm": 0.0,
+          "rear_extent_difference_cm": 0.0,
+          "morph_weight_maximum_difference": 0.0
+        }
+      ],
+      "near_end_start_maximum_rotation_difference_degrees": 0.007770633682508374,
+      "near_end_start_maximum_position_difference_component_cm": 0.006230178790725039,
+      "near_end_start_within_selected_numeric_0_01deg_and_0_01cm_tolerance": true,
+      "surface_minimum_world_z_range_cm": [
+        -0.04295755592163708,
+        7.459411097635091
+      ],
+      "surface_minimum_world_z_per_phase": [
+        {
+          "phase": 0,
+          "time_s": 0,
+          "minimum_world_z_cm": 2.251690474191386
+        },
+        {
+          "phase": 1,
+          "time_s": 0.0555555559694767,
+          "minimum_world_z_cm": 1.9616527532714327
+        },
+        {
+          "phase": 2,
+          "time_s": 0.1111111119389534,
+          "minimum_world_z_cm": -0.04295755592163708
+        },
+        {
+          "phase": 3,
+          "time_s": 0.1666666716337204,
+          "minimum_world_z_cm": 6.086037735220563
+        },
+        {
+          "phase": 4,
+          "time_s": 0.2222222238779068,
+          "minimum_world_z_cm": 7.445974167822518
+        },
+        {
+          "phase": 5,
+          "time_s": 0.2777777910232544,
+          "minimum_world_z_cm": 5.781827336900416
+        },
+        {
+          "phase": 6,
+          "time_s": 0.3333333432674408,
+          "minimum_world_z_cm": 2.253187725109637
+        },
+        {
+          "phase": 7,
+          "time_s": 0.3888889253139496,
+          "minimum_world_z_cm": 2.0956557949663623
+        },
+        {
+          "phase": 8,
+          "time_s": 0.4444444477558136,
+          "minimum_world_z_cm": -0.04140716598226479
+        },
+        {
+          "phase": 9,
+          "time_s": 0.5,
+          "minimum_world_z_cm": 6.049001220903596
+        },
+        {
+          "phase": 10,
+          "time_s": 0.5555555820465088,
+          "minimum_world_z_cm": 7.459411097635091
+        },
+        {
+          "phase": 11,
+          "time_s": 0.6111111044883728,
+          "minimum_world_z_cm": 5.739241904402371
+        }
+      ],
+      "front_extent_from_actor_range_cm": [
+        64.13666381881478,
+        81.89523316207584
+      ],
+      "rear_extent_from_actor_range_cm": [
+        29.82125799170257,
+        34.91138574542314
+      ],
+      "recorded_morph_weight_ranges": {
+        "Belly_Compress": [
+          0.0020798456389456987,
+          0.863609790802002
+        ],
+        "Belly_Rebound": [
+          0,
+          0.889831006526947
+        ],
+        "Belly_SoftLag": [
+          -0.6228681206703186,
+          0.6289051175117493
+        ]
+      },
+      "screenshots_saved_in_manifest_and_exist": true,
+      "screenshot_paths": [
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_00.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_01.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_02.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_03.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_04.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_05.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_06.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_07.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_08.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_09.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_10.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_11.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_12.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_13.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_14.png",
+        "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261011T085302Z_288308\\AS_Naiwa_Run_phase_15.png"
+      ]
+    }
+  ],
+  "status": "held_phase_pose_data_verified_visual_and_runtime_limits_preserved"
+}

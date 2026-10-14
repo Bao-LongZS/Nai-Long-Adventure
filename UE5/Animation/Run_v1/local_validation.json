@@ -1,0 +1,94 @@
+{
+  "rest_mesh_coordinate_hashes_equal": true,
+  "rest_bone_matrices_parents_equal": true,
+  "original_four_actions_equal": true,
+  "original_four_rotation_modes_equal": true,
+  "source_meshes": {
+    "L concentric iris and pupil": {
+      "vertices": 5474,
+      "polygons": 5568,
+      "coordinates_sha256": "7de9e0192794fd2bfdd877eb982ac95c0146b11b1015f7b04fe4d4649b9e143b"
+    },
+    "L eye glint": {
+      "vertices": 362,
+      "polygons": 384,
+      "coordinates_sha256": "b55deb4eadde23cef9c21305ab965898f71856aa542b331902f582e295330fd8"
+    },
+    "Naiwa unified golden body": {
+      "vertices": 371666,
+      "polygons": 371664,
+      "coordinates_sha256": "4318245669c5b124c7b878d4c3c413fb2759463aaa8697e99e5ecbe3afaf9200"
+    },
+    "R concentric iris and pupil": {
+      "vertices": 5474,
+      "polygons": 5568,
+      "coordinates_sha256": "8716ba1873649bf0182e46beea29ef843f4125080a93e8c9515033a1c2acd225"
+    },
+    "R eye glint": {
+      "vertices": 362,
+      "polygons": 384,
+      "coordinates_sha256": "b55deb4eadde23cef9c21305ab965898f71856aa542b331902f582e295330fd8"
+    },
+    "Short closed oral seam": {
+      "vertices": 4322,
+      "polygons": 4352,
+      "coordinates_sha256": "9f3f33af8e9161a1f45d29e93128ccd07b410218927d9e9f7357d84f432aa379"
+    }
+  },
+  "original_action_names": [
+    "Naiwa_Idle",
+    "Naiwa_Jump",
+    "Naiwa_Laugh",
+    "Naiwa_Walk"
+  ],
+  "candidate_extra_actions": [
+    "pear body mesh动作"
+  ],
+  "animation_only_fbx": {
+    "fbx_version": 7400,
+    "animation_stacks": [
+      "b'Scene\\x00\\x01AnimStack'"
+    ],
+    "shapes": [],
+    "blendshape_channels": [],
+    "morph_animation_curve_nodes": []
+  },
+  "mesh_morph_fbx": {
+    "fbx_version": 7400,
+    "animation_stacks": [
+      "b'Scene\\x00\\x01AnimStack'"
+    ],
+    "shapes": [
+      {
+        "name": "b'Belly_Compress\\x00\\x01Geometry'",
+        "changed_vertex_count": 60175
+      },
+      {
+        "name": "b'Belly_Rebound\\x00\\x01Geometry'",
+        "changed_vertex_count": 60053
+      },
+      {
+        "name": "b'Belly_SoftLag\\x00\\x01Geometry'",
+        "changed_vertex_count": 60481
+      }
+    ],
+    "blendshape_channels": [
+      "b'Belly_Compress\\x00\\x01SubDeformer'",
+      "b'Belly_Rebound\\x00\\x01SubDeformer'",
+      "b'Belly_SoftLag\\x00\\x01SubDeformer'"
+    ],
+    "morph_animation_curve_nodes": [
+      "b'DeformPercent\\x00\\x01AnimCurveNode'",
+      "b'DeformPercent\\x00\\x01AnimCurveNode'",
+      "b'DeformPercent\\x00\\x01AnimCurveNode'"
+    ]
+  },
+  "support_foot_velocity_game_cm_s": {
+    "min": 299.99876876969284,
+    "max": 300.00245513670177,
+    "mean": 300.000253081707,
+    "intended_capsule_speed": 300,
+    "samples": 20,
+    "method": "Lowest 5 mm sole vertices mean Y across 96 Hz source poses during same-foot support."
+  }
+}

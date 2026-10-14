@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-13",
+  "phase": "P0_complete",
+  "ordinary_gait": "gait_acceptance.json",
+  "report": "completion_report.md",
+  "final_run_id": "20261013T053123Z_44908",
+  "files": [
+    {
+      "sha256": "e0aa0f35ff556f07da9a9a3f61483e677431ad4851b288a3bc3eee905e526663",
+      "file": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaCharacter.h"
+    },
+    {
+      "sha256": "21da7c5b73a74488cc42ac7eceeaebddb0829d977ffac0c64c81a4214dd5c5c1",
+      "file": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaCharacter.cpp"
+    },
+    {
+      "sha256": "b6b3bc2c645a4e99fa81d763e0c2399f28bf6e47efcee7ed9617096bdf8ef439",
+      "file": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaAnimInstance.cpp"
+    },
+    {
+      "sha256": "55c3f8aaafd9ffc02b91628a9202f329b66481d574d381b3dfa081407f10630b",
+      "file": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaHUD.cpp"
+    },
+    {
+      "sha256": "ba4a22fb53c6c0170cee9e2355b0704cc4a6e90b0bdc7721aa8d996ca152056e",
+      "file": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaAutoTestComponent.cpp"
+    },
+    {
+      "sha256": "010c8a0ed0cb857ba509757a12cf4121c48051848452148195ed3e83f9dd90e9",
+      "file": "UE5/NaiwaP0/Binaries/Win64/UnrealEditor-NaiwaRuntime.dll"
+    },
+    {
+      "sha256": "b1f5c8fc9ffac0ac08705ae6c2b7d7309609e4290dab66953e9ad91999fb9119",
+      "file": "UE5/NaiwaP0/Content/Naiwa/Input/IA_NaiwaGait.uasset"
+    },
+    {
+      "sha256": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529",
+      "file": "UE5/NaiwaP0/Content/Naiwa/Input/IMC_Naiwa.uasset"
+    },
+    {
+      "sha256": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+      "file": "UE5/NaiwaP0/Content/Naiwa/Blueprints/BP_NaiwaCharacter.uasset"
+    },
+    {
+      "sha256": "9073ee724c0553ab5f85f525e813d9853a4da569a540158d55d158a5b9162205",
+      "file": "UE5/Scripts/configure_gait_input.py"
+    },
+    {
+      "sha256": "622cf3ed3600feea1aa36dd3c3af4239fe9c52ca206e7812272405a019426764",
+      "file": "UE5/run_stage.ps1"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "phase": "measured_gameplay_capsule_resize",
+  "source_measurement": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\clip_review_20261011\\summary.json",
+  "sampled_poses": 80,
+  "surface_extent_max_cm": 81.89523316207584,
+  "rounding": "ceil(maximum forward/rear extent) + 4 cm",
+  "margin_cm": 4.0,
+  "old_radius_cm": 42.0,
+  "radius_cm": 86.0,
+  "half_height_cm": 90.0,
+  "status": "saved_pending_wall_platform_and_jump_regression",
+  "limits": "Based on held phase samples. Actual wall motion and platform landing must pass regression; this is not a bound on arbitrary future animation.",
+  "source_E2_changed": false
+}

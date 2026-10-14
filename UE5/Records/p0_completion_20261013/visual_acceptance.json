@@ -1,0 +1,77 @@
+{
+  "date_local": "2026-10-13",
+  "timezone": "Asia/Shanghai",
+  "status": "limited_visual_acceptance_no_obvious_p0_blocker_in_reviewed_images",
+  "full_p0_completion_claim": false,
+  "method": "Direct view_image inspection of five contact sheets containing all 52 real UE continuous-playback screenshots, eight first-round gameplay sequence sheets containing 61 selected whole-viewports, and 11 original gameplay PNGs. No new UE launch by the reviewer, model change, or C++ change.",
+  "clip_source": "UE5/NaiwaP0/Saved/NaiwaVisualReviews/20261013T002807Z_23720/manifest.json",
+  "clip_manifest_capture_complete": true,
+  "clip_manifest_mode": "continuous_playback",
+  "clip_natural_wraps_each": 2,
+  "clip_original_screenshot_count": 52,
+  "reviewed_clip_sheets": [
+    "UE5/Records/p0_completion_20261013/clips/AS_Naiwa_Idle_playback.png",
+    "UE5/Records/p0_completion_20261013/clips/AS_Naiwa_Walk_playback.png",
+    "UE5/Records/p0_completion_20261013/clips/AS_Naiwa_Jump_playback.png",
+    "UE5/Records/p0_completion_20261013/clips/AS_Naiwa_Laugh_playback.png",
+    "UE5/Records/p0_completion_20261013/clips/AS_Naiwa_Run_playback.png"
+  ],
+  "gameplay_source": "UE5/NaiwaP0/Saved/NaiwaTests/20261012T064857Z_282460",
+  "gameplay_sequence_review": {
+    "manifest": "UE5/Records/p0_completion_20261013/gameplay_sequences/manifest.json",
+    "round": 1,
+    "selected_frames": 61,
+    "maximum_frames_per_case": 8,
+    "viewport_crop": "None; full original viewport proportionally resized.",
+    "reviewed_sheets": [
+      "gameplay_sequences/flat_start_stop.png",
+      "gameplay_sequences/reverse.png",
+      "gameplay_sequences/wall_collision.png",
+      "gameplay_sequences/jump_onto_platform.png",
+      "gameplay_sequences/platform_drop.png",
+      "gameplay_sequences/long_airborne.png",
+      "gameplay_sequences/early_landing.png",
+      "gameplay_sequences/reset.png"
+    ],
+    "runtime_video": "UE5/Records/p0_completion_20261013/Naiwa_P0_Runtime_20261012.mp4",
+    "runtime_video_encoding_report": "UE5/Records/p0_completion_20261013/Naiwa_P0_Runtime_20261012_encoding_report.json",
+    "runtime_video_review_limit": "The main task generated the current-run MP4. This reviewer inspected selected source screenshot sequences and does not claim to have played the MP4 or viewed all 504 source screenshots."
+  },
+  "reviewed_original_gameplay_pngs": [
+    "Frames/frame_000002.png",
+    "round_01_01_flat_start_stop.png",
+    "Frames/frame_000031.png",
+    "Frames/frame_000042.png",
+    "round_01_04_jump_onto_platform.png",
+    "Frames/frame_000060.png",
+    "round_01_07_early_landing.png",
+    "Frames/frame_000102.png",
+    "Frames/frame_000050.png",
+    "Frames/frame_000052.png",
+    "Frames/frame_000095.png"
+  ],
+  "observations": [
+    "Walk shows alternating leg poses; Run shows forward torso lean, bent-arm swing, a recovering raised short leg, and visibly different belly silhouettes while preserving a rounded body.",
+    "The visible eye and mouth region remains attached to the head in sampled side views. No obvious detached parts, exploding mesh, or large skin tear is visible.",
+    "Idle remains upright; Jump and Laugh original demonstration clips show small body/head changes from this gameplay side view. SingleNode playback holds the pawn at one location and does not demonstrate a physical gameplay jump.",
+    "The reviewed gameplay wall frames preserve the visible face/belly outlines without the prior cut-through appearance. Both facing directions remain readable, including shadowed portions.",
+    "The reviewed airborne frames show feet clearly separated from support surfaces; platform and early-landing frames show feet near the visible support plane and the whole character in frame.",
+    "No conspicuous discontinuity of the entire body silhouette is apparent in the sampled phases around natural animation wraps. Time continuity is separately confirmed by manifest values and is not a perceptual smoothness measurement.",
+    "First-round chronological gameplay samples show Idle to Run to Idle, reversal with the visible eye/head silhouette preserved, both wall contacts settling to standing without a face or belly cut-through, platform departure followed by airborne descent and standing, and successful platform/early-landing support poses.",
+    "The reset sequence includes a clearly visible PAUSED panel in frame_000140 and frame_000144, followed by its disappearance and a standing pawn at the reset ground position. The inspected panel and control text have no obvious clipping."
+  ],
+  "evidence_limits": [
+    "Only the gameplay side camera is covered by the new playback. Fine mouth detail, front-view face binding, and every occluded region cannot be certified from it.",
+    "Actual playback screenshot intervals are about 0.194–0.400 game seconds. There are only 7–14 images per two-cycle clip; the 8 fps target was not achieved. Fine timing, acceleration, subtle softness, and high-frame-rate smoothness remain unmeasured.",
+    "This report views chronological real screenshots; it does not claim that an MP4 was played by the reviewer. No new independent-clip MP4 was generated in this audit; the main task separately generated the current-run gameplay MP4.",
+    "Physical keyboard input, window focus recovery, pause/resume interaction, and sustained hardware performance require the separate input/runtime evidence.",
+    "The reviewed gameplay PNGs predate this report by one local day. They are the latest successful recorded gameplay run available at audit time, not a newly executed 2026-10-13 movement test.",
+    "Gameplay sheets sample each case's existing screenshot sequence, rather than all rendered frames. Initial floating poses and changes of scenery at test-case boundaries can be test fixture teleports; this evidence does not establish natural camera transitions across test-case boundaries."
+  ],
+  "video_encoding": {
+    "requested_ffmpeg": "C:/Program Files/Tencent/QQBrowser/22.0.7003.400/ffmpeg/ffmpeg.exe",
+    "result": "not_generated",
+    "reason": "Installed browser FFmpeg lacks concat demuxing and rejects -safe. Blender fallback exited 1 without output. Retained five successful sheets, complete manifest, and ffconcat timing files without pursuing encoder troubleshooting."
+  },
+  "remaining_visual_work": "No obvious image-level issue warrants another P0 model/render change. Higher-cadence perceptual polish is outside this limited acceptance; integrate with runtime/input acceptance before declaring full P0 completion."
+}

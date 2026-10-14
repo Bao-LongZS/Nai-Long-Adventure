@@ -1,0 +1,77 @@
+{
+  "phase": "gameplay_run_import",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Animation\\Run_v1\\Naiwa_Elastic_Run.fbx",
+  "importer": "Legacy FBX",
+  "warnings": [],
+  "source_sha256": "f5688581ae103f27901bab67a98ba9deef983156ec985308435bb453e2621d2e",
+  "imported_paths": [
+    "/Game/Naiwa/Gameplay/SK_Naiwa_Elastic.SK_Naiwa_Elastic"
+  ],
+  "mesh": "/Game/Naiwa/Gameplay/SK_Naiwa_Elastic.SK_Naiwa_Elastic",
+  "run": "/Game/Naiwa/Gameplay/AS_Naiwa_Run.AS_Naiwa_Run",
+  "duration_s": 0.6666666865348816,
+  "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+  "character": "/Game/Naiwa/Blueprints/BP_NaiwaCharacter.BP_NaiwaCharacter",
+  "material_slots": [
+    {
+      "slot": "L single eye surface",
+      "material": "/Game/Naiwa/Materials/M_NaiwaEye.M_NaiwaEye"
+    },
+    {
+      "slot": "Eye glints",
+      "material": "/Game/Naiwa/Materials/M_NaiwaGlint.M_NaiwaGlint"
+    },
+    {
+      "slot": "Soft ochre yellow skin",
+      "material": "/Game/Naiwa/Materials/M_NaiwaBody.M_NaiwaBody"
+    },
+    {
+      "slot": "R single eye surface",
+      "material": "/Game/Naiwa/Materials/M_NaiwaEye.M_NaiwaEye"
+    },
+    {
+      "slot": "Recessed mouth deep brown_001",
+      "material": "/Game/Naiwa/Materials/M_NaiwaMouth.M_NaiwaMouth"
+    }
+  ],
+  "source_unchanged": true,
+  "preserved_asset_hashes": {
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\SK_Naiwa.uasset": {
+      "before": "67f807019e6fceafe8a5b7c78037221f7fcf66c8dd515fcae52b8bee039a0734",
+      "after": "67f807019e6fceafe8a5b7c78037221f7fcf66c8dd515fcae52b8bee039a0734"
+    },
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\AS_Naiwa_Idle.uasset": {
+      "before": "6de2597d637db1ac2838042faedf0de5629c36ed2b9f7b155eeec1e2b691ab62",
+      "after": "6de2597d637db1ac2838042faedf0de5629c36ed2b9f7b155eeec1e2b691ab62"
+    },
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\AS_Naiwa_Walk.uasset": {
+      "before": "e7e0c9eaae2c072728defd1181aaabd48c2804dee61c527ab64d89daf55db4ff",
+      "after": "e7e0c9eaae2c072728defd1181aaabd48c2804dee61c527ab64d89daf55db4ff"
+    },
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\AS_Naiwa_Jump.uasset": {
+      "before": "7571f30d94d59a4e8654f83af02a6735c6fc59e5f9bedd4ce38c562ecbdd1889",
+      "after": "7571f30d94d59a4e8654f83af02a6735c6fc59e5f9bedd4ce38c562ecbdd1889"
+    },
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\AS_Naiwa_Laugh.uasset": {
+      "before": "a684835f09fcce92cc0565e8cced0feaedc01c3f04949abb1022c74de6e69558",
+      "after": "a684835f09fcce92cc0565e8cced0feaedc01c3f04949abb1022c74de6e69558"
+    }
+  },
+  "status": "imported_pending_morph_audit_and_runtime_validation",
+  "engine_warnings": [
+    "[2026.10.11-02.43.20:705][  0]LogFbx: Warning: Not valid bind pose for Pose (pear body mesh) - Node L concentric iris and pupil : Not all the deformers are stored in this BindPose",
+    "[2026.10.11-02.43.20:705][  0]LogFbx: Warning: Not valid bind pose for Pose (pear body mesh) - Node L eye glint : Not all the deformers are stored in this BindPose",
+    "[2026.10.11-02.43.20:705][  0]LogFbx: Warning: Not valid bind pose for Pose (pear body mesh) - Node Naiwa unified golden body : Not all the deformers are stored in this BindPose",
+    "[2026.10.11-02.43.20:705][  0]LogFbx: Warning: Not valid bind pose for Pose (pear body mesh) - Node R concentric iris and pupil : Not all the deformers are stored in this BindPose",
+    "[2026.10.11-02.43.20:705][  0]LogFbx: Warning: Not valid bind pose for Pose (pear body mesh) - Node R eye glint : Not all the deformers are stored in this BindPose",
+    "[2026.10.11-02.43.20:706][  0]LogFbx: Warning: Not valid bind pose for Pose (pear body mesh) - Node Short closed oral seam : Not all the deformers are stored in this BindPose",
+    "[2026.10.11-02.44.16:004][  0]FBXImport: Warning: 此FBX场景中未发现平滑组信息。导出文件前必须在FBX导出器插件中启用“导出平滑组（Export Smoothing Groups）”选项。对不支持平滑组的工具而言，导出时FBX导出器仍将生成正确的平滑数据，从而在导入时推断出正确的顶点法线。 ",
+    "[2026.10.11-02.44.16:004][  0]FBXImport: Warning: 网格体“L concentric iris and pupil”没有UV集。正在创建一个默认集。 ",
+    "[2026.10.11-02.44.16:004][  0]FBXImport: Warning: 网格体“Naiwa unified golden body”没有UV集。正在创建一个默认集。 ",
+    "[2026.10.11-02.44.16:004][  0]FBXImport: Warning: 网格体“R concentric iris and pupil”没有UV集。正在创建一个默认集。 ",
+    "[2026.10.11-02.44.16:004][  0]FBXImport: Warning: 网格体“Short closed oral seam”没有UV集。正在创建一个默认集。 "
+  ],
+  "warnings_scope": "warnings records script/API exceptions; engine_warnings records actual importer log warnings",
+  "warning_diagnostics": "run_export_diagnostics.md"
+}

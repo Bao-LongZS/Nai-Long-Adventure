@@ -1,0 +1,69 @@
+{
+  "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaVisualReviews\\20261013T002807Z_23720",
+  "capture_complete": true,
+  "method": "Continuous saved UE animations on a stationary pawn; measured game-time screenshot intervals.",
+  "limits": "8 fps target screenshots, not every rendered frame. Videos repeat each captured viewport until its next measured game time; every actual game tick retains bone data. No physical input or locomotion claim.",
+  "sheet_crop": "None; entire original viewport resized proportionally.",
+  "clips": [
+    {
+      "clip": "AS_Naiwa_Idle",
+      "screenshot_count": 13,
+      "game_tick_frames": 13,
+      "game_duration_s": 2.620872899889946,
+      "natural_wraps": 2,
+      "screenshot_min_interval_game_s": 0.19430920481681824,
+      "screenshot_max_interval_game_s": 0.4000000059604645,
+      "maximum_time_continuity_error_s": 5.960464477539063e-08,
+      "sheet": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\clips\\AS_Naiwa_Idle_playback.png",
+      "concat": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\clips\\AS_Naiwa_Idle_game_time.ffconcat"
+    },
+    {
+      "clip": "AS_Naiwa_Walk",
+      "screenshot_count": 14,
+      "game_tick_frames": 14,
+      "game_duration_s": 2.884996920824051,
+      "natural_wraps": 2,
+      "screenshot_min_interval_game_s": 0.1938869059085846,
+      "screenshot_max_interval_game_s": 0.29453378915786743,
+      "maximum_time_continuity_error_s": 5.960464477539063e-08,
+      "sheet": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\clips\\AS_Naiwa_Walk_playback.png",
+      "concat": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\clips\\AS_Naiwa_Walk_game_time.ffconcat"
+    },
+    {
+      "clip": "AS_Naiwa_Jump",
+      "screenshot_count": 8,
+      "game_tick_frames": 8,
+      "game_duration_s": 1.6160340160131454,
+      "natural_wraps": 2,
+      "screenshot_min_interval_game_s": 0.21438010036945343,
+      "screenshot_max_interval_game_s": 0.3053863048553467,
+      "maximum_time_continuity_error_s": 1.4901161193847656e-08,
+      "sheet": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\clips\\AS_Naiwa_Jump_playback.png",
+      "concat": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\clips\\AS_Naiwa_Jump_game_time.ffconcat"
+    },
+    {
+      "clip": "AS_Naiwa_Laugh",
+      "screenshot_count": 10,
+      "game_tick_frames": 10,
+      "game_duration_s": 2.074439585208893,
+      "natural_wraps": 2,
+      "screenshot_min_interval_game_s": 0.20904959738254547,
+      "screenshot_max_interval_game_s": 0.306031197309494,
+      "maximum_time_continuity_error_s": 5.960464477539063e-08,
+      "sheet": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\clips\\AS_Naiwa_Laugh_playback.png",
+      "concat": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\clips\\AS_Naiwa_Laugh_game_time.ffconcat"
+    },
+    {
+      "clip": "AS_Naiwa_Run",
+      "screenshot_count": 7,
+      "game_tick_frames": 7,
+      "game_duration_s": 1.5650472044944763,
+      "natural_wraps": 2,
+      "screenshot_min_interval_game_s": 0.22435730695724487,
+      "screenshot_max_interval_game_s": 0.3535701036453247,
+      "maximum_time_continuity_error_s": 2.9802322387695312e-08,
+      "sheet": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\clips\\AS_Naiwa_Run_playback.png",
+      "concat": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p0_completion_20261013\\clips\\AS_Naiwa_Run_game_time.ffconcat"
+    }
+  ]
+}

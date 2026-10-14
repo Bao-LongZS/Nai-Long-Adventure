@@ -1,0 +1,4760 @@
+{
+	"run_id": "20261011T015953Z_293256",
+	"created_utc": "2026-10-11T02:01:57.461Z",
+	"status": "FAIL",
+	"complete": true,
+	"all_runtime_checks_pass": false,
+	"all_24_screenshots_saved": true,
+	"output_write_failed": false,
+	"planned_rounds": 3,
+	"planned_cases": 24,
+	"completed_cases": 24,
+	"sampled_frames": 14934,
+	"simulation_duration_s": 99.41504879668355,
+	"csv_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/frames.csv",
+	"output_directory": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256",
+	"bounds_measurement_limit": "mesh_bounds_bottom_cm is component axis-aligned bounds origin minus Z extent. It is a coarse estimate, not the exact posed mesh foot sole or visual ground-contact measurement. Capsule floor clearance is allowed up to 3 cm.",
+	"timing_measurement_limit": "frame_ms is component simulation DeltaTime; wall_frame_ms is elapsed wall time between component ticks. This scripted editor/game run is not a stable performance baseline; camera motion, screenshots, warm-up, caps and editor overhead affect timing.",
+	"animation_evidence_limit": "State, native proxy evaluation count and actual component-space bone rotation traces prove sampled Idle/Walk/Jump poses. Screenshots and manual review are still required for likeness, transitions, normals, shadows and perceptual pose quality.",
+	"input_evidence_limit": "Movement, Jump, Pause and Reset use simulated PlayerController InputKey events through the saved keyboard Enhanced Input mappings. Fixture placement uses teleport/ResetToSpawn. These tests prove the mapping-to-callback-to-gameplay pipeline, not physical hardware, OS focus, controller hardware or pause UI.",
+	"performance_samples": [
+		{
+			"mode": "mesh_visible_animation_enabled",
+			"warmup_s": 2,
+			"sample_window_s": 5,
+			"sampled_frames": 950,
+			"mean_wall_frame_ms": 5.2628357904522041,
+			"mean_game_ms": 1.8601195792147989,
+			"mean_render_ms": 5.255262003195913,
+			"mean_gpu_ms": 4.2207201069279723,
+			"gpu_timer_available": true,
+			"p95_wall_frame_ms": 6.5458007156848907,
+			"median_wall_frame_ms": 5.2591972053050995
+		},
+		{
+			"mode": "mesh_hidden_animation_tick_disabled",
+			"warmup_s": 2,
+			"sample_window_s": 5,
+			"sampled_frames": 1095,
+			"mean_wall_frame_ms": 4.5654819164101932,
+			"mean_game_ms": 1.6937162585454444,
+			"mean_render_ms": 4.5556171643679546,
+			"mean_gpu_ms": 3.5810315040692893,
+			"gpu_timer_available": true,
+			"p95_wall_frame_ms": 7.6741017401218414,
+			"median_wall_frame_ms": 4.2966976761817932
+		}
+	],
+	"performance_limit": "Preliminary 1080p editor-game baseline only. Each mesh-visible/mesh-hidden-and-animation-tick-disabled group discards 2 s warmup then samples 5 s wall frame/Game/Render/GPU time. Screenshots and CPU skin extraction are outside these intervals. Background applications, shader compilation, VSync, frame caps, quality and driver affect values. GPU zero is unavailable, not zero cost.",
+	"continuous_recording_limit": "Optional frame sequence requests screenshots no faster than 8 fps in wall time; requested frames may be dropped/overwritten by case screenshots. Recording frame timestamps and file existence are recorded. A fixed-fps video made from these frames is a review aid, not a timing measurement.",
+	"recorded_frames": [],
+	"cases": [
+		{
+			"pass": true,
+			"round": 1,
+			"case": "flat_start_stop",
+			"duration_s": 2.3043989986181259,
+			"start_position_cm":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 92.200000000000003
+			},
+			"final_position_cm":
+			{
+				"x": 254.39718941421276,
+				"y": 0,
+				"z": 92.149999806108454
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 0,
+			"maximum_x_cm": 254.39718941421276,
+			"maximum_speed_cm_s": 300,
+			"maximum_airborne_s": 0.051470600068569183,
+			"first_landing_case_time_s": 0.05642399936914444,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -89.999999999999986,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": -1,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": 2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 0.12300942838191986,
+			"maximum_mesh_bounds_bottom_cm": 2.1771936416625977,
+			"final_mesh_bounds_bottom_cm": 2.1499998569488525,
+			"final_capsule_bottom_cm": 2.1499998569488525,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.00539349764585495,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 0,
+						"y": 0,
+						"z": 92.177193583585023
+					}
+				},
+				{
+					"case_time_s": 0.05642399936914444,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 0,
+						"y": 0,
+						"z": 92.149999806108454
+					}
+				},
+				{
+					"case_time_s": 0.35602599754929543,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 0.051686252274241173,
+						"y": 0,
+						"z": 92.149999806108454
+					}
+				},
+				{
+					"case_time_s": 1.3197629004716873,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 254.39718941421276,
+						"y": 0,
+						"z": 92.149999806108454
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 3.6897439350798811,
+					"maximum_bone_rotation_vs_reference_degrees": 2.6078979711842565
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 19.662634620565765,
+					"maximum_bone_rotation_vs_reference_degrees": 18.822699403283444
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 1.1072825115222038,
+					"maximum_bone_rotation_vs_reference_degrees": 1.1138250898139577
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0,
+			"held_pose_maximum_bone_rotation_change_degrees": 0,
+			"move_mapping_callback_count": 176,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"actual_cpu_skinned_surface":
+			{
+				"method": "USkinnedMeshComponent::GetCPUSkinnedVertices LOD0, each posed vertex transformed into world coordinates, minimum world Z across all mesh sections",
+				"limit": "This is the lowest actual posed mesh vertex, not component bounds or a foot-bone position. A visual check must confirm the lowest region belongs to the feet and judge contact/shadows. CPU skin extraction stalls rendering and is excluded from performance samples.",
+				"measured": true,
+				"posed_vertices": 387974,
+				"minimum_world_z_cm": 2.149998056508216,
+				"minimum_vertex_world_cm":
+				{
+					"x": 250.74021764231995,
+					"y": -25.377363232169483,
+					"z": 2.149998056508216
+				},
+				"graybox_ground_surface_z_cm": 0,
+				"minimum_vertex_ground_gap_cm": 2.149998056508216,
+				"within_3_cm_of_ground": true
+			},
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=451"
+				},
+				{
+					"name": "move_mapping_and_dynamic_poses",
+					"pass": true,
+					"expected": "D key invokes Enhanced Input callback; actual Idle and Walk bone poses change > 0.05 and 1 deg",
+					"actual": "move_callbacks=176 idle_delta=3.6897 walk_delta=19.6626"
+				},
+				{
+					"name": "move_more_than_100_cm",
+					"pass": true,
+					"expected": "positive displacement > 100 cm and Walk observed",
+					"actual": "254.3972"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_01_01_flat_start_stop.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 1,
+			"case": "reverse",
+			"duration_s": 2.5016967989504337,
+			"start_position_cm":
+			{
+				"x": 200,
+				"y": 0,
+				"z": 120
+			},
+			"final_position_cm":
+			{
+				"x": 149.2855158409003,
+				"y": 0,
+				"z": 92.149999210368662
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 149.2855158409003,
+			"maximum_x_cm": 364.17787108183006,
+			"maximum_speed_cm_s": 300.00000000000534,
+			"maximum_airborne_s": 0.19366909936070442,
+			"first_landing_case_time_s": 0.21042289957404137,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -89.999999999999986,
+			"negative_motion_mesh_yaw_deg": 89.999999999999986,
+			"positive_motion_mesh_forward_y": -1,
+			"negative_motion_mesh_forward_y": 1.0000000000000002,
+			"positive_motion_mesh_forward_x": 2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 2.2204460492503131e-16,
+			"minimum_mesh_bounds_bottom_cm": 0.59394747018814087,
+			"maximum_mesh_bounds_bottom_cm": 29.997791290283203,
+			"final_mesh_bounds_bottom_cm": 2.1499991416931152,
+			"final_capsule_bottom_cm": 2.1499991416931152,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0016787983477115631,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 200,
+						"y": 0,
+						"z": 119.99779040270845
+					}
+				},
+				{
+					"case_time_s": 0.21042289957404137,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 200,
+						"y": 0,
+						"z": 92.149999210368662
+					}
+				},
+				{
+					"case_time_s": 0.35685750097036362,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 200.04205116434903,
+						"y": 0,
+						"z": 92.149999210368662
+					}
+				},
+				{
+					"case_time_s": 1.0312203988432884,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 364.16146732672985,
+						"y": 0,
+						"z": 92.149999210368662
+					}
+				},
+				{
+					"case_time_s": 1.0355589985847473,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 364.1155186358618,
+						"y": 0,
+						"z": 92.149999210368662
+					}
+				},
+				{
+					"case_time_s": 1.8702173009514809,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 149.2855158409003,
+						"y": 0,
+						"z": 92.149999210368662
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 24.586569803992827,
+					"maximum_bone_rotation_vs_reference_degrees": 15.764140900333762
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 19.580309392970587,
+					"maximum_bone_rotation_vs_reference_degrees": 18.898745960548204
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.335998681232573,
+					"maximum_bone_rotation_vs_reference_degrees": 11.336436581285454
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0,
+			"held_pose_maximum_bone_rotation_change_degrees": 0,
+			"move_mapping_callback_count": 291,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=470"
+				},
+				{
+					"name": "reverse_motion_and_mesh_facing",
+					"pass": true,
+					"expected": "both signed velocities observed; mesh yaw reverses >= 170 deg and facing XY dot < -0.9",
+					"actual": "positive=1 negative=1 yaw_delta=180.000 facing_dot=-1.0000 forward_Y=(-1.0000,1.0000)"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_01_02_reverse.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 1,
+			"case": "wall_collision",
+			"duration_s": 4.8013633005321026,
+			"start_position_cm":
+			{
+				"x": 680,
+				"y": 0,
+				"z": 120
+			},
+			"final_position_cm":
+			{
+				"x": -617.99364515712921,
+				"y": 0,
+				"z": 92.149997237886396
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": -617.99364515712921,
+			"maximum_x_cm": 817.99452207248169,
+			"maximum_speed_cm_s": 300.00000000001023,
+			"maximum_airborne_s": 0.19887840002775192,
+			"first_landing_case_time_s": 0.19610720127820969,
+			"maximum_consecutive_state_mismatch_s": 0.0048252008855342865,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 89.999999999999986,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 1.0000000000000002,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 2.2204460492503131e-16,
+			"minimum_mesh_bounds_bottom_cm": 0.47719103097915649,
+			"maximum_mesh_bounds_bottom_cm": 30,
+			"final_mesh_bounds_bottom_cm": 2.1499972343444824,
+			"final_capsule_bottom_cm": 2.1499972343444824,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0046469010412693024,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 680,
+						"y": 0,
+						"z": 119.98307054759871
+					}
+				},
+				{
+					"case_time_s": 0.19610720127820969,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 680,
+						"y": 0,
+						"z": 92.150000565150165
+					}
+				},
+				{
+					"case_time_s": 0.35686739906668663,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 680.04445447400917,
+						"y": 0,
+						"z": 92.150000565150165
+					}
+				},
+				{
+					"case_time_s": 0.89992040023207664,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 817.89921615397782,
+						"y": 0,
+						"z": 92.149995826368524
+					}
+				},
+				{
+					"case_time_s": 0.90497560054063797,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 817.94521524426523,
+						"y": 0,
+						"z": 92.149995826368524
+					}
+				},
+				{
+					"case_time_s": 0.91033979877829552,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 817.94521524426523,
+						"y": 0,
+						"z": 92.149995826368524
+					}
+				},
+				{
+					"case_time_s": 0.915573600679636,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 817.99452207248169,
+						"y": 0,
+						"z": 92.149995826368524
+					}
+				},
+				{
+					"case_time_s": 0.92058959975838661,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 817.99452207248169,
+						"y": 0,
+						"z": 92.149995826368524
+					}
+				},
+				{
+					"case_time_s": 2.3034614995121956,
+					"is_falling": true,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": -480,
+						"y": 0,
+						"z": 120
+					}
+				},
+				{
+					"case_time_s": 2.3089293986558914,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": -480,
+						"y": 0,
+						"z": 119.97656002990023
+					}
+				},
+				{
+					"case_time_s": 2.5027032010257244,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": -480,
+						"y": 0,
+						"z": 92.150001976668037
+					}
+				},
+				{
+					"case_time_s": 2.6589246988296509,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": -480.05104778061951,
+						"y": 0,
+						"z": 92.150001976668037
+					}
+				},
+				{
+					"case_time_s": 3.2146265991032124,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": -617.99364515712921,
+						"y": 0,
+						"z": 92.149997237886396
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 28.509421977866371,
+					"maximum_bone_rotation_vs_reference_degrees": 18.059051569720779
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 19.60166028260543,
+					"maximum_bone_rotation_vs_reference_degrees": 18.876672027822057
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.442973474379297,
+					"maximum_bone_rotation_vs_reference_degrees": 11.447721298526908
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0,
+			"held_pose_maximum_bone_rotation_change_degrees": 0,
+			"move_mapping_callback_count": 757,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0048 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=899"
+				},
+				{
+					"name": "wall_blocks_capsule",
+					"pass": true,
+					"expected": "reach right wall X=860 minus capsule radius, no penetration; actor X <= 825",
+					"actual": "expected_center_x=818.000 max_x=817.995 right_wall_x=817.995"
+				},
+				{
+					"name": "left_wall_blocks_capsule",
+					"pass": true,
+					"expected": "reach left wall X=-660 plus capsule radius, no penetration and abs(Vx) < 1",
+					"actual": "expected_center_x=-618.000 min_x=-617.994 final_x=-617.994 vx=0.000"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_01_03_wall_collision.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 1,
+			"case": "jump_onto_platform",
+			"duration_s": 4.0020726025104523,
+			"start_position_cm":
+			{
+				"x": 1400,
+				"y": 0,
+				"z": 120
+			},
+			"final_position_cm":
+			{
+				"x": 1708.0720348973121,
+				"y": 0,
+				"z": 272.14999915812155
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 1400,
+			"maximum_x_cm": 1708.0720348973121,
+			"maximum_speed_cm_s": 300.00000000000006,
+			"maximum_airborne_s": 0.94420890137553215,
+			"first_landing_case_time_s": 1.3043738007545471,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 0.35782492160797119,
+			"maximum_mesh_bounds_bottom_cm": 265.89459228515625,
+			"final_mesh_bounds_bottom_cm": 182.14999389648438,
+			"final_capsule_bottom_cm": 182.14999389648438,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.005625702440738678,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 1400,
+						"y": 0,
+						"z": 119.97518755408584
+					}
+				},
+				{
+					"case_time_s": 0.19969189912080765,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 1400,
+						"y": 0,
+						"z": 92.149996335790021
+					}
+				},
+				{
+					"case_time_s": 0.3599914014339447,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 1400.0219426648364,
+						"y": 0,
+						"z": 95.714428369974655
+					}
+				},
+				{
+					"case_time_s": 1.3043738007545471,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 1628.5876662992205,
+						"y": 0,
+						"z": 272.14999915812155
+					}
+				},
+				{
+					"case_time_s": 1.6124774999916553,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 1708.0720348973121,
+						"y": 0,
+						"z": 272.14999915812155
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 25.059084700028016,
+					"maximum_bone_rotation_vs_reference_degrees": 14.771888676245091
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 22.48265907321797,
+					"maximum_bone_rotation_vs_reference_degrees": 15.43047731981256
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.433623275046857,
+					"maximum_bone_rotation_vs_reference_degrees": 11.440782749054012
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0.51376330107450485,
+			"held_pose_maximum_bone_rotation_change_degrees": 1.7075472925031877e-06,
+			"move_mapping_callback_count": 241,
+			"jump_mapping_callback_count": 1,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=803"
+				},
+				{
+					"name": "jump_mapping_and_actual_jump_pose",
+					"pass": true,
+					"expected": "Space key invokes Enhanced Input Jump callback and actual airborne bone pose differs from reference > 1 deg",
+					"actual": "jump_callbacks=1 jump_vs_reference=11.4408"
+				},
+				{
+					"name": "jump_issued_from_ground",
+					"pass": true,
+					"expected": "Jump issued from ground X=1400; post-jump actor peak Z > 320 cm",
+					"actual": "issued=1 post_jump_peak_z=355.895"
+				},
+				{
+					"name": "jump_onto_platform_interior",
+					"pass": true,
+					"expected": "landed center lies fully inside platform X=1500..1900 allowing capsule radius",
+					"actual": "1708.0720"
+				},
+				{
+					"name": "actual_airborne_and_landing",
+					"pass": true,
+					"expected": "real falling -> grounded transition with Jump observed while falling",
+					"actual": "airborne=1 landed=1 jump=1"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=180.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=182.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_01_04_jump_onto_platform.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 1,
+			"case": "platform_drop",
+			"duration_s": 3.003863699734211,
+			"start_position_cm":
+			{
+				"x": 2440,
+				"y": 0,
+				"z": 420
+			},
+			"final_position_cm":
+			{
+				"x": 2750.4783105068009,
+				"y": 0,
+				"z": 92.149997669614109
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 2440,
+			"maximum_x_cm": 2750.4783105068009,
+			"maximum_speed_cm_s": 300.00000000000006,
+			"maximum_airborne_s": 0.5833515003323555,
+			"first_landing_case_time_s": 1.4976968988776207,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 2.1499977111816406,
+			"maximum_mesh_bounds_bottom_cm": 329.97811889648438,
+			"final_mesh_bounds_bottom_cm": 2.1499977111816406,
+			"final_capsule_bottom_cm": 2.1499977111816406,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0052844993770122528,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 2440,
+						"y": 0,
+						"z": 419.97810606800613
+					}
+				},
+				{
+					"case_time_s": 0.19903439655900002,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 2440,
+						"y": 0,
+						"z": 392.14999547728428
+					}
+				},
+				{
+					"case_time_s": 0.41056089848279953,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 2440.0450666587858,
+						"y": 0,
+						"z": 392.14999547728428
+					}
+				},
+				{
+					"case_time_s": 0.91431529819965363,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 2568.3676894172163,
+						"y": 0,
+						"z": 355.49686589964756
+					}
+				},
+				{
+					"case_time_s": 1.4976968988776207,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 2743.3532021081915,
+						"y": 0,
+						"z": 92.149997669614109
+					}
+				},
+				{
+					"case_time_s": 1.5651668980717659,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 2750.4783105068009,
+						"y": 0,
+						"z": 92.149997669614109
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 22.893502561187791,
+					"maximum_bone_rotation_vs_reference_degrees": 12.445186016823994
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 19.607004846505742,
+					"maximum_bone_rotation_vs_reference_degrees": 18.822699409664885
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.431311248482135,
+					"maximum_bone_rotation_vs_reference_degrees": 11.437574274611389
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0.1529293991625309,
+			"held_pose_maximum_bone_rotation_change_degrees": 1.7075472925031877e-06,
+			"move_mapping_callback_count": 181,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=591"
+				},
+				{
+					"name": "walk_off_platform_edge",
+					"pass": true,
+					"expected": "grounded on platform before walking off; final X > 2542 cm",
+					"actual": "2750.4783"
+				},
+				{
+					"name": "actual_airborne_and_landing",
+					"pass": true,
+					"expected": "real falling -> grounded transition with Jump observed while falling",
+					"actual": "airborne=1 landed=1 jump=1"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_01_05_platform_drop.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 1,
+			"case": "long_airborne",
+			"duration_s": 2.6044352985918522,
+			"start_position_cm":
+			{
+				"x": 3000,
+				"y": 0,
+				"z": 900
+			},
+			"final_position_cm":
+			{
+				"x": 3000,
+				"y": 0,
+				"z": 92.14999502874295
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 3000,
+			"maximum_x_cm": 3000,
+			"maximum_speed_cm_s": 0,
+			"maximum_airborne_s": 1.0133887007832527,
+			"first_landing_case_time_s": 1.0182734988629818,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": 0,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": 0,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": 0,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 2.1499950885772705,
+			"maximum_mesh_bounds_bottom_cm": 809.97418212890625,
+			"final_mesh_bounds_bottom_cm": 2.1499950885772705,
+			"final_capsule_bottom_cm": 2.1499950885772705,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0057392008602619171,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 3000,
+						"y": 0,
+						"z": 899.97417627361267
+					}
+				},
+				{
+					"case_time_s": 1.0182734988629818,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 3000,
+						"y": 0,
+						"z": 92.14999502874295
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 6.2055726359979131,
+					"maximum_bone_rotation_vs_reference_degrees": 6.2055726359981485
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": false,
+					"maximum_bone_rotation_change_degrees": 0,
+					"maximum_bone_rotation_vs_reference_degrees": 0
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.428625975668599,
+					"maximum_bone_rotation_vs_reference_degrees": 11.436096876392964
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0.58111480250954628,
+			"held_pose_maximum_bone_rotation_change_degrees": 1.7075472925031877e-06,
+			"move_mapping_callback_count": 0,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=527"
+				},
+				{
+					"name": "long_air_holds_actual_jump_pose",
+					"pass": true,
+					"expected": "Jump sample reaches hold time for >= 0.2 s; actual component-space bone pose drift <= 0.05 deg while held",
+					"actual": "hold_s=0.5811 drift_deg=0.00000 sample_max_s=0.4354"
+				},
+				{
+					"name": "sustained_airborne",
+					"pass": true,
+					"expected": "actual uninterrupted falling >= 0.8 s",
+					"actual": "1.0134"
+				},
+				{
+					"name": "actual_airborne_and_landing",
+					"pass": true,
+					"expected": "real falling -> grounded transition with Jump observed while falling",
+					"actual": "airborne=1 landed=1 jump=1"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_01_06_long_airborne.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": false,
+			"round": 1,
+			"case": "early_landing",
+			"duration_s": 4.0000336021184921,
+			"start_position_cm":
+			{
+				"x": 3450,
+				"y": 0,
+				"z": 120
+			},
+			"final_position_cm":
+			{
+				"x": 4127.3366401493276,
+				"y": 0,
+				"z": 92.149997710617129
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 3450,
+			"maximum_x_cm": 4127.3366401493276,
+			"maximum_speed_cm_s": 300,
+			"maximum_airborne_s": 1.4191518984735012,
+			"first_landing_case_time_s": 1.0980774015188217,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 0.90913015604019165,
+			"maximum_mesh_bounds_bottom_cm": 514.98876953125,
+			"final_mesh_bounds_bottom_cm": 2.1499977111816406,
+			"final_capsule_bottom_cm": 2.1499977111816406,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0050445012748241425,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 3450,
+						"y": 0,
+						"z": 119.98004955740042
+					}
+				},
+				{
+					"case_time_s": 0.19770610332489014,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 3450,
+						"y": 0,
+						"z": 92.150000560115146
+					}
+				},
+				{
+					"case_time_s": 0.35623760148882866,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 3450.0181659731888,
+						"y": 0,
+						"z": 95.395169118542867
+					}
+				},
+				{
+					"case_time_s": 1.0980774015188217,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 3617.523732007568,
+						"y": 0,
+						"z": 342.14999928908423
+					}
+				},
+				{
+					"case_time_s": 1.3551122024655342,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 3694.6341722915818,
+						"y": 0,
+						"z": 345.90176544071932
+					}
+				},
+				{
+					"case_time_s": 2.7733357027173042,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 4120.0904099236723,
+						"y": 0,
+						"z": 92.149997710617129
+					}
+				},
+				{
+					"case_time_s": 2.8376545011997223,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 4127.3366401493276,
+						"y": 0,
+						"z": 92.149997710617129
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 22.598201323697356,
+					"maximum_bone_rotation_vs_reference_degrees": 12.168694066340048
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 20.591393858445667,
+					"maximum_bone_rotation_vs_reference_degrees": 13.627175781801512
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 13.641821832177998,
+					"maximum_bone_rotation_vs_reference_degrees": 13.647489736147914
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 1.2987967990338802,
+			"held_pose_maximum_bone_rotation_change_degrees": 0.0080148790417634459,
+			"move_mapping_callback_count": 201,
+			"jump_mapping_callback_count": 2,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=799"
+				},
+				{
+					"name": "early_landing_timing",
+					"pass": true,
+					"expected": "jump from ground onto 250 cm platform; real first landing occurs before source Jump clip duration",
+					"actual": "jump_to_first_landing_s=0.74686 source_clip_s=0.79167"
+				},
+				{
+					"name": "jump_again_after_early_landing",
+					"pass": true,
+					"expected": "second Space callback after real landing causes a second complete airborne/landing cycle",
+					"actual": "second_jump_issued=1 landing_count=2 jump_callbacks=2"
+				},
+				{
+					"name": "actual_airborne_and_landing",
+					"pass": true,
+					"expected": "real falling -> grounded transition with Jump observed while falling",
+					"actual": "airborne=1 landed=1 jump=1"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": false,
+					"expected": "grounded and capsule bottom within 3 cm of Z=250.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_01_07_early_landing.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 1,
+			"case": "reset",
+			"duration_s": 2.4019324034452438,
+			"start_position_cm":
+			{
+				"x": 4300,
+				"y": 0,
+				"z": 650
+			},
+			"final_position_cm":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 92.15000087895352
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 0,
+			"maximum_x_cm": 4418.5215578973293,
+			"maximum_speed_cm_s": 180,
+			"maximum_airborne_s": 1.5091054998338223,
+			"first_landing_case_time_s": 1.5129469037055969,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 0.16194348037242889,
+			"maximum_mesh_bounds_bottom_cm": 559.300537109375,
+			"final_mesh_bounds_bottom_cm": 2.1500008106231689,
+			"final_capsule_bottom_cm": 2.1500008106231689,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0056223012506961823,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 4301.0120142251253,
+						"y": 0,
+						"z": 649.30054139717527
+					}
+				},
+				{
+					"case_time_s": 1.5129469037055969,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 0,
+						"y": 0,
+						"z": 92.15000087895352
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 2.1045003003764107,
+					"maximum_bone_rotation_vs_reference_degrees": 1.3627992231751835
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": false,
+					"maximum_bone_rotation_change_degrees": 0,
+					"maximum_bone_rotation_vs_reference_degrees": 0
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.423611378723949,
+					"maximum_bone_rotation_vs_reference_degrees": 11.430761626621951
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0.47258929908275604,
+			"held_pose_maximum_bone_rotation_change_degrees": 1.7075472925031877e-06,
+			"move_mapping_callback_count": 0,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 3,
+			"reset_mapping_callback_count": 1,
+			"before_reset_position_cm":
+			{
+				"x": 4300,
+				"y": 0,
+				"z": 650
+			},
+			"immediate_reset_position_cm":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 92.199999999999989
+			},
+			"expected_spawn_position_cm":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 92.200000000000003
+			},
+			"immediate_reset_speed_cm_s": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=325"
+				},
+				{
+					"name": "pause_resume_and_reset_keyboard_mappings",
+					"pass": true,
+					"expected": "P pauses, second P resumes, third P pauses; paused actor moves <= 0.1 cm; R resets and resumes via Enhanced Input",
+					"actual": "paused=1 resumed=1 reset_while_paused=1 pause_callbacks=3 reset_callbacks=1 paused_displacement=0.000000 final_paused=0"
+				},
+				{
+					"name": "reset_restarts_native_animation_clock",
+					"pass": true,
+					"expected": "worker proxy applies new reset generation and all three sample clocks are <= 0.1 s on first observed reset evaluation",
+					"actual": "before=2 after=3 proxy_applied=1 first_max_sample_time_s=0.004815"
+				},
+				{
+					"name": "reset_returns_to_spawn",
+					"pass": true,
+					"expected": "immediate reset within 0.1 cm of spawn and speed < 1; no residual horizontal movement",
+					"actual": "immediate_error=0.000000 immediate_speed=0.000000 final_x_error=0.000000"
+				},
+				{
+					"name": "three_round_reset_consistency",
+					"pass": true,
+					"expected": "settled reset position within 0.1 cm of round 1 reset",
+					"actual": "0.0000"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_01_08_reset.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 2,
+			"case": "flat_start_stop",
+			"duration_s": 2.3044534996151924,
+			"start_position_cm":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 92.200000000000003
+			},
+			"final_position_cm":
+			{
+				"x": 253.06464650530751,
+				"y": 0,
+				"z": 92.149999987338134
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 0,
+			"maximum_x_cm": 253.06464650530751,
+			"maximum_speed_cm_s": 300,
+			"maximum_airborne_s": 0.051391597837209702,
+			"first_landing_case_time_s": 0.056526098400354385,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 0.1293804794549942,
+			"maximum_mesh_bounds_bottom_cm": 2.1771581172943115,
+			"final_mesh_bounds_bottom_cm": 2.1500000953674316,
+			"final_capsule_bottom_cm": 2.1500000953674316,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.005397699773311615,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 0,
+						"y": 0,
+						"z": 92.177158032331235
+					}
+				},
+				{
+					"case_time_s": 0.056526098400354385,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 0,
+						"y": 0,
+						"z": 92.149999987338134
+					}
+				},
+				{
+					"case_time_s": 0.35940729826688766,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 0.055314709742226853,
+						"y": 0,
+						"z": 92.149999987338134
+					}
+				},
+				{
+					"case_time_s": 1.3190421983599663,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 253.06464650530751,
+						"y": 0,
+						"z": 92.149999987338134
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 2.9774783948214805,
+					"maximum_bone_rotation_vs_reference_degrees": 2.2413964634269772
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 19.691618902109177,
+					"maximum_bone_rotation_vs_reference_degrees": 18.822699409664885
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 1.1027915397733126,
+					"maximum_bone_rotation_vs_reference_degrees": 1.1093450281077286
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0,
+			"held_pose_maximum_bone_rotation_change_degrees": 0,
+			"move_mapping_callback_count": 174,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"actual_cpu_skinned_surface":
+			{
+				"method": "USkinnedMeshComponent::GetCPUSkinnedVertices LOD0, each posed vertex transformed into world coordinates, minimum world Z across all mesh sections",
+				"limit": "This is the lowest actual posed mesh vertex, not component bounds or a foot-bone position. A visual check must confirm the lowest region belongs to the feet and judge contact/shadows. CPU skin extraction stalls rendering and is excluded from performance samples.",
+				"measured": true,
+				"posed_vertices": 387974,
+				"minimum_world_z_cm": 2.1499982377378961,
+				"minimum_vertex_world_cm":
+				{
+					"x": 249.40767473341467,
+					"y": -25.37736323216949,
+					"z": 2.1499982377378961
+				},
+				"graybox_ground_surface_z_cm": 0,
+				"minimum_vertex_ground_gap_cm": 2.1499982377378961,
+				"within_3_cm_of_ground": true
+			},
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=449"
+				},
+				{
+					"name": "move_mapping_and_dynamic_poses",
+					"pass": true,
+					"expected": "D key invokes Enhanced Input callback; actual Idle and Walk bone poses change > 0.05 and 1 deg",
+					"actual": "move_callbacks=174 idle_delta=2.9775 walk_delta=19.6916"
+				},
+				{
+					"name": "move_more_than_100_cm",
+					"pass": true,
+					"expected": "positive displacement > 100 cm and Walk observed",
+					"actual": "253.0646"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_02_01_flat_start_stop.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 2,
+			"case": "reverse",
+			"duration_s": 2.5001829974353313,
+			"start_position_cm":
+			{
+				"x": 200,
+				"y": 0,
+				"z": 120
+			},
+			"final_position_cm":
+			{
+				"x": 148.12386464575223,
+				"y": 0,
+				"z": 92.149998265814673
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 148.12386464575223,
+			"maximum_x_cm": 363.42410989352697,
+			"maximum_speed_cm_s": 300,
+			"maximum_airborne_s": 0.19135449826717377,
+			"first_landing_case_time_s": 0.19606569781899452,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 89.999999999999986,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 1.0000000000000002,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 2.2204460492503131e-16,
+			"minimum_mesh_bounds_bottom_cm": 1.2926294803619385,
+			"maximum_mesh_bounds_bottom_cm": 29.980461120605469,
+			"final_mesh_bounds_bottom_cm": 2.1499981880187988,
+			"final_capsule_bottom_cm": 2.1499981880187988,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0049920976161956787,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 200,
+						"y": 0,
+						"z": 119.98046190573005
+					}
+				},
+				{
+					"case_time_s": 0.19606569781899452,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 200,
+						"y": 0,
+						"z": 92.149998265814673
+					}
+				},
+				{
+					"case_time_s": 0.35877339914441109,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 200.04090200568302,
+						"y": 0,
+						"z": 92.149998265814673
+					}
+				},
+				{
+					"case_time_s": 1.0291478000581264,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 363.42410989352697,
+						"y": 0,
+						"z": 92.149998265814673
+					}
+				},
+				{
+					"case_time_s": 1.0337263010442257,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 363.38677274120761,
+						"y": 0,
+						"z": 92.149998265814673
+					}
+				},
+				{
+					"case_time_s": 1.8682219982147217,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 148.12386464575223,
+						"y": 0,
+						"z": 92.149998265814673
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 26.136221398280544,
+					"maximum_bone_rotation_vs_reference_degrees": 15.662017715089249
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 19.569886066658587,
+					"maximum_bone_rotation_vs_reference_degrees": 18.897565432697366
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.429794552837095,
+					"maximum_bone_rotation_vs_reference_degrees": 11.435336834516137
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0,
+			"held_pose_maximum_bone_rotation_change_degrees": 0,
+			"move_mapping_callback_count": 283,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=489"
+				},
+				{
+					"name": "reverse_motion_and_mesh_facing",
+					"pass": true,
+					"expected": "both signed velocities observed; mesh yaw reverses >= 170 deg and facing XY dot < -0.9",
+					"actual": "positive=1 negative=1 yaw_delta=180.000 facing_dot=-1.0000 forward_Y=(-1.0000,1.0000)"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_02_02_reverse.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 2,
+			"case": "wall_collision",
+			"duration_s": 4.8025758005678654,
+			"start_position_cm":
+			{
+				"x": 680,
+				"y": 0,
+				"z": 120
+			},
+			"final_position_cm":
+			{
+				"x": -617.99971128844368,
+				"y": 0,
+				"z": 92.149994915001457
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": -617.99971128844368,
+			"maximum_x_cm": 817.99451543343025,
+			"maximum_speed_cm_s": 300,
+			"maximum_airborne_s": 0.20005889981985092,
+			"first_landing_case_time_s": 0.19912859797477722,
+			"maximum_consecutive_state_mismatch_s": 0.0061731971800327301,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 89.999999999999986,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 1.0000000000000002,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 2.2204460492503131e-16,
+			"minimum_mesh_bounds_bottom_cm": 0.52813410758972168,
+			"maximum_mesh_bounds_bottom_cm": 30,
+			"final_mesh_bounds_bottom_cm": 2.1499948501586914,
+			"final_capsule_bottom_cm": 2.1499948501586914,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0054943002760410309,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 680,
+						"y": 0,
+						"z": 119.97633312894973
+					}
+				},
+				{
+					"case_time_s": 0.19912859797477722,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 680,
+						"y": 0,
+						"z": 92.150000228018669
+					}
+				},
+				{
+					"case_time_s": 0.35965479910373688,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 680.05662759447318,
+						"y": 0,
+						"z": 92.150000228018669
+					}
+				},
+				{
+					"case_time_s": 0.91409439966082573,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 817.96357018296328,
+						"y": 0,
+						"z": 92.149995489237028
+					}
+				},
+				{
+					"case_time_s": 0.93618150055408478,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 817.99451543343025,
+						"y": 0,
+						"z": 92.149995489237028
+					}
+				},
+				{
+					"case_time_s": 0.94278969988226891,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 817.99451543343025,
+						"y": 0,
+						"z": 92.149995489237028
+					}
+				},
+				{
+					"case_time_s": 2.3015826977789402,
+					"is_falling": true,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": -480,
+						"y": 0,
+						"z": 120
+					}
+				},
+				{
+					"case_time_s": 2.3065172992646694,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": -480,
+						"y": 0,
+						"z": 119.9809093712108
+					}
+				},
+				{
+					"case_time_s": 2.5000367984175682,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": -480,
+						"y": 0,
+						"z": 92.14999965378307
+					}
+				},
+				{
+					"case_time_s": 2.6604387983679771,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": -480.03887867485241,
+						"y": 0,
+						"z": 92.14999965378307
+					}
+				},
+				{
+					"case_time_s": 3.2028394006192684,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": -617.8994020182048,
+						"y": 0,
+						"z": 92.149994915001457
+					}
+				},
+				{
+					"case_time_s": 3.2084425985813141,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": -617.95591450752818,
+						"y": 0,
+						"z": 92.149994915001457
+					}
+				},
+				{
+					"case_time_s": 3.2135502994060516,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": -617.95591450752818,
+						"y": 0,
+						"z": 92.149994915001457
+					}
+				},
+				{
+					"case_time_s": 3.2990847006440163,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": -617.99971128844368,
+						"y": 0,
+						"z": 92.149994915001457
+					}
+				},
+				{
+					"case_time_s": 3.3059078976511955,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": -617.99971128844368,
+						"y": 0,
+						"z": 92.149994915001457
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 28.403368177621502,
+					"maximum_bone_rotation_vs_reference_degrees": 18.094005619010176
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 19.701869722997195,
+					"maximum_bone_rotation_vs_reference_degrees": 18.905323883862224
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.437696596572303,
+					"maximum_bone_rotation_vs_reference_degrees": 11.444503765289037
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0,
+			"held_pose_maximum_bone_rotation_change_degrees": 0,
+			"move_mapping_callback_count": 729,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0062 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=867"
+				},
+				{
+					"name": "wall_blocks_capsule",
+					"pass": true,
+					"expected": "reach right wall X=860 minus capsule radius, no penetration; actor X <= 825",
+					"actual": "expected_center_x=818.000 max_x=817.995 right_wall_x=817.995"
+				},
+				{
+					"name": "left_wall_blocks_capsule",
+					"pass": true,
+					"expected": "reach left wall X=-660 plus capsule radius, no penetration and abs(Vx) < 1",
+					"actual": "expected_center_x=-618.000 min_x=-618.000 final_x=-618.000 vx=0.000"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_02_03_wall_collision.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 2,
+			"case": "jump_onto_platform",
+			"duration_s": 4.0008317977190018,
+			"start_position_cm":
+			{
+				"x": 1400,
+				"y": 0,
+				"z": 120
+			},
+			"final_position_cm":
+			{
+				"x": 1708.3748752051697,
+				"y": 0,
+				"z": 272.15000072693408
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 1400,
+			"maximum_x_cm": 1708.3748752051697,
+			"maximum_speed_cm_s": 300.00000000000006,
+			"maximum_airborne_s": 0.94160300120711327,
+			"first_landing_case_time_s": 1.3031233996152878,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 0.61228704452514648,
+			"maximum_mesh_bounds_bottom_cm": 265.3802490234375,
+			"final_mesh_bounds_bottom_cm": 182.14999389648438,
+			"final_capsule_bottom_cm": 182.14999389648438,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0031635984778404236,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 1400,
+						"y": 0,
+						"z": 119.99215344942206
+					}
+				},
+				{
+					"case_time_s": 0.19859259948134422,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 1400,
+						"y": 0,
+						"z": 92.149998685553186
+					}
+				},
+				{
+					"case_time_s": 0.36139839887619019,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 1400.023619062571,
+						"y": 0,
+						"z": 95.847154971369335
+					}
+				},
+				{
+					"case_time_s": 1.3031233996152878,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 1628.025839431275,
+						"y": 0,
+						"z": 272.15000072693408
+					}
+				},
+				{
+					"case_time_s": 1.6120896004140377,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 1708.3748752051697,
+						"y": 0,
+						"z": 272.15000072693408
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 25.310457122700761,
+					"maximum_bone_rotation_vs_reference_degrees": 14.941824965628021
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 22.755634325094242,
+					"maximum_bone_rotation_vs_reference_degrees": 15.687660904928661
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.451818891296524,
+					"maximum_bone_rotation_vs_reference_degrees": 11.45384824952958
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0.51195060089230537,
+			"held_pose_maximum_bone_rotation_change_degrees": 0.025042938826494422,
+			"move_mapping_callback_count": 233,
+			"jump_mapping_callback_count": 1,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=780"
+				},
+				{
+					"name": "jump_mapping_and_actual_jump_pose",
+					"pass": true,
+					"expected": "Space key invokes Enhanced Input Jump callback and actual airborne bone pose differs from reference > 1 deg",
+					"actual": "jump_callbacks=1 jump_vs_reference=11.4538"
+				},
+				{
+					"name": "jump_issued_from_ground",
+					"pass": true,
+					"expected": "Jump issued from ground X=1400; post-jump actor peak Z > 320 cm",
+					"actual": "issued=1 post_jump_peak_z=355.380"
+				},
+				{
+					"name": "jump_onto_platform_interior",
+					"pass": true,
+					"expected": "landed center lies fully inside platform X=1500..1900 allowing capsule radius",
+					"actual": "1708.3749"
+				},
+				{
+					"name": "actual_airborne_and_landing",
+					"pass": true,
+					"expected": "real falling -> grounded transition with Jump observed while falling",
+					"actual": "airborne=1 landed=1 jump=1"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=180.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=182.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_02_04_jump_onto_platform.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 2,
+			"case": "platform_drop",
+			"duration_s": 3.0049761012196541,
+			"start_position_cm":
+			{
+				"x": 2440,
+				"y": 0,
+				"z": 420
+			},
+			"final_position_cm":
+			{
+				"x": 2751.1606441327881,
+				"y": 0,
+				"z": 92.149999230935407
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 2440,
+			"maximum_x_cm": 2751.1606441327881,
+			"maximum_speed_cm_s": 300.00000000000006,
+			"maximum_airborne_s": 0.5915290005505085,
+			"first_landing_case_time_s": 1.4967273995280266,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 2.1167504787445068,
+			"maximum_mesh_bounds_bottom_cm": 329.98248291015625,
+			"final_mesh_bounds_bottom_cm": 2.1499991416931152,
+			"final_capsule_bottom_cm": 2.1499991416931152,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0047275014221668243,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 2440,
+						"y": 0,
+						"z": 419.98247817255788
+					}
+				},
+				{
+					"case_time_s": 0.19751520082354546,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 2440,
+						"y": 0,
+						"z": 392.14999459125471
+					}
+				},
+				{
+					"case_time_s": 0.40658289939165115,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 2440.0566133785533,
+						"y": 0,
+						"z": 392.14999459125471
+					}
+				},
+				{
+					"case_time_s": 0.90591179952025414,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 2567.235039575839,
+						"y": 0,
+						"z": 361.18239233829451
+					}
+				},
+				{
+					"case_time_s": 1.4967273995280266,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 2744.4082497833356,
+						"y": 0,
+						"z": 92.149999230935407
+					}
+				},
+				{
+					"case_time_s": 1.5613628998398781,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 2751.1606441327881,
+						"y": 0,
+						"z": 92.149999230935407
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 22.422992219132201,
+					"maximum_bone_rotation_vs_reference_degrees": 12.054191946514274
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 19.701759131215919,
+					"maximum_bone_rotation_vs_reference_degrees": 18.822698747713059
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.446243522872582,
+					"maximum_bone_rotation_vs_reference_degrees": 11.45117138253242
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0.15725930035114288,
+			"held_pose_maximum_bone_rotation_change_degrees": 1.7075472925031877e-06,
+			"move_mapping_callback_count": 179,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=580"
+				},
+				{
+					"name": "walk_off_platform_edge",
+					"pass": true,
+					"expected": "grounded on platform before walking off; final X > 2542 cm",
+					"actual": "2751.1606"
+				},
+				{
+					"name": "actual_airborne_and_landing",
+					"pass": true,
+					"expected": "real falling -> grounded transition with Jump observed while falling",
+					"actual": "airborne=1 landed=1 jump=1"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_02_05_platform_drop.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 2,
+			"case": "long_airborne",
+			"duration_s": 2.601850401610136,
+			"start_position_cm":
+			{
+				"x": 3000,
+				"y": 0,
+				"z": 900
+			},
+			"final_position_cm":
+			{
+				"x": 3000,
+				"y": 0,
+				"z": 92.149997553115767
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 3000,
+			"maximum_x_cm": 3000,
+			"maximum_speed_cm_s": 0,
+			"maximum_airborne_s": 1.0130377002060413,
+			"first_landing_case_time_s": 1.0183095000684261,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": 0,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": 0,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": 0,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 2.1499974727630615,
+			"maximum_mesh_bounds_bottom_cm": 809.93426513671875,
+			"final_mesh_bounds_bottom_cm": 2.1499974727630615,
+			"final_capsule_bottom_cm": 2.1499974727630615,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0091582983732223511,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 3000,
+						"y": 0,
+						"z": 899.93424244759115
+					}
+				},
+				{
+					"case_time_s": 1.0183095000684261,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 3000,
+						"y": 0,
+						"z": 92.149997553115767
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 6.1847191186647006,
+					"maximum_bone_rotation_vs_reference_degrees": 6.1847191186651731
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": false,
+					"maximum_bone_rotation_change_degrees": 0,
+					"maximum_bone_rotation_vs_reference_degrees": 0
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.403086771558256,
+					"maximum_bone_rotation_vs_reference_degrees": 11.423035621683866
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0.58212770149111748,
+			"held_pose_maximum_bone_rotation_change_degrees": 0.013938755230437515,
+			"move_mapping_callback_count": 0,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=512"
+				},
+				{
+					"name": "long_air_holds_actual_jump_pose",
+					"pass": true,
+					"expected": "Jump sample reaches hold time for >= 0.2 s; actual component-space bone pose drift <= 0.05 deg while held",
+					"actual": "hold_s=0.5821 drift_deg=0.01394 sample_max_s=0.4354"
+				},
+				{
+					"name": "sustained_airborne",
+					"pass": true,
+					"expected": "actual uninterrupted falling >= 0.8 s",
+					"actual": "1.0130"
+				},
+				{
+					"name": "actual_airborne_and_landing",
+					"pass": true,
+					"expected": "real falling -> grounded transition with Jump observed while falling",
+					"actual": "airborne=1 landed=1 jump=1"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_02_06_long_airborne.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": false,
+			"round": 2,
+			"case": "early_landing",
+			"duration_s": 4.0051109977066517,
+			"start_position_cm":
+			{
+				"x": 3450,
+				"y": 0,
+				"z": 120
+			},
+			"final_position_cm":
+			{
+				"x": 4131.3854915618131,
+				"y": 0,
+				"z": 92.14999832440283
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 3450,
+			"maximum_x_cm": 4131.3854915618131,
+			"maximum_speed_cm_s": 300.00000000000006,
+			"maximum_airborne_s": 1.4221167005598545,
+			"first_landing_case_time_s": 1.1081850007176399,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 1.188268780708313,
+			"maximum_mesh_bounds_bottom_cm": 515.79345703125,
+			"final_mesh_bounds_bottom_cm": 2.1499984264373779,
+			"final_capsule_bottom_cm": 2.1499984264373779,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0045667998492717743,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 3450,
+						"y": 0,
+						"z": 119.98364916188316
+					}
+				},
+				{
+					"case_time_s": 0.19799869880080223,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 3450,
+						"y": 0,
+						"z": 92.149994869956188
+					}
+				},
+				{
+					"case_time_s": 0.35584120079874992,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 3450.0242483859342,
+						"y": 0,
+						"z": 95.895737327110268
+					}
+				},
+				{
+					"case_time_s": 1.1081850007176399,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 3621.1535195922461,
+						"y": 0,
+						"z": 342.14999471365559
+					}
+				},
+				{
+					"case_time_s": 1.36362149938941,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 3697.7844691937771,
+						"y": 0,
+						"z": 345.21749240053879
+					}
+				},
+				{
+					"case_time_s": 2.786881398409605,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 4124.6820244917953,
+						"y": 0,
+						"z": 92.14999832440283
+					}
+				},
+				{
+					"case_time_s": 2.8522952981293201,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 4131.3854915618131,
+						"y": 0,
+						"z": 92.14999832440283
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 22.559236497533309,
+					"maximum_bone_rotation_vs_reference_degrees": 12.249867082914617
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 20.672765167849143,
+					"maximum_bone_rotation_vs_reference_degrees": 13.641627010190335
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 13.656829998106046,
+					"maximum_bone_rotation_vs_reference_degrees": 13.661401918466654
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 1.3115498013794422,
+			"held_pose_maximum_bone_rotation_change_degrees": 0.025664942770025977,
+			"move_mapping_callback_count": 199,
+			"jump_mapping_callback_count": 2,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=783"
+				},
+				{
+					"name": "early_landing_timing",
+					"pass": true,
+					"expected": "jump from ground onto 250 cm platform; real first landing occurs before source Jump clip duration",
+					"actual": "jump_to_first_landing_s=0.75815 source_clip_s=0.79167"
+				},
+				{
+					"name": "jump_again_after_early_landing",
+					"pass": true,
+					"expected": "second Space callback after real landing causes a second complete airborne/landing cycle",
+					"actual": "second_jump_issued=1 landing_count=2 jump_callbacks=2"
+				},
+				{
+					"name": "actual_airborne_and_landing",
+					"pass": true,
+					"expected": "real falling -> grounded transition with Jump observed while falling",
+					"actual": "airborne=1 landed=1 jump=1"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": false,
+					"expected": "grounded and capsule bottom within 3 cm of Z=250.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_02_07_early_landing.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 2,
+			"case": "reset",
+			"duration_s": 2.405251894146204,
+			"start_position_cm":
+			{
+				"x": 4300,
+				"y": 0,
+				"z": 650
+			},
+			"final_position_cm":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 92.149999108180054
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 0,
+			"maximum_x_cm": 4419.2182844877243,
+			"maximum_speed_cm_s": 180,
+			"maximum_airborne_s": 1.5107896029949188,
+			"first_landing_case_time_s": 1.514601793140173,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 0.02362915500998497,
+			"maximum_mesh_bounds_bottom_cm": 559.245849609375,
+			"final_mesh_bounds_bottom_cm": 2.1499991416931152,
+			"final_capsule_bottom_cm": 2.1499991416931152,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0060456991195678711,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 4301.0882258415222,
+						"y": 0,
+						"z": 649.24586053102189
+					}
+				},
+				{
+					"case_time_s": 1.514601793140173,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 0,
+						"y": 0,
+						"z": 92.149999108180054
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 2.1692579763752415,
+					"maximum_bone_rotation_vs_reference_degrees": 1.3627992486612479
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": false,
+					"maximum_bone_rotation_change_degrees": 0,
+					"maximum_bone_rotation_vs_reference_degrees": 0
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.413141456874278,
+					"maximum_bone_rotation_vs_reference_degrees": 11.42148635872725
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0.48087310045957565,
+			"held_pose_maximum_bone_rotation_change_degrees": 0.0038303247036202306,
+			"move_mapping_callback_count": 0,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 3,
+			"reset_mapping_callback_count": 1,
+			"before_reset_position_cm":
+			{
+				"x": 4300,
+				"y": 0,
+				"z": 650
+			},
+			"immediate_reset_position_cm":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 92.200000000000017
+			},
+			"expected_spawn_position_cm":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 92.200000000000003
+			},
+			"immediate_reset_speed_cm_s": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=320"
+				},
+				{
+					"name": "pause_resume_and_reset_keyboard_mappings",
+					"pass": true,
+					"expected": "P pauses, second P resumes, third P pauses; paused actor moves <= 0.1 cm; R resets and resumes via Enhanced Input",
+					"actual": "paused=1 resumed=1 reset_while_paused=1 pause_callbacks=3 reset_callbacks=1 paused_displacement=0.000000 final_paused=0"
+				},
+				{
+					"name": "reset_restarts_native_animation_clock",
+					"pass": true,
+					"expected": "worker proxy applies new reset generation and all three sample clocks are <= 0.1 s on first observed reset evaluation",
+					"actual": "before=4 after=5 proxy_applied=1 first_max_sample_time_s=0.004374"
+				},
+				{
+					"name": "reset_returns_to_spawn",
+					"pass": true,
+					"expected": "immediate reset within 0.1 cm of spawn and speed < 1; no residual horizontal movement",
+					"actual": "immediate_error=0.000000 immediate_speed=0.000000 final_x_error=0.000000"
+				},
+				{
+					"name": "three_round_reset_consistency",
+					"pass": true,
+					"expected": "settled reset position within 0.1 cm of round 1 reset",
+					"actual": "0.0000"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_02_08_reset.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 3,
+			"case": "flat_start_stop",
+			"duration_s": 2.3031104989349842,
+			"start_position_cm":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 92.200000000000003
+			},
+			"final_position_cm":
+			{
+				"x": 253.48001907374106,
+				"y": 0,
+				"z": 92.149997027585954
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 0,
+			"maximum_x_cm": 253.48001907374106,
+			"maximum_speed_cm_s": 300.00000000000279,
+			"maximum_airborne_s": 0.050680600106716156,
+			"first_landing_case_time_s": 0.056219499558210373,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 0.18627779185771942,
+			"maximum_mesh_bounds_bottom_cm": 2.1764321327209473,
+			"final_mesh_bounds_bottom_cm": 2.1499969959259033,
+			"final_capsule_bottom_cm": 2.1499969959259033,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.005482800304889679,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 0,
+						"y": 0,
+						"z": 92.176432098240298
+					}
+				},
+				{
+					"case_time_s": 0.056219499558210373,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 0,
+						"y": 0,
+						"z": 92.149997027585954
+					}
+				},
+				{
+					"case_time_s": 0.35711560025811195,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 0.055562478188411757,
+						"y": 0,
+						"z": 92.149997027585954
+					}
+				},
+				{
+					"case_time_s": 1.3185762017965317,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 253.48001907374106,
+						"y": 0,
+						"z": 92.149997027585954
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 3.1664204006407459,
+					"maximum_bone_rotation_vs_reference_degrees": 2.3601234108024078
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 19.693561191035958,
+					"maximum_bone_rotation_vs_reference_degrees": 18.822698747713059
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 1.0626315713253691,
+					"maximum_bone_rotation_vs_reference_degrees": 1.0694079999976989
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0,
+			"held_pose_maximum_bone_rotation_change_degrees": 0,
+			"move_mapping_callback_count": 173,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"actual_cpu_skinned_surface":
+			{
+				"method": "USkinnedMeshComponent::GetCPUSkinnedVertices LOD0, each posed vertex transformed into world coordinates, minimum world Z across all mesh sections",
+				"limit": "This is the lowest actual posed mesh vertex, not component bounds or a foot-bone position. A visual check must confirm the lowest region belongs to the feet and judge contact/shadows. CPU skin extraction stalls rendering and is excluded from performance samples.",
+				"measured": true,
+				"posed_vertices": 387974,
+				"minimum_world_z_cm": 2.1499952779857159,
+				"minimum_vertex_world_cm":
+				{
+					"x": 249.82304730184822,
+					"y": -25.37736323216949,
+					"z": 2.1499952779857159
+				},
+				"graybox_ground_surface_z_cm": 0,
+				"minimum_vertex_ground_gap_cm": 2.1499952779857159,
+				"within_3_cm_of_ground": true
+			},
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=445"
+				},
+				{
+					"name": "move_mapping_and_dynamic_poses",
+					"pass": true,
+					"expected": "D key invokes Enhanced Input callback; actual Idle and Walk bone poses change > 0.05 and 1 deg",
+					"actual": "move_callbacks=173 idle_delta=3.1664 walk_delta=19.6936"
+				},
+				{
+					"name": "move_more_than_100_cm",
+					"pass": true,
+					"expected": "positive displacement > 100 cm and Walk observed",
+					"actual": "253.4800"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_03_01_flat_start_stop.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 3,
+			"case": "reverse",
+			"duration_s": 2.5044870004057884,
+			"start_position_cm":
+			{
+				"x": 200,
+				"y": 0,
+				"z": 120
+			},
+			"final_position_cm":
+			{
+				"x": 151.13261885871984,
+				"y": 0,
+				"z": 92.149996911979741
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 151.13261885871984,
+			"maximum_x_cm": 365.44072474938605,
+			"maximum_speed_cm_s": 300,
+			"maximum_airborne_s": 0.19035010039806366,
+			"first_landing_case_time_s": 0.19563180208206177,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 89.999999999999986,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 1.0000000000000002,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 2.2204460492503131e-16,
+			"minimum_mesh_bounds_bottom_cm": 1.5932019948959351,
+			"maximum_mesh_bounds_bottom_cm": 29.983453750610352,
+			"final_mesh_bounds_bottom_cm": 2.1499969959259033,
+			"final_capsule_bottom_cm": 2.1499969959259033,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0045940019190311432,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 200,
+						"y": 0,
+						"z": 119.98345379475246
+					}
+				},
+				{
+					"case_time_s": 0.19563180208206177,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 200,
+						"y": 0,
+						"z": 92.149996911979741
+					}
+				},
+				{
+					"case_time_s": 0.35500049963593483,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 200.0418460622889,
+						"y": 0,
+						"z": 92.149996911979741
+					}
+				},
+				{
+					"case_time_s": 1.0325870998203754,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 365.43703692444467,
+						"y": 0,
+						"z": 92.149996911979741
+					}
+				},
+				{
+					"case_time_s": 1.0385733023285866,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 365.36751103760747,
+						"y": 0,
+						"z": 92.149996911979741
+					}
+				},
+				{
+					"case_time_s": 1.8698661997914314,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 151.13261885871984,
+						"y": 0,
+						"z": 92.149996911979741
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 26.34034785887356,
+					"maximum_bone_rotation_vs_reference_degrees": 15.906114470068712
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 19.578459413776653,
+					"maximum_bone_rotation_vs_reference_degrees": 18.904554659654263
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.442036916575274,
+					"maximum_bone_rotation_vs_reference_degrees": 11.446668395221495
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0,
+			"held_pose_maximum_bone_rotation_change_degrees": 0,
+			"move_mapping_callback_count": 277,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=480"
+				},
+				{
+					"name": "reverse_motion_and_mesh_facing",
+					"pass": true,
+					"expected": "both signed velocities observed; mesh yaw reverses >= 170 deg and facing XY dot < -0.9",
+					"actual": "positive=1 negative=1 yaw_delta=180.000 facing_dot=-1.0000 forward_Y=(-1.0000,1.0000)"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_03_02_reverse.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 3,
+			"case": "wall_collision",
+			"duration_s": 4.803345300257206,
+			"start_position_cm":
+			{
+				"x": 680,
+				"y": 0,
+				"z": 120
+			},
+			"final_position_cm":
+			{
+				"x": -617.99216741634746,
+				"y": 0,
+				"z": 92.150003178926994
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": -617.99216741634746,
+			"maximum_x_cm": 817.99414244588695,
+			"maximum_speed_cm_s": 300.00000000001256,
+			"maximum_airborne_s": 0.19917349889874458,
+			"first_landing_case_time_s": 0.19927309826016426,
+			"maximum_consecutive_state_mismatch_s": 0.0055329985916614532,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 89.999999999999986,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 1.0000000000000002,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 2.2204460492503131e-16,
+			"minimum_mesh_bounds_bottom_cm": 0.46066662669181824,
+			"maximum_mesh_bounds_bottom_cm": 30,
+			"final_mesh_bounds_bottom_cm": 2.15000319480896,
+			"final_capsule_bottom_cm": 2.15000319480896,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0054171979427337646,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 680,
+						"y": 0,
+						"z": 119.9769927096962
+					}
+				},
+				{
+					"case_time_s": 0.19927309826016426,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 680,
+						"y": 0,
+						"z": 92.149996014507977
+					}
+				},
+				{
+					"case_time_s": 0.35541680082678795,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 680.0375698382561,
+						"y": 0,
+						"z": 92.149996014507977
+					}
+				},
+				{
+					"case_time_s": 0.89570510014891624,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 817.88230982685059,
+						"y": 0,
+						"z": 92.149996014507977
+					}
+				},
+				{
+					"case_time_s": 0.90212449803948402,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 817.95648543154994,
+						"y": 0,
+						"z": 92.149996014507977
+					}
+				},
+				{
+					"case_time_s": 0.90720440074801445,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 817.95648543154994,
+						"y": 0,
+						"z": 92.149996014507977
+					}
+				},
+				{
+					"case_time_s": 0.95129010081291199,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 817.99414244588695,
+						"y": 0,
+						"z": 92.149996014507977
+					}
+				},
+				{
+					"case_time_s": 0.95676619932055473,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 817.99414244588695,
+						"y": 0,
+						"z": 92.149996014507977
+					}
+				},
+				{
+					"case_time_s": 2.3034393973648548,
+					"is_falling": true,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": -480.00000000000011,
+						"y": 0,
+						"z": 120
+					}
+				},
+				{
+					"case_time_s": 2.3087280988693237,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": -480.00000000000011,
+						"y": 0,
+						"z": 119.97807123493496
+					}
+				},
+				{
+					"case_time_s": 2.5021401979029179,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": -480.00000000000011,
+						"y": 0,
+						"z": 92.149996473616824
+					}
+				},
+				{
+					"case_time_s": 2.6577050983905792,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": -480.0612261814689,
+						"y": 0,
+						"z": 92.149996473616824
+					}
+				},
+				{
+					"case_time_s": 3.2078651003539562,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": -617.90692699204772,
+						"y": 0,
+						"z": 92.150003178926994
+					}
+				},
+				{
+					"case_time_s": 3.2138343006372452,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": -617.97106342568736,
+						"y": 0,
+						"z": 92.150003178926994
+					}
+				},
+				{
+					"case_time_s": 3.2196015007793903,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": -617.97106342568736,
+						"y": 0,
+						"z": 92.150003178926994
+					}
+				},
+				{
+					"case_time_s": 4.6698157973587513,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": -617.99216741634746,
+						"y": 0,
+						"z": 92.150003178926994
+					}
+				},
+				{
+					"case_time_s": 4.6757934987545013,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": -617.99216741634746,
+						"y": 0,
+						"z": 92.150003178926994
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 28.430567585853911,
+					"maximum_bone_rotation_vs_reference_degrees": 18.096853039032045
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 19.538803687548075,
+					"maximum_bone_rotation_vs_reference_degrees": 18.904589478907766
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.447409977450789,
+					"maximum_bone_rotation_vs_reference_degrees": 11.45401455217497
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0,
+			"held_pose_maximum_bone_rotation_change_degrees": 0,
+			"move_mapping_callback_count": 733,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0055 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=869"
+				},
+				{
+					"name": "wall_blocks_capsule",
+					"pass": true,
+					"expected": "reach right wall X=860 minus capsule radius, no penetration; actor X <= 825",
+					"actual": "expected_center_x=818.000 max_x=817.994 right_wall_x=817.994"
+				},
+				{
+					"name": "left_wall_blocks_capsule",
+					"pass": true,
+					"expected": "reach left wall X=-660 plus capsule radius, no penetration and abs(Vx) < 1",
+					"actual": "expected_center_x=-618.000 min_x=-617.992 final_x=-617.992 vx=0.000"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_03_03_wall_collision.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 3,
+			"case": "jump_onto_platform",
+			"duration_s": 4.0019227005541325,
+			"start_position_cm":
+			{
+				"x": 1400,
+				"y": 0,
+				"z": 120
+			},
+			"final_position_cm":
+			{
+				"x": 1708.3314586611971,
+				"y": 0,
+				"z": 272.15000001130943
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 1400,
+			"maximum_x_cm": 1708.3314586611971,
+			"maximum_speed_cm_s": 300.00000000000006,
+			"maximum_airborne_s": 0.94036490097641945,
+			"first_landing_case_time_s": 1.2963194996118546,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 0.93205142021179199,
+			"maximum_mesh_bounds_bottom_cm": 265.82284545898438,
+			"final_mesh_bounds_bottom_cm": 182.14999389648438,
+			"final_capsule_bottom_cm": 182.14999389648438,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0058059990406036377,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 1400,
+						"y": 0,
+						"z": 119.97357165411016
+					}
+				},
+				{
+					"case_time_s": 0.19766319915652275,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 1400,
+						"y": 0,
+						"z": 92.149997937396137
+					}
+				},
+				{
+					"case_time_s": 0.35675989836454391,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 1400.0225872653855,
+						"y": 0,
+						"z": 95.766052941954314
+					}
+				},
+				{
+					"case_time_s": 1.2963194996118546,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 1627.4088454340513,
+						"y": 0,
+						"z": 272.15000001130943
+					}
+				},
+				{
+					"case_time_s": 1.6081596985459328,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 1708.3314586611971,
+						"y": 0,
+						"z": 272.15000001130943
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 25.439713050150328,
+					"maximum_bone_rotation_vs_reference_degrees": 15.042388945808366
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 22.730684824130265,
+					"maximum_bone_rotation_vs_reference_degrees": 15.769875684376668
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.434009882877579,
+					"maximum_bone_rotation_vs_reference_degrees": 11.441667159347785
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0.5063789002597332,
+			"held_pose_maximum_bone_rotation_change_degrees": 1.7075472925031877e-06,
+			"move_mapping_callback_count": 232,
+			"jump_mapping_callback_count": 1,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=776"
+				},
+				{
+					"name": "jump_mapping_and_actual_jump_pose",
+					"pass": true,
+					"expected": "Space key invokes Enhanced Input Jump callback and actual airborne bone pose differs from reference > 1 deg",
+					"actual": "jump_callbacks=1 jump_vs_reference=11.4417"
+				},
+				{
+					"name": "jump_issued_from_ground",
+					"pass": true,
+					"expected": "Jump issued from ground X=1400; post-jump actor peak Z > 320 cm",
+					"actual": "issued=1 post_jump_peak_z=355.823"
+				},
+				{
+					"name": "jump_onto_platform_interior",
+					"pass": true,
+					"expected": "landed center lies fully inside platform X=1500..1900 allowing capsule radius",
+					"actual": "1708.3315"
+				},
+				{
+					"name": "actual_airborne_and_landing",
+					"pass": true,
+					"expected": "real falling -> grounded transition with Jump observed while falling",
+					"actual": "airborne=1 landed=1 jump=1"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=180.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=182.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_03_04_jump_onto_platform.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 3,
+			"case": "platform_drop",
+			"duration_s": 3.0038021020591259,
+			"start_position_cm":
+			{
+				"x": 2440,
+				"y": 0,
+				"z": 420
+			},
+			"final_position_cm":
+			{
+				"x": 2750.687392598109,
+				"y": 0,
+				"z": 92.150001260233438
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 2440,
+			"maximum_x_cm": 2750.687392598109,
+			"maximum_speed_cm_s": 300.00000000000006,
+			"maximum_airborne_s": 0.58685719966888428,
+			"first_landing_case_time_s": 1.4972737990319729,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 2.1500012874603271,
+			"maximum_mesh_bounds_bottom_cm": 329.978271484375,
+			"final_mesh_bounds_bottom_cm": 2.1500012874603271,
+			"final_capsule_bottom_cm": 2.1500012874603271,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0052650012075901031,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 2440,
+						"y": 0,
+						"z": 419.9782673336307
+					}
+				},
+				{
+					"case_time_s": 0.19780340045690536,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 2440,
+						"y": 0,
+						"z": 392.14999532012507
+					}
+				},
+				{
+					"case_time_s": 0.40869979932904243,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 2440.0497618670479,
+						"y": 0,
+						"z": 392.14999532012507
+					}
+				},
+				{
+					"case_time_s": 0.90972020104527473,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 2567.6512519415055,
+						"y": 0,
+						"z": 358.4886054923968
+					}
+				},
+				{
+					"case_time_s": 1.4972737990319729,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 2743.8572150915975,
+						"y": 0,
+						"z": 92.150001260233438
+					}
+				},
+				{
+					"case_time_s": 1.5612234994769096,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 2750.687392598109,
+						"y": 0,
+						"z": 92.150001260233438
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 22.596562045782598,
+					"maximum_bone_rotation_vs_reference_degrees": 12.151188942851059
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 19.646849019062433,
+					"maximum_bone_rotation_vs_reference_degrees": 18.822698747713059
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.449519203661493,
+					"maximum_bone_rotation_vs_reference_degrees": 11.455732802239
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0.15525330230593681,
+			"held_pose_maximum_bone_rotation_change_degrees": 1.7075472925031877e-06,
+			"move_mapping_callback_count": 175,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=573"
+				},
+				{
+					"name": "walk_off_platform_edge",
+					"pass": true,
+					"expected": "grounded on platform before walking off; final X > 2542 cm",
+					"actual": "2750.6874"
+				},
+				{
+					"name": "actual_airborne_and_landing",
+					"pass": true,
+					"expected": "real falling -> grounded transition with Jump observed while falling",
+					"actual": "airborne=1 landed=1 jump=1"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_03_05_platform_drop.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 3,
+			"case": "long_airborne",
+			"duration_s": 2.6047159992158413,
+			"start_position_cm":
+			{
+				"x": 3000,
+				"y": 0,
+				"z": 900
+			},
+			"final_position_cm":
+			{
+				"x": 3000,
+				"y": 0,
+				"z": 92.150000760957994
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 3000,
+			"maximum_x_cm": 3000,
+			"maximum_speed_cm_s": 0,
+			"maximum_airborne_s": 1.0163332000374794,
+			"first_landing_case_time_s": 1.0221287980675697,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": 0,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": 0,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": 0,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 0.18039198219776154,
+			"maximum_mesh_bounds_bottom_cm": 809.98638916015625,
+			"final_mesh_bounds_bottom_cm": 2.1500008106231689,
+			"final_capsule_bottom_cm": 2.1500008106231689,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0041671991348266602,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 3000,
+						"y": 0,
+						"z": 899.98638540987463
+					}
+				},
+				{
+					"case_time_s": 1.0221287980675697,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 3000,
+						"y": 0,
+						"z": 92.150000760957994
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 6.156494089570745,
+					"maximum_bone_rotation_vs_reference_degrees": 6.1564940895712192
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": false,
+					"maximum_bone_rotation_change_degrees": 0,
+					"maximum_bone_rotation_vs_reference_degrees": 0
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.447147723270382,
+					"maximum_bone_rotation_vs_reference_degrees": 11.45089298111216
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0.58679210022091866,
+			"held_pose_maximum_bone_rotation_change_degrees": 1.7075472925031877e-06,
+			"move_mapping_callback_count": 0,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=512"
+				},
+				{
+					"name": "long_air_holds_actual_jump_pose",
+					"pass": true,
+					"expected": "Jump sample reaches hold time for >= 0.2 s; actual component-space bone pose drift <= 0.05 deg while held",
+					"actual": "hold_s=0.5868 drift_deg=0.00000 sample_max_s=0.4354"
+				},
+				{
+					"name": "sustained_airborne",
+					"pass": true,
+					"expected": "actual uninterrupted falling >= 0.8 s",
+					"actual": "1.0163"
+				},
+				{
+					"name": "actual_airborne_and_landing",
+					"pass": true,
+					"expected": "real falling -> grounded transition with Jump observed while falling",
+					"actual": "airborne=1 landed=1 jump=1"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_03_06_long_airborne.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": false,
+			"round": 3,
+			"case": "early_landing",
+			"duration_s": 4.0044118016958237,
+			"start_position_cm":
+			{
+				"x": 3450,
+				"y": 0,
+				"z": 120
+			},
+			"final_position_cm":
+			{
+				"x": 4127.3264093704584,
+				"y": 0,
+				"z": 92.149994773383838
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 3450,
+			"maximum_x_cm": 4127.3264093704584,
+			"maximum_speed_cm_s": 300.00000000000006,
+			"maximum_airborne_s": 1.4156513996422291,
+			"first_landing_case_time_s": 1.1036908999085426,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 1.1402146816253662,
+			"maximum_mesh_bounds_bottom_cm": 513.9144287109375,
+			"final_mesh_bounds_bottom_cm": 2.1499948501586914,
+			"final_capsule_bottom_cm": 2.1499948501586914,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0044884011149406433,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 3450,
+						"y": 0,
+						"z": 119.98420573625822
+					}
+				},
+				{
+					"case_time_s": 0.19751150161027908,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 3450,
+						"y": 0,
+						"z": 92.149997747047451
+					}
+				},
+				{
+					"case_time_s": 0.35939989984035492,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 3450.0196098303513,
+						"y": 0,
+						"z": 95.520864923233802
+					}
+				},
+				{
+					"case_time_s": 1.1036908999085426,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 3618.515769344443,
+						"y": 0,
+						"z": 342.15000091727109
+					}
+				},
+				{
+					"case_time_s": 1.3584596998989582,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 3694.9464093415677,
+						"y": 0,
+						"z": 345.08959776114835
+					}
+				},
+				{
+					"case_time_s": 2.7752715013921261,
+					"is_falling": false,
+					"anim_state": "Walk",
+					"position_cm":
+					{
+						"x": 4119.980766714777,
+						"y": 0,
+						"z": 92.149994773383838
+					}
+				},
+				{
+					"case_time_s": 2.8436328023672104,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 4127.3264093704584,
+						"y": 0,
+						"z": 92.149994773383838
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 22.902315036778891,
+					"maximum_bone_rotation_vs_reference_degrees": 12.519098469994836
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 20.684608622723793,
+					"maximum_bone_rotation_vs_reference_degrees": 13.622637606583043
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 13.637990679397742,
+					"maximum_bone_rotation_vs_reference_degrees": 13.642393907990289
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 1.293467603623867,
+			"held_pose_maximum_bone_rotation_change_degrees": 1.7075472925031877e-06,
+			"move_mapping_callback_count": 196,
+			"jump_mapping_callback_count": 2,
+			"pause_mapping_callback_count": 0,
+			"reset_mapping_callback_count": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=783"
+				},
+				{
+					"name": "early_landing_timing",
+					"pass": true,
+					"expected": "jump from ground onto 250 cm platform; real first landing occurs before source Jump clip duration",
+					"actual": "jump_to_first_landing_s=0.74951 source_clip_s=0.79167"
+				},
+				{
+					"name": "jump_again_after_early_landing",
+					"pass": true,
+					"expected": "second Space callback after real landing causes a second complete airborne/landing cycle",
+					"actual": "second_jump_issued=1 landing_count=2 jump_callbacks=2"
+				},
+				{
+					"name": "actual_airborne_and_landing",
+					"pass": true,
+					"expected": "real falling -> grounded transition with Jump observed while falling",
+					"actual": "airborne=1 landed=1 jump=1"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": false,
+					"expected": "grounded and capsule bottom within 3 cm of Z=250.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_03_07_early_landing.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		},
+		{
+			"pass": true,
+			"round": 3,
+			"case": "reset",
+			"duration_s": 2.4002088941633701,
+			"start_position_cm":
+			{
+				"x": 4300,
+				"y": 0,
+				"z": 650
+			},
+			"final_position_cm":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 92.149998217918011
+			},
+			"final_velocity_cm_s":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 0
+			},
+			"maximum_abs_y_cm": 0,
+			"minimum_x_cm": 0,
+			"maximum_x_cm": 4418.8732055574656,
+			"maximum_speed_cm_s": 180,
+			"maximum_airborne_s": 1.5078216977417469,
+			"first_landing_case_time_s": 1.5117539949715137,
+			"maximum_consecutive_state_mismatch_s": 0,
+			"positive_motion_mesh_yaw_deg": -90.000000000000014,
+			"negative_motion_mesh_yaw_deg": 0,
+			"positive_motion_mesh_forward_y": -1.0000000000000002,
+			"negative_motion_mesh_forward_y": 0,
+			"positive_motion_mesh_forward_x": -2.2204460492503131e-16,
+			"negative_motion_mesh_forward_x": 0,
+			"minimum_mesh_bounds_bottom_cm": 0.071044951677322388,
+			"maximum_mesh_bounds_bottom_cm": 559.26849365234375,
+			"final_mesh_bounds_bottom_cm": 2.1499981880187988,
+			"final_capsule_bottom_cm": 2.1499981880187988,
+			"final_anim_state": "Idle",
+			"state_events": [
+				{
+					"case_time_s": 0.0058706998825073242,
+					"is_falling": true,
+					"anim_state": "Jump",
+					"position_cm":
+					{
+						"x": 4301.0567259788513,
+						"y": 0,
+						"z": 649.26849536228451
+					}
+				},
+				{
+					"case_time_s": 1.5117539949715137,
+					"is_falling": false,
+					"anim_state": "Idle",
+					"position_cm":
+					{
+						"x": 0,
+						"y": 0,
+						"z": 92.149998217918011
+					}
+				}
+			],
+			"component_space_pose_evidence": [
+				{
+					"state": "Idle",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 2.1456978722110533,
+					"maximum_bone_rotation_vs_reference_degrees": 1.3627992231751835
+				},
+				{
+					"state": "Walk",
+					"state_pose_sampled": false,
+					"maximum_bone_rotation_change_degrees": 0,
+					"maximum_bone_rotation_vs_reference_degrees": 0
+				},
+				{
+					"state": "Jump",
+					"state_pose_sampled": true,
+					"maximum_bone_rotation_change_degrees": 11.424786386669982,
+					"maximum_bone_rotation_vs_reference_degrees": 11.432626358515497
+				}
+			],
+			"jump_sample_time_max_s": 0.43541669845581055,
+			"jump_hold_observed_s": 0.4772162027657032,
+			"held_pose_maximum_bone_rotation_change_degrees": 1.7075472925031877e-06,
+			"move_mapping_callback_count": 0,
+			"jump_mapping_callback_count": 0,
+			"pause_mapping_callback_count": 3,
+			"reset_mapping_callback_count": 1,
+			"before_reset_position_cm":
+			{
+				"x": 4300,
+				"y": 0,
+				"z": 650
+			},
+			"immediate_reset_position_cm":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 92.200000000000017
+			},
+			"expected_spawn_position_cm":
+			{
+				"x": 0,
+				"y": 0,
+				"z": 92.200000000000003
+			},
+			"immediate_reset_speed_cm_s": 0,
+			"checks": [
+				{
+					"name": "plane_constraint",
+					"pass": true,
+					"expected": "maximum abs(Y) <= 0.1 cm",
+					"actual": "0.0000"
+				},
+				{
+					"name": "animation_assets_assigned",
+					"pass": true,
+					"expected": "skeletal mesh and Idle/Walk/Jump assigned",
+					"actual": "assigned"
+				},
+				{
+					"name": "movement_drives_animation_state",
+					"pass": true,
+					"expected": "Idle/Walk/Jump matches actual movement, continuous mismatch <= 0.2 s",
+					"actual": "0.0000 s; final=Idle"
+				},
+				{
+					"name": "native_proxy_evaluates_actual_pose",
+					"pass": true,
+					"expected": "native proxy Evaluate executes more than five times during the case",
+					"actual": "evaluate_count_delta=317"
+				},
+				{
+					"name": "pause_resume_and_reset_keyboard_mappings",
+					"pass": true,
+					"expected": "P pauses, second P resumes, third P pauses; paused actor moves <= 0.1 cm; R resets and resumes via Enhanced Input",
+					"actual": "paused=1 resumed=1 reset_while_paused=1 pause_callbacks=3 reset_callbacks=1 paused_displacement=0.000000 final_paused=0"
+				},
+				{
+					"name": "reset_restarts_native_animation_clock",
+					"pass": true,
+					"expected": "worker proxy applies new reset generation and all three sample clocks are <= 0.1 s on first observed reset evaluation",
+					"actual": "before=6 after=7 proxy_applied=1 first_max_sample_time_s=0.003835"
+				},
+				{
+					"name": "reset_returns_to_spawn",
+					"pass": true,
+					"expected": "immediate reset within 0.1 cm of spawn and speed < 1; no residual horizontal movement",
+					"actual": "immediate_error=0.000000 immediate_speed=0.000000 final_x_error=0.000000"
+				},
+				{
+					"name": "three_round_reset_consistency",
+					"pass": true,
+					"expected": "settled reset position within 0.1 cm of round 1 reset",
+					"actual": "0.0000"
+				},
+				{
+					"name": "land_on_expected_surface",
+					"pass": true,
+					"expected": "grounded and capsule bottom within 3 cm of Z=0.0 (includes UE floor clearance)",
+					"actual": "grounded=1 bottom=2.1500"
+				},
+				{
+					"name": "stop_and_idle",
+					"pass": true,
+					"expected": "final speed < 1 cm/s and Idle",
+					"actual": "0.0000 cm/s; Idle"
+				}
+			],
+			"screenshot_path": "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaTests/20261011T015953Z_293256/round_03_08_reset.png",
+			"screenshot_requested": true,
+			"screenshot_file_exists": true
+		}
+	]
+}

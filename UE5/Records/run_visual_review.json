@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-11",
+  "run_id": "20261011T074412Z_287152",
+  "method": "Direct inspection of original engine PNGs and Blender key-pose sheet; imported curve and actual render weight observations are separate evidence.",
+  "reviewed_images": [
+    "UE5/Records/Naiwa_Run_Gameplay.png",
+    "UE5/NaiwaP0/Saved/NaiwaTests/20261011T074412Z_287152/Frames/frame_000009.png",
+    "UE5/NaiwaP0/Saved/NaiwaTests/20261011T074412Z_287152/round_01_02_reverse.png",
+    "UE5/NaiwaP0/Saved/NaiwaTests/20261011T074412Z_287152/round_01_04_jump_onto_platform.png",
+    "UE5/NaiwaP0/Saved/NaiwaTests/20261011T074412Z_287152/round_01_06_long_airborne.png",
+    "UE5/Animation/Run_v1/Naiwa_Run_pose_sheet.png"
+  ],
+  "observed": [
+    "New Run shows forward torso lean, bent-elbow arm swing, raised recovering short leg and preserved round body silhouette.",
+    "Accurate sRGB decode makes yellow more saturated than the prior pale screenshot; source vertex colors and official E2 are preserved.",
+    "Motion blur disabled: hands and feet have readable outlines instead of smeared trails.",
+    "Standing screenshots show the feet as the lowest visible body region; floor-contact numeric clearance is about +2.15 cm, within the selected 3 cm tolerance.",
+    "Sampled left/right and platform screenshots keep the whole character in view."
+  ],
+  "belly_runtime_evidence": "run_runtime_validation.json verifies final render weights animate and blend back to zero. This does not replace continuous perceptual review of softness and timing.",
+  "remaining": [
+    "Continuous dynamic perception and final art camera/lighting acceptance",
+    "Full individual visual playback of original Walk and Laugh and the four original clip loops",
+    "Physical keyboard/focus, controller hardware and pause UI"
+  ],
+  "status": "sampled_visual_review_complete_full_p0_pending"
+}

@@ -1,0 +1,9 @@
+{
+  "actor": "EarlyLandingPlatform",
+  "platform_top_z_cm": 260.0,
+  "old_platform_top_z_cm": 250.0,
+  "platform_thickness_cm": 100.0,
+  "reason": "250 cm produced a boundary sample 0.79729 s versus the 0.79167 s source clip under recording hitches. A 10 cm higher landing surface creates an unambiguous early-landing scenario near the bounded jump apex.",
+  "assertion": "Actual delivered jump callback to first landing must still be shorter than the unchanged original Jump clip.",
+  "status": "saved_pending_actual_early_landing_regression"
+}

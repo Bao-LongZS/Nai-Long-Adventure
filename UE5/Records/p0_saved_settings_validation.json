@@ -1,0 +1,48 @@
+{
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "mode": "fresh_editor_saved_asset_read",
+  "hud_class": "/Script/NaiwaRuntime.NaiwaHUD",
+  "character_class": "/Game/Naiwa/Blueprints/BP_NaiwaCharacter.BP_NaiwaCharacter_C",
+  "capsule_radius_cm": 86.0,
+  "capsule_half_height_cm": 90.0,
+  "movement_defaults": {
+    "max_walk_speed": 300.0,
+    "max_acceleration": 1800.0,
+    "braking_deceleration_walking": 2200.0,
+    "ground_friction": 8.0,
+    "jump_z_velocity": 650.0,
+    "gravity_scale": 1.600000023841858,
+    "air_control": 0.4000000059604645,
+    "max_step_height": 45.0,
+    "apply_gravity_while_jumping": false
+  },
+  "jump_max_hold_time_s": 0.20000000298023224,
+  "runtime_jump_policy": "Native ApplyCharacterAssets enforces apply_gravity_while_jumping=False.",
+  "assets": {
+    "skeletal_mesh_asset": "/Game/Naiwa/Gameplay/SK_Naiwa_Elastic.SK_Naiwa_Elastic",
+    "animation_class": "/Game/Naiwa/Blueprints/ABP_Naiwa.ABP_Naiwa_C",
+    "idle_sequence": "/Game/Naiwa/AS_Naiwa_Idle.AS_Naiwa_Idle",
+    "walk_sequence": "/Game/Naiwa/AS_Naiwa_Walk.AS_Naiwa_Walk",
+    "jump_sequence": "/Game/Naiwa/AS_Naiwa_Jump.AS_Naiwa_Jump",
+    "laugh_sequence": "/Game/Naiwa/AS_Naiwa_Laugh.AS_Naiwa_Laugh",
+    "run_sequence": "/Game/Naiwa/Gameplay/AS_Naiwa_Run.AS_Naiwa_Run",
+    "input_mapping": "/Game/Naiwa/Input/IMC_Naiwa.IMC_Naiwa"
+  },
+  "materials": [
+    {
+      "path": "/Game/Naiwa/Gameplay/Materials/M_NaiwaBody_Gameplay.M_NaiwaBody_Gameplay",
+      "skeletal_usage": true,
+      "morph_usage": true
+    },
+    {
+      "path": "/Game/Naiwa/Gameplay/Materials/M_NaiwaEye_Gameplay.M_NaiwaEye_Gameplay",
+      "skeletal_usage": true,
+      "morph_usage": true
+    }
+  ],
+  "readability_fill": {
+    "intensity": 0.8500000238418579,
+    "cast_shadows": false
+  },
+  "status": "passed_saved_HUD_morph_materials_capsule_and_fill"
+}

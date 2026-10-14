@@ -1,0 +1,14 @@
+{
+  "map": "/Game/Naiwa/Maps/L_NaiwaGraybox",
+  "actor": "P0_CharacterReadabilityFill",
+  "intensity": 0.85,
+  "rotation_pitch_yaw_roll": [
+    -25,
+    -90,
+    0
+  ],
+  "cast_shadows": false,
+  "reason": "Old frame_000123: platform shadow hides face/belly/foot color. Keep existing key light and add weaker camera-side fill.",
+  "status": "saved_pending_rendered_review",
+  "source_E2_changed": false
+}

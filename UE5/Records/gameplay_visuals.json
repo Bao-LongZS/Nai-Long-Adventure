@@ -1,0 +1,44 @@
+{
+  "phase": "gameplay_color_decode",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "materials": [
+    {
+      "path": "/Game/Naiwa/Gameplay/Materials/M_NaiwaBody_Gameplay.M_NaiwaBody_Gameplay",
+      "shader": "return float3(\nColorSRGB.r <= 0.04045 ? ColorSRGB.r / 12.92 : pow((ColorSRGB.r + 0.055) / 1.055, 2.4),\nColorSRGB.g <= 0.04045 ? ColorSRGB.g / 12.92 : pow((ColorSRGB.g + 0.055) / 1.055, 2.4),\nColorSRGB.b <= 0.04045 ? ColorSRGB.b / 12.92 : pow((ColorSRGB.b + 0.055) / 1.055, 2.4));",
+      "roughness": 0.65,
+      "skeletal_mesh_usage": true,
+      "morph_targets_usage": true
+    },
+    {
+      "path": "/Game/Naiwa/Gameplay/Materials/M_NaiwaEye_Gameplay.M_NaiwaEye_Gameplay",
+      "shader": "return float3(\nColorSRGB.r <= 0.04045 ? ColorSRGB.r / 12.92 : pow((ColorSRGB.r + 0.055) / 1.055, 2.4),\nColorSRGB.g <= 0.04045 ? ColorSRGB.g / 12.92 : pow((ColorSRGB.g + 0.055) / 1.055, 2.4),\nColorSRGB.b <= 0.04045 ? ColorSRGB.b / 12.92 : pow((ColorSRGB.b + 0.055) / 1.055, 2.4));",
+      "roughness": 0.4,
+      "skeletal_mesh_usage": true,
+      "morph_targets_usage": true
+    }
+  ],
+  "material_slots": [
+    {
+      "slot": "L single eye surface",
+      "material": "/Game/Naiwa/Gameplay/Materials/M_NaiwaEye_Gameplay.M_NaiwaEye_Gameplay"
+    },
+    {
+      "slot": "Eye glints",
+      "material": "/Game/Naiwa/Materials/M_NaiwaGlint.M_NaiwaGlint"
+    },
+    {
+      "slot": "Soft ochre yellow skin",
+      "material": "/Game/Naiwa/Gameplay/Materials/M_NaiwaBody_Gameplay.M_NaiwaBody_Gameplay"
+    },
+    {
+      "slot": "R single eye surface",
+      "material": "/Game/Naiwa/Gameplay/Materials/M_NaiwaEye_Gameplay.M_NaiwaEye_Gameplay"
+    },
+    {
+      "slot": "Recessed mouth deep brown_001",
+      "material": "/Game/Naiwa/Materials/M_NaiwaMouth.M_NaiwaMouth"
+    }
+  ],
+  "color_evidence": "run_export_diagnostics.md: Blender FBX exports sRGB; UE imports normalized bytes and VertexColor passes them to a linear material input.",
+  "status": "saved_pending_rendered_visual_review"
+}
