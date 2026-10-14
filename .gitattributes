@@ -1,0 +1,54 @@
+# UE 项目 · Git LFS 与换行符规范
+# 建立：2026-10-13
+
+# ─── 大二进制资产：交给 Git LFS ───
+# UE 资产
+*.uasset   filter=lfs diff=lfs merge=lfs -text
+*.umap     filter=lfs diff=lfs merge=lfs -text
+
+# DCC 原生工程
+*.blend    filter=lfs diff=lfs merge=lfs -text
+*.blend1   filter=lfs diff=lfs merge=lfs -text
+*.fbx      filter=lfs diff=lfs merge=lfs -text
+*.obj      filter=lfs diff=lfs merge=lfs -text
+*.ma       filter=lfs diff=lfs merge=lfs -text
+*.mb       filter=lfs diff=lfs merge=lfs -text
+
+# 贴图与音视频
+*.psd      filter=lfs diff=lfs merge=lfs -text
+*.tga      filter=lfs diff=lfs merge=lfs -text
+*.exr      filter=lfs diff=lfs merge=lfs -text
+*.wav      filter=lfs diff=lfs merge=lfs -text
+*.mp3      filter=lfs diff=lfs merge=lfs -text
+*.mp4      filter=lfs diff=lfs merge=lfs -text
+
+# ─── 文本文件：统一为 LF ───
+* text=auto eol=lf
+
+*.cpp      text eol=lf
+*.h        text eol=lf
+*.hpp      text eol=lf
+*.c        text eol=lf
+*.cs       text eol=lf
+*.py       text eol=lf
+*.md       text eol=lf
+*.json     text eol=lf
+*.jsonl    text eol=lf
+*.csv      text eol=lf
+*.yml      text eol=lf
+*.yaml     text eol=lf
+*.xml      text eol=lf
+*.ini      text eol=lf
+*.cfg      text eol=lf
+*.uproject text eol=lf
+*.uplugin  text eol=lf
+
+# Windows 专用脚本保持 CRLF
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# ─── 明确二进制 ───
+*.exe   binary
+*.dll   binary
+*.pdb   binary
+*.lib   binary

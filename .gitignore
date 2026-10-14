@@ -1,15 +1,107 @@
-# Visual Studio 和 CMake 生成的临时文件
+# ════════════════════════════════════════════════════════════════════
+#  Nai-Long-Adventure · 版本库纳管规则
+#  判据：删掉它，能不能一条命令重新得到 —— 能，就不进版本库
+#  纳管范围：仅 UE 侧（UE5/ + NaiwaCharacter/ + NaiwaAnimation_20261009/）
+#  SFML 部分（根目录源码 / out/ / .vs/）不在此规则内
+#  最后更新：2026-10-13
+#
+#  写法约定：优先「全局排除 + 定点放回」，而不是「逐个目录排除」。
+#  原因：白名单式规则必然漏（本轮已实测漏过 .cpp/.h/.cs、.ini、
+#  rebuild_command.ps1、references/ 配图），黑名单式不会。
+# ════════════════════════════════════════════════════════════════════
+
+# ── 0. 构建产物与本地工作区 ──────────────────────────────────────
 out/
 build/
 .vs/
 .vscode/
 cmake-build-debug/
 cmake-build-release/
-
-# 编译生成的二进制可执行文件
 *.exe
 *.pdb
 *.ilk
-
-# 系统或 IDE 的临时文件
 .DS_Store
+.workbuddy/
+
+# ── 1. UE 引擎生成物（打开工程自动重建，12 GB 里的 10.9 GB）──────
+UE5/NaiwaP0/Binaries/
+UE5/NaiwaP0/DerivedDataCache/
+UE5/NaiwaP0/Intermediate/
+UE5/NaiwaP0/Saved/
+UE5/Records/ReimportBackups/
+
+# ── 2. 历史 / 候选 / 诊断目录（体积主体，可重建或可重算）────────
+NaiwaCharacter/iterations/
+NaiwaCharacter/**/trials_*/
+NaiwaCharacter/**/before_*/
+NaiwaCharacter/**/audit/
+NaiwaCharacter/**/diagnostics/
+NaiwaCharacter/**/repository_before_*/
+
+# ── 3. 缓存、过程矩阵与自动备份 ─────────────────────────────────
+__pycache__/
+*.pyc
+*.blend1
+*.npz
+*.ffconcat
+
+# ── 4. 二进制源：只留复建链的头(R1)与尾(E2) + 两个动画源 ─────────
+#    FBX 是 Blender↔UE 之间的中间交换格式，可由 .blend 一条命令重导，
+#    且 UE 侧已有对应 .uasset，故整体不进库（15 个 / 277 MB）
+*.fbx
+NaiwaCharacter/**/*.blend
+!NaiwaCharacter/Naiwa_Character.blend
+!NaiwaCharacter/versions/20261007_N2_round_refinement/candidate_R1/Naiwa_Character.blend
+!NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/candidate_E2/Naiwa_Character.blend
+!UE5/Animation/Run_v1/Naiwa_E2_Run.blend
+!NaiwaAnimation_20261009/Naiwa_E2_Greeting_10s.blend
+
+# ── 5. 序列帧、预览图与参考图（序列帧可由 .blend 重渲）──────────
+NaiwaAnimation_20261009/frames/
+NaiwaAnimation_20261009/preview/
+*.png
+*.jpg
+*.jpeg
+#    放回：造型参考输入（build_naiwa.py 的配色依据，属输入依赖）
+!NaiwaCharacter/references/**/*.png
+!NaiwaCharacter/references/**/*.jpg
+#    放回：NaiwaCharacter 顶层 23 张交付预览图（README 引用）
+!NaiwaCharacter/*.png
+#    放回：UE5/Records 根级验收截图
+!UE5/Records/*.png
+
+# ── 6. 过程数据 ─────────────────────────────────────────────────
+#    .gitignore 无法按文件体积过滤，故按「目录特征 + 文件名特征」排除。
+#    这些文件的内容均已浓缩进同目录的 *_report.json / *_validation.json。
+#
+#    6a 原始对比与实验数据目录
+NaiwaCharacter/**/comparisons/
+NaiwaCharacter/**/research_eyes/
+#    6b 截面逐点采样（N2 15.1 MB / candidate_H2 23.5 MB）
+**/section_raw.json
+#    6c 逐文件点名的超大过程文件
+NaiwaCharacter/versions/20261006_head_neck_refinement/head_neck_validation.json
+NaiwaCharacter/versions/20261006_head_neck_refinement/baseline_head_neck_inspection.json
+NaiwaCharacter/versions/20261006_head_neck_refinement/candidate_N*/validation_report.json
+NaiwaCharacter/versions/20261009_E2_C3_solver_revision/actual_sections_E2_B.csv
+NaiwaCharacter/versions/20261009_E2_C3_solver_revision/candidate_B/validation_report.json
+NaiwaCharacter/versions/20261009_E2_C3_solver_revision/selected_patch_diagnostic.json
+NaiwaCharacter/versions/20261009_E2_C3_*/candidate_*/key_actual_sections.json
+NaiwaCharacter/versions/20261009_E2_C3_*/baseline/measurements_*.json
+NaiwaCharacter/versions/20261009_E2_C3_*/baseline/body_scope_release_frozen.csv
+#    6d UE 自动测试的逐帧输入记录
+UE5/Records/**/*.jsonl
+#
+#    ⚠️ 本节是「点名式」规则，新增同类大文件时不会自动命中。
+#       提交前请跑一次核对（见 .workbuddy/memory/ 中的提交前检查步骤）。
+
+# ── 7. 日志自动备份 ─────────────────────────────────────────────
+UE5/Records/*-backup-*.log
+
+# ── 8. 非 UE 侧产线（用户明确「只管理 UE 相关」，且公开仓库
+#       不宜托管第三方音频；该产线改用冷备/云盘纳管）──────────────
+BirthdayVideo_20261006/
+
+# ── 8. UE 官方 Third Person 模板（P0 动画重定向引用其骨骼，
+#       本地须保留，但属引擎自带、不进库）──────────────────────
+UE5/NaiwaP0/Content/Characters/
