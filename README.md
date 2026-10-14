@@ -1,31 +1,94 @@
-# Nai-Long-Adventure 项目
+# 奶蛙冒险 · Nai-Long-Adventure
 
-2026-10-13：**UE5 P0已完成**。资产接入、灰盒控制、五动作连续播放、有限动态视觉、真实键盘/焦点及最终24/24回归通过。按用户明确需求保留A/D或左右键移动，Shift切换行走150/奔跑300并选用原Walk/Run，普通窗口实际采样通过。见 [P0最终验收](UE5/Records/p0_completion_20261013/completion_report.md)。正式角色基线仍为E2；下一阶段为P1闯关流程，打包与进一步性能适配属于P2。
+一个横版闯关游戏项目。主角「奶蛙」是网络形象「奶龙」的二次创作角色，**非官方作品**。
 
-2026-10-09 后续：C3 联合求解修订已生成 A/B，B 的轮廓及中央剖面有改善、资产/动作和独立复建通过，但局部侧颈转向集中增强，最终不采用。按指令停止，不追加第三候选，正式推荐保留 E2。见 [联合求解本轮结果](NaiwaCharacter/versions/20261009_E2_C3_solver_revision/README_本轮结果.md) / [图文总览](NaiwaCharacter/versions/20261009_E2_C3_solver_revision/index.html)；本次启动及审批响应流中断、恢复与反思已记入该目录 `执行记录.md`。
+项目经历过一次技术换代：最早用 C++ / SFML 做了一个横版原型，现在**主线改用 UE5 重做**，目标是一套现代工具链下的完整闯关游戏。角色资产（建模、材质、动画）由 Blender 脚本化流水线生成，同一套资产同时供 UE5 与原型使用。
 
-2026-10-09：E2→C3 第一候选A已生成并完成关键对照，但形体改善不明确、固定参考前颈误差略增，按指令停止且不采用。正式推荐仍为E2。见 [C3 本轮结果](NaiwaCharacter/versions/20261009_E2_C3_reference_refinement/README_本轮结果.md)。
+---
 
-根目录为 C++20 / SFML 横版游戏原型；NaiwaCharacter 为奶蛙 Blender 角色资产。
+## 当前进展
 
-生日祝福视频与相关素材单独存放在 [BirthdayVideo_20261006](BirthdayVideo_20261006/README.md)，包含最新10秒成片、配音、封面、制作脚本和记录。
+| 阶段 | 内容 | 状态 |
+| --- | --- | --- |
+| **P0 · 角色接入** | 角色资产进引擎、灰盒关卡、五动作连续播放、网络输入映射、24/24 回归验收 | ✅ 2026-10-13 完成 |
+| **P1 · 闯关流程** | 关卡玩法、状态机、胜负判定 | 🔜 下一阶段 |
+| **P2 · 发布适配** | 打包、性能与手柄适配 | 待排期 |
 
-2026-10-08 最新推荐为 **E2**：`NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/candidate_E2/Naiwa_Character.blend`，FBX同目录。先完成 H2 头颈肩整体连续形体，再独立修正眼孔与瞳向；实际曲面、完整多视图/动作、FBX重导入和独立复建均通过。H2保留为形体阶段，R1及历史版本保留。固定参考前颈残差、远眼露出差距及强掠射眼窝/浅纹已明确记录。见 [H2/E2交付说明](NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/README_交付说明.md) / [三版本图文总览](NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/index.html)。
+角色资产正式基线为 **E2**。多轮形体迭代（球面眼 → 头颈 → 圆润精修 → 整体连续形体）的取舍结论记录在 [CHANGELOG.md](CHANGELOG.md) 与各版本目录中，**未采用的候选已明确标注、不作第三候选**，基线保持可追溯。
 
-上一轮圆润精修 R1 位于 `NaiwaCharacter/versions/20261007_N2_round_refinement`，原生工程、FBX及完整验收继续保留。见 [R1交付说明](NaiwaCharacter/versions/20261007_N2_round_refinement/README_交付说明.md)。
+P0 的完整验收材料，包括运行录像与逐项证据，见 [验收报告](UE5/Records/p0_completion_20261013/completion_report.md)。
 
-上一阶段下脸—颈部 N1/N2 位于 `NaiwaCharacter/versions/20261006_head_neck_refinement`，原生工程与FBX继续保留。说明见 [第一阶段交付说明](NaiwaCharacter/versions/20261006_head_neck_refinement/README_交付说明.md)。
+---
 
-以下为此前球面眼迭代说明。
+## 仓库结构
 
-当前角色迭代：`NaiwaCharacter/versions/20261006_spherical_eyes`，包含 A/B 两个独立球面眼体工程和 FBX。
-本轮只重建左右眼体并重新贴合高光；黄色主体、嘴、头部截面、骨架及站立双臂垂放姿态保持。基础候选均保留正面注视。
+| 目录 | 说明 |
+| --- | --- |
+| `UE5/` | **项目主线。** `NaiwaP0/` 为引擎工程（UE 5.8），`Scripts/` 为自动化脚本，`Records/` 为验收录像与记录，`Animation/` 为跑动动画工程 |
+| `NaiwaCharacter/` | 奶蛙角色资产流水线：参数化建模脚本、迭代版本、独立验收记录。`versions/` 下按日期保留每一轮工程 |
+| `NaiwaAnimation_20261009/` | 角色动画小产线：打招呼动画工程与成片 |
+| 根目录 | SFML 原型（`main.cpp` / `Application.*` / `CMakeLists.txt`）——早期练手版本，已定型冻结 |
 
-交付总览为该目录的 `index.html`、`README_交付说明.md`，包含三列彩色/灰模对比、实际参数及独立验收记录。建议以A继续打磨，B保留为较高露出的构造对照；主体参考残差只记录，未追加头颈修改。
-固定输入为 `NaiwaCharacter/versions/20261005_head_side_continuity/Naiwa_Character.blend`，原始基准与各历史工程保留。
+---
 
-默认 `build_naiwa.py` 已指向 `revise_spherical_eyes.py`，每次从固定基准分别生成 A/B，避免累积位移。默认 `validate_head_revision.py` 调用 `validate_spherical_eyes.py`。进度检查点见 `NaiwaCharacter/TASK_CHECKPOINT.md`；此前连接故障记录见 `NaiwaCharacter/connection_error_report.json`。
+## 快速开始
 
-缓存、重复草稿和重建临时副本的清理记录位于 NaiwaCharacter/cleanup_report.json。
+**跑 UE5 工程**（需要 UE 5.8，脚本默认从 `C:\Program Files\Epic Games\UE_5.8` 查找）：
 
-2026-10-06 的补充清理记录见 `NaiwaCharacter/cleanup_report_20261006.json`。原生历史工程、当前交付及头颈修整资料保留；部分历史 FBX 可用 `NaiwaCharacter/export_saved_fbx.py` 从对应 `.blend` 重新导出，说明见角色目录 README。
+```powershell
+# 直接进游戏窗口（1920x1080 全高质量、无 VSync）
+powershell -File UE5/launch_p0.ps1
+
+# 打开编辑器
+powershell -File UE5/launch_p0.ps1 -Editor
+```
+
+也可以直接用 UE 打开 `UE5/NaiwaP0/Nai_Long.uproject`。操作：`A`/`D` 或左右方向键移动，`Shift` 切换行走（150）与奔跑（300）。
+
+**从脚本重建角色模型**（需要 Blender）：
+
+```bash
+python NaiwaCharacter/build_naiwa.py --from-primitives
+```
+
+`.blend` 是产物，脚本与参数才是源。每一轮迭代目录里都留有 `rebuild_command.ps1` 与 `parameters.json`，可一条命令复建对应模型并校验哈希。
+
+**构建 SFML 原型**：
+
+```bash
+cmake -S . -B out/build && cmake --build out/build --config Release
+```
+
+---
+
+## 文档索引
+
+| 文档 | 内容 |
+| --- | --- |
+| [CHANGELOG.md](CHANGELOG.md) | 各产线阶段性结论与迭代取舍 |
+| [UE5/README_接入记录.md](UE5/README_接入记录.md) | P0 接入过程与脚本用途 |
+| [NaiwaCharacter/README_使用说明.md](NaiwaCharacter/README_使用说明.md) | 角色流水线用法 |
+| [UE5 主角接入清单](Naiwa_UE5_2.5D主角接入清单_20261010.md) | 2.5D 主角接入的接口与参数约定 |
+| [E2 评估与修改指令](Naiwa_E2对照原图评估与整体修改指令_20261008.md) | 角色形体问题的定位与修改方向 |
+
+---
+
+## 关于资产纳管
+
+仓库只纳管 **UE5 主线相关资产**，并遵守一条判据：**删掉它，能不能用一条命令重新得到？**
+
+- 引擎缓存与派生物（`Saved/` `Intermediate/` `Binaries/` `DerivedDataCache/`）不入库
+- 超过 1 MB 且可重建的过程数据（逐顶点 dump、npz、中间样本）不入库
+- 中间交换格式（FBX）不入库——它可由对应 `.blend` 一条命令重新导出
+- 唯一二进制源（正式基线与动画的 `.blend`、UE 角色 `.uasset`）纳入 **Git LFS**
+- 验收录像与报告属于交付物，入库
+
+单个大文件 **> 1 MB 的过程数据不会自动被忽略**，新增这类文件时需在 `.gitignore` 中点名补充。
+
+> 生日祝福视频产线不在本仓库纳管范围内（含第三方音频素材），单独冷备保存。
+
+---
+
+## 版权说明
+
+「奶蛙」为基于「奶龙」的二次创作形象，本项目与原作者及任何官方方无关。仓库内参考素材的版权归各自原作者所有，仅用于个人学习与创作。
