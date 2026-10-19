@@ -67,8 +67,18 @@ NaiwaAnimation_20261009/preview/
 !NaiwaCharacter/references/**/*.jpg
 #    放回：NaiwaCharacter 顶层 23 张交付预览图（README 引用）
 !NaiwaCharacter/*.png
-#    放回：UE5/Records 根级验收截图
+#    放回：UE5/Records 根级验收截图 + P1 验收证据截图
+#    P0 各轮 review 目录下的截图（35 张 / 39 MB）仍排除：对应录像 mp4 已入库，
+#    截图可由 run_stage.ps1 重跑再生。
 !UE5/Records/*.png
+!UE5/Records/p1_acceptance_20261018/*.png
+# P1 正式 SFML 源素材：从旧版 out/build 拷贝并逐文件校验，须可由仓库恢复
+!UE5/SourceAssets/SFML_Level1/png/*.png
+#    P1 反馈素材：抠背景后的 96 帧死亡动画（直接对应 Content 内的 uasset）
+#    与 3 张参照图，放行。
+!UE5/SourceAssets/P1_Feedback/**/*.png
+#    原始解码帧属中间输入，由视频一条命令重新抽帧，点名挡住（须在放行之后）。
+UE5/SourceAssets/P1_Feedback/DeathLaughVideoFramesRaw/
 
 # ── 6. 过程数据 ─────────────────────────────────────────────────
 #    .gitignore 无法按文件体积过滤，故按「目录特征 + 文件名特征」排除。
@@ -95,13 +105,27 @@ UE5/Records/**/*.jsonl
 #    ⚠️ 本节是「点名式」规则，新增同类大文件时不会自动命中。
 #       提交前请跑一次核对（见 .workbuddy/memory/ 中的提交前检查步骤）。
 
-# ── 7. 日志自动备份 ─────────────────────────────────────────────
+# ── 7. 日志自动备份与编译迭代日志 ───────────────────────────────
 UE5/Records/*-backup-*.log
+#    编译 / 验证迭代日志：同参数重编即可再生，单个文件最大 31 MB。
+#    注：已入库的 3 个 P0 构建日志不受影响（.gitignore 只作用于未跟踪文件）。
+UE5/Records/*_build_*.log
+UE5/Records/*_compile_*.log
+# P1-0 本地完整 P0 快照体积较大；清单和复建说明纳管
+UE5/Records/p1_20261015_baseline/*.zip
 
 # ── 8. 非 UE 侧产线（用户明确「只管理 UE 相关」，且公开仓库
 #       不宜托管第三方音频；该产线改用冷备/云盘纳管）──────────────
 BirthdayVideo_20261006/
 
-# ── 8. UE 官方 Third Person 模板（P0 动画重定向引用其骨骼，
+# ── 9. 根目录临时产物与重复素材 ─────────────────────────────────
+#    tmp/：B 站素材采样与一次性中间脚本，纯过程数据
+/tmp/
+#    已处理音频/：P1 音效的中间处理结果。其内容已被
+#    UE5/SourceAssets/SFML_Level1/wav/ 与 P1_Feedback/Audio/ 完整覆盖
+#    （逐文件 SHA256 比对一致），入库只会产生重复字节。
+/已处理音频/
+
+# ── 10. UE 官方 Third Person 模板（P0 动画重定向引用其骨骼，
 #       本地须保留，但属引擎自带、不进库）──────────────────────
 UE5/NaiwaP0/Content/Characters/
