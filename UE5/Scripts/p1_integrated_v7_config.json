@@ -1,0 +1,1196 @@
+{
+  "schema": "NaiwaP1IntegratedV7V1",
+  "phase": "P1-5b_v7_candidate",
+  "asset_root": "/Game/Naiwa/P1",
+  "map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_v7",
+  "source_map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Integrated",
+  "source_map_sha256": "ee5c82788fa2290089f27f4021f1f8539f9bfa979cf357910a4eabcdde73a350",
+  "source_full_config_sha256": "3aad9c28e6a88397aeb6e1652559fb8d60496185fe255633ab259d7e72f2aa5d",
+  "kill_z": -1000,
+  "required_pickup_count": 1,
+  "owner_tag": "NaiwaP1V7GeneratedV1",
+  "map_tag": "NaiwaP1V7MapV1",
+  "camera_terrain_tag": "NaiwaP1GeneratedV1",
+  "show_checkpoint_labels": true,
+  "protected_packages": [
+    "Content/Naiwa/Maps/L_NaiwaGraybox.umap",
+    "Content/Naiwa/Blueprints/BP_NaiwaCharacter.uasset",
+    "Content/Naiwa/Blueprints/BP_NaiwaGameMode.uasset",
+    "Content/Naiwa/Input/IMC_Naiwa.uasset",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Slice.umap",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Full.umap",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Bounce.umap",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Switch.umap",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Timed.umap",
+    "Content/Naiwa/P1/BP_NaiwaP1Character.uasset",
+    "Content/Naiwa/P1/BP_NaiwaP1GameMode.uasset",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Integrated.umap"
+  ],
+  "keep_source_roles": [
+    "Terrain_LeftBank",
+    "Terrain_RightBank",
+    "Terrain_BounceLanding",
+    "Hazard",
+    "HazardCue",
+    "Switch",
+    "Bounce",
+    "Checkpoint",
+    "Start",
+    "KeyLight",
+    "SkyLight",
+    "Atmosphere",
+    "TimedTeaching",
+    "Terrain_TimedExit"
+  ],
+  "retained_source_overrides": {
+    "Terrain_BounceLanding": {
+      "top": 420
+    },
+    "Bounce": {
+      "launch_velocity_z": 1250
+    },
+    "Checkpoint": {
+      "at": [
+        2700,
+        0,
+        512
+      ],
+      "show_checkpoint_label": true
+    }
+  },
+  "checkpoints": [
+    {
+      "id": "IntegratedCheckpoint01",
+      "role": "Checkpoint",
+      "x": 2700,
+      "top": 420,
+      "source": "retained_teaching"
+    },
+    {
+      "id": "IntegratedCheckpoint02",
+      "role": "Checkpoint02",
+      "x": 4700,
+      "top": 180,
+      "source": "v7_extension"
+    },
+    {
+      "id": "IntegratedCheckpoint03",
+      "role": "Checkpoint03",
+      "x": 7700,
+      "top": 180,
+      "source": "v7_extension"
+    },
+    {
+      "id": "IntegratedCheckpoint04",
+      "role": "Checkpoint04",
+      "x": 10370,
+      "top": 180,
+      "source": "v7_extension"
+    },
+    {
+      "id": "IntegratedCheckpoint05",
+      "role": "Checkpoint05",
+      "x": 13770,
+      "top": 480,
+      "source": "v7_extension"
+    },
+    {
+      "id": "IntegratedCheckpoint06",
+      "role": "Checkpoint06",
+      "x": 16640,
+      "top": 240,
+      "source": "v7_extension"
+    },
+    {
+      "id": "IntegratedCheckpoint07",
+      "role": "Checkpoint07",
+      "x": 19760,
+      "top": 240,
+      "source": "v7_extension"
+    },
+    {
+      "id": "IntegratedCheckpoint08",
+      "role": "Checkpoint08",
+      "x": 24080,
+      "top": 240,
+      "source": "v7_extension"
+    }
+  ],
+  "gap_chains": [
+    {
+      "id": "A-4",
+      "top": 180,
+      "gaps": [
+        [
+          8300,
+          8540
+        ],
+        [
+          8940,
+          9180
+        ],
+        [
+          9580,
+          9820
+        ]
+      ]
+    },
+    {
+      "id": "B-5",
+      "top": 480,
+      "gaps": [
+        [
+          14520,
+          14760
+        ],
+        [
+          15160,
+          15400
+        ],
+        [
+          15800,
+          16040
+        ]
+      ]
+    },
+    {
+      "id": "C-5",
+      "top": 240,
+      "gaps": [
+        [
+          20660,
+          20900
+        ],
+        [
+          21300,
+          21540
+        ],
+        [
+          21940,
+          22180
+        ],
+        [
+          22580,
+          22820
+        ],
+        [
+          23220,
+          23460
+        ]
+      ]
+    }
+  ],
+  "extension_actors": [
+    {
+      "role": "Terrain_A1",
+      "kind": "Terrain",
+      "id": "A1",
+      "tag": "NaiwaP1V7A1V1",
+      "material": "landing",
+      "left": 4500,
+      "right": 4900,
+      "top": 180,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "SwitchA",
+      "kind": "Switch",
+      "id": "SwitchA",
+      "tag": "NaiwaP1V7SwitchAV1",
+      "material": "switch_platform",
+      "at": [
+        6200,
+        0,
+        0
+      ],
+      "dock_left_x": -1170,
+      "dock_right_x": 940,
+      "left_switch_x": -1440,
+      "right_switch_x": 1500,
+      "top_z": 180,
+      "extent": [
+        120,
+        160,
+        20
+      ],
+      "travel_speed_cm_per_second": 300,
+      "travel_speed_variation_cm_per_second": 100,
+      "stable_boarding_seconds": 0.25,
+      "departure_cue_seconds": 0.65,
+      "transit_trap_min_count": 1,
+      "transit_trap_max_count": 2,
+      "transit_trap_seed": 202611
+    },
+    {
+      "role": "Terrain_A3",
+      "kind": "Terrain",
+      "id": "A3",
+      "tag": "NaiwaP1V7A3V1",
+      "material": "landing",
+      "left": 7500,
+      "right": 7900,
+      "top": 180,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Terrain_A4Island01",
+      "kind": "Terrain",
+      "id": "A4Island01",
+      "tag": "NaiwaP1V7A4Island01V1",
+      "material": "landing",
+      "left": 7900,
+      "right": 8300,
+      "top": 180,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Terrain_A4Island02",
+      "kind": "Terrain",
+      "id": "A4Island02",
+      "tag": "NaiwaP1V7A4Island02V1",
+      "material": "landing",
+      "left": 8540,
+      "right": 8940,
+      "top": 180,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Terrain_A4Island03",
+      "kind": "Terrain",
+      "id": "A4Island03",
+      "tag": "NaiwaP1V7A4Island03V1",
+      "material": "landing",
+      "left": 9180,
+      "right": 9580,
+      "top": 180,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Terrain_A4Island04",
+      "kind": "Terrain",
+      "id": "A4Island04",
+      "tag": "NaiwaP1V7A4Island04V1",
+      "material": "landing",
+      "left": 9820,
+      "right": 10220,
+      "top": 180,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Checkpoint02",
+      "kind": "Checkpoint",
+      "id": "IntegratedCheckpoint02",
+      "tag": "NaiwaP1V7IntegratedCheckpoint02V1",
+      "material": "checkpoint",
+      "show_checkpoint_label": true,
+      "at": [
+        4700,
+        0,
+        272
+      ],
+      "extent": [
+        42,
+        110,
+        85
+      ],
+      "respawn_offset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "Checkpoint03",
+      "kind": "Checkpoint",
+      "id": "IntegratedCheckpoint03",
+      "tag": "NaiwaP1V7IntegratedCheckpoint03V1",
+      "material": "checkpoint",
+      "show_checkpoint_label": true,
+      "at": [
+        7700,
+        0,
+        272
+      ],
+      "extent": [
+        42,
+        110,
+        85
+      ],
+      "respawn_offset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "Terrain_B1",
+      "kind": "Terrain",
+      "id": "B1",
+      "tag": "NaiwaP1V7B1V1",
+      "material": "landing",
+      "left": 10220,
+      "right": 10520,
+      "top": 180,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "SwitchB",
+      "kind": "Switch",
+      "id": "SwitchB",
+      "tag": "NaiwaP1V7SwitchBV1",
+      "material": "switch_platform",
+      "at": [
+        11820,
+        0,
+        0
+      ],
+      "dock_left_x": -1170,
+      "dock_right_x": 1180,
+      "left_switch_x": -1450,
+      "right_switch_x": 1450,
+      "top_z": 180,
+      "extent": [
+        120,
+        160,
+        20
+      ],
+      "travel_speed_cm_per_second": 300,
+      "travel_speed_variation_cm_per_second": 100,
+      "stable_boarding_seconds": 0.25,
+      "departure_cue_seconds": 0.65,
+      "transit_trap_min_count": 1,
+      "transit_trap_max_count": 2,
+      "transit_trap_seed": 202612
+    },
+    {
+      "role": "BounceB",
+      "kind": "Bounce",
+      "id": "BounceB",
+      "tag": "NaiwaP1V7BounceBV1",
+      "material": "bounce",
+      "at": [
+        13260,
+        0,
+        168
+      ],
+      "extent": [
+        80,
+        120,
+        12
+      ],
+      "launch_velocity_z": 1150
+    },
+    {
+      "role": "Terrain_B4",
+      "kind": "Terrain",
+      "id": "B4",
+      "tag": "NaiwaP1V7B4V1",
+      "material": "landing",
+      "left": 13420,
+      "right": 14120,
+      "top": 480,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Terrain_B5Island01",
+      "kind": "Terrain",
+      "id": "B5Island01",
+      "tag": "NaiwaP1V7B5Island01V1",
+      "material": "landing",
+      "left": 14120,
+      "right": 14520,
+      "top": 480,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Terrain_B5Island02",
+      "kind": "Terrain",
+      "id": "B5Island02",
+      "tag": "NaiwaP1V7B5Island02V1",
+      "material": "landing",
+      "left": 14760,
+      "right": 15160,
+      "top": 480,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Terrain_B5Island03",
+      "kind": "Terrain",
+      "id": "B5Island03",
+      "tag": "NaiwaP1V7B5Island03V1",
+      "material": "landing",
+      "left": 15400,
+      "right": 15800,
+      "top": 480,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Terrain_B5Island04",
+      "kind": "Terrain",
+      "id": "B5Island04",
+      "tag": "NaiwaP1V7B5Island04V1",
+      "material": "landing",
+      "left": 16040,
+      "right": 16440,
+      "top": 480,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Checkpoint04",
+      "kind": "Checkpoint",
+      "id": "IntegratedCheckpoint04",
+      "tag": "NaiwaP1V7IntegratedCheckpoint04V1",
+      "material": "checkpoint",
+      "show_checkpoint_label": true,
+      "at": [
+        10370,
+        0,
+        272
+      ],
+      "extent": [
+        42,
+        110,
+        85
+      ],
+      "respawn_offset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "Checkpoint05",
+      "kind": "Checkpoint",
+      "id": "IntegratedCheckpoint05",
+      "tag": "NaiwaP1V7IntegratedCheckpoint05V1",
+      "material": "checkpoint",
+      "show_checkpoint_label": true,
+      "at": [
+        13770,
+        0,
+        572
+      ],
+      "extent": [
+        42,
+        110,
+        85
+      ],
+      "respawn_offset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "Terrain_C1",
+      "kind": "Terrain",
+      "id": "C1",
+      "tag": "NaiwaP1V7C1V1",
+      "material": "landing",
+      "left": 16440,
+      "right": 16840,
+      "top": 240,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "SwitchC",
+      "kind": "Switch",
+      "id": "SwitchC",
+      "tag": "NaiwaP1V7SwitchCV1",
+      "material": "switch_platform",
+      "at": [
+        17840,
+        0,
+        0
+      ],
+      "dock_left_x": -870,
+      "dock_right_x": 870,
+      "left_switch_x": -1200,
+      "right_switch_x": 1920,
+      "top_z": 240,
+      "dock_left_top_z": 240,
+      "dock_right_top_z": 340,
+      "extent": [
+        120,
+        160,
+        20
+      ],
+      "travel_speed_cm_per_second": 300,
+      "travel_speed_variation_cm_per_second": 100,
+      "stable_boarding_seconds": 0.25,
+      "departure_cue_seconds": 0.65,
+      "transit_trap_min_count": 1,
+      "transit_trap_max_count": 2,
+      "transit_trap_seed": 202613
+    },
+    {
+      "role": "TimedC",
+      "kind": "Timed",
+      "id": "TimedC",
+      "tag": "NaiwaP1V7TimedCV1",
+      "material": "timed",
+      "at": [
+        19050,
+        0,
+        0
+      ],
+      "top_z": 340,
+      "extent": [
+        210,
+        160,
+        20
+      ],
+      "stable_landing_seconds": 0.18,
+      "active_seconds": 1.36,
+      "disabled_seconds": 1.6
+    },
+    {
+      "role": "Terrain_C4",
+      "kind": "Terrain",
+      "id": "C4",
+      "tag": "NaiwaP1V7C4V1",
+      "material": "landing",
+      "left": 19260,
+      "right": 20260,
+      "top": 240,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Terrain_C5Island01",
+      "kind": "Terrain",
+      "id": "C5Island01",
+      "tag": "NaiwaP1V7C5Island01V1",
+      "material": "landing",
+      "left": 20260,
+      "right": 20660,
+      "top": 240,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Terrain_C5Island02",
+      "kind": "Terrain",
+      "id": "C5Island02",
+      "tag": "NaiwaP1V7C5Island02V1",
+      "material": "landing",
+      "left": 20900,
+      "right": 21300,
+      "top": 240,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Terrain_C5Island03",
+      "kind": "Terrain",
+      "id": "C5Island03",
+      "tag": "NaiwaP1V7C5Island03V1",
+      "material": "landing",
+      "left": 21540,
+      "right": 21940,
+      "top": 240,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Terrain_C5Island04",
+      "kind": "Terrain",
+      "id": "C5Island04",
+      "tag": "NaiwaP1V7C5Island04V1",
+      "material": "landing",
+      "left": 22180,
+      "right": 22580,
+      "top": 240,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Terrain_C5Island05",
+      "kind": "Terrain",
+      "id": "C5Island05",
+      "tag": "NaiwaP1V7C5Island05V1",
+      "material": "landing",
+      "left": 22820,
+      "right": 23220,
+      "top": 240,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Terrain_C5Island06",
+      "kind": "Terrain",
+      "id": "C5Island06",
+      "tag": "NaiwaP1V7C5Island06V1",
+      "material": "landing",
+      "left": 23460,
+      "right": 23860,
+      "top": 240,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Checkpoint06",
+      "kind": "Checkpoint",
+      "id": "IntegratedCheckpoint06",
+      "tag": "NaiwaP1V7IntegratedCheckpoint06V1",
+      "material": "checkpoint",
+      "show_checkpoint_label": true,
+      "at": [
+        16640,
+        0,
+        332
+      ],
+      "extent": [
+        42,
+        110,
+        85
+      ],
+      "respawn_offset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "Checkpoint07",
+      "kind": "Checkpoint",
+      "id": "IntegratedCheckpoint07",
+      "tag": "NaiwaP1V7IntegratedCheckpoint07V1",
+      "material": "checkpoint",
+      "show_checkpoint_label": true,
+      "at": [
+        19760,
+        0,
+        332
+      ],
+      "extent": [
+        42,
+        110,
+        85
+      ],
+      "respawn_offset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "Terrain_FinalApproach",
+      "kind": "Terrain",
+      "id": "FinalApproach",
+      "tag": "NaiwaP1V7FinalApproachV1",
+      "material": "landing",
+      "left": 23860,
+      "right": 24340,
+      "top": 240,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Checkpoint08",
+      "kind": "Checkpoint",
+      "id": "IntegratedCheckpoint08",
+      "tag": "NaiwaP1V7IntegratedCheckpoint08V1",
+      "material": "checkpoint",
+      "show_checkpoint_label": true,
+      "at": [
+        24080,
+        0,
+        332
+      ],
+      "extent": [
+        42,
+        110,
+        85
+      ],
+      "respawn_offset": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "BounceFinal",
+      "kind": "Bounce",
+      "id": "BounceFinal",
+      "tag": "NaiwaP1V7BounceFinalV1",
+      "material": "bounce",
+      "at": [
+        24420,
+        0,
+        188
+      ],
+      "extent": [
+        80,
+        120,
+        12
+      ],
+      "launch_velocity_z": 1100
+    },
+    {
+      "role": "TimedFinal",
+      "kind": "Timed",
+      "id": "TimedFinal",
+      "tag": "NaiwaP1V7TimedFinalV1",
+      "material": "timed",
+      "at": [
+        24810,
+        0,
+        0
+      ],
+      "top_z": 540,
+      "extent": [
+        140,
+        160,
+        20
+      ],
+      "stable_landing_seconds": 0.1,
+      "active_seconds": 0.60,
+      "disabled_seconds": 1.6
+    },
+    {
+      "role": "Terrain_FinalIntermediate",
+      "kind": "Terrain",
+      "id": "FinalIntermediate",
+      "tag": "NaiwaP1V7FinalIntermediateV1",
+      "material": "landing",
+      "left": 25130,
+      "right": 25440,
+      "top": 540,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "BounceFinal2",
+      "kind": "Bounce",
+      "id": "BounceFinal2",
+      "tag": "NaiwaP1V7BounceFinal2V1",
+      "material": "bounce",
+      "at": [25220, 0, 529],
+      "extent": [80, 120, 12],
+      "launch_velocity_z": 1100
+    },
+    {
+      "role": "HazardCompoundHiddenPit03",
+      "kind": "Hazard",
+      "id": "CompoundHiddenPit03",
+      "tag": "NaiwaP1V7CompoundHiddenPit03V1",
+      "material": "hazard",
+      "at": [25455, 0, 430],
+      "extent": [80, 160, 50],
+      "b_reveal_on_spawn": false,
+      "b_use_spike_cluster": true
+    },
+    {
+      "role": "TimedFinal2",
+      "kind": "Timed",
+      "id": "TimedFinal2",
+      "tag": "NaiwaP1V7TimedFinal2V1",
+      "material": "timed",
+      "at": [25640, 0, 0],
+      "top_z": 840,
+      "extent": [140, 160, 20],
+      "stable_landing_seconds": 0.1,
+      "active_seconds": 0.50,
+      "disabled_seconds": 1.6
+    },
+    {
+      "role": "HazardCompoundHiddenPit04",
+      "kind": "Hazard",
+      "id": "CompoundHiddenPit04",
+      "tag": "NaiwaP1V7CompoundHiddenPit04V1",
+      "material": "hazard",
+      "at": [25840, 0, 750],
+      "extent": [80, 160, 50],
+      "b_reveal_on_spawn": false,
+      "b_use_spike_cluster": true
+    },
+    {
+      "role": "Terrain_Final",
+      "kind": "Terrain",
+      "id": "Final",
+      "tag": "NaiwaP1V7FinalV1",
+      "material": "landing",
+      "left": 26040,
+      "right": 28200,
+      "top": 840,
+      "thickness": 40,
+      "depth": 700
+    },
+    {
+      "role": "Pickup01",
+      "kind": "Pickup",
+      "id": "IntegratedPickup01",
+      "tag": "NaiwaP1V7IntegratedPickup01V1",
+      "material": "pickup",
+      "at": [1000, 0, 182],
+      "extent": [40, 90, 50],
+      "pickup_order": 1
+    },
+    {
+      "role": "Pickup02",
+      "kind": "Pickup",
+      "id": "IntegratedPickup02",
+      "tag": "NaiwaP1V7IntegratedPickup02V1",
+      "material": "pickup",
+      "at": [8740, 0, 242],
+      "extent": [40, 90, 50],
+      "pickup_order": 2
+    },
+    {
+      "role": "Pickup03",
+      "kind": "Pickup",
+      "id": "IntegratedPickup03",
+      "tag": "NaiwaP1V7IntegratedPickup03V1",
+      "material": "pickup",
+      "at": [14960, 0, 542],
+      "extent": [40, 90, 50],
+      "pickup_order": 3
+    },
+    {
+      "role": "PickupRequired",
+      "kind": "Pickup",
+      "id": "IntegratedRequiredPickup01",
+      "tag": "NaiwaP1V7IntegratedRequiredPickup01V1",
+      "material": "pickup",
+      "at": [
+        26800,
+        0,
+        902
+      ],
+      "extent": [
+        35,
+        90,
+        42
+      ],
+      "pickup_order": 4,
+      "b_required_for_goal": true
+    },
+    {
+      "role": "Goal",
+      "kind": "Goal",
+      "id": "IntegratedGoal01",
+      "tag": "NaiwaP1V7IntegratedGoal01V1",
+      "material": "goal",
+      "at": [
+        27400,
+        0,
+        932
+      ],
+      "extent": [
+        50,
+        110,
+        85
+      ]
+    },
+    {
+      "role": "HazardGapA01",
+      "kind": "Hazard",
+      "id": "GapA01",
+      "tag": "NaiwaP1V7GapA01V1",
+      "material": "hazard",
+      "at": [
+        8420,
+        0,
+        90
+      ],
+      "extent": [
+        120,
+        160,
+        50
+      ],
+      "b_reveal_on_spawn": true,
+      "b_use_spike_cluster": true,
+      "gap_chain": "A-4",
+      "gap_index": 1
+    },
+    {
+      "role": "HazardGapA02",
+      "kind": "Hazard",
+      "id": "GapA02",
+      "tag": "NaiwaP1V7GapA02V1",
+      "material": "hazard",
+      "at": [
+        9060,
+        0,
+        90
+      ],
+      "extent": [
+        120,
+        160,
+        50
+      ],
+      "b_reveal_on_spawn": true,
+      "b_use_spike_cluster": true,
+      "gap_chain": "A-4",
+      "gap_index": 2
+    },
+    {
+      "role": "HazardGapA03",
+      "kind": "Hazard",
+      "id": "GapA03",
+      "tag": "NaiwaP1V7GapA03V1",
+      "material": "hazard",
+      "at": [
+        9700,
+        0,
+        90
+      ],
+      "extent": [
+        120,
+        160,
+        50
+      ],
+      "b_reveal_on_spawn": true,
+      "b_use_spike_cluster": true,
+      "gap_chain": "A-4",
+      "gap_index": 3
+    },
+    {
+      "role": "HazardGapB01",
+      "kind": "Hazard",
+      "id": "GapB01",
+      "tag": "NaiwaP1V7GapB01V1",
+      "material": "hazard",
+      "at": [
+        14640,
+        0,
+        390
+      ],
+      "extent": [
+        120,
+        160,
+        50
+      ],
+      "b_reveal_on_spawn": true,
+      "b_use_spike_cluster": true,
+      "gap_chain": "B-5",
+      "gap_index": 1
+    },
+    {
+      "role": "HazardGapB02",
+      "kind": "Hazard",
+      "id": "GapB02",
+      "tag": "NaiwaP1V7GapB02V1",
+      "material": "hazard",
+      "at": [
+        15280,
+        0,
+        390
+      ],
+      "extent": [
+        120,
+        160,
+        50
+      ],
+      "b_reveal_on_spawn": true,
+      "b_use_spike_cluster": true,
+      "gap_chain": "B-5",
+      "gap_index": 2
+    },
+    {
+      "role": "HazardGapB03",
+      "kind": "Hazard",
+      "id": "GapB03",
+      "tag": "NaiwaP1V7GapB03V1",
+      "material": "hazard",
+      "at": [
+        15920,
+        0,
+        390
+      ],
+      "extent": [
+        120,
+        160,
+        50
+      ],
+      "b_reveal_on_spawn": true,
+      "b_use_spike_cluster": true,
+      "gap_chain": "B-5",
+      "gap_index": 3
+    },
+    {
+      "role": "HazardGapC01",
+      "kind": "Hazard",
+      "id": "GapC01",
+      "tag": "NaiwaP1V7GapC01V1",
+      "material": "hazard",
+      "at": [
+        20780,
+        0,
+        150
+      ],
+      "extent": [
+        120,
+        160,
+        50
+      ],
+      "b_reveal_on_spawn": true,
+      "b_use_spike_cluster": true,
+      "gap_chain": "C-5",
+      "gap_index": 1
+    },
+    {
+      "role": "HazardGapC02",
+      "kind": "Hazard",
+      "id": "GapC02",
+      "tag": "NaiwaP1V7GapC02V1",
+      "material": "hazard",
+      "at": [
+        21420,
+        0,
+        150
+      ],
+      "extent": [
+        120,
+        160,
+        50
+      ],
+      "b_reveal_on_spawn": true,
+      "b_use_spike_cluster": true,
+      "gap_chain": "C-5",
+      "gap_index": 2
+    },
+    {
+      "role": "HazardGapC03",
+      "kind": "Hazard",
+      "id": "GapC03",
+      "tag": "NaiwaP1V7GapC03V1",
+      "material": "hazard",
+      "at": [
+        22060,
+        0,
+        150
+      ],
+      "extent": [
+        120,
+        160,
+        50
+      ],
+      "b_reveal_on_spawn": true,
+      "b_use_spike_cluster": true,
+      "gap_chain": "C-5",
+      "gap_index": 3
+    },
+    {
+      "role": "HazardGapC04",
+      "kind": "Hazard",
+      "id": "GapC04",
+      "tag": "NaiwaP1V7GapC04V1",
+      "material": "hazard",
+      "at": [
+        22700,
+        0,
+        150
+      ],
+      "extent": [
+        120,
+        160,
+        50
+      ],
+      "b_reveal_on_spawn": true,
+      "b_use_spike_cluster": true,
+      "gap_chain": "C-5",
+      "gap_index": 4
+    },
+    {
+      "role": "HazardGapC05",
+      "kind": "Hazard",
+      "id": "GapC05",
+      "tag": "NaiwaP1V7GapC05V1",
+      "material": "hazard",
+      "at": [
+        23340,
+        0,
+        150
+      ],
+      "extent": [
+        120,
+        160,
+        50
+      ],
+      "b_reveal_on_spawn": true,
+      "b_use_spike_cluster": true,
+      "gap_chain": "C-5",
+      "gap_index": 5
+    },
+    {
+      "role": "HazardCompoundHiddenPit01",
+      "kind": "Hazard",
+      "id": "CompoundHiddenPit01",
+      "tag": "NaiwaP1V7CompoundHiddenPit01V1",
+      "material": "hazard",
+      "at": [
+        24580,
+        0,
+        100
+      ],
+      "extent": [
+        80,
+        160,
+        50
+      ],
+      "b_reveal_on_spawn": false,
+      "b_use_spike_cluster": true
+    },
+    {
+      "role": "HazardCompoundHiddenPit02",
+      "kind": "Hazard",
+      "id": "CompoundHiddenPit02",
+      "tag": "NaiwaP1V7CompoundHiddenPit02V1",
+      "material": "hazard",
+      "at": [
+        25040,
+        0,
+        400
+      ],
+      "extent": [
+        80,
+        160,
+        50
+      ],
+      "b_reveal_on_spawn": false,
+      "b_use_spike_cluster": true
+    }
+  ],
+  "timed_c_design": {
+    "role": "mandatory_timed_transition",
+    "run_only_gate": false,
+    "walk_landing_after_disable_allowed": true
+  },
+  "final_compound_design": {
+    "checkpoint_id": "IntegratedCheckpoint08",
+    "compound_count": 2,
+    "bounce_pad_top_z_cm": [200, 541],
+    "bounce_launch_velocity_z_cm_s": [1100, 1100],
+    "timed_platform_top_z_cm": [540, 840],
+    "timed_platform_active_seconds": [0.60, 0.50],
+    "normal_jump_envelope_cm": 264.7,
+    "intermediate_bank": {"id": "FinalIntermediate", "top_z_cm": 540},
+    "hidden_pit_hazard_ids": ["CompoundHiddenPit01", "CompoundHiddenPit02", "CompoundHiddenPit03", "CompoundHiddenPit04"],
+    "exit_bank_top_z_cm": 840,
+    "intent": "two sequential bounce launches onto elevated timed platforms, each with a tight run-jump exit; two invisible lethal pits invite exploration and trial-and-error in each compound"
+  },
+  "acceptance": "mixed_gait_route_and_failure_recovery_pending; two sequential terminal bounce-plus-timed compounds and hidden-pit retry evidence required; C remains mandatory but not a Run-only gate",
+  "candidate_risks": [
+    "A moving-platform end jump needs real departure-position and timing measurements.",
+    "B same-height 60 cm transition may not arm descending-only bounce; geometry is not frozen.",
+    "All eleven 240 cm gaps need full Run and expected Walk-fail/CP-recovery evidence.",
+    "Both terminal bounce arcs and 0.60 s timer windows need integrated physics measurement.",
+    "Four hidden terminal pit triggers must remain invisible but lethal, and final checkpoint recovery must be verified.",
+    "Moving-platform speed varies smoothly and repeatably from 200 to 400 cm/s along each crossing."
+  ]
+}

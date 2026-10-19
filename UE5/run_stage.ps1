@@ -9,6 +9,9 @@ param(
     [switch]$Offscreen
 )
 $ErrorActionPreference = 'Stop'
+if ($Stage -in @('Setup', 'Import', 'RunImport')) {
+    throw "$Stage is a legacy P0 creation stage and can overwrite the delivered map, input, or character assets. Run it only in an isolated copy with an explicitly reviewed script."
+}
 $projectFile = Join-Path $PSScriptRoot 'NaiwaP0/Nai_Long.uproject'
 $recordDirectory = Join-Path $PSScriptRoot 'Records'
 New-Item -ItemType Directory -Path $recordDirectory -Force | Out-Null

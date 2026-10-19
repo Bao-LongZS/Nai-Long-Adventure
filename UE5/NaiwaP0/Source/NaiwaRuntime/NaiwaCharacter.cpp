@@ -1,6 +1,7 @@
 #include "NaiwaCharacter.h"
 #include "NaiwaAnimInstance.h"
 #include "NaiwaAutoTestComponent.h"
+#include "NaiwaP1GameMode.h"
 #include "NaiwaVisualReviewComponent.h"
 #include "Animation/AnimSequence.h"
 #include "Camera/CameraComponent.h"
@@ -85,6 +86,11 @@ void ANaiwaCharacter::OnConstruction(const FTransform& Transform)
 
 void ANaiwaCharacter::ApplyCharacterAssets()
 {
+    if (!LaughSequence)
+    {
+        LaughSequence = LoadObject<UAnimSequence>(nullptr,
+            TEXT("/Game/Naiwa/AS_Naiwa_Laugh.AS_Naiwa_Laugh"));
+    }
     GetCharacterMovement()->bApplyGravityWhileJumping = false;
     GetCharacterMovement()->MaxWalkSpeed = bRunningGait ? 300.0f : 150.0f;
     GetCapsuleComponent()->SetCapsuleSize(CollisionRadiusCm, FMath::Max(CollisionHalfHeightCm, CollisionRadiusCm));
@@ -110,10 +116,18 @@ void ANaiwaCharacter::BeginPlay()
     Initial.Y = 0.0f;
     SetActorLocation(Initial, false, nullptr, ETeleportType::TeleportPhysics);
     SpawnLocation = Initial;
-    AddInputMapping();
-    if (!SkeletalMeshAsset || !IdleSequence || !WalkSequence || !JumpSequence)
+    if (ANaiwaP1GameMode* P1Mode = Cast<ANaiwaP1GameMode>(UGameplayStatics::GetGameMode(this)))
     {
-        UE_LOG(LogTemp, Error, TEXT("NAIWA_ASSETS_INCOMPLETE: mesh and Idle/Walk/Jump must be assigned to BP_NaiwaCharacter."));
+        P1Mode->RegisterCharacter(this);
+        // Enhanced Input action assets decide whether the mapped key can fire while paused.
+        if (PauseAction) PauseAction->bTriggerWhenPaused = true;
+        if (ResetAction) ResetAction->bTriggerWhenPaused = true;
+    }
+    AddInputMapping();
+    UE_LOG(LogTemp, Display, TEXT("NAIWA_P1_DEATH_ANIMATION body_laugh=%s"), *GetNameSafe(LaughSequence));
+    if (!SkeletalMeshAsset || !IdleSequence || !WalkSequence || !JumpSequence || !LaughSequence)
+    {
+        UE_LOG(LogTemp, Error, TEXT("NAIWA_ASSETS_INCOMPLETE: mesh and Idle/Walk/Jump/Laugh must be assigned to BP_NaiwaCharacter."));
     }
 }
 
@@ -180,7 +194,8 @@ void ANaiwaCharacter::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
     SampleInputEvidence();
-    if (bAutomatedInput)
+    const ANaiwaP1GameMode* P1Mode = Cast<ANaiwaP1GameMode>(UGameplayStatics::GetGameMode(this));
+    if (bAutomatedInput && (!P1Mode || (P1Mode->IsGameplayInputAllowed() && !bP1ControlsLocked)))
     {
         AddMovementInput(FVector(1.0f, 0.0f, 0.0f), AutomatedMoveInput);
     }
@@ -190,6 +205,17 @@ void ANaiwaCharacter::Tick(float DeltaSeconds)
         bFacingRight = HorizontalSpeed > 0.0f;
         ApplyFacing();
     }
+}
+
+void ANaiwaCharacter::FellOutOfWorld(const UDamageType& DamageType)
+{
+    if (ANaiwaP1GameMode* P1Mode = Cast<ANaiwaP1GameMode>(UGameplayStatics::GetGameMode(this)))
+    {
+        P1Mode->QueueFallDeath();
+        GetCharacterMovement()->StopMovementImmediately();
+        return;
+    }
+    Super::FellOutOfWorld(DamageType);
 }
 
 void ANaiwaCharacter::ApplyFacing()
@@ -206,7 +232,8 @@ void ANaiwaCharacter::HandleMove(const FInputActionValue& Value)
         LastLoggedMoveInput = Axis;
         WriteInputEvidence(TEXT("move_started_or_changed"));
     }
-    if (!bAutomatedInput)
+    const ANaiwaP1GameMode* P1Mode = Cast<ANaiwaP1GameMode>(UGameplayStatics::GetGameMode(this));
+    if (!bAutomatedInput && (!P1Mode || (P1Mode->IsGameplayInputAllowed() && !bP1ControlsLocked)))
     {
         AddMovementInput(FVector(1.0f, 0.0f, 0.0f), Value.Get<float>());
     }
@@ -223,7 +250,8 @@ void ANaiwaCharacter::HandleJumpStarted(const FInputActionValue& Value)
 {
     ++JumpInputEvents;
     WriteInputEvidence(TEXT("jump_started"));
-    if (!bAutomatedInput)
+    const ANaiwaP1GameMode* P1Mode = Cast<ANaiwaP1GameMode>(UGameplayStatics::GetGameMode(this));
+    if (!bAutomatedInput && (!P1Mode || (P1Mode->IsGameplayInputAllowed() && !bP1ControlsLocked)))
     {
         Jump();
     }
@@ -233,6 +261,15 @@ void ANaiwaCharacter::HandleJumpCompleted(const FInputActionValue& Value)
 {
     StopJumping();
     WriteInputEvidence(TEXT("jump_released"));
+}
+
+void ANaiwaCharacter::OnJumped_Implementation()
+{
+    Super::OnJumped_Implementation();
+    if (ANaiwaP1GameMode* P1Mode = Cast<ANaiwaP1GameMode>(UGameplayStatics::GetGameMode(this)))
+    {
+        P1Mode->PlayJumpFeedback();
+    }
 }
 
 void ANaiwaCharacter::HandlePause(const FInputActionValue& Value)
@@ -245,13 +282,28 @@ void ANaiwaCharacter::HandlePause(const FInputActionValue& Value)
 void ANaiwaCharacter::HandleReset(const FInputActionValue& Value)
 {
     ++ResetInputEvents;
-    ResetToSpawn();
+    if (ANaiwaP1GameMode* P1Mode = Cast<ANaiwaP1GameMode>(UGameplayStatics::GetGameMode(this)))
+    {
+        P1Mode->RestartLevel();
+    }
+    else
+    {
+        ResetToSpawn();
+    }
     WriteInputEvidence(TEXT("reset_requested"));
 }
 
 void ANaiwaCharacter::HandleGaitToggle(const FInputActionValue& Value)
 {
     ++GaitInputEvents;
+    if (const ANaiwaP1GameMode* P1Mode = Cast<ANaiwaP1GameMode>(UGameplayStatics::GetGameMode(this)))
+    {
+        if (!P1Mode->IsGameplayInputAllowed() || bP1ControlsLocked)
+        {
+            WriteInputEvidence(TEXT("gait_ignored_p1_state"));
+            return;
+        }
+    }
     bRunningGait = !bRunningGait;
     GetCharacterMovement()->MaxWalkSpeed = bRunningGait ? 300.0f : 150.0f;
     WriteInputEvidence(TEXT("gait_toggled"));
@@ -259,7 +311,69 @@ void ANaiwaCharacter::HandleGaitToggle(const FInputActionValue& Value)
 
 void ANaiwaCharacter::TogglePause()
 {
+    if (ANaiwaP1GameMode* P1Mode = Cast<ANaiwaP1GameMode>(UGameplayStatics::GetGameMode(this)))
+    {
+        P1Mode->ToggleP1Pause();
+        return;
+    }
     UGameplayStatics::SetGamePaused(this, !UGameplayStatics::IsGamePaused(this));
+}
+
+void ANaiwaCharacter::SetP1ControlsLocked(bool bLocked)
+{
+    bP1ControlsLocked = bLocked;
+    if (bLocked)
+    {
+        StopJumping();
+        GetCharacterMovement()->StopMovementImmediately();
+        ConsumeMovementInputVector();
+        AutomatedMoveInput = 0.0f;
+        GetCharacterMovement()->DisableMovement();
+    }
+    else if (GetCharacterMovement()->MovementMode == MOVE_None)
+    {
+        GetCharacterMovement()->SetMovementMode(MOVE_Falling);
+    }
+}
+
+bool ANaiwaCharacter::SetP1Gait(bool bRun)
+{
+    const ANaiwaP1GameMode* P1Mode = Cast<ANaiwaP1GameMode>(UGameplayStatics::GetGameMode(this));
+    if (!P1Mode || !P1Mode->IsGameplayInputAllowed() || bP1ControlsLocked) return false;
+
+    bRunningGait = bRun;
+    GetCharacterMovement()->MaxWalkSpeed = bRunningGait ? 300.0f : 150.0f;
+    WriteInputEvidence(bRunningGait ? TEXT("p1_gait_selected_run") : TEXT("p1_gait_selected_walk"));
+    return true;
+}
+
+void ANaiwaCharacter::SetP1DeathPose(bool bEnabled)
+{
+    if (bP1DeathPose == bEnabled) return;
+    bP1DeathPose = bEnabled;
+    if (UNaiwaAnimInstance* Anim = Cast<UNaiwaAnimInstance>(GetMesh()->GetAnimInstance()))
+    {
+        Anim->ResetLocomotionClock();
+    }
+}
+
+bool ANaiwaCharacter::TeleportForP1(const FVector& SafeLocation)
+{
+    StopJumping();
+    GetCharacterMovement()->StopMovementImmediately();
+    ConsumeMovementInputVector();
+    AutomatedMoveInput = 0.0f;
+    bFacingRight = true;
+    const bool bMoved = SetActorLocation(SafeLocation, false, nullptr, ETeleportType::TeleportPhysics);
+    GetCharacterMovement()->SetMovementMode(MOVE_Falling);
+    if (UNaiwaAnimInstance* Anim = Cast<UNaiwaAnimInstance>(GetMesh()->GetAnimInstance()))
+    {
+        Anim->ResetLocomotionClock();
+    }
+    ApplyFacing();
+    LastResetLocation = GetActorLocation();
+    LastResetSpeed = GetVelocity().Size();
+    return bMoved;
 }
 
 void ANaiwaCharacter::ResetToSpawn()
@@ -302,6 +416,7 @@ FString ANaiwaCharacter::GetLocomotionState() const
         {
         case ENaiwaLocomotionState::Walk: return TEXT("Walk");
         case ENaiwaLocomotionState::Jump: return TEXT("Jump");
+        case ENaiwaLocomotionState::Laugh: return TEXT("Laugh");
         default: return TEXT("Idle");
         }
     }

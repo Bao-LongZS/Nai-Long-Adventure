@@ -1,0 +1,22 @@
+{
+  "schema": "NaiwaP1TimedPrototypeV1",
+  "asset_root": "/Game/Naiwa/P1",
+  "map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Timed",
+  "map_tag": "NaiwaP1TimedMapV1",
+  "owner_tag": "NaiwaP1TimedGeneratedV1",
+  "camera_terrain_tag": "NaiwaP1GeneratedV1",
+  "platform_tag": "NaiwaP1TimedPlatformV1",
+  "spawn": [-600.0, 0.0, 212.0],
+  "platform": {
+    "at": [0.0, 0.0, 0.0],
+    "top_z": 120.0,
+    "extent": [210.0, 160.0, 20.0],
+    "stable_landing_seconds": 0.18,
+    "active_seconds": 3.8,
+    "disabled_seconds": 1.6
+  },
+  "terrain": [
+    {"id": "LeftBank", "left": -750.0, "right": -220.0, "top": 120.0, "thickness": 40.0, "depth": 700.0, "material": "left_bank"},
+    {"id": "RightBank", "left": 220.0, "right": 750.0, "top": 120.0, "thickness": 40.0, "depth": 700.0, "material": "right_bank"}
+  ]
+}

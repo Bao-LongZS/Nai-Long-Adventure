@@ -23,6 +23,8 @@ public:
     virtual void OnConstruction(const FTransform& Transform) override;
     virtual void BeginPlay() override;
     virtual void Tick(float DeltaSeconds) override;
+    virtual void OnJumped_Implementation() override;
+    virtual void FellOutOfWorld(const class UDamageType& DamageType) override;
     virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
     virtual void PawnClientRestart() override;
 
@@ -97,6 +99,15 @@ public:
     UFUNCTION(BlueprintCallable, Category = "Naiwa|Control")
     void TogglePause();
 
+    /** P1 GameMode calls these; P0 maps never use the extra control state. */
+    void SetP1ControlsLocked(bool bLocked);
+    void SetP1DeathPose(bool bEnabled);
+    bool TeleportForP1(const FVector& SafeLocation);
+    bool IsP1DeathPoseActive() const { return bP1DeathPose; }
+
+    /** Select a real Walk/Run gait for isolated P1 mechanism routes. */
+    bool SetP1Gait(bool bRun);
+
     UFUNCTION(BlueprintPure, Category = "Naiwa|State")
     FString GetLocomotionState() const;
 
@@ -140,6 +151,8 @@ protected:
     FVector SpawnLocation = FVector::ZeroVector;
     bool bFacingRight = true;
     bool bRunningGait = true;
+    bool bP1ControlsLocked = false;
+    bool bP1DeathPose = false;
     bool bAutomatedInput = false;
     float AutomatedMoveInput = 0.0f;
     int32 MoveInputEvents = 0;

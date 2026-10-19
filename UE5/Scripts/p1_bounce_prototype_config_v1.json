@@ -1,0 +1,17 @@
+{
+  "schema": "NaiwaP1BouncePrototypeV1",
+  "asset_root": "/Game/Naiwa/P1",
+  "map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Bounce",
+  "map_tag": "NaiwaP1BounceMapV1",
+  "owner_tag": "NaiwaP1BounceGeneratedV1",
+  "camera_terrain_tag": "NaiwaP1GeneratedV1",
+  "pad_tag": "NaiwaP1BouncePadV1",
+  "landing_tag": "NaiwaP1BounceLandingV1",
+  "hazard_tag": "NaiwaP1BounceHazardV1",
+  "launch_velocity_z": 1000.0,
+  "spawn": [-850.0, 0.0, 210.0],
+  "approach": {"left": -1300.0, "right": -200.0, "top": 120.0, "thickness": 40.0, "depth": 700.0},
+  "pad": {"x": 0.0, "y": 0.0, "z": 0.0, "extent": [160.0, 120.0, 12.0]},
+  "landing": {"left": 80.0, "right": 1380.0, "top": 180.0, "thickness": 40.0, "depth": 700.0},
+  "hazard": {"x": 1200.0, "y": 0.0, "z": 215.0, "extent": [20.0, 120.0, 35.0]}
+}

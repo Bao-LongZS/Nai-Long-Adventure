@@ -14,9 +14,9 @@ namespace
     {
         explicit FNaiwaAnimInstanceProxy(UAnimInstance* Instance) : FAnimInstanceProxy(Instance) {}
 
-        UAnimSequence* Sequences[3] = { nullptr, nullptr, nullptr };
-        float Times[3] = { 0.0f, 0.0f, 0.0f };
-        float Weights[3] = { 1.0f, 0.0f, 0.0f };
+        UAnimSequence* Sequences[4] = { nullptr, nullptr, nullptr, nullptr };
+        float Times[4] = { 0.0f, 0.0f, 0.0f, 0.0f };
+        float Weights[4] = { 1.0f, 0.0f, 0.0f, 0.0f };
         int32 State = 0;
         int32 PreviousState = 0;
         float BlendSeconds = 0.12f;
@@ -36,13 +36,14 @@ namespace
                 ResetGeneration = Instance->GetResetGeneration();
                 for (float& Time : Times) Time = 0.0f;
                 Weights[0] = 1.0f;
-                Weights[1] = Weights[2] = 0.0f;
+                Weights[1] = Weights[2] = Weights[3] = 0.0f;
                 PreviousState = 0;
                 bResetPosePending = true;
             }
             Sequences[0] = Instance->IdleSequence;
             Sequences[1] = Instance->WalkSequence;
             Sequences[2] = Instance->JumpSequence;
+            Sequences[3] = Instance->LaughSequence;
             State = static_cast<int32>(Instance->LocomotionState);
             BlendSeconds = FMath::Max(0.01f, Instance->TransitionSeconds);
             WalkRate = FMath::Clamp(Instance->Speed / FMath::Max(1.0f, Instance->WalkReferenceSpeed), 0.1f, 2.0f);
@@ -61,7 +62,7 @@ namespace
                 PreviousState = State;
             }
             float TotalWeight = 0.0f;
-            for (int32 Index = 0; Index < 3; ++Index)
+            for (int32 Index = 0; Index < 4; ++Index)
             {
                 Weights[Index] = FMath::FInterpConstantTo(Weights[Index], Index == State ? 1.0f : 0.0f,
                     AnimationDelta, 1.0f / BlendSeconds);
@@ -73,6 +74,11 @@ namespace
                     if (Index == 2)
                     {
                         Times[Index] = FMath::Min(Times[Index] + Advance, Length * JumpHoldFraction);
+                    }
+                    else if (Index == 3)
+                    {
+                        // A single death event advances Laugh once, then holds its last pose.
+                        Times[Index] = FMath::Min(Times[Index] + Advance, Length);
                     }
                     else if (Length > UE_SMALL_NUMBER)
                     {
@@ -95,7 +101,7 @@ namespace
             if (Sequences[Index])
             {
                 FAnimationPoseData PoseData(Context);
-                const FAnimExtractContext ExtractContext(Times[Index], false, {}, Index != 2);
+                const FAnimExtractContext ExtractContext(Times[Index], false, {}, Index < 2);
                 Sequences[Index]->GetAnimationPose(PoseData, ExtractContext);
             }
         }
@@ -107,18 +113,26 @@ namespace
             FPoseContext WalkPose(Output);
             FPoseContext JumpPose(Output);
             FPoseContext GroundPose(Output);
+            FPoseContext BasePose(Output);
+            FPoseContext LaughPose(Output);
             Sample(0, IdlePose);
             Sample(1, WalkPose);
             Sample(2, JumpPose);
+            Sample(3, LaughPose);
             const float GroundWeight = Weights[0] + Weights[1];
             FAnimationPoseData IdleData(IdlePose);
             FAnimationPoseData WalkData(WalkPose);
             FAnimationPoseData JumpData(JumpPose);
             FAnimationPoseData GroundData(GroundPose);
+            FAnimationPoseData BaseData(BasePose);
+            FAnimationPoseData LaughData(LaughPose);
             FAnimationPoseData OutputData(Output);
             FAnimationRuntime::BlendTwoPosesTogether(IdleData, WalkData,
                 GroundWeight > UE_SMALL_NUMBER ? Weights[0] / GroundWeight : 1.0f, GroundData);
-            FAnimationRuntime::BlendTwoPosesTogether(GroundData, JumpData, GroundWeight, OutputData);
+            const float BaseWeight = GroundWeight + Weights[2];
+            FAnimationRuntime::BlendTwoPosesTogether(GroundData, JumpData,
+                BaseWeight > UE_SMALL_NUMBER ? GroundWeight / BaseWeight : 1.0f, BaseData);
+            FAnimationRuntime::BlendTwoPosesTogether(BaseData, LaughData, BaseWeight, OutputData);
 
             // CharacterMovement alone moves the capsule. Keep the skeleton Root at its reference transform.
             if (Output.Pose.GetNumBones() > 0)
@@ -160,8 +174,9 @@ void UNaiwaAnimInstance::CaptureCharacterState()
         LaughSequence = Character->LaughSequence;
         Speed = FMath::Abs(Character->GetVelocity().X);
         bIsFalling = Character->GetCharacterMovement()->IsFalling();
-        LocomotionState = bIsFalling ? ENaiwaLocomotionState::Jump
-            : (Speed > 3.0f ? ENaiwaLocomotionState::Walk : ENaiwaLocomotionState::Idle);
+        LocomotionState = Character->IsP1DeathPoseActive() ? ENaiwaLocomotionState::Laugh
+            : (bIsFalling ? ENaiwaLocomotionState::Jump
+                : (Speed > 3.0f ? ENaiwaLocomotionState::Walk : ENaiwaLocomotionState::Idle));
     }
 }
 

@@ -1,0 +1,26 @@
+{
+  "schema": "NaiwaP1SwitchPrototypeV1",
+  "asset_root": "/Game/Naiwa/P1",
+  "map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Switch",
+  "map_tag": "NaiwaP1SwitchMapV1",
+  "owner_tag": "NaiwaP1SwitchGeneratedV1",
+  "camera_terrain_tag": "NaiwaP1GeneratedV1",
+  "platform_tag": "NaiwaP1SwitchPlatformV1",
+  "spawn": [-1100.0, 0.0, 212.0],
+  "platform": {
+    "at": [0.0, 0.0, 0.0],
+    "dock_left_x": -420.0,
+    "dock_right_x": 420.0,
+    "left_switch_x": -850.0,
+    "right_switch_x": 850.0,
+    "top_z": 120.0,
+    "extent": [120.0, 160.0, 20.0],
+    "travel_speed_cm_per_second": 300.0,
+    "stable_boarding_seconds": 0.25,
+    "departure_cue_seconds": 0.65
+  },
+  "terrain": [
+    {"id": "LeftBank", "left": -1300.0, "right": -550.0, "top": 120.0, "thickness": 40.0, "depth": 700.0, "material": "left_bank"},
+    {"id": "RightBank", "left": 550.0, "right": 1300.0, "top": 120.0, "thickness": 40.0, "depth": 700.0, "material": "right_bank"}
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "NaiwaP1LevelV1",
+  "owner_tag": "NaiwaP1GeneratedV1",
+  "map_tag": "NaiwaP1MapV1",
+  "asset_root": "/Game/Naiwa/P1",
+  "camera_candidate": {
+    "distance_cm": 1000.0,
+    "height_offset_cm": 100.0,
+    "fov_degrees": 65.0,
+    "status": "candidate_until_visible_window_review"
+  },
+  "slice": {
+    "map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Slice",
+    "spawn": [0.0, 0.0, 92.2],
+    "blocks": [
+      {"id": "floor", "x": 1075.0, "top": 0.0, "width": 2850.0, "thickness": 100.0, "material": "ground"},
+      {"id": "stair_1", "x": 500.0, "top": 80.0, "width": 440.0, "thickness": 70.0, "material": "platform"},
+      {"id": "stair_2", "x": 900.0, "top": 150.0, "width": 440.0, "thickness": 70.0, "material": "platform"},
+      {"id": "stair_3", "x": 1300.0, "top": 80.0, "width": 350.0, "thickness": 70.0, "material": "platform"},
+      {"id": "bypass", "x": 1800.0, "top": 120.0, "width": 500.0, "thickness": 70.0, "material": "platform"}
+    ],
+    "triggers": [
+      {"id": "pickup_main", "kind": "Pickup", "at": [500.0, 0.0, 172.0], "extent": [38.0, 110.0, 65.0], "material": "pickup"},
+      {"id": "checkpoint_1", "kind": "Checkpoint", "at": [900.0, 0.0, 242.0], "extent": [42.0, 110.0, 85.0], "material": "checkpoint"},
+      {"id": "hazard_1", "kind": "Hazard", "at": [1510.0, 0.0, 35.0], "extent": [34.0, 110.0, 35.0], "material": "hazard"},
+      {"id": "goal", "kind": "Goal", "at": [2240.0, 0.0, 105.0], "extent": [65.0, 120.0, 105.0], "material": "goal"},
+      {"id": "killz", "kind": "KillZ", "at": [1100.0, 0.0, -530.0], "extent": [2300.0, 350.0, 35.0]}
+    ],
+    "reachability_note": "Candidate only. Verify the Walk 150 and Run 300 routes, trap access, and checkpoint return to pickup in a visible game before full expansion."
+  },
+  "full": {
+    "enabled_after_slice_acceptance": false,
+    "map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Level1",
+    "spawn": [0.0, 0.0, 92.2],
+    "terrain_block_count_target": 11,
+    "hazard_count_target": 9,
+    "terrain_centers_x": [0.0, 400.0, 800.0, 1200.0, 1600.0, 2000.0, 2400.0, 2800.0, 3200.0, 3600.0, 4000.0],
+    "terrain_top_z": [0.0, 80.0, 160.0, 80.0, 0.0, 0.0, 0.0, 80.0, 160.0, 80.0, 0.0],
+    "terrain_width_cm": 400.0,
+    "terrain_depth_cm": 700.0,
+    "hazard_centers_x_candidate": [600.0, 1000.0, 1400.0, 1800.0, 2200.0, 2600.0, 3000.0, 3400.0, 3800.0],
+    "reachability_note": "Layout scaffold from the old eleven-block rhythm, resized for the 172 cm capsule. Do not generate or freeze until the slice is accepted and all hazard bypasses are designed and tested."
+  }
+}

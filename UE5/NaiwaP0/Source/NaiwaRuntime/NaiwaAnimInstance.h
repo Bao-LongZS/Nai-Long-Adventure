@@ -11,7 +11,8 @@ enum class ENaiwaLocomotionState : uint8
 {
     Idle,
     Walk,
-    Jump
+    Jump,
+    Laugh
 };
 
 /** The native pose graph remains active when this class is the parent of ABP_Naiwa. */

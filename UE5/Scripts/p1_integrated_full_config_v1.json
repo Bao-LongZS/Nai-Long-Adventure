@@ -1,0 +1,404 @@
+{
+  "schema": "NaiwaP1IntegratedFullV1",
+  "phase": "P1-5b_full_candidate",
+  "asset_root": "/Game/Naiwa/P1",
+  "map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Integrated",
+  "kill_z": -1000.0,
+  "required_pickup_count": 1,
+  "base_config_sha256": "391cec36cc1504177bd911a11bbada4e2edb8f4383a361e10fd59be12370e7b8",
+  "base_teaching_slice": {
+    "schema": "NaiwaP1IntegratedTeachingSliceV1",
+    "phase": "P1-5b_partial_teaching_slice",
+    "asset_root": "/Game/Naiwa/P1",
+    "map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Integrated",
+    "map_tag": "NaiwaP1IntegratedTeachingMapV1",
+    "owner_tag": "NaiwaP1IntegratedGeneratedV1",
+    "camera_terrain_tag": "NaiwaP1GeneratedV1",
+    "switch_tag": "NaiwaP1IntegratedSwitchV1",
+    "bounce_tag": "NaiwaP1IntegratedBounceV1",
+    "hazard_tag": "NaiwaP1IntegratedHazardV1",
+    "checkpoint_tag": "NaiwaP1IntegratedCheckpointV1",
+    "cue_tag": "NaiwaP1IntegratedHazardCueV1",
+    "spawn": [
+      -1450.0,
+      0.0,
+      212.0
+    ],
+    "kill_z": -1000.0,
+    "terrain": [
+      {
+        "id": "LeftBank",
+        "left": -1600.0,
+        "right": -550.0,
+        "top": 120.0,
+        "thickness": 40.0,
+        "depth": 700.0,
+        "material": "left_bank"
+      },
+      {
+        "id": "RightBank",
+        "left": 550.0,
+        "right": 1460.0,
+        "top": 120.0,
+        "thickness": 40.0,
+        "depth": 700.0,
+        "material": "right_bank"
+      },
+      {
+        "id": "BounceLanding",
+        "left": 1740.0,
+        "right": 3120.0,
+        "top": 180.0,
+        "thickness": 40.0,
+        "depth": 700.0,
+        "material": "landing"
+      }
+    ],
+    "hazard": {
+      "id": "IntegratedHiddenHazard01",
+      "at": [
+        -1160.0,
+        0.0,
+        155.0
+      ],
+      "extent": [
+        20.0,
+        120.0,
+        35.0
+      ]
+    },
+    "hazard_cue": {
+      "at": [
+        -1300.0,
+        0.0,
+        123.0
+      ],
+      "scale": [
+        0.2,
+        2.5,
+        0.06
+      ]
+    },
+    "switch": {
+      "at": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dock_left_x": -420.0,
+      "dock_right_x": 420.0,
+      "left_switch_x": -850.0,
+      "right_switch_x": 850.0,
+      "top_z": 120.0,
+      "extent": [
+        120.0,
+        160.0,
+        20.0
+      ],
+      "travel_speed_cm_per_second": 300.0,
+      "stable_boarding_seconds": 0.25,
+      "departure_cue_seconds": 0.65
+    },
+    "bounce": {
+      "at": [
+        1660.0,
+        0.0,
+        0.0
+      ],
+      "extent": [
+        160.0,
+        120.0,
+        12.0
+      ],
+      "launch_velocity_z": 1000.0
+    },
+    "checkpoint": {
+      "id": "IntegratedCheckpoint01",
+      "at": [
+        2700.0,
+        0.0,
+        272.0
+      ],
+      "extent": [
+        42.0,
+        110.0,
+        85.0
+      ],
+      "respawn_offset": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "design_note": "Partial P1-5b teaching slice only: visible ground warning precedes a hidden hazard, followed by the touch-switch shuttle, bounce pad and a static checkpoint. The timed platform, required pickup, goal and combination segments are intentionally absent. Geometry is a candidate; Walk/Run physical traversal, checkpoint return, bounce camera framing and visual readability remain unverified."
+  },
+  "protected_packages": [
+    "Content/Naiwa/Maps/L_NaiwaGraybox.umap",
+    "Content/Naiwa/Blueprints/BP_NaiwaCharacter.uasset",
+    "Content/Naiwa/Blueprints/BP_NaiwaGameMode.uasset",
+    "Content/Naiwa/Input/IMC_Naiwa.uasset",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Slice.umap",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Full.umap",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Bounce.umap",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Switch.umap",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Timed.umap",
+    "Content/Naiwa/P1/BP_NaiwaP1Character.uasset",
+    "Content/Naiwa/P1/BP_NaiwaP1GameMode.uasset"
+  ],
+  "extension_actors": [
+    {
+      "role": "TimedTeaching",
+      "kind": "Timed",
+      "id": "TimedTeaching01",
+      "tag": "NaiwaP1IntegratedFullTimedTeaching01V1",
+      "material": "timed",
+      "at": [
+        3340.0,
+        0.0,
+        0.0
+      ],
+      "top_z": 180.0,
+      "extent": [
+        210.0,
+        160.0,
+        20.0
+      ],
+      "stable_landing_seconds": 0.18,
+      "active_seconds": 4.3,
+      "disabled_seconds": 1.6
+    },
+    {
+      "role": "Terrain_TimedExit",
+      "kind": "Terrain",
+      "id": "TimedExitBank",
+      "tag": "NaiwaP1IntegratedFullTimedExitBankV1",
+      "material": "landing",
+      "left": 3560.0,
+      "right": 4500.0,
+      "top": 180.0,
+      "thickness": 40.0,
+      "depth": 700.0
+    },
+    {
+      "role": "SwitchCombination",
+      "kind": "Switch",
+      "id": "SwitchCombination01",
+      "tag": "NaiwaP1IntegratedFullSwitchCombination01V1",
+      "material": "switch_platform",
+      "at": [
+        5050.0,
+        0.0,
+        60.0
+      ],
+      "dock_left_x": -420.0,
+      "dock_right_x": 420.0,
+      "left_switch_x": -800.0,
+      "right_switch_x": 710.0,
+      "top_z": 120.0,
+      "extent": [
+        120.0,
+        160.0,
+        20.0
+      ],
+      "travel_speed_cm_per_second": 300.0,
+      "stable_boarding_seconds": 0.25,
+      "departure_cue_seconds": 0.65
+    },
+    {
+      "role": "Terrain_CombinationBank",
+      "kind": "Terrain",
+      "id": "CombinationBank",
+      "tag": "NaiwaP1IntegratedFullCombinationBankV1",
+      "material": "landing",
+      "left": 5600.0,
+      "right": 6500.0,
+      "top": 180.0,
+      "thickness": 40.0,
+      "depth": 700.0
+    },
+    {
+      "role": "HazardCueCombination",
+      "kind": "Cue",
+      "id": "HazardCueCombination01",
+      "tag": "NaiwaP1IntegratedFullHazardCueCombination01V1",
+      "material": "cue",
+      "at": [
+        5780.0,
+        0.0,
+        183.0
+      ],
+      "scale": [
+        0.2,
+        2.5,
+        0.06
+      ]
+    },
+    {
+      "role": "HazardCombination",
+      "kind": "Hazard",
+      "id": "IntegratedHiddenHazard02",
+      "tag": "NaiwaP1IntegratedFullIntegratedHiddenHazard02V1",
+      "material": "hazard",
+      "at": [
+        5950.0,
+        0.0,
+        215.0
+      ],
+      "extent": [
+        20.0,
+        120.0,
+        35.0
+      ]
+    },
+    {
+      "role": "CheckpointCombination",
+      "kind": "Checkpoint",
+      "id": "IntegratedCheckpoint02",
+      "tag": "NaiwaP1IntegratedFullIntegratedCheckpoint02V1",
+      "material": "checkpoint",
+      "at": [
+        6220.0,
+        0.0,
+        272.0
+      ],
+      "extent": [
+        42.0,
+        110.0,
+        85.0
+      ],
+      "respawn_offset": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "BounceCombination",
+      "kind": "Bounce",
+      "id": "BounceCombination01",
+      "tag": "NaiwaP1IntegratedFullBounceCombination01V1",
+      "material": "bounce",
+      "at": [
+        6700.0,
+        0.0,
+        60.0
+      ],
+      "extent": [
+        160.0,
+        120.0,
+        12.0
+      ],
+      "launch_velocity_z": 1000.0
+    },
+    {
+      "role": "TimedCombination",
+      "kind": "Timed",
+      "id": "TimedCombination01",
+      "tag": "NaiwaP1IntegratedFullTimedCombination01V1",
+      "material": "timed",
+      "at": [
+        6990.0,
+        0.0,
+        0.0
+      ],
+      "top_z": 360.0,
+      "extent": [
+        210.0,
+        160.0,
+        20.0
+      ],
+      "stable_landing_seconds": 0.18,
+      "active_seconds": 4.3,
+      "disabled_seconds": 1.6
+    },
+    {
+      "role": "Terrain_FinalBank",
+      "kind": "Terrain",
+      "id": "FinalBank",
+      "tag": "NaiwaP1IntegratedFullFinalBankV1",
+      "material": "landing",
+      "left": 7210.0,
+      "right": 8500.0,
+      "top": 360.0,
+      "thickness": 40.0,
+      "depth": 700.0
+    },
+    {
+      "role": "CheckpointFinal",
+      "kind": "Checkpoint",
+      "id": "IntegratedCheckpoint03",
+      "tag": "NaiwaP1IntegratedFullIntegratedCheckpoint03V1",
+      "material": "checkpoint",
+      "at": [
+        7480.0,
+        0.0,
+        452.0
+      ],
+      "extent": [
+        42.0,
+        110.0,
+        85.0
+      ],
+      "respawn_offset": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "PickupRequired",
+      "kind": "Pickup",
+      "id": "IntegratedRequiredPickup01",
+      "tag": "NaiwaP1IntegratedFullIntegratedRequiredPickup01V1",
+      "material": "pickup",
+      "at": [
+        7900.0,
+        0.0,
+        422.0
+      ],
+      "extent": [
+        35.0,
+        90.0,
+        42.0
+      ]
+    },
+    {
+      "role": "Goal",
+      "kind": "Goal",
+      "id": "IntegratedGoal01",
+      "tag": "NaiwaP1IntegratedFullIntegratedGoal01V1",
+      "material": "goal",
+      "at": [
+        8220.0,
+        0.0,
+        452.0
+      ],
+      "extent": [
+        50.0,
+        110.0,
+        85.0
+      ]
+    }
+  ],
+  "teaching_then_combination": [
+    "retained_hidden_hazard_warning",
+    "retained_switch_shuttle",
+    "retained_bounce",
+    "timed_platform_teaching",
+    "switch_shuttle_then_warned_hazard_exit",
+    "bounce_to_timed_platform",
+    "required_pickup_then_goal"
+  ],
+  "design_risks": [
+    "Pending runtime: the 4.3s timed teaching budget uses the prototype observed Walk150 trigger-to-bank 3.367s (estimated 0.933s margin), not only 440cm/150. Re-measure in this saved map.",
+    "Pending runtime: combination timed landing x depends on Walk/Run bounce entry. Measure actual countdown trigger x, trigger-to-safe-bank time, and late landings; 4.3s is a candidate budget.",
+    "Combination front bank top180; pad top72; target top360. Prior normal-jump foot peak about323 and bounce foot peak about436 suggest 37cm normal-jump exclusion and 76cm bounce clearance, but capsule/step/flight timing can invalidate either estimate.",
+    "The existing first bounce teaching is deliberately preserved; Run300 may bypass it with an ordinary jump because that landing is only60cm higher. Do not claim mandatory bounce teaching from first-segment route PASS.",
+    "Switch+hazard is a shuttle crossing followed by a warned landing-bank hazard, not a switch-controlled hazard. Validate that both mechanics form a readable shared segment and cannot be skipped accidentally.",
+    "All three checkpoints precede the single required pickup. Death resets pickup and mechanisms; test every checkpoint through reacquisition to goal, including timed reset and both-side shuttle recall. No fallback to spawn is accepted.",
+    "No static collision exists under the timed gaps or bounce pad. A miss must naturally reach KillZ=-1000 and respawn on the corresponding static bank; check dynamic-platform recovery never traps the capsule.",
+    "Final top360 is likely a one-way height change; the required pickup stays after the final checkpoint so return travel is not required. Confirm goal lock, death reset, R reset and pickup overlap.",
+    "World camera adaptation sees terrain tag NaiwaP1GeneratedV1 on new static banks; bounce apex/target, countdown and both switch sides still require visible-window framing.",
+    "Build success only means saved-and-reloaded actor semantics. New full route, every-checkpoint death retry, Walk/Run real keyboard, visual and recoverable evidence remain pending; old L_NaiwaP1_Full PASS is not applicable."
+  ]
+}

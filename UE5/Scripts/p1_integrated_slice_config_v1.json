@@ -1,0 +1,54 @@
+{
+  "schema": "NaiwaP1IntegratedTeachingSliceV1",
+  "phase": "P1-5b_partial_teaching_slice",
+  "asset_root": "/Game/Naiwa/P1",
+  "map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Integrated",
+  "map_tag": "NaiwaP1IntegratedTeachingMapV1",
+  "owner_tag": "NaiwaP1IntegratedGeneratedV1",
+  "camera_terrain_tag": "NaiwaP1GeneratedV1",
+  "switch_tag": "NaiwaP1IntegratedSwitchV1",
+  "bounce_tag": "NaiwaP1IntegratedBounceV1",
+  "hazard_tag": "NaiwaP1IntegratedHazardV1",
+  "checkpoint_tag": "NaiwaP1IntegratedCheckpointV1",
+  "cue_tag": "NaiwaP1IntegratedHazardCueV1",
+  "spawn": [-1450.0, 0.0, 212.0],
+  "kill_z": -1000.0,
+  "terrain": [
+    {"id": "LeftBank", "left": -1600.0, "right": -550.0, "top": 120.0, "thickness": 40.0, "depth": 700.0, "material": "left_bank"},
+    {"id": "RightBank", "left": 550.0, "right": 1460.0, "top": 120.0, "thickness": 40.0, "depth": 700.0, "material": "right_bank"},
+    {"id": "BounceLanding", "left": 1740.0, "right": 3120.0, "top": 180.0, "thickness": 40.0, "depth": 700.0, "material": "landing"}
+  ],
+  "hazard": {
+    "id": "IntegratedHiddenHazard01",
+    "at": [-1160.0, 0.0, 155.0],
+    "extent": [20.0, 120.0, 35.0]
+  },
+  "hazard_cue": {
+    "at": [-1300.0, 0.0, 123.0],
+    "scale": [0.2, 2.5, 0.06]
+  },
+  "switch": {
+    "at": [0.0, 0.0, 0.0],
+    "dock_left_x": -420.0,
+    "dock_right_x": 420.0,
+    "left_switch_x": -850.0,
+    "right_switch_x": 850.0,
+    "top_z": 120.0,
+    "extent": [120.0, 160.0, 20.0],
+    "travel_speed_cm_per_second": 300.0,
+    "stable_boarding_seconds": 0.25,
+    "departure_cue_seconds": 0.65
+  },
+  "bounce": {
+    "at": [1660.0, 0.0, 0.0],
+    "extent": [160.0, 120.0, 12.0],
+    "launch_velocity_z": 1000.0
+  },
+  "checkpoint": {
+    "id": "IntegratedCheckpoint01",
+    "at": [2700.0, 0.0, 272.0],
+    "extent": [42.0, 110.0, 85.0],
+    "respawn_offset": [0.0, 0.0, 0.0]
+  },
+  "design_note": "Partial P1-5b teaching slice only: visible ground warning precedes a hidden hazard, followed by the touch-switch shuttle, bounce pad and a static checkpoint. The timed platform, required pickup, goal and combination segments are intentionally absent. Geometry is a candidate; Walk/Run physical traversal, checkpoint return, bounce camera framing and visual readability remain unverified."
+}

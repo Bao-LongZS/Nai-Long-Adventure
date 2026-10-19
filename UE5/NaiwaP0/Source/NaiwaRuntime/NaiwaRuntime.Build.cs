@@ -8,6 +8,6 @@ public class NaiwaRuntime : ModuleRules
         PublicDependencyModuleNames.AddRange(new[] {
             "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput"
         });
-        PrivateDependencyModuleNames.AddRange(new[] { "Json", "JsonUtilities", "RenderCore", "RHI" });
+        PrivateDependencyModuleNames.AddRange(new[] { "Json", "JsonUtilities", "RenderCore", "RHI", "Niagara" });
     }
 }

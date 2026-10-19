@@ -1,0 +1,44 @@
+{
+  "schema": "NaiwaP1FullLevelV1",
+  "owner_tag": "NaiwaP1GeneratedV1",
+  "map_tag": "NaiwaP1FullMapV1",
+  "asset_root": "/Game/Naiwa/P1",
+  "map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Full",
+  "spawn": [0.0, 0.0, 92.2],
+  "terrain_blocks": [
+    {"id": "01", "x": 0.0, "top": 0.0, "width": 400.0, "thickness": 100.0},
+    {"id": "02", "x": 400.0, "top": 80.0, "width": 400.0, "thickness": 180.0},
+    {"id": "03", "x": 800.0, "top": 160.0, "width": 400.0, "thickness": 260.0},
+    {"id": "04", "x": 1200.0, "top": 80.0, "width": 400.0, "thickness": 180.0},
+    {"id": "05", "x": 1600.0, "top": 0.0, "width": 400.0, "thickness": 100.0},
+    {"id": "06", "x": 2000.0, "top": 0.0, "width": 400.0, "thickness": 100.0},
+    {"id": "07", "x": 2400.0, "top": 0.0, "width": 400.0, "thickness": 100.0},
+    {"id": "08", "x": 2800.0, "top": 80.0, "width": 400.0, "thickness": 180.0},
+    {"id": "09", "x": 3200.0, "top": 160.0, "width": 400.0, "thickness": 260.0},
+    {"id": "10", "x": 3600.0, "top": 80.0, "width": 400.0, "thickness": 180.0},
+    {"id": "11", "x": 4000.0, "top": 0.0, "width": 400.0, "thickness": 100.0}
+  ],
+  "auxiliary_platforms": [
+    {"id": "cloud_west", "x": 800.0, "top": 370.0, "width": 200.0, "thickness": 20.0, "material": "cloud"},
+    {"id": "leaf_west", "x": 1800.0, "top": 210.0, "width": 120.0, "thickness": 20.0, "material": "leaf"},
+    {"id": "tree_canopy", "x": 1860.0, "top": 210.0, "width": 120.0, "thickness": 24.0, "material": "tree"},
+    {"id": "leaf_east", "x": 1000.0, "top": 370.0, "width": 120.0, "thickness": 20.0, "material": "leaf"},
+    {"id": "cloud_east", "x": 3440.0, "top": 370.0, "width": 180.0, "thickness": 20.0, "material": "cloud"}
+  ],
+  "triggers": [
+    {"id": "hazard_01", "kind": "Hazard", "at": [480.0, 0.0, 105.0], "extent": [16.0, 110.0, 25.0], "material": "hazard"},
+    {"id": "hazard_02", "kind": "Hazard", "at": [800.0, 0.0, 395.0], "extent": [18.0, 110.0, 25.0], "material": "hazard"},
+    {"id": "hazard_03", "kind": "Hazard", "at": [1280.0, 0.0, 105.0], "extent": [16.0, 110.0, 25.0], "material": "hazard"},
+    {"id": "hazard_04", "kind": "Hazard", "at": [1800.0, 0.0, 235.0], "extent": [18.0, 110.0, 25.0], "material": "hazard"},
+    {"id": "hazard_05", "kind": "Hazard", "at": [2080.0, 0.0, 25.0], "extent": [16.0, 110.0, 25.0], "material": "hazard"},
+    {"id": "hazard_06", "kind": "Hazard", "at": [1860.0, 0.0, 235.0], "extent": [18.0, 110.0, 25.0], "material": "hazard"},
+    {"id": "hazard_07", "kind": "Hazard", "at": [2880.0, 0.0, 105.0], "extent": [16.0, 110.0, 25.0], "material": "hazard"},
+    {"id": "hazard_08", "kind": "Hazard", "at": [3440.0, 0.0, 395.0], "extent": [18.0, 110.0, 25.0], "material": "hazard"},
+    {"id": "hazard_09", "kind": "Hazard", "at": [3680.0, 0.0, 105.0], "extent": [16.0, 110.0, 25.0], "material": "hazard"},
+    {"id": "checkpoint_1", "kind": "Checkpoint", "at": [1080.0, 0.0, 172.0], "extent": [42.0, 110.0, 85.0], "respawn_offset": [60.0, 0.0, 50.0], "material": "checkpoint"},
+    {"id": "pickup_main", "kind": "Pickup", "at": [2690.0, 0.0, 172.0], "extent": [38.0, 110.0, 65.0], "material": "pickup"},
+    {"id": "goal", "kind": "Goal", "at": [4090.0, 0.0, 105.0], "extent": [65.0, 120.0, 105.0], "material": "goal"},
+    {"id": "killz", "kind": "KillZ", "at": [2000.0, 0.0, -530.0], "extent": [4000.0, 350.0, 40.0]}
+  ],
+  "design_note": "Five narrow ground traps can be hopped over in Walk or Run; four optional traps sit on separately collidable cloud, leaf, and tree platforms. The leaf/tree trap ledges begin after the x1200 ground-trap landing arc and end before the x1990 next takeoff. The eastern cloud ledge begins after the x2790/x2960 landing arcs and ends before the x3600 takeoff. The checkpoint precedes the only required pickup, so the pickup remains ahead after every death."
+}
