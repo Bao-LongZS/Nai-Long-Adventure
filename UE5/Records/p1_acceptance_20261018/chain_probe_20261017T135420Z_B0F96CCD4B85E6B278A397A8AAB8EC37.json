@@ -1,0 +1,33 @@
+{
+	"schema": "NaiwaP1ChainProbeV1",
+	"status": "measured",
+	"map": "L_NaiwaP1_ChainProbe",
+	"gait": "Walk150",
+	"capsule_radius_cm": 86,
+	"capsule_half_height_cm": 90,
+	"gap_cm": 240,
+	"island_cm": 400,
+	"gap_count": 3,
+	"gaps_cleared": 0,
+	"chain_completed": false,
+	"every_jump_launched": true,
+	"min_runway_after_land_cm": 0,
+	"total_air_seconds": 0,
+	"min_z_cm": 89.757270812988281,
+	"gaps": [
+		{
+			"gap_index": 0,
+			"gap_cm": 240,
+			"outcome": "dropped",
+			"grounded_at_jump": true,
+			"jump_launched": true,
+			"jump_vz_cm_s": 650,
+			"jump_x_cm": 516.03179931640625,
+			"land_x_cm": 0,
+			"air_seconds": 0,
+			"peak_z_cm": 476.72073364257812,
+			"runway_after_land_cm": -1,
+			"grounded_seconds_before_jump": 4.8362360000610352
+		}
+	]
+}

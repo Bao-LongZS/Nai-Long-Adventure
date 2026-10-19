@@ -1,0 +1,2760 @@
+{
+  "created_utc": "2026-10-15T03:46:45Z",
+  "purpose": "Read-only snapshot of delivered P0 before P1 modifications; engine-generated Binaries/Intermediate/DerivedDataCache excluded.",
+  "repository_head": "32d7d29d928e863f1e3adff359b4c52619bfde50",
+  "repository_status_before_capture": [
+    "?? UE5/Records/P1_计划书_20261014.md",
+    "?? UE5/Scripts/capture_p1_0_baseline.ps1"
+  ],
+  "project": "UE5/NaiwaP0/Nai_Long.uproject",
+  "level": "UE5/NaiwaP0/Content/Naiwa/Maps/L_NaiwaGraybox.umap",
+  "engine": "5.8.3-58210709",
+  "p0_final_test_run": "20261013T053123Z_44908",
+  "new_process_p0_launch": "pending_reliable_verification",
+  "archive": "p0_before_p1.zip",
+  "archive_bytes": 252894590,
+  "archive_sha256": "e512133ec96ff268c5e72c6bbebf0141e8b11d0e94bbe2e1e9545fcf8be0e443",
+  "file_count": 548,
+  "files": [
+    {
+      "path": "UE5/launch_p0.ps1",
+      "bytes": 1277,
+      "sha256": "edf29321e3937ff3b664011491aea2a1794a391583eb0916a7b226621b3a8947"
+    },
+    {
+      "path": "UE5/NaiwaP0/Config/DefaultEditor.ini",
+      "bytes": 251,
+      "sha256": "f7fa0669877eb782e14bf0f7ee63298a10b92c0f38e215ae41a478a70f018d81"
+    },
+    {
+      "path": "UE5/NaiwaP0/Config/DefaultEditorPerProjectUserSettings.ini",
+      "bytes": 70,
+      "sha256": "8ec6963909ae5bbbb6f024029c007522f351b071c78495ab8f075bda5ee4c42c"
+    },
+    {
+      "path": "UE5/NaiwaP0/Config/DefaultEngine.ini",
+      "bytes": 3420,
+      "sha256": "bc36f5e4ad4746b65f8f3077c529aef17b361dbfaf85379eba5c6ed484b9e537"
+    },
+    {
+      "path": "UE5/NaiwaP0/Config/DefaultGame.ini",
+      "bytes": 313,
+      "sha256": "eb64143ab268f8f765feddc9ea1edc4ed12a5e87814f07395fed71dee44cd7a4"
+    },
+    {
+      "path": "UE5/NaiwaP0/Config/DefaultInput.ini",
+      "bytes": 9279,
+      "sha256": "3bd66794c1306e0844dcfa81cc7c3a3718dd798f373d72868487df4f43e44034"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/0/9R/UKIMD8EYGPZFS8OC6GX24A.uasset",
+      "bytes": 4665,
+      "sha256": "fcc1060527c489fb8e33b8a3752fc86d65f7d3cdb9c4bbb044dfefccad6b124d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/1/EU/X5MT1GOX9C5UUGZAKRVC3R.uasset",
+      "bytes": 4373,
+      "sha256": "50d947877d507c95b765d9b3a3abab19739d6d0f41e6c7fa35a67e223d189023"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/1/K3/79QZQ7KG2RXNWMD6RSPKUM.uasset",
+      "bytes": 4371,
+      "sha256": "c6c82f9d1fc5f5cbfc3e0ff029862e718a80cd9ff9f59e0c495f873f8d815219"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/1/KL/UYSRPQ5SOYIFVLEQINPH31.uasset",
+      "bytes": 4569,
+      "sha256": "67e1837f62649ac749d1ba75c4431602110aef8a648a4eb5b84f5f5490832d7c"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/1/MV/2U2IE6JXO1320Q32RJQKSE.uasset",
+      "bytes": 4727,
+      "sha256": "0517da9397218cf46cf5db73305b412848d3325b302ac11c4ecda325e6da6a92"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/1/X5/JDOWWCJ7DZVSHT4Y29GQ4D.uasset",
+      "bytes": 4373,
+      "sha256": "0041dd5c5f354e58fe0d681490fad5162013ced33e4856a33f86cb3daa0789f5"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/2/AM/9YGDW7FMEY1CZD31VUYO11.uasset",
+      "bytes": 5271,
+      "sha256": "4228732dd1d3826717b668980a23af543daec697e6b469ad9d0f88aa246324f4"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/2/AX/QEPSHOMS1K2ANUR3LXWOJM.uasset",
+      "bytes": 4665,
+      "sha256": "4602c5ff270ae3f56633b28275fd4430e9853d8b6d1c1b30f801b55db7df43ef"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/2/TV/DYUIEBPX2N8UFXT326WX2O.uasset",
+      "bytes": 4721,
+      "sha256": "b5d9e958280ea231d5f413eae02e1d00448f9e979c2715bbee865ba6adf2094b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/2/V0/9XTUAMN5S6UUCFB5K0ZGZM.uasset",
+      "bytes": 4667,
+      "sha256": "0740b3c48e2a86ae0e6b8f2a57128b55d9a9150d3020c4cdd451edb69cd9bcd7"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/3/0N/NTRPN55OWWUSD03K29ZOSH.uasset",
+      "bytes": 3982,
+      "sha256": "7582c3a747bc6768a187ec5d99e000dc7aeb944b0cd0dfe73c203b17e5d84e5f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/3/C5/3LNK9WKCBL4YVMWIBXQZ1I.uasset",
+      "bytes": 4699,
+      "sha256": "bad12184219cf6228a6c12dde934b3acd8bdf54ef2c3efd55629097907a9092d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/3/D3/XWEMBL7KZTNQP83W1KTMXE.uasset",
+      "bytes": 4427,
+      "sha256": "1cbf22ea1591837bd98cad4630de112d1dd845c5ec17513dee07ae6b884147a7"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/3/E2/L159AMTR83MORHTF2GEOKE.uasset",
+      "bytes": 4699,
+      "sha256": "ecc364fc3ca8ac6be41fd6678969db9988c321b485fd2e9631fb4accef3a242a"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/3/L5/790AP8RYBMX9YBLGTW6WE6.uasset",
+      "bytes": 4373,
+      "sha256": "401926d52aa019c3ecf608045ecaf76a25bc3476b91edefe3934ae039ad93fe0"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/4/CQ/I205QOSSXONYWBP69RVMVA.uasset",
+      "bytes": 4585,
+      "sha256": "239c53042288f4b190cd736dd95a09c4d781ff0e6caa278c473b329c04d00869"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/5/25/3IO0LF8AOO4YLSEAEN2JO1.uasset",
+      "bytes": 4667,
+      "sha256": "fb301f5c7c1357068be1db6ac00e786d09d8d75f48d5247b6e5a8d71c25d005e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/5/9M/BJR5SDQDQW7QDFFPNUUMNX.uasset",
+      "bytes": 4699,
+      "sha256": "cf8f07d3823652f9ccaa9a51a90437e459121c2b4bb3ab4f9e068d83c279c992"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/5/KG/ETKAO35ANVW90XFH3J8GJ2.uasset",
+      "bytes": 4257,
+      "sha256": "c46a9b87b994d4980b31ae98b17c43bdfad88ee012bf86381edcd3b097a9baa8"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/5/W9/ZAAGYIUQZ2W6WEO3HPXAX7.uasset",
+      "bytes": 4259,
+      "sha256": "9e271778dbd64a2415a3153b7876bd837aa8e8c5162346b566340d3b3851682f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/6/3C/KAT90QYQLFOHNMOF9BEDZK.uasset",
+      "bytes": 4665,
+      "sha256": "a280012bb325b7138a87a9972d3a7cd296e86c11a3ac019fb0f2948356dd693f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/6/8I/HFL05AWIVBP8M8UXTV4H5K.uasset",
+      "bytes": 4259,
+      "sha256": "13b40bea681cb7072c2b45cd7195a9086efd9feab31d168a47c3b71ce7c1a5fc"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/6/G9/77SUGCMHUBU5E7FP1DLCVD.uasset",
+      "bytes": 4727,
+      "sha256": "01e9ed1e1a92c8093e7d59b553b7bd63dd852044a4ace54aca2bda83e402ff6f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/6/UK/OT5UOZ3WBJ9P30TU3DBDEK.uasset",
+      "bytes": 4665,
+      "sha256": "765234f9cf1fffc1fcf1869cf10020d12a151b44f62011168800d51820853a82"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/6/XM/SN8KJL01L24VVIYC52MNFR.uasset",
+      "bytes": 4665,
+      "sha256": "4ad373eaffb2ea7902d5490935cf3157178f469af5dae89d727357cd566750ea"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/6/YB/C5UDZYKFL5M0YW62JXMPIZ.uasset",
+      "bytes": 4665,
+      "sha256": "b045e31b99e0d6e4c161d5df031e778a48379970df98a9d09375336842bce36d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/7/GV/W5DNM2FP1ON7VGU0C2BGMV.uasset",
+      "bytes": 4665,
+      "sha256": "990532545c8d3f95f46d757d5e3b213ffeeeec56a8d72faced411ed722e576a7"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/7/JD/OCW0UZT4ANZZD9YHEAOMAP.uasset",
+      "bytes": 4665,
+      "sha256": "a4e38728841b251774dc04a0cd449732d3658a95b3d878b3b37e038896b3c7f4"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/7/O7/IHUOIGG1MW1YZY097JJ8O7.uasset",
+      "bytes": 4427,
+      "sha256": "8996f954790c768ba172b9e23d93826ee3527e4510742821a6d5b7347fb13811"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/7/XU/RW3P9HUUCOCG5TL3TPG6XF.uasset",
+      "bytes": 4371,
+      "sha256": "3c9902b418c6e61ab3208906a24a61759b50b14eddde562be5de934829c0ea3d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/8/0N/1OONKTGJMLVBN21M6JE59I.uasset",
+      "bytes": 4699,
+      "sha256": "200009c1fdc32c8dac2957472f868f53fcb9443f322327497ec71018c9f2530a"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/8/7A/C0UVMH95QVQO1KMTVK7MSB.uasset",
+      "bytes": 4373,
+      "sha256": "bb78f3ea599e5d0192c7dcf0a8e5a17a1201fc07385f45e040550e5d5418846b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/8/HN/XXZLD30WH49IXWEHJXSVAR.uasset",
+      "bytes": 4373,
+      "sha256": "7e91d1cf1be0495280cfb1d81ca3ce780e3dda437ba9615e3320874a7b38bdaa"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/8/VS/XX060WNO6GEZU5BZQCLZPP.uasset",
+      "bytes": 5152,
+      "sha256": "2d46bb9f7cd67ba05478b0253eeca463f1d9c5c91d7a14dd7c31e442cd3c4d4f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/8/WI/FHUVUALB8C8XRJ0PY9XXTI.uasset",
+      "bytes": 4727,
+      "sha256": "f2869c44a01b31617b0d4cfad8d6a0c91d67e25b15a33c7e14ce1755efda3fc7"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/8/XH/SKCKQTQDTE8ZNW6C0FCBRO.uasset",
+      "bytes": 4699,
+      "sha256": "1656426c30aaf8411663649dc131649fa75fe8d8f0fde5b502ff73b74b73d0fd"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/9/5G/29Z6AXUGZPZ0CXHLK2DICG.uasset",
+      "bytes": 3143,
+      "sha256": "be525ecb970386358b3ff94791f5dbe1a04eb58cbaf4a63ece318a8d0d101d33"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/9/6V/AV0JKCFBVPU58UEBGB0GC0.uasset",
+      "bytes": 4665,
+      "sha256": "fdd245925ceaf4b4c59d07f1aab5610db0450523e10afb118b3a56cddfa802fd"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/9/EE/OCR348BHEJWLHO72TR249H.uasset",
+      "bytes": 4427,
+      "sha256": "0de101b829a7fc08e4b66fd830209d2546bce035009bc86fa7077aef9f6f91cb"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/9/LX/1K6D4FIEJMOF50LSVJKFMP.uasset",
+      "bytes": 2530,
+      "sha256": "c54a64753205d3fdf3f097a72075c75e64bab20424be893332c354e8bec09f32"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/9/UM/1F7R5WQFM2D9KH7A94JFBU.uasset",
+      "bytes": 4721,
+      "sha256": "936a6f14ece57dd7c3050effb10720f86bab8268edb3b0fa67f780a1e8946cce"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/A/3J/Q8CQM512VVS7UZZW0KQRSV.uasset",
+      "bytes": 4721,
+      "sha256": "faa6fa198fa4804bf650764113c461a3d83912ad609f1837cc4b77353df96d03"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/A/8N/4L4W0MLV9WFUGRTMUBLBOP.uasset",
+      "bytes": 4373,
+      "sha256": "f412a0b400434b9cfe73c2f91f74b14db0d2bd7f4d5189bc3c7dae7b8ece10ae"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/A/BN/LKN4IB4C3UPW62GHBEKTIW.uasset",
+      "bytes": 4665,
+      "sha256": "26ddd5829ac624aef3e6d6e8e60daddb5937591d71b589f1dd96f6728a45c685"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/A/IP/MGVQPE8M923OBBJLZBI1PC.uasset",
+      "bytes": 4719,
+      "sha256": "9aa9365621fda8c4e6ec4d71896f6f20afc3692845448b121ed9314ce5f66084"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/B/0L/IL99N1JAI1J4A2DFQBQL53.uasset",
+      "bytes": 4667,
+      "sha256": "95f0f52f115330087f4550c1a75b40a0f89ca820626f040515d19ad10d6c4fa1"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/B/2F/XTDQUHCYJJV6JCH4OJSVLG.uasset",
+      "bytes": 4545,
+      "sha256": "84b421a0de897e34b06b211f13ba865a822cc34f35596f1f95bd18915d16e900"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/B/HX/PES0ONLF01PSQTJCC5USD2.uasset",
+      "bytes": 4259,
+      "sha256": "b797b10826ecda36e7e2a5dcd9db2f805eef1aa30ab7155f9994b7e7955399a3"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/B/P1/LRQT09TOYHOXK9DY22EIKE.uasset",
+      "bytes": 4551,
+      "sha256": "c11effe59153014dd5db0f65c7627309e99b262da486c73758c4c8a1f19a5d7b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/B/RX/297QBXCKTP06G7NIHIULK4.uasset",
+      "bytes": 4427,
+      "sha256": "60f28c2a70beb6455f7c9dfb9c657e1ff2222d5d7b1544a0537e757902d10312"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/C/27/6ZCCZ1F7ZO6DM3C8OLVGTF.uasset",
+      "bytes": 4699,
+      "sha256": "5da67a33b962a06bfc798be0009c01e4cfdf371c1ac3a14e1d6f2e94e4ea4b67"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/C/EE/HZ5WNBFZRJYQPUA6X8TVVT.uasset",
+      "bytes": 3911,
+      "sha256": "713b84f11124e7aee44b370bd50bc5c0e2a6aa2596dc0a7830491c809310d99e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/C/HY/Q7CPP7VHOXBAMAJI90W626.uasset",
+      "bytes": 4594,
+      "sha256": "0ef1995a35ce0f27ff11dc3b93062db63c9d41e8edd03a62870cb22ea4322cc2"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/13/EPTYZCFZWXT7Z7XYKZ88XK.uasset",
+      "bytes": 4699,
+      "sha256": "bf85d87c37ff35dfe1cb8a40c52a061314c44b57d422a472765264e39527cd4c"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/50/395Y4QE4IIEWI3KSE3SB6L.uasset",
+      "bytes": 4721,
+      "sha256": "cd2515bd223d6506801eab781774531dc243870c78562ca08df664aadf8b0c03"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/8U/VKFLMM0CV8ZCC0P3TQGTTM.uasset",
+      "bytes": 4373,
+      "sha256": "d5e84da0ce8e73b66a023e358033a8fd062b96abe1b33ee5b9973926608d2713"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/AY/KLCRMXKI9WR2P0GDY96C36.uasset",
+      "bytes": 3788,
+      "sha256": "5a5cd7edf92dd7d3e60de12fb2a735184096b504b4712ea8d807bc9ea22a2635"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/K5/NQBPXM7AM8N39CBW4ZT57P.uasset",
+      "bytes": 4824,
+      "sha256": "f50b777e76cd2aa8bd7b62c0fd87f812bb76d2953ffbaf51da9a881e8d1158b9"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/M3/6T1XG4EDG4ZEE1U9HMYL4C.uasset",
+      "bytes": 4371,
+      "sha256": "c7757663530e94239db0f4978938e39e2c20b85ecda00be7b00427f7767a9415"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/MG/EDRUPW3EOYDDSI6HNSIVT1.uasset",
+      "bytes": 4659,
+      "sha256": "6cf521a1730e4bf6d5f847271390917aaa219a7bee2ac9671c414e404d702f47"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/D/RI/R8L7GQXCHQGMMKBPTBJTNA.uasset",
+      "bytes": 2401,
+      "sha256": "bba4c777dd2fcd28b3f0157372f01f7de4f8e00f75a6b91a31bd3a02b33db291"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/E/96/RFQP83S9K0LC7IW8CXS6C0.uasset",
+      "bytes": 3690,
+      "sha256": "95cc1d9fb2b7bb54552bb44ddd8a8945dd4b30596fe40f3f9cf3d78e16433ad4"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/E/JR/W7S9610Y7RWELGF93FZYAE.uasset",
+      "bytes": 4373,
+      "sha256": "311c40dc59a935655b52c322a3693bbf826da5344270d3e6988c59973b004772"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/E/SS/QXUZ4IXFNKHCYFWERA1HQA.uasset",
+      "bytes": 4257,
+      "sha256": "c28022e47f1ba2f85951dac32b7c0e00fff99ec5d78bdc186c1070adcd00647b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/ThirdPerson/Lvl_ThirdPerson/F/4G/TYFCMQ9MC435YW6FZBF5FS.uasset",
+      "bytes": 11309,
+      "sha256": "558aafd26e2e204a85d7f4d570df7f8aa1620c135d33c47efbe43bc0256cbf52"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/0/00/KD4BK7PV6KZVBX5Z3QBHQR.uasset",
+      "bytes": 4382,
+      "sha256": "dbe22443370aa37981997beec68af42b8265b8ec9487703cf51734724423c833"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/0/10/G9MZORIG1KD5WQ9TE0IPSK.uasset",
+      "bytes": 4581,
+      "sha256": "358a11b510b299648ae7dee4bdc4f99bd96678cfec3493251b7d61da25c6e5e7"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/0/2F/FBRTETX1Y9EBNP51NVM003.uasset",
+      "bytes": 12153,
+      "sha256": "9584a2ec490de487afb7606e450504ca7604acbd1014e0d6341726b17aac259b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/0/7A/V5Z28ONNUZRBYFK6NZGHCJ.uasset",
+      "bytes": 4470,
+      "sha256": "73c44c7d82a70d68fc49f5da8d806391acb466d96750c1c3b0b3bc2e2c58c8b5"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/0/DW/W3LWKKFCW9BLNMHHUPBK91.uasset",
+      "bytes": 6499,
+      "sha256": "dbdde70b3b7d87198f9e67246b9ccdb58a903119b54482339223fd6fe2cd0712"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/0/DZ/DXEJSVHTIUL6UVFYXLL20Q.uasset",
+      "bytes": 4396,
+      "sha256": "a424f9d075c3967df0536a32f45dc722818a115349ef20c7c8c093a04a91224d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/0/E0/KZ5SEJUBE4UAP5108Y7HHD.uasset",
+      "bytes": 4394,
+      "sha256": "edfb3952666c881fbd9a20e95186740ce47900807741bf9282e2a7af8ccc3f34"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/0/IM/93V7FLT1PZNWTC876ADVI5.uasset",
+      "bytes": 5480,
+      "sha256": "a0fb34184294ed65ac26964e5166aa137ab23f61050906efc070b9015dc2d3e8"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/0/PT/FSOILB1YI9QO40U81IGU7G.uasset",
+      "bytes": 4771,
+      "sha256": "aed84662d7f5e197a1d5d08ea3db332f206a381226cc2c91134fb54fa8a926d1"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/0/RR/SM72G3B2918XNTKZTGMIAZ.uasset",
+      "bytes": 2299,
+      "sha256": "356cd279fe47e46b79196c90cf50ccbc08a53e072d6e02f286f97b5902b6595e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/0/VQ/R0KJ3BRU29C49BYIH8NSSP.uasset",
+      "bytes": 4470,
+      "sha256": "75daf5e6bae91715522fbad1eed04e2a7b5dd082bd8d07d342c6d4413d1a1c77"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/0/ZT/K0X7AK0QQJQAPKT7FF6Q69.uasset",
+      "bytes": 4382,
+      "sha256": "bcc57e3208ebb8042b3721bcc12c257f27e7b0797ec338d3ee38ff8aa8ade9f1"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/1/BJ/GQCGF6BVLCI9Z57B05W0YF.uasset",
+      "bytes": 4771,
+      "sha256": "b5c6abc4439df2e0f52b5720d98459ca5c49ed092d6cca47c312d522569305c6"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/1/DO/33R0Z1ZSPVKMJOUOE7KU61.uasset",
+      "bytes": 4268,
+      "sha256": "2ca2bb0c92f3534d146c31f82f8e5553b4f6ae1a6cde33860dcd6d82353c4a18"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/1/DW/6A2A7Q35UR08Z88LXS38C9.uasset",
+      "bytes": 4487,
+      "sha256": "5bfce4579beec045e6a3effd3071b067789c7e37226b1459944978eaf52b174b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/1/GY/0J9LRREYGVVUV2HC9DKHEG.uasset",
+      "bytes": 4612,
+      "sha256": "a8f286bdd054f924f9f0dd30ac085d974fa5825886bec74d0ee2823b3dde4024"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/1/HX/5MHQ41EE29SR61GCBMJDHJ.uasset",
+      "bytes": 4518,
+      "sha256": "8ac09db30c79cccaa5b37a944b8fff136a059ce5124e0f9a7190839cbfd468eb"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/1/IT/GJIUOT2NK06TKEB2ACWOPL.uasset",
+      "bytes": 4671,
+      "sha256": "1f617eea7ec3c253a94d71fca96529d7029fd80432902723ab8c2140dd34735d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/1/J4/KEC2QNG0QI81IYICMWH07D.uasset",
+      "bytes": 4550,
+      "sha256": "0252c8a7a715fd875d38af3f9ec4337e9c089f89fcfe7676e78bc8cbf0dcdfef"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/1/M8/FVUSPV9OAB58Z4EENV7S47.uasset",
+      "bytes": 6400,
+      "sha256": "4fdd37cd4b9f79184b121cf7e77bfb53f399c55ce5516d284dd43872b63a2245"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/1/OX/LA1P85CR8VITJ0JHB07XJV.uasset",
+      "bytes": 4581,
+      "sha256": "6e34188b26299159e4953a7f342826f64307d195d4925cfc5fa5f258b13a2245"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/1/T5/3URSTBFZR0RTCTY1FOSMIR.uasset",
+      "bytes": 4301,
+      "sha256": "d11544941a42e13f0ab826b8724f2321a174b549b60f02b3bface9716b542d32"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/2/2Y/2XWUH1DDMO7BXYNAFIGJZG.uasset",
+      "bytes": 12039,
+      "sha256": "d1061e86544fcfe9e9def2ae9c1eb4db567a424e6dd81dab6b3731f5e405193c"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/2/DO/LCFWVJ6EPR8ENR8VIE4YVI.uasset",
+      "bytes": 4281,
+      "sha256": "affd5d41409e639e60eee5ed333a7cfb8453600e81c6e41dfbedd2dc78600acc"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/2/L7/MI1HHMTIRK5U7O3LQVDIBA.uasset",
+      "bytes": 4487,
+      "sha256": "9c40542ec4653be06489dd0f20f901e6913ee3229ccbc48cb8188ea55f916e17"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/2/MC/315SIZV9QODFGPDNXBQYO6.uasset",
+      "bytes": 4402,
+      "sha256": "5b265f0222b234d7fa296bbcc2d42d7816c048da5911fbc2cc4a51e91e37c7cc"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/2/NY/NV17BVIL2NO39JAOIA0884.uasset",
+      "bytes": 6499,
+      "sha256": "8073ff066dee366e8592b044700faa820f0a34cecb4a8c256e3f3d78b90216fa"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/2/Q7/SLUBG3UM4U5LT7HC806V5F.uasset",
+      "bytes": 4402,
+      "sha256": "5bbb884a0694303329ea21310eedd34f85d8206f66f43d03f0db12fb70aad4ce"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/2/S5/6FEPRCW2KRBHAY6E9J0IVO.uasset",
+      "bytes": 4475,
+      "sha256": "0b999374a07fb6966afc3c5e53dc9aa8994556dcbde7a006a1ac6ee30e1175d9"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/3/3E/150EEXFYWTJ7NYHIRHBTS1.uasset",
+      "bytes": 4387,
+      "sha256": "00d8296482042a40170062b83bae721edde7d87a115b96686b7ece58050ceac2"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/3/8C/4Y5DKNWVXLY2ZWY12QQ68D.uasset",
+      "bytes": 4281,
+      "sha256": "36cc7a965207ee6fcc3048ec5fbf0b1481c41711bf93be0d1adb45a1fc191a59"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/3/D2/4HUWQWOGJ5QPAQ3PGLKM9Y.uasset",
+      "bytes": 4735,
+      "sha256": "ce27dc4e075cb02a0df03226a8e7356479d0b4b99178031f3534ef4096bc6679"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/3/D8/WFBSAR2TV6XZAJ8NQ7BZ2M.uasset",
+      "bytes": 4402,
+      "sha256": "11cfe3dbaa62da92f5e3a3280fe23c96ddbade2247df371e9d260ded756c5308"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/3/EJ/OA77F21S2S11O6DCRF2GRJ.uasset",
+      "bytes": 4382,
+      "sha256": "3840d207755e17e41e9f6b09ef5bb51a0ee5d7c83921af5ff81ec11f98be3cb0"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/3/FM/S5SQY08UYXCR5B25APTP8H.uasset",
+      "bytes": 4771,
+      "sha256": "579e74d378ccd16a29ce6d1c0949b3ba5ba4b9af8179d651454ca3380c5f6b56"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/3/G5/0BGCS3Q59CRQJKJFRTLEEL.uasset",
+      "bytes": 4340,
+      "sha256": "ec2a357cda6698a4104f3f97830570c657347935c9ee0b1e6fd59b76124f02d0"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/3/PY/S8CDAL7UPLMKY71ZK0ZL26.uasset",
+      "bytes": 8826,
+      "sha256": "fab43cd2e12fec0ce7d5c09f1dae7344fc0f73a356c741ccfab3400afcd1ca46"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/3/R9/XVVRCYDK9VFKY8P1TY3223.uasset",
+      "bytes": 5333,
+      "sha256": "156fd226e79ea220626ec7b9c04964201ecf6e44cd389b1e0ab628a63db912a3"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/3/SJ/7WYO47SYACK69DM9JQATGZ.uasset",
+      "bytes": 12027,
+      "sha256": "511481d8136bd1dbe6272efc800246fcedf05f5b24ddf7cb35ea80f3e6188c1f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/4/2T/OK58XWQO5B8MFKG8153RAV.uasset",
+      "bytes": 12027,
+      "sha256": "94d08696b9d2d6b2f634b39830b649c49836c6b4f17d43022d5bb178f0f68d6f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/4/4P/75O8NNFTS8TU1VGM42CTT4.uasset",
+      "bytes": 4402,
+      "sha256": "80c627b23365c4852469c87361b9df14b58beed6f2030379c8b4d61d12418fd7"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/4/JJ/7C1UQ460OZ2TML2GET5BDO.uasset",
+      "bytes": 6499,
+      "sha256": "f2da7cb848f788c8558d348dcf5f78c3f1e56eb211b39c9a9e17c8fd9771e732"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/4/VF/RLNQ7J5GIDKTQ1VC6PCAC4.uasset",
+      "bytes": 5480,
+      "sha256": "db0145ff75992fa86d37dc9d82bc02aab921253009626eca409bed12d5a1a0bd"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/4/VW/3HXG6MVPDNHTKXQOBK7T0S.uasset",
+      "bytes": 4771,
+      "sha256": "ba0ae8a1b8a718b74c38a8ee6b6610cb2a2a8f6411ab8656b0d9f7649d459097"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/4/WO/0DIYRGTVCTPH5G6E7NVQM1.uasset",
+      "bytes": 3946,
+      "sha256": "8c6f3056936a186f50c42a0ba2e2fac0650ad2d2bd8c486d5f2341fc822f6862"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/5/5F/0PK8J37H3W5YS7R22QRNN1.uasset",
+      "bytes": 4502,
+      "sha256": "85110f91b60e9d8b739d073098f78e34009781c7c2ee8f818f05ec32d811568e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/5/5U/286QATEU0OGGYU0FAJSCXD.uasset",
+      "bytes": 4615,
+      "sha256": "16797bd2974d1ec78f0d95dd148c25f3610f0bc79ba734c583717fc7f7957204"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/5/6T/HEPG6U0BSHLPXR2VVAEAPG.uasset",
+      "bytes": 2321,
+      "sha256": "44aafc8991080302a74ee50c22155dac0ab402873fcceea5744fa80e03b4deae"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/5/82/7W4OJBG6MG6CTLEP7SHJ2I.uasset",
+      "bytes": 4402,
+      "sha256": "cda2709e42092e9a326fb2fd0089853d34ac7c7fc364095d98136ee81ec7a465"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/5/BA/HIFHDY5X6V6T07796M6ZD3.uasset",
+      "bytes": 5581,
+      "sha256": "6b21f0b4a493104624b6c772be483207afcff7c92590de0d29233fc2791ec8d0"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/5/HY/RNWO0BEM36AIFF9FA80TAZ.uasset",
+      "bytes": 4402,
+      "sha256": "9f0499c2bbd75dc8decb58a9f5dda8c090c3f8c5567bfa0266df4dfe672ee2fa"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/5/K4/G0WSNWUMJCP0T2GO5QR7WG.uasset",
+      "bytes": 4396,
+      "sha256": "3ef356c6eb7f7bc88b3a6633a460d1054b3fc43abe74bda18a9cb5ba5f66bfe4"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/5/Y1/XGIXS6FW48742XXX2QMT0U.uasset",
+      "bytes": 4814,
+      "sha256": "043ae0980460633235557e262cd7b82bbe2ef613cb1d334a2650ca05fb23a14e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/6/1T/3O3YLZNXW0EGMYNZM8C7AW.uasset",
+      "bytes": 4550,
+      "sha256": "d8edc06d9f5460aabd622924689f4e61d8f72cc65a0459f2027912f9c33ba746"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/6/3U/0ZAV1WULOCS4H1NXO3URMJ.uasset",
+      "bytes": 4478,
+      "sha256": "95bc14bf70f1ea34bd43947c5745b5f432e1e5d9723c80fc0fd44d94a794b408"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/6/56/CKQFCF068ZIP6ATFPKMCCA.uasset",
+      "bytes": 4696,
+      "sha256": "13dd57954ed25a2ba320094145e436bb17733d47da8a8d800b1ad9bfaed89a35"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/6/8H/Z4Z12NWDRJ456COA2OUNF8.uasset",
+      "bytes": 4334,
+      "sha256": "f76b4d51967fcf7bd58c8634131520fcbd1a91d3b8bbc381238f066e2dbcad2b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/6/HJ/WNS6PT2ZPJPVOVBA8ILE66.uasset",
+      "bytes": 12615,
+      "sha256": "dbab46ea96b4ece3a7a0648dc88cf43aba8b5a7cabfb402046afc857854ebe94"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/6/MN/6LWDGJUI94JL7SU95AMT4K.uasset",
+      "bytes": 6499,
+      "sha256": "d9be497377f2b6b6ee53bb329eb6a19a7bdd28f27fa5c6dbfd0a62a89eaebbc1"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/6/UN/9JDP34Z2NV3EP2R0V991LS.uasset",
+      "bytes": 6499,
+      "sha256": "1eb3bbc49c3b4e3f015955d164df916ea6c25de9d944d741692e1cb7fb44d708"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/7/0Q/L16NNH8RH1DN2V09WB0OOH.uasset",
+      "bytes": 4402,
+      "sha256": "8f272296fdbc5b406bd7bb231e5364bf1e7b8ac98ff968085ed5860a791a1b63"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/7/5V/ZQL1ODF4PVA828IRYOK6G5.uasset",
+      "bytes": 6499,
+      "sha256": "78018374529d302ae3db5e9ad558b825ed376244b63e172b4344ca94946389b7"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/7/7J/UAY3KXHKWUPHPGUTD9V1PG.uasset",
+      "bytes": 4470,
+      "sha256": "e3eeca04f46a30425616f2f3bd2e4e23a0bf9de4f1a11a11ae552881c2619fe6"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/7/99/ZWT0CXJXMLJ1Y5ZJTGQCV9.uasset",
+      "bytes": 4403,
+      "sha256": "c22ec987cd95b62277a221c800f48e89d7af222bcb4b4ab7cf46a091364e03e2"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/7/9W/QS3ZI3VPRU8SAYSXEJNATB.uasset",
+      "bytes": 4361,
+      "sha256": "3bba110feb39a007db54ca185fac7e490b5f085962c82e21c3a9279707e654dc"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/7/BJ/KL6ECV3DR047HQ6GT6H6FI.uasset",
+      "bytes": 4396,
+      "sha256": "f90bb89de13f77b26bb021818070cc9adad923241373734f7826b04adfb35236"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/7/JW/477Z141EOPJKCX8ZZ7JHLA.uasset",
+      "bytes": 4540,
+      "sha256": "adee681f4110e891f695651052b6881fbb8ccae36cec7fc70f5aa61ada276ea4"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/7/LB/WUTHEZWBUN9U6EDYGKMYM1.uasset",
+      "bytes": 8394,
+      "sha256": "c575333842ece0c768f428ad7fb3f2a9da60777daf107ca4a669aa41f32f28bf"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/7/RJ/H1UG6CBUR2QF110RIZJ2CO.uasset",
+      "bytes": 4187,
+      "sha256": "b4703f5d665f1ab6bf0d0f792ba12d3c34c7b4b6c4ed43e31c23424eb4344d67"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/7/ZV/O576CAA2IMQ00CM4TMIYJF.uasset",
+      "bytes": 4438,
+      "sha256": "db3ea506ed80b0ffdedf0b41aa56c2cb29b2de2eb7f4a90e78778f33e21403e5"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/8/2Y/XQRQRCAVRFXVII19BHHEFW.uasset",
+      "bytes": 4814,
+      "sha256": "633f2ad3df4d69bfeeb88464c99b1bf651dc550ac0c785a6bc7aaaddbcc505f2"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/8/BU/33HIT69CEMS5B9H1ZJJZJN.uasset",
+      "bytes": 4187,
+      "sha256": "26d68b848c20ef13961519735f97cfd9ead8120815b5803f6440dbc0af281fa0"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/8/DJ/RKTT7UUG033HKG2Y7BKLP8.uasset",
+      "bytes": 4282,
+      "sha256": "a05bcb247e987e56d94509b151ddc6e977bd658182316eb83ed521923b89c57d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/8/JL/UD4I1VKW3GRHR5Z6KURHDT.uasset",
+      "bytes": 12054,
+      "sha256": "923c37cba105d24af0b4f7644db58e1e2f16db85ed91d696033c0d09e155f9ed"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/8/VH/TRL3Y99G4QEIOKAIMYT77R.uasset",
+      "bytes": 4402,
+      "sha256": "40c57f222557ec86dd0856918d991b02143c7cbcc2612fec0686839e840e00df"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/8/WF/KCF4YBNZ0Y3N2H14ON55QL.uasset",
+      "bytes": 4421,
+      "sha256": "391d0f78de558fbb0ea0f44712464530a33f3e3c8421684fae1a80a952007e4b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/8/ZA/5W878CEHZPCL9HZS2G3EFS.uasset",
+      "bytes": 4771,
+      "sha256": "0c3c20cca07b04205f56e6adc3fb3f10a6a96cf561f5724bbd0686fb58936c14"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/9/0M/2L3BQN11B04GJG532FYA17.uasset",
+      "bytes": 4584,
+      "sha256": "4042594855adb825de6f4509ebda576128f31c13f47b7b6e90d535af299bffe3"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/9/1F/B4UDKRSQ8OKS7DOQWI7ASO.uasset",
+      "bytes": 4463,
+      "sha256": "52ff9054e0c4cbe27db4f8f83a6566a3a72be753cabc8d359ad3893ee9dbacf3"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/9/63/5Z1XMI9D47HBBK3FHQ1PK2.uasset",
+      "bytes": 4402,
+      "sha256": "d8c7bef6f6fe6a8c5335520381669ffa947d087d8195c22eeae3dc55fe713683"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/9/AA/8DRWLPVY3JOKIWTN4P1BR4.uasset",
+      "bytes": 5582,
+      "sha256": "9348a7c9342eefec383e82e4df92435235052bb0b0aa253925cf68cdd516f9b7"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/9/D0/0F4VW8BAQ4GHQLOQSADNRU.uasset",
+      "bytes": 4470,
+      "sha256": "0a4e4bedb47644911730ac1e34ad3117de0791b8050cb9edc6e1d2027060f291"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/9/F2/H0K7GVVU0KCHWTQ37JB9AU.uasset",
+      "bytes": 4405,
+      "sha256": "58aff5fbf7d11e6d72d984592630d5523b7168335b438a794e894bd75da9bb94"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/9/HQ/9I00JK31R375L0YGL8A2ZF.uasset",
+      "bytes": 4382,
+      "sha256": "5950a254bc8802e229a33bd92269a0b298f56f0586c2c7d49783d67ca80cd08f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/9/MF/2BJOPREVBDHUJ5I9W2PYZ6.uasset",
+      "bytes": 4402,
+      "sha256": "8698de0fa1372031ffbb959022be73dbf09010f50e5a85dd4524f07a1d5058d9"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/9/QZ/XZJD6H47LPCKO71AODX9GZ.uasset",
+      "bytes": 4434,
+      "sha256": "4bdf4541ec50a021cafd02017d743f4b77bf473c1a091a3300a9acbacfb0bbb7"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/9/RI/PWMP3BGFTRJA61494HWRRO.uasset",
+      "bytes": 6499,
+      "sha256": "afe1b6d29f92fd2a1351a007df26bd588295d506d1639d6f2b7ee0a23e8b2743"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/A/7J/31S269UK82YPVE5FZLXXGN.uasset",
+      "bytes": 4403,
+      "sha256": "7bae48fc4bbc10f1b6ab4709662c517334ff0a55dc504250f9daa31c9a9d48a0"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/A/J9/1AMFMRS6PWPRO03NZCRQKE.uasset",
+      "bytes": 4402,
+      "sha256": "4a8dcfec0071d90de54cc2813f93059f859b69501610f228e24c500dad436310"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/A/LK/13L8U7VRXSUAERQJ6KR6ZD.uasset",
+      "bytes": 4519,
+      "sha256": "a6cc2913c651fbbfec4e22e9893b519ac60297c889a68cd75f9da8de4f2122ef"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/A/S4/YQA2NK0HUB7DDBDR98EIXQ.uasset",
+      "bytes": 6499,
+      "sha256": "17d5dba7c2c79ee2eb698172bf4692de2d2d264a9f50059f72326dc7deb8f520"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/A/SX/P6J51DMDYKF54Q64MK109Y.uasset",
+      "bytes": 4268,
+      "sha256": "e71506d2155f114a91f43f3912f36bef03586ad68076ff965acf5321158306cf"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/A/V0/41S4WIM042ZONGFV5TJ3IY.uasset",
+      "bytes": 4584,
+      "sha256": "6b77cb386aa4996d9b3d77a8869d315c54dbbbf5e0e2f08f7adba00dd0a9b6c4"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/A/YG/75KBS0PR9GSJREGD730R65.uasset",
+      "bytes": 4387,
+      "sha256": "69fff0420a1ecaef7799fc99e87d0dca2ec8d72cc50f5edd2318e460a56c378c"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/A/YJ/XEXN7BR6AA2CKMNLNI97UK.uasset",
+      "bytes": 4519,
+      "sha256": "9bdf2e4a030b63e1c30df3c3b0cba036deba765b2b4400ad4a6cc591ac6a3c39"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/A/ZU/F32ILPO6123SZSRGD9KHYM.uasset",
+      "bytes": 4340,
+      "sha256": "3b8269fe745d3b8b49d06054d57bf3138c749926c53051e4812e74308f21a54a"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/B/4P/IMYXIFJKSBT2ZKSX0R24PU.uasset",
+      "bytes": 4402,
+      "sha256": "3bbfb19b028b7fc71d65db98aefee23e510b7d257a8df67381045c539f864e04"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/B/B0/VVCDTS9L0GS4A4GA0THR5Y.uasset",
+      "bytes": 4396,
+      "sha256": "0b9e86669fbbcf76e45990581137d12f00759d141ca71364317f03dd89b6b89c"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/B/ES/QLR21YRG5KKXVXGNBE9XKI.uasset",
+      "bytes": 4475,
+      "sha256": "040a05e9894ddda224c5ca109074a6630c548ebe41fd6fa9c23d20a37174cbf6"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/B/GS/OO1FGWBF1ENJIIGKH5CBHF.uasset",
+      "bytes": 4402,
+      "sha256": "1500a52a68559f74d45448384d5ab3199a4649b664ae51459e33bd8c70f0b1c3"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/B/U3/CGO0IUSU6900989W4EBZ8B.uasset",
+      "bytes": 4771,
+      "sha256": "258425fe46f3069aea21ec9e992541079da03566bf2f23b02d0893978babf1df"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/C/42/3KZTCQW3I4RWXQEP64IKY2.uasset",
+      "bytes": 3579,
+      "sha256": "d742537e761ab730483e3339701db89b54e0128b422144ee022edb02b97b9b27"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/C/7P/JIPSZ41LIRA22BZHJ23HAL.uasset",
+      "bytes": 4403,
+      "sha256": "16cb1467c2f8bb62c9769532bb73d4b52522699ee1d64f9dcf45fc1c83e27854"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/C/AD/F4QIQHDVYMM46G4L0IN0S2.uasset",
+      "bytes": 4396,
+      "sha256": "b7b01c2a4fb01575f80a92db77e0c8c0d0eb3e18c1dadbb1d540ae9ab425e59b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/C/CD/7XZWA2OS3BES08ACHBWP5B.uasset",
+      "bytes": 4396,
+      "sha256": "2f9358dab9ca987b4e46327fe807c2e95468081537adf66a2e19e494d09f7a16"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/C/LE/FQ4BZ1S1SXSET6FIVUAI4G.uasset",
+      "bytes": 4453,
+      "sha256": "b8319d1897df2ea69a693c2bc5f973841fd5dd1c735543c02ef36fdae7255e91"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/C/R4/HCWRFYNLD2SX2CTRIQPF9W.uasset",
+      "bytes": 5474,
+      "sha256": "c0e5b2a861e4850a93a27f0b2641a9f4e3898f783416faf55847067d5a32157a"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/C/TF/99VJVHWG23AJRXXZUX7PIN.uasset",
+      "bytes": 4463,
+      "sha256": "6521ae4b037cb112c547e2132f2df1e4b5041456d8ddbb0d17a187079854815e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/C/TJ/BBYM3A0BDVVG1J85HDK2YM.uasset",
+      "bytes": 4396,
+      "sha256": "71a7397b5893e6e7cc9b79b78fec8c72abab032704b0b7d34042a503705ffe31"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/C/UT/VJ209A2WF21BZI5SIJL6QG.uasset",
+      "bytes": 4382,
+      "sha256": "55d3a5b1737fa964123c546a59f59137d9581f8e463f38a53b2bbb1a47429d6d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/D/94/7CQV3CANOSOZQ92HFGA2UI.uasset",
+      "bytes": 3759,
+      "sha256": "470f50164e4debda3037e5486d4b3c27ce47992b411b7405641bf67876707c7c"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/D/OB/2WIDKQFQDJRPXHPR0FJX1P.uasset",
+      "bytes": 4470,
+      "sha256": "f7bb182303d89f3e864ae87afdfba2c02449391e3d35036e47cebeae703ab8d0"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/D/R8/O7ZRIAL4KXIN7F38PY5AJE.uasset",
+      "bytes": 4452,
+      "sha256": "d712d8513593a2f07bd9d897758ecb89fe1a671a22fd7e8c540667983d8e4c1f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/D/YL/GE3SJJV6O8474LC1MIXCK3.uasset",
+      "bytes": 3877,
+      "sha256": "7a3dc207fcecf12e49681371febe80f6c605f672093975c742546a89c1e5511c"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/E/06/T6327OLULDFJS4GZ6FQLIB.uasset",
+      "bytes": 4382,
+      "sha256": "dfaff6d7a1f8b93060211d0f5c5d6e315a0498e82679a7f34e628fd7750b11be"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/E/6Z/SGUAP74RV654PJHJVAJSWF.uasset",
+      "bytes": 4187,
+      "sha256": "7f1755a28682c8f9aafdbbe443e256ca557d6cf515f797777522b1a65de0fa88"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/E/7D/6OH1KEIK00DKP22D7RFBE6.uasset",
+      "bytes": 4696,
+      "sha256": "dfb7dbabf999ab65a8f7fa15d7460deb02b28f139a7e0f66ea45232160343918"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/E/8Q/UY2IWLJX9PEYNEBI7XVE78.uasset",
+      "bytes": 4340,
+      "sha256": "7fdae64eb6b5b7812b7fcc9c00496f1728677a7bf7dd24614bda7bdfad910044"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/E/9O/JFDANT8TKY25861501BLFI.uasset",
+      "bytes": 4517,
+      "sha256": "0cd7746172d5a96d70a2dd1a7c4f11ac7bfcdd0473048dcc5cb2712719779eb3"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/E/E7/IWRM788GZR1N8R9SJ30ZD7.uasset",
+      "bytes": 12054,
+      "sha256": "c9ebe4e2829b5fd05457b76a8ded937eb73d1faa4b9a0c42afc9542348760848"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/E/IY/T7882VEZ89HSROF8HNFHBK.uasset",
+      "bytes": 12175,
+      "sha256": "7c7974308e2f681fe349f9ebd6fb0bcf92c18cbd4eeec5ff7b5ac4d4611a7470"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/E/LX/HHK16JEPQDV92ITJG4ARWF.uasset",
+      "bytes": 4771,
+      "sha256": "bc3cde9464498bc6462a23a4ae29d6bd047be752e26bdef6a9376c0a0bb9ad42"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/E/UE/8FUAFUJZ8N8XHWOOS370LL.uasset",
+      "bytes": 4499,
+      "sha256": "1b53c61cffbe99b00c1bb27bc2b15470a0feb2f6dfc0b254c199f7050ed75608"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/E/XQ/QXC74MPBETXAJYYAS7Y3XT.uasset",
+      "bytes": 4771,
+      "sha256": "63a2ba2ee81b63fba0806a4bad741fceb6857267c09520515f6a56a77bb37bf6"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/E/XQ/UFSMJP34STGU1V6KV5KVYE.uasset",
+      "bytes": 4814,
+      "sha256": "2b6c7c8973605a46be0ef3c3fb8562778f1c68d264069a2a474416849296f2ad"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalActors__/Variant_SideScroller/Lvl_SideScrolling/E/XS/U2S37WC6F0B8DLVY7JWLRI.uasset",
+      "bytes": 4402,
+      "sha256": "d9105dcd7fac75b2357ba8706907d8f10e954231782803e2262deba8ae9c2f0e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalObjects__/ThirdPerson/Lvl_ThirdPerson/0/TQ/1UP2MCOIYXC0GTW985R4K0.uasset",
+      "bytes": 1867,
+      "sha256": "4bb0cff17e56dd734bbcb3f746f387f601ae46cf2e7c1bd2a3660d971590a65e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalObjects__/ThirdPerson/Lvl_ThirdPerson/5/TX/O6OLZU4WSCI3YRJS922SWL.uasset",
+      "bytes": 1863,
+      "sha256": "80c21c703b7747b2e849b7a39d9e354091d075737892398d581d0eca66c8fbac"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalObjects__/Variant_SideScroller/Lvl_SideScrolling/1/KA/BM47K0T5GLY52L9CTLJ3YH.uasset",
+      "bytes": 1917,
+      "sha256": "5255319737d8818eca02d70af2537e601809743f890bcf1e59bb8893dbc300a1"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalObjects__/Variant_SideScroller/Lvl_SideScrolling/1/TB/UXA01K8QJKVWZD5Z5IWFZW.uasset",
+      "bytes": 1909,
+      "sha256": "6fb0887d59f7c0bbd31a786a2238f709c6103b98e3dabc5faeae87e3be3cd526"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalObjects__/Variant_SideScroller/Lvl_SideScrolling/4/RB/OBDG3F6TB90TPMWLT8PFHY.uasset",
+      "bytes": 1923,
+      "sha256": "68f74c031d09b65c260ac0a676b9648f502bbb91988acbb861aa770b13d3bf45"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalObjects__/Variant_SideScroller/Lvl_SideScrolling/8/XT/XA1W1U5TPBD0SN63UCBCPR.uasset",
+      "bytes": 1919,
+      "sha256": "026dc5b425eaaf854829f54324160eeb8d052e56d55173eb215034e9a9bf2f7e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/__ExternalObjects__/Variant_SideScroller/Lvl_SideScrolling/E/5Y/HBEWXW18BKOJ4XZXVRH1Q2.uasset",
+      "bytes": 1919,
+      "sha256": "3376555187cdace622652d771494a1e42cf1b11d1cf92e1f2147c8c55ccceb28"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Death/MM_Death_Back_01.uasset",
+      "bytes": 308880,
+      "sha256": "fdee63c4a4dc23076dda04b32eb8505bcd41fb791e574a264026c43e700bf923"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Death/MM_Death_Front_01.uasset",
+      "bytes": 308516,
+      "sha256": "c9daa694dda4639b106a29401712b03376344b301b6161955a92ba64ea60ae6d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Death/MM_Death_Front_02.uasset",
+      "bytes": 314751,
+      "sha256": "dda4f9d6a4c8fc3bf79458d4d2f490965ff01401256e90fdf98a938a58c61986"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Death/MM_Death_Front_03.uasset",
+      "bytes": 277478,
+      "sha256": "bf3a411d465002756eb1a19cdb2bef63b75a57a9fab7ce121ee71941e010d2cc"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Death/MM_Death_Left_01.uasset",
+      "bytes": 283231,
+      "sha256": "712a25024fe931bd518fff6c935b82bc0ee2070a77caef63edd0d6fc7ff66508"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Death/MM_Death_Right_01.uasset",
+      "bytes": 302339,
+      "sha256": "7968e7e1bc3d8e33c3f0d8479e6753d011ced0e05a831eb7f10e28ceb536b9a4"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Aim/AO_Pistol.uasset",
+      "bytes": 8824,
+      "sha256": "a4f2fca2458488be2d05cb2188bd641293d06bdcc4e598feee59ba1b23156c24"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Aim/MF_Pistol_Idle_ADS_AO_CD.uasset",
+      "bytes": 170203,
+      "sha256": "2898b38d8ef305d1d2e285f519be72cde7e2b0106bb85657fda47e35dc27b15d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Aim/MF_Pistol_Idle_ADS_AO_CU.uasset",
+      "bytes": 173260,
+      "sha256": "e5c5855b58743d51bf1abe11b470749f50ae6074fac734da446d1c4a9b076650"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Aim/MF_Pistol_Idle_ADS1.uasset",
+      "bytes": 2056489,
+      "sha256": "4d7113f1799219db01d8394c2984d5afd2957de07d66cfa463c9c33822e11d89"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Bwd_Left.uasset",
+      "bytes": 255387,
+      "sha256": "dc8a45c6259a8a51808ff3de4688302a65ce4988a05a5b0f70fbced01001ea6b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Bwd_Right.uasset",
+      "bytes": 255329,
+      "sha256": "e6f80eb946a12e3056a53d67b8134f5e9bd028eb66333a8a665c13d6cf14d1ee"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Bwd.uasset",
+      "bytes": 365135,
+      "sha256": "f93aacabf40a36d906896e5c5998e4a63445749efa25c973092b9ae82ef1477f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Fwd_Left.uasset",
+      "bytes": 309345,
+      "sha256": "8ed2295bbfbbe7800395b2fc2023e082f6c9b2b7127dd6ceb5c7ec055486c39b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Fwd_Right.uasset",
+      "bytes": 309527,
+      "sha256": "d80c0c9bb0a8fae52095506f7f83c42bdd11b4d62ebfe57b1d9c7f40e8a9478a"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Fwd.uasset",
+      "bytes": 432796,
+      "sha256": "caba32a2584600031bca7cec76875e50eb80e4c1d6fea3e249f2532388d4f221"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Left.uasset",
+      "bytes": 310960,
+      "sha256": "4d8fcf3a8b6e581f4d06bc4fe2b307e1dcdcc7432cc114173c201a0115cad2c9"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Jog/MF_Pistol_Jog_Right.uasset",
+      "bytes": 354844,
+      "sha256": "017f902b0a80b4fff2115c5c39f640b7622ad562a0ec137d25aae61d511d0b53"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Jump/MM_Pistol_Jump_Fall_Loop.uasset",
+      "bytes": 255338,
+      "sha256": "7b01836fa36515fcb523644e82f2f130289a69a14314b6b939d5a580b3c5950e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Jump/MM_Pistol_Jump_RecoveryAdditive.uasset",
+      "bytes": 268356,
+      "sha256": "e9935321b5ee3fe9445cfa2a6c9f0d0391d888fbb9db71b1eaf76b3bc5345d6d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Jump/MM_Pistol_Jump_Start.uasset",
+      "bytes": 144542,
+      "sha256": "58c1e69b2690611740c465f92e3763fd9747b9a6e75fe6a7629b16c5fcc37e7a"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/MF_Pistol_Idle_ADS.uasset",
+      "bytes": 2068319,
+      "sha256": "766a02544f06604946d8c47c47c6bb877e14208904306188bc1f5b174fd7715b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/MM_Pistol_DryFire.uasset",
+      "bytes": 250601,
+      "sha256": "64b3c6dc7357f8a1b380057ef76e1cbb984d69e7d0732eaefd70befe2be7b67f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/MM_Pistol_Equip.uasset",
+      "bytes": 360966,
+      "sha256": "7f5a1ed2c1b72a9bb27b417cb0d5315440af2b22b7b846254fbce50e2fbb3d17"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/MM_Pistol_Fire_Montage.uasset",
+      "bytes": 10119,
+      "sha256": "2eabacc1911be6c5b0dff7cf8a5c29c0506a25ffa6f3e7fa5946e76f992e38ee"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/MM_Pistol_Fire.uasset",
+      "bytes": 186765,
+      "sha256": "ebd8467dbb3de5ba0e1b2eac0092352e270b37e616bc443872341cde2f5c22d8"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/MM_Pistol_Reload.uasset",
+      "bytes": 479562,
+      "sha256": "a821a774302ce5121efff744620da09587752290e35e4413b8e40db8ad9c0391"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Bwd_Left.uasset",
+      "bytes": 450957,
+      "sha256": "fff084ed3ca270a8d926f810f078a69347507851744cf399f3142c97e36e2fa6"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Bwd_Right.uasset",
+      "bytes": 451022,
+      "sha256": "26a82255db90c0dc4e8c01d52a55f73b5f5a532ef161812faf63be65869f3504"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Bwd.uasset",
+      "bytes": 545138,
+      "sha256": "704dd7e116a755b086a8d685321f23e332bba6cb77dd6ae95542d38c462feb9b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Fwd_Left.uasset",
+      "bytes": 374604,
+      "sha256": "bdd682c2a45cf6a73a34df6499f8bb4ccf8b68a42b8888c47b8532bfecb200d1"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Fwd_Right.uasset",
+      "bytes": 374748,
+      "sha256": "b9b42e230d6fdf9f4f836592507c3f8a17dfd76d7b054b78b633a11722f94100"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Fwd.uasset",
+      "bytes": 474209,
+      "sha256": "7ac6171e3b841b09fff67dc4162b0c70f99f3107f549a20a213d5e05405dc69e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Left.uasset",
+      "bytes": 580040,
+      "sha256": "bc5f5b9f355e755023d1aa153070a073156f6d902b08e7cf78463f5e0bc8f629"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Pistol/Walk/MF_Pistol_Walk_Right.uasset",
+      "bytes": 498997,
+      "sha256": "e72f68c9a306ec44f7bc4f37e3533f2918ee19d99a1d8e60986036f2a4405d68"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/AIM/AO_Rifle.uasset",
+      "bytes": 10402,
+      "sha256": "a3cfb9e380d881fa8561df0515f4ff24d96af4d3e1430df829c7ede641a12b1d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/AIM/MM_Rifle_Idle_ADS_AO_CC.uasset",
+      "bytes": 94995,
+      "sha256": "9521c1941980dc784cedb3df736d7c1edf56afaa0201f28b41c5ae9923e88bbb"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/AIM/MM_Rifle_Idle_ADS_AO_CD.uasset",
+      "bytes": 94882,
+      "sha256": "09b2c98aa7778b6a970b0d90882555cf920c03d761f1e50bb3feaf0e3c9a6fef"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/AIM/MM_Rifle_Idle_ADS_AO_CU.uasset",
+      "bytes": 95154,
+      "sha256": "60969c39ff3c1bd1e30e7c728a9dbe49c236857659b1ae8d20ae7605d8152324"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Back_Med_01.uasset",
+      "bytes": 252342,
+      "sha256": "ecb41ae9339d797408a7b9c0270dc1f917b680a21f1c189ac0e3890f41185e0b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Hvy_01.uasset",
+      "bytes": 247961,
+      "sha256": "e5caf5938c73d131c9254c1af09cb7fd4335516c9a406be77c17ad5e1f2cdebe"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Lgt_01.uasset",
+      "bytes": 224756,
+      "sha256": "ae8728f698434dd1e63978d5d92c5984d086d7ee39ce618598122b6fa87dc820"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Lgt_02.uasset",
+      "bytes": 238345,
+      "sha256": "dcb6c068d81d5be1d84c88895805eb29c2f3f345668a10884836f00759b0647b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Lgt_03.uasset",
+      "bytes": 281622,
+      "sha256": "3949df1228e6c14047477538424f9440216915a0637da33cf6c7298400128073"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Lgt_04.uasset",
+      "bytes": 318893,
+      "sha256": "e0ed26de9c333968631cc040e82aebac289a2fd655a1f348a3b09ce3b40f1ef5"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Med_01.uasset",
+      "bytes": 225043,
+      "sha256": "cca3c893d68d8270a9eec9eb7572f7ed6bfcfdf6ce6345dc8b2860d6135dbe00"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Med_02.uasset",
+      "bytes": 234402,
+      "sha256": "3acb6956f9eb6512e386b575c4c3e390f7d0280b037ca52e0eef813fb1f729d6"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Bwd_Left.uasset",
+      "bytes": 458365,
+      "sha256": "c3939c4aa298e6be0834256ef6f642cff0465a40d676ec7e464aaf504b44f729"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Bwd_Right.uasset",
+      "bytes": 458272,
+      "sha256": "907cb106c1c466aac0b38753b7551af73a09c082a652c82c43df5418eb33b089"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Bwd.uasset",
+      "bytes": 582054,
+      "sha256": "0fd489f5c8d4d63e84f8a25c2db46c3ae54eae828212b2a32622726e593b5d3c"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Fwd_Left.uasset",
+      "bytes": 384314,
+      "sha256": "4103ea6388d484e8f71cd30b955c3c954750d922a0c030bf3d902bdb3e02c13d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Fwd_Right.uasset",
+      "bytes": 384322,
+      "sha256": "2ca8d8ec88d086d4cb6027a2eefdde258142587bca40e98dee021abe9c8824f8"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Fwd.uasset",
+      "bytes": 516328,
+      "sha256": "287d39883a65ccf6f89d91c7ca13b23184f04ae6eb5cc3867dd7ef7cfb35ec1c"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Left.uasset",
+      "bytes": 296415,
+      "sha256": "4feaf1bd5b370e28f5dce611b28d955bbf84bbeb72b7e22972a0e143022621a7"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Jog/MF_Rifle_Jog_Right.uasset",
+      "bytes": 420984,
+      "sha256": "e3c5cae5448dbb8c4e3bda5406202a8e55b08247695082270e1fef3dbdd6e533"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Jump/MM_Rifle_Jump_Apex.uasset",
+      "bytes": 228355,
+      "sha256": "39acbd6bcfc5ec2795ee2497bb353fbe954766bda545c3318c3cd6ee5f1ee008"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Jump/MM_Rifle_Jump_Fall_Land.uasset",
+      "bytes": 179028,
+      "sha256": "ce74e83b9b88fa3722951c1c6b2cc36ae7159b8141f5347e5b47d760cee41c42"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Jump/MM_Rifle_Jump_Fall_Loop.uasset",
+      "bytes": 645680,
+      "sha256": "d17c0a4fe1d9bb970b3208909e1c35b7183568c7968a0d6d0de391cca216b472"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Jump/MM_Rifle_Jump_RecoveryAdditive.uasset",
+      "bytes": 294517,
+      "sha256": "9d663743ac0fd361303751c55688a34053fbed145aaa88a004abd7b02533d5e5"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Jump/MM_Rifle_Jump_Start_Loop.uasset",
+      "bytes": 441727,
+      "sha256": "c2da3d291df2070e1aaa62a45e445a7979948489b9e811e0d17f94b3e627d14e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Jump/MM_Rifle_Jump_Start.uasset",
+      "bytes": 146783,
+      "sha256": "925f27182be45054a1bbb5d458cb53d38773b356dd61e18b82fa9a72880dc8e7"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/MF_Rifle_Idle_ADS.uasset",
+      "bytes": 1700234,
+      "sha256": "cfa32b19207a25546bb5bc2dde8454dc633cc27c3de45747e941756e23da5d4d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/MM_Rifle_DryFire.uasset",
+      "bytes": 249623,
+      "sha256": "131e01f0a31f999e7fd09ef190b314314c851f39101412161dabdb00d2dda801"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/MM_Rifle_Equip.uasset",
+      "bytes": 416648,
+      "sha256": "136b19498b8bac4119dde48236d22127e8463c0becff775069e0b6399b7939d6"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/MM_Rifle_Fire.uasset",
+      "bytes": 184600,
+      "sha256": "1c5b983bd6c09431c83866f772ccf13871ad9626426c86cc08a0c87c150555f7"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/MM_Rifle_Reload.uasset",
+      "bytes": 547351,
+      "sha256": "ac1e17d2acb7e3cea6e4c9ca967400dc3052d5ec6514e155b33d8e4701e80784"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Bwd_Left.uasset",
+      "bytes": 332682,
+      "sha256": "8d535eb181e756f56974efae068f34da050747fd8836fe2bb5f0c693f51325c2"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Bwd_Right.uasset",
+      "bytes": 332577,
+      "sha256": "6e0bd9b3ba2e982ac9ffd60a643dab78cf886d194a26af518170a02dc4f3eac0"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Bwd.uasset",
+      "bytes": 449720,
+      "sha256": "e1400dc7a7bfca224e0aa7796e5c230236ad634c808b2a1540cbad8903fa897b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Fwd_Left.uasset",
+      "bytes": 384794,
+      "sha256": "f7797a7841cb86c3dc9e68dcdf968e538c9a7335abb1b0d9db95e0983b2226d7"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Fwd_Right.uasset",
+      "bytes": 384793,
+      "sha256": "787c7b69a054c6f2850503c016a2ef2fade7ad0941375c8e521c3534bf695d12"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Fwd.uasset",
+      "bytes": 490267,
+      "sha256": "540a6a77c48027e13be84d483c6afd18d82fb115b7532334597ebefe2249ecd0"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Left.uasset",
+      "bytes": 453120,
+      "sha256": "a99d18722e504801616e1c0c495711c43c2d82c4465f7f388cdae8a45502bd1e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Rifle/Walk/MF_Rifle_Walk_Right.uasset",
+      "bytes": 510650,
+      "sha256": "2c2c12d6a959d69c96962ca340bdfe984942df621ee2ff7e7e955662ddaee52a"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/ABP_Unarmed.uasset",
+      "bytes": 385911,
+      "sha256": "60ae8c970189979d9e070beb0fd8675f4afb2b04d8aaa8d11a0f03c5b7ebf4b2"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Attack/MM_Attack_01.uasset",
+      "bytes": 757637,
+      "sha256": "f796113f17c91eca7e48ef57bbadc4fc36245a86b127e75a34ca4771500639ed"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Attack/MM_Attack_02.uasset",
+      "bytes": 661409,
+      "sha256": "fb3c74b8e32fb5a88c6d659cae8717294af85d4eaa7f684b2a36c36d245559dc"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Attack/MM_Attack_03.uasset",
+      "bytes": 1036132,
+      "sha256": "1c66016fc3bd386453ac7fb1229a5f0644c6bd5f98ead29f6e6a1be80632ba1f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Attack/MM_ChargedAttack.uasset",
+      "bytes": 1057890,
+      "sha256": "5d9b0fc6892519095cb6930aba5c0dd063acf647612a06e0f2f7e19c463223ee"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/BS_Idle_Walk_Run.uasset",
+      "bytes": 52333,
+      "sha256": "bc71af8768b569695d4bcb69c79867f998e085693f5e8230854d228de359f5bb"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Bwd_Left.uasset",
+      "bytes": 417528,
+      "sha256": "e6e68e6cf4175f85c0e16a60f80335a1fab3f8c76a014d02bc0cd18aabe3314a"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Bwd_Right.uasset",
+      "bytes": 417530,
+      "sha256": "ee3137ff2b7d2cb721c935e2de91d55479e20f030ff230e9f912f6b70658c399"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Bwd.uasset",
+      "bytes": 483265,
+      "sha256": "1f6e9448f0e0737f506d9e8f11b8d661d6d65c818f0e3160938f1e24082b16c3"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd_Left.uasset",
+      "bytes": 466995,
+      "sha256": "12ee5a11f277af90429980f120026f430ae1e438f6eae42c10222e175f9dbe12"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd_Right.uasset",
+      "bytes": 467310,
+      "sha256": "66a7561d60453794864edd7e0c55487817068b6b66e31e179c98b9f2bab4c76b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Fwd.uasset",
+      "bytes": 531789,
+      "sha256": "0ccbe851f85a6d4cd7c6438c219cb6af8e281784107b5be8e9b052e4df3069cb"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Left.uasset",
+      "bytes": 487864,
+      "sha256": "f7842445f0c2b2f8d3cd9d43b9f58bc3ea888adeb1e161398b492097358431bd"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Jog/MF_Unarmed_Jog_Right.uasset",
+      "bytes": 521907,
+      "sha256": "208f642310d9627d12a5125889b480e051a1f1fc5397a10b83975903a0c59aea"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Jump/MM_Dash.uasset",
+      "bytes": 663135,
+      "sha256": "8a1c964403b7b1d9d9f5e0dd8c20c1ae809606c5e8021b2983edfc65ac0a66f0"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Jump/MM_Fall_Loop.uasset",
+      "bytes": 925351,
+      "sha256": "408be742c63adffe8c6c1d22442e99ea34a7618cd33c6e78e0eed3d7db877433"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Jump/MM_Jump.uasset",
+      "bytes": 403730,
+      "sha256": "252cbf69b07b797d3c3c6177d3ae9df17e9873f4872c4fa040c0d441dc3b3cef"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Jump/MM_Land.uasset",
+      "bytes": 410017,
+      "sha256": "a00de25a6beca56ff6d8077081531e5cef238c92825b6c184351d0aa99ef3fcb"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Jump/MM_WallJump.uasset",
+      "bytes": 409179,
+      "sha256": "e29af6dc13219cb813097e596c143d964a18c118caca138015574009e50859c0"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/MM_Idle.uasset",
+      "bytes": 1436554,
+      "sha256": "11ee7fdeb84db89c1a66785b43b9bfc1415782122b8ac229517f4c5125d9cb0d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Bwd_Left.uasset",
+      "bytes": 537758,
+      "sha256": "7c25a8eebb9883085ac8f82de3c83fc34fd19b02567f17fafde9dd60c09cf3e5"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Bwd_Right.uasset",
+      "bytes": 537632,
+      "sha256": "8c71b9bbf7b15d75cacddbeb8827e22888cfa63a359ecbc0e017aec822d1a522"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Bwd.uasset",
+      "bytes": 606821,
+      "sha256": "ae0c2ee1c1178fd1b9493f6c327e52d10a3d6bbde29eae54dcb07c13a27dcf46"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd_Left.uasset",
+      "bytes": 411535,
+      "sha256": "a7d8ff5a55eb0c445da2c74b2fd9460b6a3aff0db206be9e99aed319158d5770"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd_Right.uasset",
+      "bytes": 411529,
+      "sha256": "67d3d4fed066023a14220277f5598db83f19efee97de908b1397b0ae998e5599"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Fwd.uasset",
+      "bytes": 475783,
+      "sha256": "c74b2fc0cb651c4924804b364e534856a1b44dee818127c408dc055e4bda5ed9"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Left.uasset",
+      "bytes": 486552,
+      "sha256": "81500e4fcdd9ae9aa6433e652e67dea8f9dd9fa7b9ef1714e29f6ab0a1bb9d97"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Anims/Unarmed/Walk/MF_Unarmed_Walk_Right.uasset",
+      "bytes": 491934,
+      "sha256": "f5922b4e632351353224b32f719af97e85512ab4f6553b15315cf14ad04f675f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Materials/M_Mannequin.uasset",
+      "bytes": 59292,
+      "sha256": "d7ffe412d906380bd5bd4462f464b2a1fe48fdb79b9077f29bd0f958a782035c"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Materials/Manny/MI_Manny_01_New.uasset",
+      "bytes": 17963,
+      "sha256": "9f1e4ed382304d020b750c81505140fc1de4d339b0909430adb5380a6bb89b65"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Materials/Manny/MI_Manny_02_New.uasset",
+      "bytes": 18706,
+      "sha256": "26389db06f0b7928b487494bef3320d6b0e6bccd58193bccedd67c2c89132a46"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Materials/Quinn/MI_Quinn_01.uasset",
+      "bytes": 11184,
+      "sha256": "62a3050ef24b823f9fe84ac5d9c477099494982d35dafcc3d8078f32b0d4a865"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Materials/Quinn/MI_Quinn_02.uasset",
+      "bytes": 10718,
+      "sha256": "6aec77489fdfab0e1ea299de60fbd4f332face4495bbbd20b97fb0308bb9c5b4"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Meshes/SK_Mannequin.uasset",
+      "bytes": 191198,
+      "sha256": "22029d47455f24471195b26a0e04a1e1389f27d6a924e88c9f46a0f600c9a530"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Meshes/SKM_Manny_Simple.uasset",
+      "bytes": 15825101,
+      "sha256": "be9f011191ee1887b97cd13bce09886a6066c2fd62c619991070ec142184e1bf"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Meshes/SKM_Quinn_Simple.uasset",
+      "bytes": 16252577,
+      "sha256": "1ef45d92507a76d74a5e06737f94cad40eb7d5f5769dfbb63f7f74e784a178c6"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Rigs/CR_Mannequin_Body.uasset",
+      "bytes": 17057558,
+      "sha256": "57f84458a160c35b77f0442d2af41054e41e021ebbb496c2c76dea76d1d89580"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Rigs/CR_Mannequin_FootIK.uasset",
+      "bytes": 498698,
+      "sha256": "aa01be065d2efa2dfd3b258f60b94b09fcd5d351356d16bb52578ef5bcbfb5c5"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Rigs/CR_Mannequin_Procedural.uasset",
+      "bytes": 2575944,
+      "sha256": "057818dd3e0e16ff90c147e25a8fc5ab309c49c4c60360477cf4742e767d151e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Rigs/PA_Mannequin.uasset",
+      "bytes": 301538,
+      "sha256": "c0ceaf003947088ff076555b81a46e5ccb11149c94025eb2a9e74263fbaa0d67"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Textures/Manny/T_Manny_01_BN.uasset",
+      "bytes": 1422785,
+      "sha256": "2f623209571ecbd8185b5b463786be033c3284190b4fc7b249e8d1d2ed995fd8"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Textures/Manny/T_Manny_01_D.uasset",
+      "bytes": 699555,
+      "sha256": "6ae0f4f9908c30ecc9aedf1ebb442e4983e526a7832ec791542064c7853f9999"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA.uasset",
+      "bytes": 712594,
+      "sha256": "3e42e888aed8aefff68da7d7dda4f177c5647b19473e4e913f61375c1319abd8"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Textures/Manny/T_Manny_02_BN.uasset",
+      "bytes": 20999487,
+      "sha256": "c9575d21c9e2872b3358c0efb9e202535ce2efce94c338b9d3bd04cb9831e353"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Textures/Manny/T_Manny_02_D.uasset",
+      "bytes": 1036712,
+      "sha256": "474728713232c6833f55c041548f555bc62c5c49e74082a5d16e68a5ce488cfe"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Textures/Manny/T_Manny_02_MRA.uasset",
+      "bytes": 1059559,
+      "sha256": "6697972eaf2dfe201923dba6a302f024b0ef4c4e46b4ecf578178717098e8277"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Textures/Manny/T_Manny_02_N.uasset",
+      "bytes": 1680197,
+      "sha256": "61a9db73f72fe2d7d8821b33a79f57f3f11df9da9455822392b84b199c78e8df"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Textures/Quinn/T_Quinn_01_D.uasset",
+      "bytes": 674768,
+      "sha256": "04e5ed207b7df0d2ad1bbc668916bcf170545fc2a72875e49ec99c6e2667002f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Textures/Quinn/T_Quinn_01_MRA.uasset",
+      "bytes": 791597,
+      "sha256": "0988d4d9f25597224910e1043591cb2a089a8607a4fe4a63cbc68f3eb2ab473e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Textures/Quinn/T_Quinn_01_N.uasset",
+      "bytes": 1263741,
+      "sha256": "10fbe9ac3e18e0a890d19756d3470ca372a1aeaffefbe9a22d6b0e6182293551"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Textures/Quinn/T_Quinn_02_D.uasset",
+      "bytes": 943331,
+      "sha256": "f0ccb2f465894c6f9ff4dd142351ed33186c5f861283a75f3e08d1531a253c49"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Textures/Quinn/T_Quinn_02_MRA.uasset",
+      "bytes": 974099,
+      "sha256": "9f7e495cbe0430aed7084b5508f87186f98346eb04f003734c9b378891da7887"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Textures/Quinn/T_Quinn_02_N.uasset",
+      "bytes": 1524635,
+      "sha256": "0bc26466e9fdc954cc276bb6ac1350e22c3dabbe1b54b6bf78ed5ae2e339d9fc"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Characters/Mannequins/Textures/Shared/T_UE_Logo_M.uasset",
+      "bytes": 59927,
+      "sha256": "34e6fa3414c04a86b7a5287e5569ea9d6e53c319d6e7dbfc8b09dab5b70611a6"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Input/Actions/IA_Jump.uasset",
+      "bytes": 1695,
+      "sha256": "73c14789fee45a6e1eff57f3304a0bafee23790cc8ea6a6a5bf0056e75d7b3e4"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Input/Actions/IA_Look.uasset",
+      "bytes": 1385,
+      "sha256": "0d4a2cb59db11a0a080834e1b292207e530b8df217446afb46e382d9fa12f5a9"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Input/Actions/IA_MouseLook.uasset",
+      "bytes": 1410,
+      "sha256": "2901132a04ceb384e2693107b8f5455de48b7c325d6cc5ce07556c6425c19f48"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Input/Actions/IA_Move.uasset",
+      "bytes": 1385,
+      "sha256": "85567b9d91ffd9f7106c3062557a6fa864a791233380353f63eb563470985add"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Input/IMC_Default.uasset",
+      "bytes": 7787,
+      "sha256": "133bda6567aaeea1aae05c03597345e4b1d9ef24d868a0275203b3203a7aae98"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Input/IMC_MouseLook.uasset",
+      "bytes": 2521,
+      "sha256": "6a00157cd520edcf0b037d7091bfe188fa6eb7c48465f695981f7cbe5fb4cc80"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Input/Touch/BPI_TouchInterface.uasset",
+      "bytes": 16393,
+      "sha256": "e778ae087305a34cd6957fcf9b29670f0a2a01be96bad89c79b83286496ec45f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Input/Touch/UI_Thumbstick.uasset",
+      "bytes": 223040,
+      "sha256": "49c8c04b2e8c88beb55935b05d9af72c35d89512ea6435f20d5e3123be139f8b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Input/Touch/UI_TouchSimple.uasset",
+      "bytes": 70301,
+      "sha256": "81f45f11e73180f0964ee3f59f77c8c55e61d355e5c69427e1de67e5aa5db77b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Interactable/Door/BP_DoorFrame.uasset",
+      "bytes": 448616,
+      "sha256": "4386d7d71b8d5241fd8150aa47900711eb0d8bd069c00de25fce07f011d698fa"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Interactable/Door/Meshes/SM_Door.uasset",
+      "bytes": 59267,
+      "sha256": "fa98c4fc5083393e085d7b44d0b67a7e830922e2601a439167916616bbc29993"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Interactable/Door/Meshes/SM_DoorFrame_Corner.uasset",
+      "bytes": 86885,
+      "sha256": "383dea9555e76303d60d0011fae6651a4be07c24033c0aceeecd137c954ee3fc"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Interactable/Door/Meshes/SM_DoorFrame_Edge.uasset",
+      "bytes": 69088,
+      "sha256": "26eb76a2ce36be334bf0770561475a9e06be928e9ca75b4a31f5df3debb36592"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Interactable/JumpPad/Assets/Materials/M_GradientGlow.uasset",
+      "bytes": 17587,
+      "sha256": "c1b29ad29c2eac3dba6dd6a90aed9de8c6147a13b6288a42bd73fe14b78970a8"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Interactable/JumpPad/Assets/Materials/M_SimpleGlow.uasset",
+      "bytes": 15213,
+      "sha256": "e6098242541b34be6aba19ea1fbfa35107f891e8f55d30d4061aa11b065b8bd8"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Interactable/JumpPad/Assets/Materials/MI_GlowNT.uasset",
+      "bytes": 4145,
+      "sha256": "6fd40bc38bfea9418fa54fe365732a1219e615169542a0a4d2e1d518318c864b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Interactable/JumpPad/Assets/Meshes/SM_CircularBand.uasset",
+      "bytes": 70608,
+      "sha256": "97fbe3da2d907279dcbfbbf285e1b111ceb8d5f4a1c9d6bd48fcb8defc86842b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Interactable/JumpPad/Assets/Meshes/SM_CircularGlow.uasset",
+      "bytes": 71705,
+      "sha256": "6ddb27bf7020f4980d3f8435cb0928fb48b32c1ab3ea24bac7e253435081bf6b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Interactable/JumpPad/Assets/NS_JumpPad.uasset",
+      "bytes": 795908,
+      "sha256": "2e76849cbb139160e5e73c226fe6aaa66a63fbf75cbd1213f871cca65e409817"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Interactable/JumpPad/BP_JumpPad.uasset",
+      "bytes": 92487,
+      "sha256": "42ba8262f07355cdf36e33977f3bb415810390cf210b75573d766bd819cf8401"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Interactable/Target/Assets/SM_TargetBaseMesh.uasset",
+      "bytes": 283425,
+      "sha256": "378ace355b8f5e71a12e459d9f8cf4958626884142fec34be8630db6d8412cad"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Interactable/Target/BP_WobbleTarget.uasset",
+      "bytes": 45551,
+      "sha256": "8bd8784bf03cb945d63deb2c4c22261a9a9ea2af1f84766805ca92ec7b521ab3"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Materials/M_FlatCol.uasset",
+      "bytes": 11771,
+      "sha256": "41dbbda4b463a224c29ee01765e1f52a8ae63f2f94f1440ee267fe7b1a481585"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Materials/M_PrototypeGrid.uasset",
+      "bytes": 79863,
+      "sha256": "bf8625ad5917cee705867038d8a590b25465e6b5d5818a738a584e515d7cbdfc"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Materials/MF_ProcGrid.uasset",
+      "bytes": 49820,
+      "sha256": "e5ee13abdb241d9811f6c1bcc0a607d229fa7adc5f46bfd5a9d5fedbfa279683"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Materials/MI_DefaultColorway.uasset",
+      "bytes": 9260,
+      "sha256": "786a4dfcaaa6f4daf459c77bda247c2c138140680a8246d521974d0cc4fc8a8e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Materials/MI_PrototypeGrid_Gray_02.uasset",
+      "bytes": 11922,
+      "sha256": "fa0f2a06a7d937127d7d737c13bacb3f8fe88c8e0479f5e6b7cda81fd225d077"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Materials/MI_PrototypeGrid_Gray_Round.uasset",
+      "bytes": 11413,
+      "sha256": "901ec868e81e7a73c9f3ad4814e1205af27abc772949e5a30550a00f31ce4437"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Materials/MI_PrototypeGrid_Gray.uasset",
+      "bytes": 13121,
+      "sha256": "084681bf680dad66b8c8ca803d927053cf46756f2f2e62d18fcc439e07de7263"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Materials/MI_PrototypeGrid_TopDark.uasset",
+      "bytes": 11957,
+      "sha256": "838034e5afc7ab3a70bfff6de2e1237aa02337fb423e95c1b536b3e30c61c982"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Meshes/SM_ChamferCube.uasset",
+      "bytes": 128849,
+      "sha256": "b20a3ae9668ec599db519af3f84b67952d0e31ac4427b80ee812232edde91f53"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Meshes/SM_Cube.uasset",
+      "bytes": 18279,
+      "sha256": "4680317a8c87f983e077f6c0a6b93ffaa0ba4dbddbc810960d4553e6ad380a89"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Meshes/SM_Cylinder.uasset",
+      "bytes": 193636,
+      "sha256": "76aaa3c2b812ff790fb57ae7736b748e4e1556afbb13466fd787d4bacd2c7dfe"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Meshes/SM_Plane.uasset",
+      "bytes": 15581,
+      "sha256": "39ab83dc57a9a27a80476711610f72e81c0685a05d4aa95413b3e4e7f6c4a3f2"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Meshes/SM_QuarterCylinder.uasset",
+      "bytes": 135087,
+      "sha256": "4087b3f85753d9ccbced7d00d42208dad4d21185f24a97b0c86db31be867b733"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Meshes/SM_QuarterCylinderOuter.uasset",
+      "bytes": 79741,
+      "sha256": "ab58a5224da57452f367c9d55ea4976466138fc2cb8ec9e2fa92748c86a07f11"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Meshes/SM_Ramp.uasset",
+      "bytes": 18690,
+      "sha256": "e5b472deb37a9956b9112dccee3d09498a456baeacc574db8c5d725463b73597"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/LevelPrototyping/Textures/T_GridChecker_A.uasset",
+      "bytes": 9600,
+      "sha256": "bb8334767064b107ec4f4407ef1365e8b9e2dfeff5984e66d4a6232254ddd02a"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/AS_Naiwa_Idle.uasset",
+      "bytes": 23314,
+      "sha256": "6de2597d637db1ac2838042faedf0de5629c36ed2b9f7b155eeec1e2b691ab62"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/AS_Naiwa_Jump.uasset",
+      "bytes": 26831,
+      "sha256": "7571f30d94d59a4e8654f83af02a6735c6fc59e5f9bedd4ce38c562ecbdd1889"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/AS_Naiwa_Laugh.uasset",
+      "bytes": 28756,
+      "sha256": "a684835f09fcce92cc0565e8cced0feaedc01c3f04949abb1022c74de6e69558"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/AS_Naiwa_Walk.uasset",
+      "bytes": 44210,
+      "sha256": "e7e0c9eaae2c072728defd1181aaabd48c2804dee61c527ab64d89daf55db4ff"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Blueprints/ABP_Naiwa.uasset",
+      "bytes": 24912,
+      "sha256": "7810a35620eac55fa0f70eea6e0855338c2c85caf05cea7215f43134ee5185d9"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Blueprints/BP_NaiwaCharacter.uasset",
+      "bytes": 28379,
+      "sha256": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Blueprints/BP_NaiwaGameMode.uasset",
+      "bytes": 21249,
+      "sha256": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Gameplay/AS_Naiwa_Run.uasset",
+      "bytes": 94606,
+      "sha256": "02b640e491c0dfa2660a6e00bb21d43cf55775d00d1a8a096571f2a793f09bb9"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Gameplay/Materials/M_NaiwaBody_Gameplay.uasset",
+      "bytes": 7726,
+      "sha256": "c758f917465021dd9885536f4b2c6c8893f126f4e81cd88782559e391a36e0cc"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Gameplay/Materials/M_NaiwaEye_Gameplay.uasset",
+      "bytes": 7721,
+      "sha256": "2bcfbfbd1c43b096d9eb448f6338c2968503cf46e5815fd277e089b9b5991ee3"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Gameplay/SK_Naiwa_Elastic.uasset",
+      "bytes": 97435838,
+      "sha256": "a05495d621318544fca34e29327e10218d8f76808abcec08cd870ea5ea2ebdf5"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Input/IA_NaiwaGait.uasset",
+      "bytes": 1142,
+      "sha256": "b1f5c8fc9ffac0ac08705ae6c2b7d7309609e4290dab66953e9ad91999fb9119"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Input/IA_NaiwaJump.uasset",
+      "bytes": 1142,
+      "sha256": "63dc4387280e60af5941fc91a63b3686328b8c8168d69449d2774e9f35ba58fc"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Input/IA_NaiwaMove.uasset",
+      "bytes": 1338,
+      "sha256": "35b3afd3e028bb34def27ad0833a725156dc44e7d4ab3af9e46dc66d86e5a15d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Input/IA_NaiwaPause.uasset",
+      "bytes": 1219,
+      "sha256": "981a93df5d5959e12da9d00fcaebe5ce9c793dcd11323564236f3ff9d2014b47"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Input/IA_NaiwaReset.uasset",
+      "bytes": 1219,
+      "sha256": "75678d69dbf1a180a5e2f9d1c3e0e7b034b4612b3c46a07c80f9ba27d9581340"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Input/IA_NaiwaShiftGate.uasset",
+      "bytes": 1162,
+      "sha256": "9e0431f85ea83e50abee7cf97242fad1ed6dceee3db3e94546dc2611e81a757a"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Input/IMC_Naiwa.uasset",
+      "bytes": 6869,
+      "sha256": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Maps/L_NaiwaGraybox.umap",
+      "bytes": 31725,
+      "sha256": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Materials/M_GrayboxFloor.uasset",
+      "bytes": 6084,
+      "sha256": "95d242ccfa840a44c9759aebe7dc71fe6c15cdb4721d23f5b0a13fcc4714e19f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Materials/M_GrayboxPlatform.uasset",
+      "bytes": 6099,
+      "sha256": "298583ec51b0a779e7e141a3a17b69f41158974cbdaa48c366111753129ce087"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Materials/M_NaiwaBody.uasset",
+      "bytes": 5983,
+      "sha256": "194eebeff2367ee3971d6f3b11048f1d65dc2f2ebc9eed24bb280eda4f9b1577"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Materials/M_NaiwaEye.uasset",
+      "bytes": 5978,
+      "sha256": "1638f0b2b946898f8bbf719ba3f29a454f0535d168fbde9c662e631bb20daf5a"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Materials/M_NaiwaGlint.uasset",
+      "bytes": 6074,
+      "sha256": "41351e9ae1522af1b28a724ec4ce0aea60217e8ad1989ede35cabeb3e9e04f66"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/Materials/M_NaiwaMouth.uasset",
+      "bytes": 6074,
+      "sha256": "60298f966b1b0c235d0468a83dd367fd78c796755a314a38850a5f6206ee35fb"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/SK_Naiwa_Skeleton.uasset",
+      "bytes": 5109,
+      "sha256": "93acb82e090bf782e955b06c365aa710ae73986181a893e7d2d85417faf8e3ae"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/SK_Naiwa.uasset",
+      "bytes": 91530289,
+      "sha256": "67f807019e6fceafe8a5b7c78037221f7fcf66c8dd515fcae52b8bee039a0734"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
+      "bytes": 148667,
+      "sha256": "5b2f02daf78ea15efc4e83fc78e7e30ccfe73b6540dc213d099ae72458e7d645"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/ThirdPerson/Blueprints/BP_ThirdPersonGameMode.uasset",
+      "bytes": 16003,
+      "sha256": "8e4355f6d7c091e0b77c330044b6059cb03637c2439d7ef4de102df2d365d2ee"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/ThirdPerson/Blueprints/BP_ThirdPersonPlayerController.uasset",
+      "bytes": 83213,
+      "sha256": "1eea710b3f7975732b53dd245e375f39c59c1b8ca468ebacce4e31bc47e88592"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/ThirdPerson/Lvl_ThirdPerson.umap",
+      "bytes": 12330,
+      "sha256": "3e668a9b3098a76f49ce307759ab00662406c7fa0870eeee6e7a2dbf7f854386"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/ThirdPerson/MI_ThirdPersonColWay.uasset",
+      "bytes": 9301,
+      "sha256": "aa8b4a4115c11750c57dc94df7fb8ab3c7f0cfef71037b9d11e7639fab15c25e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Anims/ABP_Manny_SideScroller.uasset",
+      "bytes": 474123,
+      "sha256": "4c779b67409c18949464a35b619e71d998010eef3c177d326811d83fbff836e2"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Blueprints/AI/AIController_SideScrolling.uasset",
+      "bytes": 21856,
+      "sha256": "1eaa50debdc6c0c69990785d7522b726a2bc042e0bc3a50f82f491712803561f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Blueprints/AI/BP_SideScrolling_NPC.uasset",
+      "bytes": 79262,
+      "sha256": "68ac269c4ecf7c6cee2e66d67e933957546c6efe59d820e537da61df176aaaa6"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Blueprints/AI/ST_SideScrollingNPC.uasset",
+      "bytes": 93253,
+      "sha256": "dcd7139e1acc37045ed77dbceb889cbfe010bf52b2042f8a289a7e8a1e2f91c2"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Blueprints/AI/STTask_GetPlayer.uasset",
+      "bytes": 103307,
+      "sha256": "c6949e62b215a45bde08c9e0570bacd01bbfd72e4017bebaa08413d053da386b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Blueprints/BP_SideScrollingCameraManager.uasset",
+      "bytes": 242153,
+      "sha256": "c7246537b08e3b87e0637cf2a4ff8261673cf78600811696c56fd2730ac17fc3"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Blueprints/BP_SideScrollingCharacter.uasset",
+      "bytes": 421730,
+      "sha256": "3086e09430088058fec99dc3b4dba3ad2615d7c3c1fc639e25860d646dc99566"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Blueprints/BP_SideScrollingGameMode.uasset",
+      "bytes": 136180,
+      "sha256": "b37c7d07bdae0f52f1949fb5656b67bed66200a4690bd194d711960796df47fb"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Blueprints/BP_SideScrollingPlayerController.uasset",
+      "bytes": 120287,
+      "sha256": "13cabd6766bb5d7bc04409f8204e7ce577a8bd013962219f831e855738fe49a8"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Blueprints/BPI_SideScrolling.uasset",
+      "bytes": 18481,
+      "sha256": "f855c76bc64931bb7b0a59c79459e49e23fe00aa73462dba3cd6d774a6dae9bc"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Blueprints/Items/BP_PickUp.uasset",
+      "bytes": 78189,
+      "sha256": "2f9e8ff5d66e19dded63458b8fe652d47a962ceab98c8ae073a6eb532931e188"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Blueprints/Items/BP_SideScrolling_MovingPlatform.uasset",
+      "bytes": 84135,
+      "sha256": "b70b93427fa7bf355a4a45b9806f30236fd49b80201ef4a3a881641e1ad26264"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Blueprints/Items/BP_TwoSidedSwitch.uasset",
+      "bytes": 43854,
+      "sha256": "a7fce436eb925677e616e2b8540798d0a51591b32be2c0100c3c47b787291709"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Input/Actions/IA_Drop.uasset",
+      "bytes": 1427,
+      "sha256": "7a2e57beeb1df3b53769d11a9aa18209c905dbb29e103eec71cbc4d35412623f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Input/Actions/IA_Interact.uasset",
+      "bytes": 1757,
+      "sha256": "ffebc2e489fea2a5c6da96bf7abfa618a750da6f0185415ab51695dfee849fe3"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Input/Actions/IA_Mover.uasset",
+      "bytes": 1432,
+      "sha256": "b295c6f59757b5245e181b802b945a8209398585053e28398a49e28f9ba72c73"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Input/BPI_TouchInterface_SideScrolling.uasset",
+      "bytes": 16361,
+      "sha256": "9d020f98da5319484f49ed9d6447ae0014e49c28afb8060099a62b35fef7999f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Input/IMC_SideScroller.uasset",
+      "bytes": 6623,
+      "sha256": "787686d92b617947f576c805d6ade0b9dd3d6345e210474d3e54a14deacc7da6"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Input/UI_TouchInterface_SideScrolling.uasset",
+      "bytes": 76707,
+      "sha256": "6405378804f0d741aedf188ef61d038d595cdcfd9ad3fad94af55cb419eba694"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Lvl_SideScrolling.ini",
+      "bytes": 798,
+      "sha256": "c65ad04753ebdaf7df1f2fcb5c6fd8907908e5f914b105ad97d356619c9d009a"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/Lvl_SideScrolling.umap",
+      "bytes": 12380,
+      "sha256": "75861cf8714b104a6da137bf4e2eca8e42499f7ffc43fb6c3b23feb58e594688"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Variant_SideScroller/UI/UI_PickupCount.uasset",
+      "bytes": 38882,
+      "sha256": "91d53fc5b9162c5751453040ba3b75af54db6a8bbb7e64b327d4eb7ec783b50c"
+    },
+    {
+      "path": "UE5/NaiwaP0/Nai_Long.uproject",
+      "bytes": 681,
+      "sha256": "955dfa52a4c1ca4f2526bd24c62b5d9b278d75f6f32c20ddc41c0a54962e506f"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/bone_poses.csv",
+      "bytes": 5219058,
+      "sha256": "390ad9fe9451a455385b016777186147f1898f04124b88a350127fb3b72fc411"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/frames.csv",
+      "bytes": 503887,
+      "sha256": "f1b7e387772b7f399865944f02b5cc855dd2309f11a0200ffced17b4afcccfc9"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/morph_weights.csv",
+      "bytes": 981733,
+      "sha256": "f13bd6bbd7f20f34187e35e9350321a5ae9037a5c061b35d4be177a2206dc4fe"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_01_01_flat_start_stop.png",
+      "bytes": 1843489,
+      "sha256": "afd8ede5835ca7f48e4660ae9dfd91ebd1c1668c7b253652beb6976d744f9aa2"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_01_02_reverse.png",
+      "bytes": 1715749,
+      "sha256": "57d35639b7e578ad7d947040b7442bb02cf36b06a73119a804da7e1fd0c07a30"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_01_03_wall_collision.png",
+      "bytes": 2143966,
+      "sha256": "6dffe55648ef6b299a836a4445f9e17d343f0d7e6a40d1a9d09a30769ea9308b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_01_04_jump_onto_platform.png",
+      "bytes": 1573483,
+      "sha256": "b4367ab819f5445566672c1fb3c8e44df955fedcb3aed1cf9ae0369008c83a67"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_01_05_platform_drop.png",
+      "bytes": 2128880,
+      "sha256": "9c35df1d6254f1a9ee9c1dfe63208a1b0348925cb456c958904075abb7e11f4d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_01_06_long_airborne.png",
+      "bytes": 1840112,
+      "sha256": "5b0c5fceba7a784c30e8b8b042eddf1de8b4991b7a71ca6b28428fb39ef3af10"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_01_07_early_landing.png",
+      "bytes": 1641745,
+      "sha256": "bcb7b00cf45736472a20eabe10836f1d145def844459b9015b3c4dc9320fc8cd"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_01_08_reset.png",
+      "bytes": 1793953,
+      "sha256": "dfede218f032f422f88d00a74368ed5d823387e6a71e7f2151effb30d18219e4"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_02_01_flat_start_stop.png",
+      "bytes": 1843858,
+      "sha256": "d18aa043140dbd82439aed2ba04eb0c2322ff4601c065e7737b5543f6a4f7c9e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_02_02_reverse.png",
+      "bytes": 1734319,
+      "sha256": "836594e69620c2ead7611ff4992a2d5c4726abc175f4b16885d55f9139525f96"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_02_03_wall_collision.png",
+      "bytes": 2155249,
+      "sha256": "96b1cf9942bb58e23e54872a1c260578f453dfda57954a3ce61fd3cd3d101475"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_02_04_jump_onto_platform.png",
+      "bytes": 1569820,
+      "sha256": "2175dd4495ba6551195e0d67eb2cd29840740dba1613087a80a3a4261daf12d8"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_02_05_platform_drop.png",
+      "bytes": 2136263,
+      "sha256": "d6a9f40c8cd1c336fc57326dfc13a217adb07830eb4616667005355c9b721617"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_02_06_long_airborne.png",
+      "bytes": 1831134,
+      "sha256": "38e5b8d8ea9f88c4012a683332a3ed9896d7706b701d11b6de79a8b258772856"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_02_07_early_landing.png",
+      "bytes": 1631264,
+      "sha256": "32f1e146ab0e12dee484d0e4f3f1f054e00168d5e4f57eb9238eb87be89c04ce"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_02_08_reset.png",
+      "bytes": 1795280,
+      "sha256": "6db7fedd2745d52448ef7cc17cd1505361a178739de5add1d8ebadda4f95a9e0"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_03_01_flat_start_stop.png",
+      "bytes": 1844959,
+      "sha256": "38f684d239e613fef70a1c534ca2894a546ccbb1facc6de011089bba4a139087"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_03_02_reverse.png",
+      "bytes": 1732982,
+      "sha256": "d7c1f051fe157c80e624f2eb3aaaf9f50e1d0a89489436fdba210719c2be3ca7"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_03_03_wall_collision.png",
+      "bytes": 2163140,
+      "sha256": "65208802815e269b8d40bb3105e38835750ccab0a8803cf4a792e888b1b41349"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_03_04_jump_onto_platform.png",
+      "bytes": 1567926,
+      "sha256": "706681b7c79b0211267c6fcfa3802d2e26d8096006d33338bc46acc90e295ce3"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_03_05_platform_drop.png",
+      "bytes": 2137639,
+      "sha256": "dcaf5c1a1c85440828277b19a7257b6cde315358b9c7c4bab55beb28ab5e5cce"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_03_06_long_airborne.png",
+      "bytes": 1827849,
+      "sha256": "e4fbaed2b2c8d3523683e7f3c759cebd9cd393e36f24a0d378361cfcd5b06055"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_03_07_early_landing.png",
+      "bytes": 1632687,
+      "sha256": "bd13dade1b5990bad4afc7dda9278fccf57fdc91374e87e1069d92c8acfa56e1"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/round_03_08_reset.png",
+      "bytes": 1797026,
+      "sha256": "78db450694e8795c89c6b30900a98551ed2ceb1ed9ffe9789c826ccbc346eee2"
+    },
+    {
+      "path": "UE5/NaiwaP0/Saved/NaiwaTests/20261013T053123Z_44908/summary.json",
+      "bytes": 143717,
+      "sha256": "060b6a9bbd25968be61f77b93f12970f85fe5a116f4b788fcadd2e982ab370bc"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/Nai_Long.Target.cs",
+      "bytes": 343,
+      "sha256": "524f7c9a9cb89b47ecb05b1771b60f1b8fb441a0a16d8da6039f3810f0685d7d"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/Nai_LongEditor.Target.cs",
+      "bytes": 357,
+      "sha256": "d86168191900f6fd35cd7ff6524710d0c4313af4c7031f976d65c21bf6b9bf32"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaAnimInstance.cpp",
+      "bytes": 7722,
+      "sha256": "b6b3bc2c645a4e99fa81d763e0c2399f28bf6e47efcee7ed9617096bdf8ef439"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaAnimInstance.h",
+      "bytes": 2691,
+      "sha256": "6ed89daa9390b1d8c1b2286eae9ab2ab27c8dea5ceded630e5e536ebadd28ac8"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaAutoTestComponent.cpp",
+      "bytes": 66434,
+      "sha256": "ba4a22fb53c6c0170cee9e2355b0704cc4a6e90b0bdc7721aa8d996ca152056e"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaAutoTestComponent.h",
+      "bytes": 6764,
+      "sha256": "dc8953289dfdc1697b045950027ed0495e55c7cc12cce0f032ab4f39514cadb6"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaCharacter.cpp",
+      "bytes": 15711,
+      "sha256": "21da7c5b73a74488cc42ac7eceeaebddb0829d977ffac0c64c81a4214dd5c5c1"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaCharacter.h",
+      "bytes": 5985,
+      "sha256": "e0aa0f35ff556f07da9a9a3f61483e677431ad4851b288a3bc3eee905e526663"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaGameMode.cpp",
+      "bytes": 211,
+      "sha256": "af35a823af3117e993fd43142a2dc296ffa412fadfc15bf21f1772d39d57b12a"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaGameMode.h",
+      "bytes": 257,
+      "sha256": "30b576f053972bb4bc48eb9763189aadda6e2f09d94d146609ec0ca655a05f43"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaHUD.cpp",
+      "bytes": 2794,
+      "sha256": "55c3f8aaafd9ffc02b91628a9202f329b66481d574d381b3dfa081407f10630b"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaHUD.h",
+      "bytes": 451,
+      "sha256": "260f107299f0741d57e9dd387cdf7e22bda7af613ccaeea58fb77edcd15aeb8c"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaRuntime.Build.cs",
+      "bytes": 446,
+      "sha256": "c0a33cefb66461fe3c878853236f2ec7f5c17402a06af0fad48471bdcfe3ca8c"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaRuntime.cpp",
+      "bytes": 117,
+      "sha256": "fb296e35652c4b70fbe1c2d6388bd63ea1c93d9c408046a7720a3fe4db16b5e3"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaVisualReviewComponent.cpp",
+      "bytes": 23611,
+      "sha256": "6d10444c5f795cc99cd22c2063a9d19bf627cfd0a95e51ce253e06124705e45a"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaVisualReviewComponent.h",
+      "bytes": 1982,
+      "sha256": "0cd0e3b4088cb28aaaa31a7e5f642b20db13c1011dd7cf0568eecb8c9482aaff"
+    },
+    {
+      "path": "UE5/Records/P0_CHECKPOINT_20261013.md",
+      "bytes": 1455,
+      "sha256": "e52e21cba2e328075597a0b573a2b9f7eca01d53f2f86dad21a5b07c9a26f4d6"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/视觉验收.md",
+      "bytes": 3210,
+      "sha256": "389b09b92f9d6e1938ac19f84e4420a1106c3c29769e0f2e2951d605316fe5ed"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/before_hardware_check.json",
+      "bytes": 647,
+      "sha256": "07010277c8eaefba7da0a760ff5787e897b25cf0b5759731eecce8a3c6796210"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/clips/AS_Naiwa_Idle_game_time.ffconcat",
+      "bytes": 2296,
+      "sha256": "132cb0ab15a23981b8347faee4f5f5c27a6c0a40d28d01762e0eba7a46d3ffc9"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/clips/AS_Naiwa_Idle_playback.png",
+      "bytes": 627407,
+      "sha256": "0bea6ed201b6d91195729797cbd011dc82723e3a8cd7f873851108de1981d3ef"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/clips/AS_Naiwa_Jump_game_time.ffconcat",
+      "bytes": 1476,
+      "sha256": "861b981eb09e7d252dea43ce0aae5b5882c2eaf5803b09a0585ed2ab60206065"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/clips/AS_Naiwa_Jump_playback.png",
+      "bytes": 408225,
+      "sha256": "bb050adfd28d8783172d037ddd334dc3c724f9f996019509b334376a9d1e7edc"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/clips/AS_Naiwa_Laugh_game_time.ffconcat",
+      "bytes": 1815,
+      "sha256": "2d35ed75315818283f9da448dfdea1c04cd06d619cbdb129f613ddc5d24aea1c"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/clips/AS_Naiwa_Laugh_playback.png",
+      "bytes": 514873,
+      "sha256": "3cfae82242451ea279d98bf7e3cef4109e096e57a843a41807514cb4e1bc9987"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/clips/AS_Naiwa_Run_game_time.ffconcat",
+      "bytes": 1304,
+      "sha256": "4c4643d835b620fbc8d70bd438e5ffbbd616fe9b5b509aad3fcf27f63c428448"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/clips/AS_Naiwa_Run_playback.png",
+      "bytes": 383667,
+      "sha256": "091184a7d83bfde13519833e966caf588dd8c135b8f6790b844216ab51b2272b"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/clips/AS_Naiwa_Walk_game_time.ffconcat",
+      "bytes": 2460,
+      "sha256": "f09890c81adecdb489229954288857f06eac1acbed534d30ddfbbddca0698a7d"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/clips/AS_Naiwa_Walk_playback.png",
+      "bytes": 717627,
+      "sha256": "2d95170a8e01cccb60e502d590463b283055bf9fa329e77e1bf84065e749c465"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/clips/playback_review_summary.json",
+      "bytes": 3838,
+      "sha256": "bce23e9408700db6a9d76debe2b37cac81d247f3beee577fbf627bf48f1adf78"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/completion_report.md",
+      "bytes": 5139,
+      "sha256": "8af8cc5cf30ac365b63a6bc0826ce365da90740849192e91571d77bbc47cf6d1"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/compose_current_gameplay_sequences.py",
+      "bytes": 2565,
+      "sha256": "10458eb7fbe11f75f04969ff14c8b6d226eef2d4414e5c88e70a7e0c6328ad3c"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/encode_runtime.log",
+      "bytes": 39646,
+      "sha256": "457bf81689dde2f985298c41b1fef51e5f47fdacb955bac2b6d943396967784d"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/final_manifest.json",
+      "bytes": 2021,
+      "sha256": "3c201126a6fc62ce0dcd967e303a8fbb5274655cdd6e67963d24378e957a7a6d"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gait_acceptance.json",
+      "bytes": 4853,
+      "sha256": "83d01dfd0e85a543e19188cc2860cc1165f39a8aa412ba016748624ee418a023"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gait_build.log",
+      "bytes": 6796,
+      "sha256": "8ac97050a0f99eedf97e623ad3b3d28a3899b59cae41f99532dde3e5b47222f2"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gait_input_mapping.json",
+      "bytes": 2902,
+      "sha256": "ca0aa98790ee7e09063cf49e98cba100e41cf882a834e642d0e82fbc2c59eccf"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gait_input.jsonl",
+      "bytes": 2994401,
+      "sha256": "6a08debdd18487721ac9f432f4be5ac1cf4271e9037697e629bf1bb54fcdf244"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gait_mapping_console.log",
+      "bytes": 19490,
+      "sha256": "def7f920dbe352c1b29055a11b5fb00272a6ea81de388fa3dff1108329dab2a4"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gait_mapping.log",
+      "bytes": 229280,
+      "sha256": "c0024acea02ae8401e193e8dbbcc3c5c87444eae0cc83699dd5d4864f2e9d915"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gait_ordinary_session.json",
+      "bytes": 98,
+      "sha256": "52d02e67e07a74296f6e4bf17e7272b3185548ac3ea0ec4a6f7f241911a6a10b"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gait_ordinary.log",
+      "bytes": 226171,
+      "sha256": "4d28805d5c98a5b0089dd4028512cf6ed978badfc827106074f4112d3a6aa6ce"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gait_walk_sample.json",
+      "bytes": 642,
+      "sha256": "e71acb4f4c087220b395cced05aa1e1d443902e1910e3c7c81f8caeb31c6172d"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gameplay_sequences/early_landing.png",
+      "bytes": 938802,
+      "sha256": "cf2386ffa2b81f652b10ba4a33626b6ac47653aa1c315ff353d1c7dabccc9279"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gameplay_sequences/flat_start_stop.png",
+      "bytes": 654609,
+      "sha256": "fe5d1be65cfaa203a390888020d734a58ba1cb18722e1643f8aab5d3692fb9a3"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gameplay_sequences/jump_onto_platform.png",
+      "bytes": 976633,
+      "sha256": "b6929a283165527b3980ed48b1a9cd77f3f6feca82c1c9cd021836f8d7c2a5d0"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gameplay_sequences/long_airborne.png",
+      "bytes": 979996,
+      "sha256": "9793a86d59281b641bb51092cf9c7ee29a49bc422f07e24866f2371ac4b05552"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gameplay_sequences/manifest.json",
+      "bytes": 23861,
+      "sha256": "91432514059527f95a60b0ca390d75390ccd4b40a192d9cbf40287b21efa7aac"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gameplay_sequences/platform_drop.png",
+      "bytes": 1016720,
+      "sha256": "9c8166b9d10155d531d1dbf6bbc9f7a4d142fe72ff41a5e6dcee0492853a2071"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gameplay_sequences/reset.png",
+      "bytes": 910438,
+      "sha256": "0f57a5b97bae702afc2a3c77133f4282a2de373ffe6ddf45b4e176ddf8554550"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gameplay_sequences/reverse.png",
+      "bytes": 1030427,
+      "sha256": "d329316ab8b723bcf7f13ed6090ea98c9dc32146b60090ad2af2d2df12b52712"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/gameplay_sequences/wall_collision.png",
+      "bytes": 1130784,
+      "sha256": "808e5755aed5b9c6b1eba8b3267429eaf27cf5294c326c6f5cf7236ee092188a"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/IMC_Naiwa_before_shift.uasset",
+      "bytes": 6078,
+      "sha256": "8b12ba6a7fd366dd688f582a0f157eb05388a8b88b81fd624d7d755e1aaafecb"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/Naiwa_P0_Runtime_20261012_encoding_report.json",
+      "bytes": 35352,
+      "sha256": "9acd0662ec7b36df976fe2dd9dae83a71132953c5f6e95ceb3bb76054bf91e95"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/Naiwa_P0_Runtime_20261012.mp4",
+      "bytes": 12425989,
+      "sha256": "466c81e6874e6072e7be1581c779534d9c06f9bebe57ce135c75c1504743ab9b"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/obsolete_chord_trial/configure_shift_movement.py",
+      "bytes": 4542,
+      "sha256": "b574a3f2bc46b788334f7ac73dbf0eb2df982fc37b7cbff85182a91e62e0b91d"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/ordinary_input_acceptance.json",
+      "bytes": 705,
+      "sha256": "a2c9b3798ddced2d6787c475ae66cfc2f66d049f943639e36287d4b941e595d4"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/ordinary_input.jsonl",
+      "bytes": 3876329,
+      "sha256": "e3cfb5d5f6d937293c5717b03cc48953e6321157ab29e0486fa234addfbdc00a"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/ordinary_keyboard.log",
+      "bytes": 213807,
+      "sha256": "81edef46d76705c4a687b931264916dda9a8c4622981d2cdd9a0f5f399635f25"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/ordinary_pause_HUD.png",
+      "bytes": 1226300,
+      "sha256": "e427f8511823b0ce0df03d5eb6cfb089012e23426cd58549d1a03dbd8a5459ee"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/ordinary_session.json",
+      "bytes": 151,
+      "sha256": "299a37a6c3b9642528c72cc7a3e6b7dbe48d035eff16ade19c0963cb26568d2b"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/runtime_digest.json",
+      "bytes": 13135,
+      "sha256": "c6cab3a638115017656af1966662691cbf5052f2f95d98cc50cc54582588de1e"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/runtime_timestamps.csv",
+      "bytes": 20296,
+      "sha256": "e96c1b3bc340df586500efe01607e9b66f676a7dc506f5a2db463e62c6c8f453"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/shift_build.log",
+      "bytes": 3748,
+      "sha256": "dd52cab1b1c891b2f5777c04b2af2d1ebd5b1c1357a6edaa6586893fd7745bfd"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/shift_D_disabled.json",
+      "bytes": 516,
+      "sha256": "8a5aa671ef9d824e4946b65c3962c43144cc7cbff6e52fbd3c2be3dd7a0e3672"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/shift_input_mapping.json",
+      "bytes": 3801,
+      "sha256": "b8299ee74e5f6df5cc9d92f93e444e799294fe5467f955c2976286fc643ac014"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/shift_mapping.log",
+      "bytes": 227795,
+      "sha256": "eca0b3dccd82aee02cb9615c7eccdb909584e31f5dbbbcc59e607e359bb663e3"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/shift_ordinary_session.json",
+      "bytes": 96,
+      "sha256": "c413a6bb17e5479653533329f20f5baf025f0d17d9c3d0d5e8977fe800768e04"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/shift_ordinary.log",
+      "bytes": 203105,
+      "sha256": "ec603f894a579b888ee5f91560b8215dbd0c7f92b9166da8a5687d388e1fe662"
+    },
+    {
+      "path": "UE5/Records/p0_completion_20261013/visual_acceptance.json",
+      "bytes": 6536,
+      "sha256": "02992842f8713f4acfbdbb1441ad7ac91895a49caa47c0e3eef59fb6c4aa539f"
+    },
+    {
+      "path": "UE5/Records/TASK_STATE.json",
+      "bytes": 2005,
+      "sha256": "ef1b267f28093cbac960bd531e8d6dc8a9ddf2ab27fd921f99116f1fde7d09e9"
+    },
+    {
+      "path": "UE5/run_stage.ps1",
+      "bytes": 3042,
+      "sha256": "622cf3ed3600feea1aa36dd3c3af4239fe9c52ca206e7812272405a019426764"
+    },
+    {
+      "path": "UE5/Scripts/audit_p0_final_settings.py",
+      "bytes": 3351,
+      "sha256": "8aa3e11de9d533d85acf418d629dcd3c7b175f41443410cd663c0391fe54d74c"
+    },
+    {
+      "path": "UE5/Scripts/build_graybox.py",
+      "bytes": 12290,
+      "sha256": "33a0a540f5a7642461a7bb9f3abac65d277e107d607c07d38306b7a7210c586b"
+    },
+    {
+      "path": "UE5/Scripts/capture_p1_0_baseline.ps1",
+      "bytes": 4163,
+      "sha256": "e77d302b7a259345f4f639f117cda993f28fcbecf7a0b7f09caeadb1e6e8b180"
+    },
+    {
+      "path": "UE5/Scripts/compose_p0_playback_review.py",
+      "bytes": 6823,
+      "sha256": "84c44cb3287781182751bbd6dfc54fa2a47d8f8448f41117d81781a6c0d2cc05"
+    },
+    {
+      "path": "UE5/Scripts/compose_p0_visual_review.py",
+      "bytes": 2272,
+      "sha256": "684912aebd8a0e197523ec1334d1adf78e778924da793c6079100e3ef46e2be3"
+    },
+    {
+      "path": "UE5/Scripts/configure_gait_input.py",
+      "bytes": 4153,
+      "sha256": "9073ee724c0553ab5f85f525e813d9853a4da569a540158d55d158a5b9162205"
+    },
+    {
+      "path": "UE5/Scripts/configure_gameplay_visuals.py",
+      "bytes": 4569,
+      "sha256": "73b3efa14b641b5ddc3251a75491e0d61bddfbef1b8e5291f59edc5394274ca6"
+    },
+    {
+      "path": "UE5/Scripts/configure_p0_collision.py",
+      "bytes": 1943,
+      "sha256": "08a6724f3a153fd62d2369ed7771dc403d182df869d4d00b177f38e3b14c79bc"
+    },
+    {
+      "path": "UE5/Scripts/configure_p0_early_landing_fixture.py",
+      "bytes": 1452,
+      "sha256": "16f739b31b3b9847fcf92c3892294d4ebcacfda5b1430093ca35f10b014ffdfe"
+    },
+    {
+      "path": "UE5/Scripts/configure_p0_review_scene.py",
+      "bytes": 1708,
+      "sha256": "695e79168eefc74bff8052fef0359af8845f18edfe56eb1eea1c5a308dd2ebc9"
+    },
+    {
+      "path": "UE5/Scripts/create_run_animation.py",
+      "bytes": 20860,
+      "sha256": "e08d3ea949feda8d368db866b455996fe74a1c71c5ecbf9d48d0cb75a418001e"
+    },
+    {
+      "path": "UE5/Scripts/encode_runtime_video.py",
+      "bytes": 11640,
+      "sha256": "ea57ba4e4ea92befe3a6f7cd42dfc883eb8c4cc724bae7b1a427bf69ded078bb"
+    },
+    {
+      "path": "UE5/Scripts/export_acceptance_table.py",
+      "bytes": 1975,
+      "sha256": "127d69139b429a9454e28b941308fdd22540b4c83721e4faf3ff36f4074b0098"
+    },
+    {
+      "path": "UE5/Scripts/import_e2.py",
+      "bytes": 5886,
+      "sha256": "e8614a0dea8310b27bc376b5d7983568b84cf2198e4b518cc6ba06ef63fa10f2"
+    },
+    {
+      "path": "UE5/Scripts/import_run.py",
+      "bytes": 6797,
+      "sha256": "346859431e0aab853246af8358a51e35504495bedbcb9c5856f37ef7bec694b9"
+    },
+    {
+      "path": "UE5/Scripts/reimport_validation.py",
+      "bytes": 16512,
+      "sha256": "7635c57bddc7c5f81d98351c6ea3c98c6ebf145b9c3fdf81e0ad3e7f3f531f70"
+    },
+    {
+      "path": "UE5/Scripts/review_runtime_frames.py",
+      "bytes": 2419,
+      "sha256": "4697481c9918e54baf98fc55493050840bcf237ead8a36a2110fdffaa19cde22"
+    },
+    {
+      "path": "UE5/Scripts/summarize_gait_session.py",
+      "bytes": 2820,
+      "sha256": "f2f0f3673f5f8b39590d653ee04210c6a1cb511a4e8cd5de9b00be605ff71115"
+    },
+    {
+      "path": "UE5/Scripts/summarize_p0_result.py",
+      "bytes": 3667,
+      "sha256": "aa57ef4bf55bf77e6fadf7846947aad33d054668d2dc2454d993fa27ad1df91b"
+    },
+    {
+      "path": "UE5/Scripts/summarize_run_runtime.py",
+      "bytes": 3399,
+      "sha256": "9f5a58db83be49e25e4e048076658e1237a506f07880422e4aadd577bdd271f9"
+    },
+    {
+      "path": "UE5/Scripts/validate_clip_review_poses.py",
+      "bytes": 11314,
+      "sha256": "c4bd19547ff665ac3617721c91b6c602c5494df998e9c4a698d3cb16b8e9493c"
+    },
+    {
+      "path": "UE5/Scripts/validate_import.py",
+      "bytes": 25824,
+      "sha256": "b5fb2ec9a638c80911b4a6b3a772ea0224c522a0db82e619f0197d4b9f985cd1"
+    },
+    {
+      "path": "UE5/Scripts/validate_run.py",
+      "bytes": 5707,
+      "sha256": "92d6c452ecc8df5334d9be4442fcd0c1af583b4af9ef0cb06f61368e0efbcafd"
+    }
+  ]
+}

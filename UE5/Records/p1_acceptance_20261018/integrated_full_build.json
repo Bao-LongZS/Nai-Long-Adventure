@@ -1,0 +1,585 @@
+{
+  "schema": "NaiwaP1IntegratedFullV1",
+  "target_map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Integrated",
+  "phase": "P1-5b_full_candidate",
+  "config_sha256": "3aad9c28e6a88397aeb6e1652559fb8d60496185fe255633ab259d7e72f2aa5d",
+  "builder_sha256": "519abff81d690cff7b2393bb4fcc3ccc974a9c0002171ff7085ace6596175a85",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "status": "saved_full_candidate_pending_route_and_visual_review",
+  "acceptance": "pending_new_map_route_checkpoint_and_visual_review",
+  "design_metrics": {
+    "timed_teaching_walk150_gap_cm": 440.0,
+    "timed_teaching_walk150_constant_speed_seconds": 2.933333333333333,
+    "prototype_walk150_trigger_to_right_bank_observed_seconds": 3.367,
+    "timed_teaching_active_seconds": 4.3,
+    "estimated_margin_against_prototype_seconds": 0.933,
+    "timed_combination_full_width_to_safe_bank_cm": 430.0,
+    "timed_combination_walk150_constant_speed_seconds": 2.8666666666666667,
+    "timed_combination_active_seconds": 4.3,
+    "timed_combination_actual_trigger_x_and_exit_seconds": "pending_new_map_Walk_Run_runtime_measurement",
+    "combination_heights_cm": {
+      "front_bank": 180.0,
+      "pad_top": 72.0,
+      "timed_and_exit": 360.0,
+      "prior_normal_jump_feet_peak_estimate": 323.0,
+      "prior_bounce_feet_peak_estimate": 436.0
+    },
+    "risks": [
+      "Pending runtime: the 4.3s timed teaching budget uses the prototype observed Walk150 trigger-to-bank 3.367s (estimated 0.933s margin), not only 440cm/150. Re-measure in this saved map.",
+      "Pending runtime: combination timed landing x depends on Walk/Run bounce entry. Measure actual countdown trigger x, trigger-to-safe-bank time, and late landings; 4.3s is a candidate budget.",
+      "Combination front bank top180; pad top72; target top360. Prior normal-jump foot peak about323 and bounce foot peak about436 suggest 37cm normal-jump exclusion and 76cm bounce clearance, but capsule/step/flight timing can invalidate either estimate.",
+      "The existing first bounce teaching is deliberately preserved; Run300 may bypass it with an ordinary jump because that landing is only60cm higher. Do not claim mandatory bounce teaching from first-segment route PASS.",
+      "Switch+hazard is a shuttle crossing followed by a warned landing-bank hazard, not a switch-controlled hazard. Validate that both mechanics form a readable shared segment and cannot be skipped accidentally.",
+      "All three checkpoints precede the single required pickup. Death resets pickup and mechanisms; test every checkpoint through reacquisition to goal, including timed reset and both-side shuttle recall. No fallback to spawn is accepted.",
+      "No static collision exists under the timed gaps or bounce pad. A miss must naturally reach KillZ=-1000 and respawn on the corresponding static bank; check dynamic-platform recovery never traps the capsule.",
+      "Final top360 is likely a one-way height change; the required pickup stays after the final checkpoint so return travel is not required. Confirm goal lock, death reset, R reset and pickup overlap.",
+      "World camera adaptation sees terrain tag NaiwaP1GeneratedV1 on new static banks; bounce apex/target, countdown and both switch sides still require visible-window framing.",
+      "Build success only means saved-and-reloaded actor semantics. New full route, every-checkpoint death retry, Walk/Run real keyboard, visual and recoverable evidence remain pending; old L_NaiwaP1_Full PASS is not applicable."
+    ],
+    "acceptance": "design_estimates_only_no_route_or_visual_result"
+  },
+  "protected_sha256_before": {
+    "Content/Naiwa/Maps/L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content/Naiwa/Blueprints/BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content/Naiwa/Blueprints/BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content/Naiwa/Input/IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Slice.umap": "603dc7b241b525c45ad20a56ec99213bbcf6dbb220879ddd2fca0964222a5cd1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Full.umap": "c3ecf5282e0e7323467e1acfef5ba7d9b4f3bb488c393aeec2f6d521b5c5bee0",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Bounce.umap": "4caaba2a9e92ebfff01bf7d3440805c5f7fe98a49472ceda3dff9293b1f2185a",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Switch.umap": "dd97cd816ee5d13dec4989f9fe3e09a7219ba6e6b8d43004f789ef0790e7f9e1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Timed.umap": "26790074e33d97f8007185db384c7e67a53d1a05c4ba443bd88a8ef53a2ec43a",
+    "Content/Naiwa/P1/BP_NaiwaP1Character.uasset": "9b85d1bbd73ac1c74ace7d8028e8137e77424226e9093e5cce08f3cd5caad5af",
+    "Content/Naiwa/P1/BP_NaiwaP1GameMode.uasset": "6e24599d88b6a602d1c910e81764bac0068e973dda195a2cbce7bd3749cb9ab4"
+  },
+  "target_map_sha256_before": "84520445659e343aeceee5675922678c1a59643400a2b7c5680fcaf1a9d8cc40",
+  "layout": {
+    "status": "partial_slice_extended_to_full_candidate",
+    "owned_actors": [
+      "P1_Integrated_Atmosphere",
+      "P1_Integrated_Bounce",
+      "P1_Integrated_BounceCombination",
+      "P1_Integrated_Checkpoint",
+      "P1_Integrated_CheckpointCombination",
+      "P1_Integrated_CheckpointFinal",
+      "P1_Integrated_Goal",
+      "P1_Integrated_Hazard",
+      "P1_Integrated_HazardCombination",
+      "P1_Integrated_HazardCue",
+      "P1_Integrated_HazardCueCombination",
+      "P1_Integrated_KeyLight",
+      "P1_Integrated_PickupRequired",
+      "P1_Integrated_SkyLight",
+      "P1_Integrated_Start",
+      "P1_Integrated_Switch",
+      "P1_Integrated_SwitchCombination",
+      "P1_Integrated_Terrain_BounceLanding",
+      "P1_Integrated_Terrain_CombinationBank",
+      "P1_Integrated_Terrain_FinalBank",
+      "P1_Integrated_Terrain_LeftBank",
+      "P1_Integrated_Terrain_RightBank",
+      "P1_Integrated_Terrain_TimedExit",
+      "P1_Integrated_TimedCombination",
+      "P1_Integrated_TimedTeaching"
+    ],
+    "verified_actor_count": 25,
+    "original_actor_count_preserved": 12,
+    "kill_z": -1000.0,
+    "saved_semantics": {
+      "transform_reconciliation": "all_owned_actors_match_config_after_save_reload",
+      "actor_transforms": {
+        "P1_Integrated_Terrain_LeftBank": {
+          "location": [
+            -1075.0,
+            0.0,
+            100.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            10.5,
+            7.0,
+            0.4
+          ],
+          "kind": "Terrain",
+          "id": "LeftBank"
+        },
+        "P1_Integrated_Terrain_RightBank": {
+          "location": [
+            1005.0,
+            0.0,
+            100.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            9.1,
+            7.0,
+            0.4
+          ],
+          "kind": "Terrain",
+          "id": "RightBank"
+        },
+        "P1_Integrated_Terrain_BounceLanding": {
+          "location": [
+            2430.0,
+            0.0,
+            160.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            13.8,
+            7.0,
+            0.4
+          ],
+          "kind": "Terrain",
+          "id": "BounceLanding"
+        },
+        "P1_Integrated_Hazard": {
+          "location": [
+            -1160.0,
+            0.0,
+            155.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "Hazard",
+          "id": "IntegratedHiddenHazard01"
+        },
+        "P1_Integrated_HazardCue": {
+          "location": [
+            -1300.0,
+            0.0,
+            123.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.2,
+            2.5,
+            0.06
+          ],
+          "kind": "Cue",
+          "id": "HazardCue"
+        },
+        "P1_Integrated_Switch": {
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "Switch",
+          "id": "Switch"
+        },
+        "P1_Integrated_Bounce": {
+          "location": [
+            1660.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "Bounce",
+          "id": "Bounce"
+        },
+        "P1_Integrated_Checkpoint": {
+          "location": [
+            2700.0,
+            0.0,
+            272.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "Checkpoint",
+          "id": "IntegratedCheckpoint01"
+        },
+        "P1_Integrated_Start": {
+          "location": [
+            -1450.0,
+            0.0,
+            212.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "Start",
+          "id": "Start"
+        },
+        "P1_Integrated_KeyLight": {
+          "location": [
+            0.0,
+            0.0,
+            800.0
+          ],
+          "rotation": [
+            -45.0,
+            -30.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "KeyLight",
+          "id": "KeyLight"
+        },
+        "P1_Integrated_SkyLight": {
+          "location": [
+            0.0,
+            0.0,
+            600.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "SkyLight",
+          "id": "SkyLight"
+        },
+        "P1_Integrated_Atmosphere": {
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "Atmosphere",
+          "id": "Atmosphere"
+        },
+        "P1_Integrated_TimedTeaching": {
+          "location": [
+            3340.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "Timed",
+          "id": "TimedTeaching01"
+        },
+        "P1_Integrated_Terrain_TimedExit": {
+          "location": [
+            4030.0,
+            0.0,
+            160.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            9.4,
+            7.0,
+            0.4
+          ],
+          "kind": "Terrain",
+          "id": "TimedExitBank"
+        },
+        "P1_Integrated_SwitchCombination": {
+          "location": [
+            5050.0,
+            0.0,
+            60.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "Switch",
+          "id": "SwitchCombination01"
+        },
+        "P1_Integrated_Terrain_CombinationBank": {
+          "location": [
+            6050.0,
+            0.0,
+            160.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            9.0,
+            7.0,
+            0.4
+          ],
+          "kind": "Terrain",
+          "id": "CombinationBank"
+        },
+        "P1_Integrated_HazardCueCombination": {
+          "location": [
+            5780.0,
+            0.0,
+            183.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            0.2,
+            2.5,
+            0.06
+          ],
+          "kind": "Cue",
+          "id": "HazardCueCombination01"
+        },
+        "P1_Integrated_HazardCombination": {
+          "location": [
+            5950.0,
+            0.0,
+            215.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "Hazard",
+          "id": "IntegratedHiddenHazard02"
+        },
+        "P1_Integrated_CheckpointCombination": {
+          "location": [
+            6220.0,
+            0.0,
+            272.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "Checkpoint",
+          "id": "IntegratedCheckpoint02"
+        },
+        "P1_Integrated_BounceCombination": {
+          "location": [
+            6700.0,
+            0.0,
+            60.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "Bounce",
+          "id": "BounceCombination01"
+        },
+        "P1_Integrated_TimedCombination": {
+          "location": [
+            6990.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "Timed",
+          "id": "TimedCombination01"
+        },
+        "P1_Integrated_Terrain_FinalBank": {
+          "location": [
+            7855.0,
+            0.0,
+            340.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            12.9,
+            7.0,
+            0.4
+          ],
+          "kind": "Terrain",
+          "id": "FinalBank"
+        },
+        "P1_Integrated_CheckpointFinal": {
+          "location": [
+            7480.0,
+            0.0,
+            452.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "Checkpoint",
+          "id": "IntegratedCheckpoint03"
+        },
+        "P1_Integrated_PickupRequired": {
+          "location": [
+            7900.0,
+            0.0,
+            422.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "Pickup",
+          "id": "IntegratedRequiredPickup01"
+        },
+        "P1_Integrated_Goal": {
+          "location": [
+            8220.0,
+            0.0,
+            452.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "kind": "Goal",
+          "id": "IntegratedGoal01"
+        }
+      }
+    },
+    "required_pickup_count": 1
+  },
+  "target_map_sha256_after": "ee5c82788fa2290089f27f4021f1f8539f9bfa979cf357910a4eabcdde73a350",
+  "target_map_bytes": 76441,
+  "protected_sha256_after": {
+    "Content/Naiwa/Maps/L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content/Naiwa/Blueprints/BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content/Naiwa/Blueprints/BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content/Naiwa/Input/IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Slice.umap": "603dc7b241b525c45ad20a56ec99213bbcf6dbb220879ddd2fca0964222a5cd1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Full.umap": "c3ecf5282e0e7323467e1acfef5ba7d9b4f3bb488c393aeec2f6d521b5c5bee0",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Bounce.umap": "4caaba2a9e92ebfff01bf7d3440805c5f7fe98a49472ceda3dff9293b1f2185a",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Switch.umap": "dd97cd816ee5d13dec4989f9fe3e09a7219ba6e6b8d43004f789ef0790e7f9e1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Timed.umap": "26790074e33d97f8007185db384c7e67a53d1a05c4ba443bd88a8ef53a2ec43a",
+    "Content/Naiwa/P1/BP_NaiwaP1Character.uasset": "9b85d1bbd73ac1c74ace7d8028e8137e77424226e9093e5cce08f3cd5caad5af",
+    "Content/Naiwa/P1/BP_NaiwaP1GameMode.uasset": "6e24599d88b6a602d1c910e81764bac0068e973dda195a2cbce7bd3749cb9ab4"
+  },
+  "protected_packages_unchanged": true
+}

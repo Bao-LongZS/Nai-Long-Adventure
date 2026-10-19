@@ -1,0 +1,15 @@
+{
+  "schema": "NaiwaP1V7GateProbeBuildV1",
+  "status": "saved_isolated_fixture_pending_runtime",
+  "map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_v7_GateProbe",
+  "map_sha256": "c2daf32dd0583b2a2f0d8d0a108a66a1969b39dfc08a6b53301a65c5d1e298d5",
+  "script_sha256": "fbda00758d2b779c5ed2704e193e09b4f9b602c007976ab131c4a4cc899f56f6",
+  "actor_count": 15,
+  "geometry": {
+    "A": "shuttle edge 7260 to bank 7500; top 180",
+    "B": "shuttle edge 13120, 60 gap, pad 13180-13340 top 180, bank 13420 top 480",
+    "C": "shuttle edge 18830, timed 18840-19260 top 340 active 1.72, bank 19260 top 240"
+  },
+  "isolated_only": true,
+  "existed": false
+}

@@ -1,0 +1,153 @@
+{
+  "schema": "NaiwaP1LegacyImportV1",
+  "started_utc": "2026-10-15T08:16:25.852894+00:00",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "manifest": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\SFML_Level1\\asset_manifest.json",
+  "destination_root": "/Game/Naiwa/P1/Legacy",
+  "assets": [
+    {
+      "source": "UE5/SourceAssets/SFML_Level1/wav/Die.wav",
+      "source_sha256": "02b83da0a2a1bb1183e47d0c706fe1b9f9c3bea69162c7b446a2a36c17911e0f",
+      "source_bytes": 129068,
+      "asset_path": "/Game/Naiwa/P1/Legacy/Audio/SFX_P1_Die.SFX_P1_Die",
+      "asset_class": "SoundWave",
+      "uasset_sha256": "eac36d6b848b8313ff55cfb46cdec9737bcebbc0f56702d9928d15b0c5bd3b8f",
+      "source_metadata_paths": [
+        "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/SourceAssets/SFML_Level1/wav/Die.wav"
+      ],
+      "source_metadata_matched": true,
+      "source_metadata_error": null,
+      "action": "imported_new"
+    },
+    {
+      "source": "UE5/SourceAssets/SFML_Level1/wav/Collection.wav",
+      "source_sha256": "c69a91833b16c49f5b4cffe53ca330beee74068c01e48a35cf8e01dda9c6e9f1",
+      "source_bytes": 193580,
+      "asset_path": "/Game/Naiwa/P1/Legacy/Audio/SFX_P1_Collection.SFX_P1_Collection",
+      "asset_class": "SoundWave",
+      "uasset_sha256": "4d1d339a615bb6cdabdbd183fdceeb7f7033d33f36735c03209489d926742e63",
+      "source_metadata_paths": [
+        "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/SourceAssets/SFML_Level1/wav/Collection.wav"
+      ],
+      "source_metadata_matched": true,
+      "source_metadata_error": null,
+      "action": "imported_new"
+    },
+    {
+      "source": "UE5/SourceAssets/SFML_Level1/wav/Jump.wav",
+      "source_sha256": "366a23f34bae4f9ea7fd48558d4de4d770f49b6e872d86264dac5e98eeb4c63c",
+      "source_bytes": 48428,
+      "asset_path": "/Game/Naiwa/P1/Legacy/Audio/SFX_P1_Jump.SFX_P1_Jump",
+      "asset_class": "SoundWave",
+      "uasset_sha256": "435a7c9154c44ebc101fbb28837dfb57aba08b67878233bd225985d666cf8959",
+      "source_metadata_paths": [
+        "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/SourceAssets/SFML_Level1/wav/Jump.wav"
+      ],
+      "source_metadata_matched": true,
+      "source_metadata_error": null,
+      "action": "imported_new"
+    },
+    {
+      "source": "UE5/SourceAssets/SFML_Level1/png/Spine.png",
+      "source_sha256": "0316cc32bdec63171002c4239893109a25827c1bb840eacbc05f1bfa18573f81",
+      "source_bytes": 3073,
+      "asset_path": "/Game/Naiwa/P1/Legacy/Textures/T_P1_Spine.T_P1_Spine",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "8f7384c48b73f3b9c009fa342d6fddec17f5258b6df271ca8756eb5ebe493323",
+      "source_metadata_paths": [
+        "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/SourceAssets/SFML_Level1/png/Spine.png"
+      ],
+      "source_metadata_matched": true,
+      "source_metadata_error": null,
+      "action": "imported_new"
+    },
+    {
+      "source": "UE5/SourceAssets/SFML_Level1/png/Tree.png",
+      "source_sha256": "2109ccee3a6704adf9a8ffc1634313bff125b7a2ec14bd922a317e8ca28f7dff",
+      "source_bytes": 30934,
+      "asset_path": "/Game/Naiwa/P1/Legacy/Textures/T_P1_Tree.T_P1_Tree",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "6a7a1f54762e353fda99059973359a0bbb2bb80fac9adab3f555c93c71f41d02",
+      "source_metadata_paths": [
+        "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/SourceAssets/SFML_Level1/png/Tree.png"
+      ],
+      "source_metadata_matched": true,
+      "source_metadata_error": null,
+      "action": "imported_new"
+    },
+    {
+      "source": "UE5/SourceAssets/SFML_Level1/png/Leave_Left.png",
+      "source_sha256": "7410a2b638391c2525d07dc71ec96559e60cc025c513c71195dae901ed9f00c6",
+      "source_bytes": 5016,
+      "asset_path": "/Game/Naiwa/P1/Legacy/Textures/T_P1_Leave_Left.T_P1_Leave_Left",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "81f1202715ac2f6b2906881b4d5c7b4d5d146a22654ee97b2c0cd9683292e9fc",
+      "source_metadata_paths": [
+        "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/SourceAssets/SFML_Level1/png/Leave_Left.png"
+      ],
+      "source_metadata_matched": true,
+      "source_metadata_error": null,
+      "action": "imported_new"
+    },
+    {
+      "source": "UE5/SourceAssets/SFML_Level1/png/Leave_Right.png",
+      "source_sha256": "6dd233fdada2042645c63c7a928a0ae477a55b736f8422217d9088c56a0a337b",
+      "source_bytes": 4721,
+      "asset_path": "/Game/Naiwa/P1/Legacy/Textures/T_P1_Leave_Right.T_P1_Leave_Right",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "ecf548d6ed5501e5d481167ba4099f0c94c97f99b1e8a3c41c47154ac49c8e86",
+      "source_metadata_paths": [
+        "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/SourceAssets/SFML_Level1/png/Leave_Right.png"
+      ],
+      "source_metadata_matched": true,
+      "source_metadata_error": null,
+      "action": "imported_new"
+    },
+    {
+      "source": "UE5/SourceAssets/SFML_Level1/png/Cloud_Mass.png",
+      "source_sha256": "f409e105aa5554f792da70066829253ab83b06f8c2abf38b5ebeb333e3562dd2",
+      "source_bytes": 2006,
+      "asset_path": "/Game/Naiwa/P1/Legacy/Textures/T_P1_Cloud_Mass.T_P1_Cloud_Mass",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "fdf9b3a5e8d250ecff81327c004a2fd5d1aface361d257546d7b9b4fdf84bcf8",
+      "source_metadata_paths": [
+        "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/SourceAssets/SFML_Level1/png/Cloud_Mass.png"
+      ],
+      "source_metadata_matched": true,
+      "source_metadata_error": null,
+      "action": "imported_new"
+    },
+    {
+      "source": "UE5/SourceAssets/SFML_Level1/png/collection1.png",
+      "source_sha256": "65f64dd271fce64ad5098d3c41ad924f169fd4bd7ed7207426c256d438b27d1f",
+      "source_bytes": 5416,
+      "asset_path": "/Game/Naiwa/P1/Legacy/Textures/T_P1_Collection1.T_P1_Collection1",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "25b3a6e80cf4756e16bb46505534d8df8e0efb67fcdc2bb11d1a0bfbcd77789e",
+      "source_metadata_paths": [
+        "C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/SourceAssets/SFML_Level1/png/collection1.png"
+      ],
+      "source_metadata_matched": true,
+      "source_metadata_error": null,
+      "action": "imported_new"
+    }
+  ],
+  "status": "imported_or_verified",
+  "project": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0",
+  "p0_hashes_before": {
+    "Content\\Naiwa\\Maps\\L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content\\Naiwa\\Blueprints\\BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content\\Naiwa\\Blueprints\\BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content\\Naiwa\\Input\\IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529"
+  },
+  "p0_hashes_after": {
+    "Content\\Naiwa\\Maps\\L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content\\Naiwa\\Blueprints\\BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content\\Naiwa\\Blueprints\\BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content\\Naiwa\\Input\\IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529"
+  },
+  "selected_count": 9,
+  "new_count": 9,
+  "existing_count": 0,
+  "finished_utc": "2026-10-15T08:16:26.449864+00:00"
+}

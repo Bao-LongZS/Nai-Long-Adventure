@@ -1,0 +1,18 @@
+{
+	"schema": "NaiwaP1SmokeV1",
+	"status": "FAIL",
+	"detail": "Respawn did not retain checkpoint, restore pickup/hazard, or land near checkpoint",
+	"map": "L_NaiwaP1_Full",
+	"state": "Playing",
+	"pickup_count": 0,
+	"death_events": 1,
+	"checkpoint_active": true,
+	"wall_time_s": 4.0897300988435745,
+	"events": [
+		"goal_overlap_before_pickup",
+		"goal_locked_then_pickup_overlap",
+		"pickup_collected_once_and_hidden",
+		"checkpoint_activated_then_hazard_overlap",
+		"one_death_hazards_revealed_reoverlap_during_dying"
+	]
+}

@@ -1,0 +1,218 @@
+{
+  "schema": "NaiwaP1GapProbeBuildV1",
+  "target_map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_GapProbe2",
+  "status": "saved_pending_physical_run",
+  "hash_algorithm": "SHA-256",
+  "design": {
+    "total_length_cm": 9700.0,
+    "terrain_count": 26
+  },
+  "runs": [
+    {
+      "gap_cm": 180.0,
+      "run_start": 0.0,
+      "run_end": 840.0,
+      "blocks": [
+        [
+          0.0,
+          160.0
+        ],
+        [
+          340.0,
+          500.0
+        ],
+        [
+          680.0,
+          840.0
+        ]
+      ],
+      "strip": [
+        840.0,
+        1140.0
+      ]
+    },
+    {
+      "gap_cm": 220.0,
+      "run_start": 1140.0,
+      "run_end": 2060.0,
+      "blocks": [
+        [
+          1140.0,
+          1300.0
+        ],
+        [
+          1520.0,
+          1680.0
+        ],
+        [
+          1900.0,
+          2060.0
+        ]
+      ],
+      "strip": [
+        2060.0,
+        2360.0
+      ]
+    },
+    {
+      "gap_cm": 260.0,
+      "run_start": 2360.0,
+      "run_end": 3360.0,
+      "blocks": [
+        [
+          2360.0,
+          2520.0
+        ],
+        [
+          2780.0,
+          2940.0
+        ],
+        [
+          3200.0,
+          3360.0
+        ]
+      ],
+      "strip": [
+        3360.0,
+        3660.0
+      ]
+    },
+    {
+      "gap_cm": 300.0,
+      "run_start": 3660.0,
+      "run_end": 4740.0,
+      "blocks": [
+        [
+          3660.0,
+          3820.0
+        ],
+        [
+          4120.0,
+          4280.0
+        ],
+        [
+          4580.0,
+          4740.0
+        ]
+      ],
+      "strip": [
+        4740.0,
+        5040.0
+      ]
+    },
+    {
+      "gap_cm": 400.0,
+      "run_start": 5040.0,
+      "run_end": 6320.0,
+      "blocks": [
+        [
+          5040.0,
+          5200.0
+        ],
+        [
+          5600.0,
+          5760.0
+        ],
+        [
+          6160.0,
+          6320.0
+        ]
+      ],
+      "strip": [
+        6320.0,
+        6620.0
+      ]
+    },
+    {
+      "gap_cm": 500.0,
+      "run_start": 6620.0,
+      "run_end": 8100.0,
+      "blocks": [
+        [
+          6620.0,
+          6780.0
+        ],
+        [
+          7280.0,
+          7440.0
+        ],
+        [
+          7940.0,
+          8100.0
+        ]
+      ],
+      "strip": [
+        8100.0,
+        8400.0
+      ]
+    }
+  ],
+  "spawn": [
+    -700.0,
+    0.0,
+    212.0
+  ],
+  "protected_sha256_before": {
+    "Content/Naiwa/Maps/L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content/Naiwa/Blueprints/BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content/Naiwa/Blueprints/BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content/Naiwa/Input/IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Slice.umap": "603dc7b241b525c45ad20a56ec99213bbcf6dbb220879ddd2fca0964222a5cd1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Full.umap": "c3ecf5282e0e7323467e1acfef5ba7d9b4f3bb488c393aeec2f6d521b5c5bee0",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Bounce.umap": "4caaba2a9e92ebfff01bf7d3440805c5f7fe98a49472ceda3dff9293b1f2185a",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Switch.umap": "dd97cd816ee5d13dec4989f9fe3e09a7219ba6e6b8d43004f789ef0790e7f9e1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Timed.umap": "26790074e33d97f8007185db384c7e67a53d1a05c4ba443bd88a8ef53a2ec43a",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Integrated.umap": "ee5c82788fa2290089f27f4021f1f8539f9bfa979cf357910a4eabcdde73a350",
+    "Content/Naiwa/P1/BP_NaiwaP1Character.uasset": "9b85d1bbd73ac1c74ace7d8028e8137e77424226e9093e5cce08f3cd5caad5af",
+    "Content/Naiwa/P1/BP_NaiwaP1GameMode.uasset": "6e24599d88b6a602d1c910e81764bac0068e973dda195a2cbce7bd3749cb9ab4"
+  },
+  "owned_actors": [
+    "P1_Gap_Atmosphere",
+    "P1_Gap_Head",
+    "P1_Gap_KeyLight",
+    "P1_Gap_SkyLight",
+    "P1_Gap_Start",
+    "P1_Gap_Tail",
+    "P1_Gap_run_180_01",
+    "P1_Gap_run_180_02",
+    "P1_Gap_run_180_03",
+    "P1_Gap_run_180_Strip",
+    "P1_Gap_run_220_01",
+    "P1_Gap_run_220_02",
+    "P1_Gap_run_220_03",
+    "P1_Gap_run_220_Strip",
+    "P1_Gap_run_260_01",
+    "P1_Gap_run_260_02",
+    "P1_Gap_run_260_03",
+    "P1_Gap_run_260_Strip",
+    "P1_Gap_run_300_01",
+    "P1_Gap_run_300_02",
+    "P1_Gap_run_300_03",
+    "P1_Gap_run_300_Strip",
+    "P1_Gap_run_400_01",
+    "P1_Gap_run_400_02",
+    "P1_Gap_run_400_03",
+    "P1_Gap_run_400_Strip",
+    "P1_Gap_run_500_01",
+    "P1_Gap_run_500_02",
+    "P1_Gap_run_500_03",
+    "P1_Gap_run_500_Strip"
+  ],
+  "owned_actor_count": 30,
+  "target_map_bytes": 59470,
+  "target_map_sha256": "c35925827145464dbcef69dd43d0691247539689cb503e53ecf98579b128f065",
+  "protected_sha256_after": {
+    "Content/Naiwa/Maps/L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content/Naiwa/Blueprints/BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content/Naiwa/Blueprints/BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content/Naiwa/Input/IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Slice.umap": "603dc7b241b525c45ad20a56ec99213bbcf6dbb220879ddd2fca0964222a5cd1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Full.umap": "c3ecf5282e0e7323467e1acfef5ba7d9b4f3bb488c393aeec2f6d521b5c5bee0",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Bounce.umap": "4caaba2a9e92ebfff01bf7d3440805c5f7fe98a49472ceda3dff9293b1f2185a",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Switch.umap": "dd97cd816ee5d13dec4989f9fe3e09a7219ba6e6b8d43004f789ef0790e7f9e1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Timed.umap": "26790074e33d97f8007185db384c7e67a53d1a05c4ba443bd88a8ef53a2ec43a",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Integrated.umap": "ee5c82788fa2290089f27f4021f1f8539f9bfa979cf357910a4eabcdde73a350",
+    "Content/Naiwa/P1/BP_NaiwaP1Character.uasset": "9b85d1bbd73ac1c74ace7d8028e8137e77424226e9093e5cce08f3cd5caad5af",
+    "Content/Naiwa/P1/BP_NaiwaP1GameMode.uasset": "6e24599d88b6a602d1c910e81764bac0068e973dda195a2cbce7bd3749cb9ab4"
+  }
+}

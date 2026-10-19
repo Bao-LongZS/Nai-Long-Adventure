@@ -1,0 +1,15 @@
+Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -Mode=ValidatePlatforms -OutputSDKs  -AllPlatforms  -project="C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Nai_Long.uproject" -log="C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/Logs/AutoSDKInfo.txt" -verbose -timestamps
+Log file: C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Saved\Logs\AutoSDKInfo.txt
+##PlatformValidate: Win64 VALID 10.0.22621.0
+##PlatformValidate: Mac INVALID 26.1.1
+##PlatformValidate: IOS INVALID 26.1.1
+##PlatformValidate: Android INVALID r27c
+##PlatformValidate: Linux INVALID v26_clang-20.1.8-rockylinux8
+##PlatformValidate: LinuxArm64 INVALID <UNKNOWN>
+##PlatformValidate: TVOS INVALID 26.1.1
+##PlatformValidate: VisionOS INVALID <UNKNOWN>
+Unable to find required SDK version 'MainVersion' for platform LinuxArm64. Check your SDK.json files
+Unable to find required SDK version 'MainVersion' for platform VisionOS. Check your SDK.json files
+Trace written to file C:\Users\31314\AppData\Local\UnrealBuildTool\Trace.uba with size 312b
+RUNNER_EXCEPTION=V7 mixed-core report failed identity or route assertions: C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Saved\NaiwaP1\v7_mixed_core_route_20261018T024517Z_1C4C48B84843A722602E578C4667D500.json

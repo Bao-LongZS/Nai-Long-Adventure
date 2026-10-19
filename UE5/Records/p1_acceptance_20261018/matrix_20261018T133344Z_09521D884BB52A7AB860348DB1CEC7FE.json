@@ -1,0 +1,11 @@
+{
+	"schema": "NaiwaP1StateMatrixV1",
+	"status": "INCOMPLETE",
+	"detail": "Matrix requires pickup, checkpoint, hazard, and goal actors",
+	"map": "L_NaiwaP1_Full",
+	"state": "Playing",
+	"death_events": 0,
+	"wall_time_s": 0.60845189914107323,
+	"paused": false,
+	"events": []
+}

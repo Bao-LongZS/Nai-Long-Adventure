@@ -1,0 +1,20 @@
+{
+	"schema": "NaiwaP1HazardAuditV1",
+	"status": "PASS",
+	"detail": "Every saved hazard caused one death and reset after safe respawn",
+	"map": "L_NaiwaP1_Full",
+	"hazard_count": 9,
+	"passed_count": 9,
+	"death_events": 9,
+	"passed_ids": [
+		"hazard_01",
+		"hazard_02",
+		"hazard_03",
+		"hazard_04",
+		"hazard_05",
+		"hazard_06",
+		"hazard_07",
+		"hazard_08",
+		"hazard_09"
+	]
+}

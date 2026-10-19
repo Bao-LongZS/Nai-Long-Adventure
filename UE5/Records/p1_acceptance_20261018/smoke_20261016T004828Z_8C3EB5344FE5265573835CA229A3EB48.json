@@ -1,0 +1,22 @@
+{
+	"schema": "NaiwaP1SmokeV1",
+	"status": "PASS",
+	"detail": "P1 state flow passed with physical trigger overlaps; restart used the R handler method",
+	"map": "L_NaiwaP1_Slice",
+	"state": "Playing",
+	"pickup_count": 0,
+	"death_events": 1,
+	"checkpoint_active": false,
+	"wall_time_s": 1.8822457008063793,
+	"events": [
+		"goal_overlap_before_pickup",
+		"goal_locked_then_pickup_overlap",
+		"pickup_collected_once_and_hidden",
+		"checkpoint_activated_then_hazard_overlap",
+		"one_death_hazards_revealed_reoverlap_during_dying",
+		"checkpoint_respawn_pickup_restored_hazard_hidden",
+		"pickup_recollected_then_goal_overlap",
+		"goal_won_after_required_pickup",
+		"restart_from_won_cleared_pickup_checkpoint_hazard"
+	]
+}

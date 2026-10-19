@@ -1,0 +1,28 @@
+{
+	"schema": "NaiwaP1FullRouteV1",
+	"status": "FAIL",
+	"detail": "Full route touched a hazard at x=1576.7 jump=1",
+	"map": "L_NaiwaP1_Full",
+	"gait_speed": "Run300",
+	"max_walk_speed_cm_s": 300,
+	"final_x": 1576.7154140220641,
+	"death_events": 2,
+	"wall_time_s": 7.9971366003155708,
+	"events": [
+		"jump_0_x113.9",
+		"jump_1_x371.8",
+		"spawn_to_checkpoint_by_movement",
+		"checkpoint_respawn_before_required_pickup",
+		"jump_0_x1201.3"
+	],
+	"screenshots": [
+		{
+			"path": "../../../../../../Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaP1/Visuals/full_run_start_7493AE9A451A37939FE116B3FE48D56F.png",
+			"exists_at_report": true
+		},
+		{
+			"path": "../../../../../../Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaP1/Visuals/full_run_checkpoint_5B9EE4EE48232D300124D5AB670B4F5D.png",
+			"exists_at_report": true
+		}
+	]
+}

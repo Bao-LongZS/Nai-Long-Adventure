@@ -1,0 +1,1463 @@
+{
+  "schema": "NaiwaP1FeedbackImportV1",
+  "started_utc": "2026-10-18T07:41:02.537437+00:00",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "assets": [
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/Audio/Background_Music_1.wav",
+      "source_sha256": "1e418509ed97f1ab688f122e83184a2c85f5008d58ba88185777ee706cf337a7",
+      "asset_path": "/Game/Naiwa/P1/Feedback/Audio/SFX_P1_Feedback_BackgroundMusic1.SFX_P1_Feedback_BackgroundMusic1",
+      "asset_class": "SoundWave",
+      "uasset_sha256": "7460b098df70a19d987b65bac3ba303332fa2ff4d8253c0781670ad03e5ab193",
+      "action": "verified_existing_without_write"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/Audio/Background_Music_2.wav",
+      "source_sha256": "3d0540b829bdec22bc9facc9d443b4bfd12602d755ec4c31bc173f3795e98b25",
+      "asset_path": "/Game/Naiwa/P1/Feedback/Audio/SFX_P1_Feedback_BackgroundMusic2.SFX_P1_Feedback_BackgroundMusic2",
+      "asset_class": "SoundWave",
+      "uasset_sha256": "7372aaf0ad484752d34cf79d2d72815fef63aba6b3572f63519832b9a6457438",
+      "action": "verified_existing_without_write"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/Audio/Collection.wav",
+      "source_sha256": "c69a91833b16c49f5b4cffe53ca330beee74068c01e48a35cf8e01dda9c6e9f1",
+      "asset_path": "/Game/Naiwa/P1/Feedback/Audio/SFX_P1_Feedback_Collection.SFX_P1_Feedback_Collection",
+      "asset_class": "SoundWave",
+      "uasset_sha256": "91b485b4234a727abc05641f87edea0120bdf0c674957c751f9bdf55b706b34a",
+      "action": "verified_existing_without_write"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/Audio/Collection_1.wav",
+      "source_sha256": "8afe0c0c5eadbbc1ead28b7832fb268a519c4d2e1cae67b57bec3948f1519e7e",
+      "asset_path": "/Game/Naiwa/P1/Feedback/Audio/SFX_P1_Feedback_Collection1.SFX_P1_Feedback_Collection1",
+      "asset_class": "SoundWave",
+      "uasset_sha256": "6fc0235723a275a0f1dc706d169799e52b2ca2ec3a8adae2c7da0abce7ed262a",
+      "action": "verified_existing_without_write"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/Audio/Collection_2.wav",
+      "source_sha256": "3439aa11c3470834067f3249bdfdc816749a29cb026f8585ea9e65dd02eb00a9",
+      "asset_path": "/Game/Naiwa/P1/Feedback/Audio/SFX_P1_Feedback_Collection2.SFX_P1_Feedback_Collection2",
+      "asset_class": "SoundWave",
+      "uasset_sha256": "a14439c02b4ad8bb7ee1365f8f919fa6f4cdb3d16196860698ee45ad9b9a394b",
+      "action": "verified_existing_without_write"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/Audio/Die.wav",
+      "source_sha256": "02b83da0a2a1bb1183e47d0c706fe1b9f9c3bea69162c7b446a2a36c17911e0f",
+      "asset_path": "/Game/Naiwa/P1/Feedback/Audio/SFX_P1_Feedback_Die.SFX_P1_Feedback_Die",
+      "asset_class": "SoundWave",
+      "uasset_sha256": "d37fb829e93b8f65cbb57b724d82286cc5741e844cf8247fd70ce2b38b4d8757",
+      "action": "verified_existing_without_write"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/Audio/Die_1.wav",
+      "source_sha256": "7c253f01a97b3a07c6b80bb0448698864d2bd14f68a2325c6d99f546bf002ba2",
+      "asset_path": "/Game/Naiwa/P1/Feedback/Audio/SFX_P1_Feedback_Die1.SFX_P1_Feedback_Die1",
+      "asset_class": "SoundWave",
+      "uasset_sha256": "4d2da37a672c6603b56c8e097c7719b8849b4ec62985a5348f4949e9e3df75fd",
+      "action": "verified_existing_without_write"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/Audio/Die_3.wav",
+      "source_sha256": "b09a6fd56a597119b6aa41a6b43137344af1464c7f340b3f85581be8c06421ea",
+      "asset_path": "/Game/Naiwa/P1/Feedback/Audio/SFX_P1_Feedback_Die3.SFX_P1_Feedback_Die3",
+      "asset_class": "SoundWave",
+      "uasset_sha256": "5f22eb8c6ce1bf59e732d96a5702096692cc0a560807903d373b532620c09633",
+      "action": "verified_existing_without_write"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/Audio/Jump.wav",
+      "source_sha256": "366a23f34bae4f9ea7fd48558d4de4d770f49b6e872d86264dac5e98eeb4c63c",
+      "asset_path": "/Game/Naiwa/P1/Feedback/Audio/SFX_P1_Feedback_Jump.SFX_P1_Feedback_Jump",
+      "asset_class": "SoundWave",
+      "uasset_sha256": "2d135546612dd81e8587213a55f4855efc8e982c3372ceda17f065b5a55af4be",
+      "action": "verified_existing_without_write"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/Audio/哎哟我去.wav",
+      "source_sha256": "2d7216a72811ded1339aa81f1056c45d85c576f91cb50c2047ac788b6d8455fe",
+      "asset_path": "/Game/Naiwa/P1/Feedback/Audio/SFX_P1_Feedback_CheckpointEarly.SFX_P1_Feedback_CheckpointEarly",
+      "asset_class": "SoundWave",
+      "uasset_sha256": "c1d260b06dc606b3bb8b807530b0ce88931d0115da1eb75c1caa33b176a3fca9",
+      "action": "verified_existing_without_write"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/Audio/哟嚯嚯嚯.wav",
+      "source_sha256": "87c657ee399f8f1dd4b485a3fa60b8c8de14090312d5afd0dd3f4cb9ac09f38b",
+      "asset_path": "/Game/Naiwa/P1/Feedback/Audio/SFX_P1_Feedback_CheckpointLate.SFX_P1_Feedback_CheckpointLate",
+      "asset_class": "SoundWave",
+      "uasset_sha256": "f5a2f20f004571ffa2d03a3c35cea3875e320e1fe6d47dbbaca0907828f203c2",
+      "action": "verified_existing_without_write"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/Images/Big_Laugh_reference.png",
+      "source_sha256": "f665b8e5186f8487c865ecdb43a6454de6d496bcb809ab108f78836884789a37",
+      "asset_path": "/Game/Naiwa/P1/Feedback/Textures/T_P1_Feedback_BigLaughReference.T_P1_Feedback_BigLaughReference",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "ea8eaf67263d91fbda5202b75dab9402ccd827190f5c46d6a6a0498a454c5197",
+      "action": "verified_existing_without_write",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_00.png",
+      "source_sha256": "df8e5b492a38f2bc62fd86f7a920e95085ba10221c6dc25e319b5c7c9680a5a7",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_00.T_P1_DeathLaugh_00",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "99b3242bb6062ce829a05b904ce0b9f688766d36a67fb8e8296ea942312276a0",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_01.png",
+      "source_sha256": "201d8a65378f3bfe187d5d9bd41484513d0080c0f3618ee0302cce4dca81a37c",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_01.T_P1_DeathLaugh_01",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "984e4e58120f43d89abb333d2dabbafac850b8fc0667c3f39a1de9cc15ef832a",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_02.png",
+      "source_sha256": "798e87107d1863c24a90c7e6d29a80787a14144990f172f769568e3e771960c1",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_02.T_P1_DeathLaugh_02",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "7b1949da51e31129d4031168be06c2ff3cdf02b31131ff4b21e1cb35158f5c96",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_03.png",
+      "source_sha256": "ec2732e6285c3c12be41d4bc4b78cab785ecd884552c9c4b52b680d73670eaa3",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_03.T_P1_DeathLaugh_03",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "f9e1230d5910f5e8ce9059d8046315975a82c198e9862865a47d5d9d29782d1f",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_04.png",
+      "source_sha256": "b4d0ca93a2a4a9af86d2c154054d1548b9be3a5cec9ed3901547c12d76d73999",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_04.T_P1_DeathLaugh_04",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "2b76ed649fe75e9d1016a64de0e981f30828300a3bdba551097d610b93416123",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_05.png",
+      "source_sha256": "784d672ca9b20839ea778be8ac2663439ab3b740c9192f19d23006224faf19bd",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_05.T_P1_DeathLaugh_05",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "ed9a58b2c5e7f80fdde9e24a7c880e8e1fa30bd5860a8ff882fc65e187c51cdc",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_06.png",
+      "source_sha256": "18040ca480e1aaf63fcfe4e267d427c6477d84c1d6984c13a2781ef28c1cac3b",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_06.T_P1_DeathLaugh_06",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "983769db2ad25d44eda760f5dee9b3c76694d2f9d95f041950a8e61190575a27",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_07.png",
+      "source_sha256": "db55aa54f3a8fecd053efaeecd4c9bdc352df7b5eb741a70b3dd3a821a56cc3d",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_07.T_P1_DeathLaugh_07",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "ea971ef01c0599f92ad3fba8c0d71a34c1909025eeec8ba3627061b47940dbbe",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_08.png",
+      "source_sha256": "ddd2e02b7d3944815747fb51d3713b618566c7de17e3bed4bd96654b7fa084cc",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_08.T_P1_DeathLaugh_08",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "701cd371d7c5a65e0ef3e2902947ea2a1dc6e60b0daf51c065613efa5bca62d5",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_09.png",
+      "source_sha256": "59265c0675ba8e9d41d37da098b0f466185685af9e96da0c125107c4cbd060a6",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_09.T_P1_DeathLaugh_09",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "68c07eac91e54fa67d23a433e1c3fb9615c64c72ed8627d9963ca0f2ad58dc00",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_10.png",
+      "source_sha256": "d131cae1ac12fcd3c5fb1812493e7d721e3a49cc38dd0ecd0d1c8075bdebcc67",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_10.T_P1_DeathLaugh_10",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "4a0ff91afb38b6b0bb43e2b6fa76bc8d6c75b5b00e5ee42bc3fa31995192702d",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_11.png",
+      "source_sha256": "ddf3e067d9d961344ae338adb95bf042a5d8744a129d10904f64dad45ca40a5a",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_11.T_P1_DeathLaugh_11",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "ebd42f37133a72ec9874f18882ef88869f5d30a93213ba52ae15fe53a584a0dd",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_12.png",
+      "source_sha256": "f6f00edddacb471fce500eb9ccfb2d3d807b178140aad74f4a0077d72f00ae66",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_12.T_P1_DeathLaugh_12",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "a7ac2e7b6526e8bce12fdae8b637d159e1f43fa6780180ffb9f36f84dfbda1f2",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_13.png",
+      "source_sha256": "1db0e7e3aec687f38b2f88b8f25a7b5ddd62885e809db11fd0fdd07e512f341d",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_13.T_P1_DeathLaugh_13",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "69771e46a5f70778a2d714abf541ed7122e6c2448db17ebb13b03dbb3eb130c3",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_14.png",
+      "source_sha256": "b6ff9a625bd54b5398467eb7f02379444d56ab0f4cb84918c077b6ba5c88ca13",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_14.T_P1_DeathLaugh_14",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "aa9864114d5e4e6610cb833159aa72dfe54003fae5deb2f06ebd9c477706cdff",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_15.png",
+      "source_sha256": "504eca5440a601fee22c29b45c29fb24011371b7085f3d8ee70f27f7ff265495",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_15.T_P1_DeathLaugh_15",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "2a6f1008e2f5370d26f1209ac45ff94ba37f2aca18a4b1a3670b8340dbdd095b",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_16.png",
+      "source_sha256": "baed53b8656048faa705cbfd783f752fe3c0d5fbc0549c328d201989b6104f5a",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_16.T_P1_DeathLaugh_16",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "9c9b9136257ba698dfddabc691857b10386f04c7d1fad41f12a278d40b8a061d",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_17.png",
+      "source_sha256": "71e7f847e2b438642fd4fb24be0b6fed7db58e4a872460c72eb557e65c072fd9",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_17.T_P1_DeathLaugh_17",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "6bfc285e9f0a4188645e67949eb8c5287e306dbdd7fd6ebb95f3c9e957b5279d",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_18.png",
+      "source_sha256": "55968dec0522416b38bd8eeb808c2f2b117749ea612287e549e2b86599751969",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_18.T_P1_DeathLaugh_18",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "17ad77787bd5e1abf97b662afb39f4ea4901f19a5bee9c7d2562ac551fdf00e8",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_19.png",
+      "source_sha256": "cdcec32a85dd8b59be03e7b1e71a9e22347d00f7cee3213d24bfedd4ac8086f7",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_19.T_P1_DeathLaugh_19",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "f40842edef637a3020a64ece34ce028634992660b9e334890305697b617b2c62",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_20.png",
+      "source_sha256": "b9f472c319b08dd6ddd9acf1bb9765e112c171d3101f94b27658587a488bf13d",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_20.T_P1_DeathLaugh_20",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "eddbe770e51674aab173b370f084f2a6586e065f6cd55dec53193d80b565b246",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_21.png",
+      "source_sha256": "cba9937af43bbe323fd4efa5c9f3e1327dc4967e545ed790a65bdc23e2cf5293",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_21.T_P1_DeathLaugh_21",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "c654fbeda7ff2168d182e42e0e7db33372c3cb287ce391e0cc47d90e0137fc80",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_22.png",
+      "source_sha256": "84451867a221c9da5e3ca1a06ae56242d962fe8a82de02301ef82fe6e21a95a2",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_22.T_P1_DeathLaugh_22",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "a6a530e451252f6ee1844f06849dee53b1a32d4d3f7460c94e2547915e7409bf",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_23.png",
+      "source_sha256": "d146921925c085531d8ed6e6ab79754d4f877122b9c7592860141f990950d373",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_23.T_P1_DeathLaugh_23",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "cc52ec7954d5e3edeeb2cc057a991d7533228092b9067d6db8e8671f1f340ebd",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_24.png",
+      "source_sha256": "8a14e091f95ec72c6bca8bcbab78d23ee1c399140001db9cca4117338083b95b",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_24.T_P1_DeathLaugh_24",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "f12d0017c0a86b75631d5b3b5559b0bf52194a73542be53eecb42a9c0ff2c9ae",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_25.png",
+      "source_sha256": "75cd104d3e10efad6d7d5e4c30ca91fda4671c97506429357d854e860a572f4f",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_25.T_P1_DeathLaugh_25",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "eef3065e1671a308b2d058bff8732bf63de1ffc6678fad33663674807f32088b",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_26.png",
+      "source_sha256": "ad6b9ad5e6c33675b047c11214f083fd317c6c7f30beb33529dfa017aef0dca8",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_26.T_P1_DeathLaugh_26",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "945cb7de6daefc5a04a1eeee725fba0d9bbd0960a168cae4d21b9be8f531b87a",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_27.png",
+      "source_sha256": "39f086db696d94233ac7bebd02104e101bc62ed2505bbedfee03f8ebb2efe58a",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_27.T_P1_DeathLaugh_27",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "f9aa607b22f90ae7731a28c27fc94147eb3faf67b0efab1100ed6e0809d90758",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_28.png",
+      "source_sha256": "e774fe050b1ab6bbc417ac01c469c9b0a1f4a1e2d3756df6c02e14d0be7ed731",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_28.T_P1_DeathLaugh_28",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "b593fabdef7274f57d33c8d2ee2cdbebb483492551850bccae72392011730a72",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_29.png",
+      "source_sha256": "ea2185064f70da0e2aae46ffe8d5e5efbf678bfb10d02b42a1c4cd29f0ba2eb0",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_29.T_P1_DeathLaugh_29",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "7c3e82016b0cd943be0f5dd92a6e8092a9bb5d4a0ee5fc99b8e44e27bea31402",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_30.png",
+      "source_sha256": "f50c906f055affda6c8d5dc091003e4dfca204d0b563c778cd8dcb448347e2a3",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_30.T_P1_DeathLaugh_30",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "5e96c8e6552d1b3e73a4799b77a0a2b8ca8895409c9086ddf6dd80ac6be29d96",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_31.png",
+      "source_sha256": "861b76af28c78ebb8db92f0b7e9282bb16b85bef5e3c1d9ad38bba38b3194590",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_31.T_P1_DeathLaugh_31",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "4ded0ec0892730afb7414bdac53e0e96a9207ec78b5ce07ac1557add72577fbd",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_32.png",
+      "source_sha256": "46cbba93e989c12d6ff1cb1bc5c9deec80fb4951bca95087560a0a3e47838494",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_32.T_P1_DeathLaugh_32",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "db40e4667836dad590b202beb2035c888da724be693b9902b4b4675ce67dbf92",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_33.png",
+      "source_sha256": "439e496775741859d92ed1d4582e51d91e96f61130056025fb2413615acc8c59",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_33.T_P1_DeathLaugh_33",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "303cfbc751ebc608d12dab176a504e4330a89c864dd3cfaaa20d61fce49584dd",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_34.png",
+      "source_sha256": "3b96ebe2f2509ba07a1d5d4aba25c8941f4f56706aa45130b87a4662c6f62e83",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_34.T_P1_DeathLaugh_34",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "776f3671aa079d8e72f63daf1eabd0331dfe7139c011e4d65163a9c694caa667",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_35.png",
+      "source_sha256": "b73f015955ab79b329deb130ed9201eb7d4f928b34f03cd6b03d28d383fd8cd8",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_35.T_P1_DeathLaugh_35",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "9e24496a7c5f34e16c6b3a50457de11e7c92f12e3753ea0aeb9318c63d8d04ea",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_36.png",
+      "source_sha256": "90e9ef4743e9fe13d0033c1bf2e7f181dfd2a49520709306bebf3ad572238cc1",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_36.T_P1_DeathLaugh_36",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "3b7da0440a6246503287bf9b44a6f48158f61fab7ec33da6745f1a3853332018",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_37.png",
+      "source_sha256": "7194abbd2be602f84c8a4498b55e99c492a9cce00d1b9590a491f03e725f2da2",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_37.T_P1_DeathLaugh_37",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "984f531fb4f8c4a6f5d2f72b40768abadbe08a335da499e31ae0ebc92669903a",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_38.png",
+      "source_sha256": "524b559b558d554589e8fd2b3bdf9dd9ef30fc403639da6f02379f17d5b52842",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_38.T_P1_DeathLaugh_38",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "f838e3515cc847a310870b5cb4a7a8c78c92bf4dd56e950ccdae2620568f9642",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_39.png",
+      "source_sha256": "c30dc37c45c18f916ae78b85882e70c2eb25dc4a686d5d3b5652c7b3c7a4bc85",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_39.T_P1_DeathLaugh_39",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "6d359ccb113fa11a35bc3ea2d48932d1123e450b3ef93333bc434e109c3552e7",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_40.png",
+      "source_sha256": "4aca7407c398f8a5e9583e71c586595a197c36fd96c268fb400b02cbf48b98a7",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_40.T_P1_DeathLaugh_40",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "7995248a107ef3ab2934e760f5673f24a0fe053bbacd65e95c28f7ac1f15ad06",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_41.png",
+      "source_sha256": "351019dede48e01e00d9b45b6461ccf1858b9ddf0e862522af3aab3d46cbb7db",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_41.T_P1_DeathLaugh_41",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "1f986b1f9bf1a18ddc0a97d83d6d6ee21d104dfe1a364fb6d7facf6697772510",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_42.png",
+      "source_sha256": "6acdba735a75516b7365801dd7440673dcee14e9d76faa7875ffae58444e9cee",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_42.T_P1_DeathLaugh_42",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "5e61efa5242ec998b539d8417167c31f98f70a7455e707e8bb0c930176d3d333",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_43.png",
+      "source_sha256": "9bd5c9ef831999dd3f104b3673a4555ffa03d9396bbbb8484cffdb74d7dde109",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_43.T_P1_DeathLaugh_43",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "3716787261d18557d0d919844f6529ebe7eb57477d46ebf60040d2fc13dc9f20",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_44.png",
+      "source_sha256": "fd33779f6e394d35353d3ff1f0c22c2f89426bbed1c1a3b651aa8ad270623714",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_44.T_P1_DeathLaugh_44",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "0b6bdb53398628d6ec383cdf929ee46b2336842f68baf97bf0938f7155989442",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_45.png",
+      "source_sha256": "1783a4732b3e43004f35582ec5cd4b1a84a886a1ad7ce5c78d6c262d5c6b1529",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_45.T_P1_DeathLaugh_45",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "3e358ae7dcd77114f60d0e18b5556e7ff3165868dc53e717702a64bc8f93869c",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_46.png",
+      "source_sha256": "5b96a036f9904324d4d673a9aef3c8848965a0a69b3aa782c35731a967088ac1",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_46.T_P1_DeathLaugh_46",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "6ba0d83db0ba177ebef23765439034c1fd76036e99b02a72f7fc5103c187288c",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_47.png",
+      "source_sha256": "c153506a413f7472dfb89d36b2da8ee4f09defe00d87b7ccb346fe1ba64854e9",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_47.T_P1_DeathLaugh_47",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "9cc688bc388e285ffa43b8652ccce4121ec85ac9b4bc737b4acd61201967b16f",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_48.png",
+      "source_sha256": "db548a396dae4a366c13da70c78b2e4832830465245b3161d36834e2608fcd9a",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_48.T_P1_DeathLaugh_48",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "3b573bf33b5d3b9ec55cfcdcc2214bd6bd6d0af790aa5a1242b508a6ee62312d",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_49.png",
+      "source_sha256": "784d53cba80fa8179da4f4a37674ea615baf508bd5543daacaab47b9bedf65f2",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_49.T_P1_DeathLaugh_49",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "b3a5108e8ab13d68c3acd5ce6a39cf75ab285804cb3627eeb64dc3ae8bf8828b",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_50.png",
+      "source_sha256": "da7f6e51d9cd23a343e3a4dde66d3c9d2ab67c56a94e2c05b11e3aee11799dad",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_50.T_P1_DeathLaugh_50",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "7f4389591ad41a0390b4e68ab735ee87ba3fd55213bc9ab9cdfacfd9c9fb07af",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_51.png",
+      "source_sha256": "861bdff1afa511c40c3f86e88c5fc3563b2b54c0abbd08d58b452e29603b4d65",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_51.T_P1_DeathLaugh_51",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "0e655cb170327684e3d665a8c115aea046b2b2b42600e559058a32a178a42e90",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_52.png",
+      "source_sha256": "45936486772dbfff1a56ff1a3136f405050de05744bdf19a9e3d2aea3b69e98c",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_52.T_P1_DeathLaugh_52",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "f8f5e69530f041d1d7135fee46a58179ea49871a9009efa6d184b9d3d6fe63e6",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_53.png",
+      "source_sha256": "9222a1ca72f7d5e1332e3b5566efc7141fe74abd8de0523eb895aa15b2c56480",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_53.T_P1_DeathLaugh_53",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "65fd3960757b8d9507a2be933faf9475b6e4d335ebf0becb5e7a1ad88a8ee4f7",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_54.png",
+      "source_sha256": "8ca1ac1b5076fab06468dd50022ac7af3f954c5a4b672f80379b0a25b009f834",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_54.T_P1_DeathLaugh_54",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "549f16779e992c0428c39301c51c6d559a297fd1b1e0819bb263814c4f0a94c9",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_55.png",
+      "source_sha256": "e067b636906e385ad27118fdd9140225352f88ee1da9edf28ae6296eb8fe5133",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_55.T_P1_DeathLaugh_55",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "129ae40d6c41c80899680df0cdad12f22189626b5a9de1ae0585f2e1d7e66725",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_56.png",
+      "source_sha256": "c14ee0aaa5e4f1dfa4499996b941623dd52152edc7c93ca453000fb14409e3ce",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_56.T_P1_DeathLaugh_56",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "bb73c6454b23dcff091989048b92cb3ad7feb3ee72d643f7a9ae5e36884cdb76",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_57.png",
+      "source_sha256": "1289fbf17eeca90a591c3bf869f98b8d377b946ddaf8684cecf0a33b1e78946b",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_57.T_P1_DeathLaugh_57",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "d3260a2982aee82cb6394dcc188d30833c989a56842322b88c94f0fc573938e8",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_58.png",
+      "source_sha256": "62845f03cc31eba54f06c2278eccdb1eef10a9293cc256d19451121e1d96cc6b",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_58.T_P1_DeathLaugh_58",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "7f6f0ea7e53ecf48c9264c5beffb3d4616cc62a3bef228e130e15a7e15e637cd",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_59.png",
+      "source_sha256": "f464dcc28daf3287351bac4a613fac7e84147283f3114fd0ee8b2885a6507d80",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_59.T_P1_DeathLaugh_59",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "e772919c3a5cf25c1e0c6085fc3d751583c96073a1c497774bc015d6975a69d4",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_60.png",
+      "source_sha256": "3786c336d1e69f44984c61507d1c8bc6c8bde30ce315b3af0f3b5697b97f110c",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_60.T_P1_DeathLaugh_60",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "b57d3e06ba4c8ff4f7e4713b3d058d934e215ec005ed4ac654864a181d507278",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_61.png",
+      "source_sha256": "e255426bba2daafa6b3f9455164f96daf5254b98c110bbc5546298d6d94778c8",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_61.T_P1_DeathLaugh_61",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "78f98363e198e93355753e889d960936940d0b1a782e6829d7280a3e9dca5b64",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_62.png",
+      "source_sha256": "2306b88ce2b826b6c2efb9478bbd8a68858f729797a994536c4bca18e98c44c0",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_62.T_P1_DeathLaugh_62",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "1df0588b4c79ef38c20b1134c945992cd9775c3189e3aa8e7db7cef2cd1d4595",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_63.png",
+      "source_sha256": "a3885f3eba3b7628bca9ae44fb30bdb4a726662349c0cc53a2db4c90dc14908b",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_63.T_P1_DeathLaugh_63",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "09cffb39eb4aa51efc963f74576bc5d11824eee50fd0542abb131c2920f14570",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_64.png",
+      "source_sha256": "feac8a766e7998a13644dac0315d269addfa1fe7dc061bc444de08a708f34d7a",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_64.T_P1_DeathLaugh_64",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "8f3349bfd0bc2721dd9ec1958579f3e27ee6bd4381a81e5d107bc8625b4be690",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_65.png",
+      "source_sha256": "56c43eaba9f71939ae3dd255e0df6ea157e2069932a27f5dedcafc92db23e4d1",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_65.T_P1_DeathLaugh_65",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "66d4ae3ba4507b186808381109e9b94687abb8bb01a65fb4963ea331616c26af",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_66.png",
+      "source_sha256": "c4ea2573dd2e0ebd1a4fb89eaac4e31ad72065dbcce7750a75d7c440f43f4870",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_66.T_P1_DeathLaugh_66",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "55e05d41552a73a877f0bef1336bd4b41d60a8f219470ff4f91b74d5a29f8d39",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_67.png",
+      "source_sha256": "8760d24dd3859b29f8de2e67e4c025f4952b74d58304dd1cbc89893584b7cc55",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_67.T_P1_DeathLaugh_67",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "c6ec1fa71fc5a84f8d30445b73be979b6f5b8946125550716dc770738b7067c1",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_68.png",
+      "source_sha256": "f645eb055c2d4c5d831ff94b18a5b45d4317559c4e8b65adb8c4080a83a2883c",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_68.T_P1_DeathLaugh_68",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "5c140bc9783d1b006cd5eff157d3c371e63eda46acdd6d8ece259ce0aa11f97b",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_69.png",
+      "source_sha256": "2e9057735b1c7a6f7c3aed6f1db80dace07614e39d7fc33875d2bc2296bba656",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_69.T_P1_DeathLaugh_69",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "e9122f0bda42551ce8ba4a356b041cc1ec857a75849001722d69555c39ce96b6",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_70.png",
+      "source_sha256": "fc8633d65c0ddff9097528d9ba5a1f8f568aeab4c3ef3c636da8236a60dae81f",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_70.T_P1_DeathLaugh_70",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "964403373310debca2e4f279ac01d5595be53beb9e133074687feb28fcb41ea0",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_71.png",
+      "source_sha256": "02bf9cdbcd3fcaaf79eea68161e4b176667e694ff505901f4371e5dd04ccef55",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_71.T_P1_DeathLaugh_71",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "ec28b9fc40e5b7d17a7621b800cd86132d12a6fcec92088766068e9172abd9de",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_72.png",
+      "source_sha256": "c9bc2d76b5f32918eebf76e3fd3e3514af5aeae8cef27f11079b068768cdb68b",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_72.T_P1_DeathLaugh_72",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "e61a811316735dbff6550bff677f018796c710b3039088d04fe8dcc50f40ee23",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_73.png",
+      "source_sha256": "d8ae4ddbaa7414d82b80ea265e3c3aad535b5fac59a2aed757019b8be6e52023",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_73.T_P1_DeathLaugh_73",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "03ed02bbf372c07949a5e13e88d3a7a923d60da23ad6b898e52b2a9a848d51c5",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_74.png",
+      "source_sha256": "8ceed6261581de8f32d05b087aec7b235b3375518bdd4cc2328feb4a2f048022",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_74.T_P1_DeathLaugh_74",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "09b52f3be3f8aea2b27c1760d78862903ce80bdd18c6e1f4f1aa582cc792e60d",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_75.png",
+      "source_sha256": "e8efc49242991582a44aad2b5ca9f135324f077c0fdaf3c54b1f9c1167ee89be",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_75.T_P1_DeathLaugh_75",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "996b16ea8a47ab8e15b6fb2857d484fafddbbe8d3ff7810c0aba9ae2ac2a63ad",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_76.png",
+      "source_sha256": "d51d4157d41fa874abe792d0ae73f01484a3704a24f8fc67b52af2fd2775c187",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_76.T_P1_DeathLaugh_76",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "906cad149d1477f1e472903092e28dffc73c2f5fc9c95c790d38ca6956ec23a5",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_77.png",
+      "source_sha256": "111354552264a197161a572cee335e01f9a4950ea84f79bcd5483a54054ad6d6",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_77.T_P1_DeathLaugh_77",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "edf84d9a01572fa9a9c0be1b4dce6965301a39c7f183aad914d9cdf0cae484d7",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_78.png",
+      "source_sha256": "fcb773118b4e564c38033d3032ee9823e8d7b3f5332a65a4e7cb8db308db43d2",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_78.T_P1_DeathLaugh_78",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "1f68b87671c75b8006528564828c34e2d65b1637c847a3e1b81b73f95492020f",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_79.png",
+      "source_sha256": "cc0b900f7b0718eaad7db30d12e3f7fb01083df8817d51b1453c0773c2f47e5b",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_79.T_P1_DeathLaugh_79",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "50d58d2731bdb5e9fd3d7d93acb88c124a2b0b858371b8c6cf871ddd512dee06",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_80.png",
+      "source_sha256": "4a8a07da380951ef0622260c41dd24080b4f9b972a64a883f6f14a0bfb80305d",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_80.T_P1_DeathLaugh_80",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "020cdf00a7f3902dec074ea9cb23d3b99368751c6bd65668a5ab8bc5855e154b",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_81.png",
+      "source_sha256": "082cf474092cf70fd57c34830f0d57ef0558c25a8efe8cfef402243fb8f86001",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_81.T_P1_DeathLaugh_81",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "b82d260d7505a97871cd6c2ed358662a420b275d5ef1c2c043e9ef44b3475f5d",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_82.png",
+      "source_sha256": "afdcdabb9fd40e1c8e8696e3aa548adc45913778ff3977bf30cb65c17fe8934a",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_82.T_P1_DeathLaugh_82",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "c041c587d83eafe290067e7a30e5910860d94ae48695acd250e055d8bb3149ed",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_83.png",
+      "source_sha256": "c6b9bffc71bc5bd7552af7aceea748d17a925c36b5c5a5e1851dd0d76f5e13c2",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_83.T_P1_DeathLaugh_83",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "7092731a8ef9000cb82ffe185a0d3a8d307aea05198ff44ad6f0b2763f391a2c",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_84.png",
+      "source_sha256": "bf1b67da5f82c3e737d98437a8084cbb22cd811b55d5569eacbdc5aad614b41f",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_84.T_P1_DeathLaugh_84",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "486eb2b6839367e3376eb883de1a99088bfacde179f4bd69b648fb5ce28d6e23",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_85.png",
+      "source_sha256": "3142ac945bee3d399421cadcc3397fa29041b449fd86e677360c2ec50cb9671c",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_85.T_P1_DeathLaugh_85",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "298bb9e629b69d4ef287b47631ff107fddb403584fc7f221df5b2e24be57719c",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_86.png",
+      "source_sha256": "d341829beda2fefa8a0a4f2819c3593514d38421bede63a7cb65694d26d69500",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_86.T_P1_DeathLaugh_86",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "46bb67cb2c9f75d84d624a4c9a91fcf0a1f4cb48925c2a1ee64a1a408e3b8df5",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_87.png",
+      "source_sha256": "493c51927869092d3e40b2d729803ad42b3c6ac8aea0c8a67d9afe23cffab5bd",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_87.T_P1_DeathLaugh_87",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "63eabc2e0239bbc2cc267adb58428952353bc9d62d3fef1fdb0513a1da318f80",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_88.png",
+      "source_sha256": "d5762789a69779362db13d0fd3e23f8c2569a316f21cb26c85812e8d8f0033a7",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_88.T_P1_DeathLaugh_88",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "cb08b26217e0821a7ec99f23fa2527c77daf2d52447489bdafd830bd0ef8480c",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_89.png",
+      "source_sha256": "42309146633ade7d46d6b7f0f10c8d022d744d1fac3881798e11a5a70381d633",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_89.T_P1_DeathLaugh_89",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "a913cfc00250ee6613d92aba0d76f9b9074dd5cace786286fe1ef4f2a8b168be",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_90.png",
+      "source_sha256": "02c9ed414a63dc151745a3a86240d14dac159ee76c938ec6eb35262ff525306e",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_90.T_P1_DeathLaugh_90",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "ce43f0448f1b2a7253c05a08d8c91171e2290952a105ae91118066b12e66f7dc",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_91.png",
+      "source_sha256": "4a9cd340fc90f089141f050b84b8e866d3e52069a5929578b4c482074c2df63e",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_91.T_P1_DeathLaugh_91",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "431c577028cd3610bdf6a0e9a339c2386f1a224d5399fdfe529432808b11feeb",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_92.png",
+      "source_sha256": "7aa42225fc1e2d26dbbec7a1d1594a82329e6419a852063b65eb92de683750ed",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_92.T_P1_DeathLaugh_92",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "87b38250185b7c83bfaf8e7fc5c8bbc10eeba83d5575990518026f7bdd0d56ba",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_93.png",
+      "source_sha256": "6eb536f18b4bfee3e49b6da923259eac78f391a90f3ae76a6695d1ab6bcadace",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_93.T_P1_DeathLaugh_93",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "fd3cec38c13a598fab48d80c9a3c1090fbe999a687246705c5c8ed7f7185c6a3",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_94.png",
+      "source_sha256": "53b246b79c23faba531d6feb53af8d97007b09ee63806283655d60bc5ec1fa41",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_94.T_P1_DeathLaugh_94",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "c9e3ebfe59c4f705877ee0ed6f54340d7f8e2acc1acc9125d862e67c80e957d2",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_95.png",
+      "source_sha256": "f28bdb89acb19fe8df0fa3034e0f50fd0dc05d71d87689a0588ded3b993a3b59",
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_95.T_P1_DeathLaugh_95",
+      "asset_class": "Texture2D",
+      "uasset_sha256": "1a8e96cc6612be3d2de41c5f627a5d04a1d22a407b2b178f826f534e31a733c2",
+      "action": "reimported_existing_source",
+      "ui_texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "generated_untextured_color_and_fade_material",
+      "asset_path": "/Game/Naiwa/P1/Feedback/Materials/M_P1_FeedbackPickup.M_P1_FeedbackPickup",
+      "asset_class": "Material",
+      "uasset_sha256": "4315f0ed0db9a53f771bdc9928e4f7ef3f44623369de829d0686c6b4889eea2c",
+      "action": "updated_to_untextured_color_material"
+    }
+  ],
+  "status": "imported",
+  "death_laugh_frames": [
+    {
+      "index": 0,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_00.T_P1_DeathLaugh_00"
+    },
+    {
+      "index": 1,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_01.T_P1_DeathLaugh_01"
+    },
+    {
+      "index": 2,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_02.T_P1_DeathLaugh_02"
+    },
+    {
+      "index": 3,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_03.T_P1_DeathLaugh_03"
+    },
+    {
+      "index": 4,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_04.T_P1_DeathLaugh_04"
+    },
+    {
+      "index": 5,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_05.T_P1_DeathLaugh_05"
+    },
+    {
+      "index": 6,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_06.T_P1_DeathLaugh_06"
+    },
+    {
+      "index": 7,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_07.T_P1_DeathLaugh_07"
+    },
+    {
+      "index": 8,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_08.T_P1_DeathLaugh_08"
+    },
+    {
+      "index": 9,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_09.T_P1_DeathLaugh_09"
+    },
+    {
+      "index": 10,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_10.T_P1_DeathLaugh_10"
+    },
+    {
+      "index": 11,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_11.T_P1_DeathLaugh_11"
+    },
+    {
+      "index": 12,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_12.T_P1_DeathLaugh_12"
+    },
+    {
+      "index": 13,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_13.T_P1_DeathLaugh_13"
+    },
+    {
+      "index": 14,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_14.T_P1_DeathLaugh_14"
+    },
+    {
+      "index": 15,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_15.T_P1_DeathLaugh_15"
+    },
+    {
+      "index": 16,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_16.T_P1_DeathLaugh_16"
+    },
+    {
+      "index": 17,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_17.T_P1_DeathLaugh_17"
+    },
+    {
+      "index": 18,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_18.T_P1_DeathLaugh_18"
+    },
+    {
+      "index": 19,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_19.T_P1_DeathLaugh_19"
+    },
+    {
+      "index": 20,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_20.T_P1_DeathLaugh_20"
+    },
+    {
+      "index": 21,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_21.T_P1_DeathLaugh_21"
+    },
+    {
+      "index": 22,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_22.T_P1_DeathLaugh_22"
+    },
+    {
+      "index": 23,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_23.T_P1_DeathLaugh_23"
+    },
+    {
+      "index": 24,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_24.T_P1_DeathLaugh_24"
+    },
+    {
+      "index": 25,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_25.T_P1_DeathLaugh_25"
+    },
+    {
+      "index": 26,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_26.T_P1_DeathLaugh_26"
+    },
+    {
+      "index": 27,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_27.T_P1_DeathLaugh_27"
+    },
+    {
+      "index": 28,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_28.T_P1_DeathLaugh_28"
+    },
+    {
+      "index": 29,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_29.T_P1_DeathLaugh_29"
+    },
+    {
+      "index": 30,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_30.T_P1_DeathLaugh_30"
+    },
+    {
+      "index": 31,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_31.T_P1_DeathLaugh_31"
+    },
+    {
+      "index": 32,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_32.T_P1_DeathLaugh_32"
+    },
+    {
+      "index": 33,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_33.T_P1_DeathLaugh_33"
+    },
+    {
+      "index": 34,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_34.T_P1_DeathLaugh_34"
+    },
+    {
+      "index": 35,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_35.T_P1_DeathLaugh_35"
+    },
+    {
+      "index": 36,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_36.T_P1_DeathLaugh_36"
+    },
+    {
+      "index": 37,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_37.T_P1_DeathLaugh_37"
+    },
+    {
+      "index": 38,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_38.T_P1_DeathLaugh_38"
+    },
+    {
+      "index": 39,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_39.T_P1_DeathLaugh_39"
+    },
+    {
+      "index": 40,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_40.T_P1_DeathLaugh_40"
+    },
+    {
+      "index": 41,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_41.T_P1_DeathLaugh_41"
+    },
+    {
+      "index": 42,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_42.T_P1_DeathLaugh_42"
+    },
+    {
+      "index": 43,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_43.T_P1_DeathLaugh_43"
+    },
+    {
+      "index": 44,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_44.T_P1_DeathLaugh_44"
+    },
+    {
+      "index": 45,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_45.T_P1_DeathLaugh_45"
+    },
+    {
+      "index": 46,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_46.T_P1_DeathLaugh_46"
+    },
+    {
+      "index": 47,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_47.T_P1_DeathLaugh_47"
+    },
+    {
+      "index": 48,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_48.T_P1_DeathLaugh_48"
+    },
+    {
+      "index": 49,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_49.T_P1_DeathLaugh_49"
+    },
+    {
+      "index": 50,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_50.T_P1_DeathLaugh_50"
+    },
+    {
+      "index": 51,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_51.T_P1_DeathLaugh_51"
+    },
+    {
+      "index": 52,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_52.T_P1_DeathLaugh_52"
+    },
+    {
+      "index": 53,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_53.T_P1_DeathLaugh_53"
+    },
+    {
+      "index": 54,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_54.T_P1_DeathLaugh_54"
+    },
+    {
+      "index": 55,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_55.T_P1_DeathLaugh_55"
+    },
+    {
+      "index": 56,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_56.T_P1_DeathLaugh_56"
+    },
+    {
+      "index": 57,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_57.T_P1_DeathLaugh_57"
+    },
+    {
+      "index": 58,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_58.T_P1_DeathLaugh_58"
+    },
+    {
+      "index": 59,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_59.T_P1_DeathLaugh_59"
+    },
+    {
+      "index": 60,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_60.T_P1_DeathLaugh_60"
+    },
+    {
+      "index": 61,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_61.T_P1_DeathLaugh_61"
+    },
+    {
+      "index": 62,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_62.T_P1_DeathLaugh_62"
+    },
+    {
+      "index": 63,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_63.T_P1_DeathLaugh_63"
+    },
+    {
+      "index": 64,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_64.T_P1_DeathLaugh_64"
+    },
+    {
+      "index": 65,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_65.T_P1_DeathLaugh_65"
+    },
+    {
+      "index": 66,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_66.T_P1_DeathLaugh_66"
+    },
+    {
+      "index": 67,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_67.T_P1_DeathLaugh_67"
+    },
+    {
+      "index": 68,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_68.T_P1_DeathLaugh_68"
+    },
+    {
+      "index": 69,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_69.T_P1_DeathLaugh_69"
+    },
+    {
+      "index": 70,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_70.T_P1_DeathLaugh_70"
+    },
+    {
+      "index": 71,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_71.T_P1_DeathLaugh_71"
+    },
+    {
+      "index": 72,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_72.T_P1_DeathLaugh_72"
+    },
+    {
+      "index": 73,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_73.T_P1_DeathLaugh_73"
+    },
+    {
+      "index": 74,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_74.T_P1_DeathLaugh_74"
+    },
+    {
+      "index": 75,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_75.T_P1_DeathLaugh_75"
+    },
+    {
+      "index": 76,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_76.T_P1_DeathLaugh_76"
+    },
+    {
+      "index": 77,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_77.T_P1_DeathLaugh_77"
+    },
+    {
+      "index": 78,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_78.T_P1_DeathLaugh_78"
+    },
+    {
+      "index": 79,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_79.T_P1_DeathLaugh_79"
+    },
+    {
+      "index": 80,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_80.T_P1_DeathLaugh_80"
+    },
+    {
+      "index": 81,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_81.T_P1_DeathLaugh_81"
+    },
+    {
+      "index": 82,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_82.T_P1_DeathLaugh_82"
+    },
+    {
+      "index": 83,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_83.T_P1_DeathLaugh_83"
+    },
+    {
+      "index": 84,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_84.T_P1_DeathLaugh_84"
+    },
+    {
+      "index": 85,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_85.T_P1_DeathLaugh_85"
+    },
+    {
+      "index": 86,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_86.T_P1_DeathLaugh_86"
+    },
+    {
+      "index": 87,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_87.T_P1_DeathLaugh_87"
+    },
+    {
+      "index": 88,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_88.T_P1_DeathLaugh_88"
+    },
+    {
+      "index": 89,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_89.T_P1_DeathLaugh_89"
+    },
+    {
+      "index": 90,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_90.T_P1_DeathLaugh_90"
+    },
+    {
+      "index": 91,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_91.T_P1_DeathLaugh_91"
+    },
+    {
+      "index": 92,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_92.T_P1_DeathLaugh_92"
+    },
+    {
+      "index": 93,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_93.T_P1_DeathLaugh_93"
+    },
+    {
+      "index": 94,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_94.T_P1_DeathLaugh_94"
+    },
+    {
+      "index": 95,
+      "duration_ms": 42,
+      "asset_path": "/Game/Naiwa/P1/Feedback/DeathLaughFrames/T_P1_DeathLaugh_95.T_P1_DeathLaugh_95"
+    }
+  ],
+  "death_laugh_source_url": "https://www.bilibili.com/video/BV1xsRSBQENA/",
+  "death_laugh_source_start_seconds": 2.0,
+  "death_laugh_frame_rate": 24,
+  "death_laugh_loop_duration_ms": 4000,
+  "finished_utc": "2026-10-18T07:41:07.393202+00:00"
+}

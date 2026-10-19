@@ -1,0 +1,22 @@
+{
+  "schema": "NaiwaP1FullLevelV1",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "status": "saved_candidate_pending_full_walk_run_review",
+  "target_map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Full",
+  "config_sha256": "4ac006606263551221f499ca4a8744f4d2e89283b1e1e8dab58d6f6c1fdbb7fa",
+  "slice_smoke_evidence": "Saved\\NaiwaP1\\smoke_20261015T080820Z_021388C341E3CAD69A0D81ACD312B305.json",
+  "layout": {
+    "map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Full",
+    "status": "existing_map_preserved",
+    "owned_count": 33
+  },
+  "protected_sha256": {
+    "Content\\Naiwa\\Maps\\L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content\\Naiwa\\Blueprints\\BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content\\Naiwa\\Blueprints\\BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content\\Naiwa\\Input\\IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529",
+    "Content\\Naiwa\\P1\\Maps\\L_NaiwaP1_Slice.umap": "5adfa3caf65bfdca92085e0e4276266264105aff67188788d3fa6e83e9eaa2b8",
+    "Content\\Naiwa\\P1\\BP_NaiwaP1Character.uasset": "9b85d1bbd73ac1c74ace7d8028e8137e77424226e9093e5cce08f3cd5caad5af",
+    "Content\\Naiwa\\P1\\BP_NaiwaP1GameMode.uasset": "6e24599d88b6a602d1c910e81764bac0068e973dda195a2cbce7bd3749cb9ab4"
+  }
+}

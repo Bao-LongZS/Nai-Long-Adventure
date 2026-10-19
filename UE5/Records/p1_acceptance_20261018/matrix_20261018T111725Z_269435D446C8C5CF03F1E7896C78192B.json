@@ -1,0 +1,26 @@
+{
+	"schema": "NaiwaP1StateMatrixV1",
+	"status": "PASS",
+	"detail": "P1 priority, KillZ, pause/death timing, R reset, and Won lock passed",
+	"map": "L_NaiwaP1_v7",
+	"state": "Playing",
+	"death_events": 3,
+	"wall_time_s": 20.239357199519873,
+	"paused": false,
+	"events": [
+		"queued_goal_pickup_checkpoint_hazard_same_frame",
+		"hazard_priority_kept_pickup_checkpoint_goal_unconsumed",
+		"pawn_placed_below_world_killz",
+		"world_killz_one_death_and_dying_paused",
+		"dying_timer_froze_then_resumed",
+		"world_killz_respawned_at_start",
+		"r_during_dying_cleared_death_timer",
+		"dying_reset_stayed_playable_without_stale_timer",
+		"pause_with_pickup_and_checkpoint_active",
+		"r_during_pause_unpaused_and_cleared_attempt",
+		"queued_goal_then_pickup_same_frame",
+		"same_frame_pickup_resolved_before_goal_won",
+		"won_locked_input_and_position_then_r_restarted",
+		"won_r_restart_playable_at_start"
+	]
+}

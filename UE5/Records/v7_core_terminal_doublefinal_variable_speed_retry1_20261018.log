@@ -1,0 +1,128 @@
+Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -Mode=ValidatePlatforms -OutputSDKs  -AllPlatforms  -project="C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Nai_Long.uproject" -log="C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/Logs/AutoSDKInfo.txt" -verbose -timestamps
+Log file: C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Saved\Logs\AutoSDKInfo.txt
+##PlatformValidate: Win64 VALID 10.0.22621.0
+##PlatformValidate: Mac INVALID 26.1.1
+##PlatformValidate: IOS INVALID 26.1.1
+##PlatformValidate: Android INVALID r27c
+##PlatformValidate: Linux INVALID v26_clang-20.1.8-rockylinux8
+##PlatformValidate: LinuxArm64 INVALID <UNKNOWN>
+##PlatformValidate: TVOS INVALID 26.1.1
+##PlatformValidate: VisionOS INVALID <UNKNOWN>
+Unable to find required SDK version 'MainVersion' for platform LinuxArm64. Check your SDK.json files
+Unable to find required SDK version 'MainVersion' for platform VisionOS. Check your SDK.json files
+Trace written to file C:\Users\31314\AppData\Local\UnrealBuildTool\Trace.uba with size 312b
+{
+  "schema": "NaiwaP1V7StaticAuditV1",
+  "status": "CORE_RUNTIME_PASS_PENDING_SEPARATE_ACCEPTANCE",
+  "scope": "static_config_file_identity_isolated_gates_and_full_mixed_core_route",
+  "map_package": "/Game/Naiwa/P1/Maps/L_NaiwaP1_v7",
+  "config_file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Scripts\\p1_integrated_v7_config.json",
+  "map_file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\P1\\Maps\\L_NaiwaP1_v7.umap",
+  "config_sha256": "21d64262a6c582159f292c41323b65497fefd957c84dc8f8558c9820951c9f62",
+  "map_sha256": "976095a317b1afa13806ecf7e7c2f52e92cee5d328bfbf78b99ac212f5f01708",
+  "build_report_file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaP1\\integrated_v7_build.json",
+  "outer_build_report_file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaP1\\integrated_v7_build_outer.json",
+  "old_integrated_map_sha256": "ee5c82788fa2290089f27f4021f1f8539f9bfa979cf357910a4eabcdde73a350",
+  "old_integrated_config_sha256": "3aad9c28e6a88397aeb6e1652559fb8d60496185fe255633ab259d7e72f2aa5d",
+  "v7_runtime_pass": true,
+  "real_keyboard_evidence": false,
+  "gate_probe_evidence": true,
+  "timed_c_design": {
+    "role": "mandatory_timed_transition",
+    "run_only_gate": false,
+    "walk_landing_after_disable_allowed": true
+  },
+  "protected_package_sha256_current": {
+    "Content/Naiwa/Maps/L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content/Naiwa/Blueprints/BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content/Naiwa/Blueprints/BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content/Naiwa/Input/IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Slice.umap": "603dc7b241b525c45ad20a56ec99213bbcf6dbb220879ddd2fca0964222a5cd1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Full.umap": "c3ecf5282e0e7323467e1acfef5ba7d9b4f3bb488c393aeec2f6d521b5c5bee0",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Bounce.umap": "4caaba2a9e92ebfff01bf7d3440805c5f7fe98a49472ceda3dff9293b1f2185a",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Switch.umap": "dd97cd816ee5d13dec4989f9fe3e09a7219ba6e6b8d43004f789ef0790e7f9e1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Timed.umap": "26790074e33d97f8007185db384c7e67a53d1a05c4ba443bd88a8ef53a2ec43a",
+    "Content/Naiwa/P1/BP_NaiwaP1Character.uasset": "9b85d1bbd73ac1c74ace7d8028e8137e77424226e9093e5cce08f3cd5caad5af",
+    "Content/Naiwa/P1/BP_NaiwaP1GameMode.uasset": "6e24599d88b6a602d1c910e81764bac0068e973dda195a2cbce7bd3749cb9ab4",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Integrated.umap": "ee5c82788fa2290089f27f4021f1f8539f9bfa979cf357910a4eabcdde73a350"
+  },
+  "pending_runtime_contract": {
+    "flag": "-NaiwaP1V7MixedCoreProbe",
+    "report_schema": "NaiwaP1V7MixedCoreRouteV1",
+    "fresh_report_glob": "v7_mixed_core_route_*.json",
+    "required_evidence": [
+      "exact_map_and_config_identity",
+      "physical_mixed_gait_route",
+      "eight_grounded_checkpoints",
+      "eleven_individually_landed_gaps",
+      "two_terminal_bounce_timed_compounds_completed",
+      "hidden_terminal_pits_invisible_and_query_enabled",
+      "moving_platform_speed_varied",
+      "physical_pickup_and_goal_won",
+      "randomized_shuttle_traps_avoided",
+      "c_shuttle_rises_to_timed_dock",
+      "zero_probe_teleports_or_trigger_injections"
+    ],
+    "separate_acceptance": [
+      "every_checkpoint_death_and_recovery",
+      "real_keyboard_and_camera",
+      "pause_and_restart",
+      "duration_and_blank_time",
+      "C_Walk_landing_after_timer_disable_is_allowed_and_does_not_make_C_a_Run_only_gate"
+    ]
+  },
+  "issues": [],
+  "isolated_gate_reports": [
+    {
+      "gate": "A Run exit",
+      "report": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaP1\\v7_gate_probe_v2_A_run_20261018T004247Z_8A79D16342BB2AD0BB77F7B68D042E59.json"
+    },
+    {
+      "gate": "B Run bounce",
+      "report": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaP1\\v7_gate_probe_v2_B_run_20261018T004400Z_3F27505542CC26999C9196A11E9CEFA2.json"
+    },
+    {
+      "gate": "C Run -40 cm",
+      "report": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaP1\\v7_gate_probe_v2_C_run_20261018T004939Z_3C32D4244174CD724922A79377E4A69E.json"
+    },
+    {
+      "gate": "C Walk after timer expiry",
+      "report": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaP1\\v7_gate_probe_v2_C_walk_20261018T004905Z_2120AB5D465E5E2974E8AFA0EBC4151D.json"
+    },
+    {
+      "gate": "A natural checkpoint recovery",
+      "report": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaP1\\v7_gate_recovery_A_walk_20261018T005428Z_8AF8AE0D4838C2FCE1354999EC39CEBE.json"
+    },
+    {
+      "gate": "B natural checkpoint recovery",
+      "report": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaP1\\v7_gate_recovery_B_walk_20261018T005514Z_4868E8D9416CF62544D894B76E3CCC28.json"
+    },
+    {
+      "gate": "C natural checkpoint recovery",
+      "report": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaP1\\v7_gate_recovery_C_walk_20261018T005554Z_A0D4547149400BC2F5B80C86E3BE9802.json"
+    }
+  ],
+  "mixed_core_report": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaP1\\v7_mixed_core_route_20261018T042703Z_16128B934B521AA5B501488885239162.json",
+  "mixed_core_log": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Saved\\NaiwaP1\\v7_mixed_core_route_20261018T042447Z_04d2e33de0904ec4b0c3d057b417c93c.log",
+  "mixed_core_wall_time_s": 117.3411827981472,
+  "route_assertions": {
+    "exact_map_and_config_identity": true,
+    "physical_mixed_gait_route": true,
+    "eight_grounded_checkpoints": true,
+    "two_terminal_bounce_timed_compounds_completed": true,
+    "hidden_terminal_pits_invisible_and_query_enabled": true,
+    "moving_platform_speed_varied": true,
+    "eleven_individually_landed_gaps": true,
+    "physical_pickup_and_goal_won": true,
+    "zero_probe_teleports_or_trigger_injections": true
+  },
+  "separate_acceptance": [
+    "every_checkpoint_death_and_recovery",
+    "real_keyboard_and_camera",
+    "pause_and_restart",
+    "duration_and_blank_time",
+    "C_Walk_landing_after_timer_disable_is_allowed_and_does_not_make_C_a_Run_only_gate"
+  ]
+}
+V7 mixed-core physical route PASS: report=C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Saved\NaiwaP1\v7_mixed_core_route_20261018T042703Z_16128B934B521AA5B501488885239162.json

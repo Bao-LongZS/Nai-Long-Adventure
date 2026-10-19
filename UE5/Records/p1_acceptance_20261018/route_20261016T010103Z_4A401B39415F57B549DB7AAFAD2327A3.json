@@ -1,0 +1,22 @@
+{
+	"schema": "NaiwaP1RouteV1",
+	"status": "PASS",
+	"detail": "Physical Walk/Run slice route and checkpoint return completed",
+	"map": "L_NaiwaP1_Slice",
+	"gait_speed": "Walk150",
+	"max_walk_speed_cm_s": 150,
+	"final_x": 2092.259541465608,
+	"death_events": 1,
+	"wall_time_s": 23.005913700908422,
+	"events": [
+		"jump_0_x180.3",
+		"jump_1_x612.3",
+		"spawn_to_pickup_and_checkpoint_by_movement",
+		"checkpoint_respawn_ready_to_walk_back",
+		"checkpoint_to_restored_pickup_by_movement",
+		"jump_1_x612.2",
+		"jump_2_x1432.2",
+		"pickup_to_goal_by_movement"
+	],
+	"screenshots": []
+}

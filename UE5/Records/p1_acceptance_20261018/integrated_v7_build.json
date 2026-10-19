@@ -1,0 +1,1111 @@
+{
+  "schema": "NaiwaP1IntegratedV7V1",
+  "target_map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_v7",
+  "source_map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Integrated",
+  "phase": "P1-5b_v7_candidate",
+  "config_sha256": "4fd6914655c2ae7c28567bbbdb808b758b0686e7b9bd260a145891d322aa2e59",
+  "builder_sha256": "448545c5cf9a30724b8ba7cf830d3b8f2b4115b03fc28fbaeb7cd66137bd68a9",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "status": "saved_v7_candidate_pending_route_and_visual_review",
+  "acceptance": "pending_A_B_C_route_checkpoint_failure_and_visual_review",
+  "protected_sha256_before": {
+    "Content/Naiwa/Maps/L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content/Naiwa/Blueprints/BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content/Naiwa/Blueprints/BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content/Naiwa/Input/IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Slice.umap": "603dc7b241b525c45ad20a56ec99213bbcf6dbb220879ddd2fca0964222a5cd1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Full.umap": "c3ecf5282e0e7323467e1acfef5ba7d9b4f3bb488c393aeec2f6d521b5c5bee0",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Bounce.umap": "4caaba2a9e92ebfff01bf7d3440805c5f7fe98a49472ceda3dff9293b1f2185a",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Switch.umap": "dd97cd816ee5d13dec4989f9fe3e09a7219ba6e6b8d43004f789ef0790e7f9e1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Timed.umap": "26790074e33d97f8007185db384c7e67a53d1a05c4ba443bd88a8ef53a2ec43a",
+    "Content/Naiwa/P1/BP_NaiwaP1Character.uasset": "9b85d1bbd73ac1c74ace7d8028e8137e77424226e9093e5cce08f3cd5caad5af",
+    "Content/Naiwa/P1/BP_NaiwaP1GameMode.uasset": "6e24599d88b6a602d1c910e81764bac0068e973dda195a2cbce7bd3749cb9ab4",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Integrated.umap": "ee5c82788fa2290089f27f4021f1f8539f9bfa979cf357910a4eabcdde73a350"
+  },
+  "target_map_sha256_before": "2c6712f302ea7c73a2919b3674a22a8bcdba78d35875db21b31d8197e0c60231",
+  "target_map_sha256_after": "4a55ced57ddbe47044aa7f4965fc4013cc82ccc48976a9819a6217a4dbef5754",
+  "target_map_bytes": 259862,
+  "layout": {
+    "status": "prior_v7_candidate_refreshed",
+    "verified_actor_count": 73,
+    "retained_teaching_actor_count": 14,
+    "extension_actor_count": 59,
+    "checkpoint_count": 8,
+    "gap_count": 11,
+    "visible_pit_hazard_count": 11,
+    "hidden_terminal_pit_hazard_count": 4,
+    "visible_pit_spike_points": 33,
+    "random_shuttle_traps_per_departure": [
+      1,
+      2
+    ],
+    "shuttle_speed_profile": {
+      "base_cm_s": 300,
+      "variation_cm_s": 100,
+      "sampled_range_cm_s": [
+        200,
+        400
+      ],
+      "cycles_per_crossing": 2
+    },
+    "checkpoint_labels_enabled": true,
+    "retained_teaching_bounce_rise_cm": 300.0,
+    "documented_normal_jump_envelope_cm": 264.7,
+    "c_shuttle_endpoint_top_z_cm": [
+      240,
+      340
+    ],
+    "timed_c_design": {
+      "role": "mandatory_timed_transition",
+      "run_only_gate": false,
+      "walk_landing_after_disable_allowed": true
+    },
+    "kill_z": -1000,
+    "required_pickup_count": 1,
+    "physical_pickup_count": 4,
+    "saved_semantics": {
+      "transform_reconciliation": "all_owned_actors_match_config_after_save_reload",
+      "retained_actor_transforms": {
+        "Terrain_LeftBank": {
+          "kind": "Terrain",
+          "id": "LeftBank",
+          "location": [
+            -1075.0,
+            0.0,
+            100.0
+          ],
+          "scale": [
+            10.5,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_RightBank": {
+          "kind": "Terrain",
+          "id": "RightBank",
+          "location": [
+            1005.0,
+            0.0,
+            100.0
+          ],
+          "scale": [
+            9.1,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_BounceLanding": {
+          "kind": "Terrain",
+          "id": "BounceLanding",
+          "location": [
+            2430.0,
+            0.0,
+            400.0
+          ],
+          "scale": [
+            13.8,
+            7.0,
+            0.4
+          ]
+        },
+        "Hazard": {
+          "kind": "Hazard",
+          "id": "IntegratedHiddenHazard01",
+          "location": [
+            -1160.0,
+            0.0,
+            155.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardCue": {
+          "kind": "Cue",
+          "id": "HazardCue",
+          "location": [
+            -1300.0,
+            0.0,
+            123.0
+          ],
+          "scale": [
+            0.2,
+            2.5,
+            0.06
+          ]
+        },
+        "Switch": {
+          "kind": "Switch",
+          "id": "Switch",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Bounce": {
+          "kind": "Bounce",
+          "id": "Bounce",
+          "location": [
+            1660.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Checkpoint": {
+          "kind": "Checkpoint",
+          "id": "IntegratedCheckpoint01",
+          "location": [
+            2700.0,
+            0.0,
+            512.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Start": {
+          "kind": "Start",
+          "id": "Start",
+          "location": [
+            -1450.0,
+            0.0,
+            212.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "KeyLight": {
+          "kind": "KeyLight",
+          "id": "KeyLight",
+          "location": [
+            0.0,
+            0.0,
+            800.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "SkyLight": {
+          "kind": "SkyLight",
+          "id": "SkyLight",
+          "location": [
+            0.0,
+            0.0,
+            600.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Atmosphere": {
+          "kind": "Atmosphere",
+          "id": "Atmosphere",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "TimedTeaching": {
+          "kind": "Timed",
+          "id": "TimedTeaching01",
+          "location": [
+            3340.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Terrain_TimedExit": {
+          "kind": "Terrain",
+          "id": "TimedExitBank",
+          "location": [
+            4030.0,
+            0.0,
+            160.0
+          ],
+          "scale": [
+            9.4,
+            7.0,
+            0.4
+          ]
+        }
+      },
+      "extension_actor_transforms": {
+        "Terrain_A1": {
+          "kind": "Terrain",
+          "id": "A1",
+          "location": [
+            4700.0,
+            0.0,
+            160.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "SwitchA": {
+          "kind": "Switch",
+          "id": "SwitchA",
+          "location": [
+            6200.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Terrain_A3": {
+          "kind": "Terrain",
+          "id": "A3",
+          "location": [
+            7700.0,
+            0.0,
+            160.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_A4Island01": {
+          "kind": "Terrain",
+          "id": "A4Island01",
+          "location": [
+            8100.0,
+            0.0,
+            160.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_A4Island02": {
+          "kind": "Terrain",
+          "id": "A4Island02",
+          "location": [
+            8740.0,
+            0.0,
+            160.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_A4Island03": {
+          "kind": "Terrain",
+          "id": "A4Island03",
+          "location": [
+            9380.0,
+            0.0,
+            160.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_A4Island04": {
+          "kind": "Terrain",
+          "id": "A4Island04",
+          "location": [
+            10020.0,
+            0.0,
+            160.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Checkpoint02": {
+          "kind": "Checkpoint",
+          "id": "IntegratedCheckpoint02",
+          "location": [
+            4700.0,
+            0.0,
+            272.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Checkpoint03": {
+          "kind": "Checkpoint",
+          "id": "IntegratedCheckpoint03",
+          "location": [
+            7700.0,
+            0.0,
+            272.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Terrain_B1": {
+          "kind": "Terrain",
+          "id": "B1",
+          "location": [
+            10370.0,
+            0.0,
+            160.0
+          ],
+          "scale": [
+            3.0,
+            7.0,
+            0.4
+          ]
+        },
+        "SwitchB": {
+          "kind": "Switch",
+          "id": "SwitchB",
+          "location": [
+            11820.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "BounceB": {
+          "kind": "Bounce",
+          "id": "BounceB",
+          "location": [
+            13260.0,
+            0.0,
+            168.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Terrain_B4": {
+          "kind": "Terrain",
+          "id": "B4",
+          "location": [
+            13770.0,
+            0.0,
+            460.0
+          ],
+          "scale": [
+            7.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_B5Island01": {
+          "kind": "Terrain",
+          "id": "B5Island01",
+          "location": [
+            14320.0,
+            0.0,
+            460.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_B5Island02": {
+          "kind": "Terrain",
+          "id": "B5Island02",
+          "location": [
+            14960.0,
+            0.0,
+            460.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_B5Island03": {
+          "kind": "Terrain",
+          "id": "B5Island03",
+          "location": [
+            15600.0,
+            0.0,
+            460.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_B5Island04": {
+          "kind": "Terrain",
+          "id": "B5Island04",
+          "location": [
+            16240.0,
+            0.0,
+            460.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Checkpoint04": {
+          "kind": "Checkpoint",
+          "id": "IntegratedCheckpoint04",
+          "location": [
+            10370.0,
+            0.0,
+            272.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Checkpoint05": {
+          "kind": "Checkpoint",
+          "id": "IntegratedCheckpoint05",
+          "location": [
+            13770.0,
+            0.0,
+            572.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Terrain_C1": {
+          "kind": "Terrain",
+          "id": "C1",
+          "location": [
+            16640.0,
+            0.0,
+            220.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "SwitchC": {
+          "kind": "Switch",
+          "id": "SwitchC",
+          "location": [
+            17840.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "TimedC": {
+          "kind": "Timed",
+          "id": "TimedC",
+          "location": [
+            19050.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Terrain_C4": {
+          "kind": "Terrain",
+          "id": "C4",
+          "location": [
+            19760.0,
+            0.0,
+            220.0
+          ],
+          "scale": [
+            10.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_C5Island01": {
+          "kind": "Terrain",
+          "id": "C5Island01",
+          "location": [
+            20460.0,
+            0.0,
+            220.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_C5Island02": {
+          "kind": "Terrain",
+          "id": "C5Island02",
+          "location": [
+            21100.0,
+            0.0,
+            220.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_C5Island03": {
+          "kind": "Terrain",
+          "id": "C5Island03",
+          "location": [
+            21740.0,
+            0.0,
+            220.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_C5Island04": {
+          "kind": "Terrain",
+          "id": "C5Island04",
+          "location": [
+            22380.0,
+            0.0,
+            220.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_C5Island05": {
+          "kind": "Terrain",
+          "id": "C5Island05",
+          "location": [
+            23020.0,
+            0.0,
+            220.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Terrain_C5Island06": {
+          "kind": "Terrain",
+          "id": "C5Island06",
+          "location": [
+            23660.0,
+            0.0,
+            220.0
+          ],
+          "scale": [
+            4.0,
+            7.0,
+            0.4
+          ]
+        },
+        "Checkpoint06": {
+          "kind": "Checkpoint",
+          "id": "IntegratedCheckpoint06",
+          "location": [
+            16640.0,
+            0.0,
+            332.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Checkpoint07": {
+          "kind": "Checkpoint",
+          "id": "IntegratedCheckpoint07",
+          "location": [
+            19760.0,
+            0.0,
+            332.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Terrain_FinalApproach": {
+          "kind": "Terrain",
+          "id": "FinalApproach",
+          "location": [
+            24100.0,
+            0.0,
+            220.0
+          ],
+          "scale": [
+            4.8,
+            7.0,
+            0.4
+          ]
+        },
+        "Checkpoint08": {
+          "kind": "Checkpoint",
+          "id": "IntegratedCheckpoint08",
+          "location": [
+            24080.0,
+            0.0,
+            332.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "BounceFinal": {
+          "kind": "Bounce",
+          "id": "BounceFinal",
+          "location": [
+            24420.0,
+            0.0,
+            188.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "TimedFinal": {
+          "kind": "Timed",
+          "id": "TimedFinal",
+          "location": [
+            24810.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Terrain_FinalIntermediate": {
+          "kind": "Terrain",
+          "id": "FinalIntermediate",
+          "location": [
+            25285.0,
+            0.0,
+            520.0
+          ],
+          "scale": [
+            3.1,
+            7.0,
+            0.4
+          ]
+        },
+        "BounceFinal2": {
+          "kind": "Bounce",
+          "id": "BounceFinal2",
+          "location": [
+            25220.0,
+            0.0,
+            529.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardCompoundHiddenPit03": {
+          "kind": "Hazard",
+          "id": "CompoundHiddenPit03",
+          "location": [
+            25455.0,
+            0.0,
+            430.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "TimedFinal2": {
+          "kind": "Timed",
+          "id": "TimedFinal2",
+          "location": [
+            25640.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardCompoundHiddenPit04": {
+          "kind": "Hazard",
+          "id": "CompoundHiddenPit04",
+          "location": [
+            25840.0,
+            0.0,
+            750.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Terrain_Final": {
+          "kind": "Terrain",
+          "id": "Final",
+          "location": [
+            27120.0,
+            0.0,
+            820.0
+          ],
+          "scale": [
+            21.6,
+            7.0,
+            0.4
+          ]
+        },
+        "Pickup01": {
+          "kind": "Pickup",
+          "id": "IntegratedPickup01",
+          "location": [
+            1000.0,
+            0.0,
+            182.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Pickup02": {
+          "kind": "Pickup",
+          "id": "IntegratedPickup02",
+          "location": [
+            8740.0,
+            0.0,
+            242.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Pickup03": {
+          "kind": "Pickup",
+          "id": "IntegratedPickup03",
+          "location": [
+            14960.0,
+            0.0,
+            542.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "PickupRequired": {
+          "kind": "Pickup",
+          "id": "IntegratedRequiredPickup01",
+          "location": [
+            26800.0,
+            0.0,
+            902.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Goal": {
+          "kind": "Goal",
+          "id": "IntegratedGoal01",
+          "location": [
+            27400.0,
+            0.0,
+            932.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardGapA01": {
+          "kind": "Hazard",
+          "id": "GapA01",
+          "location": [
+            8420.0,
+            0.0,
+            90.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardGapA02": {
+          "kind": "Hazard",
+          "id": "GapA02",
+          "location": [
+            9060.0,
+            0.0,
+            90.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardGapA03": {
+          "kind": "Hazard",
+          "id": "GapA03",
+          "location": [
+            9700.0,
+            0.0,
+            90.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardGapB01": {
+          "kind": "Hazard",
+          "id": "GapB01",
+          "location": [
+            14640.0,
+            0.0,
+            390.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardGapB02": {
+          "kind": "Hazard",
+          "id": "GapB02",
+          "location": [
+            15280.0,
+            0.0,
+            390.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardGapB03": {
+          "kind": "Hazard",
+          "id": "GapB03",
+          "location": [
+            15920.0,
+            0.0,
+            390.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardGapC01": {
+          "kind": "Hazard",
+          "id": "GapC01",
+          "location": [
+            20780.0,
+            0.0,
+            150.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardGapC02": {
+          "kind": "Hazard",
+          "id": "GapC02",
+          "location": [
+            21420.0,
+            0.0,
+            150.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardGapC03": {
+          "kind": "Hazard",
+          "id": "GapC03",
+          "location": [
+            22060.0,
+            0.0,
+            150.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardGapC04": {
+          "kind": "Hazard",
+          "id": "GapC04",
+          "location": [
+            22700.0,
+            0.0,
+            150.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardGapC05": {
+          "kind": "Hazard",
+          "id": "GapC05",
+          "location": [
+            23340.0,
+            0.0,
+            150.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardCompoundHiddenPit01": {
+          "kind": "Hazard",
+          "id": "CompoundHiddenPit01",
+          "location": [
+            24580.0,
+            0.0,
+            100.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "HazardCompoundHiddenPit02": {
+          "kind": "Hazard",
+          "id": "CompoundHiddenPit02",
+          "location": [
+            25040.0,
+            0.0,
+            400.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      }
+    }
+  },
+  "protected_sha256_after": {
+    "Content/Naiwa/Maps/L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content/Naiwa/Blueprints/BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content/Naiwa/Blueprints/BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content/Naiwa/Input/IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Slice.umap": "603dc7b241b525c45ad20a56ec99213bbcf6dbb220879ddd2fca0964222a5cd1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Full.umap": "c3ecf5282e0e7323467e1acfef5ba7d9b4f3bb488c393aeec2f6d521b5c5bee0",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Bounce.umap": "4caaba2a9e92ebfff01bf7d3440805c5f7fe98a49472ceda3dff9293b1f2185a",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Switch.umap": "dd97cd816ee5d13dec4989f9fe3e09a7219ba6e6b8d43004f789ef0790e7f9e1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Timed.umap": "26790074e33d97f8007185db384c7e67a53d1a05c4ba443bd88a8ef53a2ec43a",
+    "Content/Naiwa/P1/BP_NaiwaP1Character.uasset": "9b85d1bbd73ac1c74ace7d8028e8137e77424226e9093e5cce08f3cd5caad5af",
+    "Content/Naiwa/P1/BP_NaiwaP1GameMode.uasset": "6e24599d88b6a602d1c910e81764bac0068e973dda195a2cbce7bd3749cb9ab4",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Integrated.umap": "ee5c82788fa2290089f27f4021f1f8539f9bfa979cf357910a4eabcdde73a350"
+  },
+  "protected_packages_unchanged": true
+}

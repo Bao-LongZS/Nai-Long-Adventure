@@ -1,0 +1,61 @@
+{
+	"schema": "NaiwaP1GapProbeV1",
+	"status": "measured",
+	"map": "L_NaiwaP1_GapProbe",
+	"gait": "Walk150",
+	"capsule_radius_cm": 42,
+	"capsule_diameter_cm": 84,
+	"segment_count": 6,
+	"segments": [
+		{
+			"gap_cm": 65,
+			"outcome": "passed",
+			"min_z_cm": 196.8531494140625,
+			"max_x_cm": 651.50518798828125,
+			"cancel_x_cm": 651.50521293932638,
+			"elapsed_s": 9.0719535984098911
+		},
+		{
+			"gap_cm": 90,
+			"outcome": "passed",
+			"min_z_cm": 199.74636840820312,
+			"max_x_cm": 1610.613525390625,
+			"cancel_x_cm": 1610.6135372935662,
+			"elapsed_s": 5.5343417003750801
+		},
+		{
+			"gap_cm": 110,
+			"outcome": "passed",
+			"min_z_cm": 192.77314758300781,
+			"max_x_cm": 2610.6728515625,
+			"cancel_x_cm": 2610.672892702134,
+			"elapsed_s": 6.4671492017805576
+		},
+		{
+			"gap_cm": 130,
+			"outcome": "passed",
+			"min_z_cm": 183.04457092285156,
+			"max_x_cm": 3650.542724609375,
+			"cancel_x_cm": 3650.5428236123066,
+			"elapsed_s": 6.7334983982145786
+		},
+		{
+			"gap_cm": 150,
+			"outcome": "passed",
+			"min_z_cm": 169.14273071289062,
+			"max_x_cm": 4730.55419921875,
+			"cancel_x_cm": 4730.5541601875684,
+			"elapsed_s": 7.0008690990507603
+		},
+		{
+			"gap_cm": 180,
+			"outcome": "passed",
+			"min_z_cm": 134.01223754882812,
+			"max_x_cm": 5870.5625,
+			"cancel_x_cm": 5870.5625116568881,
+			"elapsed_s": 7.4005932994186878
+		}
+	],
+	"threshold_note": "Every probed gap up to 180 cm held the capsule.",
+	"wall_time_s": 16818374.326935198
+}

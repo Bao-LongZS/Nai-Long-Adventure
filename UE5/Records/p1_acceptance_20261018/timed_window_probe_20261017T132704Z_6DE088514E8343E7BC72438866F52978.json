@@ -1,0 +1,13 @@
+{
+	"schema": "NaiwaP1TimedWindowProbeV1",
+	"status": "measured",
+	"map": "L_NaiwaP1_TimedProbe",
+	"configured_stable_landing_seconds": 0.18000000715255737,
+	"configured_active_seconds": 3.7999999523162842,
+	"configured_disabled_seconds": 1.6000000238418579,
+	"measured_landing_to_countdown_seconds": 0.16617020219564438,
+	"measured_countdown_seconds": 3.8016933985054493,
+	"measured_landing_to_disabled_seconds": 3.9678636007010937,
+	"configured_sum_seconds": 3.9800000190734863,
+	"window_equals_stable_plus_active": true
+}

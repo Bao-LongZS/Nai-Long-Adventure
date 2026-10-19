@@ -1,0 +1,55 @@
+{
+  "schema": "NaiwaP1LevelV1",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "status": "saved_candidate_pending_playable_camera_and_walk_run_review",
+  "target_map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Slice",
+  "camera": {
+    "created": false,
+    "component": "/Game/Naiwa/P1/BP_NaiwaP1Character.Default__BP_NaiwaP1Character_C:SideCamera",
+    "distance_cm": 1000.0,
+    "height_offset_cm": 100.0,
+    "fov_degrees": 65.0,
+    "status": "existing_value_preserved"
+  },
+  "assets": {
+    "character": "/Game/Naiwa/P1/BP_NaiwaP1Character.BP_NaiwaP1Character",
+    "game_mode": "/Game/Naiwa/P1/BP_NaiwaP1GameMode.BP_NaiwaP1GameMode",
+    "player_controller": "/Script/NaiwaRuntime.NaiwaP1PlayerController",
+    "materials": {
+      "ground": "/Game/Naiwa/P1/Materials/M_P1_ground.M_P1_ground",
+      "platform": "/Game/Naiwa/P1/Materials/M_P1_platform.M_P1_platform",
+      "pickup": "/Game/Naiwa/P1/Materials/M_P1_pickup.M_P1_pickup",
+      "checkpoint": "/Game/Naiwa/P1/Materials/M_P1_checkpoint.M_P1_checkpoint",
+      "goal": "/Game/Naiwa/P1/Materials/M_P1_goal.M_P1_goal",
+      "hazard": "/Game/Naiwa/P1/Materials/M_P1_hazard.M_P1_hazard",
+      "hazard_cue": "/Game/Naiwa/P1/Materials/M_P1_hazard_cue.M_P1_hazard_cue"
+    }
+  },
+  "layout": {
+    "map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Slice",
+    "status": "slice_hazard_cue_added",
+    "owned_actors": [
+      "P1_Block_floor",
+      "P1_Block_stair_1",
+      "P1_Block_stair_2",
+      "P1_Block_stair_3",
+      "P1_Block_bypass",
+      "P1_Trigger_pickup_main",
+      "P1_Trigger_checkpoint_1",
+      "P1_Trigger_hazard_1",
+      "P1_Trigger_goal",
+      "P1_Trigger_killz",
+      "P1_Start",
+      "P1_KeyLight",
+      "P1_SkyLight",
+      "P1_Sky"
+    ],
+    "hazard_cue": "P1_Cue_hazard_1"
+  },
+  "p0_protected_sha256": {
+    "Content\\Naiwa\\Maps\\L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content\\Naiwa\\Blueprints\\BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content\\Naiwa\\Blueprints\\BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content\\Naiwa\\Input\\IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529"
+  }
+}

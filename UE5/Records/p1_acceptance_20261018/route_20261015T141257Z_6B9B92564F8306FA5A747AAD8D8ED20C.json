@@ -1,0 +1,22 @@
+{
+	"schema": "NaiwaP1FullRouteV1",
+	"status": "FAIL",
+	"detail": "Full route touched a hazard at x=778.2 jump=3",
+	"map": "L_NaiwaP1_Full",
+	"gait_speed": "Walk150",
+	"max_walk_speed_cm_s": 150,
+	"final_x": 778.19401649041663,
+	"death_events": 1,
+	"wall_time_s": 6.0884872004389763,
+	"events": [
+		"jump_0_x120.7",
+		"jump_1_x400.7",
+		"jump_2_x563.2"
+	],
+	"screenshots": [
+		{
+			"path": "../../../../../../Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaP1/Visuals/full_walk_start_3A73143B4AA1AD68DBD21CBCF1904ABB.png",
+			"exists_at_report": true
+		}
+	]
+}

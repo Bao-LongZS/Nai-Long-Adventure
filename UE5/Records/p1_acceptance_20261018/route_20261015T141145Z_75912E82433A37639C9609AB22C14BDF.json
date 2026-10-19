@@ -1,0 +1,41 @@
+{
+	"schema": "NaiwaP1FullRouteV1",
+	"status": "PASS",
+	"detail": "Physical full-level main route completed after checkpoint respawn",
+	"map": "L_NaiwaP1_Full",
+	"gait_speed": "Run300",
+	"max_walk_speed_cm_s": 300,
+	"final_x": 3949.5981326130609,
+	"death_events": 1,
+	"wall_time_s": 15.776616498827934,
+	"events": [
+		"jump_0_x113.4",
+		"jump_1_x370.1",
+		"spawn_to_checkpoint_by_movement",
+		"checkpoint_respawn_before_required_pickup",
+		"jump_0_x1202.5",
+		"jump_1_x1992.5",
+		"jump_2_x2442.6",
+		"jump_3_x2790.1",
+		"jump_4_x3600.1",
+		"checkpoint_to_pickup_to_goal_by_movement"
+	],
+	"screenshots": [
+		{
+			"path": "../../../../../../Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaP1/Visuals/full_run_start_017CFE3245E691DEA8A093AAB656D84F.png",
+			"exists_at_report": true
+		},
+		{
+			"path": "../../../../../../Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaP1/Visuals/full_run_checkpoint_11F3D63845E13B1D6CA17CB1E8256AC1.png",
+			"exists_at_report": true
+		},
+		{
+			"path": "../../../../../../Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaP1/Visuals/full_run_pickup_region_5BB5201A444E61F51B5B258E6B982312.png",
+			"exists_at_report": true
+		},
+		{
+			"path": "../../../../../../Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Saved/NaiwaP1/Visuals/full_run_approach_goal_AE6FCEF24E35C56FDFD2ABA8A046CE24.png",
+			"exists_at_report": true
+		}
+	]
+}

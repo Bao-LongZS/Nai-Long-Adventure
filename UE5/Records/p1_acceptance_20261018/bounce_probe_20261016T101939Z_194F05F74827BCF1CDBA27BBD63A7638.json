@@ -1,0 +1,37 @@
+{
+	"schema": "NaiwaP1BounceProbeV1",
+	"status": "PASS",
+	"detail": "Real movement reached a safe landing; contact, R reset, and death reset passed",
+	"map": "L_NaiwaP1_Bounce",
+	"gait_speed": "Walk150",
+	"state": "Playing",
+	"wall_time_s": 25.810112200677395,
+	"activation_count": 3,
+	"death_events": 1,
+	"launch_velocity_z": 1000,
+	"max_character_z": 420.04208374023438,
+	"first_launch":
+	{
+		"x": -113.06168744370655,
+		"y": 0,
+		"z": 101.00021290779114
+	},
+	"first_safe_landing":
+	{
+		"x": 186.88458297561399,
+		"y": 0,
+		"z": 332.09175999205297
+	},
+	"r_reset_passed": true,
+	"death_reset_passed": true,
+	"events": [
+		"gait_walk150_selected",
+		"first_contact_activated_once",
+		"safe_platform_landing_x186.9_z332.1",
+		"left_and_recontacted_pad_once",
+		"r_reset_cleared_pad_state_and_restored_start",
+		"post_reset_contact_activated_once",
+		"landing_hazard_caused_one_death",
+		"death_reset_cleared_pad_state_and_restored_start"
+	]
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "NaiwaP1ChainProbeBuildV1",
+  "status": "saved_pending_physical_run",
+  "design": {
+    "gaps_cm": [
+      240.0,
+      240.0,
+      240.0
+    ],
+    "island_cm": 400.0,
+    "spike_at": [
+      4600.0,
+      4690.0
+    ],
+    "total_length_cm": 6320.0
+  },
+  "hazard_reveal_property": "reveal_on_spawn",
+  "map_saved": true,
+  "map_sha256": "3c263e731799dfa84576b30c0fd1f8d79cc9558de60db73e6ec2626c982dd7fa"
+}

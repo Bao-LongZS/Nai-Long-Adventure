@@ -1,0 +1,835 @@
+{
+  "schema": "NaiwaP1FeedbackSourceV1",
+  "prepared_utc": "2026-10-18T07:15:03.089269+00:00",
+  "source_audio_directory": "UE5/SourceAssets/P1_Feedback/Audio",
+  "audio": [
+    {
+      "name": "Background_Music_1.wav",
+      "source_copy_sha256_before_header_repair": "1e418509ed97f1ab688f122e83184a2c85f5008d58ba88185777ee706cf337a7",
+      "normalized_copy_sha256": "1e418509ed97f1ab688f122e83184a2c85f5008d58ba88185777ee706cf337a7",
+      "pcm_payload_sha256": "2454975f92ddd42faf03cb06b9e3be6a057ac12b501bb0284be35772f7a477c3",
+      "pcm_payload_bytes": 11248128,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "bits_per_sample": 16,
+      "duration_seconds": 63.765,
+      "header_repair": "RIFF_size_and_data_chunk_size_only"
+    },
+    {
+      "name": "Background_Music_2.wav",
+      "source_copy_sha256_before_header_repair": "3d0540b829bdec22bc9facc9d443b4bfd12602d755ec4c31bc173f3795e98b25",
+      "normalized_copy_sha256": "3d0540b829bdec22bc9facc9d443b4bfd12602d755ec4c31bc173f3795e98b25",
+      "pcm_payload_sha256": "365abc394cbe08340080ca94c04958effb4ed998e1f727d029bf52eb94bfa620",
+      "pcm_payload_bytes": 5423616,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "bits_per_sample": 16,
+      "duration_seconds": 30.746,
+      "header_repair": "RIFF_size_and_data_chunk_size_only"
+    },
+    {
+      "name": "Collection.wav",
+      "source_copy_sha256_before_header_repair": "c69a91833b16c49f5b4cffe53ca330beee74068c01e48a35cf8e01dda9c6e9f1",
+      "normalized_copy_sha256": "c69a91833b16c49f5b4cffe53ca330beee74068c01e48a35cf8e01dda9c6e9f1",
+      "pcm_payload_sha256": "94df9cb5f6eadd67842304c283d0e2d2214bf3029e471fa29a73be92c0fd8f68",
+      "pcm_payload_bytes": 193536,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "bits_per_sample": 16,
+      "duration_seconds": 1.097,
+      "header_repair": "RIFF_size_and_data_chunk_size_only"
+    },
+    {
+      "name": "Collection_1.wav",
+      "source_copy_sha256_before_header_repair": "8afe0c0c5eadbbc1ead28b7832fb268a519c4d2e1cae67b57bec3948f1519e7e",
+      "normalized_copy_sha256": "8afe0c0c5eadbbc1ead28b7832fb268a519c4d2e1cae67b57bec3948f1519e7e",
+      "pcm_payload_sha256": "e73d885bad9e62c2ee7386115976a4e1d6ae7bf65c5beabbeaf14b2116c88f36",
+      "pcm_payload_bytes": 1315584,
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "bits_per_sample": 16,
+      "duration_seconds": 14.916,
+      "header_repair": "RIFF_size_and_data_chunk_size_only"
+    },
+    {
+      "name": "Collection_2.wav",
+      "source_copy_sha256_before_header_repair": "3439aa11c3470834067f3249bdfdc816749a29cb026f8585ea9e65dd02eb00a9",
+      "normalized_copy_sha256": "3439aa11c3470834067f3249bdfdc816749a29cb026f8585ea9e65dd02eb00a9",
+      "pcm_payload_sha256": "2f3565a1bb7a7afaea2bc0bc155624a274e026cc44f7805505d0bee9905dd238",
+      "pcm_payload_bytes": 5868288,
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "bits_per_sample": 16,
+      "duration_seconds": 66.534,
+      "header_repair": "RIFF_size_and_data_chunk_size_only"
+    },
+    {
+      "name": "Die.wav",
+      "source_copy_sha256_before_header_repair": "02b83da0a2a1bb1183e47d0c706fe1b9f9c3bea69162c7b446a2a36c17911e0f",
+      "normalized_copy_sha256": "02b83da0a2a1bb1183e47d0c706fe1b9f9c3bea69162c7b446a2a36c17911e0f",
+      "pcm_payload_sha256": "36cd483e05552dd917cb1864168af088a4c8e55f817dfe8b84e4e2cc6d705783",
+      "pcm_payload_bytes": 129024,
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "bits_per_sample": 16,
+      "duration_seconds": 1.463,
+      "header_repair": "RIFF_size_and_data_chunk_size_only"
+    },
+    {
+      "name": "Die_1.wav",
+      "source_copy_sha256_before_header_repair": "7c253f01a97b3a07c6b80bb0448698864d2bd14f68a2325c6d99f546bf002ba2",
+      "normalized_copy_sha256": "7c253f01a97b3a07c6b80bb0448698864d2bd14f68a2325c6d99f546bf002ba2",
+      "pcm_payload_sha256": "21423d3d3dea7f124e7546efdc66117aedd8a13df873e1061c561a1954bbd545",
+      "pcm_payload_bytes": 700416,
+      "sample_rate_hz": 44100,
+      "channels": 2,
+      "bits_per_sample": 16,
+      "duration_seconds": 3.971,
+      "header_repair": "RIFF_size_and_data_chunk_size_only"
+    },
+    {
+      "name": "Die_3.wav",
+      "source_copy_sha256_before_header_repair": "b09a6fd56a597119b6aa41a6b43137344af1464c7f340b3f85581be8c06421ea",
+      "normalized_copy_sha256": "b09a6fd56a597119b6aa41a6b43137344af1464c7f340b3f85581be8c06421ea",
+      "pcm_payload_sha256": "fa8ba66aaa12563ddf27815aeee45610a1da239fcd2e44d1cee140dfd0f28cdc",
+      "pcm_payload_bytes": 2280960,
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "bits_per_sample": 16,
+      "duration_seconds": 25.861,
+      "header_repair": "RIFF_size_and_data_chunk_size_only"
+    },
+    {
+      "name": "Jump.wav",
+      "source_copy_sha256_before_header_repair": "366a23f34bae4f9ea7fd48558d4de4d770f49b6e872d86264dac5e98eeb4c63c",
+      "normalized_copy_sha256": "366a23f34bae4f9ea7fd48558d4de4d770f49b6e872d86264dac5e98eeb4c63c",
+      "pcm_payload_sha256": "8152ba5d507424525c3ab4af2ccab3594990f88c8c2a3cb9d7887e1e3bd7f440",
+      "pcm_payload_bytes": 48384,
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "bits_per_sample": 16,
+      "duration_seconds": 0.549,
+      "header_repair": "RIFF_size_and_data_chunk_size_only"
+    },
+    {
+      "name": "哎哟我去.wav",
+      "source_copy_sha256_before_header_repair": "2d7216a72811ded1339aa81f1056c45d85c576f91cb50c2047ac788b6d8455fe",
+      "normalized_copy_sha256": "2d7216a72811ded1339aa81f1056c45d85c576f91cb50c2047ac788b6d8455fe",
+      "pcm_payload_sha256": "5d20850a41da1444dacf18cd986e26b7c6b34670baeb6586f306d874b7fb7d43",
+      "pcm_payload_bytes": 101376,
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "bits_per_sample": 16,
+      "duration_seconds": 1.149,
+      "header_repair": "RIFF_size_and_data_chunk_size_only"
+    },
+    {
+      "name": "哟嚯嚯嚯.wav",
+      "source_copy_sha256_before_header_repair": "87c657ee399f8f1dd4b485a3fa60b8c8de14090312d5afd0dd3f4cb9ac09f38b",
+      "normalized_copy_sha256": "87c657ee399f8f1dd4b485a3fa60b8c8de14090312d5afd0dd3f4cb9ac09f38b",
+      "pcm_payload_sha256": "1db644472e128306b2b7b2dca4ee509d6d0023d24d18e6b25c777e8ca6be4f4c",
+      "pcm_payload_bytes": 161280,
+      "sample_rate_hz": 44100,
+      "channels": 1,
+      "bits_per_sample": 16,
+      "duration_seconds": 1.829,
+      "header_repair": "RIFF_size_and_data_chunk_size_only"
+    }
+  ],
+  "collection_images": [
+    {
+      "name": "collection1.png",
+      "sha256": "65f64dd271fce64ad5098d3c41ad924f169fd4bd7ed7207426c256d438b27d1f"
+    },
+    {
+      "name": "collection2.png",
+      "sha256": "8b5a5bab76fd15721238ee2a9e4e1d1fe3b2a27a1fc8bb9ff6fc82afcef8ee18"
+    }
+  ],
+  "death_laugh": {
+    "source": "UE5/SourceAssets/P1_Feedback/DeathLaughVideoFramesRaw",
+    "source_url": "https://www.bilibili.com/video/BV1xsRSBQENA/",
+    "source_start_seconds": 2.0,
+    "source_fps": 24,
+    "width": 360,
+    "height": 638,
+    "frame_count": 96,
+    "duration_ms": 4000,
+    "looping": true,
+    "background_key": "connected neutral-gray background from top-left; floodfill tolerance 35",
+    "frames": [
+      {
+        "index": 0,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_00.png",
+        "duration_ms": 42,
+        "source_sha256": "4f0e5ce70a778c25ffdb53f1419541e52eeffc055a4828f5a07337ec6abc27d2",
+        "sha256": "df8e5b492a38f2bc62fd86f7a920e95085ba10221c6dc25e319b5c7c9680a5a7"
+      },
+      {
+        "index": 1,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_01.png",
+        "duration_ms": 42,
+        "source_sha256": "d9f8e26aa5ba1a4baead64d85ca71c4440925d3a0def5d9b11c06553cd43f571",
+        "sha256": "201d8a65378f3bfe187d5d9bd41484513d0080c0f3618ee0302cce4dca81a37c"
+      },
+      {
+        "index": 2,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_02.png",
+        "duration_ms": 42,
+        "source_sha256": "4f4e44520eebfb07185e716f81f742bd3b2ced0755a16c96d8fa8d475e65a213",
+        "sha256": "798e87107d1863c24a90c7e6d29a80787a14144990f172f769568e3e771960c1"
+      },
+      {
+        "index": 3,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_03.png",
+        "duration_ms": 42,
+        "source_sha256": "534f4de919efe9f32b68d0302fc975ce577b4b33ddc690d17e3692d4a110c450",
+        "sha256": "ec2732e6285c3c12be41d4bc4b78cab785ecd884552c9c4b52b680d73670eaa3"
+      },
+      {
+        "index": 4,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_04.png",
+        "duration_ms": 42,
+        "source_sha256": "63814c67bd1e6b6de91508f23ac47c738d71fcc0797db56b4435f464cf7af5f4",
+        "sha256": "b4d0ca93a2a4a9af86d2c154054d1548b9be3a5cec9ed3901547c12d76d73999"
+      },
+      {
+        "index": 5,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_05.png",
+        "duration_ms": 42,
+        "source_sha256": "9a465c3a38c57aa9b416cda5386e7054bf3674552c98f0b2a1847bd02c1ffff2",
+        "sha256": "784d672ca9b20839ea778be8ac2663439ab3b740c9192f19d23006224faf19bd"
+      },
+      {
+        "index": 6,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_06.png",
+        "duration_ms": 42,
+        "source_sha256": "adfb83f2bbb3365bd4f452894e0051e1bc4e19358939f65be0d340c475914e1b",
+        "sha256": "18040ca480e1aaf63fcfe4e267d427c6477d84c1d6984c13a2781ef28c1cac3b"
+      },
+      {
+        "index": 7,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_07.png",
+        "duration_ms": 42,
+        "source_sha256": "137e6879f34ff2c88c7f857c9e00c55dd28bffc7d8995f562c4a296b5e62e63a",
+        "sha256": "db55aa54f3a8fecd053efaeecd4c9bdc352df7b5eb741a70b3dd3a821a56cc3d"
+      },
+      {
+        "index": 8,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_08.png",
+        "duration_ms": 42,
+        "source_sha256": "503a9f3a5fb675fe04792b2f2cda7ed060029a831a46b31e37343ca85387c0d0",
+        "sha256": "ddd2e02b7d3944815747fb51d3713b618566c7de17e3bed4bd96654b7fa084cc"
+      },
+      {
+        "index": 9,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_09.png",
+        "duration_ms": 42,
+        "source_sha256": "e283216c696dcb5048722fa47a266294d141668ffcc09313536a2ecc68283d24",
+        "sha256": "59265c0675ba8e9d41d37da098b0f466185685af9e96da0c125107c4cbd060a6"
+      },
+      {
+        "index": 10,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_10.png",
+        "duration_ms": 42,
+        "source_sha256": "b8817f397f5ce17f00742d746f2bf9e2e2a59b85a5e68742e285df8c90988fe4",
+        "sha256": "d131cae1ac12fcd3c5fb1812493e7d721e3a49cc38dd0ecd0d1c8075bdebcc67"
+      },
+      {
+        "index": 11,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_11.png",
+        "duration_ms": 42,
+        "source_sha256": "bb8b86f1392b4bac1950a60689f5d81c742282c1a36d2fc165a08dbb44e12ace",
+        "sha256": "ddf3e067d9d961344ae338adb95bf042a5d8744a129d10904f64dad45ca40a5a"
+      },
+      {
+        "index": 12,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_12.png",
+        "duration_ms": 42,
+        "source_sha256": "73afad2c6bd00c8bc618b2ee20bee22327d673bc7d18af8c7bad959047ab5808",
+        "sha256": "f6f00edddacb471fce500eb9ccfb2d3d807b178140aad74f4a0077d72f00ae66"
+      },
+      {
+        "index": 13,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_13.png",
+        "duration_ms": 42,
+        "source_sha256": "7806afe558d4f9898cc4578cf4c838ec29d22819492d69e6cddd9f9f4d7a47a8",
+        "sha256": "1db0e7e3aec687f38b2f88b8f25a7b5ddd62885e809db11fd0fdd07e512f341d"
+      },
+      {
+        "index": 14,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_14.png",
+        "duration_ms": 42,
+        "source_sha256": "f77ecf6e0560260d9722735703e7589742f5b956ad7f7a70aef1ca8b821b2c56",
+        "sha256": "b6ff9a625bd54b5398467eb7f02379444d56ab0f4cb84918c077b6ba5c88ca13"
+      },
+      {
+        "index": 15,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_15.png",
+        "duration_ms": 42,
+        "source_sha256": "ef072177bfe11a63c418d8c793bcf15484a7939c86f58f8ac2bbc6625b019afe",
+        "sha256": "504eca5440a601fee22c29b45c29fb24011371b7085f3d8ee70f27f7ff265495"
+      },
+      {
+        "index": 16,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_16.png",
+        "duration_ms": 42,
+        "source_sha256": "cb35f48e999b44ba507bf6b042c55d37894b5b6dfaeb7d4ec9033e8d827c8a2c",
+        "sha256": "baed53b8656048faa705cbfd783f752fe3c0d5fbc0549c328d201989b6104f5a"
+      },
+      {
+        "index": 17,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_17.png",
+        "duration_ms": 42,
+        "source_sha256": "c53ec3c1328611656efaf0af3da20745121b4cd4bf7988a3c7ff74cfc222c15d",
+        "sha256": "71e7f847e2b438642fd4fb24be0b6fed7db58e4a872460c72eb557e65c072fd9"
+      },
+      {
+        "index": 18,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_18.png",
+        "duration_ms": 42,
+        "source_sha256": "2044b5dd153053e74a8917e2c35f7331f89b7d5df0f4ef161ed982d7e52d6942",
+        "sha256": "55968dec0522416b38bd8eeb808c2f2b117749ea612287e549e2b86599751969"
+      },
+      {
+        "index": 19,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_19.png",
+        "duration_ms": 42,
+        "source_sha256": "e6b4d17a3ae1a38b108b8cce694d9c2accfa4063821b7c3aa38a206ebacf91fa",
+        "sha256": "cdcec32a85dd8b59be03e7b1e71a9e22347d00f7cee3213d24bfedd4ac8086f7"
+      },
+      {
+        "index": 20,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_20.png",
+        "duration_ms": 42,
+        "source_sha256": "028491ffb6c5a9055dd73e4312dd563dc7e9b7bfd6aed8ddc0c334c3b89c1834",
+        "sha256": "b9f472c319b08dd6ddd9acf1bb9765e112c171d3101f94b27658587a488bf13d"
+      },
+      {
+        "index": 21,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_21.png",
+        "duration_ms": 42,
+        "source_sha256": "f0af2416084a7234b75d9c27bb9279b82f349e67e4cadca619aca12b43a24986",
+        "sha256": "cba9937af43bbe323fd4efa5c9f3e1327dc4967e545ed790a65bdc23e2cf5293"
+      },
+      {
+        "index": 22,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_22.png",
+        "duration_ms": 42,
+        "source_sha256": "00ed94f0d3ffc2f43e2e9c04e0ce248abb36d182daeea4ccb067f0f1f3664ebf",
+        "sha256": "84451867a221c9da5e3ca1a06ae56242d962fe8a82de02301ef82fe6e21a95a2"
+      },
+      {
+        "index": 23,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_23.png",
+        "duration_ms": 42,
+        "source_sha256": "b44e87063010fc26af92ea583a2f84d3114425d077f9f41b3742b4e91a2a6cd4",
+        "sha256": "d146921925c085531d8ed6e6ab79754d4f877122b9c7592860141f990950d373"
+      },
+      {
+        "index": 24,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_24.png",
+        "duration_ms": 42,
+        "source_sha256": "16f41b9516c94ac6f6c68277d202910fd81b7a94488a2577468924ba84033020",
+        "sha256": "8a14e091f95ec72c6bca8bcbab78d23ee1c399140001db9cca4117338083b95b"
+      },
+      {
+        "index": 25,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_25.png",
+        "duration_ms": 42,
+        "source_sha256": "f36193c39429a3f588cfa2e80fd7866c598f4c1f41e49b01702dc7bffa8afe6b",
+        "sha256": "75cd104d3e10efad6d7d5e4c30ca91fda4671c97506429357d854e860a572f4f"
+      },
+      {
+        "index": 26,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_26.png",
+        "duration_ms": 42,
+        "source_sha256": "36c8a42cf4f13b5a9badb35b609c587f98853ed45e920f3e00b3c1df27b4c519",
+        "sha256": "ad6b9ad5e6c33675b047c11214f083fd317c6c7f30beb33529dfa017aef0dca8"
+      },
+      {
+        "index": 27,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_27.png",
+        "duration_ms": 42,
+        "source_sha256": "99960c9b73adca1bf2d90a82b027fd42840a063c05afa9561b4394857703e446",
+        "sha256": "39f086db696d94233ac7bebd02104e101bc62ed2505bbedfee03f8ebb2efe58a"
+      },
+      {
+        "index": 28,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_28.png",
+        "duration_ms": 42,
+        "source_sha256": "7109342c0129659f023856049a804975795850d2e0fb1f5ba202816eae3944c8",
+        "sha256": "e774fe050b1ab6bbc417ac01c469c9b0a1f4a1e2d3756df6c02e14d0be7ed731"
+      },
+      {
+        "index": 29,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_29.png",
+        "duration_ms": 42,
+        "source_sha256": "aa0069996cd3f467048e9d388dc157be28093655a3c9d51987cb37129b89965b",
+        "sha256": "ea2185064f70da0e2aae46ffe8d5e5efbf678bfb10d02b42a1c4cd29f0ba2eb0"
+      },
+      {
+        "index": 30,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_30.png",
+        "duration_ms": 42,
+        "source_sha256": "f35d5df32edaada5cdb5c96eb86b9ef69a0aad6a348f8863f73375e640745581",
+        "sha256": "f50c906f055affda6c8d5dc091003e4dfca204d0b563c778cd8dcb448347e2a3"
+      },
+      {
+        "index": 31,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_31.png",
+        "duration_ms": 42,
+        "source_sha256": "a135dc83e89eaa01cb2898ead2bc526ea5143484d47d4eeda096f77bae55e591",
+        "sha256": "861b76af28c78ebb8db92f0b7e9282bb16b85bef5e3c1d9ad38bba38b3194590"
+      },
+      {
+        "index": 32,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_32.png",
+        "duration_ms": 42,
+        "source_sha256": "f3dcdd0c347b6fccd3a44c8db403a6091ed58a4476cac71521bda1eab7966676",
+        "sha256": "46cbba93e989c12d6ff1cb1bc5c9deec80fb4951bca95087560a0a3e47838494"
+      },
+      {
+        "index": 33,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_33.png",
+        "duration_ms": 42,
+        "source_sha256": "9c29d30a7782548b74f61b3141b406614ba3fe7924ab4521aea587af5d8c04f9",
+        "sha256": "439e496775741859d92ed1d4582e51d91e96f61130056025fb2413615acc8c59"
+      },
+      {
+        "index": 34,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_34.png",
+        "duration_ms": 42,
+        "source_sha256": "06a536bec511fb86d5e2727dbdf7cb414b2982aa36ee9f5de82ec78127218106",
+        "sha256": "3b96ebe2f2509ba07a1d5d4aba25c8941f4f56706aa45130b87a4662c6f62e83"
+      },
+      {
+        "index": 35,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_35.png",
+        "duration_ms": 42,
+        "source_sha256": "721a2301cfa065de56251845a7aff24487a2dbbd3d9bf4bad95872c3629b1fc5",
+        "sha256": "b73f015955ab79b329deb130ed9201eb7d4f928b34f03cd6b03d28d383fd8cd8"
+      },
+      {
+        "index": 36,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_36.png",
+        "duration_ms": 42,
+        "source_sha256": "8c266e513c00ebd3b31ccd812f19bd5a596091b1353d975ae4d68f705da6d6ad",
+        "sha256": "90e9ef4743e9fe13d0033c1bf2e7f181dfd2a49520709306bebf3ad572238cc1"
+      },
+      {
+        "index": 37,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_37.png",
+        "duration_ms": 42,
+        "source_sha256": "61292b3648c06fb2fe497298400e024630309817206acfc5d7509b3471f73f0b",
+        "sha256": "7194abbd2be602f84c8a4498b55e99c492a9cce00d1b9590a491f03e725f2da2"
+      },
+      {
+        "index": 38,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_38.png",
+        "duration_ms": 42,
+        "source_sha256": "f9926ea3c5bbbefe399980fd843bc29ae5e0395744bbf950b753def55b27a740",
+        "sha256": "524b559b558d554589e8fd2b3bdf9dd9ef30fc403639da6f02379f17d5b52842"
+      },
+      {
+        "index": 39,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_39.png",
+        "duration_ms": 42,
+        "source_sha256": "2537cab835b300c61b49dab0ca96cc860aba7caa5235d6c56f960a54ec07c649",
+        "sha256": "c30dc37c45c18f916ae78b85882e70c2eb25dc4a686d5d3b5652c7b3c7a4bc85"
+      },
+      {
+        "index": 40,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_40.png",
+        "duration_ms": 42,
+        "source_sha256": "a9ce19c8fa84f2fdf0d69314115455f13b73819693f9e455766c19cc7290d154",
+        "sha256": "4aca7407c398f8a5e9583e71c586595a197c36fd96c268fb400b02cbf48b98a7"
+      },
+      {
+        "index": 41,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_41.png",
+        "duration_ms": 42,
+        "source_sha256": "1f8cf1789f8e09ff106db63ce0ca89a19b7593ad21813e65b5fea3f28623d8b8",
+        "sha256": "351019dede48e01e00d9b45b6461ccf1858b9ddf0e862522af3aab3d46cbb7db"
+      },
+      {
+        "index": 42,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_42.png",
+        "duration_ms": 42,
+        "source_sha256": "c5f8360b81729a7a699a69416a4b696065313246169097b1b0b03afbf74d1dfc",
+        "sha256": "6acdba735a75516b7365801dd7440673dcee14e9d76faa7875ffae58444e9cee"
+      },
+      {
+        "index": 43,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_43.png",
+        "duration_ms": 42,
+        "source_sha256": "8491ebd74f0e20d68d4516b489dd101183799f5d7a750ef27fe2e7b6f516871f",
+        "sha256": "9bd5c9ef831999dd3f104b3673a4555ffa03d9396bbbb8484cffdb74d7dde109"
+      },
+      {
+        "index": 44,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_44.png",
+        "duration_ms": 42,
+        "source_sha256": "3927765d74c7a5aa9f145de3f9205ed299c65a00ed5cece323b47cea4e55cb28",
+        "sha256": "fd33779f6e394d35353d3ff1f0c22c2f89426bbed1c1a3b651aa8ad270623714"
+      },
+      {
+        "index": 45,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_45.png",
+        "duration_ms": 42,
+        "source_sha256": "434be12036e67107b296cbdbc67a6f3d20d5ffc5d45b77cc6e1e38da763c15d1",
+        "sha256": "1783a4732b3e43004f35582ec5cd4b1a84a886a1ad7ce5c78d6c262d5c6b1529"
+      },
+      {
+        "index": 46,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_46.png",
+        "duration_ms": 42,
+        "source_sha256": "b13f8bc1ec4b80c5871fdc8072241fd36925babbcafa99693d916fa2978a103f",
+        "sha256": "5b96a036f9904324d4d673a9aef3c8848965a0a69b3aa782c35731a967088ac1"
+      },
+      {
+        "index": 47,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_47.png",
+        "duration_ms": 42,
+        "source_sha256": "8c0f7d404a8798769c06352eb95c0187d0cad887315b781f163a199330b1081b",
+        "sha256": "c153506a413f7472dfb89d36b2da8ee4f09defe00d87b7ccb346fe1ba64854e9"
+      },
+      {
+        "index": 48,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_48.png",
+        "duration_ms": 42,
+        "source_sha256": "8b3fd6a17f9278757d4147ffcec1f53845da9b82a242c5233e18c130cfed7c29",
+        "sha256": "db548a396dae4a366c13da70c78b2e4832830465245b3161d36834e2608fcd9a"
+      },
+      {
+        "index": 49,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_49.png",
+        "duration_ms": 42,
+        "source_sha256": "a1ada87345cac977e59dccf5c7d2f4922c27087ece991226931c1a0726ab233d",
+        "sha256": "784d53cba80fa8179da4f4a37674ea615baf508bd5543daacaab47b9bedf65f2"
+      },
+      {
+        "index": 50,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_50.png",
+        "duration_ms": 42,
+        "source_sha256": "04e1a63a9d7bdb5686f10c97fc6eb32c7157b9c8ef6c9a48180fbf5147de18ce",
+        "sha256": "da7f6e51d9cd23a343e3a4dde66d3c9d2ab67c56a94e2c05b11e3aee11799dad"
+      },
+      {
+        "index": 51,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_51.png",
+        "duration_ms": 42,
+        "source_sha256": "231e956f0d72a36d8a09c33d1ef98a23983bebad6d9ef6033a98616fca2cea77",
+        "sha256": "861bdff1afa511c40c3f86e88c5fc3563b2b54c0abbd08d58b452e29603b4d65"
+      },
+      {
+        "index": 52,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_52.png",
+        "duration_ms": 42,
+        "source_sha256": "31eae056e792b0f27ddc18493d1487da9833ea5b80d864b75351293649ea20d8",
+        "sha256": "45936486772dbfff1a56ff1a3136f405050de05744bdf19a9e3d2aea3b69e98c"
+      },
+      {
+        "index": 53,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_53.png",
+        "duration_ms": 42,
+        "source_sha256": "5d1379546238aa150953223e7e5f3b7a5990d584a2f3a18691b9c07dfb8401d5",
+        "sha256": "9222a1ca72f7d5e1332e3b5566efc7141fe74abd8de0523eb895aa15b2c56480"
+      },
+      {
+        "index": 54,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_54.png",
+        "duration_ms": 42,
+        "source_sha256": "fff42c6897ec6a7a00dfc6a5998db5e121209e7740a2155ec656d33f75df94aa",
+        "sha256": "8ca1ac1b5076fab06468dd50022ac7af3f954c5a4b672f80379b0a25b009f834"
+      },
+      {
+        "index": 55,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_55.png",
+        "duration_ms": 42,
+        "source_sha256": "4e57cf3e783f5e0502ef1e826df5c51f55563fc2d9ac732d0f7b0a59898283f8",
+        "sha256": "e067b636906e385ad27118fdd9140225352f88ee1da9edf28ae6296eb8fe5133"
+      },
+      {
+        "index": 56,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_56.png",
+        "duration_ms": 42,
+        "source_sha256": "9317c98008d2b41376adaffa33a883b3de5fa2c93f8ac61c04dcc67a05721f6a",
+        "sha256": "c14ee0aaa5e4f1dfa4499996b941623dd52152edc7c93ca453000fb14409e3ce"
+      },
+      {
+        "index": 57,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_57.png",
+        "duration_ms": 42,
+        "source_sha256": "bfea9eadc2a4ab7b0678aa554dcdf80bd8e9bceb44ebcc487265ed2edc3f461a",
+        "sha256": "1289fbf17eeca90a591c3bf869f98b8d377b946ddaf8684cecf0a33b1e78946b"
+      },
+      {
+        "index": 58,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_58.png",
+        "duration_ms": 42,
+        "source_sha256": "eba6031823fc8c2ec236a14d69cad51b37a6247700f231e3d495e389f42c0d1c",
+        "sha256": "62845f03cc31eba54f06c2278eccdb1eef10a9293cc256d19451121e1d96cc6b"
+      },
+      {
+        "index": 59,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_59.png",
+        "duration_ms": 42,
+        "source_sha256": "55a0145e144d6592404c0d735718c9f5ddb6bb94ec77043beb48745d413e905d",
+        "sha256": "f464dcc28daf3287351bac4a613fac7e84147283f3114fd0ee8b2885a6507d80"
+      },
+      {
+        "index": 60,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_60.png",
+        "duration_ms": 42,
+        "source_sha256": "deae506ec5ce8d153630829289483fe109f2fda4e89679678ea4c7e70b46fc9d",
+        "sha256": "3786c336d1e69f44984c61507d1c8bc6c8bde30ce315b3af0f3b5697b97f110c"
+      },
+      {
+        "index": 61,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_61.png",
+        "duration_ms": 42,
+        "source_sha256": "cbde07f4342d090a28ee96bf6e53f93108f365081d96f961caa3fab497134264",
+        "sha256": "e255426bba2daafa6b3f9455164f96daf5254b98c110bbc5546298d6d94778c8"
+      },
+      {
+        "index": 62,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_62.png",
+        "duration_ms": 42,
+        "source_sha256": "247da0d77f88131503df22b4508004816429dbf5817603e2c69013dfa9558bfc",
+        "sha256": "2306b88ce2b826b6c2efb9478bbd8a68858f729797a994536c4bca18e98c44c0"
+      },
+      {
+        "index": 63,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_63.png",
+        "duration_ms": 42,
+        "source_sha256": "6abe2172fc3e8524ca67de7f51be4e7133c42003324cd68367cc332c7cd8163c",
+        "sha256": "a3885f3eba3b7628bca9ae44fb30bdb4a726662349c0cc53a2db4c90dc14908b"
+      },
+      {
+        "index": 64,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_64.png",
+        "duration_ms": 42,
+        "source_sha256": "23197f6f56d0e50864ba0f38515b59c9d20c2de8d61d05ba3d80e4846627fd38",
+        "sha256": "feac8a766e7998a13644dac0315d269addfa1fe7dc061bc444de08a708f34d7a"
+      },
+      {
+        "index": 65,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_65.png",
+        "duration_ms": 42,
+        "source_sha256": "0c032bff43be0a1408cc73f9a687ba7adf28c40716114ceec862809f24a21d73",
+        "sha256": "56c43eaba9f71939ae3dd255e0df6ea157e2069932a27f5dedcafc92db23e4d1"
+      },
+      {
+        "index": 66,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_66.png",
+        "duration_ms": 42,
+        "source_sha256": "bd0d0fa8eef06aa608690eaaf75eae0456b1ecf4247b932b0ff52183210b4269",
+        "sha256": "c4ea2573dd2e0ebd1a4fb89eaac4e31ad72065dbcce7750a75d7c440f43f4870"
+      },
+      {
+        "index": 67,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_67.png",
+        "duration_ms": 42,
+        "source_sha256": "64e3334506c82a589543704b5dbc73429e29dc5f248694bc4e763089a4956359",
+        "sha256": "8760d24dd3859b29f8de2e67e4c025f4952b74d58304dd1cbc89893584b7cc55"
+      },
+      {
+        "index": 68,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_68.png",
+        "duration_ms": 42,
+        "source_sha256": "6920cc50df32c8ff395984770d5ba8a452079041b3036523b1bff0ee5687d2f0",
+        "sha256": "f645eb055c2d4c5d831ff94b18a5b45d4317559c4e8b65adb8c4080a83a2883c"
+      },
+      {
+        "index": 69,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_69.png",
+        "duration_ms": 42,
+        "source_sha256": "8c01038f344e41ee077b7d1034e783ce0a48e3789f5acd038c86a8904cc25dbb",
+        "sha256": "2e9057735b1c7a6f7c3aed6f1db80dace07614e39d7fc33875d2bc2296bba656"
+      },
+      {
+        "index": 70,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_70.png",
+        "duration_ms": 42,
+        "source_sha256": "0501a3ccf04057ebddf74646583943dcd3dbe3443e58edf32271eff07423aa88",
+        "sha256": "fc8633d65c0ddff9097528d9ba5a1f8f568aeab4c3ef3c636da8236a60dae81f"
+      },
+      {
+        "index": 71,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_71.png",
+        "duration_ms": 42,
+        "source_sha256": "3a90bb7d5c3cf5c0c721c51165a111917fd987be29e560073f09707ccdfbb7a7",
+        "sha256": "02bf9cdbcd3fcaaf79eea68161e4b176667e694ff505901f4371e5dd04ccef55"
+      },
+      {
+        "index": 72,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_72.png",
+        "duration_ms": 42,
+        "source_sha256": "49de5a71353a5bed46d94e0fa86574cf05e105206955ae5cf61a6822fecaf751",
+        "sha256": "c9bc2d76b5f32918eebf76e3fd3e3514af5aeae8cef27f11079b068768cdb68b"
+      },
+      {
+        "index": 73,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_73.png",
+        "duration_ms": 42,
+        "source_sha256": "ede05ec84bac2b68d392fe88094a1601a6f925a8e69bdef52f592f51acd5adc5",
+        "sha256": "d8ae4ddbaa7414d82b80ea265e3c3aad535b5fac59a2aed757019b8be6e52023"
+      },
+      {
+        "index": 74,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_74.png",
+        "duration_ms": 42,
+        "source_sha256": "48065007cbc94f6361d435e48d312cffd1704ef81b1ed341f7e094fc8bcf1570",
+        "sha256": "8ceed6261581de8f32d05b087aec7b235b3375518bdd4cc2328feb4a2f048022"
+      },
+      {
+        "index": 75,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_75.png",
+        "duration_ms": 42,
+        "source_sha256": "4165d12687f6938ad9b53d19eeb09c6d40d4b12d32340a0bd137287806c8ec7a",
+        "sha256": "e8efc49242991582a44aad2b5ca9f135324f077c0fdaf3c54b1f9c1167ee89be"
+      },
+      {
+        "index": 76,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_76.png",
+        "duration_ms": 42,
+        "source_sha256": "a9c8e80dd92f22c3091865e8ddf85df5bb6f63c7bb2c660096ec3fe505e7081a",
+        "sha256": "d51d4157d41fa874abe792d0ae73f01484a3704a24f8fc67b52af2fd2775c187"
+      },
+      {
+        "index": 77,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_77.png",
+        "duration_ms": 42,
+        "source_sha256": "972bd43eb6c3ce190d57543e14c937b7d423b6be548949908c654b593c07e905",
+        "sha256": "111354552264a197161a572cee335e01f9a4950ea84f79bcd5483a54054ad6d6"
+      },
+      {
+        "index": 78,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_78.png",
+        "duration_ms": 42,
+        "source_sha256": "9ab802f62fe7e6e6a549832a8a556adcc36346f0bda495d3e038b4c659589bc7",
+        "sha256": "fcb773118b4e564c38033d3032ee9823e8d7b3f5332a65a4e7cb8db308db43d2"
+      },
+      {
+        "index": 79,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_79.png",
+        "duration_ms": 42,
+        "source_sha256": "7de838803107c1bc1f23a2bf2fa2c1cbfc6179ab9342875744820a0ac3fa8a98",
+        "sha256": "cc0b900f7b0718eaad7db30d12e3f7fb01083df8817d51b1453c0773c2f47e5b"
+      },
+      {
+        "index": 80,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_80.png",
+        "duration_ms": 42,
+        "source_sha256": "71450b203e5c1af7a6c74c10591e61ecdd73b4b8d083cac7fa89fe0edcf45e94",
+        "sha256": "4a8a07da380951ef0622260c41dd24080b4f9b972a64a883f6f14a0bfb80305d"
+      },
+      {
+        "index": 81,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_81.png",
+        "duration_ms": 42,
+        "source_sha256": "cc2a590fbb63d08ed3653e686cbcd00735c470343e028b4c57c4547a070a5aa3",
+        "sha256": "082cf474092cf70fd57c34830f0d57ef0558c25a8efe8cfef402243fb8f86001"
+      },
+      {
+        "index": 82,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_82.png",
+        "duration_ms": 42,
+        "source_sha256": "cd9b3781cf17ce9f1bad14b6754304c1848d38b8546472b2530250ca04da3dd2",
+        "sha256": "afdcdabb9fd40e1c8e8696e3aa548adc45913778ff3977bf30cb65c17fe8934a"
+      },
+      {
+        "index": 83,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_83.png",
+        "duration_ms": 42,
+        "source_sha256": "d01c0ac92b03131737e627c7c11d16d12b4f8b593244acde74e94abc5d0f204d",
+        "sha256": "c6b9bffc71bc5bd7552af7aceea748d17a925c36b5c5a5e1851dd0d76f5e13c2"
+      },
+      {
+        "index": 84,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_84.png",
+        "duration_ms": 42,
+        "source_sha256": "08136757f1cef1705d2061d146960a94323cd4ba2a9d46f51d3b85a7634e79f4",
+        "sha256": "bf1b67da5f82c3e737d98437a8084cbb22cd811b55d5569eacbdc5aad614b41f"
+      },
+      {
+        "index": 85,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_85.png",
+        "duration_ms": 42,
+        "source_sha256": "be540c7c14d9920242170ba5b2e5e5efb7fc9f0141049a2d294979c960c86eee",
+        "sha256": "3142ac945bee3d399421cadcc3397fa29041b449fd86e677360c2ec50cb9671c"
+      },
+      {
+        "index": 86,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_86.png",
+        "duration_ms": 42,
+        "source_sha256": "8a92a8405042491d6c0cb3d307188a0ef0fd2ae80f4a3d5131dcaba0b165091b",
+        "sha256": "d341829beda2fefa8a0a4f2819c3593514d38421bede63a7cb65694d26d69500"
+      },
+      {
+        "index": 87,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_87.png",
+        "duration_ms": 42,
+        "source_sha256": "5bfae421e7a8a0ed03626ec69d67be05b5519b18d500a2d1a0c814026a9dc6ac",
+        "sha256": "493c51927869092d3e40b2d729803ad42b3c6ac8aea0c8a67d9afe23cffab5bd"
+      },
+      {
+        "index": 88,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_88.png",
+        "duration_ms": 42,
+        "source_sha256": "868eed37faf389f185e1fdc14ffba787833abbc2d93c96a4e4b29e9f9d7f9bd3",
+        "sha256": "d5762789a69779362db13d0fd3e23f8c2569a316f21cb26c85812e8d8f0033a7"
+      },
+      {
+        "index": 89,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_89.png",
+        "duration_ms": 42,
+        "source_sha256": "1da56ea384b9599b04490459e6bafe2e4d09ad1832785a375ba7bac9e2526271",
+        "sha256": "42309146633ade7d46d6b7f0f10c8d022d744d1fac3881798e11a5a70381d633"
+      },
+      {
+        "index": 90,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_90.png",
+        "duration_ms": 42,
+        "source_sha256": "936e6320fc6bcf2bec80d426e52593559617b2d134bf752e669bd376265769af",
+        "sha256": "02c9ed414a63dc151745a3a86240d14dac159ee76c938ec6eb35262ff525306e"
+      },
+      {
+        "index": 91,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_91.png",
+        "duration_ms": 42,
+        "source_sha256": "0ec1458283e4a8de3782802e9f28a9754867f345ab9a8451db4bf439672c03e4",
+        "sha256": "4a9cd340fc90f089141f050b84b8e866d3e52069a5929578b4c482074c2df63e"
+      },
+      {
+        "index": 92,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_92.png",
+        "duration_ms": 42,
+        "source_sha256": "33211c68183911e084e7079e4faf4db9aafc43129d533dc26ced58846dc72b6f",
+        "sha256": "7aa42225fc1e2d26dbbec7a1d1594a82329e6419a852063b65eb92de683750ed"
+      },
+      {
+        "index": 93,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_93.png",
+        "duration_ms": 42,
+        "source_sha256": "61d198ca3e1268db886827486f957dcb58be4e61cc95c8fe0c748c920f0e89b5",
+        "sha256": "6eb536f18b4bfee3e49b6da923259eac78f391a90f3ae76a6695d1ab6bcadace"
+      },
+      {
+        "index": 94,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_94.png",
+        "duration_ms": 42,
+        "source_sha256": "9cd6ba1a9f14ef566922c456aa96fe6372f53c716f96cfc25dd7b600b553d339",
+        "sha256": "53b246b79c23faba531d6feb53af8d97007b09ee63806283655d60bc5ec1fa41"
+      },
+      {
+        "index": 95,
+        "path": "UE5/SourceAssets/P1_Feedback/DeathLaughFrames/T_P1_DeathLaugh_95.png",
+        "duration_ms": 42,
+        "source_sha256": "b1799d2fe1141bbab6916addde02091864a50339f3cd4d37a723bacf87ac53e0",
+        "sha256": "f28bdb89acb19fe8df0fa3034e0f50fd0dc05d71d87689a0588ded3b993a3b59"
+      }
+    ]
+  }
+}

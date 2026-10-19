@@ -1,0 +1,12 @@
+{
+	"schema": "NaiwaP1HazardRevealProbeV1",
+	"status": "measured",
+	"map": "L_NaiwaP1_ChainProbe",
+	"reveal_on_spawn": true,
+	"visible_at_spawn": true,
+	"killed_on_contact": true,
+	"visible_after_respawn": true,
+	"death_x_cm": 4597.50732421875,
+	"approach_seconds": 2.4362788200378418,
+	"scare_spike_usable": true
+}

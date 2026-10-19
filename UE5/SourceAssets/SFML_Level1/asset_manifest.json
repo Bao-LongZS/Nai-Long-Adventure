@@ -1,0 +1,300 @@
+{
+  "created_utc": "2026-10-15T03:49:01Z",
+  "source_code": "Application.cpp",
+  "rationale": "All 29 PNG/WAV paths are loaded by the first-level Application constructor. Active assets are rendered or played by the current code; loaded-only assets are still required to instantiate the old app without missing files.",
+  "active_count": 24,
+  "loaded_only_count": 5,
+  "count": 29,
+  "assets": [
+    {
+      "name": "Background_Music_1.wav",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Background_Music_1.wav",
+      "source_debug": "out/build/x64-Debug/Background_Music_1.wav",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/wav/Background_Music_1.wav",
+      "bytes": 11248252,
+      "sha256": "0559c7462ec81951f04dac2d5a21fde06adee71877f0483d4b7b9f91ee68d1d1",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Background_Music_2.wav",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Background_Music_2.wav",
+      "source_debug": "out/build/x64-Debug/Background_Music_2.wav",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/wav/Background_Music_2.wav",
+      "bytes": 5423694,
+      "sha256": "5f1e25e07d04b446de61baf65b52736836fbbcad6df5f0294b0adf65bddad41a",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Background_Music_3.wav",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Background_Music_3.wav",
+      "source_debug": "out/build/x64-Debug/Background_Music_3.wav",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/wav/Background_Music_3.wav",
+      "bytes": 2937536,
+      "sha256": "3ea1335401fd995f355b3ef4d7bc792e1d4f3a449dc8a1bd52fd2d2a0662746d",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Background_Music_4.wav",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Background_Music_4.wav",
+      "source_debug": "out/build/x64-Debug/Background_Music_4.wav",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/wav/Background_Music_4.wav",
+      "bytes": 1311020,
+      "sha256": "aae3dd607f05bbf23a706d74d2acc0582cf45cb7f355446efc489402604402a8",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Big_Laugh.png",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Big_Laugh.png",
+      "source_debug": "out/build/x64-Debug/Big_Laugh.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/Big_Laugh.png",
+      "bytes": 26477,
+      "sha256": "f665b8e5186f8487c865ecdb43a6454de6d496bcb809ab108f78836884789a37",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Cloud_Mass.png",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Cloud_Mass.png",
+      "source_debug": "out/build/x64-Debug/Cloud_Mass.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/Cloud_Mass.png",
+      "bytes": 2006,
+      "sha256": "f409e105aa5554f792da70066829253ab83b06f8c2abf38b5ebeb333e3562dd2",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Collection_1.wav",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Collection_1.wav",
+      "source_debug": "out/build/x64-Debug/Collection_1.wav",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/wav/Collection_1.wav",
+      "bytes": 1315628,
+      "sha256": "8afe0c0c5eadbbc1ead28b7832fb268a519c4d2e1cae67b57bec3948f1519e7e",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Collection_2.wav",
+      "role": "loaded_by_constructor_only",
+      "source_release": "out/build/x64-Release/Collection_2.wav",
+      "source_debug": "out/build/x64-Debug/Collection_2.wav",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/wav/Collection_2.wav",
+      "bytes": 5868332,
+      "sha256": "3439aa11c3470834067f3249bdfdc816749a29cb026f8585ea9e65dd02eb00a9",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Collection.wav",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Collection.wav",
+      "source_debug": "out/build/x64-Debug/Collection.wav",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/wav/Collection.wav",
+      "bytes": 193580,
+      "sha256": "c69a91833b16c49f5b4cffe53ca330beee74068c01e48a35cf8e01dda9c6e9f1",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "collection1.png",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/collection1.png",
+      "source_debug": "out/build/x64-Debug/collection1.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/collection1.png",
+      "bytes": 5416,
+      "sha256": "65f64dd271fce64ad5098d3c41ad924f169fd4bd7ed7207426c256d438b27d1f",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "collection2.png",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/collection2.png",
+      "source_debug": "out/build/x64-Debug/collection2.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/collection2.png",
+      "bytes": 7677,
+      "sha256": "8b5a5bab76fd15721238ee2a9e4e1d1fe3b2a27a1fc8bb9ff6fc82afcef8ee18",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Desert.png",
+      "role": "loaded_by_constructor_only",
+      "source_release": "out/build/x64-Release/Desert.png",
+      "source_debug": "out/build/x64-Debug/Desert.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/Desert.png",
+      "bytes": 15866,
+      "sha256": "58258b6397634d457316528cb8136022cf003a12ca4ff82b2e4c8223c14dc594",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Die_1.wav",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Die_1.wav",
+      "source_debug": "out/build/x64-Debug/Die_1.wav",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/wav/Die_1.wav",
+      "bytes": 700460,
+      "sha256": "7c253f01a97b3a07c6b80bb0448698864d2bd14f68a2325c6d99f546bf002ba2",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Die_3.wav",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Die_3.wav",
+      "source_debug": "out/build/x64-Debug/Die_3.wav",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/wav/Die_3.wav",
+      "bytes": 2281004,
+      "sha256": "b09a6fd56a597119b6aa41a6b43137344af1464c7f340b3f85581be8c06421ea",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Die.wav",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Die.wav",
+      "source_debug": "out/build/x64-Debug/Die.wav",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/wav/Die.wav",
+      "bytes": 129068,
+      "sha256": "02b83da0a2a1bb1183e47d0c706fe1b9f9c3bea69162c7b446a2a36c17911e0f",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Forest.png",
+      "role": "loaded_by_constructor_only",
+      "source_release": "out/build/x64-Release/Forest.png",
+      "source_debug": "out/build/x64-Debug/Forest.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/Forest.png",
+      "bytes": 18753,
+      "sha256": "af39b41139deade2723390565f975d3f493540cfefb2ac7dc92c9dc9e56051ca",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Glance.png",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Glance.png",
+      "source_debug": "out/build/x64-Debug/Glance.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/Glance.png",
+      "bytes": 16813,
+      "sha256": "a6dbcb1788fa9e6d2ffbb6ae37e9b82eb2c55406b9bc72ffeca524ce40289a78",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Hurdle2_1.wav",
+      "role": "loaded_by_constructor_only",
+      "source_release": "out/build/x64-Release/Hurdle2_1.wav",
+      "source_debug": "out/build/x64-Debug/Hurdle2_1.wav",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/wav/Hurdle2_1.wav",
+      "bytes": 2193452,
+      "sha256": "05a92ec7668a11aa86a9e354290bf7198ed7c55f1fa39dc8680a029ad19db393",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Hurdle2_2.wav",
+      "role": "loaded_by_constructor_only",
+      "source_release": "out/build/x64-Release/Hurdle2_2.wav",
+      "source_debug": "out/build/x64-Debug/Hurdle2_2.wav",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/wav/Hurdle2_2.wav",
+      "bytes": 4041260,
+      "sha256": "0897f4fcf318da145e7c2766222bd9aa92208edb9a3ad86a7df859d97c11c87d",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Jump.wav",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Jump.wav",
+      "source_debug": "out/build/x64-Debug/Jump.wav",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/wav/Jump.wav",
+      "bytes": 48428,
+      "sha256": "366a23f34bae4f9ea7fd48558d4de4d770f49b6e872d86264dac5e98eeb4c63c",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Leave_Left.png",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Leave_Left.png",
+      "source_debug": "out/build/x64-Debug/Leave_Left.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/Leave_Left.png",
+      "bytes": 5016,
+      "sha256": "7410a2b638391c2525d07dc71ec96559e60cc025c513c71195dae901ed9f00c6",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Leave_Right.png",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Leave_Right.png",
+      "source_debug": "out/build/x64-Debug/Leave_Right.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/Leave_Right.png",
+      "bytes": 4721,
+      "sha256": "6dd233fdada2042645c63c7a928a0ae477a55b736f8422217d9088c56a0a337b",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "player.png",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/player.png",
+      "source_debug": "out/build/x64-Debug/player.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/player.png",
+      "bytes": 8399,
+      "sha256": "3b6125265d5b2bbe031be47e47ddedfb0e3317683f3859e14a78472e617c7d57",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Snow_Ground1.png",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Snow_Ground1.png",
+      "source_debug": "out/build/x64-Debug/Snow_Ground1.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/Snow_Ground1.png",
+      "bytes": 2856,
+      "sha256": "fef3e0a69026534977226660b264b09b7aaaa18f55026df9772a2be63ac60713",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Snow_Ground2.png",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Snow_Ground2.png",
+      "source_debug": "out/build/x64-Debug/Snow_Ground2.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/Snow_Ground2.png",
+      "bytes": 6638,
+      "sha256": "3c13053a86da522a5603cb39903ca0cafac5590abee9e70de952ff18605795ee",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Snow_Ground3.png",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Snow_Ground3.png",
+      "source_debug": "out/build/x64-Debug/Snow_Ground3.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/Snow_Ground3.png",
+      "bytes": 9984,
+      "sha256": "95c6325f24e577d05cc0974aa9ab102540a53742e054dd2c67013424d2989541",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Snow.png",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Snow.png",
+      "source_debug": "out/build/x64-Debug/Snow.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/Snow.png",
+      "bytes": 18600,
+      "sha256": "c24d7a606b5b8a88da8522c0297c318ae1574730fb3c21f84f5991a7708b66c7",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Spine.png",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Spine.png",
+      "source_debug": "out/build/x64-Debug/Spine.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/Spine.png",
+      "bytes": 3073,
+      "sha256": "0316cc32bdec63171002c4239893109a25827c1bb840eacbc05f1bfa18573f81",
+      "release_debug_hash_equal": true
+    },
+    {
+      "name": "Tree.png",
+      "role": "active_in_first_level",
+      "source_release": "out/build/x64-Release/Tree.png",
+      "source_debug": "out/build/x64-Debug/Tree.png",
+      "formal_source": "UE5/SourceAssets/SFML_Level1/png/Tree.png",
+      "bytes": 30934,
+      "sha256": "2109ccee3a6704adf9a8ffc1634313bff125b7a2ec14bd922a317e8ca28f7dff",
+      "release_debug_hash_equal": true
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "schema": "NaiwaP1ClearanceProbeBuildV1",
+  "status": "saved_pending_physical_run",
+  "hash_algorithm": "SHA-256",
+  "protected_sha256_before": {
+    "Content/Naiwa/Maps/L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content/Naiwa/Blueprints/BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content/Naiwa/Blueprints/BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content/Naiwa/Input/IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Slice.umap": "603dc7b241b525c45ad20a56ec99213bbcf6dbb220879ddd2fca0964222a5cd1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Full.umap": "c3ecf5282e0e7323467e1acfef5ba7d9b4f3bb488c393aeec2f6d521b5c5bee0",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Bounce.umap": "4caaba2a9e92ebfff01bf7d3440805c5f7fe98a49472ceda3dff9293b1f2185a",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Switch.umap": "dd97cd816ee5d13dec4989f9fe3e09a7219ba6e6b8d43004f789ef0790e7f9e1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Timed.umap": "26790074e33d97f8007185db384c7e67a53d1a05c4ba443bd88a8ef53a2ec43a",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Integrated.umap": "ee5c82788fa2290089f27f4021f1f8539f9bfa979cf357910a4eabcdde73a350",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_GapProbe.umap": "c8150c12ced5493e9e99c0b125ce3f3fbfabd92d81bcfa6ddefe5a78914531ec",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_GapProbe2.umap": "c35925827145464dbcef69dd43d0691247539689cb503e53ecf98579b128f065",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_TimedProbe.umap": "6b54583bb28ddcc363298b18a712f2f8bd644007155f8a143c957a13374583e7",
+    "Content/Naiwa/P1/BP_NaiwaP1Character.uasset": "9b85d1bbd73ac1c74ace7d8028e8137e77424226e9093e5cce08f3cd5caad5af",
+    "Content/Naiwa/P1/BP_NaiwaP1GameMode.uasset": "6e24599d88b6a602d1c910e81764bac0068e973dda195a2cbce7bd3749cb9ab4"
+  },
+  "jump_design": {
+    "terrain_count": 10,
+    "spike_count": 3,
+    "total_length_cm": 12280.0
+  },
+  "jump_segments": [
+    {
+      "kind": "gap",
+      "index": 0,
+      "lead_cm": 0.0,
+      "spawn_x": 100.0,
+      "trigger_x": 500.0,
+      "success_x": 1440.0,
+      "gap_cm": 240.0
+    },
+    {
+      "kind": "gap",
+      "index": 1,
+      "lead_cm": 0.0,
+      "spawn_x": 1940.0,
+      "trigger_x": 2340.0,
+      "success_x": 3300.0,
+      "gap_cm": 260.0
+    },
+    {
+      "kind": "gap",
+      "index": 2,
+      "lead_cm": 0.0,
+      "spawn_x": 3800.0,
+      "trigger_x": 4200.0,
+      "success_x": 5180.0,
+      "gap_cm": 280.0
+    },
+    {
+      "kind": "spike",
+      "index": 0,
+      "lead_cm": 45.0,
+      "spawn_x": 5680.0,
+      "trigger_x": 6480.0,
+      "success_x": 6630.0,
+      "gap_cm": 90.0
+    },
+    {
+      "kind": "spike",
+      "index": 1,
+      "lead_cm": 50.0,
+      "spawn_x": 7780.0,
+      "trigger_x": 8580.0,
+      "success_x": 8730.0,
+      "gap_cm": 90.0
+    },
+    {
+      "kind": "spike",
+      "index": 2,
+      "lead_cm": 55.0,
+      "spawn_x": 9880.0,
+      "trigger_x": 10680.0,
+      "success_x": 10830.0,
+      "gap_cm": 90.0
+    }
+  ],
+  "jump_owned_actors": [
+    "P1_Clear_Atmosphere",
+    "P1_Clear_Gap00_Land",
+    "P1_Clear_Gap00_Launch",
+    "P1_Clear_Gap01_Land",
+    "P1_Clear_Gap01_Launch",
+    "P1_Clear_Gap02_Land",
+    "P1_Clear_Gap02_Launch",
+    "P1_Clear_KeyLight",
+    "P1_Clear_SkyLight",
+    "P1_Clear_Spike00_Bar",
+    "P1_Clear_Spike00_Floor",
+    "P1_Clear_Spike01_Bar",
+    "P1_Clear_Spike01_Floor",
+    "P1_Clear_Spike02_Bar",
+    "P1_Clear_Spike02_Floor",
+    "P1_Clear_Start",
+    "P1_Clear_Tail"
+  ],
+  "jump_actor_count": 17,
+  "jump_map_sha256": "087d789ce728e3362b848ef5aeeb7de509e994fdd9ab0426675fa1c820649452",
+  "timed_map_sha256": "6b54583bb28ddcc363298b18a712f2f8bd644007155f8a143c957a13374583e7",
+  "timed_map_reused": true,
+  "protected_sha256_after": {
+    "Content/Naiwa/Maps/L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content/Naiwa/Blueprints/BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content/Naiwa/Blueprints/BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content/Naiwa/Input/IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Slice.umap": "603dc7b241b525c45ad20a56ec99213bbcf6dbb220879ddd2fca0964222a5cd1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Full.umap": "c3ecf5282e0e7323467e1acfef5ba7d9b4f3bb488c393aeec2f6d521b5c5bee0",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Bounce.umap": "4caaba2a9e92ebfff01bf7d3440805c5f7fe98a49472ceda3dff9293b1f2185a",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Switch.umap": "dd97cd816ee5d13dec4989f9fe3e09a7219ba6e6b8d43004f789ef0790e7f9e1",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Timed.umap": "26790074e33d97f8007185db384c7e67a53d1a05c4ba443bd88a8ef53a2ec43a",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_Integrated.umap": "ee5c82788fa2290089f27f4021f1f8539f9bfa979cf357910a4eabcdde73a350",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_GapProbe.umap": "c8150c12ced5493e9e99c0b125ce3f3fbfabd92d81bcfa6ddefe5a78914531ec",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_GapProbe2.umap": "c35925827145464dbcef69dd43d0691247539689cb503e53ecf98579b128f065",
+    "Content/Naiwa/P1/Maps/L_NaiwaP1_TimedProbe.umap": "6b54583bb28ddcc363298b18a712f2f8bd644007155f8a143c957a13374583e7",
+    "Content/Naiwa/P1/BP_NaiwaP1Character.uasset": "9b85d1bbd73ac1c74ace7d8028e8137e77424226e9093e5cce08f3cd5caad5af",
+    "Content/Naiwa/P1/BP_NaiwaP1GameMode.uasset": "6e24599d88b6a602d1c910e81764bac0068e973dda195a2cbce7bd3749cb9ab4"
+  }
+}

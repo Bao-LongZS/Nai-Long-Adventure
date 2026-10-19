@@ -1,0 +1,64 @@
+{
+  "schema": "NaiwaP1TimedPrototypeV1",
+  "target_map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Timed",
+  "hash_algorithm": "SHA-256",
+  "config_sha256": "7f5abe7ebd8409cbc3f7da5877136b94a61e613dabe43db55b789f32b236521a",
+  "builder_sha256": "dc98a059b9a88e21ff542d063c128a93bfdcd42b9bf805233ffb19a3d107eed9",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "status": "saved_candidate_pending_timed_probe_and_visual_review",
+  "design_metrics": {
+    "walk150_crossing_seconds_at_constant_speed": 2.933,
+    "walk150_active_margin_seconds": 0.867,
+    "fall_failure": "no_lower_collision; natural KillZ death and static-left-bank respawn",
+    "kill_z": -1000.0,
+    "note": "Natural fall/death/respawn and retry require separate Walk/Run runtime probes"
+  },
+  "protected_sha256_before": {
+    "Content\\Naiwa\\Maps\\L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content\\Naiwa\\Blueprints\\BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content\\Naiwa\\Blueprints\\BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content\\Naiwa\\Input\\IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529",
+    "Content\\Naiwa\\P1\\Maps\\L_NaiwaP1_Slice.umap": "603dc7b241b525c45ad20a56ec99213bbcf6dbb220879ddd2fca0964222a5cd1",
+    "Content\\Naiwa\\P1\\Maps\\L_NaiwaP1_Full.umap": "c3ecf5282e0e7323467e1acfef5ba7d9b4f3bb488c393aeec2f6d521b5c5bee0",
+    "Content\\Naiwa\\P1\\Maps\\L_NaiwaP1_Bounce.umap": "4caaba2a9e92ebfff01bf7d3440805c5f7fe98a49472ceda3dff9293b1f2185a",
+    "Content\\Naiwa\\P1\\Maps\\L_NaiwaP1_Switch.umap": "b0cb8320e7757ae2ed468f682f153bde332e5afebba2beabb21773c459769055",
+    "Content\\Naiwa\\P1\\BP_NaiwaP1Character.uasset": "9b85d1bbd73ac1c74ace7d8028e8137e77424226e9093e5cce08f3cd5caad5af",
+    "Content\\Naiwa\\P1\\BP_NaiwaP1GameMode.uasset": "6e24599d88b6a602d1c910e81764bac0068e973dda195a2cbce7bd3749cb9ab4"
+  },
+  "assets": {
+    "left_bank": "/Game/Naiwa/P1/Materials/M_P1_Timed_left_bank.M_P1_Timed_left_bank",
+    "right_bank": "/Game/Naiwa/P1/Materials/M_P1_Timed_right_bank.M_P1_Timed_right_bank",
+    "rescue_floor": "/Game/Naiwa/P1/Materials/M_P1_Timed_rescue_floor.M_P1_Timed_rescue_floor",
+    "rescue_step": "/Game/Naiwa/P1/Materials/M_P1_Timed_rescue_step.M_P1_Timed_rescue_step",
+    "platform": "/Game/Naiwa/P1/Materials/M_P1_Timed_platform.M_P1_Timed_platform"
+  },
+  "layout": {
+    "map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Timed",
+    "status": "existing_map_reconciled",
+    "owned_actors": [
+      "P1_Timed_Atmosphere",
+      "P1_Timed_KeyLight",
+      "P1_Timed_Platform",
+      "P1_Timed_SkyLight",
+      "P1_Timed_Start",
+      "P1_Timed_Terrain_LeftBank",
+      "P1_Timed_Terrain_RightBank"
+    ],
+    "config_sha256": "7f5abe7ebd8409cbc3f7da5877136b94a61e613dabe43db55b789f32b236521a"
+  },
+  "protected_sha256_after": {
+    "Content\\Naiwa\\Maps\\L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content\\Naiwa\\Blueprints\\BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content\\Naiwa\\Blueprints\\BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content\\Naiwa\\Input\\IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529",
+    "Content\\Naiwa\\P1\\Maps\\L_NaiwaP1_Slice.umap": "603dc7b241b525c45ad20a56ec99213bbcf6dbb220879ddd2fca0964222a5cd1",
+    "Content\\Naiwa\\P1\\Maps\\L_NaiwaP1_Full.umap": "c3ecf5282e0e7323467e1acfef5ba7d9b4f3bb488c393aeec2f6d521b5c5bee0",
+    "Content\\Naiwa\\P1\\Maps\\L_NaiwaP1_Bounce.umap": "4caaba2a9e92ebfff01bf7d3440805c5f7fe98a49472ceda3dff9293b1f2185a",
+    "Content\\Naiwa\\P1\\Maps\\L_NaiwaP1_Switch.umap": "b0cb8320e7757ae2ed468f682f153bde332e5afebba2beabb21773c459769055",
+    "Content\\Naiwa\\P1\\BP_NaiwaP1Character.uasset": "9b85d1bbd73ac1c74ace7d8028e8137e77424226e9093e5cce08f3cd5caad5af",
+    "Content\\Naiwa\\P1\\BP_NaiwaP1GameMode.uasset": "6e24599d88b6a602d1c910e81764bac0068e973dda195a2cbce7bd3749cb9ab4"
+  },
+  "target_map_package": "Content/Naiwa/P1/Maps/L_NaiwaP1_Timed.umap",
+  "target_map_sha256": "26790074e33d97f8007185db384c7e67a53d1a05c4ba443bd88a8ef53a2ec43a",
+  "target_map_bytes": 25690
+}

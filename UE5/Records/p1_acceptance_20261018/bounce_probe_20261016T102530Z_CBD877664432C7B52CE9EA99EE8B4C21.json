@@ -1,0 +1,35 @@
+{
+	"schema": "NaiwaP1BounceProbeV1",
+	"status": "FAIL",
+	"detail": "Timeout step=6 state=Playing activations=3 deaths=0 x=3488.4 z=-48582.5",
+	"map": "L_NaiwaP1_Bounce",
+	"gait_speed": "Walk150",
+	"state": "Playing",
+	"wall_time_s": 39.41525549814105,
+	"activation_count": 3,
+	"death_events": 0,
+	"launch_velocity_z": 1000,
+	"max_character_z": 423.01254272460938,
+	"first_launch":
+	{
+		"x": -113.73745725527249,
+		"y": 0,
+		"z": 104.14999866485596
+	},
+	"first_safe_landing":
+	{
+		"x": 186.29362228617504,
+		"y": 0,
+		"z": 272.06921513369605
+	},
+	"r_reset_passed": true,
+	"death_reset_passed": false,
+	"events": [
+		"gait_walk150_selected",
+		"first_contact_activated_once",
+		"safe_platform_landing_x186.3_z272.1",
+		"left_and_recontacted_pad_once",
+		"r_reset_cleared_pad_state_and_restored_start",
+		"post_reset_contact_activated_once"
+	]
+}

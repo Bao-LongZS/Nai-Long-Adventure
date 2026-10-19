@@ -1,0 +1,36 @@
+{
+  "schema": "NaiwaP1BouncePrototypeV1",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "status": "saved_candidate_pending_walk_run_and_visual_review",
+  "target_map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Bounce",
+  "assets": {
+    "approach": "/Game/Naiwa/P1/Materials/M_P1_Bounce_Approach.M_P1_Bounce_Approach",
+    "landing": "/Game/Naiwa/P1/Materials/M_P1_Bounce_Landing.M_P1_Bounce_Landing",
+    "spring": "/Game/Naiwa/P1/Materials/M_P1_Bounce_Spring.M_P1_Bounce_Spring",
+    "hazard": "/Game/Naiwa/P1/Materials/M_P1_Bounce_Hazard.M_P1_Bounce_Hazard"
+  },
+  "layout": {
+    "map": "/Game/Naiwa/P1/Maps/L_NaiwaP1_Bounce",
+    "status": "existing_map_updated_upper_landing_and_atmosphere",
+    "owned_actors": [
+      "P1_Bounce_Approach",
+      "P1_Bounce_Landing",
+      "P1_Bounce_Pad",
+      "P1_Bounce_Hazard",
+      "P1_Bounce_Start",
+      "P1_Bounce_KeyLight",
+      "P1_Bounce_SkyLight",
+      "P1_Bounce_Atmosphere"
+    ]
+  },
+  "p0_protected_sha256": {
+    "Content\\Naiwa\\Maps\\L_NaiwaGraybox.umap": "b713ec2acc836fac392374c9f5598fabf350127636767a55c28950a9f3f10a7b",
+    "Content\\Naiwa\\Blueprints\\BP_NaiwaCharacter.uasset": "45c4761c5d2884617b2e0c1da89dcdea428f12632527ec478808940973c39683",
+    "Content\\Naiwa\\Blueprints\\BP_NaiwaGameMode.uasset": "81071d4abb473509feaca7194d18867eb44ee8a14e63e5ab881e0ad0267ceb22",
+    "Content\\Naiwa\\Input\\IMC_Naiwa.uasset": "870464bc7cd92ce04699dd9e2c07c50cd1a6a70eddaee395ae71dad0bfa3e529"
+  },
+  "existing_p1_map_sha256": {
+    "Content\\Naiwa\\P1\\Maps\\L_NaiwaP1_Slice.umap": "603dc7b241b525c45ad20a56ec99213bbcf6dbb220879ddd2fca0964222a5cd1",
+    "Content\\Naiwa\\P1\\Maps\\L_NaiwaP1_Full.umap": "c3ecf5282e0e7323467e1acfef5ba7d9b4f3bb488c393aeec2f6d521b5c5bee0"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "audit_type": "saved_blueprint_defaults_read_only",
+  "template_source_candidates": {
+    "cpp_camera_distance_cm": 1000.0,
+    "cpp_camera_z_offset_cm": 100.0,
+    "cpp_fov_degrees": 65.0,
+    "source": "UE_5.8/Templates/TP_ThirdPerson/Source/TP_ThirdPerson/Variant_SideScrolling",
+    "warning": "C++ source values are candidates; Blueprint overrides and actual game view must be read separately."
+  },
+  "p0_character": {
+    "path": "/Game/Naiwa/Blueprints/BP_NaiwaCharacter",
+    "class": "/Game/Naiwa/Blueprints/BP_NaiwaCharacter.BP_NaiwaCharacter_C",
+    "camera": {
+      "component_path": "/Game/Naiwa/Blueprints/BP_NaiwaCharacter.Default__BP_NaiwaCharacter_C:SideCamera",
+      "relative_location_cm": [
+        0.0,
+        900.0,
+        40.0
+      ],
+      "relative_rotation_degrees": [
+        0.0,
+        -89.99999999999999,
+        0.0
+      ],
+      "field_of_view_degrees": 40.0
+    }
+  },
+  "workcopy_template_camera_manager": {
+    "path": "/Game/Variant_SideScroller/Blueprints/BP_SideScrollingCameraManager",
+    "available": true,
+    "class": "/Game/Variant_SideScroller/Blueprints/BP_SideScrollingCameraManager.BP_SideScrollingCameraManager_C",
+    "camera_properties": {
+      "current_zoom": {
+        "unavailable": "PlayerCameraManager: Failed to find property 'current_zoom' for attribute 'current_zoom' on 'BP_SideScrollingCameraManager_C'"
+      },
+      "camera_z_offset": {
+        "unavailable": "PlayerCameraManager: Failed to find property 'camera_z_offset' for attribute 'camera_z_offset' on 'BP_SideScrollingCameraManager_C'"
+      },
+      "camera_x_min_bounds": {
+        "unavailable": "PlayerCameraManager: Failed to find property 'camera_x_min_bounds' for attribute 'camera_x_min_bounds' on 'BP_SideScrollingCameraManager_C'"
+      },
+      "camera_x_max_bounds": {
+        "unavailable": "PlayerCameraManager: Failed to find property 'camera_x_max_bounds' for attribute 'camera_x_max_bounds' on 'BP_SideScrollingCameraManager_C'"
+      }
+    }
+  },
+  "workcopy_template_controller": {
+    "path": "/Game/Variant_SideScroller/Blueprints/BP_SideScrollingPlayerController",
+    "available": true,
+    "class": "/Game/Variant_SideScroller/Blueprints/BP_SideScrollingPlayerController.BP_SideScrollingPlayerController_C",
+    "camera_manager_class": "/Game/Variant_SideScroller/Blueprints/BP_SideScrollingCameraManager.BP_SideScrollingCameraManager_C"
+  },
+  "workcopy_template_game_mode": {
+    "path": "/Game/Variant_SideScroller/Blueprints/BP_SideScrollingGameMode",
+    "available": true,
+    "class": "/Game/Variant_SideScroller/Blueprints/BP_SideScrollingGameMode.BP_SideScrollingGameMode_C",
+    "default_pawn_class": "/Game/Variant_SideScroller/Blueprints/BP_SideScrollingCharacter.BP_SideScrollingCharacter_C",
+    "player_controller_class": "/Game/Variant_SideScroller/Blueprints/BP_SideScrollingPlayerController.BP_SideScrollingPlayerController_C"
+  },
+  "status": "read_only_complete"
+}

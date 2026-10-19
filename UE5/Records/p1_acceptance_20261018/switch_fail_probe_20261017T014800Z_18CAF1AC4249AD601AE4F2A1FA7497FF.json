@@ -1,0 +1,84 @@
+{
+	"schema": "NaiwaP1SwitchFailProbeV1",
+	"status": "PASS",
+	"detail": "One platform-control recall left an empty gap; real edge fall caused one World KillZ death, playable reset, and real retry reached right shore",
+	"map": "L_NaiwaP1_Switch",
+	"gait_speed": "Walk150",
+	"game_state": "Playing",
+	"platform_state": "DockedRight",
+	"platform_control_injection_method": "RequestDockLeft once while the character stands on the grounded right shore",
+	"wall_time_s": 27.716663800179958,
+	"world_kill_z": -1000,
+	"death_events_delta": 1,
+	"platform_control_injections": 1,
+	"probe_direct_character_teleports": 0,
+	"game_mode_death_respawn_teleport_expected": true,
+	"first_ride_supported_midway": true,
+	"first_grounded_right_shore_reached": true,
+	"natural_unsupported_pit_fall_seen": true,
+	"world_kill_z_dying_seen": true,
+	"respawn_playable_and_left_dock_ready": true,
+	"retry_ride_supported_midway": true,
+	"real_retry_grounded_right_shore_reached": true,
+	"initial_spawn":
+	{
+		"x": -1100,
+		"y": 0,
+		"z": 212
+	},
+	"first_board_position":
+	{
+		"x": -544.52456548614236,
+		"y": 0,
+		"z": 212
+	},
+	"first_right_shore_position":
+	{
+		"x": 693.48557738182978,
+		"y": 0,
+		"z": 212
+	},
+	"fall_position":
+	{
+		"x": 463.98324918391609,
+		"y": 0,
+		"z": 146.66721725463867
+	},
+	"death_position":
+	{
+		"x": 281.48180440457963,
+		"y": 0,
+		"z": -1013.888935620536
+	},
+	"respawn_position":
+	{
+		"x": -1100,
+		"y": 0,
+		"z": 212.14999644489617
+	},
+	"retry_board_position":
+	{
+		"x": -544.98674470260812,
+		"y": 0,
+		"z": 212.14999644489617
+	},
+	"finish_position":
+	{
+		"x": 693.02069204704264,
+		"y": 0,
+		"z": 212.14999644489617
+	},
+	"events": [
+		"t=0.49 x=-1100.0 bottom=122.0 grounded_spawn_walk150",
+		"t=4.25 x=-544.5 bottom=122.0 real_movement_boarded_left_dock",
+		"t=7.93 x=296.0 bottom=122.0 first_rider_supported_midway_and_right_dock",
+		"t=10.65 x=693.5 bottom=122.0 grounded_right_shore_then_control_injection_RequestDockLeft_once",
+		"t=13.45 x=694.0 bottom=122.0 platform_left_dock_empty_gap_character_still_right_shore",
+		"t=15.05 x=464.0 bottom=56.7 real_leftward_move_from_right_bank_entered_unsupported_pit",
+		"t=16.28 x=281.5 bottom=-1103.9 natural_pit_fall_reached_WorldKillZ_and_entered_Dying_once",
+		"t=17.55 x=-1100.0 bottom=122.1 death_respawn_grounded_playable_and_platform_ready_left",
+		"t=21.32 x=-545.0 bottom=122.1 real_movement_reboarded_after_death_respawn",
+		"t=25.00 x=295.5 bottom=122.1 retry_rider_supported_midway_and_right_dock",
+		"t=27.72 x=693.0 bottom=122.1 real_retry_reached_grounded_right_shore"
+	]
+}

@@ -1,0 +1,57 @@
+{
+	"schema": "NaiwaP1TimedFailProbeV1",
+	"status": "PASS",
+	"detail": "Natural expiry caused one KillZ death and playable reset; real retry crossed to right shore",
+	"map": "L_NaiwaP1_Timed",
+	"gait_speed": "Walk150",
+	"game_state": "Playing",
+	"platform_state": "Countdown",
+	"wall_time_s": 15.760398700833321,
+	"world_kill_z": -1000,
+	"death_events_delta": 1,
+	"trigger_count_delta": 2,
+	"disable_count_delta": 1,
+	"fell_after_disable": true,
+	"saw_dying": true,
+	"respawn_playable_and_floor_ready": true,
+	"real_retry_crossed": true,
+	"probe_direct_teleports": 0,
+	"initial_spawn":
+	{
+		"x": -600,
+		"y": 0,
+		"z": 212
+	},
+	"board_position":
+	{
+		"x": -22.835945058252605,
+		"y": 0,
+		"z": 212
+	},
+	"fall_position":
+	{
+		"x": -22.335943106198584,
+		"y": 0,
+		"z": -1013.0909427295187
+	},
+	"respawn_position":
+	{
+		"x": -600,
+		"y": 0,
+		"z": 212.14999721400892
+	},
+	"finish_position":
+	{
+		"x": 315.01545950033994,
+		"y": 0,
+		"z": 212.14999721400892
+	},
+	"events": [
+		"t=0.46 x=-600.0 bottom=122.0 grounded_spawn_walk150",
+		"t=4.38 x=-22.8 bottom=122.0 real_movement_boarded_and_stopped_on_counting_platform",
+		"t=7.08 x=-22.3 bottom=121.8 floor_disabled_collision_and_natural_fall_started",
+		"t=8.33 x=-22.3 bottom=-1103.1 natural_drop_reached_KillZ_and_entered_Dying",
+		"t=9.59 x=-600.0 bottom=122.1 death_respawn_playable_spawn_and_ready_floor",
+		"t=15.76 x=315.0 bottom=122.1 real_movement_retry_reached_grounded_right_shore"
+	]
+}
