@@ -5,7 +5,7 @@
 ## 工程与固定输入
 
 - 工作工程：`C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Nai_Long.uproject`。
-- 源工程：`C:/Users/31314/Documents/Unreal Projects/Nai_Long/Nai_Long.uproject`；本轮复制其Content和Config到工作区。
+- 源工程：`C:/Users/31314/Documents/Unreal Projects/Nai_Long/Nai_Long.uproject`；本轮复制其Content和Config到工作区。**该源工程已于 2026-10-20 移入回收站清除**（其 Content 391 个文件在本工程中全部存在，无唯一资产；Config 与 uproject 另存于 `.workbuddy/work/20261020_旧工程清理/`）。
 - 实际引擎：UE 5.8.3，CL 58210709。
 - 固定角色：正式E2 FBX，SHA256 `8dae9ce28c4b44465dcb8e73dd462804c3a561daee9eebaf79842900a3005147`。
 - 平台：本机Windows；CPU Intel Core Ultra 9 275HX，GPU RTX 5070 Ti Laptop 12GB，内存32GB。
