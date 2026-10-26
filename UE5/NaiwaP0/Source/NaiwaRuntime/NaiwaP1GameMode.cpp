@@ -1,4 +1,6 @@
 #include "NaiwaP1GameMode.h"
+#include "NaiwaP1PlayerController.h"
+#include "NaiwaMenuProgress.h"
 #include "NaiwaCharacter.h"
 #include "NaiwaP1BouncePad.h"
 #include "NaiwaP1Mechanism.h"
@@ -90,6 +92,7 @@ ANaiwaP1GameMode::ANaiwaP1GameMode()
     PrimaryActorTick.bCanEverTick = true;
     PrimaryActorTick.TickGroup = TG_PostUpdateWork;
     PrimaryActorTick.bTickEvenWhenPaused = true;
+    PlayerControllerClass = ANaiwaP1PlayerController::StaticClass();
     static ConstructorHelpers::FObjectFinder<USoundBase> DeathCue(
         TEXT("/Game/Naiwa/P1/Legacy/Audio/SFX_P1_Die.SFX_P1_Die"));
     if (DeathCue.Succeeded()) DeathSound = DeathCue.Object;
@@ -102,6 +105,8 @@ void ANaiwaP1GameMode::BeginPlay()
 {
     Super::BeginPlay();
     LoadFeedbackAssets();
+    const bool bStandaloneP1 = FParse::Param(FCommandLine::Get(), TEXT("NaiwaP1Standalone"));
+    bLinkRun = FParse::Param(FCommandLine::Get(), TEXT("NaiwaLinkRun")) || !bStandaloneP1;
     TotalPickupCount = 0;
     RequiredPickupIds.Reset();
     CollectedRequiredPickupIds.Reset();
@@ -115,6 +120,8 @@ void ANaiwaP1GameMode::BeginPlay()
     ResetAttemptActors();
     UE_LOG(LogTemp, Display, TEXT("NAIWA_P1 state=Playing pickups=%d goal_required=%d"),
         TotalPickupCount, RequiredPickupCount);
+    UE_LOG(LogTemp, Display, TEXT("NAIWA_P1 campaign_mode=%s"),
+        bLinkRun ? TEXT("linked") : TEXT("standalone"));
     StartBackgroundMusic();
     bSmokeEnabled = FParse::Param(FCommandLine::Get(), TEXT("NaiwaP1Smoke"));
     const bool bRouteRun = FParse::Param(FCommandLine::Get(), TEXT("NaiwaP1RouteRun"));
@@ -517,6 +524,15 @@ void ANaiwaP1GameMode::ProcessPendingTriggers()
             }
             else
             {
+                if (GetGameInstance())
+                {
+                    if (UNaiwaProgressSubsystem* Progress = GetGameInstance()->GetSubsystem<UNaiwaProgressSubsystem>())
+                    {
+                        Progress->RecordLevelClear(TEXT("1-1"), 0,
+                            GetWorld() ? GetWorld()->GetTimeSeconds() : 0.0f,
+                            DeathsThisRun, CollectedIds.Num());
+                    }
+                }
                 SetState(ENaiwaP1State::Won);
                 if (PlayerCharacter.IsValid()) PlayerCharacter->SetP1ControlsLocked(true);
                 SpawnGoalBurst(Trigger);
@@ -524,12 +540,29 @@ void ANaiwaP1GameMode::ProcessPendingTriggers()
                 UE_LOG(LogTemp, Display, TEXT("NAIWA_P1_FEEDBACK event=win sound=%s id=%s"),
                     *GetNameSafe(CollectionSound.Get()), *Trigger->GetStableId().ToString());
                 UE_LOG(LogTemp, Display, TEXT("NAIWA_P1 goal_won id=%s pickups=%d"), *Trigger->GetStableId().ToString(), CollectedIds.Num());
+                if (bLinkRun)
+                {
+                    GetWorldTimerManager().SetTimer(LinkAdvanceTimer, this,
+                        &ANaiwaP1GameMode::AdvanceToP2Campaign, 1.5f, false);
+                }
                 PendingTriggers.Reset();
                 bPendingFallDeath = false;
                 return;
             }
         }
     }
+}
+
+void ANaiwaP1GameMode::AdvanceToP2Campaign()
+{
+    if (!bLinkRun || !GetWorld())
+    {
+        return;
+    }
+
+    UE_LOG(LogTemp, Display, TEXT("NAIWA_CAMPAIGN transition=P1_to_P2 level=2-1"));
+    UGameplayStatics::OpenLevel(this, FName(TEXT("/Game/Naiwa/P2/Maps/L_NaiwaP2_21")), true,
+        TEXT("NaiwaLinkRun=1"));
 }
 
 void ANaiwaP1GameMode::RevealAllHazards()

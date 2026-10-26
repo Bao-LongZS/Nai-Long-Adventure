@@ -307,6 +307,7 @@ public:
 
 private:
     void ProcessPendingTriggers();
+    void AdvanceToP2Campaign();
     void EnterDying(FName Cause);
     void LoadFeedbackAssets();
     void StartBackgroundMusic();
@@ -441,6 +442,8 @@ private:
     FTimerHandle EasterEggMusicResumeTimer;
     FTimerHandle PickupFadeTimer;
     FTimerHandle PickupMusicDuckRestoreTimer;
+    FTimerHandle LinkAdvanceTimer;
+    bool bLinkRun = false;
     int32 DeathEventCount = 0;
     int32 DeathsThisRun = 0;
     FName LastDeathCause = NAME_None;

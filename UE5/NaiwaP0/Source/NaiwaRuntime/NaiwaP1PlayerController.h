@@ -12,4 +12,9 @@ class NAIWARUNTIME_API ANaiwaP1PlayerController : public APlayerController
 
 public:
     ANaiwaP1PlayerController();
+    virtual void BeginPlay() override;
+    virtual void SetupInputComponent() override;
+
+private:
+    void ReturnToLevelSelect();
 };

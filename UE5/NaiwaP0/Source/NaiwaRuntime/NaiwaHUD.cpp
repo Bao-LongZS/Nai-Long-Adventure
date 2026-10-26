@@ -71,7 +71,7 @@ void ANaiwaHUD::DrawHUD()
             P1Mode->IsGoalUnlocked() ? TEXT("READY") : TEXT("LOCKED"));
         DrawText(Progress, FLinearColor(0.95f, 0.95f, 0.76f), Margin + 12.0f * Scale,
             Margin + 31.0f * Scale, GEngine->GetMediumFont(), Scale);
-        DrawText(TEXT("P / Esc  Pause / Continue    R  Restart level"), FLinearColor(0.78f, 0.90f, 0.94f),
+        DrawText(TEXT("P  Pause / Continue    Esc  Level select    R  Restart level"), FLinearColor(0.78f, 0.90f, 0.94f),
             Margin + 12.0f * Scale, Margin + 55.0f * Scale, GEngine->GetMediumFont(), Scale);
         if (bExitHint)
         {
@@ -85,7 +85,7 @@ void ANaiwaHUD::DrawHUD()
         DrawRect(FLinearColor(0.02f, 0.035f, 0.045f, 0.82f), Margin, Margin, HelpWidth, 100.0f * Scale);
         DrawText(TEXT("A / D or Left / Right   Move       Space   Jump"), FLinearColor::White,
             Margin + 14.0f * Scale, Margin + 10.0f * Scale, GEngine->GetMediumFont(), Scale);
-        DrawText(TEXT("P / Esc   Pause / Continue         R   Reset to spawn"), FLinearColor(0.78f, 0.90f, 0.94f),
+        DrawText(TEXT("P  Pause / Continue    Esc  Level select    R  Reset to spawn"), FLinearColor(0.78f, 0.90f, 0.94f),
             Margin + 14.0f * Scale, Margin + 38.0f * Scale, GEngine->GetMediumFont(), Scale);
         const FString GaitHelp = FString::Printf(TEXT("Shift   Walk / Run       Mode: %s"),
             Character && !Character->IsRunningGait() ? TEXT("WALK") : TEXT("RUN"));
@@ -120,7 +120,7 @@ void ANaiwaHUD::DrawHUD()
     {
         DrawCenteredLabel(TEXT("PAUSED"), CenterX, PanelY + (P1Mode ? 24.0f : 32.0f) * Scale,
             Scale * 1.5f, FLinearColor(1.0f, 0.84f, 0.30f));
-        DrawCenteredLabel(TEXT("P / Esc   Continue"), CenterX,
+        DrawCenteredLabel(TEXT("P   Continue       Esc   Level select"), CenterX,
             PanelY + (P1Mode ? 82.0f : 106.0f) * Scale, Scale, FLinearColor::White);
         DrawCenteredLabel(P1Mode ? TEXT("R   Restart level") : TEXT("R   Reset to spawn"),
             CenterX, PanelY + (P1Mode ? 119.0f : 151.0f) * Scale, Scale, FLinearColor::White);
