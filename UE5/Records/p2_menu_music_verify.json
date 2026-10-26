@@ -1,0 +1,11 @@
+{
+  "schema": "NaiwaP2MenuMusicVerifyV1",
+  "verified_utc": "2026-10-22T05:14:02.773276+00:00",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "asset_path": "/Game/Naiwa/UI/Audio/SW_Menu_JinFengYuLu.SW_Menu_JinFengYuLu",
+  "looping": true,
+  "controller_class": "/Script/NaiwaRuntime.NaiwaMenuPlayerController",
+  "controller_class_loaded": true,
+  "controller_music_path": "/Game/Naiwa/UI/Audio/SW_Menu_JinFengYuLu.SW_Menu_JinFengYuLu",
+  "controller_starts_music_in_begin_play": true
+}

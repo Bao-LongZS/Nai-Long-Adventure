@@ -28,6 +28,8 @@ for entry in mapping.get_editor_property('default_key_mappings').get_editor_prop
     before.append({'action': path, 'key': name})
     if 'IA_NaiwaShiftGate' in path or action == gait:
         continue
+    if action and action.get_name() == 'IA_NaiwaPause' and name == 'Escape':
+        continue
     if action == move and name in ('A', 'D', 'Left', 'Right'):
         continue
     entries.append(entry)
@@ -66,6 +68,7 @@ for entry in mapping.get_editor_property('default_key_mappings').get_editor_prop
     after.append({'action': action.get_path_name(), 'key': name})
 assert sorted(e['key'] for e in after if e['action'] == move.get_path_name() and e['key'] != 'Gamepad_LeftX') == ['A', 'D', 'Left', 'Right']
 assert sorted(e['key'] for e in after if e['action'] == gait.get_path_name()) == ['LeftShift', 'RightShift']
+assert not any(e['action'].endswith('IA_NaiwaPause') and e['key'] == 'Escape' for e in after)
 report = {
     'status': 'saved_walk_run_toggle_pending_runtime_validation',
     'movement': 'A/D or Left/Right, exactly as before; no Shift chord required',

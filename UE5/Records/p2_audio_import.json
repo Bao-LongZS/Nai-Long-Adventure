@@ -1,0 +1,55 @@
+{
+  "schema": "NaiwaP2AudioImportV1",
+  "started_utc": "2026-10-26T01:29:29.166589+00:00",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "assets": [
+    {
+      "source": "UE5/SourceAssets/P2_Audio/Ari Pulkkinen - Title Theme.mp3",
+      "source_sha256": "2e724768fa9ff0d56ba0d13205a6d6be898bfc276d89b1d8a9f2c752d576cdf9",
+      "asset_path": "/Game/Naiwa/P2/Audio/SW_P2_21_TitleTheme.SW_P2_21_TitleTheme",
+      "asset_sha256": "2cf9be16649775464797e0b6c33041d0ddbcdd8cde3c216dfc591620d44f503d",
+      "looping": true,
+      "action": "verified_existing_unchanged_source"
+    },
+    {
+      "source": "UE5/SourceAssets/P2_Audio/阿成哥,霓虹兔 - 雨爱.mp3",
+      "source_sha256": "c0c9188f5ad19ae9fb757a4a16937f7198e41ff46935c5bc916dbbdf3f6ae6dc",
+      "asset_path": "/Game/Naiwa/P2/Audio/SW_P2_22_RainLove.SW_P2_22_RainLove",
+      "asset_sha256": "54dcda136ce592affe98aaf0ca787a91eb078640fd2ed5c00062d6cf0d8c9441",
+      "looping": true,
+      "action": "verified_existing_unchanged_source"
+    },
+    {
+      "source": "UE5/SourceAssets/P2_Audio/雷米克斯 - 熊出没.mp3",
+      "source_sha256": "0d33463238a7f51080f56da940399202f800c4155332bd358c2c7070f78f37b0",
+      "asset_path": "/Game/Naiwa/P2/Audio/SW_P2_23_BoonieBears.SW_P2_23_BoonieBears",
+      "asset_sha256": "109ac5e13f6e53a0765f6b1cf99b8e8ad33d12cc7a270802e31f2f966e78540b",
+      "looping": true,
+      "action": "verified_existing_unchanged_source"
+    },
+    {
+      "source": "UE5/SourceAssets/P2_Audio/嗯？.mp3",
+      "source_sha256": "ceaa7f7c61e9dd1eaf44775e4e128188304ffc7b179d6ed5a6e59615159a792a",
+      "asset_path": "/Game/Naiwa/P2/Audio/SFX_P2_Miss.SFX_P2_Miss",
+      "asset_sha256": "cb8d41b10eec62145caa09f6d5e4a23fe7e1c9a24e5eb4c9764c6e55db966b36",
+      "looping": false,
+      "action": "verified_existing_unchanged_source"
+    },
+    {
+      "source": "UE5/SourceAssets/P2_Audio/冰冰冰.mp3",
+      "source_sha256": "3a5c79ce84260fa6f376c0d42748554e45865bc8efd143d68fc7a601e102f284",
+      "asset_path": "/Game/Naiwa/P2/Audio/SFX_P2_GoalHit.SFX_P2_GoalHit",
+      "asset_sha256": "b579598b6b679df8d57e39ffd259ae59c33bb993ce9993803b1f28d20fa44d5d",
+      "looping": false,
+      "action": "verified_existing_unchanged_source"
+    },
+    {
+      "source": "UE5/SourceAssets/P2_Audio/鸡.mp3",
+      "source_sha256": "be610b0092785e7fb555b92c6116ac11f0474761d82a5479a9c3f7de92a726f8",
+      "asset_path": "/Game/Naiwa/P2/Audio/SFX_P2_EggCollision.SFX_P2_EggCollision",
+      "asset_sha256": "4b730955943d480e901176c50e8d505f9e5b4000516428b27101de23b5a0c1d6",
+      "looping": false,
+      "action": "imported_or_reimported"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "NaiwaP2FailureFeedbackImportV1",
+  "started_utc": "2026-10-22T02:44:58.095667+00:00",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "assets": [
+    {
+      "source": "UE5/SourceAssets/P2_FailureFeedback/Images/T_P2_Failure_OneMinute.png",
+      "source_sha256": "5e6b4eff057de712059cc0a2c42d9233164932505b71cce191ffe56790dc763e",
+      "asset_path": "/Game/Naiwa/P2/UI/T_P2_Failure_OneMinute.T_P2_Failure_OneMinute",
+      "asset_sha256": "7449cea19f3c3752086c90c84f58b3110847099454c52f03af82aa2aaf67d7dc",
+      "asset_class": "Texture2D",
+      "action": "imported_new",
+      "alpha_preserved": true,
+      "texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P2_FailureFeedback/Images/T_P2_Failure_Resets.png",
+      "source_sha256": "4f675f2ba79b8fc594295297379e9c1d7503063f364472eb9f8a2f90d3a620f5",
+      "asset_path": "/Game/Naiwa/P2/UI/T_P2_Failure_Resets.T_P2_Failure_Resets",
+      "asset_sha256": "0951072cda074404284b4f6c48d9a01e7da971d1adea420afd6872cf1b7fea85",
+      "asset_class": "Texture2D",
+      "action": "imported_new",
+      "alpha_preserved": true,
+      "texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P2_FailureFeedback/Images/T_P2_Failure_Exhausted.png",
+      "source_sha256": "7651edcb5e4aabeb7dc7a119945004232b602ab619350808380e8a694babdac6",
+      "asset_path": "/Game/Naiwa/P2/UI/T_P2_Failure_Exhausted.T_P2_Failure_Exhausted",
+      "asset_sha256": "bf68efe87ba775932af27ccb90661e5312a7fd997770444f0a36cc400fa2cc74",
+      "asset_class": "Texture2D",
+      "action": "imported_new",
+      "alpha_preserved": true,
+      "texture_settings": "UserInterface2D, no mipmaps, UI group, never stream"
+    },
+    {
+      "source": "UE5/SourceAssets/P2_Audio/SFX_P2_Collection_Source.wav",
+      "source_sha256": "c69a91833b16c49f5b4cffe53ca330beee74068c01e48a35cf8e01dda9c6e9f1",
+      "asset_path": "/Game/Naiwa/P2/Audio/SFX_P2_Collection.SFX_P2_Collection",
+      "asset_sha256": "50b074ebf49183a8df829a9d0a733b3a02aedf930af332b10443a06fc0710c35",
+      "asset_class": "SoundWave",
+      "action": "imported_new",
+      "looping": false
+    },
+    {
+      "source": "UE5/SourceAssets/P2_Audio/SFX_P2_FailureTrumpet_Source.mp3",
+      "source_sha256": "823b61cc77ce34eca2d8f840cb02680fc71c7ef4c28f9f469dd91c8de359c416",
+      "asset_path": "/Game/Naiwa/P2/Audio/SFX_P2_FailureTrumpet.SFX_P2_FailureTrumpet",
+      "asset_sha256": "302397e00e8de4f6073b317ec3056d852bfd4ee5d8bcf8664d5ebd77bc4bea70",
+      "asset_class": "SoundWave",
+      "action": "imported_new",
+      "looping": false
+    }
+  ]
+}

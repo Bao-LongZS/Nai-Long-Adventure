@@ -1,0 +1,62 @@
+{
+  "schema": "NaiwaP2GeoPaletteUpdateV1",
+  "updated_utc": "2026-10-21T14:15:14.157636+00:00",
+  "assets": [
+    {
+      "asset_path": "/Game/Naiwa/P2/Art/Geo/Materials/MI_P2Geo_Cloud.MI_P2Geo_Cloud",
+      "srgb_hex": "F8FCFF"
+    },
+    {
+      "asset_path": "/Game/Naiwa/P2/Art/Geo/Materials/MI_P2Geo_Sky1.MI_P2Geo_Sky1",
+      "srgb_hex": "A9D6EE"
+    },
+    {
+      "asset_path": "/Game/Naiwa/P2/Art/Geo/Materials/MI_P2Geo_Sky2.MI_P2Geo_Sky2",
+      "srgb_hex": "BAE0F1"
+    },
+    {
+      "asset_path": "/Game/Naiwa/P2/Art/Geo/Materials/MI_P2Geo_SkyTop.MI_P2Geo_SkyTop",
+      "srgb_hex": "C7E5F4"
+    },
+    {
+      "asset_path": "/Game/Naiwa/P2/Art/Geo/Materials/MI_P2Geo_SkyMid.MI_P2Geo_SkyMid",
+      "srgb_hex": "DDEFF8"
+    },
+    {
+      "asset_path": "/Game/Naiwa/P2/Art/Geo/Materials/MI_P2Geo_SkyBot.MI_P2Geo_SkyBot",
+      "srgb_hex": "F2F9FD"
+    },
+    {
+      "asset_path": "/Game/Naiwa/P2/Art/Geo/Materials/MI_P2Geo_L4.MI_P2Geo_L4",
+      "srgb_hex": "EAF5EE"
+    },
+    {
+      "asset_path": "/Game/Naiwa/P2/Art/Geo/Materials/MI_P2Geo_L3.MI_P2Geo_L3",
+      "srgb_hex": "D9EDDF"
+    },
+    {
+      "asset_path": "/Game/Naiwa/P2/Art/Geo/Materials/MI_P2Geo_L2.MI_P2Geo_L2",
+      "srgb_hex": "C4E3CF"
+    },
+    {
+      "asset_path": "/Game/Naiwa/P2/Art/Geo/Materials/MI_P2Geo_L1.MI_P2Geo_L1",
+      "srgb_hex": "A3D5B7"
+    },
+    {
+      "asset_path": "/Game/Naiwa/P2/Art/Geo/Materials/MI_P2Geo_Ground.MI_P2Geo_Ground",
+      "srgb_hex": "D5E5B0"
+    },
+    {
+      "asset_path": "/Game/Naiwa/P2/Art/Geo/Materials/MI_P2Geo_Light.MI_P2Geo_Light",
+      "srgb_hex": "F8F8E8"
+    },
+    {
+      "asset_path": "/Game/Naiwa/P2/Art/Geo/Materials/MI_P2Geo_Leaf.MI_P2Geo_Leaf",
+      "srgb_hex": "90CA7A"
+    },
+    {
+      "asset_path": "/Game/Naiwa/P2/Art/Geo/Materials/MI_P2Geo_LeafLight.MI_P2Geo_LeafLight",
+      "srgb_hex": "A6D98C"
+    }
+  ]
+}

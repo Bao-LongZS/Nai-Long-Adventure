@@ -77,7 +77,7 @@ try:
     entries = []
     for label, key, negate in [('Move', 'D', False), ('Move', 'Right', False), ('Move', 'A', True), ('Move', 'Left', True),
                                 ('Move', 'Gamepad_LeftX', False), ('Jump', 'SpaceBar', False), ('Jump', 'Gamepad_FaceButton_Bottom', False),
-                                ('Pause', 'Escape', False), ('Pause', 'P', False), ('Reset', 'R', False)]:
+                                ('Pause', 'P', False), ('Reset', 'R', False)]:
         input_key = unreal.Key()
         input_key.set_editor_property('key_name', key)
         entry = unreal.EnhancedActionKeyMapping(action=actions[label], key=input_key)

@@ -1,0 +1,435 @@
+{
+ "version": "2026-10-19-click-v2",
+ "rule_hash": "6a920a72481669da6018b7de7d674bd27b840a55c92d56bf5cc8219927fd2538",
+ "dt_s": 0.004,
+ "precision": "Python float64",
+ "click_tick_rule": "ceil(click_s / dt_s), collision-before-click",
+ "chain_state_model": "target ledger; 2-3 stage2 removes only A platform and A goals after they clear; other dynamic collapse not simulated",
+ "note": "三关各一条设计侧标准解；killed/raw_killed 是静态场景单发原始命中，newly_killed 才是局内新增。未穷举其他解。",
+ "levels": {
+  "2-1": {
+   "goals": [
+    "P1",
+    "T1",
+    "T2",
+    "T3"
+   ],
+   "list": [
+    "base"
+   ],
+   "total": 3,
+   "repeat_allowed": true,
+   "standard_chain_count": 1,
+   "chains": [
+    {
+     "id": "2-1-standard",
+     "note": "按发序执行的设计侧标准解",
+     "shots": [
+      {
+       "egg": "base",
+       "ang": 42,
+       "pow": 0.92,
+       "click": null,
+       "click_tick": null,
+       "stage": 1,
+       "killed": [
+        "T1",
+        "T2",
+        "T3"
+       ],
+       "raw_killed": [
+        "T1",
+        "T2",
+        "T3"
+       ],
+       "hits": [
+        "T.c5"
+       ],
+       "newly_killed": [
+        "T1",
+        "T2",
+        "T3"
+       ],
+       "remaining_after": [
+        "P1"
+       ],
+       "shots_remaining_after": 2,
+       "tokens_remaining_after": [
+        "base"
+       ]
+      },
+      {
+       "egg": "base",
+       "ang": 9,
+       "pow": 1.0,
+       "click": null,
+       "click_tick": null,
+       "stage": 1,
+       "killed": [
+        "P1"
+       ],
+       "raw_killed": [
+        "P1"
+       ],
+       "hits": [
+        "P.col"
+       ],
+       "newly_killed": [
+        "P1"
+       ],
+       "remaining_after": [],
+       "shots_remaining_after": 1,
+       "tokens_remaining_after": [
+        "base"
+       ]
+      }
+     ],
+     "resolved": true,
+     "covers_all": true,
+     "result": "Win"
+    }
+   ]
+  },
+  "2-2": {
+   "goals": [
+    "A1",
+    "B1",
+    "B2",
+    "C1",
+    "C2",
+    "C3",
+    "E1",
+    "E2",
+    "E3",
+    "E4"
+   ],
+   "list": [
+    "base",
+    "chick",
+    "mouse",
+    "soy",
+    "tea"
+   ],
+   "total": 5,
+   "repeat_allowed": false,
+   "standard_chain_count": 1,
+   "chains": [
+    {
+     "id": "2-2-standard",
+     "note": "按发序执行的设计侧标准解",
+     "shots": [
+      {
+       "egg": "mouse",
+       "ang": 14,
+       "pow": 0.9,
+       "click": 0.288,
+       "click_tick": 72,
+       "stage": 1,
+       "killed": [
+        "B1",
+        "B2",
+        "C1",
+        "C2",
+        "C3"
+       ],
+       "raw_killed": [
+        "B1",
+        "B2",
+        "C1",
+        "C2",
+        "C3"
+       ],
+       "hits": [
+        "C1",
+        "C2",
+        "C2",
+        "C3",
+        "B1",
+        "B.deck"
+       ],
+       "newly_killed": [
+        "B1",
+        "B2",
+        "C1",
+        "C2",
+        "C3"
+       ],
+       "remaining_after": [
+        "A1",
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+       ],
+       "shots_remaining_after": 4,
+       "tokens_remaining_after": [
+        "base",
+        "chick",
+        "soy",
+        "tea"
+       ]
+      },
+      {
+       "egg": "chick",
+       "ang": 74,
+       "pow": 0.94,
+       "click": 0.184,
+       "click_tick": 46,
+       "stage": 1,
+       "killed": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+       ],
+       "raw_killed": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+       ],
+       "hits": [
+        "E3",
+        "E4",
+        "E2",
+        "E.d2"
+       ],
+       "newly_killed": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+       ],
+       "remaining_after": [
+        "A1"
+       ],
+       "shots_remaining_after": 3,
+       "tokens_remaining_after": [
+        "base",
+        "soy",
+        "tea"
+       ]
+      },
+      {
+       "egg": "tea",
+       "ang": 53,
+       "pow": 1.0,
+       "click": null,
+       "click_tick": null,
+       "stage": 1,
+       "killed": [
+        "A1"
+       ],
+       "raw_killed": [
+        "A1"
+       ],
+       "hits": [
+        "A.plate"
+       ],
+       "newly_killed": [
+        "A1"
+       ],
+       "remaining_after": [],
+       "shots_remaining_after": 2,
+       "tokens_remaining_after": [
+        "base",
+        "soy"
+       ]
+      }
+     ],
+     "resolved": true,
+     "covers_all": true,
+     "result": "Win"
+    }
+   ]
+  },
+  "2-3": {
+   "goals": [
+    "A1",
+    "A2",
+    "A3",
+    "R1",
+    "R2",
+    "S1",
+    "S2",
+    "T1",
+    "T2",
+    "T3",
+    "T4",
+    "T5"
+   ],
+   "list": [
+    "base",
+    "chick",
+    "mouse",
+    "soy",
+    "tea"
+   ],
+   "total": 4,
+   "repeat_allowed": false,
+   "standard_chain_count": 1,
+   "chains": [
+    {
+     "id": "2-3-standard",
+     "note": "按发序执行的设计侧标准解",
+     "shots": [
+      {
+       "egg": "mouse",
+       "ang": 26,
+       "pow": 0.86,
+       "click": 0.416,
+       "click_tick": 104,
+       "stage": 1,
+       "killed": [
+        "A1",
+        "A2",
+        "A3",
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+       ],
+       "raw_killed": [
+        "A1",
+        "A2",
+        "A3",
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+       ],
+       "hits": [
+        "A1",
+        "A2",
+        "A2",
+        "A3",
+        "T.c1"
+       ],
+       "newly_killed": [
+        "A1",
+        "A2",
+        "A3",
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+       ],
+       "remaining_after": [
+        "R1",
+        "R2",
+        "S1",
+        "S2",
+        "T5"
+       ],
+       "shots_remaining_after": 3,
+       "tokens_remaining_after": [
+        "base",
+        "chick",
+        "soy",
+        "tea"
+       ]
+      },
+      {
+       "egg": "base",
+       "ang": 44,
+       "pow": 1.0,
+       "click": null,
+       "click_tick": null,
+       "stage": 2,
+       "killed": [
+        "S1",
+        "S2"
+       ],
+       "raw_killed": [
+        "S1",
+        "S2"
+       ],
+       "hits": [
+        "S.rope1"
+       ],
+       "newly_killed": [
+        "S1",
+        "S2"
+       ],
+       "remaining_after": [
+        "R1",
+        "R2",
+        "T5"
+       ],
+       "shots_remaining_after": 2,
+       "tokens_remaining_after": [
+        "chick",
+        "soy",
+        "tea"
+       ]
+      },
+      {
+       "egg": "chick",
+       "ang": 62,
+       "pow": 0.9,
+       "click": 0.228,
+       "click_tick": 57,
+       "stage": 2,
+       "killed": [
+        "R1",
+        "R2"
+       ],
+       "raw_killed": [
+        "R1",
+        "R2"
+       ],
+       "hits": [
+        "R1",
+        "R2"
+       ],
+       "newly_killed": [
+        "R1",
+        "R2"
+       ],
+       "remaining_after": [
+        "T5"
+       ],
+       "shots_remaining_after": 1,
+       "tokens_remaining_after": [
+        "soy",
+        "tea"
+       ]
+      },
+      {
+       "egg": "soy",
+       "ang": 33,
+       "pow": 1.0,
+       "click": null,
+       "click_tick": null,
+       "stage": 2,
+       "killed": [
+        "T3",
+        "T4",
+        "T5"
+       ],
+       "raw_killed": [
+        "T3",
+        "T4",
+        "T5"
+       ],
+       "hits": [
+        "T.d2"
+       ],
+       "newly_killed": [
+        "T5"
+       ],
+       "remaining_after": [],
+       "shots_remaining_after": 0,
+       "tokens_remaining_after": [
+        "tea"
+       ]
+      }
+     ],
+     "resolved": true,
+     "covers_all": true,
+     "result": "Win"
+    }
+   ]
+  }
+ }
+}

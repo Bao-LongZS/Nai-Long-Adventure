@@ -1,0 +1,10 @@
+{
+  "schema": "NaiwaP2MenuMusicImportV1",
+  "started_utc": "2026-10-22T05:11:41.226521+00:00",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "source": "UE5/SourceAssets/P2_Audio/奇奇妙妙 - 金风玉露.mp3",
+  "source_sha256": "23759f161cfdc0ce14316c7e006d2a3b5e0ba9c06c34b1b425ebf06b6e683fdf",
+  "asset_path": "/Game/Naiwa/UI/Audio/SW_Menu_JinFengYuLu.SW_Menu_JinFengYuLu",
+  "asset_sha256": "8fc92dde44bd082b1d6ad9261eda70871f64934299d982ceec507244803ca90f",
+  "looping": true
+}

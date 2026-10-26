@@ -1,0 +1,16 @@
+{
+  "phase": "p2_archer_animation_import",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Animation\\P2_Archer\\Naiwa_P2_SlingshotDraw.fbx",
+  "warnings": [],
+  "source_sha256": "891493e4ee1b1e1ccac314daac4c6759fce774f48d4266779eea5622bba7eb82",
+  "imported_paths": [
+    "/Game/Naiwa/P2/Art/Character/AS_Naiwa_P2_SlingshotDraw.AS_Naiwa_P2_SlingshotDraw"
+  ],
+  "status": "imported",
+  "asset": "/Game/Naiwa/P2/Art/Character/AS_Naiwa_P2_SlingshotDraw.AS_Naiwa_P2_SlingshotDraw",
+  "skeleton": "/Game/Naiwa/SK_Naiwa_Skeleton.SK_Naiwa_Skeleton",
+  "duration_seconds": 1.25,
+  "sampled_keys": null,
+  "source_unchanged": true
+}
