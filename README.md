@@ -45,7 +45,8 @@ powershell -File UE5/launch_p1_v7.ps1 -Editor  # 打开编辑器
 | `Space` | 跳 |
 | `Shift` | 切换走和跑 |
 | `R` | 重开本关 |
-| `P` / `Esc` | 暂停 |
+| `P` | 暂停 / 继续 |
+| `Esc` | 回选关 |
 
 跑是走的两倍速，有几个断口必须跑着过。
 
@@ -57,7 +58,7 @@ powershell -File UE5/launch_p1_v7.ps1 -Editor  # 打开编辑器
 | `1` – `5` | 选蛋，2-2 才全开 |
 | 飞行中再点左键 | 奶鸡上窜、奶鼠分裂 |
 | `R` | 重开本关 |
-| `Esc` | 暂停 |
+| `Esc` | 回选关 |
 
 ## 命令
 
