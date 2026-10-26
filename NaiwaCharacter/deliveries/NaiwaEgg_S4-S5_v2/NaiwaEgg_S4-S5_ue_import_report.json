@@ -1,0 +1,133 @@
+{
+  "status": "FAIL_PLAN_ACCEPTANCE",
+  "engine_version": "5.8.3-58210709+++UE5+Release-5.8",
+  "source_fbx": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S4-S5_v2\\SK_NaiwaEgg.fbx",
+  "source_fbx_sha256": "bf9d9126c63bcad3497c24c3ffcac8c3311e0929e280c797b1b9b827e6260f05",
+  "source_spec_version": "2026-10-19-v4",
+  "imported_paths": [
+    "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg.SK_NaiwaEgg"
+  ],
+  "skeletal_mesh": "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg.SK_NaiwaEgg",
+  "skeleton": "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg_Skeleton.SK_NaiwaEgg_Skeleton",
+  "bone_names_from_hierarchy": [
+    "SK_NaiwaEgg_Skeleton",
+    "Root"
+  ],
+  "bone_hierarchy_status": "FAIL_EXTRA_UE_ARMATURE_WRAPPER",
+  "ue_armature_wrapper_imported": true,
+  "ue_armature_wrapper_is_inert": true,
+  "imported_skin_weights": {
+    "vertex_count": 1240,
+    "weighted_vertex_counts_by_bone": {
+      "Root": 1240
+    },
+    "all_vertices_weighted_to_authored_root": true,
+    "wrapper_total_weight": 0.0
+  },
+  "morph_targets": [
+    "EyeWide",
+    "Scream",
+    "Squash"
+  ],
+  "imported_dimensions": {
+    "xyz_cm": [
+      85.0,
+      82.02499389648438,
+      115.0
+    ],
+    "sorted_cm": [
+      82.02499389648438,
+      85.0,
+      115.0
+    ],
+    "origin_cm": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "import_uniform_scale": 100.0,
+  "expected_full_mesh_dimensions_cm_xyz": [
+    85.00000238418579,
+    82.02499747276306,
+    114.99999761581421
+  ],
+  "expected_body_dimensions_cm_xyz": [
+    85.0,
+    82.025,
+    115.0
+  ],
+  "material_slots": [
+    {
+      "slot_name": "M_NaiwaEgg_Body",
+      "material": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Base.MI_NaiwaEgg_Base"
+    },
+    {
+      "slot_name": "M_NaiwaEgg_Eye",
+      "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Eye.M_NaiwaEgg_Eye"
+    },
+    {
+      "slot_name": "M_NaiwaEgg_Pupil",
+      "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Pupil.M_NaiwaEgg_Pupil"
+    },
+    {
+      "slot_name": "M_NaiwaEgg_Mouth",
+      "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Mouth.M_NaiwaEgg_Mouth"
+    }
+  ],
+  "material_instances": {
+    "Base": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Base.MI_NaiwaEgg_Base",
+    "Chick": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Chick.MI_NaiwaEgg_Chick",
+    "Mouse": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Mouse.MI_NaiwaEgg_Mouse",
+    "Soy": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Soy.MI_NaiwaEgg_Soy",
+    "Tea": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Tea.MI_NaiwaEgg_Tea"
+  },
+  "material_instance_body_color_linear": {
+    "Base": [
+      0.8631572127342224,
+      0.34670406579971313,
+      0.020288562402129173,
+      1.0
+    ],
+    "Chick": [
+      0.9130986332893372,
+      0.5583403706550598,
+      0.05448027700185776,
+      1.0
+    ],
+    "Mouse": [
+      0.7912979125976562,
+      0.6938717365264893,
+      0.4793201684951782,
+      1.0
+    ],
+    "Soy": [
+      0.6239603757858276,
+      0.7454041838645935,
+      0.3915724754333496,
+      1.0
+    ],
+    "Tea": [
+      0.577580451965332,
+      0.32314321398735046,
+      0.1441284716129303,
+      1.0
+    ]
+  },
+  "physics_asset": null,
+  "checks": {
+    "skeletal_mesh_imported": true,
+    "three_morph_targets_imported": true,
+    "authored_root_bone_imported": true,
+    "all_vertex_weights_remain_on_authored_root": true,
+    "ue_armature_wrapper_is_inert": true,
+    "import_dimensions_match_fbx_within_5mm": true,
+    "four_material_slots_named": true,
+    "five_unreal_material_instances": true,
+    "no_physics_asset": true,
+    "single_root_bone_hierarchy": false,
+    "triangle_count_within_p2_1800_budget": false
+  },
+  "triangle_count": 2182,
+  "result_note": "FBX 导入与资源检查完成，但旧版 2182 tri 超过 P2 1800 tri 上限，且 UE Skeleton 含未加权臂架包装骨；该导入不满足计划资产门。"
+}

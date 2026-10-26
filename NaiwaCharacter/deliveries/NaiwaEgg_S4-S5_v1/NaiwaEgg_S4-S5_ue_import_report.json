@@ -1,0 +1,117 @@
+{
+  "status": "FAIL",
+  "engine_version": "5.8.3-58210709+++UE5+Release-5.8",
+  "source_fbx": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S4-S5_v1\\SK_NaiwaEgg.fbx",
+  "source_fbx_sha256": "0ae36ed6db441a03e692b37c08bd96e0707296c81ec9e61114b9b76a4848fc0e",
+  "imported_paths": [
+    "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg.SK_NaiwaEgg"
+  ],
+  "skeletal_mesh": "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg.SK_NaiwaEgg",
+  "skeleton": "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg_Skeleton.SK_NaiwaEgg_Skeleton",
+  "bone_names_from_hierarchy": [
+    "SK_NaiwaEgg_Skeleton",
+    "Root"
+  ],
+  "ue_armature_wrapper_imported": true,
+  "morph_targets": [
+    "EyeWide",
+    "Scream",
+    "Squash"
+  ],
+  "imported_dimensions": {
+    "xyz_cm": [
+      85.0,
+      87.05634307861328,
+      115.0
+    ],
+    "sorted_cm": [
+      85.0,
+      87.05634307861328,
+      115.0
+    ],
+    "origin_cm": [
+      0.0,
+      2.515674591064453,
+      0.0
+    ]
+  },
+  "import_uniform_scale": 100.0,
+  "expected_full_mesh_dimensions_cm_xyz": [
+    85.00000238418579,
+    87.05634474754333,
+    114.99999761581421
+  ],
+  "expected_body_dimensions_cm_xyz": [
+    85.0,
+    82.025,
+    115.0
+  ],
+  "material_slots": [
+    {
+      "slot_name": "M_NaiwaEgg_Body",
+      "material": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Base.MI_NaiwaEgg_Base"
+    },
+    {
+      "slot_name": "M_NaiwaEgg_Eye",
+      "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Eye.M_NaiwaEgg_Eye"
+    },
+    {
+      "slot_name": "M_NaiwaEgg_Pupil",
+      "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Pupil.M_NaiwaEgg_Pupil"
+    },
+    {
+      "slot_name": "M_NaiwaEgg_Mouth",
+      "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Mouth.M_NaiwaEgg_Mouth"
+    }
+  ],
+  "material_instances": {
+    "Base": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Base.MI_NaiwaEgg_Base",
+    "Chick": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Chick.MI_NaiwaEgg_Chick",
+    "Mouse": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Mouse.MI_NaiwaEgg_Mouse",
+    "Soy": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Soy.MI_NaiwaEgg_Soy",
+    "Tea": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Tea.MI_NaiwaEgg_Tea"
+  },
+  "material_instance_body_color_linear": {
+    "Base": [
+      0.8631572127342224,
+      0.34670406579971313,
+      0.020288562402129173,
+      1.0
+    ],
+    "Chick": [
+      0.9130986332893372,
+      0.5583403706550598,
+      0.05448027700185776,
+      1.0
+    ],
+    "Mouse": [
+      0.7912979125976562,
+      0.6938717365264893,
+      0.4793201684951782,
+      1.0
+    ],
+    "Soy": [
+      0.6239603757858276,
+      0.7454041838645935,
+      0.3915724754333496,
+      1.0
+    ],
+    "Tea": [
+      0.577580451965332,
+      0.32314321398735046,
+      0.1441284716129303,
+      1.0
+    ]
+  },
+  "physics_asset": null,
+  "checks": {
+    "skeletal_mesh_imported": true,
+    "three_morph_targets_imported": true,
+    "one_root_bone_imported": false,
+    "import_dimensions_match_fbx_within_5mm": true,
+    "four_material_slots_named": true,
+    "five_unreal_material_instances": true,
+    "no_physics_asset": true
+  },
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/Scripts/import_naiwa_egg_s4_s5.py\", line 275, in <module>\n    main()\n  File \"C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/Scripts/import_naiwa_egg_s4_s5.py\", line 271, in main\n    raise RuntimeError(\"UE S4-S5 import validation failed\")\nRuntimeError: UE S4-S5 import validation failed\n"
+}

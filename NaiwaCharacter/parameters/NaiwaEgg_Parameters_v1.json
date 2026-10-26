@@ -1,0 +1,338 @@
+{
+  "asset": "NaiwaEgg",
+  "spec_version": "2026-10-19-v4",
+  "status": "S0-S3_V4_BUILD",
+  "source_of_truth": "书证原图 p11_img4.png 像素实测（1179×1152，蛋高 1141px、最大宽 1044px）",
+  "measured_from_book": {
+    "file": ".workbuddy/work/20261018_奶蛋/p11_img4.png",
+    "body_height_px": 1141,
+    "body_max_width_px": 1044,
+    "width_over_height": 0.915,
+    "widest_point_t_from_bottom": 0.383,
+    "eye_diameter_px": 111,
+    "eye_diameter_over_height": 0.0973,
+    "eye_center_distance_px": 298,
+    "eye_center_distance_over_eye_diameter": 2.69,
+    "eye_gap_over_eye_diameter": 1.69,
+    "eye_line_t_from_bottom": 0.815,
+    "eye_outer_over_halfwidth_at_eyeline": 0.586,
+    "mouth_line_t_from_bottom": 0.71,
+    "mouth_width_over_body_width": 0.2,
+    "top_width_at_t1_px": 83,
+    "top_width_over_body_width": 0.0795
+  },
+  "coordinate_system": {
+    "up_axis": "Z",
+    "front_axis": "-Y",
+    "pivot": "geometric_center",
+    "unit": "meter"
+  },
+  "dimensions": {
+    "height_m": 1.15,
+    "width_m": 0.85,
+    "depth_m": 0.82,
+    "collision_sphere_radius_m": 0.44
+  },
+  "profile": {
+    "note": "末端三环按书证重排：原 v3 在 t=1.00 处 r=0.119（平顶 0.238），实测原图仅 0.0795 蛋宽（≈0.034 m），是圆顶不是宽平顶",
+    "t": [
+      0.0,
+      0.02,
+      0.04,
+      0.06,
+      0.16,
+      0.26,
+      0.34,
+      0.44,
+      0.54,
+      0.64,
+      0.74,
+      0.84,
+      0.895,
+      0.93,
+      0.965,
+      1.0
+    ],
+    "radius_x_m": [
+      0.0,
+      0.139,
+      0.198,
+      0.234,
+      0.323,
+      0.404,
+      0.425,
+      0.421,
+      0.405,
+      0.38,
+      0.34,
+      0.29,
+      0.228,
+      0.19,
+      0.139,
+      0.034
+    ],
+    "cross_section_y_over_x": 0.965,
+    "interpolation": "monotone_cubic",
+    "widest_point_t": 0.34,
+    "widest_point_z_below_center_m": 0.184,
+    "top_width_m": 0.068,
+    "top_style": "round_cap",
+    "ring_t": [
+      0.02,
+      0.04,
+      0.06,
+      0.1,
+      0.16,
+      0.2,
+      0.26,
+      0.3,
+      0.34,
+      0.39,
+      0.44,
+      0.49,
+      0.54,
+      0.59,
+      0.64,
+      0.7,
+      0.77,
+      0.84,
+      0.895,
+      0.93,
+      0.965,
+      1.0
+    ]
+  },
+  "eye": {
+    "construction": "surface_cap",
+    "construction_note": "眼白/瞳孔/高光一律用贴面冠（rim 顶点投到体表 +0.003/+0.009/+0.013，中心沿法线凸起 0.010/0.006/0.004）。禁止用球或半球：眼横跨 0.150 m，该高度体表前后落差 0.087 m，球面眼会内缘陷进体表 0.036、外缘浮空 0.088",
+    "centers_m": [
+      [
+        -0.15,
+        -0.259,
+        0.362
+      ],
+      [
+        0.15,
+        -0.259,
+        0.362
+      ]
+    ],
+    "center_distance_m": 0.3,
+    "gap_m": 0.15,
+    "visible_diameter_m": 0.15,
+    "radius_m": 0.075,
+    "pupil_radius_m": 0.052,
+    "glint_radius_m": 0.016,
+    "glint_offset_m": [
+      -0.021,
+      -0.013,
+      0.021
+    ],
+    "glint_angle_degrees": 135,
+    "eye_line_t": 0.815,
+    "anchor_y_note": "y = -0.259 = 该高度体表 y_surf(-0.256) - 0.003；y_surf(x,z) = -0.965*rx(t)*sqrt(1-(x/rx(t))^2)，rx(0.815)=0.305。严禁照抄 -0.325",
+    "pixel_at_96": {
+      "eye_diameter": 12.5,
+      "pupil_diameter": 8.7,
+      "center_distance": 25.0,
+      "gap": 12.5
+    },
+    "outer_edge_over_halfwidth": 0.738,
+    "eye_wide_scale": [
+      1.05,
+      1.0,
+      1.18
+    ],
+    "eye_wide_note": "非等比。等比 1.15 会把外缘推到 77.5% 顶边",
+    "note": "眼径 0.150 为『整颗眼白』口径；书证 111px 量的是绿色巩膜暗区，两者不可直接比。瞳孔 0.104 ≈ 书证暗区 93%",
+    "surface_layers": [
+      {
+        "center_bump_m": 0.01,
+        "rim_offset_m": 0.003
+      },
+      {
+        "center_bump_m": 0.006,
+        "rim_offset_m": 0.009
+      },
+      {
+        "center_bump_m": 0.004,
+        "rim_offset_m": 0.013
+      }
+    ]
+  },
+  "mouth": {
+    "center_m": [
+      0.0,
+      -0.348,
+      0.234
+    ],
+    "closed_width_height_m": [
+      0.17,
+      0.014
+    ],
+    "scream_width_height_m": [
+      0.2,
+      0.1
+    ],
+    "smile_rise_m": 0.02,
+    "mouth_line_t": 0.71,
+    "y_note": "-0.348 = 体表 -0.345 再凸 0.003",
+    "measured": {
+      "bbox_t": 0.71,
+      "width_over_height": 0.183,
+      "corner_y_px": 321,
+      "lowest_y_px": 345,
+      "delta_px_down": 24,
+      "eye_center_to_mouth_lowest_px": 134
+    },
+    "surface_offset_m": 0.003,
+    "mesh_steps_x": 24,
+    "mesh_steps_z": 8
+  },
+  "morph_targets": {
+    "EyeWide": {
+      "pupil_relative_scale": 0.85,
+      "eye_wide_scale": [
+        1.05,
+        1.0,
+        1.18
+      ]
+    },
+    "Scream": {
+      "mouth_height_m": 0.1,
+      "body_scale_z": 0.94,
+      "body_scale_y": 1.04
+    },
+    "Squash": {
+      "body_scale_x": 1.12,
+      "body_scale_y": 1.12,
+      "body_scale_z": 0.8,
+      "volume_ratio": 1.00352
+    }
+  },
+  "mesh_budget": {
+    "radial_segments": 36,
+    "body_rings": 22,
+    "estimated_triangles": 2182,
+    "maximum_triangles": 2600,
+    "note": "径向从 28 提到 36：177px 下 28 段仍可见多边形棱边"
+  },
+  "material_slots": {
+    "Body": {
+      "color": "#EF9F27",
+      "roughness": 0.55,
+      "metallic": 0.0
+    },
+    "EyeWhite": {
+      "color": "#5E9B33",
+      "roughness": 0.3,
+      "metallic": 0.0,
+      "note": "名字沿用旧槽名，实际是绿巩膜"
+    },
+    "Pupil": {
+      "color": "#14210E",
+      "roughness": 0.15,
+      "metallic": 0.0,
+      "specular_ior_level": 0.0
+    },
+    "Mouth": {
+      "color": "#2A1A10",
+      "roughness": 0.6,
+      "metallic": 0.0
+    }
+  },
+  "variants": {
+    "Base": "#EF9F27",
+    "Chick": "#F5C542",
+    "Mouse": "#E6D9B8",
+    "Soy": "#CFE0A8",
+    "Tea": "#C89A6A"
+  },
+  "screen_targets": {
+    "aim_height_px": 96,
+    "flight_height_px_1080p": 177,
+    "eye_diameter_px_aim": 12.5,
+    "eye_diameter_px_flight": 23.0
+  },
+  "changed_vs_v3": [
+    {
+      "item": "eye 构造",
+      "v3": "球面",
+      "v4": "贴面冠 surface_cap",
+      "why": "眼横跨 0.15 m，体表落差 0.087 m，球贴不住（v3 相切感一半来自这里）"
+    },
+    {
+      "item": "eye.radius_m",
+      "v3": 0.095,
+      "v4": 0.075,
+      "why": "可见径 0.150；v3 实际可见 0.19 且中心距=眼径"
+    },
+    {
+      "item": "eye.centers_m[].x",
+      "v3": 0.1,
+      "v4": 0.15,
+      "why": "中心距写死 0.300（书证绝对值），不是 2.69× 比值"
+    },
+    {
+      "item": "eye.centers_m[].z",
+      "v3": 0.11,
+      "v4": 0.362,
+      "why": "书证眼线 t=0.815；v3 t=0.596 把眼压在最鼓处"
+    },
+    {
+      "item": "eye.centers_m[].y",
+      "v3": -0.325,
+      "v4": -0.259,
+      "why": "必须按 y_surf 算；照抄 -0.325 会让眼睛浮起成贴片"
+    },
+    {
+      "item": "eye.pupil_radius_m",
+      "v3": 0.043,
+      "v4": 0.052,
+      "why": "瞳孔 0.104 ≈ 书证暗区 93%，96px 下 8.7px"
+    },
+    {
+      "item": "eye.gap",
+      "v3": "未定义（歧义）",
+      "v4": "gap_m 0.150 写死",
+      "why": "删掉『1.0–1.1×眼径』这句歧义表述，只写两个绝对值"
+    },
+    {
+      "item": "mouth.center_m[2]",
+      "v3": -0.02,
+      "v4": 0.234,
+      "why": "书证嘴线 t=0.710"
+    },
+    {
+      "item": "mouth 尺寸",
+      "v3": "0.200 × 0.012 直线",
+      "v4": "0.170 × 0.014 上翘 0.020",
+      "why": "书证嘴宽 0.183 身高，是上翘缝"
+    },
+    {
+      "item": "profile r(t=1.0)",
+      "v3": 0.119,
+      "v4": 0.034,
+      "why": "书证顶宽仅 0.08 身宽，是圆顶"
+    },
+    {
+      "item": "mesh radial_segments",
+      "v3": 28,
+      "v4": 36,
+      "why": "177px 下 28 段可见棱边"
+    },
+    {
+      "item": "material EyeWhite",
+      "v3": "#FFFFFF 白",
+      "v4": "#5E9B33 绿",
+      "why": "v3 做成白巩膜+绿瞳，与书证相反"
+    }
+  ],
+  "arbiter": "art-director P2-ART-02",
+  "visual_review": "V4_BUILD_COMPLETE_AWAITING_USER_VISUAL_REVIEW",
+  "revision_notes": [
+    "按书第11页图7.4及 v4 返修说明重建；轮廓、眼位、眼色与上翘嘴已调整。",
+    "保留 1.150×0.850×0.820 m 尺寸、几何中心枢轴、0.440 m 碰撞球及三个形态键名称。",
+    "当前为 v4 几何与材质预览，等待用户视觉验收；未宣称最终美术签收。"
+  ]
+}

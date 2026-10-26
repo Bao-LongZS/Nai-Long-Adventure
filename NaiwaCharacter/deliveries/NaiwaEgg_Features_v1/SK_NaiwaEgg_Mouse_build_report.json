@@ -1,0 +1,131 @@
+{
+  "status": "PASS_BLENDER_FEATURE_VARIANT",
+  "kind": "Mouse",
+  "source_blend": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S4-S5_v3_candidate\\SK_NaiwaEgg_S4-S5.blend",
+  "source_spec_version": "2026-10-19-v4",
+  "output_blend": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_Features_v1\\SK_NaiwaEgg_Mouse.blend",
+  "fbx": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_Features_v1\\SK_NaiwaEgg_Mouse.fbx",
+  "fbx_sha256": "d565a27d3b6410114808b30ded0104882b69c552def200a8bfb0fceb37106190",
+  "blender_version": "5.2.2 LTS",
+  "mesh": "SK_NaiwaEgg_Mouse",
+  "skeleton": "SK_NaiwaEgg_Skeleton",
+  "root_bones": [
+    "Root"
+  ],
+  "body_vertex_count": 1031,
+  "feature_vertex_count": 48,
+  "body_triangle_count": 1798,
+  "feature_triangle_count": 88,
+  "triangle_count": 1886,
+  "morph_targets": [
+    "EyeWide",
+    "Scream",
+    "Squash"
+  ],
+  "material_slots": [
+    "M_NaiwaEgg_Body",
+    "M_NaiwaEgg_Eye",
+    "M_NaiwaEgg_Pupil",
+    "M_NaiwaEgg_Mouth",
+    "M_NaiwaEgg_Accent"
+  ],
+  "body_bounds_m": {
+    "x": [
+      -0.42500001192092896,
+      0.42500001192092896
+    ],
+    "y": [
+      -0.4101249873638153,
+      0.4101249873638153
+    ],
+    "z": [
+      -0.574999988079071,
+      0.574999988079071
+    ]
+  },
+  "feature_bounds_m": {
+    "x": [
+      -0.40126216411590576,
+      0.40460044145584106
+    ],
+    "y": [
+      -0.017716314643621445,
+      0.033716317266225815
+    ],
+    "z": [
+      0.3648377060890198,
+      0.5551623106002808
+    ]
+  },
+  "squash_body_bounds_m": {
+    "x": [
+      -0.4760000133514405,
+      0.4760000133514405
+    ],
+    "y": [
+      -0.4593399858474732,
+      0.4593399858474732
+    ],
+    "z": [
+      -0.45999999046325685,
+      0.45999999046325685
+    ]
+  },
+  "squash_feature_bounds_m": {
+    "x": [
+      -0.4494136238098145,
+      0.453152494430542
+    ],
+    "y": [
+      -0.01984227240085602,
+      0.03776227533817292
+    ],
+    "z": [
+      0.2918701648712158,
+      0.44412984848022463
+    ]
+  },
+  "squash_silhouette_break_m": 0.14180780222852887,
+  "squash_silhouette_break_px_at_96px_body": 11.840951486082162,
+  "feature_spec": {
+    "feature": "圆耳 ×2",
+    "semantic": "分裂成 3 只 = 耳朵分两边",
+    "geometry": {
+      "centers_x_m": [
+        -0.3,
+        0.3
+      ],
+      "z_m": 0.46,
+      "t": 0.9,
+      "center_y_m": -0.02,
+      "radius_m": 0.105,
+      "thickness_m": 0.06,
+      "segments": 12,
+      "tilt_out_deg": 25,
+      "inner_sink_m": 0.028
+    },
+    "accent_color": "#B99C7A",
+    "correction_note": "耳心 x=±0.32、r 0.105 → 内缘 0.215，而该高度蛋半宽 0.194，几何上悬空 0.021 m。靠外张 25° 让耳根埋进体表补偿；实现时请以外张后的根部接触点为准，不要按纯 X 向圆贴",
+    "visibility": {
+      "exposed_m": 0.204,
+      "px_96": 17.0,
+      "px_177": 31.4
+    },
+    "tris": 88,
+    "squash_check": "X 向特征，Squash 压 Z 反而让断开更大（0.203→0.227）",
+    "note": "耳心从 +0.49 下移到 +0.46（该处真实半宽 0.190，原值内缘 0.195 反而在体外），嵌入 2.8 cm"
+  },
+  "checks": {
+    "reviewed_base_vertices_unchanged": true,
+    "feature_closed_solid": true,
+    "one_root_bone": true,
+    "all_vertices_weighted_to_root": true,
+    "three_named_morphs": true,
+    "feature_group_isolated": true,
+    "triangle_budget": true,
+    "squash_silhouette_break_8px": true,
+    "body_vertex_count_unchanged": true
+  },
+  "feature_spec_version": "2026-10-19-v5",
+  "base_source_fbx_sha256": "70dcd47fab2821e1b2a75d240d0d51ac42d5dd123fcbe9edfd9c777baf3b918b"
+}

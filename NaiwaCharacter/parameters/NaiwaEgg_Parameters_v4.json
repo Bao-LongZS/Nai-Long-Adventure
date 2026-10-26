@@ -1,0 +1,529 @@
+{
+ "asset": "NaiwaEgg",
+ "spec_version": "2026-10-19-v5",
+ "status": "DRAFT_PENDING_ART_SIGNOFF",
+ "source_of_truth": "书证原图 p11_img4.png 像素实测（1179×1152，蛋高 1141px、最大宽 1044px）",
+ "measured_from_book": {
+  "file": ".workbuddy/work/20261018_奶蛋/p11_img4.png",
+  "body_height_px": 1141,
+  "body_max_width_px": 1044,
+  "width_over_height": 0.915,
+  "widest_point_t_from_bottom": 0.383,
+  "eye_diameter_px": 111,
+  "eye_diameter_over_height": 0.0973,
+  "eye_center_distance_px": 298,
+  "eye_center_distance_over_eye_diameter": 2.69,
+  "eye_gap_over_eye_diameter": 1.69,
+  "eye_line_t_from_bottom": 0.815,
+  "eye_outer_over_halfwidth_at_eyeline": 0.586,
+  "mouth_line_t_from_bottom": 0.71,
+  "mouth_width_over_body_width": 0.2,
+  "top_width_at_t1_px": 83,
+  "top_width_over_body_width": 0.0795
+ },
+ "coordinate_system": {
+  "up_axis": "Z",
+  "front_axis": "-Y",
+  "pivot": "geometric_center",
+  "unit": "meter"
+ },
+ "dimensions": {
+  "height_m": 1.15,
+  "width_m": 0.85,
+  "depth_m": 0.82,
+  "collision_sphere_radius_m": 0.44
+ },
+ "profile": {
+  "note": "末端三环按书证重排：原 v3 在 t=1.00 处 r=0.119（平顶 0.238），实测原图仅 0.0795 蛋宽（≈0.034 m），是圆顶不是宽平顶",
+  "t": [
+   0.0,
+   0.02,
+   0.04,
+   0.06,
+   0.16,
+   0.26,
+   0.34,
+   0.44,
+   0.54,
+   0.64,
+   0.74,
+   0.84,
+   0.895,
+   0.93,
+   0.965,
+   1.0
+  ],
+  "radius_x_m": [
+   0.0,
+   0.139,
+   0.198,
+   0.234,
+   0.323,
+   0.404,
+   0.425,
+   0.421,
+   0.405,
+   0.38,
+   0.34,
+   0.29,
+   0.228,
+   0.19,
+   0.139,
+   0.034
+  ],
+  "cross_section_y_over_x": 0.965,
+  "interpolation": "monotone_cubic",
+  "widest_point_t": 0.34,
+  "widest_point_z_below_center_m": 0.184,
+  "top_width_m": 0.068,
+  "top_style": "round_cap",
+  "ring_t": [
+   0.02,
+   0.04,
+   0.06,
+   0.1,
+   0.16,
+   0.2,
+   0.26,
+   0.3,
+   0.34,
+   0.39,
+   0.44,
+   0.49,
+   0.54,
+   0.59,
+   0.64,
+   0.7,
+   0.77,
+   0.84,
+   0.895,
+   0.93,
+   0.965,
+   1.0
+  ]
+ },
+ "eye": {
+  "construction": "surface_cap",
+  "construction_note": "眼白/瞳孔/高光一律用贴面冠（rim 顶点投到体表 +0.003/+0.009/+0.013，中心沿法线凸起 0.010/0.006/0.004）。禁止用球或半球：眼横跨 0.150 m，该高度体表前后落差 0.087 m，球面眼会内缘陷进体表 0.036、外缘浮空 0.088",
+  "centers_m": [
+   [
+    -0.15,
+    -0.259,
+    0.362
+   ],
+   [
+    0.15,
+    -0.259,
+    0.362
+   ]
+  ],
+  "center_distance_m": 0.3,
+  "gap_m": 0.15,
+  "visible_diameter_m": 0.15,
+  "radius_m": 0.075,
+  "pupil_radius_m": 0.052,
+  "glint_radius_m": 0.016,
+  "glint_offset_m": [
+   -0.021,
+   -0.013,
+   0.021
+  ],
+  "glint_angle_degrees": 135,
+  "eye_line_t": 0.815,
+  "anchor_y_note": "y = -0.259 = 该高度体表 y_surf(-0.256) - 0.003；y_surf(x,z) = -0.965*rx(t)*sqrt(1-(x/rx(t))^2)，rx(0.815)=0.305。严禁照抄 -0.325",
+  "pixel_at_96": {
+   "eye_diameter": 12.5,
+   "pupil_diameter": 8.7,
+   "center_distance": 25.0,
+   "gap": 12.5
+  },
+  "outer_edge_over_halfwidth": 0.738,
+  "eye_wide_scale": [
+   1.05,
+   1.0,
+   1.18
+  ],
+  "eye_wide_note": "非等比。等比 1.15 会把外缘推到 77.5% 顶边",
+  "note": "眼径 0.150 为『整颗眼白』口径；书证 111px 量的是绿色巩膜暗区，两者不可直接比。瞳孔 0.104 ≈ 书证暗区 93%"
+ },
+ "mouth": {
+  "center_m": [
+   0.0,
+   -0.348,
+   0.234
+  ],
+  "closed_width_height_m": [
+   0.17,
+   0.014
+  ],
+  "scream_width_height_m": [
+   0.2,
+   0.1
+  ],
+  "smile_rise_m": 0.02,
+  "mouth_line_t": 0.71,
+  "y_note": "-0.348 = 体表 -0.345 再凸 0.003",
+  "measured": {
+   "bbox_t": 0.71,
+   "width_over_height": 0.183,
+   "corner_y_px": 321,
+   "lowest_y_px": 345,
+   "delta_px_down": 24,
+   "eye_center_to_mouth_lowest_px": 134
+  }
+ },
+ "morph_targets": {
+  "EyeWide": {
+   "eye_scale": 1.15,
+   "pupil_relative_scale": 0.85
+  },
+  "Scream": {
+   "mouth_height_m": 0.1,
+   "body_scale_z": 0.94,
+   "body_scale_y": 1.04
+  },
+  "Squash": {
+   "body_scale_x": 1.12,
+   "body_scale_y": 1.12,
+   "body_scale_z": 0.8,
+   "volume_ratio": 1.00352
+  }
+ },
+ "mesh_budget": {
+  "radial_segments": 36,
+  "body_rings": 22,
+  "estimated_triangles": 2400,
+  "maximum_triangles": 2600,
+  "note": "径向 36 段、body 22 环；五变体 1758–1800 tri（art 口径），单资产硬上限 2600（含特征）。特征必须封闭实体",
+  "per_variant_max_triangles": 2600
+ },
+ "material_slots": {
+  "Body": {
+   "color": "#EF9F27",
+   "roughness": 0.55,
+   "metallic": 0.0
+  },
+  "EyeWhite": {
+   "color": "#5E9B33",
+   "roughness": 0.3,
+   "metallic": 0.0,
+   "note": "名字沿用旧槽名，实际是绿巩膜"
+  },
+  "Pupil": {
+   "color": "#14210E",
+   "roughness": 0.15,
+   "metallic": 0.0
+  },
+  "Mouth": {
+   "color": "#2A1A10",
+   "roughness": 0.6,
+   "metallic": 0.0
+  }
+ },
+ "variants": {
+  "Base": "#EF9F27",
+  "Chick": "#F5C542",
+  "Mouse": "#E6D9B8",
+  "Soy": "#CFE0A8",
+  "Tea": "#C89A6A"
+ },
+ "screen_targets": {
+  "aim_height_px": 96,
+  "flight_height_px_1080p": 177,
+  "eye_diameter_px_aim": 10.0,
+  "eye_diameter_px_flight": 18.5
+ },
+ "changed_vs_v3": [
+  {
+   "item": "eye 构造",
+   "v3": "球面",
+   "v4": "贴面冠 surface_cap",
+   "why": "眼横跨 0.15 m，体表落差 0.087 m，球贴不住（v3 相切感一半来自这里）"
+  },
+  {
+   "item": "eye.radius_m",
+   "v3": 0.095,
+   "v4": 0.075,
+   "why": "可见径 0.150；v3 实际可见 0.19 且中心距=眼径"
+  },
+  {
+   "item": "eye.centers_m[].x",
+   "v3": 0.1,
+   "v4": 0.15,
+   "why": "中心距写死 0.300（书证绝对值），不是 2.69× 比值"
+  },
+  {
+   "item": "eye.centers_m[].z",
+   "v3": 0.11,
+   "v4": 0.362,
+   "why": "书证眼线 t=0.815；v3 t=0.596 把眼压在最鼓处"
+  },
+  {
+   "item": "eye.centers_m[].y",
+   "v3": -0.325,
+   "v4": -0.259,
+   "why": "必须按 y_surf 算；照抄 -0.325 会让眼睛浮起成贴片"
+  },
+  {
+   "item": "eye.pupil_radius_m",
+   "v3": 0.043,
+   "v4": 0.052,
+   "why": "瞳孔 0.104 ≈ 书证暗区 93%，96px 下 8.7px"
+  },
+  {
+   "item": "eye.gap",
+   "v3": "未定义（歧义）",
+   "v4": "gap_m 0.150 写死",
+   "why": "删掉『1.0–1.1×眼径』这句歧义表述，只写两个绝对值"
+  },
+  {
+   "item": "mouth.center_m[2]",
+   "v3": -0.02,
+   "v4": 0.234,
+   "why": "书证嘴线 t=0.710"
+  },
+  {
+   "item": "mouth 尺寸",
+   "v3": "0.200 × 0.012 直线",
+   "v4": "0.170 × 0.014 上翘 0.020",
+   "why": "书证嘴宽 0.183 身高，是上翘缝"
+  },
+  {
+   "item": "profile r(t=1.0)",
+   "v3": 0.119,
+   "v4": 0.034,
+   "why": "书证顶宽仅 0.08 身宽，是圆顶"
+  },
+  {
+   "item": "mesh radial_segments",
+   "v3": 28,
+   "v4": 36,
+   "why": "177px 下 28 段可见棱边"
+  },
+  {
+   "item": "material EyeWhite",
+   "v3": "#FFFFFF 白",
+   "v4": "#5E9B33 绿",
+   "why": "v3 做成白巩膜+绿瞳，与书证相反"
+  }
+ ],
+ "arbiter": "art-director P2-ART-02",
+ "arbiter_variants": "art-director P2-ART-03（造型）+ engineering-lead P2-ENG-03（实现）",
+ "variant_features": {
+  "principle": "靠方位区分，不靠形状细节。四者在 96px 屏幕上各占不同象限：正中单峰（鸡）/ 上方左右双凸（鼠）/ 右下侧挂竖片（豆）/ 右上斜单线（奶）。形状糊了，方向仍对得上",
+  "implementation": {
+   "route": "A —— 五变体各一份 SkinnedMesh，共用 1 个 Skeleton",
+   "why_not_attachments": "附加 StaticMesh 吃不到 morph，Squash 时特征悬空。且 morph 循环是全顶点写回，特征在 shape key 之前 append 就自动带上",
+   "assets": [
+    "SK_NaiwaEgg",
+    "SK_NaiwaEgg_Chick",
+    "SK_NaiwaEgg_Mouse",
+    "SK_NaiwaEgg_Soy",
+    "SK_NaiwaEgg_Tea",
+    "SKEL_NaiwaEgg（共用）"
+   ],
+   "accent_material_slot": 5,
+   "cpp": "TMap<uint8, USkeletalMesh*> 硬引用（同时解决 cook 引用）；换蛋时 SetSkeletalMeshAsset + SetMaterial(4, accentMI)",
+   "vertex_group_rule": "每个特征顶点用独立 component group（FEAT_CREST_* / FEAT_EAR_* / FEAT_SCARF_* / FEAT_STRAW_* / FEAT_PEARL_*），绝不并入 body group —— 否则现有尺寸 check 会失真",
+   "build_order": "每份资产各自走一遍：① body 顶点 → ② 眼/嘴（贴面冠）→ ③ 特征顶点 append（只 append 自己那份）→ ④ 材质索引 → ⑤ 建 3 个 shape key（此时顶点数已最终）→ ⑥ 导出",
+   "closed_solid": "每个特征必须是封闭实体，否则 squash_volume 校验（按全顶点算）会误判",
+   "asset_count_note": "5 份网格，每份只含自己的特征 —— 不存在「同一网格里有五套特征需要隐藏」的问题。art 修订版里那个「WPO 塌陷会污染包围盒」的顾虑，只在单网格方案下成立",
+   "tris_per_asset": "base 1758 / chick 1782 / mouse 1846 / soy 1878 / tea 1806，全部 ≤2600",
+   "acceptance_clause": "每变体网格只包含自身特征顶点组；validation 逐资产各跑一份，body 指标仍只取 body 顶点组；特征 AABB 按顶点组单独导出，供 min_silhouette_break_px_after_squash 计算",
+   "seed_scaling_fact": "工程现状（2026-10-20 已核）：SpawnEggActor 三处调用（P2GameMode.cpp:392/454/765）全部传 ScaleMultiplier = 1.0，SetActorScale3D 恒为 1.0 —— 判定球放大 1.9 但视觉网格完全不放大。这是既有实现，不是本轮引入。是否修属于玩法/UX 决策，见 open_questions",
+   "material_slots": "5 槽（去掉珍珠后回退，不再需要 Accent2）：\n0 Body（5 个 Body MI 各一份）/ 1 EyeWhite / 2 Pupil / 3 Mouth / 4 Accent\nTea 的吸管走 slot 4 = M_Egg_Accent_Straw；Chick=M_Egg_Accent_Crest；Soy=M_Egg_Accent_Scarf；\nBase 与 Mouse 的 slot 4 未指派（预期状态，不是缺陷）。\n共 3 个 Accent MI + 5 个 Body MI = 8 个材质实例。\n❌ 不用 VertexColor（UE 线性 vs Blender sRGB，红围巾会发闷）\nvalidation 判据：five_material_slots（0-3 锁定，4 允许空）",
+   "naming_note": "Base 变体沿用旧资产名 SK_NaiwaEgg，不加 _Base 后缀 —— 避免让已是正式资产的那份变成孤儿",
+   "slot_map": {
+    "0": "M_Egg_Body_<Variant>　五变体各一份 MI",
+    "1": "M_Egg_EyeWhite　共用",
+    "2": "M_Egg_Pupil　共用",
+    "3": "M_Egg_Mouth　共用",
+    "4": "Accent：Chick=Crest / Soy=Scarf / Tea=Straw；Base 与 Mouse 未指派（预期）",
+    "rule": "同一 MI 不得跨变体复用"
+   },
+   "morph_risk": "5 个 mesh 每个都要自己的 morph。Skeleton 只共用骨骼，不共用 morph —— 'morph 共享骨架' 是失败模式。\n只能共用 UStaticMesh/Parameterize 那种关节点或花骨架上，SkeletalMesh 的 morph 住在 Mesh 自己的顶点缓冲里。\n硬要求：所有 5 份的 Body 拓扑与顶点数必须与 Base 逐点一致 —— morph 数据是一串顶点偏移，第 1187 号点一旦指错就会撕裂。最稳的做法是从同一个 .blend、同一个 body 顶点数组生成五份，而不是分别建完再 append 特征"
+  },
+  "base": {
+   "feature": "none",
+   "note": "基准形态，没有本事。也是唯一的「空白轮廓」——玩家靠它认「这枚没技能」",
+   "tris": 1758
+  },
+  "chick": {
+   "feature": "三叶鸡冠",
+   "semantic": "起手扑腾往上冲 = 冠往上长",
+   "geometry": {
+    "lobes": 3,
+    "offsets_x_m": [
+     -0.09,
+     0.0,
+     0.09
+    ],
+    "lobe_h_m": [
+     0.175,
+     0.216,
+     0.175
+    ],
+    "base_z_m": 0.495,
+    "base_t": 0.93,
+    "base_center_y_m": -0.06,
+    "thickness_m": 0.05,
+    "span_x_m": 0.28
+   },
+   "accent_color": "#E8663C",
+   "visibility": {
+    "exposed_m": 0.1088,
+    "px_96": 9.1,
+    "px_177": 16.7,
+    "note": "Squash=1"
+   },
+   "tris": 24,
+   "squash_check": "Squash 把 Z 压到 0.80：中瓣 0.160→0.101 m（96px 8.4px）刚好压线；原 0.130 压后只剩 0.077，不合格。这是全案唯一对 Squash 敏感的特征",
+   "note": "冠没长高，是底座沉了：冠基从 +0.541 沉到 +0.495（该处真实半宽 0.180，冠基全埋入），中瓣加到 0.216 补偿，露出仍是 0.109"
+  },
+  "mouse": {
+   "feature": "圆耳 ×2",
+   "semantic": "分裂成 3 只 = 耳朵分两边",
+   "geometry": {
+    "centers_x_m": [
+     -0.3,
+     0.3
+    ],
+    "z_m": 0.46,
+    "t": 0.9,
+    "center_y_m": -0.02,
+    "radius_m": 0.105,
+    "thickness_m": 0.06,
+    "segments": 12,
+    "tilt_out_deg": 25,
+    "inner_sink_m": 0.028
+   },
+   "accent_color": "#B99C7A",
+   "correction_note": "耳心 x=±0.32、r 0.105 → 内缘 0.215，而该高度蛋半宽 0.194，几何上悬空 0.021 m。靠外张 25° 让耳根埋进体表补偿；实现时请以外张后的根部接触点为准，不要按纯 X 向圆贴",
+   "visibility": {
+    "exposed_m": 0.204,
+    "px_96": 17.0,
+    "px_177": 31.4
+   },
+   "tris": 88,
+   "squash_check": "X 向特征，Squash 压 Z 反而让断开更大（0.203→0.227）",
+   "note": "耳心从 +0.49 下移到 +0.46（该处真实半宽 0.190，原值内缘 0.195 反而在体外），嵌入 2.8 cm"
+  },
+  "soy": {
+   "feature": "红围巾",
+   "semantic": "膨胀变胖 = 围巾勒紧",
+   "geometry": {
+    "band_z_m": 0.1,
+    "band_x_m": 0.445,
+    "band_y_m": 0.432,
+    "band_h_m": 0.1,
+    "section": "矩形截面闭口环（外壁+内壁+上下环）",
+    "knot_center_m": [
+     0.4,
+     -0.13,
+     0.05
+    ],
+    "tail_center_x_m": 0.46,
+    "tail_from_z_m": 0.06,
+    "tail_to_z_m": -0.26,
+    "tail_section_m": [
+     0.13,
+     0.1
+    ],
+    "inner_x_m": 0.37,
+    "inner_y_m": 0.357,
+    "outer_x_m": 0.445,
+    "outer_y_m": 0.43,
+    "tail_inner_x_m": 0.41,
+    "tail_outer_x_m": 0.53,
+    "tail_thick_m": 0.12,
+    "tail_z_from": 0.05,
+    "tail_z_to": -0.26,
+    "radial_thickness_m": 0.075,
+    "band_t": 0.552
+   },
+   "accent_color": "#C0392B",
+   "correction_note": "内壁 0.373 在颈位最窄处只嵌 1.8cm，加厚到 X0.370/Y0.357（径向厚 75mm）。不下移到肩位 —— 围巾必须在颈位（t=0.552）才读得出。另：art 曾把尾往内收以『嵌 body 2cm』，口径错 —— 悬挂件嵌的是它所依附的件。尾已恢复外缘 0.53",
+   "visibility": {
+    "exposed_m": 0.118,
+    "px_96": 9.8,
+    "px_177": 18.2,
+    "note": "环带横向 + 尾巴竖向组成一个红色 L 形，同一种红，不靠明暗差"
+   },
+   "tris": 120,
+   "squash_check": "侧挂竖片，Squash 后断开更大（0.10–0.15 → 0.112–0.168）"
+  },
+  "tea": {
+   "feature": "斜吸管（原「吸管 + 珍珠」的珍珠已按用户要求删除）",
+   "semantic": "撞击爆开 1.5 m 清场 = 珍珠撒出来",
+   "geometry": {
+    "straw_total_len_m": 0.42,
+    "straw_embedded_m": 0.12,
+    "straw_exposed_m": 0.3,
+    "straw_root_m": [
+     0.091,
+     -0.06,
+     0.442
+    ],
+    "straw_dir": [
+     0.574,
+     0.0,
+     0.819
+    ],
+    "straw_r_m": 0.05,
+    "straw_segments": 6,
+    "caps": 2
+   },
+   "accent_color": "#F5EAD2",
+   "pearl_color": "#6B4423",
+   "visibility": {
+    "exposed_m": 0.169,
+    "px_96": 14.1,
+    "px_177": 26.0
+   },
+   "tris": 24,
+   "squash_check": "斜向特征，Squash 后断开略减但仍达标（0.211→0.169）",
+   "removed_note": "2026-10-20 用户要求去掉珍珠。连带效果：slot 5 不再需要、6 槽回退 5 槽、少一个 MI、少一条对比度验收"
+  },
+  "color_not_enough_note": "五色两两 ΔE 最小 16.2（奶鼠米白 vs 豆奶浅绿）—— 理论上「可辨」，但那是并排比较的结果。实机上玩家要凭记忆做绝对判断，且蛋一直在动、只占屏宽 6%–11%",
+  "acceptance_note": "最先失效点：Squash 权重 1 + 96px + 运动 三重叠加下的鸡冠（8.4px）。用它当判据，其余三个在该条件下反而更清楚",
+  "tris_final": {
+   "base": 1758,
+   "chick": 1782,
+   "mouse": 1846,
+   "soy": 1878,
+   "tea": 1782,
+   "max": 1878,
+   "budget": 2600,
+   "headroom": 722
+  },
+  "squash_acceptance": "min_silhouette_break_px_after_squash >= 8.0，逐资产跑；条件 = Squash 权重 1 + 96 px + 运动中。最紧两项：鸡冠 9.1 px、围巾尾 9.8 px",
+  "soy_expand_visual": {
+   "judgement": "豆奶膨胀 1.9× 时判定球同步放大到 0.836（sim_core: R0 0.44 × rm 1.90），视觉整体 uniform scale 1.9。围巾尾外缘 0.53 << 0.836，engineering 提的『尾巴穿过目标才记命中』不成立",
+   "consequence": "真正要接受的是反向的：判定球比视觉体大 0.25 m，看起来还没碰到就判中。这是膨胀设定的固有代价，不是围巾引入的",
+   "action": "膨胀态不需要额外的判定提示；如果试玩觉得违和，调 rm 而不是调围巾"
+  },
+  "open_questions": [
+   {
+    "id": "Q1",
+    "question": "豆奶判定 1.9× 但视觉 ScaleMultiplier 恒 1.0 —— 要不要把视觉同步上去",
+    "facts": [
+     "NaiwaP2Types.h:141-143 GetEggSpec 里 RadiusMultiplier=1.90 写死为常量，无激活时刻、无持续时间 → 不是『膨胀技能』，是『天生 1.9 倍判定』",
+     "SpawnEggActor 三处（P2GameMode.cpp:392/454/765）全部传 ScaleMultiplier=1.0",
+     "反例：鼠分裂 0.72 同时传给视觉缩放与判定半径（Ballistics.cpp:270）—— 同一机制，鼠双向联动、豆奶单向",
+     "两成员在对『是否有意』上有分歧，但结论一致：视觉应同步"
+    ],
+    "options": [
+     "A 视觉同步 1.9：瞄准 182px / 飞行 336px，偏差从 34px 收敛到约 4px；代价是豆奶验收图与皮兜预览图重出，且设计图『膨胀 1.9×』措辞要改成『天生大一圈』",
+     "B 保持现状 + HUD 状态提示：成本最低，但判定边界永远不可见"
+    ],
+    "recommend": "A —— 判定边界不可见是恶性体验；且两个成员独立给出同一结论",
+    "status": "待用户拍板"
+   }
+  ],
+  "final_revision": "2026-10-20 收口：art 拿到 engineering 的真实轮廓表（x/y 半宽随 z 变化）后复算，发现此前用椭球估算在这些高度上整体宽了 3–8 cm，三处特征实际悬空。已全部重定位，面数零变化",
+  "acceptance_final": "逐资产跑 min_silhouette_break_px_after_squash >= 8.0，口径 = Squash 权重 1 + 96px，导出 squash 后顶点坐标。特征尺寸任何改动一律重跑该项，不得目视放过（余量仅 1.1 px）",
+  "known_risk": "珍珠删除后，原先那条「珍珠对天空的对比度 |ΔL|≥0.25」的实测项一并作废 —— 不再有贴在天色上的深色物件。\n剩余唯一遮挡风险在 M2 的 HUD（飞行态高角度抛射会被面板吃掉），已单列到计划书待办。",
+  "judgment_note": "art 表里的 9.1 / 17.0 / 9.8 / 14.1 px 是按 83.5 px/m 换算，而实机相机是 89.3 px/m，换基准后应为 9.8 / 18.3 / 10.5 / 15.2 px。验收脚本直接断言：对每份资产，在 squash 后顶点集上求 max(特征顶点) − max(body 同侧顶点) ≥ 8.0/83.5 米，不写死像素数",
+  "variant_features_note": "五变体 = 光头 / 鸡冠 / 双耳 / 围巾 / 吸管。均只靠剪影方位区分，不靠颜色。"
+ }
+}

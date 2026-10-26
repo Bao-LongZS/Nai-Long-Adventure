@@ -1,0 +1,147 @@
+{
+  "status": "PASS_BLENDER_FEATURE_VARIANT",
+  "kind": "Soy",
+  "source_blend": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S4-S5_v3_candidate\\SK_NaiwaEgg_S4-S5.blend",
+  "source_spec_version": "2026-10-19-v4",
+  "output_blend": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_Features_v1\\SK_NaiwaEgg_Soy.blend",
+  "fbx": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_Features_v1\\SK_NaiwaEgg_Soy.fbx",
+  "fbx_sha256": "142a0ca1ae7b749b3fc611b2135bec71c0422626baba795dc4aa056975447dfc",
+  "blender_version": "5.2.2 LTS",
+  "mesh": "SK_NaiwaEgg_Soy",
+  "skeleton": "SK_NaiwaEgg_Skeleton",
+  "root_bones": [
+    "Root"
+  ],
+  "body_vertex_count": 1031,
+  "feature_vertex_count": 62,
+  "body_triangle_count": 1798,
+  "feature_triangle_count": 116,
+  "triangle_count": 1914,
+  "morph_targets": [
+    "EyeWide",
+    "Scream",
+    "Squash"
+  ],
+  "material_slots": [
+    "M_NaiwaEgg_Body",
+    "M_NaiwaEgg_Eye",
+    "M_NaiwaEgg_Pupil",
+    "M_NaiwaEgg_Mouth",
+    "M_NaiwaEgg_Accent"
+  ],
+  "body_bounds_m": {
+    "x": [
+      -0.42500001192092896,
+      0.42500001192092896
+    ],
+    "y": [
+      -0.4101249873638153,
+      0.4101249873638153
+    ],
+    "z": [
+      -0.574999988079071,
+      0.574999988079071
+    ]
+  },
+  "feature_bounds_m": {
+    "x": [
+      -0.445,
+      0.525
+    ],
+    "y": [
+      -0.432,
+      0.432
+    ],
+    "z": [
+      -0.26,
+      0.15000000000000002
+    ]
+  },
+  "squash_body_bounds_m": {
+    "x": [
+      -0.4760000133514405,
+      0.4760000133514405
+    ],
+    "y": [
+      -0.4593399858474732,
+      0.4593399858474732
+    ],
+    "z": [
+      -0.45999999046325685,
+      0.45999999046325685
+    ]
+  },
+  "squash_feature_bounds_m": {
+    "x": [
+      -0.49840000000000007,
+      0.5880000000000001
+    ],
+    "y": [
+      -0.48384000000000005,
+      0.48384000000000005
+    ],
+    "z": [
+      -0.20800000000000002,
+      0.12000000000000002
+    ]
+  },
+  "squash_silhouette_break_m": 0.12178969171505762,
+  "squash_silhouette_break_px_at_96px_body": 10.16943925820731,
+  "feature_spec": {
+    "feature": "红围巾",
+    "semantic": "膨胀变胖 = 围巾勒紧",
+    "geometry": {
+      "band_z_m": 0.1,
+      "band_x_m": 0.445,
+      "band_y_m": 0.432,
+      "band_h_m": 0.1,
+      "section": "矩形截面闭口环（外壁+内壁+上下环）",
+      "knot_center_m": [
+        0.4,
+        -0.13,
+        0.05
+      ],
+      "tail_center_x_m": 0.46,
+      "tail_from_z_m": 0.06,
+      "tail_to_z_m": -0.26,
+      "tail_section_m": [
+        0.13,
+        0.1
+      ],
+      "inner_x_m": 0.37,
+      "inner_y_m": 0.357,
+      "outer_x_m": 0.445,
+      "outer_y_m": 0.43,
+      "tail_inner_x_m": 0.41,
+      "tail_outer_x_m": 0.53,
+      "tail_thick_m": 0.12,
+      "tail_z_from": 0.05,
+      "tail_z_to": -0.26,
+      "radial_thickness_m": 0.075,
+      "band_t": 0.552
+    },
+    "accent_color": "#C0392B",
+    "correction_note": "内壁 0.373 在颈位最窄处只嵌 1.8cm，加厚到 X0.370/Y0.357（径向厚 75mm）。不下移到肩位 —— 围巾必须在颈位（t=0.552）才读得出。另：art 曾把尾往内收以『嵌 body 2cm』，口径错 —— 悬挂件嵌的是它所依附的件。尾已恢复外缘 0.53",
+    "visibility": {
+      "exposed_m": 0.118,
+      "px_96": 9.8,
+      "px_177": 18.2,
+      "note": "环带横向 + 尾巴竖向组成一个红色 L 形，同一种红，不靠明暗差"
+    },
+    "tris": 120,
+    "squash_check": "侧挂竖片，Squash 后断开更大（0.10–0.15 → 0.112–0.168）"
+  },
+  "checks": {
+    "reviewed_base_vertices_unchanged": true,
+    "feature_closed_solid": true,
+    "one_root_bone": true,
+    "all_vertices_weighted_to_root": true,
+    "three_named_morphs": true,
+    "feature_group_isolated": true,
+    "triangle_budget": true,
+    "squash_silhouette_break_8px": true,
+    "body_vertex_count_unchanged": true
+  },
+  "feature_spec_version": "2026-10-19-v5",
+  "base_source_fbx_sha256": "70dcd47fab2821e1b2a75d240d0d51ac42d5dd123fcbe9edfd9c777baf3b918b"
+}

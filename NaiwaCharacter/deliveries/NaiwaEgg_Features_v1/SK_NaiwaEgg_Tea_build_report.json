@@ -1,0 +1,135 @@
+{
+  "status": "PASS_BLENDER_FEATURE_VARIANT",
+  "kind": "Tea",
+  "source_blend": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S4-S5_v3_candidate\\SK_NaiwaEgg_S4-S5.blend",
+  "source_spec_version": "2026-10-19-v4",
+  "output_blend": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_Features_v1\\SK_NaiwaEgg_Tea.blend",
+  "fbx": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_Features_v1\\SK_NaiwaEgg_Tea.fbx",
+  "fbx_sha256": "64eda5ed31e93bedef36ddf16ef509ba8639202d69f5b02e2114b39c38acb6e4",
+  "blender_version": "5.2.2 LTS",
+  "mesh": "SK_NaiwaEgg_Tea",
+  "skeleton": "SK_NaiwaEgg_Skeleton",
+  "root_bones": [
+    "Root"
+  ],
+  "body_vertex_count": 1031,
+  "feature_vertex_count": 12,
+  "body_triangle_count": 1798,
+  "feature_triangle_count": 20,
+  "triangle_count": 1818,
+  "morph_targets": [
+    "EyeWide",
+    "Scream",
+    "Squash"
+  ],
+  "material_slots": [
+    "M_NaiwaEgg_Body",
+    "M_NaiwaEgg_Eye",
+    "M_NaiwaEgg_Pupil",
+    "M_NaiwaEgg_Mouth",
+    "M_NaiwaEgg_Accent"
+  ],
+  "body_bounds_m": {
+    "x": [
+      -0.42500001192092896,
+      0.42500001192092896
+    ],
+    "y": [
+      -0.4101249873638153,
+      0.4101249873638153
+    ],
+    "z": [
+      -0.574999988079071,
+      0.574999988079071
+    ]
+  },
+  "feature_bounds_m": {
+    "x": [
+      -0.0188169926404953,
+      0.30412474274635315
+    ],
+    "y": [
+      -0.1033012717962265,
+      -0.016698729246854782
+    ],
+    "z": [
+      0.31503504514694214,
+      0.7163674831390381
+    ]
+  },
+  "squash_body_bounds_m": {
+    "x": [
+      -0.4760000133514405,
+      0.4760000133514405
+    ],
+    "y": [
+      -0.4593399858474732,
+      0.4593399858474732
+    ],
+    "z": [
+      -0.45999999046325685,
+      0.45999999046325685
+    ]
+  },
+  "squash_feature_bounds_m": {
+    "x": [
+      -0.02107503175735474,
+      0.34061971187591555
+    ],
+    "y": [
+      -0.11569742441177369,
+      -0.01870257675647736
+    ],
+    "z": [
+      0.2520280361175537,
+      0.5730939865112304
+    ]
+  },
+  "squash_silhouette_break_m": 0.1817903952310573,
+  "squash_silhouette_break_px_at_96px_body": 15.179498001793284,
+  "feature_spec": {
+    "feature": "斜吸管（原「吸管 + 珍珠」的珍珠已按用户要求删除）",
+    "semantic": "撞击爆开 1.5 m 清场 = 珍珠撒出来",
+    "geometry": {
+      "straw_total_len_m": 0.42,
+      "straw_embedded_m": 0.12,
+      "straw_exposed_m": 0.3,
+      "straw_root_m": [
+        0.091,
+        -0.06,
+        0.442
+      ],
+      "straw_dir": [
+        0.574,
+        0.0,
+        0.819
+      ],
+      "straw_r_m": 0.05,
+      "straw_segments": 6,
+      "caps": 2
+    },
+    "accent_color": "#F5EAD2",
+    "pearl_color": "#6B4423",
+    "visibility": {
+      "exposed_m": 0.169,
+      "px_96": 14.1,
+      "px_177": 26.0
+    },
+    "tris": 24,
+    "squash_check": "斜向特征，Squash 后断开略减但仍达标（0.211→0.169）",
+    "removed_note": "2026-10-20 用户要求去掉珍珠。连带效果：slot 5 不再需要、6 槽回退 5 槽、少一个 MI、少一条对比度验收"
+  },
+  "checks": {
+    "reviewed_base_vertices_unchanged": true,
+    "feature_closed_solid": true,
+    "one_root_bone": true,
+    "all_vertices_weighted_to_root": true,
+    "three_named_morphs": true,
+    "feature_group_isolated": true,
+    "triangle_budget": true,
+    "squash_silhouette_break_8px": true,
+    "body_vertex_count_unchanged": true
+  },
+  "feature_spec_version": "2026-10-19-v5",
+  "base_source_fbx_sha256": "70dcd47fab2821e1b2a75d240d0d51ac42d5dd123fcbe9edfd9c777baf3b918b"
+}

@@ -1,0 +1,92 @@
+{
+  "status": "PASS_S4S5_BLENDER_EXPORT_AWAITING_UE_IMPORT",
+  "source_blend": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S0-S3\\NaiwaEgg_S0-S3.blend",
+  "source_spec_version": "2026-10-19-v4",
+  "source_blend_sha256": "a6a3480aba16d05b3c9f29d5cab57448852af77b3e109254c233aa1b6e47d24a",
+  "output_blend": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S4-S5_v2\\SK_NaiwaEgg_S4-S5.blend",
+  "output_blend_sha256": "91cd97e2ba91efa73b743d2408930d483e9f1d498a908c9d79ce169bb3b0198a",
+  "fbx": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S4-S5_v2\\SK_NaiwaEgg.fbx",
+  "fbx_sha256": "bf9d9126c63bcad3497c24c3ffcac8c3311e0929e280c797b1b9b827e6260f05",
+  "fbx_bytes": 119180,
+  "blender_version": "5.2.2 LTS",
+  "skeletal_mesh_name": "SK_NaiwaEgg",
+  "skeleton_name": "SK_NaiwaEgg_Skeleton",
+  "bone_names": [
+    "Root"
+  ],
+  "vertex_count": 1240,
+  "triangle_count": 2182,
+  "full_mesh_dimensions_m": [
+    0.8500000238418579,
+    0.8202499747276306,
+    1.149999976158142
+  ],
+  "morph_targets": [
+    "Basis",
+    "EyeWide",
+    "Scream",
+    "Squash"
+  ],
+  "body_variant_previews": [
+    {
+      "variant": "Base",
+      "color_hex": "#EF9F27",
+      "image": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S4-S5_v2\\NaiwaEgg_Base_177px.png",
+      "sha256": "e64833978470ee5b9a38a12f4f389cb3c9aba6b4a1c7844beea6b9041ad2bf9d"
+    },
+    {
+      "variant": "Chick",
+      "color_hex": "#F5C542",
+      "image": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S4-S5_v2\\NaiwaEgg_Chick_177px.png",
+      "sha256": "470e513ee34a2c801fdd8c189ece10827fe4cbc037b336542a2ad07135d320de"
+    },
+    {
+      "variant": "Mouse",
+      "color_hex": "#E6D9B8",
+      "image": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S4-S5_v2\\NaiwaEgg_Mouse_177px.png",
+      "sha256": "3e4d84b7f1e76ab0a0256d66c3896777f036a2172aa14cd2d7128a9df558a0c1"
+    },
+    {
+      "variant": "Soy",
+      "color_hex": "#CFE0A8",
+      "image": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S4-S5_v2\\NaiwaEgg_Soy_177px.png",
+      "sha256": "50d194862a5f68e54669af5158becea5998741ac99bc72a0f804a25dd0ec6378"
+    },
+    {
+      "variant": "Tea",
+      "color_hex": "#C89A6A",
+      "image": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S4-S5_v2\\NaiwaEgg_Tea_177px.png",
+      "sha256": "6b0ab8a0670cc21fefe5c5996880a8177abbabc96cc68ed0d47a8a634e40cacd"
+    }
+  ],
+  "blender_preview_materials": [
+    "MI_NaiwaEgg_Base_Preview",
+    "MI_NaiwaEgg_Chick_Preview",
+    "MI_NaiwaEgg_Mouse_Preview",
+    "MI_NaiwaEgg_Soy_Preview",
+    "MI_NaiwaEgg_Tea_Preview"
+  ],
+  "planned_unreal_material_instances": [
+    "MI_NaiwaEgg_Base",
+    "MI_NaiwaEgg_Chick",
+    "MI_NaiwaEgg_Mouse",
+    "MI_NaiwaEgg_Soy",
+    "MI_NaiwaEgg_Tea"
+  ],
+  "expected_import_dimensions_cm": {
+    "width": 85.0,
+    "depth": 82.025,
+    "height": 115.0
+  },
+  "checks": {
+    "source_s0_s3_metrics_pass": true,
+    "source_is_active_v4": true,
+    "dimensions_match_active_s0_s3": true,
+    "exact_three_morphs": true,
+    "single_root_bone": true,
+    "all_vertices_weighted_to_root": true,
+    "triangle_budget": true,
+    "five_colors_match_active_spec": true,
+    "fbx_exported": true
+  }
+}

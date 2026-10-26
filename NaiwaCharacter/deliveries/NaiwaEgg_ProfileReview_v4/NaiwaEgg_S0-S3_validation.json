@@ -1,0 +1,65 @@
+{
+  "status": "PASS_METRICS_SHAPE_REVISION_REQUIRED",
+  "visual_review": "FAIL_SHAPE_NEEDS_REVISION",
+  "revision_notes": [
+    "Eye whites are -Y-facing hemispheres with buried equators, per modeling plan.",
+    "Scream mouth tapers into a rounded aperture and follows the morphed body surface.",
+    "96px review reads too flat-topped and pointed at the base; revise the body silhouette before art approval."
+  ],
+  "blender_version": "5.2.2 LTS",
+  "spec_version": "2026-10-19-profile-review-v4",
+  "blend_file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_ProfileReview_v4\\NaiwaEgg_S0-S3.blend",
+  "preview_files": [
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_ProfileReview_v4\\NaiwaEgg_front.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_ProfileReview_v4\\NaiwaEgg_side.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_ProfileReview_v4\\NaiwaEgg_top.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_ProfileReview_v4\\NaiwaEgg_Scream.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_ProfileReview_v4\\NaiwaEgg_EyeWide.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_ProfileReview_v4\\NaiwaEgg_Squash.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_ProfileReview_v4\\NaiwaEgg_aim_96px.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_ProfileReview_v4\\NaiwaEgg_flight_closed_177px.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_ProfileReview_v4\\NaiwaEgg_flight_scream_177px.png"
+  ],
+  "body_dimensions_m": [
+    0.85,
+    0.8202499999999999,
+    1.15
+  ],
+  "widest_point_z_m": -0.18399999999999997,
+  "flat_top_width_m": 0.238,
+  "morph_keys": [
+    "Basis",
+    "EyeWide",
+    "Scream",
+    "Squash"
+  ],
+  "mouth_closed_and_scream_height_m": [
+    0.012000000104308128,
+    0.10000000149011612
+  ],
+  "triangle_count": 1758,
+  "material_slots": [
+    "M_NaiwaEgg_Body_Base",
+    "M_NaiwaEgg_EyeWhite",
+    "M_NaiwaEgg_Pupil",
+    "M_NaiwaEgg_Mouth"
+  ],
+  "squash_volume_ratio": 1.0035199821679226,
+  "squash_volume_error_percent": 0.35199821679225973,
+  "checks": {
+    "one_body_mesh_object": true,
+    "body_height": true,
+    "body_width": true,
+    "body_depth": true,
+    "pivot_at_center": true,
+    "widest_point_z": true,
+    "flat_top_width": true,
+    "triangle_budget": true,
+    "four_material_slots": true,
+    "exact_morph_keys": true,
+    "morph_defaults_are_neutral": true,
+    "closed_mouth_height": true,
+    "scream_mouth_height": true,
+    "squash_volume": true
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "status": "PASS_METRICS_VISUAL_REVIEW_PENDING",
+  "visual_review": "V4_BUILD_COMPLETE_AWAITING_USER_VISUAL_REVIEW",
+  "revision_notes": [
+    "按书第11页图7.4及 v4 返修说明重建；轮廓、眼位、眼色与上翘嘴已调整。",
+    "保留 1.150×0.850×0.820 m 尺寸、几何中心枢轴、0.440 m 碰撞球及三个形态键名称。",
+    "当前为 v4 几何与材质预览，等待用户视觉验收；未宣称最终美术签收。"
+  ],
+  "blender_version": "5.2.2 LTS",
+  "spec_version": "2026-10-19-v4",
+  "blend_file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S0-S3\\NaiwaEgg_S0-S3.blend",
+  "preview_files": [
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S0-S3\\NaiwaEgg_front.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S0-S3\\NaiwaEgg_side.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S0-S3\\NaiwaEgg_top.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S0-S3\\NaiwaEgg_Scream.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S0-S3\\NaiwaEgg_EyeWide.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S0-S3\\NaiwaEgg_Squash.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S0-S3\\NaiwaEgg_aim_96px.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S0-S3\\NaiwaEgg_flight_closed_177px.png",
+    "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S0-S3\\NaiwaEgg_flight_scream_177px.png"
+  ],
+  "body_dimensions_m": [
+    0.85,
+    0.8202499999999999,
+    1.15
+  ],
+  "widest_point_z_m": -0.18399999999999997,
+  "top_width_m": 0.068,
+  "eye_construction": "surface_cap",
+  "eye_centers_m": [
+    [
+      -0.15,
+      -0.259,
+      0.362
+    ],
+    [
+      0.15,
+      -0.259,
+      0.362
+    ]
+  ],
+  "eye_surface_layers": [
+    {
+      "center_bump_m": 0.01,
+      "rim_offset_m": 0.003
+    },
+    {
+      "center_bump_m": 0.006,
+      "rim_offset_m": 0.009
+    },
+    {
+      "center_bump_m": 0.004,
+      "rim_offset_m": 0.013
+    }
+  ],
+  "morph_keys": [
+    "Basis",
+    "EyeWide",
+    "Scream",
+    "Squash"
+  ],
+  "mouth_closed_and_scream_height_m": [
+    0.014,
+    0.10000000894069672
+  ],
+  "triangle_count": 2182,
+  "mesh_radial_segments": 36,
+  "body_ring_count": 22,
+  "material_colors_hex": {
+    "Body": "#EF9F27",
+    "EyeWhite": "#5E9B33",
+    "Pupil": "#14210E",
+    "Mouth": "#2A1A10"
+  },
+  "material_slots": [
+    "M_NaiwaEgg_Body_Base",
+    "M_NaiwaEgg_EyeWhite",
+    "M_NaiwaEgg_Pupil",
+    "M_NaiwaEgg_Mouth"
+  ],
+  "squash_volume_ratio": 1.003519982511618,
+  "squash_volume_error_percent": 0.3519982511617892,
+  "checks": {
+    "one_body_mesh_object": true,
+    "body_height": true,
+    "body_width": true,
+    "body_depth": true,
+    "pivot_at_center": true,
+    "widest_point_z": true,
+    "round_top_width": true,
+    "triangle_budget": true,
+    "four_material_slots": true,
+    "surface_cap_eyes": true,
+    "eye_line_t": true,
+    "exact_morph_keys": true,
+    "morph_defaults_are_neutral": true,
+    "closed_mouth_thickness": true,
+    "closed_mouth_smile_rise": true,
+    "scream_mouth_height": true,
+    "scream_mouth_width": true,
+    "squash_volume": true
+  }
+}

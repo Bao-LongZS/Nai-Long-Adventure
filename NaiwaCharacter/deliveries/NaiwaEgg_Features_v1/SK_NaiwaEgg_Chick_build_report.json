@@ -1,0 +1,135 @@
+{
+  "status": "PASS_BLENDER_FEATURE_VARIANT",
+  "kind": "Chick",
+  "source_blend": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S4-S5_v3_candidate\\SK_NaiwaEgg_S4-S5.blend",
+  "source_spec_version": "2026-10-19-v4",
+  "output_blend": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_Features_v1\\SK_NaiwaEgg_Chick.blend",
+  "fbx": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_Features_v1\\SK_NaiwaEgg_Chick.fbx",
+  "fbx_sha256": "38dcac65f441168b1b96540f466b2f1b7ac7b19fed6bd917cbc4973b14b4b040",
+  "blender_version": "5.2.2 LTS",
+  "mesh": "SK_NaiwaEgg_Chick",
+  "skeleton": "SK_NaiwaEgg_Skeleton",
+  "root_bones": [
+    "Root"
+  ],
+  "body_vertex_count": 1031,
+  "feature_vertex_count": 18,
+  "body_triangle_count": 1798,
+  "feature_triangle_count": 24,
+  "triangle_count": 1822,
+  "morph_targets": [
+    "EyeWide",
+    "Scream",
+    "Squash"
+  ],
+  "material_slots": [
+    "M_NaiwaEgg_Body",
+    "M_NaiwaEgg_Eye",
+    "M_NaiwaEgg_Pupil",
+    "M_NaiwaEgg_Mouth",
+    "M_NaiwaEgg_Accent"
+  ],
+  "body_bounds_m": {
+    "x": [
+      -0.42500001192092896,
+      0.42500001192092896
+    ],
+    "y": [
+      -0.4101249873638153,
+      0.4101249873638153
+    ],
+    "z": [
+      -0.574999988079071,
+      0.574999988079071
+    ]
+  },
+  "feature_bounds_m": {
+    "x": [
+      -0.14000000059604645,
+      0.14000000059604645
+    ],
+    "y": [
+      -0.08500000089406967,
+      -0.034999996423721313
+    ],
+    "z": [
+      0.4949999749660492,
+      0.7109999656677246
+    ]
+  },
+  "squash_body_bounds_m": {
+    "x": [
+      -0.4760000133514405,
+      0.4760000133514405
+    ],
+    "y": [
+      -0.4593399858474732,
+      0.4593399858474732
+    ],
+    "z": [
+      -0.45999999046325685,
+      0.45999999046325685
+    ]
+  },
+  "squash_feature_bounds_m": {
+    "x": [
+      -0.15680000066757205,
+      0.15680000066757205
+    ],
+    "y": [
+      -0.09520000100135804,
+      -0.039199995994567874
+    ],
+    "z": [
+      0.39599997997283937,
+      0.5687999725341797
+    ]
+  },
+  "squash_silhouette_break_m": 0.10879999393488757,
+  "squash_silhouette_break_px_at_96px_body": 9.084799493563112,
+  "feature_spec": {
+    "feature": "三叶鸡冠",
+    "semantic": "起手扑腾往上冲 = 冠往上长",
+    "geometry": {
+      "lobes": 3,
+      "offsets_x_m": [
+        -0.09,
+        0.0,
+        0.09
+      ],
+      "lobe_h_m": [
+        0.175,
+        0.216,
+        0.175
+      ],
+      "base_z_m": 0.495,
+      "base_t": 0.93,
+      "base_center_y_m": -0.06,
+      "thickness_m": 0.05,
+      "span_x_m": 0.28
+    },
+    "accent_color": "#E8663C",
+    "visibility": {
+      "exposed_m": 0.1088,
+      "px_96": 9.1,
+      "px_177": 16.7,
+      "note": "Squash=1"
+    },
+    "tris": 24,
+    "squash_check": "Squash 把 Z 压到 0.80：中瓣 0.160→0.101 m（96px 8.4px）刚好压线；原 0.130 压后只剩 0.077，不合格。这是全案唯一对 Squash 敏感的特征",
+    "note": "冠没长高，是底座沉了：冠基从 +0.541 沉到 +0.495（该处真实半宽 0.180，冠基全埋入），中瓣加到 0.216 补偿，露出仍是 0.109"
+  },
+  "checks": {
+    "reviewed_base_vertices_unchanged": true,
+    "feature_closed_solid": true,
+    "one_root_bone": true,
+    "all_vertices_weighted_to_root": true,
+    "three_named_morphs": true,
+    "feature_group_isolated": true,
+    "triangle_budget": true,
+    "squash_silhouette_break_8px": true,
+    "body_vertex_count_unchanged": true
+  },
+  "feature_spec_version": "2026-10-19-v5",
+  "base_source_fbx_sha256": "70dcd47fab2821e1b2a75d240d0d51ac42d5dd123fcbe9edfd9c777baf3b918b"
+}

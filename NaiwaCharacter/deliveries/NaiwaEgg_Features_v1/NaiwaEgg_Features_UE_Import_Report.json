@@ -1,0 +1,321 @@
+{
+  "status": "PASS_ALL_FOUR_SPECIAL_EGGS_IMPORTED",
+  "engine_version": "5.8.3-58210709+++UE5+Release-5.8",
+  "base_mesh_preserved": "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg",
+  "shared_skeleton": "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg_Chick_Skeleton.SK_NaiwaEgg_Chick_Skeleton",
+  "accent_materials": {
+    "Chick": "/Game/Naiwa/P2/Art/Egg/Materials/MI_Accent_Crest.MI_Accent_Crest",
+    "Soy": "/Game/Naiwa/P2/Art/Egg/Materials/MI_Accent_Scarf.MI_Accent_Scarf",
+    "Tea": "/Game/Naiwa/P2/Art/Egg/Materials/MI_Accent_Straw.MI_Accent_Straw"
+  },
+  "variants": [
+    {
+      "kind": "Chick",
+      "fbx": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_Features_v1\\SK_NaiwaEgg_Chick.fbx",
+      "fbx_sha256": "38dcac65f441168b1b96540f466b2f1b7ac7b19fed6bd917cbc4973b14b4b040",
+      "imported_paths": [
+        "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg_Chick.SK_NaiwaEgg_Chick"
+      ],
+      "skeletal_mesh": "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg_Chick.SK_NaiwaEgg_Chick",
+      "skeleton": "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg_Chick_Skeleton.SK_NaiwaEgg_Chick_Skeleton",
+      "bone_names": [
+        "Root"
+      ],
+      "morph_targets": [
+        "EyeWide",
+        "Scream",
+        "Squash"
+      ],
+      "vertex_count": 1049,
+      "weighted_vertex_counts_by_bone": {
+        "Root": 1049
+      },
+      "triangle_count_from_verified_fbx": 1822,
+      "imported_bounds": {
+        "xyz_cm": [
+          85.0,
+          82.02499389648438,
+          128.5999984741211
+        ],
+        "origin_cm": [
+          0.0,
+          0.0,
+          6.799999237060547
+        ]
+      },
+      "expected_import_bounds_cm": [
+        85.00000238418579,
+        82.02499747276306,
+        128.59999537467957
+      ],
+      "material_slots": [
+        {
+          "slot_name": "M_NaiwaEgg_Body",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Chick.MI_NaiwaEgg_Chick"
+        },
+        {
+          "slot_name": "M_NaiwaEgg_Eye",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Eye.M_NaiwaEgg_Eye"
+        },
+        {
+          "slot_name": "M_NaiwaEgg_Pupil",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Pupil.M_NaiwaEgg_Pupil"
+        },
+        {
+          "slot_name": "M_NaiwaEgg_Mouth",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Mouth.M_NaiwaEgg_Mouth"
+        },
+        {
+          "slot_name": "M_NaiwaEgg_Accent",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/MI_Accent_Crest.MI_Accent_Crest"
+        }
+      ],
+      "physics_asset": null,
+      "squash_silhouette_break_px_at_96px_body": 9.084799493563112,
+      "checks": {
+        "skeletal_mesh_imported": true,
+        "shared_root_skeleton": true,
+        "single_root_bone_hierarchy": true,
+        "all_vertices_weighted_to_root": true,
+        "three_named_morphs": true,
+        "material_slots_named": true,
+        "body_material_assigned": true,
+        "accent_material_assigned": true,
+        "no_physics_asset": true,
+        "triangle_budget": true,
+        "import_bounds_match_export": true,
+        "squash_silhouette_break_8px": true
+      }
+    },
+    {
+      "kind": "Mouse",
+      "fbx": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_Features_v1\\SK_NaiwaEgg_Mouse.fbx",
+      "fbx_sha256": "d565a27d3b6410114808b30ded0104882b69c552def200a8bfb0fceb37106190",
+      "imported_paths": [
+        "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg_Mouse.SK_NaiwaEgg_Mouse"
+      ],
+      "skeletal_mesh": "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg_Mouse.SK_NaiwaEgg_Mouse",
+      "skeleton": "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg_Chick_Skeleton.SK_NaiwaEgg_Chick_Skeleton",
+      "bone_names": [
+        "Root"
+      ],
+      "morph_targets": [
+        "EyeWide",
+        "Scream",
+        "Squash"
+      ],
+      "vertex_count": 1079,
+      "weighted_vertex_counts_by_bone": {
+        "Root": 1079
+      },
+      "triangle_count_from_verified_fbx": 1886,
+      "imported_bounds": {
+        "xyz_cm": [
+          85.0,
+          82.02499389648438,
+          115.0
+        ],
+        "origin_cm": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected_import_bounds_cm": [
+        85.00000238418579,
+        82.02499747276306,
+        114.99999761581421
+      ],
+      "material_slots": [
+        {
+          "slot_name": "M_NaiwaEgg_Body",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Mouse.MI_NaiwaEgg_Mouse"
+        },
+        {
+          "slot_name": "M_NaiwaEgg_Eye",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Eye.M_NaiwaEgg_Eye"
+        },
+        {
+          "slot_name": "M_NaiwaEgg_Pupil",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Pupil.M_NaiwaEgg_Pupil"
+        },
+        {
+          "slot_name": "M_NaiwaEgg_Mouth",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Mouth.M_NaiwaEgg_Mouth"
+        }
+      ],
+      "physics_asset": null,
+      "squash_silhouette_break_px_at_96px_body": 11.840951486082162,
+      "checks": {
+        "skeletal_mesh_imported": true,
+        "shared_root_skeleton": true,
+        "single_root_bone_hierarchy": true,
+        "all_vertices_weighted_to_root": true,
+        "three_named_morphs": true,
+        "material_slots_named": true,
+        "body_material_assigned": true,
+        "accent_material_assigned": true,
+        "no_physics_asset": true,
+        "triangle_budget": true,
+        "import_bounds_match_export": true,
+        "squash_silhouette_break_8px": true
+      }
+    },
+    {
+      "kind": "Soy",
+      "fbx": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_Features_v1\\SK_NaiwaEgg_Soy.fbx",
+      "fbx_sha256": "142a0ca1ae7b749b3fc611b2135bec71c0422626baba795dc4aa056975447dfc",
+      "imported_paths": [
+        "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg_Soy.SK_NaiwaEgg_Soy"
+      ],
+      "skeletal_mesh": "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg_Soy.SK_NaiwaEgg_Soy",
+      "skeleton": "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg_Chick_Skeleton.SK_NaiwaEgg_Chick_Skeleton",
+      "bone_names": [
+        "Root"
+      ],
+      "morph_targets": [
+        "EyeWide",
+        "Scream",
+        "Squash"
+      ],
+      "vertex_count": 1093,
+      "weighted_vertex_counts_by_bone": {
+        "Root": 1093
+      },
+      "triangle_count_from_verified_fbx": 1914,
+      "imported_bounds": {
+        "xyz_cm": [
+          97.0,
+          86.4000015258789,
+          115.0
+        ],
+        "origin_cm": [
+          4.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected_import_bounds_cm": [
+        97.0,
+        86.4,
+        114.99999761581421
+      ],
+      "material_slots": [
+        {
+          "slot_name": "M_NaiwaEgg_Body",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Soy.MI_NaiwaEgg_Soy"
+        },
+        {
+          "slot_name": "M_NaiwaEgg_Eye",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Eye.M_NaiwaEgg_Eye"
+        },
+        {
+          "slot_name": "M_NaiwaEgg_Pupil",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Pupil.M_NaiwaEgg_Pupil"
+        },
+        {
+          "slot_name": "M_NaiwaEgg_Mouth",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Mouth.M_NaiwaEgg_Mouth"
+        },
+        {
+          "slot_name": "M_NaiwaEgg_Accent",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/MI_Accent_Scarf.MI_Accent_Scarf"
+        }
+      ],
+      "physics_asset": null,
+      "squash_silhouette_break_px_at_96px_body": 10.16943925820731,
+      "checks": {
+        "skeletal_mesh_imported": true,
+        "shared_root_skeleton": true,
+        "single_root_bone_hierarchy": true,
+        "all_vertices_weighted_to_root": true,
+        "three_named_morphs": true,
+        "material_slots_named": true,
+        "body_material_assigned": true,
+        "accent_material_assigned": true,
+        "no_physics_asset": true,
+        "triangle_budget": true,
+        "import_bounds_match_export": true,
+        "squash_silhouette_break_8px": true
+      }
+    },
+    {
+      "kind": "Tea",
+      "fbx": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_Features_v1\\SK_NaiwaEgg_Tea.fbx",
+      "fbx_sha256": "64eda5ed31e93bedef36ddf16ef509ba8639202d69f5b02e2114b39c38acb6e4",
+      "imported_paths": [
+        "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg_Tea.SK_NaiwaEgg_Tea"
+      ],
+      "skeletal_mesh": "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg_Tea.SK_NaiwaEgg_Tea",
+      "skeleton": "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg_Chick_Skeleton.SK_NaiwaEgg_Chick_Skeleton",
+      "bone_names": [
+        "Root"
+      ],
+      "morph_targets": [
+        "EyeWide",
+        "Scream",
+        "Squash"
+      ],
+      "vertex_count": 1043,
+      "weighted_vertex_counts_by_bone": {
+        "Root": 1043
+      },
+      "triangle_count_from_verified_fbx": 1818,
+      "imported_bounds": {
+        "xyz_cm": [
+          85.0,
+          82.02499389648438,
+          129.13674926757812
+        ],
+        "origin_cm": [
+          0.0,
+          0.0,
+          7.0683746337890625
+        ]
+      },
+      "expected_import_bounds_cm": [
+        85.00000238418579,
+        82.02499747276306,
+        129.1367471218109
+      ],
+      "material_slots": [
+        {
+          "slot_name": "M_NaiwaEgg_Body",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/MI_NaiwaEgg_Tea.MI_NaiwaEgg_Tea"
+        },
+        {
+          "slot_name": "M_NaiwaEgg_Eye",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Eye.M_NaiwaEgg_Eye"
+        },
+        {
+          "slot_name": "M_NaiwaEgg_Pupil",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Pupil.M_NaiwaEgg_Pupil"
+        },
+        {
+          "slot_name": "M_NaiwaEgg_Mouth",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/M_NaiwaEgg_Mouth.M_NaiwaEgg_Mouth"
+        },
+        {
+          "slot_name": "M_NaiwaEgg_Accent",
+          "material": "/Game/Naiwa/P2/Art/Egg/Materials/MI_Accent_Straw.MI_Accent_Straw"
+        }
+      ],
+      "physics_asset": null,
+      "squash_silhouette_break_px_at_96px_body": 15.179498001793284,
+      "checks": {
+        "skeletal_mesh_imported": true,
+        "shared_root_skeleton": true,
+        "single_root_bone_hierarchy": true,
+        "all_vertices_weighted_to_root": true,
+        "three_named_morphs": true,
+        "material_slots_named": true,
+        "body_material_assigned": true,
+        "accent_material_assigned": true,
+        "no_physics_asset": true,
+        "triangle_budget": true,
+        "import_bounds_match_export": true,
+        "squash_silhouette_break_8px": true
+      }
+    }
+  ]
+}

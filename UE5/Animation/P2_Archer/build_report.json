@@ -1,0 +1,279 @@
+{
+  "source_blend": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\versions\\20261007_H2_E2_overall_refinement\\candidate_E2\\Naiwa_Character.blend",
+  "source_sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+  "source_unchanged": true,
+  "blender_version": "5.2.2 LTS",
+  "action": "Naiwa_P2_SlingshotDraw",
+  "fps": 24,
+  "frame_start": 1,
+  "frame_end": 31,
+  "duration_seconds": 1.25,
+  "sample_count": 31,
+  "blend": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Animation\\P2_Archer\\Naiwa_P2_SlingshotDraw.blend",
+  "fbx_animation_only": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Animation\\P2_Archer\\Naiwa_P2_SlingshotDraw.fbx",
+  "design": "Smooth shoulder reach and pouch pull, slight counter-lean, subtle held-tension breath; keyed over a one-second normalized draw range for cursor-driven pose sampling.",
+  "bones": [
+    "Torso",
+    "UpperArm.L",
+    "Forearm.L",
+    "UpperArm.R",
+    "Forearm.R"
+  ],
+  "maximum_joint_offsets_deg": {
+    "lead_upper_arm": 38,
+    "pull_upper_arm": -30,
+    "forearm_L": -70,
+    "forearm_R": -82,
+    "torso_counterlean": -5
+  },
+  "samples": [
+    {
+      "frame": 1,
+      "progress": 0.0,
+      "draw_ease": 0.0,
+      "torso_counterlean_deg": -0.0,
+      "lead_upper_arm_deg": 0.0,
+      "pull_upper_arm_deg": -0.0
+    },
+    {
+      "frame": 2,
+      "progress": 0.0333,
+      "draw_ease": 0.00035,
+      "torso_counterlean_deg": -0.002,
+      "lead_upper_arm_deg": 0.013,
+      "pull_upper_arm_deg": -0.011
+    },
+    {
+      "frame": 3,
+      "progress": 0.0667,
+      "draw_ease": 0.00267,
+      "torso_counterlean_deg": -0.013,
+      "lead_upper_arm_deg": 0.102,
+      "pull_upper_arm_deg": -0.08
+    },
+    {
+      "frame": 4,
+      "progress": 0.1,
+      "draw_ease": 0.00856,
+      "torso_counterlean_deg": -0.043,
+      "lead_upper_arm_deg": 0.325,
+      "pull_upper_arm_deg": -0.257
+    },
+    {
+      "frame": 5,
+      "progress": 0.1333,
+      "draw_ease": 0.01922,
+      "torso_counterlean_deg": -0.096,
+      "lead_upper_arm_deg": 0.73,
+      "pull_upper_arm_deg": -0.576
+    },
+    {
+      "frame": 6,
+      "progress": 0.1667,
+      "draw_ease": 0.03549,
+      "torso_counterlean_deg": -0.177,
+      "lead_upper_arm_deg": 1.349,
+      "pull_upper_arm_deg": -1.065
+    },
+    {
+      "frame": 7,
+      "progress": 0.2,
+      "draw_ease": 0.05792,
+      "torso_counterlean_deg": -0.29,
+      "lead_upper_arm_deg": 2.201,
+      "pull_upper_arm_deg": -1.738
+    },
+    {
+      "frame": 8,
+      "progress": 0.2333,
+      "draw_ease": 0.08672,
+      "torso_counterlean_deg": -0.434,
+      "lead_upper_arm_deg": 3.296,
+      "pull_upper_arm_deg": -2.602
+    },
+    {
+      "frame": 9,
+      "progress": 0.2667,
+      "draw_ease": 0.12187,
+      "torso_counterlean_deg": -0.609,
+      "lead_upper_arm_deg": 4.631,
+      "pull_upper_arm_deg": -3.656
+    },
+    {
+      "frame": 10,
+      "progress": 0.3,
+      "draw_ease": 0.16308,
+      "torso_counterlean_deg": -0.815,
+      "lead_upper_arm_deg": 6.197,
+      "pull_upper_arm_deg": -4.892
+    },
+    {
+      "frame": 11,
+      "progress": 0.3333,
+      "draw_ease": 0.20988,
+      "torso_counterlean_deg": -1.049,
+      "lead_upper_arm_deg": 7.975,
+      "pull_upper_arm_deg": -6.296
+    },
+    {
+      "frame": 12,
+      "progress": 0.3667,
+      "draw_ease": 0.2616,
+      "torso_counterlean_deg": -1.308,
+      "lead_upper_arm_deg": 9.941,
+      "pull_upper_arm_deg": -7.848
+    },
+    {
+      "frame": 13,
+      "progress": 0.4,
+      "draw_ease": 0.31744,
+      "torso_counterlean_deg": -1.587,
+      "lead_upper_arm_deg": 12.063,
+      "pull_upper_arm_deg": -9.523
+    },
+    {
+      "frame": 14,
+      "progress": 0.4333,
+      "draw_ease": 0.37647,
+      "torso_counterlean_deg": -1.882,
+      "lead_upper_arm_deg": 14.306,
+      "pull_upper_arm_deg": -11.294
+    },
+    {
+      "frame": 15,
+      "progress": 0.4667,
+      "draw_ease": 0.43768,
+      "torso_counterlean_deg": -2.188,
+      "lead_upper_arm_deg": 16.632,
+      "pull_upper_arm_deg": -13.131
+    },
+    {
+      "frame": 16,
+      "progress": 0.5,
+      "draw_ease": 0.5,
+      "torso_counterlean_deg": -2.5,
+      "lead_upper_arm_deg": 19.0,
+      "pull_upper_arm_deg": -15.0
+    },
+    {
+      "frame": 17,
+      "progress": 0.5333,
+      "draw_ease": 0.56232,
+      "torso_counterlean_deg": -2.812,
+      "lead_upper_arm_deg": 21.368,
+      "pull_upper_arm_deg": -16.869
+    },
+    {
+      "frame": 18,
+      "progress": 0.5667,
+      "draw_ease": 0.62353,
+      "torso_counterlean_deg": -3.118,
+      "lead_upper_arm_deg": 23.694,
+      "pull_upper_arm_deg": -18.706
+    },
+    {
+      "frame": 19,
+      "progress": 0.6,
+      "draw_ease": 0.68256,
+      "torso_counterlean_deg": -3.413,
+      "lead_upper_arm_deg": 25.937,
+      "pull_upper_arm_deg": -20.477
+    },
+    {
+      "frame": 20,
+      "progress": 0.6333,
+      "draw_ease": 0.7384,
+      "torso_counterlean_deg": -3.692,
+      "lead_upper_arm_deg": 28.059,
+      "pull_upper_arm_deg": -22.152
+    },
+    {
+      "frame": 21,
+      "progress": 0.6667,
+      "draw_ease": 0.79012,
+      "torso_counterlean_deg": -3.951,
+      "lead_upper_arm_deg": 30.025,
+      "pull_upper_arm_deg": -23.704
+    },
+    {
+      "frame": 22,
+      "progress": 0.7,
+      "draw_ease": 0.83692,
+      "torso_counterlean_deg": -4.185,
+      "lead_upper_arm_deg": 31.803,
+      "pull_upper_arm_deg": -25.108
+    },
+    {
+      "frame": 23,
+      "progress": 0.7333,
+      "draw_ease": 0.87813,
+      "torso_counterlean_deg": -4.391,
+      "lead_upper_arm_deg": 33.369,
+      "pull_upper_arm_deg": -26.344
+    },
+    {
+      "frame": 24,
+      "progress": 0.7667,
+      "draw_ease": 0.91328,
+      "torso_counterlean_deg": -4.566,
+      "lead_upper_arm_deg": 34.704,
+      "pull_upper_arm_deg": -27.398
+    },
+    {
+      "frame": 25,
+      "progress": 0.8,
+      "draw_ease": 0.94208,
+      "torso_counterlean_deg": -4.71,
+      "lead_upper_arm_deg": 35.799,
+      "pull_upper_arm_deg": -28.262
+    },
+    {
+      "frame": 26,
+      "progress": 0.8333,
+      "draw_ease": 0.96451,
+      "torso_counterlean_deg": -4.823,
+      "lead_upper_arm_deg": 36.651,
+      "pull_upper_arm_deg": -28.935
+    },
+    {
+      "frame": 27,
+      "progress": 0.8667,
+      "draw_ease": 0.98078,
+      "torso_counterlean_deg": -4.904,
+      "lead_upper_arm_deg": 37.27,
+      "pull_upper_arm_deg": -29.424
+    },
+    {
+      "frame": 28,
+      "progress": 0.9,
+      "draw_ease": 0.99144,
+      "torso_counterlean_deg": -4.957,
+      "lead_upper_arm_deg": 37.675,
+      "pull_upper_arm_deg": -29.743
+    },
+    {
+      "frame": 29,
+      "progress": 0.9333,
+      "draw_ease": 0.99733,
+      "torso_counterlean_deg": -4.987,
+      "lead_upper_arm_deg": 37.898,
+      "pull_upper_arm_deg": -29.92
+    },
+    {
+      "frame": 30,
+      "progress": 0.9667,
+      "draw_ease": 0.99965,
+      "torso_counterlean_deg": -4.998,
+      "lead_upper_arm_deg": 37.987,
+      "pull_upper_arm_deg": -29.989
+    },
+    {
+      "frame": 31,
+      "progress": 1.0,
+      "draw_ease": 1.0,
+      "torso_counterlean_deg": -5.0,
+      "lead_upper_arm_deg": 38.0,
+      "pull_upper_arm_deg": -30.0
+    }
+  ]
+}

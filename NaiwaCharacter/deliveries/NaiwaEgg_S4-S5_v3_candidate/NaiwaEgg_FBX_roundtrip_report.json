@@ -1,0 +1,48 @@
+{
+  "blender_version": "5.2.1 LTS",
+  "fbx": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\NaiwaCharacter\\deliveries\\NaiwaEgg_S4-S5_v3_candidate\\SK_NaiwaEgg.fbx",
+  "mesh_count": 1,
+  "armature_count": 1,
+  "armature_bones": [
+    "Root"
+  ],
+  "meshes": [
+    {
+      "object": "SK_NaiwaEgg",
+      "shape_keys": [
+        "Basis",
+        "EyeWide",
+        "Scream",
+        "Squash"
+      ],
+      "morph_delta_max_m": {
+        "EyeWide": 0.013894215601273383,
+        "Scream": 0.05059697629548577,
+        "Squash": 0.11507236255895034
+      },
+      "dimensions_m": [
+        85.0,
+        82.02499389648438,
+        115.0
+      ],
+      "vertex_count": 1031,
+      "weighted_vertex_counts_by_bone": {
+        "Root": 1031
+      },
+      "all_vertices_weighted_to_root": true,
+      "material_slots": [
+        "M_NaiwaEgg_Body",
+        "M_NaiwaEgg_Eye",
+        "M_NaiwaEgg_Pupil",
+        "M_NaiwaEgg_Mouth"
+      ]
+    }
+  ],
+  "checks": {
+    "one_mesh": true,
+    "one_root_bone": true,
+    "all_vertices_weighted_to_root": true,
+    "three_named_morphs": true
+  },
+  "status": "PASS"
+}
