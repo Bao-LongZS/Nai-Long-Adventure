@@ -147,7 +147,7 @@ $classification = 'infrastructure_failure'
 try {
     $flag = if ($Gait -eq 'Walk') { '-NaiwaP1IntegratedFullProbeWalk' } else { '-NaiwaP1IntegratedFullProbeRun' }
     $arguments = @($projectFile, $expectedMap, '-game', '-RenderOffScreen', '-windowed', '-ResX=1600', '-ResY=900',
-                   '-ForceRes', '-unattended', '-nop4', '-nosplash', $flag, '-ExecCmds=t.MaxFPS 60', "-abslog=$logFile")
+                   '-ForceRes', '-unattended', '-nop4', '-nosplash', '-NaiwaP1Standalone', $flag, '-ExecCmds=t.MaxFPS 60', "-abslog=$logFile")
     & $editor @arguments
     $outer.editor_exit_code = $LASTEXITCODE
     if ($LASTEXITCODE -ne 0) { throw "Core route process exited $LASTEXITCODE; inspect $logFile" }

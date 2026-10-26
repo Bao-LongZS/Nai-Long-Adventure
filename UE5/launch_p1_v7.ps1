@@ -3,6 +3,7 @@ param(
     [switch]$Editor,
     [switch]$InputEvidence,
     [switch]$D3D11,
+    [switch]$StandaloneP1,
     [string]$Engine = 'C:\Program Files\Epic Games\UE_5.8'
 )
 
@@ -25,6 +26,8 @@ if (-not $Editor) {
     $qualityCommands = 'sg.ViewDistanceQuality 3,sg.AntiAliasingQuality 3,sg.ShadowQuality 3,sg.GlobalIlluminationQuality 3,sg.ReflectionQuality 3,sg.PostProcessQuality 3,sg.TextureQuality 3,sg.EffectsQuality 3,sg.FoliageQuality 3,r.ScreenPercentage 100,r.MotionBlurQuality 0,r.VSync 0,t.MaxFPS 0'
     $arguments += @('-game', '-windowed', '-ResX=1920', '-ResY=1080', '-ForceRes', ('-ExecCmds="' + $qualityCommands + '"'))
 }
+if ($StandaloneP1) { $arguments += '-NaiwaP1Standalone' }
+elseif (-not $Editor) { $arguments += '-NaiwaLinkRun' }
 if ($InputEvidence) { $arguments += '-NaiwaInputEvidence' }
 if ($D3D11) { $arguments += '-d3d11' }
 

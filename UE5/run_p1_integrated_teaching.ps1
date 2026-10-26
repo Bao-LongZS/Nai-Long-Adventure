@@ -20,7 +20,7 @@ $flag = if ($Gait -eq 'Walk') { '-NaiwaP1IntegratedProbeWalk' } else { '-NaiwaP1
 $scenario = if ($CheckpointFailure) { 'checkpoint_failure' } else { 'route' }
 $logFile = Join-Path $saved ("integrated_teaching_{0}_{1}_{2}.log" -f $Gait.ToLowerInvariant(), $scenario, [DateTime]::UtcNow.ToString('yyyyMMddTHHmmssZ'))
 $startedUtc = [DateTime]::UtcNow
-$arguments = @($projectFile, '/Game/Naiwa/P1/Maps/L_NaiwaP1_Integrated', '-game', '-RenderOffScreen', '-windowed', '-ResX=1600', '-ResY=900', '-ForceRes', '-unattended', '-nop4', '-nosplash', $flag, '-ExecCmds=t.MaxFPS 60', "-abslog=$logFile")
+$arguments = @($projectFile, '/Game/Naiwa/P1/Maps/L_NaiwaP1_Integrated', '-game', '-RenderOffScreen', '-windowed', '-ResX=1600', '-ResY=900', '-ForceRes', '-unattended', '-nop4', '-nosplash', '-NaiwaP1Standalone', $flag, '-ExecCmds=t.MaxFPS 60', "-abslog=$logFile")
 if ($CheckpointFailure) { $arguments += '-NaiwaP1IntegratedProbeCheckpointFail' }
 & $editor @arguments
 if ($LASTEXITCODE -ne 0) { throw "Integrated teaching $Gait $scenario process failed ($LASTEXITCODE); inspect $logFile" }

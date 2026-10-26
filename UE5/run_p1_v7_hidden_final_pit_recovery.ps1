@@ -27,7 +27,7 @@ $started = [DateTime]::UtcNow
 $stamp = $started.ToString('yyyyMMddTHHmmssZ') + '_' + [Guid]::NewGuid().ToString('N')
 $logFile = Join-Path $savedDirectory "v7_hidden_final_pit_recovery_$stamp.log"
 $arguments = @($projectFile, $mapPackage, '-game', '-RenderOffScreen', '-windowed', '-ResX=1600', '-ResY=900',
-    '-ForceRes', '-unattended', '-nop4', '-nosplash', '-NaiwaP1V7HiddenFinalPitRecoveryProbe',
+    '-ForceRes', '-unattended', '-nop4', '-nosplash', '-NaiwaP1Standalone', '-NaiwaP1V7HiddenFinalPitRecoveryProbe',
     '-ExecCmds=t.MaxFPS 60', "-abslog=$logFile")
 & $editor @arguments
 if ($LASTEXITCODE -ne 0) { throw "V7 hidden-pit runtime exited $LASTEXITCODE; inspect $logFile" }

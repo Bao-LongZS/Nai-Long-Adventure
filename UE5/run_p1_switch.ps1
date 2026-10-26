@@ -19,7 +19,7 @@ New-Item -ItemType Directory -Path $saved -Force | Out-Null
 $flag = if ($Gait -eq 'Walk') { '-NaiwaP1SwitchProbeWalk' } else { '-NaiwaP1SwitchProbeRun' }
 $logFile = Join-Path $saved ("switch_probe_{0}_{1}.log" -f $Gait.ToLowerInvariant(), [DateTime]::UtcNow.ToString('yyyyMMddTHHmmssZ'))
 $startedUtc = [DateTime]::UtcNow
-$arguments = @($projectFile, '/Game/Naiwa/P1/Maps/L_NaiwaP1_Switch', '-game', '-RenderOffScreen', '-windowed', '-ResX=1920', '-ResY=1080', '-ForceRes', '-unattended', '-nop4', '-nosplash', $flag, '-ExecCmds=t.MaxFPS 60', "-abslog=$logFile")
+$arguments = @($projectFile, '/Game/Naiwa/P1/Maps/L_NaiwaP1_Switch', '-game', '-RenderOffScreen', '-windowed', '-ResX=1920', '-ResY=1080', '-ForceRes', '-unattended', '-nop4', '-nosplash', '-NaiwaP1Standalone', $flag, '-ExecCmds=t.MaxFPS 60', "-abslog=$logFile")
 if ($Capture) { $arguments += @('-d3d11', '-NaiwaP1SwitchCapture') }
 & $editor @arguments
 if ($LASTEXITCODE -ne 0) { throw "P1 Switch $Gait probe failed ($LASTEXITCODE); inspect $logFile" }

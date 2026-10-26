@@ -4,6 +4,28 @@
 
 ---
 
+## 2026-10-22
+
+**主菜单落地，游戏改成从菜单进。** 新增 `Content/Naiwa/UI/L_NaiwaMainMenu` 与 `NaiwaMenuWidget` / `NaiwaMenuGameMode` / `NaiwaMenuPlayerController`：界面全部由 C++ 在 `UCanvasPanel` 里搭，没有 UMG 资产，所以改版式就是改代码。两页——标题页（开始 / 退出）与关卡选择页（四张卡片 + 通关计数）。进哪个图由 `DefaultEngine.ini` 的 `GameDefaultMap` 指向菜单，P1 与 P2 的暂停菜单都能退回主菜单。
+
+**进度存档。** `UNaiwaProgressSubsystem` 挂在 `GameInstance` 上，通过 `UNaiwaMenuSaveGame` 存本机，记每个关卡的最优时间、最少发数、最少死亡、收集数。解锁顺序：1-1 与 2-1 直接进，2-2 需通关 2-1，2-3 需通关 2-2。这套进度同时承担连闯时的跨关卡状态延续。
+
+**关卡缩略图与输入映射。** 四张卡片配图 `T_UI_Thumbnail_11/21/22/23` 由 `UE5/Scripts/create_level_thumbnails.py` 生成，卡片读不到图时回退成纯色块而不是崩。走跑切换从代码里的裸键位改成增强输入资产：`Content/Naiwa/Input/IMC_Naiwa` 与 `IA_NaiwaGait`，由 `configure_gait_input.py` 写入、`apply_menu_and_input_assets.py` 落到蓝图，`Records/p0_completion_20261013/gait_input_mapping.json` 存键位对照。抽了 `NaiwaHUD` 一份共用基类，P1 的控制器另拆成 `NaiwaP1PlayerController`。
+
+**P2 音频接入，此前的「零音频」补齐。** 四个音效 `SFX_P2_Collection` / `GoalHit` / `Miss` / `FailureTrumpet`，三首关卡 BGM 分别对应 2-1 Title Theme、2-2 雨爱、2-3 熊出没，菜单曲为金风玉露。打包清单确认这五个资源（三首 BGM + 「嗯？」未命中音 + 「冰冰冰」命中音）都进了 pak。
+
+**1-1 → 2-1 连闯接通。** `ANaiwaP1GameMode::AdvanceToP2Campaign` 在终点结算后 1.5 s 淡出 `OpenLevel` 到 `L_NaiwaP2_21`；`ANaiwaP2GameMode` 用 `-NaiwaLinkRun` 命令行标记判断是否走连闯，逐关接力 2-1 → 2-2 → 2-3。命令行加 `-NaiwaP1Standalone` 可只跑 1-1 不进 2-1。
+
+## 2026-10-21
+
+**P2 全物理改造收口，M1–M5 完成。** 结构块、弹丸、目标蛋全部换成 Chaos 真刚体（`ANaiwaP2StructureBlock` / `ANaiwaP2PhysicsEgg` / `ANaiwaP2PhysicsGoal`），初速只给一次，不设角速度、不做反弹预测，摩擦与恢复走 `UPhysicalMaterial`。三关单发 `pass=1 / penetration_events=0`，四种特殊蛋能力探针全通，奶鼠分裂出的三枚真实参与碰撞。静置 5 s 漂移 0.772 / 0.471 / 0.609 cm（限 1.0），1080p 可见窗口 p95 5.750 / 5.751 / 5.709 ms（阈值 16.7）。
+
+**子步配置写进 `DefaultEngine.ini`。** `bSubstepping=True`、`MaxSubstepDeltaTime=0.008333`、`MaxSubsteps=8`、`bTickPhysicsAsync=False`。最细的柱是 0.30 × 1.90 m（高宽比 6.3），1/60 步长下单步位移会让接触点在两个子步之间跳过支撑面。这几个数和 `NaiwaP2PhysicsProfile.h` 里的常量必须一致，`VerifyProjectPhysicsSettings()` 运行时比对，不一致直接打 Error。
+
+**放弃确定性仿真。** 原计划里的 9 条标准链、1209 格扫描、窗宽查表全部作废——它们预设了「旋转由参数给定」，而实际要的是碰撞自己转。代价是同一发重复打无法复现，只能靠 `ProbeTraj` 空场景做唯一硬验。
+
+**打包与回归。** Development 包 839 MB、pak 395 MB，三关地图均加载成功并各自选中对应 BGM。多发回归序列里原默认 34° 在当前参数下第一发飞出场外，已把 `run_p2_physics_level.ps1` 的默认序列改成 19.85°。Cook 报告 `EggCandidates/LowPoly1798` 的候选网格引用了不存在的候选 Skeleton；该路径不在运行时使用的 `Art/Egg/` 下，打包与启动均通过，按落选方案处理，不入库。
+
 ## 2026-10-19
 
 **P1 全部成果入库，分三个语义化提交推送。** 共 666 文件 / 138.79 MB，`origin/main` 推至 `09b2af1`：`chore(repo)` 补纳管规则与打包脚本 2 文件、`feat(p1)` 玩法与机关 75 文件 / 1.04 MB（19915 行）、`feat(p1)` 关卡资产与证据 589 文件 / 137.75 MB（其中走 Git LFS 226 个对象 / 100 MB）。LFS 累计 534 文件 / 463.86 MB，占免费月额度 10 GiB 的 4.5%。

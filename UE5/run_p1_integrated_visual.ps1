@@ -29,6 +29,7 @@ $startedUtc = [DateTime]::UtcNow
 # Deliberately a separate visual process: no functional-probe flag and no HighResShot.
 $arguments = @($projectFile, '/Game/Naiwa/P1/Maps/L_NaiwaP1_Integrated', '-game', '-RenderOffScreen',
     '-d3d11', '-windowed', '-ResX=1280', '-ResY=720', '-ForceRes', '-unattended', '-nop4',
+    '-NaiwaP1Standalone',
     '-nosplash', $flag, '-ExecCmds=t.MaxFPS 60', "-abslog=$logFile")
 & $editor @arguments
 if ($LASTEXITCODE -ne 0) { throw "Integrated visual $Gait process failed ($LASTEXITCODE); inspect $logFile" }

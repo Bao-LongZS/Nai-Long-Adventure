@@ -19,8 +19,8 @@ $ErrorActionPreference = 'Stop'
 #   1. UBA cas-directory permissions break PCH writes -> -NoUBA by default; pass -UseUBA to opt out.
 #   2. A failed RunUAT deletes UnrealEditor-NaiwaRuntime.dll, and the following cook then
 #      cannot find the module -> verify the DLL before cooking and rebuild the editor if missing.
-#   3. A Zen oplog 404 breaks the pak stage -> relies on bUseIoStore=False (classic pak) in
-#      DefaultEngine.ini; checked at startup and reported as a warning only.
+#   3. The project uses classic pak -> bUseIoStore=False and bUseZenStore=False are kept in
+#      DefaultGame.ini and checked before the cook/stage/pak pipeline.
 #
 # Usage:
 #   .\package_demo.ps1                       # Development -> Saved/DemoBuild
@@ -29,6 +29,7 @@ $ErrorActionPreference = 'Stop'
 
 $projectFile = Join-Path $PSScriptRoot 'NaiwaP0/Nai_Long.uproject'
 $recordDirectory = Join-Path $PSScriptRoot 'Records'
+$ubaDirectory = Join-Path $PSScriptRoot 'NaiwaP0/Intermediate/PackageUBA'
 $projectName = 'Nai_Long'
 
 if (-not (Test-Path -LiteralPath $projectFile)) { throw "Project file not found: $projectFile" }
@@ -44,10 +45,10 @@ if (-not $ArchiveRoot) {
 }
 New-Item -ItemType Directory -Path $recordDirectory -Force | Out-Null
 New-Item -ItemType Directory -Path $ArchiveRoot -Force | Out-Null
+New-Item -ItemType Directory -Path $ubaDirectory -Force | Out-Null
 
 $stamp = Get-Date -Format 'yyyyMMdd_HHmmss'
 $logPath = Join-Path $recordDirectory "package_$($Config.ToLowerInvariant())_$stamp.log"
-$ubaArgs = if ($UseUBA) { @() } else { @('-NoUBA') }
 
 function Write-Stage([string]$Text) {
     $line = "=== $Text ==="
@@ -55,12 +56,16 @@ function Write-Stage([string]$Text) {
     Add-Content -LiteralPath $logPath -Value $line -Encoding UTF8
 }
 
-# -- 0. Config check: classic pak requires bUseIoStore=False ---------
-$engineIni = Join-Path $PSScriptRoot 'NaiwaP0/Config/DefaultEngine.ini'
-if (Test-Path -LiteralPath $engineIni) {
-    $ioStoreOff = Select-String -LiteralPath $engineIni -Pattern 'bUseIoStore\s*=\s*False' -Quiet
+# -- 0. Config check: project uses classic pak, without ZenStore ----
+$packagingIni = Join-Path $PSScriptRoot 'NaiwaP0/Config/DefaultGame.ini'
+if (Test-Path -LiteralPath $packagingIni) {
+    $ioStoreOff = Select-String -LiteralPath $packagingIni -Pattern 'bUseIoStore\s*=\s*False' -Quiet
     if (-not $ioStoreOff) {
-        Write-Warning 'DefaultEngine.ini does not set bUseIoStore=False; if the pak stage reports a Zen oplog 404, set it back to False first.'
+        Write-Warning 'DefaultGame.ini does not set bUseIoStore=False; classic pak packaging requires it.'
+    }
+    $zenStoreOff = Select-String -LiteralPath $packagingIni -Pattern 'bUseZenStore\s*=\s*False' -Quiet
+    if (-not $zenStoreOff) {
+        Write-Warning 'DefaultGame.ini does not set bUseZenStore=False; ZenStore is disabled for this classic pak build.'
     }
 }
 
@@ -72,8 +77,13 @@ $runtimeDll = Join-Path $PSScriptRoot 'NaiwaP0/Binaries/Win64/UnrealEditor-Naiwa
 if (-not (Test-Path -LiteralPath $runtimeDll)) {
     Write-Warning 'UnrealEditor-NaiwaRuntime.dll is missing (a failed RunUAT deletes it); rebuilding the editor target first.'
     Write-Stage 'build Nai_LongEditor Win64 Development (restore editor module)'
-    & $buildBat "$($projectName)Editor" Win64 Development "-Project=$projectFile" -WaitMutex @ubaArgs 2>&1 |
-        Tee-Object -FilePath $logPath -Append
+    if ($UseUBA) {
+        & $buildBat "$($projectName)Editor" Win64 Development "-Project=$projectFile" -WaitMutex -MaxParallelActions=4 "-UBARootDir=$ubaDirectory" 2>&1 |
+            Tee-Object -FilePath $logPath -Append
+    } else {
+        & $buildBat "$($projectName)Editor" Win64 Development "-Project=$projectFile" -WaitMutex -NoUBA -MaxParallelActions=4 "-UBARootDir=$ubaDirectory" 2>&1 |
+            Tee-Object -FilePath $logPath -Append
+    }
     if ($LASTEXITCODE -ne 0) { throw "Editor target build failed (exit $LASTEXITCODE)" }
     if (-not (Test-Path -LiteralPath $runtimeDll)) { throw "Editor rebuild finished but $runtimeDll is still missing" }
 }
@@ -81,8 +91,13 @@ if (-not (Test-Path -LiteralPath $runtimeDll)) {
 # -- 2. Build Game target -------------------------------------------
 if (-not $SkipBuild) {
     Write-Stage "build $projectName Win64 $Config"
-    & $buildBat $projectName Win64 $Config "-Project=$projectFile" -WaitMutex @ubaArgs 2>&1 |
-        Tee-Object -FilePath $logPath -Append
+    if ($UseUBA) {
+        & $buildBat $projectName Win64 $Config "-Project=$projectFile" -WaitMutex -MaxParallelActions=4 "-UBARootDir=$ubaDirectory" 2>&1 |
+            Tee-Object -FilePath $logPath -Append
+    } else {
+        & $buildBat $projectName Win64 $Config "-Project=$projectFile" -WaitMutex -NoUBA -MaxParallelActions=4 "-UBARootDir=$ubaDirectory" 2>&1 |
+            Tee-Object -FilePath $logPath -Append
+    }
     if ($LASTEXITCODE -ne 0) { throw "Game target build failed (exit $LASTEXITCODE)" }
 } else {
     Write-Stage 'build skipped (-SkipBuild)'

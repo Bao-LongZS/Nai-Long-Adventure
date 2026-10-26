@@ -37,7 +37,7 @@ $modeName = if ($Recovery) { 'recovery' } else { 'baseline' }
 $log = Join-Path $saved ("v7_gate_${modeName}_${Gate}_${Gait}_${stamp}.log")
 $flag = "-NaiwaP1V7GateProbe=$Gate$Gait"
 $arguments = @($project, $mapPackage, '-game', '-RenderOffScreen', '-windowed', '-ResX=1600', '-ResY=900',
-               '-ForceRes', '-unattended', '-nop4', '-nosplash', $flag,
+               '-ForceRes', '-unattended', '-nop4', '-nosplash', '-NaiwaP1Standalone', $flag,
                "-NaiwaP1V7GateOffsetCm=$OffsetCm", '-ExecCmds=t.MaxFPS 60', "-abslog=$log")
 if ($Recovery) { $arguments += '-NaiwaP1V7GateRecovery' }
 & $editor @arguments

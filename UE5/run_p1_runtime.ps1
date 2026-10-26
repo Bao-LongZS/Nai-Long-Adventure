@@ -39,7 +39,7 @@ $schema = switch ($Scenario) {
 }
 $logFile = Join-Path $saved ("runtime_{0}_{1}_{2}.log" -f $Map.ToLowerInvariant(), $Scenario.ToLowerInvariant(), $Gait.ToLowerInvariant())
 $startedUtc = [DateTime]::UtcNow
-$arguments = @($projectFile, $mapAsset, '-game', '-RenderOffScreen', '-windowed', '-ResX=1920', '-ResY=1080', '-ForceRes', '-unattended', '-nop4', '-nosplash', $flag, '-ExecCmds=t.MaxFPS 60', "-abslog=$logFile")
+$arguments = @($projectFile, $mapAsset, '-game', '-RenderOffScreen', '-windowed', '-ResX=1920', '-ResY=1080', '-ForceRes', '-unattended', '-nop4', '-nosplash', '-NaiwaP1Standalone', $flag, '-ExecCmds=t.MaxFPS 60', "-abslog=$logFile")
 if ($Capture) { $arguments += '-NaiwaP1Capture' }
 & $editor @arguments
 if ($LASTEXITCODE -ne 0) { throw "P1 $Map $Scenario process failed ($LASTEXITCODE); inspect $logFile" }

@@ -31,6 +31,9 @@ UE5/NaiwaP0/Saved/
 UE5/Records/ReimportBackups/
 
 # ── 2. 历史 / 候选 / 诊断目录（体积主体，可重建或可重算）────────
+#    P2 奶蛋低模候选：落选方案（运行时用的是 Art/Egg/ 那套），
+#    由 build_naiwa_egg_features.py 一条命令重出。
+UE5/NaiwaP0/Content/Naiwa/P2/Art/EggCandidates/
 NaiwaCharacter/iterations/
 NaiwaCharacter/**/trials_*/
 NaiwaCharacter/**/before_*/
@@ -55,6 +58,21 @@ NaiwaCharacter/**/*.blend
 !NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/candidate_E2/Naiwa_Character.blend
 !UE5/Animation/Run_v1/Naiwa_E2_Run.blend
 !NaiwaAnimation_20261009/Naiwa_E2_Greeting_10s.blend
+#    放回：奶蛋建模链 S0→S5 的 4 份中间 .blend 与 4 份交付 .fbx。
+#    链上三个脚本互相以这几份 .blend 为输入，缺任一份整条链断在第一步，
+#    且四变体 .blend 是多轮评测筛出的成品，重跑参数得不到同一结果。
+!NaiwaCharacter/deliveries/NaiwaEgg_S0-S3/NaiwaEgg_S0-S3.blend
+!NaiwaCharacter/deliveries/NaiwaEgg_S4-S5_v3_candidate/SK_NaiwaEgg_S4-S5.blend
+!NaiwaCharacter/deliveries/NaiwaEgg_Features_v1/SK_NaiwaEgg_Chick.blend
+!NaiwaCharacter/deliveries/NaiwaEgg_Features_v1/SK_NaiwaEgg_Mouse.blend
+!NaiwaCharacter/deliveries/NaiwaEgg_Features_v1/SK_NaiwaEgg_Soy.blend
+!NaiwaCharacter/deliveries/NaiwaEgg_Features_v1/SK_NaiwaEgg_Tea.blend
+!NaiwaCharacter/deliveries/NaiwaEgg_Features_v1/SK_NaiwaEgg_Chick.fbx
+!NaiwaCharacter/deliveries/NaiwaEgg_Features_v1/SK_NaiwaEgg_Mouse.fbx
+!NaiwaCharacter/deliveries/NaiwaEgg_Features_v1/SK_NaiwaEgg_Soy.fbx
+!NaiwaCharacter/deliveries/NaiwaEgg_Features_v1/SK_NaiwaEgg_Tea.fbx
+#    放回：P2 拉弓动作的 FBX 导出，与同目录 .blend 成对
+!UE5/Animation/P2_Archer/Naiwa_P2_SlingshotDraw.fbx
 
 # ── 5. 序列帧、预览图与参考图（序列帧可由 .blend 重渲）──────────
 NaiwaAnimation_20261009/frames/
@@ -74,9 +92,16 @@ NaiwaAnimation_20261009/preview/
 !UE5/Records/p1_acceptance_20261018/*.png
 # P1 正式 SFML 源素材：从旧版 out/build 拷贝并逐文件校验，须可由仓库恢复
 !UE5/SourceAssets/SFML_Level1/png/*.png
+#    放回：主菜单源图 6 张（开始画面 / 关卡卡立绘 / 4 张缩略图）
+#    与缩略图裁切输入 4 张（Captures/）。create_menu_assets.py 与
+#    create_level_thumbnails.py 直接读这两个目录，缺图就抛 FileNotFoundError。
+!UE5/NaiwaP0/SourceAssets/MenuUI/*.png
+!UE5/NaiwaP0/SourceAssets/MenuUI/Captures/*.png
 #    P1 反馈素材：抠背景后的 96 帧死亡动画（直接对应 Content 内的 uasset）
 #    与 3 张参照图，放行。
 !UE5/SourceAssets/P1_Feedback/**/*.png
+#    P2 失败提示图：透明原图用于重新导入 UI Texture2D
+!UE5/SourceAssets/P2_FailureFeedback/**/*.png
 #    原始解码帧属中间输入，由视频一条命令重新抽帧，点名挡住（须在放行之后）。
 UE5/SourceAssets/P1_Feedback/DeathLaughVideoFramesRaw/
 
@@ -111,6 +136,14 @@ UE5/Records/*-backup-*.log
 #    注：已入库的 3 个 P0 构建日志不受影响（.gitignore 只作用于未跟踪文件）。
 UE5/Records/*_build_*.log
 UE5/Records/*_compile_*.log
+#    P2 轮次日志：打包（package_development_*）、启动（runtime_*）、
+#    物理回归（physics_*），同参数重跑即可再生，单个最大 10 MB。
+UE5/Records/*.log
+UE5/Records/*_stdout.txt
+UE5/Records/*_stderr.txt
+#    Blender / UE 导入导出日志与 C++ 编译中间产物
+NaiwaCharacter/**/*.log
+NaiwaCharacter/fbx_hierarchy_inspector.obj
 # P1-0 本地完整 P0 快照体积较大；清单和复建说明纳管
 UE5/Records/p1_20261015_baseline/*.zip
 

@@ -32,7 +32,7 @@ if ($Scenario -eq 'Mechanics') {
 }
 $logFile = Join-Path $saved ("timed_{0}_{1}_{2}.log" -f $Scenario.ToLowerInvariant(), $Gait.ToLowerInvariant(), [DateTime]::UtcNow.ToString('yyyyMMddTHHmmssZ'))
 $startedUtc = [DateTime]::UtcNow
-$arguments = @($projectFile, '/Game/Naiwa/P1/Maps/L_NaiwaP1_Timed', '-game', '-RenderOffScreen', '-windowed', '-ResX=1600', '-ResY=900', '-ForceRes', '-unattended', '-nop4', '-nosplash', $flag, '-ExecCmds=t.MaxFPS 60', "-abslog=$logFile")
+$arguments = @($projectFile, '/Game/Naiwa/P1/Maps/L_NaiwaP1_Timed', '-game', '-RenderOffScreen', '-windowed', '-ResX=1600', '-ResY=900', '-ForceRes', '-unattended', '-nop4', '-nosplash', '-NaiwaP1Standalone', $flag, '-ExecCmds=t.MaxFPS 60', "-abslog=$logFile")
 if ($Capture) { $arguments += @('-d3d11', '-NaiwaP1TimedCapture') }
 & $editor @arguments
 if ($LASTEXITCODE -ne 0) { throw "P1 Timed $Scenario $Gait probe failed ($LASTEXITCODE); inspect $logFile" }

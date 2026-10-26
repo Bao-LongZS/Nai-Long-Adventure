@@ -524,7 +524,7 @@ if ($RunCore) {
     $stamp = $started.ToString('yyyyMMddTHHmmssZ') + '_' + [Guid]::NewGuid().ToString('N')
     $logFile = Join-Path $savedDirectory "v7_mixed_core_route_$stamp.log"
     $arguments = @($projectFile, $mapPackage, '-game', '-RenderOffScreen', '-windowed', '-ResX=1600', '-ResY=900',
-        '-ForceRes', '-unattended', '-nop4', '-nosplash', '-NaiwaP1V7MixedCoreProbe',
+        '-ForceRes', '-unattended', '-nop4', '-nosplash', '-NaiwaP1Standalone', '-NaiwaP1V7MixedCoreProbe',
         '-ExecCmds=t.MaxFPS 60', "-abslog=$logFile")
     if (-not [string]::IsNullOrWhiteSpace($RecoveryCheckpoint)) {
         $arguments += "-NaiwaP1V7RecoverAtCheckpoint=$RecoveryCheckpoint"

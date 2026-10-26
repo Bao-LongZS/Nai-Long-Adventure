@@ -18,7 +18,7 @@ $started = [DateTime]::UtcNow
 $stamp = $started.ToString('yyyyMMddTHHmmssZ') + '_' + [Guid]::NewGuid().ToString('N')
 $logFile = Join-Path $savedDirectory "matrix_v7_$stamp.log"
 $arguments = @($projectFile, $mapPackage, '-game', '-RenderOffScreen', '-windowed', '-ResX=1600', '-ResY=900',
-    '-ForceRes', '-unattended', '-nop4', '-nosplash', '-NaiwaP1Matrix', '-ExecCmds=t.MaxFPS 60', "-abslog=$logFile")
+    '-ForceRes', '-unattended', '-nop4', '-nosplash', '-NaiwaP1Standalone', '-NaiwaP1Matrix', '-ExecCmds=t.MaxFPS 60', "-abslog=$logFile")
 & $editor @arguments
 if ($LASTEXITCODE -ne 0) { throw "V7 state matrix exited $LASTEXITCODE; inspect $logFile" }
 
