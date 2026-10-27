@@ -26,6 +26,17 @@
 
 打空退你一颗蛋。蛋打光目标还在就判失败，按 `R` 重来。
 
+### 3-1 / 3-2（开发中）
+
+俯视迷宫，格子走位。放奶蛋炸开软砖和对手，把金蛋捡齐，再从出口出去。三条命，自己被炸到也扣。
+
+- **3-1 教学**：11×9 小图，没有迷雾，看得到全图。
+- **3-2 夜巡**：23×17 大图，带战争迷雾，走过的地方才记得住，左上角小地图同步。
+
+四种弹型：标准十字、豆奶大十字、奶茶圆爆、奶鼠分裂。机关有传送门、踩板金库门、传送带、尖刺、断裂地板。
+
+金蛋集齐后对手进入狂暴，追得更急。
+
 ## 运行
 
 需要 UE 5.8，脚本默认从 `C:\Program Files\Epic Games\UE_5.8` 找引擎，装在别处加 `-Engine <路径>`。
@@ -33,6 +44,9 @@
 ```powershell
 powershell -File UE5/launch_p1_v7.ps1          # 直接进 1-1，全高质量、无垂直同步
 powershell -File UE5/launch_p1_v7.ps1 -Editor  # 打开编辑器
+
+# P3 手感原型（M1 网格测试图，P3 还没接进主菜单）
+powershell -File UE5/run_p3_m1.ps1 -Mode Play -SkipBuild
 ```
 
 也可以直接用 UE 打开 `UE5/NaiwaP0/Nai_Long.uproject`。打包出来的包从主菜单进，选关按顺序解锁，进度自动存。
@@ -59,6 +73,17 @@ powershell -File UE5/launch_p1_v7.ps1 -Editor  # 打开编辑器
 | 飞行中再点左键 | 奶鸡上窜、奶鼠分裂 |
 | `R` | 重开本关 |
 | `Esc` | 回选关 |
+
+迷宫关：
+
+| 按键 | 作用 |
+| --- | --- |
+| `W` `A` `S` `D` / 方向键 | 上下左右走 |
+| `Space` / `J` | 放蛋 |
+| `1` – `4` | 切弹型 |
+| `Shift` | 奶鸡跳 |
+| `T` | 连锁演练（在中央链道摆四枚炸弹） |
+| `R` | 重开本关 |
 
 ## 命令
 
@@ -88,7 +113,7 @@ cmake -S . -B out/build && cmake --build out/build --config Release
 
 | 目录 | 内容 |
 | --- | --- |
-| `UE5/` | 主线。`NaiwaP0/` 是引擎工程，关卡和资产在 `Content/Naiwa/`，`P1/` 是平台关，`P2/` 是弹弓关，`UI/` 是主菜单；`SourceAssets/` 放音效贴图原素材；`Scripts/` 是建图、导入、验收脚本；`Records/` 是报告和日志 |
+| `UE5/` | 主线。`NaiwaP0/` 是引擎工程，关卡和资产在 `Content/Naiwa/`，`P1/` 是平台关，`P2/` 是弹弓关，`P3/` 是迷宫关，`UI/` 是主菜单；`SourceAssets/` 放音效贴图原素材；`Scripts/` 是建图、导入、验收脚本；`Records/` 是报告和日志 |
 | `NaiwaCharacter/` | 建模流水线，`versions/` 按日期留了每一轮工程 |
 | `NaiwaAnimation_20261009/` | 打招呼动画，工程加十秒成片 |
 | 根目录 `.cpp` | SFML 原型 |
@@ -103,6 +128,7 @@ cmake -S . -B out/build && cmake --build out/build --config Release
 | [关卡结构图](UE5/Records/关卡结构图_v7_20261018.html) | 1-1 的段落、检查点、机关布局 |
 | [P1 计划书](UE5/Records/P1_计划书_20261014.md) | 阶段怎么拆、按什么口径验收 |
 | [P2 计划书复评](UE5/Records/P2_工程计划书复评_20261019.md) | 奶蛋闯关的结构与风险 |
+| [P3 计划书](UE5/Records/p3_formal/design_reference/P3工程计划书.md) | 迷宫对抗关的玩法规格、里程碑与验收口径 |
 | [UE5/Records/](UE5/Records) | 全部报告、运行日志、录像 |
 
 P0 的[最终验收](UE5/Records/p0_completion_20261013/completion_report.md)、[接入过程记录](UE5/README_接入记录.md)、[主角接入清单](Naiwa_UE5_2.5D主角接入清单_20261010.md)、[角色流水线用法](NaiwaCharacter/README_使用说明.md)、[E2 形体修改指令](Naiwa_E2对照原图评估与整体修改指令_20261008.md)。
