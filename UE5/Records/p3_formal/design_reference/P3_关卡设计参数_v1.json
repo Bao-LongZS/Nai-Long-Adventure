@@ -1,0 +1,828 @@
+{
+  "version": "1.2",
+  "project": "奶龙大冒险 P3 迷宫大关",
+  "usage": "生图用完整参数。坐标系: cell=[x,y], x向右, y向下, y=0为北(顶行)。三张图相互独立。",
+  "style": {
+    "name": "夜巡",
+    "canvas_bg": "#20262F",
+    "palette": {
+      "floor": "#334352",
+      "floor_alt": "#374958",
+      "floor_highlight": "#526575",
+      "floor_shadow": "#293642",
+      "floor_grain": "#465968",
+      "floor_dot": "#728896",
+      "hard_brick": "#586879",
+      "hard_brick_shadow": "#35424F",
+      "stone_highlight": "#82909F",
+      "stone_mid": "#657586",
+      "stone_crack": "#3D4A57",
+      "stone_fleck": "#8996A2",
+      "soft_brick": "#96714F",
+      "soft_brick_shadow": "#654A3C",
+      "wood_edge": "#43383A",
+      "wood_highlight": "#C09A6C",
+      "wood_grain": "#76563F",
+      "wood_alt": "#A27B56",
+      "item_brick": "#A7834D",
+      "item_brick_shadow": "#70563A",
+      "item_latch": "#D0B477",
+      "portal": "#9991C6",
+      "portal_glow": "#625E8A",
+      "portal_highlight": "#D0C4E7",
+      "portal_ring": "#34364A",
+      "portal_inner": "floor色",
+      "exit_glow": "#2D4E55",
+      "exit_accent": "#68A99D",
+      "exit_frame": "#B8DAD0",
+      "exit_dark": "#172A32",
+      "exit_arrow": "#D1EAE3",
+      "vault_door": "#5E7487",
+      "vault_door_shadow": "#2D3C4C",
+      "vault_door_highlight": "#B4C6CF",
+      "vault_wheel": "#8EA4B0",
+      "vault_hub": "#D0D9DD",
+      "vault_label": "#D8DEE6",
+      "conveyor": "#526F82",
+      "conveyor_arrow": "#B0CFCA",
+      "conveyor_outline": "#304655",
+      "spike": "#A8B0B8",
+      "spike_cell_bg": "#293A47",
+      "broken_floor_ring": "#947C68",
+      "gate": "#536879",
+      "gate_stroke": "#293A47",
+      "gate_highlight": "#A7B7C0",
+      "gate_latch": "#B99D70",
+      "accent_cold": "#6F9995",
+      "explosion": "#FFA028",
+      "explosion_core": "#FFC85A",
+      "explosion_center": "#FFF7E0",
+      "golden_egg": "#FFD34D",
+      "golden_egg_stroke": "#B8860B",
+      "egg_highlight": "#FFF3C8",
+      "bomb": "#EDEDE5",
+      "bomb_stroke": "#8A8A80",
+      "fuse": "#6B4423",
+      "text": "#D8DEE6",
+      "text_secondary": "#9AA6B4",
+      "player_mark": "#E8C86A",
+      "patrol_green": "#6FA08A",
+      "nai_sha_red": "#A05A5A",
+      "nai_hao_gold": "#C9A24A",
+      "nai_yu_blue": "#7A8FC0",
+      "zone_outer": "#3A4A57",
+      "zone_belt": "#40515F",
+      "zone_vault": "#4A485A",
+      "zone_teach_1": "#40515D",
+      "zone_teach_2": "#3F4D59",
+      "zone_teach_3": "#49485A"
+    },
+    "draw_rules": {
+      "bricks": "硬砖为带刻痕与缺角的冷灰石材；可炸软砖明确绘制为木箱：木板、X形斜撑、端头铆钉与底边阴影",
+      "floor_dot": "低对比石板压纹、错位色阶与稀疏划痕，保持地面纹理不干扰机关判读",
+      "soft_brick_lines": "可炸软砖采用木箱板缝和X形木撑，区别于固定石砖",
+      "portal": "外圈圆(r=cell*0.32, 灰紫) + 内圈圆(r=cell*0.16, 地板色), 字母标签在圆右侧",
+      "exit": "青绿色发光门洞 + 朝外箭头 + 出口牌，与金库门图形明显区分",
+      "vault_gate": "钢蓝厚门框 + 圆形转轮/锁芯 + 库门牌",
+      "hidden_egg": "软砖上叠加金色圆环(r=cell*0.18) + 上方'?'字符",
+      "color_discipline": "爆炸与金蛋保留高亮暖色焦点；木箱使用低饱和木色，石材偏冷灰蓝，传送带/传送门/出口/金库门用克制且互相区分的蓝青、灰紫、钢蓝",
+      "font": "Microsoft YaHei (msyh.ttc); 标题19px, 标注/图例12px (按cell=44px基准等比缩放)"
+    }
+  },
+  "grid_legend": {
+    "H": {
+      "type": "硬砖",
+      "draw": "冷灰石材刻痕",
+      "color": "hard_brick"
+    },
+    "S": {
+      "type": "软砖",
+      "draw": "木箱纹理+X形斜撑",
+      "color": "soft_brick"
+    },
+    "B": {
+      "type": "道具砖",
+      "draw": "道具木箱+黄铜锁扣",
+      "color": "item_brick"
+    },
+    "g": {
+      "type": "藏蛋砖",
+      "draw": "木箱+金圈叠'?'",
+      "color": "soft_brick"
+    },
+    "G": {
+      "type": "金蛋(明置)",
+      "draw": "椭圆蛋+高光",
+      "color": "golden_egg"
+    },
+    "E": {
+      "type": "出口",
+      "draw": "发光门洞+朝外箭头+出口牌",
+      "color": "exit_accent"
+    },
+    "P": {
+      "type": "传送门A",
+      "draw": "双圆",
+      "color": "portal"
+    },
+    "Q": {
+      "type": "传送门B",
+      "draw": "双圆",
+      "color": "portal"
+    },
+    ">": {
+      "type": "巡逻折返格",
+      "draw": "上下双向小三角",
+      "color": "text_secondary"
+    },
+    "@": {
+      "type": "出生点",
+      "draw": "金色实心圆",
+      "color": "player_mark"
+    }
+  },
+  "maps": {
+    "L31_teaching": {
+      "name": "3-1 教学「第一夜」",
+      "grid_size": [
+        11,
+        9
+      ],
+      "canvas": {
+        "cell_px": 52,
+        "margin_px": 34,
+        "top_px": 58,
+        "bottom_px": 150
+      },
+      "generation": "手工固定布局（教学确定性，无种子），下方 grid 为逐格数据",
+      "grid": [
+        "P....G....E",
+        "HHHHHHHHHHH",
+        ".....B.....",
+        ".H.H.H.HSH.",
+        ".HgH.H.HBH.",
+        ".H.H.H.HSH.",
+        ".....>>>>>Q",
+        ".H.HSHSHSH.",
+        "@.SSS...G.."
+      ],
+      "zones": [
+        {
+          "rect": [
+            [
+              0,
+              6
+            ],
+            [
+              10,
+              8
+            ]
+          ],
+          "tint": "zone_teach_1",
+          "label": "① 移动+炸砖",
+          "label_anchor": [
+            0,
+            6
+          ]
+        },
+        {
+          "rect": [
+            [
+              0,
+              2
+            ],
+            [
+              10,
+              5
+            ]
+          ],
+          "tint": "zone_teach_2",
+          "label": "② 危险认知 / ③ 道具",
+          "label_anchor": [
+            0,
+            2
+          ]
+        },
+        {
+          "rect": [
+            [
+              0,
+              0
+            ],
+            [
+              10,
+              1
+            ]
+          ],
+          "tint": "zone_teach_3",
+          "label": "④ 传送门专区",
+          "label_anchor": [
+            0,
+            0
+          ]
+        }
+      ],
+      "entities": [
+        {
+          "type": "出生点",
+          "cell": [
+            0,
+            8
+          ]
+        },
+        {
+          "type": "出口",
+          "cell": [
+            10,
+            0
+          ]
+        },
+        {
+          "type": "金蛋",
+          "cell": [
+            8,
+            8
+          ],
+          "note": "蛋①广场"
+        },
+        {
+          "type": "藏蛋砖",
+          "cell": [
+            2,
+            4
+          ],
+          "note": "蛋②砖下"
+        },
+        {
+          "type": "金蛋",
+          "cell": [
+            5,
+            0
+          ],
+          "note": "蛋③北区"
+        },
+        {
+          "type": "道具砖(保底:炸弹上限+1)",
+          "cell": [
+            6,
+            2
+          ]
+        },
+        {
+          "type": "道具砖(贪心陷阱)",
+          "cell": [
+            8,
+            4
+          ],
+          "note": "x8列上下为软砖(8,3)/(8,5); 站列内放弹会炸到自己; 教学位不扣血只弹提示"
+        },
+        {
+          "type": "传送门A",
+          "cell": [
+            0,
+            0
+          ]
+        },
+        {
+          "type": "传送门B",
+          "cell": [
+            10,
+            6
+          ],
+          "note": "A↔B成对, 踩入即传, 2s冷却"
+        }
+      ],
+      "enemy": {
+        "type": "奶察",
+        "count": 1,
+        "speed_mult": 0.5,
+        "patrol": {
+          "type": "linear",
+          "from": [
+            5,
+            6
+          ],
+          "to": [
+            9,
+            6
+          ],
+          "turnaround": "两端折返"
+        },
+        "note": "与玩家动线只交叉一次"
+      },
+      "mechanics_enabled": [
+        "炸弹(标准十字)",
+        "传送门"
+      ],
+      "mechanics_disabled": [
+        "迷雾",
+        "狂暴",
+        "尖刺",
+        "传送带",
+        "踩板门",
+        "断裂地板",
+        "奶杀/奶豪/奶雨"
+      ],
+      "teaching_flow": "出生→东软砖走廊(炸砖)→广场蛋①→中部藏蛋②/保底道具/贪心陷阱→东端传送门B→北区→蛋③→出口",
+      "win": "收集3枚金蛋并到达出口(出口需经传送门区)",
+      "target_duration_s": [
+        60,
+        90
+      ],
+      "title_text": "3-1 教学「第一夜」 · 11×9 手工布局 · 无迷雾无狂暴 · 时长目标 60-90s"
+    },
+    "L32_assault": {
+      "name": "3-2 闯关「奶察总局」",
+      "grid_size": [
+        23,
+        17
+      ],
+      "canvas": {
+        "cell_px": 36,
+        "margin_px": 30,
+        "top_px": 56,
+        "bottom_px": 148
+      },
+      "generation": {
+        "method": "种子生成 + 分区override",
+        "seed_formula": "seed = levelId*10000 + attemptCount",
+        "hard_checkerboard": "x%2==1 且 y%2==1 处为硬砖(1<x<22, 1<y<16)",
+        "border": "最外圈(x=0/22, y=0/16)全部硬砖",
+        "soft_brick_ratio_by_zone": {
+          "外环": 0.45,
+          "机关带": 0.4,
+          "金库区": 0.3
+        },
+        "item_brick_ratio": "软砖的20%",
+        "connectivity_check": "生成后BFS全图可达性, 不可达软砖区强制打通",
+        "spawn_safe_zone": "出生点周围3×3强制空地"
+      },
+      "zones": [
+        {
+          "name": "外环",
+          "rect": [
+            [
+              1,
+              1
+            ],
+            [
+              21,
+              15
+            ]
+          ],
+          "tint": "zone_outer",
+          "enemies": "奶察×2巡逻",
+          "eggs": 1
+        },
+        {
+          "name": "机关带",
+          "rect": [
+            [
+              5,
+              3
+            ],
+            [
+              17,
+              13
+            ]
+          ],
+          "tint": "zone_belt",
+          "enemies": "奶杀游走",
+          "eggs": 2
+        },
+        {
+          "name": "中心金库",
+          "rect": [
+            [
+              8,
+              5
+            ],
+            [
+              15,
+              11
+            ]
+          ],
+          "tint": "zone_vault",
+          "enemies": "奶豪+奶雨",
+          "eggs": 2
+        }
+      ],
+      "fixed_placements": [
+        {
+          "type": "出生点",
+          "cell": [
+            2,
+            14
+          ]
+        },
+        {
+          "type": "出口",
+          "cell": [
+            4,
+            14
+          ],
+          "note": "近出生, 集齐金蛋后狂暴回程跑"
+        },
+        {
+          "type": "金库硬壳",
+          "shape": "rect_ring",
+          "rect": [
+            [
+              8,
+              5
+            ],
+            [
+              15,
+              11
+            ]
+          ],
+          "gates": [
+            [
+              11,
+              5
+            ],
+            [
+              11,
+              11
+            ]
+          ],
+          "note": "壳内即vault tint区"
+        },
+        {
+          "type": "踩板(西)",
+          "cell": [
+            2,
+            8
+          ],
+          "note": "控制东门(11,11)"
+        },
+        {
+          "type": "踩板(东)",
+          "cell": [
+            20,
+            8
+          ],
+          "note": "控制北门(11,5) — 交叉控制, 钓鱼博弈点"
+        },
+        {
+          "type": "金库门×2",
+          "cells": [
+            [
+              11,
+              5
+            ],
+            [
+              11,
+              11
+            ]
+          ],
+          "note": "踩住开, 松脚1.5s缓关"
+        },
+        {
+          "type": "尖刺走廊(西)",
+          "cells": [
+            [
+              3,
+              8
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              8
+            ]
+          ],
+          "note": "3s周期弹出, 会顶爆格上炸弹"
+        },
+        {
+          "type": "尖刺走廊(东)",
+          "cells": [
+            [
+              17,
+              8
+            ],
+            [
+              18,
+              8
+            ],
+            [
+              19,
+              8
+            ]
+          ]
+        },
+        {
+          "type": "传送带(上排,西行)",
+          "cells": [
+            [
+              8,
+              6
+            ],
+            [
+              14,
+              6
+            ]
+          ]
+        },
+        {
+          "type": "传送带(下排,东行)",
+          "cells": [
+            [
+              8,
+              10
+            ],
+            [
+              14,
+              10
+            ]
+          ],
+          "note": "推动玩家/道具/小炸弹"
+        },
+        {
+          "type": "断裂地板",
+          "cells": [
+            [
+              4,
+              12
+            ],
+            [
+              5,
+              12
+            ],
+            [
+              18,
+              4
+            ],
+            [
+              19,
+              4
+            ]
+          ],
+          "note": "烧两次塌陷成洞10s, 洞吞火焰"
+        },
+        {
+          "type": "传送门对C",
+          "cells": [
+            [
+              20,
+              2
+            ],
+            [
+              2,
+              12
+            ]
+          ]
+        },
+        {
+          "type": "传送门对D",
+          "cells": [
+            [
+              2,
+              2
+            ],
+            [
+              20,
+              12
+            ]
+          ]
+        },
+        {
+          "type": "金蛋(外环)",
+          "cell": [
+            20,
+            14
+          ]
+        },
+        {
+          "type": "金蛋(机关带)",
+          "cells": [
+            [
+              5,
+              4
+            ],
+            [
+              17,
+              12
+            ]
+          ]
+        },
+        {
+          "type": "金蛋(金库)",
+          "cells": [
+            [
+              10,
+              7
+            ],
+            [
+              12,
+              9
+            ]
+          ]
+        },
+        {
+          "type": "奶豪",
+          "cell": [
+            11,
+            8
+          ],
+          "note": "驻守金库, 3格激活半径, 剧本扔弹, 砸砖开路"
+        },
+        {
+          "type": "奶雨",
+          "cell": [
+            11,
+            3
+          ],
+          "note": "金库北塔, 8s一发减速泼洒, 近身瞬移 — 可砍"
+        },
+        {
+          "type": "奶杀",
+          "cell": [
+            7,
+            10
+          ],
+          "roam_radius": 3,
+          "note": "1.1×速比玩家快, 无视炸弹直冲, 被软砖挡路就地开炸"
+        },
+        {
+          "type": "奶察巡逻环(外环)",
+          "shape": "dashed_rect",
+          "rect": [
+            [
+              1,
+              1
+            ],
+            [
+              21,
+              15
+            ]
+          ]
+        },
+        {
+          "type": "奶察巡逻环(机关带)",
+          "shape": "dashed_rect",
+          "rect": [
+            [
+              6,
+              3
+            ],
+            [
+              16,
+              13
+            ]
+          ]
+        }
+      ],
+      "mechanics_enabled": [
+        "全部5种机关",
+        "迷雾",
+        "狂暴"
+      ],
+      "fog_of_war": {
+        "enabled": true,
+        "vision_radius_cells": [
+          6,
+          7
+        ],
+        "line_of_sight": "墙遮挡(BFS可见集), 拐角后不可见",
+        "memory": "走过区域半亮(地形可见, 敌人/道具不显示)",
+        "rage_vision_radius_cells": 10,
+        "explosion_flash": "爆炸瞬间全屏闪照0.3s"
+      },
+      "rage_phase": {
+        "trigger": "集齐5枚金蛋",
+        "effect": "全场奶察提速30% + 剧本扔弹(固定节奏6s/发, 奶察不躲自己的炸弹)",
+        "goal": "回到出口"
+      },
+      "win": "收集5枚金蛋→狂暴阶段→到达出口",
+      "lose": "3命耗尽(被炸-1/被贴身抓捕-1, 抓捕后2s无敌)",
+      "target_duration_s": [
+        120,
+        240
+      ],
+      "title_text": "3-2 闯关「奶察总局」 · 23×17 种子生成 + 分区override · 迷雾开启 · 金蛋5枚"
+    },
+    "M1_feeltest": {
+      "name": "M1 手感测试沙盒",
+      "grid_size": [
+        15,
+        11
+      ],
+      "canvas": {
+        "cell_px": 44,
+        "margin_px": 32,
+        "top_px": 56,
+        "bottom_px": 118
+      },
+      "generation": "手工固定布局, 无胜负, R键重置, 所有数值参数进配置表",
+      "grid": [
+        "HHHHHHHHHHHHHHH",
+        "H.............H",
+        "HSSS.......SSSH",
+        "HSSS.......SSSH",
+        "H.............H",
+        "H.....SSSS....H",
+        "H.............H",
+        "HSSS.......SSSH",
+        "HSSS.......SSSH",
+        "H.@.........S.H",
+        "HHHHHHHHHHHHHHH"
+      ],
+      "entities": [
+        {
+          "type": "出生点",
+          "cell": [
+            2,
+            9
+          ],
+          "note": "出生无敌3s"
+        }
+      ],
+      "test_areas": [
+        {
+          "id": "A",
+          "name": "中央开阔区",
+          "rect": [
+            [
+              5,
+              2
+            ],
+            [
+              9,
+              8
+            ]
+          ],
+          "purpose": "纯移动/放弹手感"
+        },
+        {
+          "id": "B",
+          "name": "四角砖垛",
+          "cells_hint": "2×3软砖垛×4(见grid)",
+          "purpose": "掩体/封路"
+        },
+        {
+          "id": "C",
+          "name": "连锁长廊",
+          "cells": [
+            [
+              6,
+              5
+            ],
+            [
+              7,
+              5
+            ],
+            [
+              8,
+              5
+            ],
+            [
+              9,
+              5
+            ]
+          ],
+          "purpose": "连锁引爆0.2s×N节奏"
+        },
+        {
+          "id": "D",
+          "name": "逃脱位",
+          "anchor": [
+            9,
+            6
+          ],
+          "purpose": "贴弹后绕行逃出爆炸十字"
+        }
+      ],
+      "enemy": {
+        "type": "奶察",
+        "count": 1,
+        "patrol": {
+          "type": "loop",
+          "rect": [
+            [
+              4,
+              1
+            ],
+            [
+              10,
+              9
+            ]
+          ],
+          "note": "清空砖垛边缘后的矩形环线, 速度档可调"
+        }
+      },
+      "test_items": [
+        "①移速/转向手感",
+        "②放弹节奏(2.5s引爆)",
+        "③十字爆炸范围直觉",
+        "④连锁0.2s×N",
+        "⑤贴弹逃脱",
+        "⑥巡逻预判",
+        "⑦整体:好玩吗(M1唯一验收标准)"
+      ],
+      "title_text": "M1 手感测试图 · 15×11 沙盒（无胜负，R 重置，参数全进配置表）"
+    }
+  }
+}

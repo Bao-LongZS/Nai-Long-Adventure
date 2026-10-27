@@ -1,0 +1,55 @@
+{
+  "status": "formal_maps_created",
+  "maps": [
+    "/Game/Naiwa/P3/Maps/L_NaiwaP3_31",
+    "/Game/Naiwa/P3/Maps/L_NaiwaP3_32"
+  ],
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "source_review_map_preserved": "/Game/Naiwa/P3/Maps/L_NaiwaP3_M2ScenarioTest",
+  "tile_assets": [
+    "/Game/Naiwa/P3/Tiles/T_P3Floor_A",
+    "/Game/Naiwa/P3/Tiles/T_P3Floor_A_v2",
+    "/Game/Naiwa/P3/Tiles/T_P3Floor_B",
+    "/Game/Naiwa/P3/Tiles/T_P3HardStone",
+    "/Game/Naiwa/P3/Tiles/T_P3HardStone_v2",
+    "/Game/Naiwa/P3/Tiles/T_P3ItemCrate",
+    "/Game/Naiwa/P3/Tiles/T_P3WoodCrate",
+    "/Game/Naiwa/P3/Tiles/T_P3WoodCrate_v2"
+  ],
+  "level_31": {
+    "map": "/Game/Naiwa/P3/Maps/L_NaiwaP3_31",
+    "level_id": 31,
+    "owner_tag": "NaiwaP3FormalLevel31",
+    "spawn_cell": [
+      0,
+      8
+    ],
+    "spawn_world": [
+      -500.0,
+      400.0,
+      0.0
+    ],
+    "board_size": "11x9",
+    "default_game_mode": "/Script/NaiwaRuntime.NaiwaP3M2GameMode"
+  },
+  "level_31_status": "new_formal_map_created",
+  "level_32": {
+    "map": "/Game/Naiwa/P3/Maps/L_NaiwaP3_32",
+    "level_id": 32,
+    "owner_tag": "NaiwaP3FormalLevel32",
+    "spawn_cell": [
+      2,
+      14
+    ],
+    "spawn_world": [
+      -900.0,
+      600.0,
+      0.0
+    ],
+    "board_size": "23x17",
+    "default_game_mode": "/Script/NaiwaRuntime.NaiwaP3M2GameMode"
+  },
+  "level_32_status": "formal_map_duplicated_from_review_map",
+  "level_31_fog": false,
+  "level_32_fog": true
+}

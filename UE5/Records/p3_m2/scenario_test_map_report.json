@@ -1,0 +1,42 @@
+{
+  "map": "/Game/Naiwa/P3/Maps/L_NaiwaP3_M2ScenarioTest",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "status": "existing_owned_scenario_map_updated",
+  "default_game_mode": "/Script/NaiwaRuntime.NaiwaP3M2GameMode",
+  "map_tags": [
+    "NaiwaP3M2ScenarioTest"
+  ],
+  "attempt_count": 0,
+  "layout_seed": 320000,
+  "board_size": "23x17",
+  "player_start_world": [
+    -900.0,
+    600.0,
+    0.0
+  ],
+  "player_start_tag": "NaiwaP3M2ScenarioPlayerStart",
+  "editor_scene_preview": "/Script/NaiwaRuntime.NaiwaP3M2ScenarioPreviewActor",
+  "portrait_assets": [
+    "SPR_Naicha_Neutral_A",
+    "SPR_Naihao_Neutral_A",
+    "SPR_Naisha_Rage_A",
+    "SPR_Player_Neutral_A"
+  ],
+  "portrait_material": "/Game/Naiwa/P3/Materials/M_P3Portrait",
+  "portrait_preview_materials": [
+    "M_P3Portrait_Naicha",
+    "M_P3Portrait_Naihao",
+    "M_P3Portrait_Naisha",
+    "M_P3Portrait_Player"
+  ],
+  "tile_texture_assets": [
+    "T_P3Floor_A",
+    "T_P3Floor_B",
+    "T_P3HardStone",
+    "T_P3ItemCrate",
+    "T_P3WoodCrate"
+  ],
+  "tile_material": "/Game/Naiwa/P3/Materials/M_P3TileArt",
+  "actor_style": "2D portrait planes with ellipse shadows; NaiYu is a blue flat marker, matching the approved preview",
+  "runtime_scene": "M2 GameMode creates the playable board, HUD, enemies, items, fog, and mechanics on BeginPlay; baked editor preview actors are hidden in game."
+}

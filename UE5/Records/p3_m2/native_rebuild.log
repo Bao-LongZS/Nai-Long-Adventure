@@ -1,0 +1,34 @@
+Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Nai_LongEditor Win64 Development -Project=C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Nai_Long.uproject -NoUBA -NoXGE -WaitMutex -MaxParallelActions=4
+Log file: C:\Users\31314\AppData\Local\Packages\sandbox.{9162db59-195d-415d-8a8c-6fe064acca8f}\AC\UnrealBuildTool\Log.txt
+Executing up to 4 actions based on MaxProcessorCount override
+UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+Available x64 toolchains (1):
+ * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231
+    (Family=14.51.36231, FamilyRank=2, Version=14.51.36256, HostArchitecture=x64, ReleaseChannel=Latest, Architecture=x64)
+Visual Studio compiler version 14.51.36256 is newer than latest preferred version 14.50.35717. Please use caution as this compiler has not been heavily tested
+Building Nai_LongEditor...
+===== Toolchain Information =====
+Using ISPC compiler (C:\Program Files\Epic Games\UE_5.8\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+  Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2) 
+Using Visual Studio 14.51.36256 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+Warning: Visual Studio compiler 14.51.36256 is not a preferred version
+[Adaptive Build] Excluded from NaiwaRuntime unity file: NaiwaAnimInstance.cpp, NaiwaAutoTestComponent.cpp, NaiwaCharacter.cpp, NaiwaGameMode.cpp, NaiwaHUD.cpp, NaiwaMenuGameMode.cpp, NaiwaMenuPlayerController.cpp, NaiwaMenuProgress.cpp, NaiwaMenuWidget.cpp, NaiwaP1BouncePad.cpp, NaiwaP1CameraManager.cpp, NaiwaP1GameMode.cpp, NaiwaP1PlayerController.cpp, NaiwaP1SwitchPlatform.cpp, NaiwaP1TimedPlatform.cpp, NaiwaP1Trigger.cpp, NaiwaP2Archer.cpp, NaiwaP2ArcherAnimInstance.cpp, NaiwaP2Ballistics.cpp, NaiwaP2GameMode.cpp, NaiwaP2HUD.cpp, NaiwaP2ImpactEffectSubsystem.cpp, NaiwaP2PhysicsEgg.cpp, NaiwaP2PhysicsGoal.cpp, NaiwaP2PlayerController.cpp, NaiwaP2Probe.cpp, NaiwaP2SceneLibrary.cpp, NaiwaP2StructureBlock.cpp, NaiwaP3BombActor.cpp, NaiwaP3BombTypes.cpp, NaiwaP3FogOfWar.cpp, NaiwaP3GridSubsystem.cpp, NaiwaP3ItemEffects.cpp, NaiwaP3LootTable.cpp, NaiwaP3M1Actors.cpp, NaiwaP3M1GameMode.cpp, NaiwaP3M1HUD.cpp, NaiwaP3M1Settings.cpp, NaiwaP3M2EnemyAI.cpp, NaiwaP3M2GameMode.cpp, NaiwaP3M2HUD.cpp, NaiwaP3M2LevelSession.cpp, NaiwaP3M2MechanicsSettings.cpp, NaiwaP3M2RuntimeSubsystem.cpp, NaiwaP3M2ScenarioPreviewActor.cpp, NaiwaP3M2SeededMap.cpp, NaiwaP3M2Settings.cpp, NaiwaP3M2WorldPresentation.cpp, NaiwaP3Mechanics.cpp, NaiwaP3PlayerPawn.cpp, NaiwaRuntime.cpp, NaiwaVisualReviewComponent.cpp
+=================================
+Using Unreal Build Accelerator local executor to run 4 action(s)
+  CPU 24 physical cores, 24 logical cores
+  Memory 31.47 GB physical, 18.26 GB/42.97 GB committed
+  UBA Storage capacity 40 GB
+[1/4] Compile [x64] NaiwaP3M2WorldPresentation.cpp [NoUba]
+[2/4] Link [x64] UnrealEditor-NaiwaRuntime.lib [NoUba]
+  ￕ�ￔￚﾴﾴﾽﾨ﾿￢ C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Intermediate/Build/Win64/x64/UnrealEditor/Development/NaiwaRuntime/UnrealEditor-NaiwaRuntime.lib ﾺￍﾶￔￏ￳ C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Intermediate/Build/Win64/x64/UnrealEditor/Development/NaiwaRuntime/UnrealEditor-NaiwaRuntime.exp
+[3/4] Link [x64] UnrealEditor-NaiwaRuntime.dll [NoUba]
+[4/4] WriteMetadata Nai_LongEditor.target [NoUba]
+
+Some action result store tasks did not succeed
+Total time in Unreal Build Accelerator local executor: 9.36 seconds
+Output binary: C:\Program Files\Epic Games\UE_5.8\Engine\Binaries\Win64\UnrealEditor.exe
+
+Result: Succeeded
+Total execution time: 10.68 seconds
+Trace written to file C:\Users\31314\AppData\Local\Packages\sandbox.{9162db59-195d-415d-8a8c-6fe064acca8f}\AC\UnrealBuildTool\Trace.uba with size 4.1kb
