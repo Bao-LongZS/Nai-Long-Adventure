@@ -10,7 +10,7 @@ public class NaiwaRuntime : ModuleRules
             // NaiwaP2StructureBlock 用到 UPhysicalMaterial（摩擦/恢复系数的载体）。
             // 只链 Engine 不够 —— UPhysicalMaterial 的 UClass 符号在 PhysicsCore 里，
             // 不显式依赖会在链接期报 LNK2019 Z_Construct_UClass_UPhysicalMaterial。
-            "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "PhysicsCore",
+            "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "PhysicsCore", "DeveloperSettings",
             "UMG", "Slate", "SlateCore"
         });
         PrivateDependencyModuleNames.AddRange(new[] {

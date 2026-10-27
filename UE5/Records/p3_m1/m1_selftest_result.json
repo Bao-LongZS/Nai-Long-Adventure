@@ -1,0 +1,8 @@
+{
+  "log": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p3_m1\\m1_selftest.log",
+  "map": "/Game/Naiwa/P3/Maps/L_NaiwaP3_M1Prototype",
+  "verdict": "PASS",
+  "details": "PASS mapHash=6DCBCA85 checks=layout_and_patrol_clear,player_moves_one_cell_in_0_25s,hard_wall_blocks_player,bomb_fuse_and_soft_brick_stop,flame_expires_after_0_3s,chain_detonates_after_0_2s,enemy_patrol_moves_on_fixed_tick",
+  "exit_code": 0,
+  "engine": "5.8.3-58210709+++UE5+Release-5.8"
+}
