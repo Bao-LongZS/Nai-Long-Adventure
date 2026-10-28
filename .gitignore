@@ -104,9 +104,27 @@ NaiwaAnimation_20261009/preview/
 !UE5/SourceAssets/P2_FailureFeedback/**/*.png
 #    P3 夜巡 2D 立绘输入与透明抠图（测试关及正式关卡直接使用）
 !UE5/SourceAssets/P3/Portraits/**/*.png
+!UE5/SourceAssets/P3/Audio/**/*.wav
+!UE5/SourceAssets/P3/Audio/**/*.mp3
+#    P5/P6 美术源文件（专用源资产目录）；Common 只收已批准的跨关卡资产
+!UE5/SourceAssets/Common/**/*.png
+!UE5/SourceAssets/P5/**/*.png
+!UE5/SourceAssets/P6/**/*.png
+!UE5/Records/p5_p6_plan/evidence/**/*.png
+#    P4 生产美术与验收证据（W1 历史技术样图保持可重建/忽略）
+!UE5/SourceAssets/P4/Characters/Alpha/**/*.png
+!UE5/SourceAssets/P4/Environment/**/*.png
+!UE5/SourceAssets/P4/UI/**/*.png
+!UE5/Records/p4_alpha/evidence/**/*.png
+#    P4 W1 放行的唯一视觉依据：标定画面修复前/后各一张 1920x1080，
+#    环境再变就重截不出同一张，必须跟着记录走。
+!UE5/Records/p4_alpha/*.png
 #    P3 美术图集 7 张：p3_process_approved_art.py 的唯一输入，
 #    9 张立绘中的 5 张与 28 张场景 sprite 均由这里裁出，AI 生成不可再生。
 !UE5/Records/p3_m2/art_preview/*.png
+#    P3 正式关设计图 2 张：与同目录的计划书、参数 json 属同一份交付，
+#    注意 Records 的放行必须逐层写，只放行 Records 根级盖不到子目录。
+!UE5/Records/p3_formal/design_reference/*.png
 #    原始解码帧属中间输入，由视频一条命令重新抽帧，点名挡住（须在放行之后）。
 UE5/SourceAssets/P1_Feedback/DeathLaughVideoFramesRaw/
 
