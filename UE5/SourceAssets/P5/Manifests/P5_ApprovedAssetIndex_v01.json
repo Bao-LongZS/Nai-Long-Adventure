@@ -1,0 +1,69 @@
+{
+  "manifestId": "P5_ApprovedAssetIndex",
+  "version": "v01",
+  "created": "2026-10-28",
+  "status": "handoff prepared; new art production stopped per project owner",
+  "handoffRecord": "UE5/Records/p5_p6_plan/P5_美术交接记录_2026-10-28.md",
+  "acceptedForHandoff": [
+    {
+      "assetId": "P5_A0_NaturalToneDirection",
+      "files": [
+        "UE5/SourceAssets/P5/References/P5_A0_SkiScene_Concept_v02.png",
+        "UE5/SourceAssets/P5/References/P5_A0_SkiScene_WithHUD_v02.png"
+      ],
+      "ownerStatus": "approved direction preview",
+      "useLimit": "Reference/composition review only; not production layers or a UE Editor acceptance screenshot."
+    },
+    {
+      "assetId": "C_Naiwa_Ski",
+      "files": [
+        "UE5/SourceAssets/P5/Characters/Source/C_Naiwa_Ski_ApprovedSixPose_Source_v01.png",
+        "UE5/SourceAssets/P5/Characters/Exports/C_Naiwa_Ski_v01_WIP.png"
+      ],
+      "ownerStatus": "six-pose artwork approved; static atlas packing approved for handoff",
+      "useLimit": "The six-pose source is the visual authority. Atlas is cleanly separated but retains _WIP because gameplay anchors, filtering, timing, scale and Editor integration are not verified."
+    },
+    {
+      "assetId": "Palette_L4",
+      "files": [
+        "UE5/SourceAssets/P5/Materials/Exports/Palette_L4_v01_WIP.png",
+        "UE5/SourceAssets/P5/Manifests/P5_A7_Palette_L4_manifest_v01.json"
+      ],
+      "ownerStatus": "static palette approved for handoff",
+      "useLimit": "P5-only color direction; keep _WIP until balanced against the real scene at 1080p and 720p."
+    }
+  ],
+  "approvedReferenceOnly": [
+    {
+      "assetId": "C_Kangaroo_Ride_Reference",
+      "file": "UE5/SourceAssets/P5/References/C_Kangaroo_Mount_Reference_v01.png",
+      "ownerStatus": "reference confirmed",
+      "role": "Meituan kangaroo as an in-level rideable mount item, not a player-controlled character",
+      "useLimit": "Reference only; no production kangaroo sprite or atlas has passed."
+    }
+  ],
+  "explicitlyExcluded": [
+    {
+      "file": "codex-clipboard-33618807-2570-43f8-b26d-203241b6d23f.png",
+      "description": "Earlier six-pose frog sheet attached by the owner for exclusion; not the separately confirmed six-pose source.",
+      "projectAssetTreeStatus": "not present in UE5/SourceAssets/P5; do not import or use"
+    },
+    {
+      "file": "codex-clipboard-b0e42b94-fd39-47cf-a31e-f7b729525967.png",
+      "description": "Snowboarding generic kangaroo sheet attached by the owner for exclusion.",
+      "projectAssetTreeStatus": "not present in UE5/SourceAssets/P5; do not import or use"
+    }
+  ],
+  "notAcceptedCandidates": [
+    "A1 background exports: near ridge has a visible repeat seam; other two remain provisional.",
+    "A2 snow surfaces: dimensions and static edge metrics are recorded; route UV/material sampling are pending.",
+    "A3 obstacles: candidate silhouettes only; collider margin, filtering and isolated pixels are pending.",
+    "A5 kangaroo mount: reference only; no production source/atlas.",
+    "A6 effects: visual candidates only; filtering, timing and playback are pending."
+  ],
+  "handoffLimits": [
+    "No P5 art source in this index is a proof of a passed UE Editor sample gate or runtime import.",
+    "Do not continue image generation or make additional art revisions under this handoff.",
+    "Do not rename or promote _WIP exports to runtime-final until the receiving owner explicitly reopens the relevant integration gate."
+  ]
+}

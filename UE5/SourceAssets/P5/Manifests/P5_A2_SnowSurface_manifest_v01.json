@@ -1,0 +1,91 @@
+{
+  "manifestId": "P5_A2_SnowSurface",
+  "version": "v01",
+  "created": "2026-10-28",
+  "status": "WIP; candidates only; not accepted for runtime import",
+  "approvedDirection": "P5 A0 natural-tone v02 scene",
+  "exportTool": "UE5/Scripts/p5_export_a2_snow_candidates.py",
+  "assets": [
+    {
+      "assetId": "T_Snow_Ground",
+      "sourceFile": "UE5/SourceAssets/P5/Materials/Source/T_Snow_Ground_Source_v01.png",
+      "sourceImageGenId": "exec-8e7e092d-a340-4a7d-8d46-62370088966c",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "cropBox": null,
+      "exportFile": "UE5/SourceAssets/P5/Materials/Exports/T_Snow_Ground_v01_WIP.png",
+      "exportDimensions": [
+        512,
+        512
+      ],
+      "format": "PNG RGBA, sRGB assumed",
+      "alpha": "preserved",
+      "alphaBounds": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "repeatEdgeMeanAbsDiffRGBA": {
+        "horizontal": [
+          4.875,
+          4.115,
+          3.01,
+          0.0
+        ],
+        "vertical": [
+          8.475,
+          6.559,
+          3.992,
+          0.0
+        ]
+      }
+    },
+    {
+      "assetId": "T_Snow_Track",
+      "sourceFile": "UE5/SourceAssets/P5/Materials/Source/T_Snow_Track_Source_v01.png",
+      "sourceImageGenId": "exec-e7dc7cec-fad7-45de-964d-a323b498f078",
+      "sourceDimensions": [
+        1983,
+        793
+      ],
+      "cropBox": [
+        2,
+        296,
+        1982,
+        544
+      ],
+      "exportFile": "UE5/SourceAssets/P5/Materials/Exports/T_Snow_Track_v01_WIP.png",
+      "exportDimensions": [
+        512,
+        64
+      ],
+      "format": "PNG RGBA, sRGB assumed",
+      "alpha": "preserved",
+      "alphaBounds": [
+        0,
+        10,
+        512,
+        62
+      ],
+      "repeatEdgeMeanAbsDiffRGBA": {
+        "horizontal": [
+          2.047,
+          1.812,
+          4.078,
+          0.531
+        ]
+      }
+    }
+  ],
+  "preview": "UE5/Records/p5_p6_plan/evidence/P5_A2_SnowSurface/P5_A2_SnowSurface_preview_v01.png",
+  "gates": {
+    "dimensions": "exported to specification",
+    "textureRepeat": "edge metrics and static repeat preview recorded; route UV scale and material sampling pending",
+    "transparency": "track alpha preserved; actual UE filtering/compression review pending",
+    "routeIntegration": "pending actual snow-slope fixture",
+    "lightingAndColor": "static natural-tone direction only; final in-scene balance pending"
+  }
+}

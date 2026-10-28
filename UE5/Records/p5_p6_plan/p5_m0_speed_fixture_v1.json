@@ -1,0 +1,50 @@
+{
+  "schema": "naiwa.p5.speed_fixture.v1",
+  "route_id": "P5_Main_1200m_Baseline",
+  "route_version": 1,
+  "route_length_m": 1200,
+  "fixture_scope": "numeric speed and avalanche-gap baseline; not authored level geometry",
+  "fixture_hash": {
+    "algorithm": "FNV-1a-32",
+    "encoding": "UTF-8 route id followed by little-endian int32 version, route length in mm, segment count, and each segment start/end mm and base speed mm/s",
+    "value": "13C9160E"
+  },
+  "speed_segments": [
+    {
+      "start_m": 0,
+      "end_m": 800,
+      "base_speed_mps": 15.0
+    },
+    {
+      "start_m": 800,
+      "end_m": 872,
+      "base_speed_mps": 9.0
+    },
+    {
+      "start_m": 872,
+      "end_m": 1200,
+      "base_speed_mps": 12.5
+    }
+  ],
+  "reference_run": {
+    "initial_avalanche_gap_m": 60.0,
+    "segment_times_s": [
+      53.333333,
+      8.0,
+      26.24
+    ],
+    "total_time_s": 87.573333,
+    "gap_after_segments_m": [
+      60.0,
+      36.0,
+      49.12
+    ],
+    "calculation": "gap = clamp(gap + (player_speed - 12) * segment_time, 0, 60); no collisions or skill effects"
+  },
+  "geometry_status": {
+    "slope_normals": "not authored in the approved P5 engineering plan",
+    "obstacle_boxes": "not authored in the approved P5 engineering plan",
+    "coin_positions": "not authored in the approved P5 engineering plan",
+    "ride_points": "not authored in the approved P5 engineering plan"
+  }
+}

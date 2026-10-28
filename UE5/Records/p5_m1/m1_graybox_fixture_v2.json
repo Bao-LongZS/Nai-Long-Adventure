@@ -1,0 +1,25 @@
+{
+  "schema": "naiwa.p5.m1_graybox_fixture.v2",
+  "route_id": "P5_M1_100m_Graybox",
+  "route_version": 1,
+  "fixture_hash": {
+    "algorithm": "FNV-1a-32",
+    "encoding": "UTF-8 route id followed by little-endian int32 version, route length mm, segment count and each segment start/end/speed/start height/end height/surface, then event count and each event id/distance/kind/clearance/hit penalty/width",
+    "value": "81F4FE5B"
+  },
+  "route_length_m": 100,
+  "initial_avalanche_gap_m": 60.0,
+  "segments": [
+    { "start_m": 0, "end_m": 100, "speed_mps": 9.0, "start_height_m": 0.0, "end_height_m": 0.0, "surface": "snow" }
+  ],
+  "events": [
+    { "id": 1, "distance_m": 14, "kind": "coin" },
+    { "id": 2, "distance_m": 30, "kind": "tree", "clearance_m": 1.2, "hit_gap_penalty_m": 3.0 },
+    { "id": 3, "distance_m": 42, "kind": "coin" },
+    { "id": 4, "distance_m": 58, "kind": "coin" },
+    { "id": 5, "distance_m": 70, "kind": "tree", "clearance_m": 1.2, "hit_gap_penalty_m": 3.0 },
+    { "id": 6, "distance_m": 86, "kind": "coin" },
+    { "id": 7, "distance_m": 96, "kind": "coin" }
+  ],
+  "status": "engineering graybox only; provisional event data, not production geometry"
+}

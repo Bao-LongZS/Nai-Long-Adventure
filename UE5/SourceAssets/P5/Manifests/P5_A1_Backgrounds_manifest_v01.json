@@ -1,0 +1,118 @@
+{
+  "manifestId": "P5_A1_Backgrounds",
+  "version": "v01",
+  "created": "2026-10-28",
+  "status": "WIP; candidates only; not accepted for runtime import",
+  "approvedDirection": "P5 A0 natural-tone v02 scene; original character first draft remains frozen",
+  "exportTool": "UE5/Scripts/p5_export_a1_background_candidates.py",
+  "assets": [
+    {
+      "assetId": "BG_Mountain_Far",
+      "sourceFile": "UE5/SourceAssets/P5/Backgrounds/Source/BG_Mountain_Far_Source_v01.png",
+      "sourceImageGenId": "exec-7d0ae228-bd4c-43b3-8ea5-9dffdeae5e3a",
+      "sourceDimensions": [
+        2172,
+        724
+      ],
+      "exportFile": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Mountain_Far_v01_WIP.png",
+      "exportDimensions": [
+        2048,
+        512
+      ],
+      "format": "PNG RGBA, sRGB assumed",
+      "alpha": "preserved",
+      "repeatEdgeMetrics": {
+        "alphaBounds": [
+          0,
+          2,
+          2048,
+          512
+        ],
+        "leftRightMeanAbsDiffRGBA": [
+          9.117,
+          8.268,
+          7.074,
+          6.863
+        ],
+        "leftEdgeOpaquePixels": 164,
+        "rightEdgeOpaquePixels": 169
+      },
+      "manualSeamAssessment": "provisional_low_edge_difference_review_in_editor_pending"
+    },
+    {
+      "assetId": "BG_Forest_Mid",
+      "sourceFile": "UE5/SourceAssets/P5/Backgrounds/Source/BG_Forest_Mid_Source_v01.png",
+      "sourceImageGenId": "exec-1321daf3-0013-475a-8b2e-c90efbeabd49",
+      "sourceDimensions": [
+        2172,
+        724
+      ],
+      "exportFile": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Forest_Mid_v01_WIP.png",
+      "exportDimensions": [
+        2048,
+        512
+      ],
+      "format": "PNG RGBA, sRGB assumed",
+      "alpha": "preserved",
+      "repeatEdgeMetrics": {
+        "alphaBounds": [
+          0,
+          5,
+          2048,
+          511
+        ],
+        "leftRightMeanAbsDiffRGBA": [
+          8.836,
+          9.762,
+          11.191,
+          4.004
+        ],
+        "leftEdgeOpaquePixels": 107,
+        "rightEdgeOpaquePixels": 100
+      },
+      "manualSeamAssessment": "provisional_low_edge_difference_review_in_editor_pending"
+    },
+    {
+      "assetId": "BG_Ridge_Near",
+      "sourceFile": "UE5/SourceAssets/P5/Backgrounds/Source/BG_Ridge_Near_Source_v01.png",
+      "sourceImageGenId": "exec-8118d428-fcb5-4d04-a1ce-a0df3ba76e4f",
+      "sourceDimensions": [
+        2060,
+        763
+      ],
+      "exportFile": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Ridge_Near_v01_WIP.png",
+      "exportDimensions": [
+        2048,
+        768
+      ],
+      "format": "PNG RGBA, sRGB assumed",
+      "alpha": "preserved",
+      "repeatEdgeMetrics": {
+        "alphaBounds": [
+          0,
+          167,
+          2048,
+          768
+        ],
+        "leftRightMeanAbsDiffRGBA": [
+          44.572,
+          40.212,
+          33.574,
+          43.863
+        ],
+        "leftEdgeOpaquePixels": 390,
+        "rightEdgeOpaquePixels": 255
+      },
+      "manualSeamAssessment": "fail_visible_ridge_height_mismatch"
+    }
+  ],
+  "preview": "UE5/Records/p5_p6_plan/evidence/P5_A1_Backgrounds/P5_A1_Backgrounds_tiling_preview_v01.png",
+  "gates": {
+    "dimensions": "exported to specification",
+    "transparency": "preserved from generated sources; visual edge review required in the actual material",
+    "horizontalRepeat": "near ridge fails; far and mid remain provisional pending Editor loop review",
+    "editorIntegration": "pending",
+    "A0A1SceneGate": "pending real UE Editor fixture, route geometry and HUD review",
+    "performance": "not measured"
+  }
+}

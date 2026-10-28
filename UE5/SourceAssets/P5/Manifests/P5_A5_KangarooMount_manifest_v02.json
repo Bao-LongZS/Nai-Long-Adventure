@@ -1,0 +1,58 @@
+{
+  "manifestId": "P5_A5_KangarooMount",
+  "version": "v02",
+  "created": "2026-10-28",
+  "status": "WIP; owner-approved art base cleaned and exported to target atlas size; gameplay/UE acceptance pending",
+  "assetId": "C_Kangaroo_Ride",
+  "role": "In-level rideable mount prop; not a player-controlled character",
+  "ownerApproval": {
+    "approvedAs": "visual base for continued production",
+    "date": "2026-10-28",
+    "approvalDoesNotCover": ["final runtime import", "pose timing", "gameplay anchors", "UE filtering", "resolution readability"]
+  },
+  "sourceFile": "UE5/SourceAssets/P5/Environment/Source/C_Kangaroo_Ride_ApprovedBase_Source_20261028.png",
+  "sourceImage": {
+    "format": "PNG RGBA",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "2B5D81345E0D4D668E393BEC6CEFBA858E4D397CC0FC2275F99487C5D56EFB89"
+  },
+  "export": {
+    "file": "UE5/SourceAssets/P5/Environment/Exports/C_Kangaroo_Ride_v04_WIP.png",
+    "format": "PNG RGBA",
+    "width": 1024,
+    "height": 1024,
+    "sha256": "BD63321DF62D3E4F3AD1E3F119476C9161211A5AF0653251CDF26C48A7F0CD66",
+    "runtimeAccepted": false
+  },
+  "exportPipeline": {
+    "script": "UE5/Scripts/p5_export_a5_kangaroo_candidate.ps1",
+    "operations": [
+      "preserve the owner-approved source unchanged",
+      "threshold each cell alpha at 24 and use a 3x3 morphological opening to separate stray marks from the character silhouette",
+      "retain the largest kangaroo silhouette in each cell",
+      "preserve the three blue reaction strokes in frame 5",
+      "retain a 2px soft-alpha fringe around kept art",
+      "high-quality resample the full 3x2 atlas to 1024x1024"
+    ],
+    "alphaThreshold": 24
+  },
+  "frames": [
+    { "index": 0, "name": "AvailableIdle", "rect": [0, 0, 341, 512], "footAnchorCandidate": [183, 467], "rideAnchor": null, "durationMs": null },
+    { "index": 1, "name": "ReadyToCarry", "rect": [341, 0, 342, 512], "footAnchorCandidate": [178, 466], "rideAnchor": null, "durationMs": null },
+    { "index": 2, "name": "DownhillGlide", "rect": [683, 0, 341, 512], "footAnchorCandidate": [164, 466], "rideAnchor": null, "durationMs": null },
+    { "index": 3, "name": "Bounce", "rect": [0, 512, 341, 512], "footAnchorCandidate": [183, 358], "rideAnchor": null, "durationMs": null },
+    { "index": 4, "name": "ImpactReact", "rect": [341, 512, 342, 512], "footAnchorCandidate": [190, 401], "rideAnchor": null, "durationMs": null },
+    { "index": 5, "name": "RecoveredIdle", "rect": [683, 512, 341, 512], "footAnchorCandidate": [174, 431], "rideAnchor": null, "durationMs": null }
+  ],
+  "review": {
+    "ownerApprovedBase": true,
+    "transparentGutterCleanup": "isolated artifacts were removed from the export; representative canvas samples have alpha 0",
+    "intentionalBlueReactionMarks": "retained in frame 5",
+    "knownIssues": [
+      "foot anchors are geometry-based candidates and require slope alignment in the real level",
+      "rider/pouch anchors and frame timing remain to be agreed with the gameplay presentation",
+      "UE alpha filtering, 1080p/720p readability and in-game layering remain unchecked"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "manifestId": "P5_A1_Backgrounds",
+  "version": "v02",
+  "created": "2026-10-28",
+  "status": "WIP; revised near-ridge source candidate only; not accepted for runtime import",
+  "approvedDirection": "P5 A0 natural-tone v02 scene; original character first draft remains frozen",
+  "assets": [
+    {
+      "assetId": "BG_Mountain_Far",
+      "source": "UE5/SourceAssets/P5/Backgrounds/Source/BG_Mountain_Far_Source_v01.png",
+      "export": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Mountain_Far_v01_WIP.png",
+      "status": "unchanged from v01; static edge pre-review only"
+    },
+    {
+      "assetId": "BG_Forest_Mid",
+      "source": "UE5/SourceAssets/P5/Backgrounds/Source/BG_Forest_Mid_Source_v01.png",
+      "export": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Forest_Mid_v01_WIP.png",
+      "status": "unchanged from v01; static edge pre-review only"
+    },
+    {
+      "assetId": "BG_Ridge_Near",
+      "source": "UE5/SourceAssets/P5/Backgrounds/Source/BG_Ridge_Near_Source_v03_WIP.png",
+      "sourceDimensions": [2060, 763],
+      "targetExportDimensions": [2048, 768],
+      "targetExport": "pending",
+      "sha256": "CE72C57414787918E538546FEF2D3B3550EC41461ED14BD0B57FEF89AC872CB5",
+      "seamReview": {
+        "method": "per-row mean absolute RGBA difference between first and last source columns",
+        "v01SourceRGBA": [47.055, 42.295, 34.422, 44.497],
+        "v03SourceRGBA": [26.659, 20.522, 10.096, 0.236],
+        "status": "improved but visibly seams in a repeated two-tile preview; remains WIP"
+      },
+      "preview": "UE5/Records/p5_p6_plan/evidence/P5_A1_Backgrounds/P5_A1_RidgeTiling_v03.png"
+    }
+  ],
+  "runtimeAccepted": false,
+  "remainingChecks": [
+    "remove stray colored pixels in transparent margins",
+    "resolve the visible color/brush discontinuity at the repeat join",
+    "produce the 2048x768 export from the selected source and remeasure its edges",
+    "check transparency filtering, parallax and occlusion in UE at 1080p and 720p"
+  ]
+}

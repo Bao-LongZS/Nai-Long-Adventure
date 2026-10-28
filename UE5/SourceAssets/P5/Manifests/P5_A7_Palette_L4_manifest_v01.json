@@ -1,0 +1,52 @@
+{
+  "manifestId": "P5_A7_Palette_L4",
+  "version": "v01",
+  "created": "2026-10-28",
+  "status": "owner-approved static palette handoff; in-scene balance and Editor review pending",
+  "ownerReview": {
+    "date": "2026-10-28",
+    "decision": "Approved",
+    "scope": "Static palette direction accepted for handoff; scene integration and 1080p/720p color readability remain unverified."
+  },
+  "exportFile": "UE5/SourceAssets/P5/Materials/Exports/Palette_L4_v01_WIP.png",
+  "exportTool": "UE5/Scripts/p5_build_a7_palette.py",
+  "approvedDirection": "P5 A0 v02 natural-tone scene; preserve selected original yellow frog and snowboard colors",
+  "sourcePalettes": [
+    {
+      "project": "P2",
+      "file": "UE5/Records/p2_geo_palette_update.json",
+      "sampledColors": ["#A9D6EE", "#C7E5F4", "#DDEFF8", "#F8F8E8"]
+    },
+    {
+      "project": "P3",
+      "file": "UE5/Records/p3_formal/design_reference/P3_关卡设计参数_v1.json",
+      "sampledColors": ["#334352", "#526F82", "#657586", "#82909F", "#D8DEE6", "#9AA6B4", "#6F9995", "#96714F", "#654A3C", "#E8C86A", "#FFD34D", "#FFA028", "#A05A5A"]
+    }
+  ],
+  "warmColorRule": "Environmental warmth is reserved for coins and explicit interaction/warning cues; the owner-approved yellow frog and ochre snowboard retain their character identity colors.",
+  "colors": [
+    {"id":"sky_far","label":"Sky / far haze","hex":"#DDEFF8","role":"high, soft atmosphere","origin":"P2 SkyMid exact"},
+    {"id":"sky_edge","label":"Sky / cool edge","hex":"#A9D6EE","role":"far sky transition","origin":"P2 Sky1 exact"},
+    {"id":"mountain_light","label":"Mountain / light","hex":"#A5B7C8","role":"far mountain planes","origin":"derived muted blend from P2 #A9D6EE and P3 #82909F"},
+    {"id":"mountain_shadow","label":"Mountain / shadow","hex":"#82909F","role":"cool silhouette separation","origin":"P3 stone_highlight exact"},
+    {"id":"forest_mid","label":"Forest / mid","hex":"#526F82","role":"mid-distance conifers","origin":"P3 conveyor exact"},
+    {"id":"forest_deep","label":"Forest / deep","hex":"#334352","role":"deepest background accents","origin":"P3 floor exact"},
+    {"id":"snow_light","label":"Snow / light","hex":"#EEF2ED","role":"broad snow highlights; restrained off-white","origin":"derived natural-tone neutral from P2 #F8F8E8 and P3 #D8DEE6"},
+    {"id":"snow_mid","label":"Snow / mid","hex":"#D8DEE6","role":"snow base and UI light neutral","origin":"P3 text exact"},
+    {"id":"snow_cool_shadow","label":"Snow / cool shadow","hex":"#A9B6C5","role":"blue-violet snow shadow","origin":"derived between P3 #82909F and #D8DEE6"},
+    {"id":"snow_deep_shadow","label":"Snow / deep shadow","hex":"#657586","role":"limited contour and deep snow cuts","origin":"P3 stone_mid exact"},
+    {"id":"ice_muted","label":"Ice / muted teal","hex":"#6F9995","role":"small cold accent; never a broad electric-blue fill","origin":"P3 accent_cold exact"},
+    {"id":"warm_hero","label":"Hero / warm gold","hex":"#E8C86A","role":"identity-only reference for existing yellow hero art","origin":"P3 player_mark exact; not a repaint target"},
+    {"id":"board_wood","label":"Snowboard / muted wood","hex":"#96714F","role":"retain subdued ochre wood","origin":"P3 soft_brick exact"},
+    {"id":"coin_gold","label":"Coin / gold","hex":"#FFD34D","role":"small reward accent","origin":"P3 golden_egg exact"},
+    {"id":"warning_warm","label":"Warning / warm","hex":"#D97755","role":"small hazard/readability cue; lower chroma than P3 explosion","origin":"derived muted tone from P3 #FFA028 and #A05A5A"},
+    {"id":"ui_secondary","label":"UI / secondary","hex":"#9AA6B4","role":"secondary text and thin interface details","origin":"P3 text_secondary exact"}
+  ],
+  "gates": {
+    "sourceValues": "P2/P3 reference values and explicitly derived muted intermediates are documented",
+    "naturalTone": "static swatch created; visual balance must be checked in the A0 v02 scene",
+    "readability": "1080p/720p contrast and role use pending real Editor review",
+    "ownerApproval": "pending",
+    "performance": "not applicable to swatch; scene performance remains an engineering gate"
+  }
+}

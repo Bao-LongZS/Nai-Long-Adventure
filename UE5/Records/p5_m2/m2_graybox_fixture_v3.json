@@ -1,0 +1,351 @@
+{
+  "schema": "naiwa.p5.m2_graybox_fixture.v3",
+  "route_id": "P5_Main_1200m_M2Graybox",
+  "route_version": 3,
+  "fixture_hash": {
+    "algorithm": "FNV-1a-32",
+    "encoding": "UTF-8 route id followed by little-endian int32 version, route length, segment count and each segment start/end/speed/start height/end height/surface, then event count and each event id/distance/kind/clearance/hit penalty/width",
+    "value": "BBA5CB50"
+  },
+  "route_length_m": 1200,
+  "initial_avalanche_gap_m": 60,
+  "scope": "provisional engineering graybox fixture; fixed seed; not production geometry",
+  "segments": [
+    {
+      "start_m": 0,
+      "end_m": 400,
+      "speed_mps": 15,
+      "start_height_m": 0,
+      "end_height_m": -4,
+      "surface": "snow"
+    },
+    {
+      "start_m": 400,
+      "end_m": 480,
+      "speed_mps": 15,
+      "start_height_m": -4,
+      "end_height_m": -2.5,
+      "surface": "snow"
+    },
+    {
+      "start_m": 480,
+      "end_m": 560,
+      "speed_mps": 15,
+      "start_height_m": -2.5,
+      "end_height_m": -5,
+      "surface": "snow"
+    },
+    {
+      "start_m": 560,
+      "end_m": 640,
+      "speed_mps": 15,
+      "start_height_m": -5,
+      "end_height_m": -3,
+      "surface": "snow"
+    },
+    {
+      "start_m": 640,
+      "end_m": 720,
+      "speed_mps": 15,
+      "start_height_m": -3,
+      "end_height_m": -5.5,
+      "surface": "snow"
+    },
+    {
+      "start_m": 720,
+      "end_m": 800,
+      "speed_mps": 15,
+      "start_height_m": -5.5,
+      "end_height_m": -4,
+      "surface": "snow"
+    },
+    {
+      "start_m": 800,
+      "end_m": 872,
+      "speed_mps": 9,
+      "start_height_m": -4,
+      "end_height_m": 3.2,
+      "surface": "snow"
+    },
+    {
+      "start_m": 872,
+      "end_m": 980,
+      "speed_mps": 12.5,
+      "start_height_m": 3.2,
+      "end_height_m": 0,
+      "surface": "snow"
+    },
+    {
+      "start_m": 980,
+      "end_m": 1020,
+      "speed_mps": 12.5,
+      "start_height_m": 0,
+      "end_height_m": -0.2,
+      "surface": "ice"
+    },
+    {
+      "start_m": 1020,
+      "end_m": 1160,
+      "speed_mps": 12.5,
+      "start_height_m": -0.2,
+      "end_height_m": 0,
+      "surface": "snow"
+    },
+    {
+      "start_m": 1160,
+      "end_m": 1200,
+      "speed_mps": 12.5,
+      "start_height_m": 0,
+      "end_height_m": 5,
+      "surface": "jump_ramp"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "distance_m": 25,
+      "kind": "coin"
+    },
+    {
+      "id": 2,
+      "distance_m": 75,
+      "kind": "coin"
+    },
+    {
+      "id": 3,
+      "distance_m": 125,
+      "kind": "coin"
+    },
+    {
+      "id": 39,
+      "distance_m": 150,
+      "kind": "kangaroo",
+      "clearance_m": 1.8,
+      "width_m": 2.5
+    },
+    {
+      "id": 4,
+      "distance_m": 175,
+      "kind": "coin"
+    },
+    {
+      "id": 5,
+      "distance_m": 190,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 6,
+      "distance_m": 225,
+      "kind": "coin"
+    },
+    {
+      "id": 7,
+      "distance_m": 275,
+      "kind": "coin"
+    },
+    {
+      "id": 8,
+      "distance_m": 325,
+      "kind": "coin"
+    },
+    {
+      "id": 9,
+      "distance_m": 345,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 10,
+      "distance_m": 375,
+      "kind": "coin"
+    },
+    {
+      "id": 11,
+      "distance_m": 425,
+      "kind": "coin"
+    },
+    {
+      "id": 12,
+      "distance_m": 455,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 13,
+      "distance_m": 475,
+      "kind": "coin"
+    },
+    {
+      "id": 40,
+      "distance_m": 500,
+      "kind": "kangaroo",
+      "clearance_m": 1.8,
+      "width_m": 2.5
+    },
+    {
+      "id": 14,
+      "distance_m": 515,
+      "kind": "coin"
+    },
+    {
+      "id": 15,
+      "distance_m": 545,
+      "kind": "rock",
+      "clearance_m": 0.6,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 16,
+      "distance_m": 575,
+      "kind": "coin"
+    },
+    {
+      "id": 17,
+      "distance_m": 615,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 18,
+      "distance_m": 625,
+      "kind": "coin"
+    },
+    {
+      "id": 19,
+      "distance_m": 675,
+      "kind": "coin"
+    },
+    {
+      "id": 20,
+      "distance_m": 695,
+      "kind": "rock",
+      "clearance_m": 0.6,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 21,
+      "distance_m": 725,
+      "kind": "coin"
+    },
+    {
+      "id": 22,
+      "distance_m": 755,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 23,
+      "distance_m": 775,
+      "kind": "coin"
+    },
+    {
+      "id": 24,
+      "distance_m": 825,
+      "kind": "coin"
+    },
+    {
+      "id": 25,
+      "distance_m": 850,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 26,
+      "distance_m": 875,
+      "kind": "coin"
+    },
+    {
+      "id": 27,
+      "distance_m": 900,
+      "kind": "rock",
+      "clearance_m": 0.6,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 28,
+      "distance_m": 925,
+      "kind": "coin"
+    },
+    {
+      "id": 41,
+      "distance_m": 930,
+      "kind": "kangaroo",
+      "clearance_m": 1.8,
+      "width_m": 2.5
+    },
+    {
+      "id": 29,
+      "distance_m": 945,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 30,
+      "distance_m": 975,
+      "kind": "coin"
+    },
+    {
+      "id": 31,
+      "distance_m": 1005,
+      "kind": "ice_gap",
+      "clearance_m": 1.4,
+      "width_m": 2
+    },
+    {
+      "id": 32,
+      "distance_m": 1025,
+      "kind": "coin"
+    },
+    {
+      "id": 33,
+      "distance_m": 1045,
+      "kind": "rock",
+      "clearance_m": 0.6,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 34,
+      "distance_m": 1075,
+      "kind": "coin"
+    },
+    {
+      "id": 35,
+      "distance_m": 1085,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 36,
+      "distance_m": 1125,
+      "kind": "coin"
+    },
+    {
+      "id": 37,
+      "distance_m": 1150,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 38,
+      "distance_m": 1175,
+      "kind": "coin"
+    }
+  ],
+  "reference_run": {
+    "no_collision_total_time_s": 87.57,
+    "gap_after_800m_m": 60,
+    "gap_after_872m_m": 36,
+    "gap_at_finish_m": 49.12,
+    "calculation": "fixed segment speeds and avalanche speed 12 m/s; no collision, no skill effects"
+  }
+}

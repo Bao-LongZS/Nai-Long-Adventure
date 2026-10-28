@@ -1,0 +1,24 @@
+{
+  "schema": "naiwa.p5.m1_graybox_fixture.v1",
+  "route_id": "P5_M1_100m_Graybox",
+  "route_version": 1,
+  "fixture_hash": {
+    "algorithm": "FNV-1a-32",
+    "encoding": "UTF-8 route id followed by little-endian int32 version, route length mm, base speed mm/s, tree clearance mm, event count, then each event id, distance mm, kind and required clearance mm",
+    "value": "33F8BA62"
+  },
+  "route_length_m": 100,
+  "base_speed_mps": 9.0,
+  "initial_avalanche_gap_m": 60.0,
+  "tree_clearance_m": 1.2,
+  "events": [
+    { "id": 1, "distance_m": 14, "kind": "coin" },
+    { "id": 2, "distance_m": 30, "kind": "tree", "required_clearance_m": 1.2 },
+    { "id": 3, "distance_m": 42, "kind": "coin" },
+    { "id": 4, "distance_m": 58, "kind": "coin" },
+    { "id": 5, "distance_m": 70, "kind": "tree", "required_clearance_m": 1.2 },
+    { "id": 6, "distance_m": 86, "kind": "coin" },
+    { "id": 7, "distance_m": 96, "kind": "coin" }
+  ],
+  "status": "engineering graybox only; event positions are provisional and do not define production level geometry"
+}

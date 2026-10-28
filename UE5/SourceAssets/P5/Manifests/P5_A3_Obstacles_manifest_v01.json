@@ -1,0 +1,168 @@
+{
+  "manifestId": "P5_A3_Obstacles",
+  "version": "v01",
+  "created": "2026-10-28",
+  "status": "WIP; candidates only; not accepted for runtime import",
+  "approvedDirection": "P5 A0 natural-tone v02 scene",
+  "exportTool": "UE5/Scripts/p5_export_a3_obstacle_candidates.py",
+  "assets": [
+    {
+      "assetId": "O_Tree_A",
+      "sourceFile": "UE5/SourceAssets/P5/Environment/Source/O_Tree_Sheet_Source_v01.png",
+      "sourceImageGenId": "exec-fa4b6800-c80c-4adc-a415-eb7a8dd6c62a",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        0,
+        0,
+        512,
+        1024
+      ],
+      "exportFile": "UE5/SourceAssets/P5/Environment/Exports/O_Tree_A_v01_WIP.png",
+      "format": "PNG RGBA, sRGB assumed",
+      "dimensions": [
+        512,
+        1024
+      ],
+      "alphaBounds": [
+        0,
+        10,
+        512,
+        1024
+      ],
+      "transparentPixelPercent": 55.64,
+      "opaquePixelPercent": 24.5,
+      "manualSilhouetteAssessment": "distinct_static_candidate_collision_match_pending"
+    },
+    {
+      "assetId": "O_Tree_B",
+      "sourceFile": "UE5/SourceAssets/P5/Environment/Source/O_Tree_Sheet_Source_v01.png",
+      "sourceImageGenId": "exec-fa4b6800-c80c-4adc-a415-eb7a8dd6c62a",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        512,
+        0,
+        1024,
+        1024
+      ],
+      "exportFile": "UE5/SourceAssets/P5/Environment/Exports/O_Tree_B_v01_WIP.png",
+      "format": "PNG RGBA, sRGB assumed",
+      "dimensions": [
+        512,
+        1024
+      ],
+      "alphaBounds": [
+        0,
+        1,
+        512,
+        1024
+      ],
+      "transparentPixelPercent": 35.46,
+      "opaquePixelPercent": 46.25,
+      "manualSilhouetteAssessment": "distinct_static_candidate_collision_match_pending"
+    },
+    {
+      "assetId": "O_Tree_C",
+      "sourceFile": "UE5/SourceAssets/P5/Environment/Source/O_Tree_Sheet_Source_v01.png",
+      "sourceImageGenId": "exec-fa4b6800-c80c-4adc-a415-eb7a8dd6c62a",
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "sourceCell": [
+        1024,
+        0,
+        1536,
+        1024
+      ],
+      "exportFile": "UE5/SourceAssets/P5/Environment/Exports/O_Tree_C_v01_WIP.png",
+      "format": "PNG RGBA, sRGB assumed",
+      "dimensions": [
+        512,
+        1024
+      ],
+      "alphaBounds": [
+        0,
+        11,
+        512,
+        1024
+      ],
+      "transparentPixelPercent": 41.57,
+      "opaquePixelPercent": 26.04,
+      "manualSilhouetteAssessment": "distinct_static_candidate_collision_match_pending"
+    },
+    {
+      "assetId": "O_Rock_A",
+      "sourceFile": "UE5/SourceAssets/P5/Environment/Source/O_Rock_Sheet_Source_v01.png",
+      "sourceImageGenId": "exec-db16114d-a4b8-4670-b3b5-cdaac3add5e4",
+      "sourceDimensions": [
+        1774,
+        887
+      ],
+      "sourceCell": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "exportFile": "UE5/SourceAssets/P5/Environment/Exports/O_Rock_A_v01_WIP.png",
+      "format": "PNG RGBA, sRGB assumed",
+      "dimensions": [
+        256,
+        256
+      ],
+      "alphaBounds": [
+        17,
+        102,
+        234,
+        231
+      ],
+      "transparentPixelPercent": 68.32,
+      "opaquePixelPercent": 29.27,
+      "manualSilhouetteAssessment": "distinct_static_candidate_collision_match_pending"
+    },
+    {
+      "assetId": "O_Rock_B",
+      "sourceFile": "UE5/SourceAssets/P5/Environment/Source/O_Rock_Sheet_Source_v01.png",
+      "sourceImageGenId": "exec-db16114d-a4b8-4670-b3b5-cdaac3add5e4",
+      "sourceDimensions": [
+        1774,
+        887
+      ],
+      "sourceCell": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "exportFile": "UE5/SourceAssets/P5/Environment/Exports/O_Rock_B_v01_WIP.png",
+      "format": "PNG RGBA, sRGB assumed",
+      "dimensions": [
+        256,
+        256
+      ],
+      "alphaBounds": [
+        21,
+        30,
+        225,
+        232
+      ],
+      "transparentPixelPercent": 60.26,
+      "opaquePixelPercent": 37.03,
+      "manualSilhouetteAssessment": "distinct_static_candidate_collision_match_pending"
+    }
+  ],
+  "preview": "UE5/Records/p5_p6_plan/evidence/P5_A3_Obstacles/P5_A3_Obstacles_preview_v01.png",
+  "gates": {
+    "dimensions": "exported to specification",
+    "transparency": "alpha retained; UE material filtering and edge review pending",
+    "silhouette": "three tree variants and two rock variants are visually distinct in a neutral composite preview",
+    "collision": "pending actual P5 collision bounds and gameplay readability review",
+    "editorIntegration": "pending"
+  }
+}

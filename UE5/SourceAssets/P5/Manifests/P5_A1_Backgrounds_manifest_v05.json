@@ -1,0 +1,68 @@
+{
+  "manifestId": "P5_A1_Backgrounds",
+  "version": "v05",
+  "created": "2026-10-28",
+  "status": "WIP; near-ridge v03 has byte-identical RGBA edge columns in static review, but contour tangents, texture continuity and UE runtime acceptance remain pending",
+  "approvedDirection": "P5 A0 natural-tone v02 scene; original character first draft remains frozen",
+  "exportTool": "UE5/Scripts/p5_export_a1_ridge_seamless_candidate.ps1 (run with Windows PowerShell 5.1; use -MatchAlphaSeam for v03)",
+  "assets": [
+    {
+      "assetId": "BG_Mountain_Far",
+      "source": "UE5/SourceAssets/P5/Backgrounds/Source/BG_Mountain_Far_Source_v01.png",
+      "export": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Mountain_Far_v01_WIP.png",
+      "status": "unchanged from v01; static edge pre-review only"
+    },
+    {
+      "assetId": "BG_Forest_Mid",
+      "source": "UE5/SourceAssets/P5/Backgrounds/Source/BG_Forest_Mid_Source_v01.png",
+      "export": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Forest_Mid_v01_WIP.png",
+      "status": "unchanged from v01; static edge pre-review only"
+    },
+    {
+      "assetId": "BG_Ridge_Near",
+      "source": "UE5/SourceAssets/P5/Backgrounds/Source/BG_Ridge_Near_Source_v04_WIP.png",
+      "sourceDimensions": [
+        2060,
+        763
+      ],
+      "sourceSha256": "4FE56E97FAC24C53E13AC627C700842C53CBA9DDF336D838C029C0FDBAFBEEB6",
+      "export": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Ridge_Near_v03_WIP.png",
+      "exportDimensions": [
+        2048,
+        768
+      ],
+      "exportSha256": "60ADA6D386492EADE090FC6DABCE0EA6A104DF93C0E10C15A99F3BF8C4888C09",
+      "processing": "Removed disconnected alpha components outside the largest terrain component with a 2 px fringe; resized to target dimensions; within 16 px at each horizontal edge, alpha coverage and premultiplied color converge toward the lower-coverage edge sample for that row. Original source remains unchanged.",
+      "seamReview": {
+        "method": "per-row RGBA edge-column diff plus two-tile visual preview",
+        "sourceV04MeanAbsDiffRGBA": [
+          15.713,
+          11.887,
+          6.446,
+          5.097
+        ],
+        "exportV03MeanAbsDiffRGBA": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "exportV03MaxAbsDiffRGBA": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "preview": "UE5/Records/p5_p6_plan/evidence/P5_A1_Backgrounds/P5_A1_RidgeTiling_v09.png",
+        "status": "First and last export columns match byte-for-byte in RGBA. Preview still requires judgment of contour tangent/texture continuity; WIP."
+      }
+    }
+  ],
+  "runtimeAccepted": false,
+  "remainingChecks": [
+    "review contour tangent and texture continuity during intended parallax motion, including a three-tile preview",
+    "check far, mid and near layer repeat, parallax and occlusion in UE at 1080p and 720p",
+    "review alpha filtering and compression in the actual project texture/material path",
+    "complete the A0 Editor sample with route geometry, character, obstacle, avalanche wall and HUD"
+  ]
+}

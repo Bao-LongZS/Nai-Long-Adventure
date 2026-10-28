@@ -1,0 +1,245 @@
+{
+  "manifestId": "P5_A4_NaiwaSki",
+  "version": "v01",
+  "created": "2026-10-28",
+  "status": "owner-approved visual source and static atlas handoff; runtime anchors/integration pending",
+  "ownerReview": {
+    "date": "2026-10-28",
+    "decision": "Approved",
+    "scope": "The correct six-pose frog artwork and clean static atlas packing are accepted for handoff; in-game anchors, timing, resolution and Editor integration remain unverified."
+  },
+  "sourceFile": "UE5/SourceAssets/P5/Characters/Source/C_Naiwa_Ski_ApprovedSixPose_Source_v01.png",
+  "sourceImageGenId": "exec-b30a4f3e-29ff-4f95-ab88-70e4e20a3174",
+  "exportTool": "UE5/Scripts/p5_export_a4_character_candidate.py",
+  "exportFile": "UE5/SourceAssets/P5/Characters/Exports/C_Naiwa_Ski_v01_WIP.png",
+  "exportDimensions": [
+    2048,
+    1024
+  ],
+  "format": "PNG RGBA atlas, sRGB assumed",
+  "alpha": "preserved",
+  "atlasGrid": {
+    "columns": 3,
+    "rows": 2,
+    "frameCellWidths": [
+      683,
+      682,
+      683
+    ],
+    "frameCellHeight": 512
+  },
+  "frameCount": 6,
+  "loopMode": "pose-select; only Glide is a loop candidate; other poses are one-shot/hold",
+  "frames": [
+    {
+      "index": 0,
+      "pose": "Glide",
+      "sourceComponentBoundsThreshold32": [
+        31,
+        58,
+        556,
+        470
+      ],
+      "sourceCropWithEdgePadding3": [
+        28,
+        55,
+        559,
+        473
+      ],
+      "atlasRect": [
+        0,
+        0,
+        683,
+        512
+      ],
+      "spriteRectInAtlas": [
+        76,
+        58,
+        607,
+        476
+      ],
+      "anchor": [
+        341,
+        476
+      ],
+      "anchorMethod": "provisional bottom-center of cropped pose; align sprite board/feet to y=476"
+    },
+    {
+      "index": 1,
+      "pose": "Preload",
+      "sourceComponentBoundsThreshold32": [
+        578,
+        104,
+        1047,
+        433
+      ],
+      "sourceCropWithEdgePadding3": [
+        575,
+        101,
+        1050,
+        436
+      ],
+      "atlasRect": [
+        683,
+        0,
+        1365,
+        512
+      ],
+      "spriteRectInAtlas": [
+        786,
+        141,
+        1261,
+        476
+      ],
+      "anchor": [
+        340,
+        476
+      ],
+      "anchorMethod": "provisional bottom-center of cropped pose; align sprite board/feet to y=476"
+    },
+    {
+      "index": 2,
+      "pose": "AirTuck",
+      "sourceComponentBoundsThreshold32": [
+        1101,
+        49,
+        1511,
+        410
+      ],
+      "sourceCropWithEdgePadding3": [
+        1098,
+        46,
+        1514,
+        413
+      ],
+      "atlasRect": [
+        1365,
+        0,
+        2048,
+        512
+      ],
+      "spriteRectInAtlas": [
+        1498,
+        109,
+        1914,
+        476
+      ],
+      "anchor": [
+        341,
+        476
+      ],
+      "anchorMethod": "provisional bottom-center of cropped pose; align sprite board/feet to y=476"
+    },
+    {
+      "index": 3,
+      "pose": "AirTurn",
+      "sourceComponentBoundsThreshold32": [
+        48,
+        527,
+        541,
+        950
+      ],
+      "sourceCropWithEdgePadding3": [
+        45,
+        524,
+        544,
+        953
+      ],
+      "atlasRect": [
+        0,
+        512,
+        683,
+        1024
+      ],
+      "spriteRectInAtlas": [
+        92,
+        559,
+        591,
+        988
+      ],
+      "anchor": [
+        341,
+        476
+      ],
+      "anchorMethod": "provisional bottom-center of cropped pose; align sprite board/feet to y=476"
+    },
+    {
+      "index": 4,
+      "pose": "Land",
+      "sourceComponentBoundsThreshold32": [
+        544,
+        598,
+        1036,
+        911
+      ],
+      "sourceCropWithEdgePadding3": [
+        541,
+        595,
+        1039,
+        914
+      ],
+      "atlasRect": [
+        683,
+        512,
+        1365,
+        1024
+      ],
+      "spriteRectInAtlas": [
+        775,
+        669,
+        1273,
+        988
+      ],
+      "anchor": [
+        341,
+        476
+      ],
+      "anchorMethod": "provisional bottom-center of cropped pose; align sprite board/feet to y=476"
+    },
+    {
+      "index": 5,
+      "pose": "Fall",
+      "sourceComponentBoundsThreshold32": [
+        1066,
+        593,
+        1518,
+        908
+      ],
+      "sourceCropWithEdgePadding3": [
+        1063,
+        590,
+        1521,
+        911
+      ],
+      "atlasRect": [
+        1365,
+        512,
+        2048,
+        1024
+      ],
+      "spriteRectInAtlas": [
+        1477,
+        667,
+        1935,
+        988
+      ],
+      "anchor": [
+        341,
+        476
+      ],
+      "anchorMethod": "provisional bottom-center of cropped pose; align sprite board/feet to y=476"
+    }
+  ],
+  "atlasAlphaBounds": [
+    76,
+    58,
+    1935,
+    988
+  ],
+  "preview": "UE5/Records/p5_p6_plan/evidence/P5_A4_Character/C_Naiwa_Ski_AtlasPreview_v01.png",
+  "pending": [
+    "editor review of per-pose foot/board anchors",
+    "1080p and 720p readability and alpha filtering review in the real P5 scene",
+    "match each pose to actual gameplay transitions and frame timing"
+  ]
+}

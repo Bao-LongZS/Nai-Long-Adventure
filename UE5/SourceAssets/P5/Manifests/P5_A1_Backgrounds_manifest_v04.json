@@ -1,0 +1,47 @@
+{
+  "manifestId": "P5_A1_Backgrounds",
+  "version": "v04",
+  "created": "2026-10-28",
+  "status": "WIP; near-ridge v02 export is the best static repeat candidate so far, but a slight alpha-contour seam remains; no runtime acceptance",
+  "approvedDirection": "P5 A0 natural-tone v02 scene; original character first draft remains frozen",
+  "exportTool": "UE5/Scripts/p5_export_a1_ridge_seamless_candidate.ps1 (run with Windows PowerShell 5.1)",
+  "assets": [
+    {
+      "assetId": "BG_Mountain_Far",
+      "source": "UE5/SourceAssets/P5/Backgrounds/Source/BG_Mountain_Far_Source_v01.png",
+      "export": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Mountain_Far_v01_WIP.png",
+      "status": "unchanged from v01; static edge pre-review only"
+    },
+    {
+      "assetId": "BG_Forest_Mid",
+      "source": "UE5/SourceAssets/P5/Backgrounds/Source/BG_Forest_Mid_Source_v01.png",
+      "export": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Forest_Mid_v01_WIP.png",
+      "status": "unchanged from v01; static edge pre-review only"
+    },
+    {
+      "assetId": "BG_Ridge_Near",
+      "source": "UE5/SourceAssets/P5/Backgrounds/Source/BG_Ridge_Near_Source_v04_WIP.png",
+      "sourceDimensions": [2060, 763],
+      "sourceSha256": "4FE56E97FAC24C53E13AC627C700842C53CBA9DDF336D838C029C0FDBAFBEEB6",
+      "export": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Ridge_Near_v02_WIP.png",
+      "exportDimensions": [2048, 768],
+      "exportSha256": "27A7936CB026CEBF16A64CE91193C51B5D27162F2AE9B61D04DE26EC1D201B0E",
+      "processing": "Removed disconnected alpha components outside the largest terrain component with a 2 px fringe; resized to target dimensions; eased premultiplied color differences only within a 96 px border band while preserving the source alpha contour.",
+      "seamReview": {
+        "method": "per-row mean and maximum absolute RGBA difference between first and last export columns, plus two-tile visual preview",
+        "sourceV04MeanAbsDiffRGBA": [15.713, 11.887, 6.446, 5.097],
+        "exportV02MeanAbsDiffRGBA": [2.374, 2.547, 2.72, 5.206],
+        "exportV02MaxAbsDiffRGBA": [139, 125, 119, 245],
+        "preview": "UE5/Records/p5_p6_plan/evidence/P5_A1_Backgrounds/P5_A1_RidgeTiling_v08.png",
+        "status": "Visible color join is reduced; slight alpha/contour mismatch remains in static repeat review. WIP."
+      }
+    }
+  ],
+  "runtimeAccepted": false,
+  "remainingChecks": [
+    "check the near-ridge contour in the intended parallax composition; the static alpha contour still differs at some rows across the tile edge",
+    "check far, mid and near layer repeat, parallax and occlusion in UE at 1080p and 720p",
+    "review alpha filtering and compression in the actual project texture/material path",
+    "complete the A0 Editor sample with route geometry, character, obstacle, avalanche wall and HUD"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "status": "saved_pending_visible_editor_review",
+  "map": "/Game/Naiwa/P5/Maps/L_NaiwaP5_A0ArtSample",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "owner_tag": "NaiwaP5A0ArtSample",
+  "art_scope": "WIP sample only; not runtime acceptance",
+  "map_status": "new_isolated_sample_map",
+  "game_mode": "/Script/NaiwaRuntime.NaiwaP5M2PrototypeGameMode",
+  "sample_route": "M2 v4 1200 m rolling slope; runtime geometry and HUD; first-screen art placement",
+  "texture_count": 11,
+  "texture_paths": {
+    "far": "/Game/Naiwa/P5/ArtSample/Textures/T_P5_A0_MountainFar_v01",
+    "mid": "/Game/Naiwa/P5/ArtSample/Textures/T_P5_A0_ForestMid_v01",
+    "near": "/Game/Naiwa/P5/ArtSample/Textures/T_P5_A0_RidgeNear_v03",
+    "snow": "/Game/Naiwa/P5/ArtSample/Textures/T_P5_A0_SnowGround_v01",
+    "tree": "/Game/Naiwa/P5/ArtSample/Textures/T_P5_A0_TreeA_v01",
+    "rock": "/Game/Naiwa/P5/ArtSample/Textures/T_P5_A0_RockA_v01",
+    "avalanche": "/Game/Naiwa/P5/ArtSample/Textures/T_P5_A0_AvalancheCloud_v01",
+    "avalanche_rim": "/Game/Naiwa/P5/ArtSample/Textures/T_P5_A0_AvalancheRim_v01",
+    "mist": "/Game/Naiwa/P5/ArtSample/Textures/T_P5_A0_SnowMist_v01",
+    "shadow": "/Game/Naiwa/P5/ArtSample/Textures/T_P5_A0_SoftShadow_v01",
+    "hero": "/Game/Naiwa/P5/ArtSample/Textures/T_P5_A0_NaiwaGlide_v01"
+  },
+  "material_paths": {
+    "far": "/Game/Naiwa/P5/ArtSample/Materials/M_P5_A0_MountainFar",
+    "mid": "/Game/Naiwa/P5/ArtSample/Materials/M_P5_A0_ForestMid",
+    "near": "/Game/Naiwa/P5/ArtSample/Materials/M_P5_A0_RidgeNear",
+    "snow": "/Game/Naiwa/P5/ArtSample/Materials/M_P5_A0_SnowGround",
+    "tree": "/Game/Naiwa/P5/ArtSample/Materials/M_P5_A0_TreeA",
+    "rock": "/Game/Naiwa/P5/ArtSample/Materials/M_P5_A0_RockA",
+    "avalanche": "/Game/Naiwa/P5/ArtSample/Materials/M_P5_A0_AvalancheCloud",
+    "avalanche_rim": "/Game/Naiwa/P5/ArtSample/Materials/M_P5_A0_AvalancheRim",
+    "mist": "/Game/Naiwa/P5/ArtSample/Materials/M_P5_A0_SnowMist",
+    "shadow": "/Game/Naiwa/P5/ArtSample/Materials/M_P5_A0_SoftShadow",
+    "hero": "/Game/Naiwa/P5/ArtSample/Materials/M_P5_A0_NaiwaGlide"
+  },
+  "generated_actor_labels": [
+    "P5A0_AvalancheCloud",
+    "P5A0_AvalancheRim",
+    "P5A0_FarMountain",
+    "P5A0_KeyLight",
+    "P5A0_MidForest",
+    "P5A0_NaiwaGlide",
+    "P5A0_NearRidge",
+    "P5A0_PlayerShadow",
+    "P5A0_PlayerStart",
+    "P5A0_RockA",
+    "P5A0_SnowMist",
+    "P5A0_SnowSurfaceSample",
+    "P5A0_TreeA"
+  ],
+  "sample_notes": [
+    "All imported PNGs remain WIP and live under /Game/Naiwa/P5/ArtSample.",
+    "A4 Glide frame is a cell crop from the owner-approved six-pose atlas; anchor remains provisional.",
+    "Backgrounds and sample sprite are static first-screen placements; dynamic parallax is not implemented here.",
+    "No 1080p/720p, texture-edge, frame-time, or gameplay acceptance is claimed by this build report."
+  ]
+}

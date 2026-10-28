@@ -1,0 +1,636 @@
+{
+  "schema": "naiwa.p5.m2_graybox_fixture.v5",
+  "route_id": "P5_Main_1800m_M2Graybox",
+  "route_version": 5,
+  "fixture_hash": {
+    "algorithm": "FNV-1a-32",
+    "encoding": "UTF-8 route id followed by little-endian int32 version, route length, segment count and each segment start/end/speed/start height/end height/surface, then event count and each event id/distance/kind/clearance/hit penalty/width",
+    "value": "BBB3D46E"
+  },
+  "route_length_m": 1800,
+  "initial_avalanche_gap_m": 60,
+  "scope": "feedback-adjusted engineering graybox fixture; fixed route; not production geometry",
+  "segments": [
+    {
+      "start_m": 0,
+      "end_m": 80,
+      "speed_mps": 22,
+      "start_height_m": 0,
+      "end_height_m": -14,
+      "surface": "snow"
+    },
+    {
+      "start_m": 80,
+      "end_m": 160,
+      "speed_mps": 18,
+      "start_height_m": -14,
+      "end_height_m": -2,
+      "surface": "snow"
+    },
+    {
+      "start_m": 160,
+      "end_m": 240,
+      "speed_mps": 24,
+      "start_height_m": -2,
+      "end_height_m": -24,
+      "surface": "snow"
+    },
+    {
+      "start_m": 240,
+      "end_m": 320,
+      "speed_mps": 18,
+      "start_height_m": -24,
+      "end_height_m": -5,
+      "surface": "snow"
+    },
+    {
+      "start_m": 320,
+      "end_m": 400,
+      "speed_mps": 25,
+      "start_height_m": -5,
+      "end_height_m": -28,
+      "surface": "snow"
+    },
+    {
+      "start_m": 400,
+      "end_m": 480,
+      "speed_mps": 19,
+      "start_height_m": -28,
+      "end_height_m": -8,
+      "surface": "snow"
+    },
+    {
+      "start_m": 480,
+      "end_m": 560,
+      "speed_mps": 25,
+      "start_height_m": -8,
+      "end_height_m": -30,
+      "surface": "snow"
+    },
+    {
+      "start_m": 560,
+      "end_m": 640,
+      "speed_mps": 19,
+      "start_height_m": -30,
+      "end_height_m": -9,
+      "surface": "snow"
+    },
+    {
+      "start_m": 640,
+      "end_m": 720,
+      "speed_mps": 26,
+      "start_height_m": -9,
+      "end_height_m": -36,
+      "surface": "snow"
+    },
+    {
+      "start_m": 720,
+      "end_m": 800,
+      "speed_mps": 19,
+      "start_height_m": -36,
+      "end_height_m": -10,
+      "surface": "snow"
+    },
+    {
+      "start_m": 800,
+      "end_m": 872,
+      "speed_mps": 11,
+      "start_height_m": -10,
+      "end_height_m": 8,
+      "surface": "snow"
+    },
+    {
+      "start_m": 872,
+      "end_m": 930,
+      "speed_mps": 24,
+      "start_height_m": 8,
+      "end_height_m": -12,
+      "surface": "snow"
+    },
+    {
+      "start_m": 930,
+      "end_m": 980,
+      "speed_mps": 26,
+      "start_height_m": -12,
+      "end_height_m": -30,
+      "surface": "snow"
+    },
+    {
+      "start_m": 980,
+      "end_m": 1020,
+      "speed_mps": 21,
+      "start_height_m": -30,
+      "end_height_m": -36,
+      "surface": "ice"
+    },
+    {
+      "start_m": 1020,
+      "end_m": 1080,
+      "speed_mps": 19,
+      "start_height_m": -36,
+      "end_height_m": -13,
+      "surface": "snow"
+    },
+    {
+      "start_m": 1080,
+      "end_m": 1140,
+      "speed_mps": 26,
+      "start_height_m": -13,
+      "end_height_m": -34,
+      "surface": "snow"
+    },
+    {
+      "start_m": 1140,
+      "end_m": 1160,
+      "speed_mps": 19,
+      "start_height_m": -34,
+      "end_height_m": -24,
+      "surface": "snow"
+    },
+    {
+      "start_m": 1160,
+      "end_m": 1200,
+      "speed_mps": 26,
+      "start_height_m": -24,
+      "end_height_m": 3,
+      "surface": "jump_ramp"
+    },
+    {
+      "start_m": 1200,
+      "end_m": 1280,
+      "speed_mps": 23,
+      "start_height_m": 3,
+      "end_height_m": -18,
+      "surface": "snow"
+    },
+    {
+      "start_m": 1280,
+      "end_m": 1360,
+      "speed_mps": 26,
+      "start_height_m": -18,
+      "end_height_m": -2,
+      "surface": "snow"
+    },
+    {
+      "start_m": 1360,
+      "end_m": 1440,
+      "speed_mps": 21,
+      "start_height_m": -2,
+      "end_height_m": -22,
+      "surface": "snow"
+    },
+    {
+      "start_m": 1440,
+      "end_m": 1480,
+      "speed_mps": 24,
+      "start_height_m": -22,
+      "end_height_m": -8,
+      "surface": "snow"
+    },
+    {
+      "start_m": 1480,
+      "end_m": 1500,
+      "speed_mps": 26,
+      "start_height_m": -8,
+      "end_height_m": 3,
+      "surface": "jump_ramp"
+    },
+    {
+      "start_m": 1524,
+      "end_m": 1600,
+      "speed_mps": 22,
+      "start_height_m": -8,
+      "end_height_m": -26,
+      "surface": "snow"
+    },
+    {
+      "start_m": 1600,
+      "end_m": 1680,
+      "speed_mps": 26,
+      "start_height_m": -26,
+      "end_height_m": -4,
+      "surface": "snow"
+    },
+    {
+      "start_m": 1680,
+      "end_m": 1720,
+      "speed_mps": 22,
+      "start_height_m": -4,
+      "end_height_m": -12,
+      "surface": "snow"
+    },
+    {
+      "start_m": 1720,
+      "end_m": 1740,
+      "speed_mps": 26,
+      "start_height_m": -12,
+      "end_height_m": -4,
+      "surface": "jump_ramp"
+    },
+    {
+      "start_m": 1756,
+      "end_m": 1800,
+      "speed_mps": 24,
+      "start_height_m": -10,
+      "end_height_m": -20,
+      "surface": "snow"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "distance_m": 25,
+      "kind": "coin"
+    },
+    {
+      "id": 2,
+      "distance_m": 75,
+      "kind": "coin"
+    },
+    {
+      "id": 3,
+      "distance_m": 125,
+      "kind": "coin"
+    },
+    {
+      "id": 39,
+      "distance_m": 150,
+      "kind": "kangaroo",
+      "clearance_m": 1.8,
+      "width_m": 2.5
+    },
+    {
+      "id": 4,
+      "distance_m": 175,
+      "kind": "coin"
+    },
+    {
+      "id": 5,
+      "distance_m": 190,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 6,
+      "distance_m": 225,
+      "kind": "coin"
+    },
+    {
+      "id": 7,
+      "distance_m": 275,
+      "kind": "coin"
+    },
+    {
+      "id": 8,
+      "distance_m": 325,
+      "kind": "coin"
+    },
+    {
+      "id": 9,
+      "distance_m": 345,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 10,
+      "distance_m": 375,
+      "kind": "coin"
+    },
+    {
+      "id": 11,
+      "distance_m": 425,
+      "kind": "coin"
+    },
+    {
+      "id": 12,
+      "distance_m": 455,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 13,
+      "distance_m": 475,
+      "kind": "coin"
+    },
+    {
+      "id": 40,
+      "distance_m": 500,
+      "kind": "kangaroo",
+      "clearance_m": 1.8,
+      "width_m": 2.5
+    },
+    {
+      "id": 14,
+      "distance_m": 515,
+      "kind": "coin"
+    },
+    {
+      "id": 15,
+      "distance_m": 545,
+      "kind": "rock",
+      "clearance_m": 0.6,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 16,
+      "distance_m": 575,
+      "kind": "coin"
+    },
+    {
+      "id": 17,
+      "distance_m": 615,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 18,
+      "distance_m": 625,
+      "kind": "coin"
+    },
+    {
+      "id": 19,
+      "distance_m": 675,
+      "kind": "coin"
+    },
+    {
+      "id": 20,
+      "distance_m": 695,
+      "kind": "rock",
+      "clearance_m": 0.6,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 21,
+      "distance_m": 725,
+      "kind": "coin"
+    },
+    {
+      "id": 22,
+      "distance_m": 755,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 23,
+      "distance_m": 775,
+      "kind": "coin"
+    },
+    {
+      "id": 24,
+      "distance_m": 825,
+      "kind": "coin"
+    },
+    {
+      "id": 25,
+      "distance_m": 850,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 26,
+      "distance_m": 875,
+      "kind": "coin"
+    },
+    {
+      "id": 27,
+      "distance_m": 900,
+      "kind": "rock",
+      "clearance_m": 0.6,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 28,
+      "distance_m": 925,
+      "kind": "coin"
+    },
+    {
+      "id": 41,
+      "distance_m": 930,
+      "kind": "kangaroo",
+      "clearance_m": 1.8,
+      "width_m": 2.5
+    },
+    {
+      "id": 29,
+      "distance_m": 945,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 30,
+      "distance_m": 975,
+      "kind": "coin"
+    },
+    {
+      "id": 31,
+      "distance_m": 1005,
+      "kind": "ice_gap",
+      "clearance_m": 1.4,
+      "width_m": 2
+    },
+    {
+      "id": 32,
+      "distance_m": 1025,
+      "kind": "coin"
+    },
+    {
+      "id": 33,
+      "distance_m": 1045,
+      "kind": "rock",
+      "clearance_m": 0.6,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 34,
+      "distance_m": 1075,
+      "kind": "coin"
+    },
+    {
+      "id": 35,
+      "distance_m": 1085,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 36,
+      "distance_m": 1125,
+      "kind": "coin"
+    },
+    {
+      "id": 37,
+      "distance_m": 1150,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 38,
+      "distance_m": 1175,
+      "kind": "coin"
+    },
+    {
+      "id": 42,
+      "distance_m": 1225,
+      "kind": "coin"
+    },
+    {
+      "id": 43,
+      "distance_m": 1260,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 44,
+      "distance_m": 1275,
+      "kind": "coin"
+    },
+    {
+      "id": 45,
+      "distance_m": 1325,
+      "kind": "coin"
+    },
+    {
+      "id": 46,
+      "distance_m": 1345,
+      "kind": "rock",
+      "clearance_m": 0.6,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 47,
+      "distance_m": 1375,
+      "kind": "coin"
+    },
+    {
+      "id": 48,
+      "distance_m": 1410,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 49,
+      "distance_m": 1425,
+      "kind": "coin"
+    },
+    {
+      "id": 50,
+      "distance_m": 1475,
+      "kind": "coin"
+    },
+    {
+      "id": 51,
+      "distance_m": 1500,
+      "kind": "cliff_launch"
+    },
+    {
+      "id": 52,
+      "distance_m": 1512,
+      "kind": "cliff_gap",
+      "clearance_m": 1.0,
+      "width_m": 24
+    },
+    {
+      "id": 53,
+      "distance_m": 1535,
+      "kind": "coin"
+    },
+    {
+      "id": 54,
+      "distance_m": 1575,
+      "kind": "coin"
+    },
+    {
+      "id": 55,
+      "distance_m": 1600,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 56,
+      "distance_m": 1625,
+      "kind": "coin"
+    },
+    {
+      "id": 57,
+      "distance_m": 1675,
+      "kind": "coin"
+    },
+    {
+      "id": 58,
+      "distance_m": 1695,
+      "kind": "rock",
+      "clearance_m": 0.6,
+      "hit_gap_penalty_m": 3
+    },
+    {
+      "id": 59,
+      "distance_m": 1725,
+      "kind": "coin"
+    },
+    {
+      "id": 60,
+      "distance_m": 1740,
+      "kind": "cliff_launch"
+    },
+    {
+      "id": 61,
+      "distance_m": 1748,
+      "kind": "cliff_gap",
+      "clearance_m": 1.0,
+      "width_m": 16
+    },
+    {
+      "id": 62,
+      "distance_m": 1780,
+      "kind": "coin"
+    },
+    {
+      "id": 63,
+      "distance_m": 1785,
+      "kind": "tree",
+      "clearance_m": 1.2,
+      "hit_gap_penalty_m": 3
+    }
+  ],
+  "reference_run": {
+    "no_collision_total_time_s": 84.11,
+    "gap_after_800m_m": 60.0,
+    "gap_after_872m_m": 53.45,
+    "gap_at_finish_m": 60.0,
+    "calculation": "M2 v5 route speeds plus two 26 m/s cliff transit gaps; no collisions, no abilities or trick boosts",
+    "gap_after_1200m_m": 60.0
+  },
+  "revision": {
+    "date": "2026-10-28",
+    "reasons": [
+      "instant takeoff with variable-height hold",
+      "two auto-launch cliff jumps with long airtime",
+      "one/two-flip speed boosts beyond the base speed cap",
+      "route extended by 50 percent to 1800 m"
+    ],
+    "total_coins": 36,
+    "trick_boost": {
+      "one_flip": {
+        "max_speed_mps": 32,
+        "multiplier": 1.15,
+        "duration_seconds": 4
+      },
+      "two_flips": {
+        "max_speed_mps": 38,
+        "multiplier": 1.3,
+        "duration_seconds": 6
+      }
+    }
+  }
+}

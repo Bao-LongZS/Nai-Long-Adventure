@@ -1,0 +1,124 @@
+{
+  "asset_set_id": "P5_A0_ART_SAMPLE",
+  "version": "0.2",
+  "date": "2026-10-28",
+  "status": "owner_approved_direction_sample",
+  "owner_role": "2D Artist / Environment Artist",
+  "scope": "P5 A0 visual direction sample only; not production-ready level textures or an Unreal Editor acceptance screenshot.",
+  "selected_character_draft": "v01_initial_pose",
+  "selected_scene_revision": "v02_natural_tone",
+  "current_review_composite": "UE5/SourceAssets/P5/References/P5_A0_SkiScene_WithHUD_v02.png",
+  "owner_approval": {
+    "date": "2026-10-28",
+    "decision": "Approved to continue P5 art production using the v02 natural-tone scene and the v01 initial character pose.",
+    "scope": "Art direction approval only; runtime Editor scale, route/collision alignment, 720p detail, loop seams and performance remain unverified."
+  },
+  "user_feedback_resolution": "The project owner reviewed the proposed enlarged-belly/calmer-eye revision and chose to keep the initial character draft unchanged.",
+  "assets": [
+    {
+      "asset_id": "P5_A0_C_NAIWA_SKI_POSE",
+      "source_path": "UE5/SourceAssets/P5/Characters/C_Naiwa_Ski_A0_Pose_v01.png",
+      "dimensions": [1536, 1024],
+      "format": "PNG",
+      "color_space": "sRGB",
+      "alpha": "RGBA; transparent corners verified",
+      "frame_count": 1,
+      "source_method": "OpenAI ImageGen generated raster, based on player_reference.png and the frozen P5 pose/identity brief",
+      "reference_inputs": [
+        "UE5/SourceAssets/Common/CharacterReferences/player_reference.png"
+      ],
+      "prompt": "Create one full-body skiing pose of the same player character as the reference for a hand-painted 2D side-scrolling downhill game. Preserve the Naiwa identity: small rounded head, pear-shaped golden yellow body, pale cream belly, green irises, long legs, broad dark gray-brown hands, flat three-toed feet and short tail. Side view facing right in a balanced crouched skiing pose on one ochre board. Matte gouache-like 2D hand-painted shading, cool blue-violet shadows, no 3D/CGI, no text, no logo, genuine transparent background.",
+      "acceptance_state": "A0 draft selected by owner; identity and sprite-scale checks remain open."
+    },
+    {
+      "asset_id": "P5_A0_SCENE_CONCEPT",
+      "source_path": "UE5/SourceAssets/P5/References/P5_A0_SkiScene_Concept_v01.png",
+      "dimensions": [1672, 941],
+      "format": "PNG",
+      "color_space": "sRGB",
+      "alpha": "RGB; opaque concept composite",
+      "frame_count": 1,
+      "source_method": "OpenAI ImageGen generated composition; restyled to remove foreground lens blur and sharpen the full view",
+      "reference_inputs": [
+        "UE5/SourceAssets/P5/References/P5_全量B_概念预览_20261028.png",
+        "UE5/SourceAssets/P5/Characters/C_Naiwa_Ski_A0_Pose_v01.png"
+      ],
+      "acceptance_state": "Reference/concept only; not a separated production layer."
+    },
+    {
+      "asset_id": "P5_A0_HUD_PLACEHOLDER",
+      "source_path": "UE5/SourceAssets/P5/References/P5_A0_HUDPlaceholder_v01.png",
+      "editable_source_path": "UE5/Scripts/p5_compose_a0_preview.py",
+      "dimensions": [1672, 941],
+      "format": "PNG RGBA",
+      "color_space": "sRGB",
+      "alpha": "Transparent outside four HUD counters",
+      "frame_count": 1,
+      "values_are_placeholders": {
+        "distance_m": 842,
+        "avalanche_gap_m": 48,
+        "coins": 12,
+        "combo": 2
+      },
+      "acceptance_state": "Visual placeholder; no gameplay data binding."
+    },
+    {
+      "asset_id": "P5_A0_SCENE_WITH_HUD",
+      "source_path": "UE5/SourceAssets/P5/References/P5_A0_SkiScene_WithHUD_v01.png",
+      "dimensions": [1672, 941],
+      "format": "PNG RGB",
+      "color_space": "sRGB",
+      "alpha": "Opaque composite",
+      "frame_count": 1,
+      "acceptance_state": "Owner review preview; not an Unreal screenshot."
+    }
+  ],
+  "revisions": [
+    {
+      "asset_id": "P5_A0_SCENE_CONCEPT_V02",
+      "source_path": "UE5/SourceAssets/P5/References/P5_A0_SkiScene_Concept_v02.png",
+      "dimensions": [1672, 941],
+      "format": "PNG RGB",
+      "color_space": "sRGB",
+      "source_method": "Built-in OpenAI ImageGen edit of scene v01; composition and subject placement retained while exposure and saturation were moderated",
+      "prompt": "Preserve framing, objects, player pose and brushwork. Make winter daylight more natural: moderately lower exposure, reduce electric blue/cyan saturation, restore snow texture and off-white detail, use soft diffused alpine daylight and restrained cool shadows. Keep the image crisp and do not change composition.",
+      "pixel_comparison_v01_to_v02": {
+        "mean_hsv_saturation_0_255": [116.2, 76.0],
+        "mean_hsv_value_0_255": [225.3, 197.9],
+        "near_white_pixels_percent": [2.05, 0.13],
+        "method": "Pillow RGB/HSV per-pixel summary; descriptive only, not a colorimetric display calibration"
+      },
+      "acceptance_state": "Owner approved for continued art production; Editor composition and integration gates remain."
+    },
+    {
+      "asset_id": "P5_A0_HUD_PLACEHOLDER_V02",
+      "source_path": "UE5/SourceAssets/P5/References/P5_A0_HUDPlaceholder_v02.png",
+      "editable_source_path": "UE5/Scripts/p5_compose_a0_preview.py",
+      "dimensions": [1672, 941],
+      "format": "PNG RGBA",
+      "source_method": "Composed from the existing editable HUD placeholder script with version v02",
+      "values_are_placeholders": {
+        "distance_m": 842,
+        "avalanche_gap_m": 48,
+        "coins": 12,
+        "combo": 2
+      },
+      "acceptance_state": "Visual placeholder; no gameplay data binding."
+    },
+    {
+      "asset_id": "P5_A0_SCENE_WITH_HUD_V02",
+      "source_path": "UE5/SourceAssets/P5/References/P5_A0_SkiScene_WithHUD_v02.png",
+      "dimensions": [1672, 941],
+      "format": "PNG RGB",
+      "source_method": "Scene v02 composited with the separate editable HUD placeholder",
+      "acceptance_state": "Current review preview; not an Unreal screenshot."
+    }
+  ],
+  "visual_notes": [
+    "Selected v01 character image is the original first draft, per the owner's latest direction.",
+    "The scene has a continuous descending slope, cold mountain/forest depth layers, an avalanche wall on the left, a tree and a snow-capped rock on the right.",
+    "The preview keeps every depth plane sharp; the HUD separates distance, avalanche gap, coin count and combo.",
+    "No separated parallax textures, collision geometry, Unreal materials, 1280x720 crop review or visible-Editor performance evidence are included."
+  ],
+  "next_gate": "Import sample art into the P5 Editor fixture, place it with the real route and collision surface, validate both target resolutions and review with project owner before mass production."
+}

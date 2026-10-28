@@ -1,0 +1,49 @@
+{
+  "manifestId": "P5_A5_KangarooMount",
+  "version": "v01",
+  "created": "2026-10-28",
+  "status": "WIP; initial sprite atlas candidate; not accepted for runtime import",
+  "assetId": "C_Kangaroo_Ride",
+  "role": "In-level rideable mount prop; not a player-controlled character",
+  "sourceFile": "UE5/SourceAssets/P5/Environment/Source/C_Kangaroo_Ride_Source_v01_WIP.png",
+  "sourceImage": {
+    "format": "PNG RGBA",
+    "nativeWidth": 1254,
+    "nativeHeight": 1254,
+    "alpha": "transparent background present; spot-checked transparent canvas pixels",
+    "sha256": "6B1D4F43D68B073F40365AF2263CEEBB1A4CDE03D1BF1AB1636CC26EA90FF901"
+  },
+  "targetSpec": {
+    "width": 1024,
+    "height": 1024,
+    "layout": "3 columns x 2 rows",
+    "frameCount": 6,
+    "exportStatus": "pending; native candidate has not been resampled"
+  },
+  "references": [
+    "UE5/SourceAssets/P5/References/C_Kangaroo_Mount_Reference_v01.png",
+    "UE5/SourceAssets/P5/References/P5_A0_SkiScene_Concept_v02.png"
+  ],
+  "generation": {
+    "tool": "built-in image_gen",
+    "promptSummary": "Six side-view poses of the confirmed compact yellow kangaroo with orange nose and cream pouch, using the P5 painterly scene as style and palette guidance; no rider.",
+    "sourceWasEdited": false
+  },
+  "frames": [
+    { "index": 0, "name": "AvailableIdle", "rect": [0, 0, 418, 627], "anchor": null },
+    { "index": 1, "name": "ReadyToCarry", "rect": [418, 0, 418, 627], "anchor": null },
+    { "index": 2, "name": "DownhillGlide", "rect": [836, 0, 418, 627], "anchor": null },
+    { "index": 3, "name": "Bounce", "rect": [0, 627, 418, 627], "anchor": null },
+    { "index": 4, "name": "ImpactReact", "rect": [418, 627, 418, 627], "anchor": null },
+    { "index": 5, "name": "RecoveredIdle", "rect": [836, 627, 418, 627], "anchor": null }
+  ],
+  "review": {
+    "identity": "Initial visual candidate follows the reference's yellow seated body, upright ears, orange nose and cream pouch; owner review is still required.",
+    "knownIssues": [
+      "Small colored stray marks are visible in transparent gaps between poses; clean alpha is required before export.",
+      "Native dimensions are 1254x1254 rather than the 1024x1024 runtime atlas target.",
+      "Frame anchors, pose timing, in-game scale and UE alpha filtering have not been checked."
+    ],
+    "runtimeAccepted": false
+  }
+}

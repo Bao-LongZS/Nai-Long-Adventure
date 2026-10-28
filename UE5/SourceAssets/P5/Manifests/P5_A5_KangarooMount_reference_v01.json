@@ -1,0 +1,33 @@
+{
+  "manifestId": "P5_A5_KangarooMount_Reference",
+  "version": "v01",
+  "created": "2026-10-28",
+  "status": "reference only; production source and atlas not created",
+  "assetId": "C_Kangaroo_Ride",
+  "referenceFile": "UE5/SourceAssets/P5/References/C_Kangaroo_Mount_Reference_v01.png",
+  "referenceDimensions": [100, 90],
+  "referenceOrigin": "provided by project owner",
+  "ownerClarification": "Meituan kangaroo is an in-level rideable mount item, not a player-controlled character.",
+  "visualIdentity": [
+    "compact seated silhouette",
+    "yellow body and upright ears",
+    "pale cream belly/pouch",
+    "round orange nose",
+    "small rounded limbs and friendly simple expression"
+  ],
+  "targetSpecification": {
+    "dimensions": [1024, 1024],
+    "frameCount": 6,
+    "role": "level mount prop with interaction presentation; not a controllable avatar"
+  },
+  "generationCandidate": {
+    "status": "rejected; not copied into production asset directories",
+    "reason": "shape/style drift from owner reference and a broad low-alpha gold wash reaching the canvas edges; not a clean sprite cutout"
+  },
+  "pending": [
+    "create a high-resolution source faithful to the owner reference",
+    "define six prop interaction poses against the actual mount gameplay events",
+    "record stable ground/contact and rider interaction anchors",
+    "review the atlas in the real P5 Editor scene"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "map": "/Game/Naiwa/P5/Maps/L_NaiwaP5_M2Prototype",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "status": "new_isolated_map_saved",
+  "default_game_mode": "/Script/NaiwaRuntime.NaiwaP5M2PrototypeGameMode",
+  "map_tags": [
+    "NaiwaP5M2Prototype"
+  ],
+  "runtime_track_actor": "/Script/NaiwaRuntime.NaiwaP5PrototypeTrackActor",
+  "runtime_pawn": "/Script/NaiwaRuntime.NaiwaP5PrototypePawn",
+  "route_fixture": "provisional fixed 1200 m graybox; route data is in FNaiwaP5TrackData",
+  "opened_in_editor_for_visual_review": false,
+  "pie_or_standalone_run": false
+}
