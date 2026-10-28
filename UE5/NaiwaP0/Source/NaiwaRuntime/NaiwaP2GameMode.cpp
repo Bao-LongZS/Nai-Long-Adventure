@@ -1752,8 +1752,7 @@ void ANaiwaP2GameMode::HandleDuckedSoundFinished()
 
 void ANaiwaP2GameMode::ScheduleCampaignAdvance()
 {
-    // 2-3 is always a two-stage route and returns to level select on its final clear,
-    // including when the map was launched outside the linked campaign flow.
+    // Keep 2-3 as a two-stage route: linked runs continue into P3, standalone runs return to level select.
     if ((!bCampaignRun && CurrentLevelId != TEXT("2-3")) || !GetWorld())
     {
         return;
@@ -1783,8 +1782,15 @@ void ANaiwaP2GameMode::AdvanceCampaign()
     }
     else if (CurrentLevelId == TEXT("2-3") && CurrentStage == 2)
     {
-        MapPath = TEXT("/Game/Naiwa/UI/L_NaiwaMainMenu");
-        Options = TEXT("NaiwaMenuPage=levels");
+        if (bCampaignRun)
+        {
+            MapPath = TEXT("/Game/Naiwa/P3/Maps/L_NaiwaP3_31");
+        }
+        else
+        {
+            MapPath = TEXT("/Game/Naiwa/UI/L_NaiwaMainMenu");
+            Options = TEXT("NaiwaMenuPage=levels");
+        }
     }
     else
     {

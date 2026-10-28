@@ -4,6 +4,7 @@
 #include "Engine/Engine.h"
 #include "Engine/Texture2D.h"
 #include "NaiwaP3BombTypes.h"
+#include "NaiwaP3M2GameMode.h"
 #include "NaiwaP3M2RuntimeSubsystem.h"
 
 namespace
@@ -393,7 +394,7 @@ void ANaiwaP3M2HUD::DrawHUD()
 	if (Runtime->GetRunState() != ENaiwaP3M2RunState::Playing)
 	{
 		const float CardWidth = 430.0f * Scale;
-		const float CardHeight = 112.0f * Scale;
+		const float CardHeight = 138.0f * Scale;
 		const float CardX = (Width - CardWidth) * 0.5f;
 		const float CardY = (Height - CardHeight) * 0.5f;
 		DrawRect(PanelFill, CardX, CardY, CardWidth, CardHeight);
@@ -402,6 +403,22 @@ void ANaiwaP3M2HUD::DrawHUD()
 			1.16f * Scale, StateColor);
 		DrawLabel(FString::Printf(TEXT("用时 %.1f 秒  ·  金蛋 %d 枚"), ElapsedSeconds,
 			Runtime->GetCollectedEggCount()), CardX + 28.0f * Scale,
-			CardY + 66.0f * Scale, 0.72f * Scale, TextPrimary);
+			CardY + 57.0f * Scale, 0.72f * Scale, TextPrimary);
+		FString Followup;
+		if (Runtime->GetRunState() == ENaiwaP3M2RunState::Defeated)
+		{
+			Followup = TEXT("按 R 重开本局");
+		}
+		else if (Runtime->GetLevelId() == 31)
+		{
+			const ANaiwaP3M2GameMode* Mode = Cast<ANaiwaP3M2GameMode>(GetWorld()->GetAuthGameMode());
+			Followup = Mode && Mode->IsCampaignRun() ? TEXT("即将进入 3-2") : TEXT("通关已记录");
+		}
+		else
+		{
+			Followup = TEXT("P3 章节完成 · 即将返回关卡选择");
+		}
+		DrawLabel(Followup, CardX + 28.0f * Scale, CardY + 99.0f * Scale,
+			0.68f * Scale, TextSecondary);
 	}
 }

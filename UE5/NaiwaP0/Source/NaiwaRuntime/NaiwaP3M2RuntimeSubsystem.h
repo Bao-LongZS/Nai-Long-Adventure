@@ -208,6 +208,7 @@ private:
 	int32 PlayerInvulnerableUntilTick = 0;
 	int32 PlayerSlowedUntilTick = 0;
 	int32 ExplosionFlashUntilTick = 0;
+	int32 PreviousFogExploredCount = 0;
 	int32 DamageFeedbackUntilTick = 0;
 	int32 TransientEventUntilTick = 0;
 	float ExplosionShakeStartSeconds = 0.0f;

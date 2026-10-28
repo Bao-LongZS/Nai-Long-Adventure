@@ -2,8 +2,8 @@
 
 namespace
 {
-	constexpr int32 NormalVisionRadius = 9;
-	constexpr int32 RageVisionRadius = 12;
+	constexpr int32 NormalVisionRadius = 12;
+	constexpr int32 RageVisionRadius = 16;
 }
 
 void FNaiwaP3FogOfWar::Initialize(const FNaiwaP3M2SeededLevel& Level, const bool bInEnabled)

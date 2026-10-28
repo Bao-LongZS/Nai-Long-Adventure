@@ -5,10 +5,17 @@
 #include "NaiwaP3PlayerPawn.h"
 #include "NaiwaP3M2WorldPresentation.h"
 #include "NaiwaP3M2Settings.h"
+#include "NaiwaP3M2GameMode.h"
 #include "Engine/Texture2D.h"
+#include "GameFramework/GameModeBase.h"
 
 namespace
 {
+	ANaiwaP3M2GameMode* P3AudioGameMode(UWorld* World)
+	{
+		return World ? Cast<ANaiwaP3M2GameMode>(World->GetAuthGameMode()) : nullptr;
+	}
+
 	int32 M2CellIndex(const FIntPoint& Cell, const int32 GridWidth)
 	{
 		return Cell.Y * GridWidth + Cell.X;
@@ -115,6 +122,7 @@ bool UNaiwaP3M2RuntimeSubsystem::StartSession(const int32 LevelId, const int32 S
 	PlayerVisualProgress = 1.0f;
 	PlayerHitCount = 0;
 	PlayerLives = 3;
+	PreviousFogExploredCount = 0;
 	PlayerInvulnerableUntilTick = 0;
 	PlayerSlowedUntilTick = 0;
 	ExplosionFlashUntilTick = 0;
@@ -142,6 +150,12 @@ bool UNaiwaP3M2RuntimeSubsystem::StartSession(const int32 LevelId, const int32 S
 
 void UNaiwaP3M2RuntimeSubsystem::StopSession()
 {
+	if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+	{
+		Audio->SetP3ConveyorAudio(false);
+		Audio->SetP3RainAudio(false);
+		Audio->SetP3RageAudio(false);
+	}
 	bSessionActive = false;
 	for (const TPair<uint64, TWeakObjectPtr<ANaiwaP3BombActor>>& Visual : BombVisuals)
 	{
@@ -256,6 +270,11 @@ bool UNaiwaP3M2RuntimeSubsystem::PlacePlayerBomb()
 		return false;
 	}
 	NextPlayerBombTick = Session.GetCurrentTick() + BombPlacementIntervalTicks;
+	if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+	{
+		Audio->PlayP3Audio2D(TEXT("SFX_P3_PlaceBomb"), -3.0f,
+			1.0f + 0.04f * FMath::Sin(static_cast<float>(NextBombOrder)));
+	}
 	return true;
 }
 
@@ -396,6 +415,26 @@ bool UNaiwaP3M2RuntimeSubsystem::TryMovePlayer(const FIntPoint& Direction, FStri
 	}
 
 	PlayerCell = LandingCell;
+	if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+	{
+		FIntPoint ConveyorDirection;
+		const bool bEnteredConveyor = Session.GetMechanics().TryGetConveyorDirection(
+			RequestedCell, ConveyorDirection);
+		Audio->SetP3ConveyorAudio(bEnteredConveyor);
+	}
+	if (OutMessage.StartsWith(TEXT("传送")))
+	{
+		if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+			Audio->PlayP3AudioAtLocation(TEXT("SFX_P3_Portal"), GridToWorld(RequestedCell), -4.0f);
+	}
+	for (const FNaiwaP3M2MechanicPlacement& Mechanic : Session.GetLevel().Mechanics)
+	{
+		if (Mechanic.Kind == ENaiwaP3M2MechanicKind::PressurePlate && Mechanic.Cell == RequestedCell)
+		{
+			if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+				Audio->PlayP3AudioAtLocation(TEXT("SFX_P3_PressurePlate"), GridToWorld(RequestedCell), -8.0f);
+		}
+	}
 	PlayerVisualFromWorld = PreviousVisualLocation;
 	PlayerVisualToWorld = GridToWorld(LandingCell);
 	if (FVector::DistSquared(PlayerVisualToWorld, PreviousVisualLocation) > FMath::Square(150.0f) &&
@@ -444,6 +483,8 @@ bool UNaiwaP3M2RuntimeSubsystem::TryChickenJump(const FIntPoint& Direction, FStr
 	PlayerVisualToWorld = GridToWorld(LandingCell);
 	PlayerVisualProgress = 1.0f;
 	OutMessage = TEXT("奶鸡跳成功");
+	if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+		Audio->PlayP3Audio2D(TEXT("SFX_P3_ItemChickenJump"), -4.0f, 1.0f, 0.025f);
 	ProcessPlayerLanding(PlayerCell, OutMessage);
 	if (Session.GetMechanics().IsSpikeActive(PlayerCell, Session.GetCurrentTick()))
 	{
@@ -501,6 +542,8 @@ void UNaiwaP3M2RuntimeSubsystem::ReportFireAtCell(const FIntPoint& Cell)
 				continue;
 			}
 			EnemyAlive[EnemyIndex] = 0;
+			if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+				Audio->PlayP3Audio2D(TEXT("SFX_P3_Explode_Normal"), -6.0f, 0.89125f);
 			if (EnemyActors.IsValidIndex(EnemyIndex) && EnemyActors[EnemyIndex].IsValid())
 			{
 				EnemyActors[EnemyIndex]->Destroy();
@@ -518,6 +561,23 @@ void UNaiwaP3M2RuntimeSubsystem::AdvanceFixedStep()
 		if (IsEnemyAlive(EnemyIndex)) { LivingEnemyCells.Add(EnemyCells[EnemyIndex]); }
 	}
 	Session.AdvanceTick(PlayerCell, LivingEnemyCells, bRageEscape);
+	for (const FNaiwaP3M2MechanicPlacement& Mechanic : Session.GetLevel().Mechanics)
+	{
+		if (Mechanic.Kind == ENaiwaP3M2MechanicKind::Spike &&
+			Session.GetMechanics().IsSpikeActive(Mechanic.Cell, Session.GetCurrentTick()) &&
+			!Session.GetMechanics().IsSpikeActive(Mechanic.Cell, Session.GetCurrentTick() - 1))
+		{
+			if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+				Audio->PlayP3AudioAtLocation(TEXT("SFX_P3_SpikeOut"), GridToWorld(Mechanic.Cell), 1.0f);
+		}
+		if (Mechanic.Kind == ENaiwaP3M2MechanicKind::VaultGate &&
+			Session.GetMechanics().IsGateOpen(Mechanic.Cell, Session.GetCurrentTick()) &&
+			!Session.GetMechanics().IsGateOpen(Mechanic.Cell, Session.GetCurrentTick() - 1))
+		{
+			if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+				Audio->PlayP3AudioAtLocation(TEXT("SFX_P3_GateOpen"), GridToWorld(Mechanic.Cell), 4.0f);
+		}
+	}
 	EnemyBombRequests.Reset();
 	EnemyRangedAttackRequests.Reset();
 	if (RunState != ENaiwaP3M2RunState::Playing)
@@ -595,7 +655,20 @@ void UNaiwaP3M2RuntimeSubsystem::AdvanceFixedStep()
 		const FNaiwaP3M2EnemyIntent Intent = Session.ThinkEnemy(
 			EnemyIndex, EnemyCells[EnemyIndex], PlayerCell, HazardForecast,
 			FetchItemCells, EnemySpeedMultiplier, bRageEscape);
+		const ENaiwaP3M2EnemyAIState PreviousState = EnemyIntents.IsValidIndex(EnemyIndex) ?
+			EnemyIntents[EnemyIndex].State : ENaiwaP3M2EnemyAIState::Patrol;
 		EnemyIntents[EnemyIndex] = Intent;
+		if (Intent.State == ENaiwaP3M2EnemyAIState::Chase && PreviousState != ENaiwaP3M2EnemyAIState::Chase &&
+			Session.GetLevel().Enemies.IsValidIndex(EnemyIndex))
+		{
+			if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+			{
+				if (Session.GetLevel().Enemies[EnemyIndex].Kind == ENaiwaP3M2EnemyKind::NaiCha)
+					Audio->PlayP3AudioAtLocation(TEXT("SFX_P2_Miss"), GridToWorld(EnemyCells[EnemyIndex]), -4.0f);
+				else if (Session.GetLevel().Enemies[EnemyIndex].Kind == ENaiwaP3M2EnemyKind::NaiSha)
+					Audio->PlayP3AudioAtLocation(TEXT("SFX_P3_EnemyCharge"), GridToWorld(EnemyCells[EnemyIndex]), 0.0f);
+			}
+		}
 		if (Intent.bDropBomb)
 		{
 			int32 OwnedBombCount = 0;
@@ -679,6 +752,19 @@ void UNaiwaP3M2RuntimeSubsystem::AdvanceFixedStep()
 	{
 		return Session.GetCurrentTick() >= Splash.ClearTick;
 	});
+	bool bPlayerInsideNaiYuRain = false;
+	for (const FNaiwaP3M2SlowSplashState& Splash : SlowSplashes)
+	{
+		const int32 Distance = FMath::Abs(PlayerCell.X - Splash.CenterCell.X) +
+			FMath::Abs(PlayerCell.Y - Splash.CenterCell.Y);
+		if (IsEnemyAlive(Splash.OwnerEnemyIndex) && Distance <= 1)
+		{
+			bPlayerInsideNaiYuRain = true;
+			break;
+		}
+	}
+	if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+		Audio->SetP3RainAudio(bPlayerInsideNaiYuRain);
 	ResolveDueBombs();
 	ExpireFlames();
 	Session.GetFog().UpdateVisibility(Session.GetLevel(), PlayerCell, bRageEscape);
@@ -806,6 +892,13 @@ void UNaiwaP3M2RuntimeSubsystem::UpdateFogVisibility()
 		return;
 	}
 	const FNaiwaP3FogOfWar& Fog = Session.GetFog();
+	const int32 ExploredCount = Fog.GetExploredCellCount();
+	if (Session.GetLevel().LevelId == 32 && ExploredCount > PreviousFogExploredCount)
+	{
+		if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+			Audio->PlayP3Audio2D(TEXT("SFX_P3_FogReveal"), -13.0f);
+	}
+	PreviousFogExploredCount = ExploredCount;
 	if (MapActor.IsValid())
 	{
 		for (int32 Y = 0; Y < Session.GetLevel().GridHeight; ++Y)
@@ -891,11 +984,49 @@ void UNaiwaP3M2RuntimeSubsystem::ResolveBombAtIndex(const int32 BombIndex)
 	}
 	BombVisuals.Remove(Bomb.PlacementOrder);
 	BombNextConveyorTick.Remove(Bomb.PlacementOrder);
+	if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+	{
+		FName Sound = TEXT("SFX_P3_Explode_Normal");
+		float VolumeDb = 0.0f;
+		switch (Bomb.Type)
+		{
+		case ENaiwaP3BombType::SoyBigCross: Sound = TEXT("SFX_P3_Explode_Soy"); break;
+		case ENaiwaP3BombType::TeaRadial: Sound = TEXT("SFX_P3_Explode_TeaRadial"); VolumeDb = 8.0f; break;
+		case ENaiwaP3BombType::RatSplit: Sound = TEXT("SFX_P3_Explode_MouseSplit"); VolumeDb = -2.0f; break;
+		case ENaiwaP3BombType::RatFragment: Sound = TEXT("SFX_P3_Explode_SmallPop"); VolumeDb = -1.0f; break;
+		default: break;
+		}
+		Audio->PlayP3Audio2D(Sound, VolumeDb);
+	}
 
+	const int32 EnemiesAliveBeforeExplosion = GetAliveEnemyCount();
 	const TArray<FIntPoint> FlameCells = CalculateBlastCells(Bomb);
 	for (const FIntPoint& Cell : FlameCells)
 	{
+		const ENaiwaP3M2Cell TileBeforeFire = Session.GetLevel().GetCell(Cell);
+		for (const FNaiwaP3M2MechanicPlacement& Mechanic : Session.GetLevel().Mechanics)
+		{
+			if (Mechanic.Kind == ENaiwaP3M2MechanicKind::CrackedFloor && Mechanic.Cell == Cell)
+			{
+				if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+					Audio->PlayP3AudioAtLocation(TEXT("SFX_P3_FloorCrack"), GridToWorld(Cell), -1.0f);
+				break;
+			}
+		}
 		ReportFireAtCell(Cell);
+		if (!Bomb.bPlayerOwned && (TileBeforeFire == ENaiwaP3M2Cell::SoftBrick ||
+			TileBeforeFire == ENaiwaP3M2Cell::ItemBrick))
+		{
+			if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+				Audio->PlayP3AudioAtLocation(TEXT("SFX_P3_EnemyBrick"), GridToWorld(Cell), 3.0f);
+		}
+	}
+	const int32 EnemiesKilled = EnemiesAliveBeforeExplosion - GetAliveEnemyCount();
+	if (EnemiesKilled >= 3)
+	{
+		if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+			Audio->PlayP3Audio2D(TEXT("SFX_P3_ComboKill"), -3.0f,
+				1.0f + 0.02f * FMath::Min(4, EnemiesKilled - 3));
 	}
 	for (FNaiwaP3M2BombForecastInput& OtherBomb : ActiveBombs)
 	{
@@ -1096,6 +1227,7 @@ void UNaiwaP3M2RuntimeSubsystem::ProcessPlayerLanding(const FIntPoint& Cell, FSt
 	const int32 RemainingEggsBeforePickup = Session.GetRemainingEggCount();
 	if (Session.TryCollectEggAt(Cell))
 	{
+		if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld())) Audio->PlayP3Audio2D(TEXT("SFX_P3_GoldEggPick"), -2.0f);
 		if (WorldPresentation.IsValid()) WorldPresentation->MarkEggCollected(Cell);
 		const FString EggMessage = FString::Printf(TEXT("金蛋 %d / %d"), Session.GetCollectedEggCount(),
 			Session.GetCollectedEggCount() + Session.GetRemainingEggCount());
@@ -1114,12 +1246,14 @@ void UNaiwaP3M2RuntimeSubsystem::ProcessPlayerLanding(const FIntPoint& Cell, FSt
 				}
 			}
 			const FString RageMessage = TEXT("狂暴逃亡开始，奶察加速并开始投弹，返回出口");
+			if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld())) Audio->SetP3RageAudio(true);
 			OutMessage += TEXT("；") + RageMessage;
 		}
 	}
 	FString ItemMessage;
 	if (Session.TryCollectItemAt(Cell, ItemMessage))
 	{
+		if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld())) Audio->PlayP3Audio2D(TEXT("SFX_P3_GoldEggPick"), -2.0f, 1.02f);
 		if (WorldPresentation.IsValid()) WorldPresentation->RemoveItemAt(Cell);
 		OutMessage = OutMessage.IsEmpty() ? ItemMessage : OutMessage + TEXT("；") + ItemMessage;
 	}
@@ -1128,6 +1262,11 @@ void UNaiwaP3M2RuntimeSubsystem::ProcessPlayerLanding(const FIntPoint& Cell, FSt
 		if (Session.GetRemainingEggCount() == 0)
 		{
 			RunState = ENaiwaP3M2RunState::Won;
+			if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+			{
+				Audio->SetP3RainAudio(false);
+				Audio->PlayP3LevelClearAudio();
+			}
 			const FString ExitMessage = TEXT("集齐金蛋，成功撤离");
 			OutMessage = OutMessage.IsEmpty() ? ExitMessage : OutMessage + TEXT("；") + ExitMessage;
 		}
@@ -1163,12 +1302,21 @@ void UNaiwaP3M2RuntimeSubsystem::DamagePlayer(const bool bCanUseShield, const TC
 		DamageFeedbackMessage = FString::Printf(TEXT("护盾挡住%s"), SourceLabel ? SourceLabel : TEXT("攻击"));
 		return;
 	}
+	if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld())) Audio->PlayP3Audio2D(TEXT("SFX_P3_PlayerHurt"), 0.0f);
 	DamageFeedbackMessage = FString::Printf(TEXT("%s！生命 -1"), SourceLabel ? SourceLabel : TEXT("受到攻击"));
 	++PlayerHitCount;
 	PlayerLives = FMath::Max(0, PlayerLives - 1);
 	if (PlayerLives == 0)
 	{
 		RunState = ENaiwaP3M2RunState::Defeated;
+		if (ANaiwaP3M2GameMode* Audio = P3AudioGameMode(GetWorld()))
+		{
+			Audio->SetP3ConveyorAudio(false);
+		Audio->SetP3RainAudio(false);
+			Audio->SetP3RageAudio(false);
+			Audio->PlayP3Audio2D(TEXT("SFX_P3_PlayerDie"), -8.0f);
+			Audio->PlayP3FailureAudio();
+		}
 		PlayerDirection = FIntPoint::ZeroValue;
 	}
 }

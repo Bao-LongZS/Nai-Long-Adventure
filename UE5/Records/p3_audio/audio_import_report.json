@@ -1,0 +1,274 @@
+{
+  "schema": "NaiwaP3AudioImportV1",
+  "started_utc": "2026-10-28T01:57:55.727253+00:00",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "assets": [
+    {
+      "source": "UE5/SourceAssets/P3/Audio/00_BGM_TheEntertainer.mp3",
+      "source_sha256": "e84496cbc41ec2848c61af5bde9ceaaa3ae25b491b90f4f0c0db02fe6b592b52",
+      "asset_path": "/Game/Naiwa/P3/Audio/BGM_P3_Level.BGM_P3_Level",
+      "asset_sha256": "4dc482f6e16f682664d454b29eec20c5b97ae42613e10011be6850a00f0b5348",
+      "compression": "BINK_AUDIO",
+      "loading_behavior": "LOAD_ON_DEMAND",
+      "looping": false,
+      "attenuation": null
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/01_放弹.wav",
+      "source_sha256": "3943b8eb213a43dfa81bf6a2fc2c7a97be7cd86dcb3eebaffce003dc66e76b8f",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_PlaceBomb.SFX_P3_PlaceBomb",
+      "asset_sha256": "aeb8bcf4b435130a1ee14266675b75fe4c44af9d6ced4b630c3981664e2bee5f",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": null
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/02_标准十字爆.wav",
+      "source_sha256": "7e6a9fdd289d4e0d11914832d53b8f305f9509f2d41eb6c9661fe9e393be2497",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_Explode_Normal.SFX_P3_Explode_Normal",
+      "asset_sha256": "58eb84a0b3d4ca434205c2da41ac43b4cd3981950b64daab3855e8a76603d21d",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": "Explosion"
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/03_豆奶大十字_低频版.wav",
+      "source_sha256": "9e59ee96da5c65251d5ec12519bd98bec6552b4eda9468d2fb4f5cec96a1d18a",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_Explode_SoyLow.SFX_P3_Explode_SoyLow",
+      "asset_sha256": "f4a7fc54f75550529d441d640b06dd0ce5753b0e50dc7296ce95e9824e63ff21",
+      "compression": "ADPCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": "Explosion"
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/04_豆奶大十字_爆炸版.wav",
+      "source_sha256": "2ea2681f3bf273d785c29b4b938e3322f1dee3ba8d656e9ca3ab4bb3499b6388",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_Explode_Soy.SFX_P3_Explode_Soy",
+      "asset_sha256": "4caaca3c68e037e1a9c3343d55a3c3d9be948915483f41de3ae19738baf1f98e",
+      "compression": "ADPCM",
+      "loading_behavior": "LOAD_ON_DEMAND",
+      "looping": false,
+      "attenuation": "Explosion"
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/05_奶茶径向爆.wav",
+      "source_sha256": "806c8494b41fa33c937bc1a4bca68e22cda279545803551afbbde5a1b3785c08",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_Explode_TeaRadial.SFX_P3_Explode_TeaRadial",
+      "asset_sha256": "5bc3e015d2215122444eb9fdeefde7abcb59a43ed90114f75cbb184fdf901f02",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": "Explosion"
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/06_奶鼠分裂.wav",
+      "source_sha256": "6f1833166ad0dcf75e0c2ef0ed63dc5a01b8a3eaa74884b4fc72d33f352e30a2",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_Explode_MouseSplit.SFX_P3_Explode_MouseSplit",
+      "asset_sha256": "e044d12ca8833f5f02b916d79c27184e01074536b1df6f2b1c496753fdec83be",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": "Explosion"
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/07_小弹爆.wav",
+      "source_sha256": "6b86ce23e9389159bc1a2704179f7fd3c3b274cd06c9ac074787221bd0885164",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_Explode_SmallPop.SFX_P3_Explode_SmallPop",
+      "asset_sha256": "e51d95cb0257af42109b28f45aab5f0378f2d41d838e8d5d876d8a9796b57abf",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": "Explosion"
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/08_传送门.wav",
+      "source_sha256": "45ea2ce8e63413bb3ff41cb6b998c479228669c10d840988500f9ac7aa874201",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_Portal.SFX_P3_Portal",
+      "asset_sha256": "ea7e81566d07dbb9a787c2972e56d8cd1042cb8aaab0777176357b1b608c4a50",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": "World"
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/09_传送带.wav",
+      "source_sha256": "72ab366407dae3ca75158c9f16deadc301d6ef956256d2085ececfaa45f8f587",
+      "asset_path": "/Game/Naiwa/P3/Audio/AMB_P3_Conveyor.AMB_P3_Conveyor",
+      "asset_sha256": "1a43390660eb31711b4d7eedd5a66a6f74b1d2d9d256458deb5d2727a70f8822",
+      "compression": "BINK_AUDIO",
+      "loading_behavior": "LOAD_ON_DEMAND",
+      "looping": false,
+      "attenuation": "Area"
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/10_断裂地板.wav",
+      "source_sha256": "3fa8ce2187252538c1ae30fc35851bce2a0c2661ef421d4679b56ea6a2a07562",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_FloorCrack.SFX_P3_FloorCrack",
+      "asset_sha256": "9cff663199aa84e3c7fbd0af8a23047f90a4e67e8fbf650cb595b89e3424cbb3",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": "World"
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/11_闸门开.wav",
+      "source_sha256": "31f37d0a8d00eebcedc128e02f947f6715d310b13b09cc8842295351adb79c39",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_GateOpen.SFX_P3_GateOpen",
+      "asset_sha256": "317df61de565e7be4f451b7f844531c2df3ce31ff0eacc6f750416c8758cb67b",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": "World"
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/12_踩板触发.wav",
+      "source_sha256": "d496485f7ce5aaadda1f27829abc3fe97d10a14c84aa53b2f5079e1f2da514e1",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_PressurePlate.SFX_P3_PressurePlate",
+      "asset_sha256": "bfc7bf1aac4a60bda51c65399a2239a3ae021f4188019dbe3e6b2cf2ed7cf837",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": "World"
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/13_尖刺弹出.wav",
+      "source_sha256": "c8b4e6790ce6b52bf3e2353fb5aec197540fc6f1db455ad70598b66a90e42c82",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_SpikeOut.SFX_P3_SpikeOut",
+      "asset_sha256": "23c35bd09b5d4aeaf746f6660efec3bc258759420b56953593365ffbe5f68345",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": "World"
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/14_奶杀冲刺.wav",
+      "source_sha256": "167d10aeed531170c574777a70fb8e16ae1dc151740d1e590eebb5901b147e51",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_EnemyCharge.SFX_P3_EnemyCharge",
+      "asset_sha256": "b14737da682a72bf2caf9012139b6a7ede22c98a18e3f2e87ff7d9426e393d26",
+      "compression": "ADPCM",
+      "loading_behavior": "LOAD_ON_DEMAND",
+      "looping": false,
+      "attenuation": "World"
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/15_奶豪砸砖.wav",
+      "source_sha256": "d869e1d69c2dd7fd63ab877578a5cedd4583d8f8d022ab0a4815549bf9ad27e5",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_EnemyBrick.SFX_P3_EnemyBrick",
+      "asset_sha256": "f0b08177bfbf0ec68153680133201a13da0b7226a70508cdf68bbfcf18c5cfd5",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": "World"
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/16_奶雨_长雨.wav",
+      "source_sha256": "ebdd8892ff1a80b71c78867ea33bbe0472794c7d8cc7b6eb5a46841ff7f02f1e",
+      "asset_path": "/Game/Naiwa/P3/Audio/AMB_P3_Rain.AMB_P3_Rain",
+      "asset_sha256": "b753350495405011871b57591108a5498d6fc98ed13f035cd9f166b93616caea",
+      "compression": "BINK_AUDIO",
+      "loading_behavior": "LOAD_ON_DEMAND",
+      "looping": false,
+      "attenuation": "Area"
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/17_受伤.wav",
+      "source_sha256": "6fa6b0a02d01bb747ea3d99ddf94d5760385acf0770fb36a991e50e925297586",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_PlayerHurt.SFX_P3_PlayerHurt",
+      "asset_sha256": "6f24852497598b169fbb015bf734bf29e3a31c309d28907a58c05a4697a0da0c",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": null
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/18_死亡.wav",
+      "source_sha256": "02b83da0a2a1bb1183e47d0c706fe1b9f9c3bea69162c7b446a2a36c17911e0f",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_PlayerDie.SFX_P3_PlayerDie",
+      "asset_sha256": "af97b3ee67fb068ae809f53c58297b92ef7391ada9b93a2fdaa34264b946d24b",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": null
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/19_金蛋拾取.wav",
+      "source_sha256": "c69a91833b16c49f5b4cffe53ca330beee74068c01e48a35cf8e01dda9c6e9f1",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_GoldEggPick.SFX_P3_GoldEggPick",
+      "asset_sha256": "ed8d07cbd3fa8233ef5278fbaf6f0eb63b3cad1a8fe5ac3c24b8ee46097eee01",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": null
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/20_奶鸡跳格.mp3",
+      "source_sha256": "8da11d2051cccaaaf2b86aaa6ac4c4bd893d474755016ca6d7630f4ba4b25d57",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_ItemChickenJump.SFX_P3_ItemChickenJump",
+      "asset_sha256": "e315909013a87800f4c63909e0c89b6a3be4e2166353aeed116981ed59d47e34",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": null
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/21_通关.mp3",
+      "source_sha256": "9abcaef831d8c1797cd20bd308f0b048806061c245445677e5fd236d151ca3ef",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_LevelClear.SFX_P3_LevelClear",
+      "asset_sha256": "5d481481c74b43dff063d1bf481a7bad59d7cf139cbc855a428289a094c47acd",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": null
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/22_连杀.wav",
+      "source_sha256": "f6680dd9954ba17242b00087a5f74a925aa07dad48c64e1cd501318b52c8f832",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_ComboKill.SFX_P3_ComboKill",
+      "asset_sha256": "dca8db98a7b191eb929d701b8425cb4c682097a796188dc009bc621b6032fb66",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": null
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/23_狂暴stinger.wav",
+      "source_sha256": "74adb521e6c51a38794d7f742d43d1497bf6fb9fd148abb8255870539a74a05d",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_RageStinger.SFX_P3_RageStinger",
+      "asset_sha256": "fb337ee95ecdc6e3797e6014477345b7b66f6ef6d3cd01646412357762a43ac6",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": null
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/24_迷雾揭开.wav",
+      "source_sha256": "9dde9e572c28faf36fe56801e2de4cb3b6a29a0683f5447ea1bae5375d3e38ff",
+      "asset_path": "/Game/Naiwa/P3/Audio/SFX_P3_FogReveal.SFX_P3_FogReveal",
+      "asset_sha256": "e8ba387fa7f49ac0e39f7d694d34b9c60a43259ccf640be7363befa7b926b87b",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": null
+    },
+    {
+      "source": "UE5/SourceAssets/P3/Audio/26_低鸣氛围.wav",
+      "source_sha256": "1bf2c89cfffe9e1601adf8510eca405fdb81d45f8b047bbd0b76f51d4863d919",
+      "asset_path": "/Game/Naiwa/P3/Audio/AMB_P3_LowDrone.AMB_P3_LowDrone",
+      "asset_sha256": "a4ef489977bca2daa812bf92bf993f3cf00ab477974e5b74f6446d5a294a1112",
+      "compression": "PCM",
+      "loading_behavior": "FORCE_INLINE",
+      "looping": false,
+      "attenuation": null
+    }
+  ],
+  "omitted_duplicates": [
+    {
+      "source": "25_奶察发现.mp3",
+      "asset": "/Game/Naiwa/P2/Audio/SFX_P2_Miss.SFX_P2_Miss",
+      "reason": "SHA-256 identical to P2 SFX_P2_Miss"
+    }
+  ]
+}

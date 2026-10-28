@@ -2,15 +2,34 @@
 
 #include "Camera/CameraActor.h"
 #include "Camera/CameraComponent.h"
+#include "Components/AudioComponent.h"
+#include "Engine/GameInstance.h"
 #include "Engine/Texture2D.h"
 #include "Engine/World.h"
 #include "GameFramework/PlayerController.h"
+#include "Kismet/GameplayStatics.h"
 #include "Misc/Parse.h"
+#include "NaiwaMenuProgress.h"
 #include "NaiwaP3M1Actors.h"
 #include "NaiwaP3M2HUD.h"
 #include "NaiwaP3M2RuntimeSubsystem.h"
 #include "NaiwaP3M2WorldPresentation.h"
 #include "NaiwaP3PlayerPawn.h"
+#include "Sound/SoundAttenuation.h"
+#include "Sound/SoundBase.h"
+#include "TimerManager.h"
+
+namespace
+{
+	constexpr float P3NormalMusicPitch = 1.0f;
+	// Two semitones above normal: raise urgency while keeping the same BGM track.
+	constexpr float P3RageMusicPitch = 1.122462f;
+
+	float P3DbToLinear(const float Db)
+	{
+		return FMath::Pow(10.0f, Db / 20.0f);
+	}
+}
 
 namespace
 {
@@ -50,6 +69,9 @@ void ANaiwaP3M2GameMode::InitGame(const FString& MapName, const FString& Options
 	FString& ErrorMessage)
 {
 	Super::InitGame(MapName, Options, ErrorMessage);
+	bCampaignRun = FParse::Param(*Options, TEXT("NaiwaLinkRun")) ||
+		(GetWorld() && GetWorld()->URL.HasOption(TEXT("NaiwaLinkRun")));
+	bFormalP3Level = MapName.Contains(TEXT("L_NaiwaP3_31")) || MapName.Contains(TEXT("L_NaiwaP3_32"));
 	int32 StartAttemptCount = 0;
 	FParse::Value(*Options, TEXT("Attempt="), StartAttemptCount);
 	LevelId = MapName.Contains(TEXT("31")) ? 31 : 32;
@@ -81,12 +103,17 @@ void ANaiwaP3M2GameMode::RestartSession()
 	{
 		return;
 	}
+	GetWorldTimerManager().ClearTimer(P3CampaignAdvanceTimer);
+	bP3ResultRecorded = false;
 	FString Error;
 	if (!Runtime->StartSession(LevelId, Runtime->GetStartAttemptCount(), bFogEnabled, Error))
 	{
 		UE_LOG(LogTemp, Error, TEXT("M2 本局重开失败：%s"), *Error);
 		return;
 	}
+	bMusicLoopEnabled = true;
+	PendingMusicFadeAtSeconds = -1.0;
+	StartP3MusicSegment(GetWorld()->GetTimeSeconds(), 0.5f);
 	if (MapActor)
 	{
 		MapActor->Destroy();
@@ -116,9 +143,29 @@ void ANaiwaP3M2GameMode::RestartSession()
 void ANaiwaP3M2GameMode::Tick(const float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	if (!M2Camera || !GetWorld() || DeltaSeconds <= 0.0f) return;
+	if (!GetWorld() || DeltaSeconds <= 0.0f) return;
+	TickP3Audio(GetWorld()->GetTimeSeconds());
 	const UNaiwaP3M2RuntimeSubsystem* Runtime = GetWorld()->GetSubsystem<UNaiwaP3M2RuntimeSubsystem>();
 	const FNaiwaP3M2LevelSession* Session = Runtime ? Runtime->GetSession() : nullptr;
+	if (Runtime && Runtime->GetRunState() == ENaiwaP3M2RunState::Won && !bP3ResultRecorded)
+	{
+		bP3ResultRecorded = true;
+		if (bFormalP3Level && GetGameInstance())
+		{
+			if (UNaiwaProgressSubsystem* Progress = GetGameInstance()->GetSubsystem<UNaiwaProgressSubsystem>())
+			{
+				const FString LevelKey = LevelId == 31 ? TEXT("3-1") : TEXT("3-2");
+				Progress->RecordLevelClear(LevelKey, 0, Runtime->GetCurrentTick() * 0.1f,
+					3 - Runtime->GetPlayerLives(), Runtime->GetCollectedEggCount());
+			}
+		}
+		if (bFormalP3Level && (bCampaignRun || LevelId == 32))
+		{
+			GetWorldTimerManager().SetTimer(P3CampaignAdvanceTimer, this,
+				&ANaiwaP3M2GameMode::AdvanceP3Campaign, 1.5f, false);
+		}
+	}
+	if (!M2Camera) return;
 	if (!Runtime || !Session) return;
 
 	const FVector BoardCenter = GridToWorld(Runtime->GetPlayerCell());
@@ -132,9 +179,33 @@ void ANaiwaP3M2GameMode::Tick(const float DeltaSeconds)
 		DeltaSeconds, 5.5f));
 }
 
+void ANaiwaP3M2GameMode::AdvanceP3Campaign()
+{
+	if (!GetWorld()) return;
+	FString MapPath;
+	FString Options;
+	if (LevelId == 31 && bCampaignRun)
+	{
+		MapPath = TEXT("/Game/Naiwa/P3/Maps/L_NaiwaP3_32");
+		Options = TEXT("NaiwaLinkRun=1");
+	}
+	else if (LevelId == 32)
+	{
+		MapPath = TEXT("/Game/Naiwa/UI/L_NaiwaMainMenu");
+		Options = TEXT("NaiwaMenuPage=levels");
+	}
+	else
+	{
+		return;
+	}
+	UE_LOG(LogTemp, Display, TEXT("NAIWA_CAMPAIGN transition=P3 level=%d map=%s"), LevelId, *MapPath);
+	UGameplayStatics::OpenLevel(this, FName(*MapPath), true, Options);
+}
+
 void ANaiwaP3M2GameMode::BeginPlay()
 {
 	Super::BeginPlay();
+	StartP3Audio();
 	EnsurePresentation();
 	if (APlayerController* PlayerController = GetWorld()->GetFirstPlayerController())
 	{
@@ -143,6 +214,296 @@ void ANaiwaP3M2GameMode::BeginPlay()
 		{
 			Runtime->RegisterPlayerPawn(Cast<ANaiwaP3PlayerPawn>(PlayerController->GetPawn()));
 		}
+	}
+}
+
+USoundBase* ANaiwaP3M2GameMode::ResolveP3Audio(const FName AssetName)
+{
+	if (TObjectPtr<USoundBase>* Existing = P3AudioAssets.Find(AssetName)) return Existing->Get();
+	FString AssetPath;
+	if (AssetName == TEXT("SFX_P2_Miss"))
+	{
+		AssetPath = TEXT("/Game/Naiwa/P2/Audio/SFX_P2_Miss.SFX_P2_Miss");
+	}
+	else if (AssetName == TEXT("SFX_P2_FailureTrumpet"))
+	{
+		AssetPath = TEXT("/Game/Naiwa/P2/Audio/SFX_P2_FailureTrumpet.SFX_P2_FailureTrumpet");
+	}
+	else
+	{
+		AssetPath = FString::Printf(TEXT("/Game/Naiwa/P3/Audio/%s.%s"), *AssetName.ToString(), *AssetName.ToString());
+	}
+	USoundBase* Sound = LoadObject<USoundBase>(nullptr, *AssetPath);
+	P3AudioAssets.Add(AssetName, Sound);
+	if (!Sound) UE_LOG(LogTemp, Warning, TEXT("P3 audio asset missing: %s"), *AssetPath);
+	return Sound;
+}
+
+USoundAttenuation* ANaiwaP3M2GameMode::ResolveP3Attenuation(const FName AssetName)
+{
+	FName AttenuationName = TEXT("ATT_P3_World");
+	if (AssetName == TEXT("AMB_P3_Conveyor") || AssetName == TEXT("AMB_P3_Rain")) AttenuationName = TEXT("ATT_P3_Area");
+	if (TObjectPtr<USoundAttenuation>* Existing = P3AttenuationAssets.Find(AttenuationName)) return Existing->Get();
+	const FString Path = FString::Printf(TEXT("/Game/Naiwa/P3/Audio/Attenuation/%s.%s"),
+		*AttenuationName.ToString(), *AttenuationName.ToString());
+	USoundAttenuation* Attenuation = LoadObject<USoundAttenuation>(nullptr, *Path);
+	P3AttenuationAssets.Add(AttenuationName, Attenuation);
+	return Attenuation;
+}
+
+void ANaiwaP3M2GameMode::StartP3Audio()
+{
+	if (bP3AudioStarted || !GetWorld()) return;
+	bP3AudioStarted = true;
+	StartP3MusicSegment(GetWorld()->GetTimeSeconds(), 0.5f);
+}
+
+void ANaiwaP3M2GameMode::StartP3MusicSegment(const float NowSeconds, const float FadeSeconds)
+{
+	if (!bMusicLoopEnabled || !GetWorld()) return;
+	USoundBase* Music = ResolveP3Audio(TEXT("BGM_P3_Level"));
+	if (!Music)
+	{
+		NextMusicRecoveryAtSeconds = NowSeconds + 2.0;
+		return;
+	}
+
+	const float Pitch = bP3RageAudioActive ? P3RageMusicPitch : P3NormalMusicPitch;
+	UAudioComponent* Previous = BackgroundMusicComponent.Get();
+	const bool bPreviousPlaying = IsValid(Previous) && Previous->IsPlaying();
+	const float TargetVolume = P3DbToLinear(-8.0f);
+	UAudioComponent* Next = UGameplayStatics::CreateSound2D(this, Music, 1.0f,
+		Pitch, 1.5f, nullptr, false, false);
+	if (!Next)
+	{
+		UE_LOG(LogTemp, Error, TEXT("P3 BGM: failed to create audio component for %s"), *GetNameSafe(Music));
+		NextMusicRecoveryAtSeconds = NowSeconds + 2.0;
+		return;
+	}
+
+	Next->SetLowPassFilterEnabled(false);
+	if (FadeSeconds > 0.0f)
+	{
+		if (bPreviousPlaying)
+		{
+			Next->FadeIn(FadeSeconds, TargetVolume, 1.5f);
+			Previous->FadeOut(FadeSeconds, 0.0f);
+		}
+		else
+		{
+			// Start the first segment directly. FadeIn also starts playback, but some
+			// streamed SoundWaves can report stopped while their initial fade is queued.
+			Next->SetVolumeMultiplier(TargetVolume);
+			Next->Play(1.5f);
+		}
+	}
+	else
+	{
+		Next->SetVolumeMultiplier(TargetVolume);
+		Next->Play(1.5f);
+	}
+
+	BackgroundMusicComponent = Next;
+	NextMusicRecoveryAtSeconds = NowSeconds + 2.0;
+	MusicSectionStartedAtSeconds = NowSeconds;
+	MusicSectionStartSourceSeconds = 1.5f;
+	const float CrossfadeSourceSeconds = FMath::Min(FadeSeconds * Pitch, 0.5f * Pitch);
+	const float LoopTriggerSourceSeconds = 195.5f - CrossfadeSourceSeconds;
+	NextMusicLoopAtSeconds = NowSeconds + FMath::Max(0.0f,
+		(LoopTriggerSourceSeconds - MusicSectionStartSourceSeconds) / Pitch);
+	UE_LOG(LogTemp, Display,
+		TEXT("P3 BGM segment requested: sound=%s playing=%d volume=%.3f pitch=%.3f start=1.50s"),
+		*GetNameSafe(Music), Next->IsPlaying() ? 1 : 0, TargetVolume, Pitch);
+}
+
+void ANaiwaP3M2GameMode::PlayP3Audio2D(const FName AssetName, const float VolumeDb,
+	const float Pitch, const float StartTime)
+{
+	if (USoundBase* Sound = ResolveP3Audio(AssetName))
+	{
+		UGameplayStatics::PlaySound2D(this, Sound, P3DbToLinear(VolumeDb), Pitch, StartTime);
+	}
+}
+
+void ANaiwaP3M2GameMode::PlayP3AudioAtLocation(const FName AssetName, const FVector& Location,
+	const float VolumeDb, const float Pitch, const float StartTime)
+{
+	if (USoundBase* Sound = ResolveP3Audio(AssetName))
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, Sound, Location, P3DbToLinear(VolumeDb), Pitch,
+			StartTime, ResolveP3Attenuation(AssetName));
+	}
+}
+
+void ANaiwaP3M2GameMode::SetP3ConveyorAudio(const bool bEnabled)
+{
+	if (!GetWorld()) return;
+	if (!bEnabled)
+	{
+		bP3ConveyorAudioActive = false;
+		NextConveyorLoopAtSeconds = 0.0;
+		ConveyorStopAtSeconds = FMath::Max(GetWorld()->GetTimeSeconds(),
+			ConveyorAudioStartedAtSeconds + 1.0);
+		return;
+	}
+
+	if (!bP3ConveyorAudioActive)
+	{
+		ConveyorAudioStartedAtSeconds = GetWorld()->GetTimeSeconds();
+	}
+	bP3ConveyorAudioActive = true;
+	ConveyorStopAtSeconds = -1.0;
+	if (ConveyorAmbientComponent && ConveyorAmbientComponent->IsPlaying())
+	{
+		return;
+	}
+	StartP3ConveyorLoop(GetWorld()->GetTimeSeconds(), 0.3f);
+}
+
+void ANaiwaP3M2GameMode::StartP3ConveyorLoop(const float NowSeconds, const float FadeSeconds)
+{
+	if (!bP3ConveyorAudioActive || !GetWorld()) return;
+	USoundBase* Sound = ResolveP3Audio(TEXT("AMB_P3_Conveyor"));
+	if (!Sound) return;
+	UAudioComponent* Previous = ConveyorAmbientComponent;
+	UAudioComponent* Next = UGameplayStatics::SpawnSound2D(this, Sound,
+		0.0f, 1.0f, 0.20f, nullptr, false, false);
+	if (!Next) return;
+	Next->bAutoDestroy = false;
+	const float FadeInSeconds = Previous ? FadeSeconds : FMath::Min(FadeSeconds, 0.08f);
+	Next->FadeIn(FadeInSeconds, P3DbToLinear(-6.0f));
+	ConveyorAmbientComponent = Next;
+	if (Previous && Previous != Next)
+	{
+		Previous->bAutoDestroy = true;
+		Previous->FadeOut(FadeSeconds, 0.0f);
+	}
+	// Source loop region is 0.20–44.70s; overlap the last 0.5s for a seamless handoff.
+	NextConveyorLoopAtSeconds = NowSeconds + 44.0;
+}
+
+void ANaiwaP3M2GameMode::SetP3RainAudio(const bool bEnabled)
+{
+	if (!GetWorld() || bP3RainAudioActive == bEnabled) return;
+	bP3RainAudioActive = bEnabled;
+	if (!bEnabled)
+	{
+		NextRainLoopAtSeconds = 0.0;
+		if (RainAmbientComponent)
+		{
+			RainAmbientComponent->bAutoDestroy = true;
+			RainAmbientComponent->FadeOut(1.5f, 0.0f);
+			RainAmbientComponent = nullptr;
+		}
+		return;
+	}
+	StartP3RainLoop(GetWorld()->GetTimeSeconds(), 1.5f);
+}
+
+void ANaiwaP3M2GameMode::StartP3RainLoop(const float NowSeconds, const float FadeSeconds)
+{
+	if (!bP3RainAudioActive || !GetWorld()) return;
+	USoundBase* Sound = ResolveP3Audio(TEXT("AMB_P3_Rain"));
+	if (!Sound) return;
+	UAudioComponent* Previous = RainAmbientComponent;
+	UAudioComponent* Next = UGameplayStatics::SpawnSound2D(this, Sound, 0.0f,
+		1.0f, 3.0f, nullptr, false, false);
+	if (!Next) return;
+	Next->bAutoDestroy = false;
+	Next->FadeIn(FadeSeconds, P3DbToLinear(-2.0f));
+	RainAmbientComponent = Next;
+	if (Previous && Previous != Next)
+	{
+		Previous->bAutoDestroy = true;
+		Previous->FadeOut(FadeSeconds, 0.0f);
+	}
+	// Rain loop region is 3.00–334.00s; overlap the last 0.5s.
+	NextRainLoopAtSeconds = NowSeconds + 330.5;
+}
+
+void ANaiwaP3M2GameMode::SetP3RageAudio(const bool bEnabled)
+{
+	if (bP3RageAudioActive == bEnabled) return;
+	const float PreviousPitch = bP3RageAudioActive ? P3RageMusicPitch : P3NormalMusicPitch;
+	const float NewPitch = bEnabled ? P3RageMusicPitch : P3NormalMusicPitch;
+	const double NowSeconds = GetWorld() ? GetWorld()->GetTimeSeconds() : 0.0;
+	if (BackgroundMusicComponent && GetWorld())
+	{
+		const float CurrentSourceSeconds = MusicSectionStartSourceSeconds +
+			static_cast<float>(NowSeconds - MusicSectionStartedAtSeconds) * PreviousPitch;
+		MusicSectionStartSourceSeconds = FMath::Clamp(CurrentSourceSeconds, 1.5f, 195.5f);
+		MusicSectionStartedAtSeconds = NowSeconds;
+	}
+	bP3RageAudioActive = bEnabled;
+	if (BackgroundMusicComponent)
+	{
+		BackgroundMusicComponent->SetPitchMultiplier(NewPitch);
+		BackgroundMusicComponent->SetLowPassFilterEnabled(false);
+		const float CrossfadeSeconds = 0.5f;
+		const float LoopTriggerSourceSeconds = 195.5f - CrossfadeSeconds * NewPitch;
+		NextMusicLoopAtSeconds = NowSeconds + FMath::Max(0.0f,
+			(LoopTriggerSourceSeconds - MusicSectionStartSourceSeconds) / NewPitch);
+	}
+	if (bEnabled)
+	{
+		PlayP3Audio2D(TEXT("SFX_P3_RageStinger"), -3.0f);
+		PlayP3Audio2D(TEXT("AMB_P3_LowDrone"), -17.0f);
+		if (GetWorld()) NextRageDroneAtSeconds = GetWorld()->GetTimeSeconds() + 2.0;
+	}
+	UE_LOG(LogTemp, Display, TEXT("P3 audio rage mode=%d; BGM remains on the same track"), bEnabled ? 1 : 0);
+}
+
+void ANaiwaP3M2GameMode::PlayP3FailureAudio()
+{
+	PlayP3Audio2D(TEXT("SFX_P2_FailureTrumpet"), 0.0f);
+}
+
+void ANaiwaP3M2GameMode::PlayP3LevelClearAudio()
+{
+	bMusicLoopEnabled = false;
+	PlayP3Audio2D(TEXT("SFX_P3_LevelClear"), -2.0f);
+	if (GetWorld()) PendingMusicFadeAtSeconds = GetWorld()->GetTimeSeconds() + 0.3;
+}
+
+void ANaiwaP3M2GameMode::TickP3Audio(const float NowSeconds)
+{
+	if (bP3ConveyorAudioActive && NowSeconds >= NextConveyorLoopAtSeconds)
+	{
+		StartP3ConveyorLoop(NowSeconds, 0.5f);
+	}
+	if (!bP3ConveyorAudioActive && ConveyorAmbientComponent && ConveyorStopAtSeconds >= 0.0 &&
+		NowSeconds >= ConveyorStopAtSeconds)
+	{
+		ConveyorAmbientComponent->bAutoDestroy = true;
+		ConveyorAmbientComponent->FadeOut(0.3f, 0.0f);
+		ConveyorAmbientComponent = nullptr;
+		ConveyorStopAtSeconds = -1.0;
+	}
+	if (bP3RainAudioActive && NowSeconds >= NextRainLoopAtSeconds)
+	{
+		StartP3RainLoop(NowSeconds, 0.5f);
+	}
+	if (bP3RageAudioActive && NowSeconds >= NextRageDroneAtSeconds)
+	{
+		PlayP3Audio2D(TEXT("AMB_P3_LowDrone"), -17.0f);
+		NextRageDroneAtSeconds = NowSeconds + 2.0;
+	}
+	if (PendingMusicFadeAtSeconds >= 0.0 && NowSeconds >= PendingMusicFadeAtSeconds)
+	{
+		if (BackgroundMusicComponent) BackgroundMusicComponent->FadeOut(2.0f, 0.0f);
+		PendingMusicFadeAtSeconds = -1.0;
+	}
+	if (!bMusicLoopEnabled) return;
+	if (!BackgroundMusicComponent || !BackgroundMusicComponent->IsPlaying())
+	{
+		if (NowSeconds < NextMusicRecoveryAtSeconds) return;
+		UE_LOG(LogTemp, Warning, TEXT("P3 BGM component stopped; restarting the loop segment"));
+		StartP3MusicSegment(NowSeconds, 0.5f);
+		return;
+	}
+	if (NowSeconds >= NextMusicLoopAtSeconds)
+	{
+		StartP3MusicSegment(NowSeconds, 0.5f);
 	}
 }
 

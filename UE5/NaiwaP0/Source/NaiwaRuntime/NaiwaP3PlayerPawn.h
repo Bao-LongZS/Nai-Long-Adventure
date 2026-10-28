@@ -42,6 +42,7 @@ private:
 	void SelectRatBomb();
 	void StageChainDrillPressed();
 	void ResetPressed();
+	void ReturnToLevelSelect();
 
 	UPROPERTY()
 	TObjectPtr<USceneComponent> SceneRoot;

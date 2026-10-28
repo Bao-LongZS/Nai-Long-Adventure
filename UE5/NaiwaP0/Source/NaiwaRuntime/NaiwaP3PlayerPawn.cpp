@@ -6,6 +6,7 @@
 #include "Engine/StaticMesh.h"
 #include "Engine/Texture2D.h"
 #include "InputCoreTypes.h"
+#include "Kismet/GameplayStatics.h"
 #include "Materials/MaterialInterface.h"
 #include "Materials/MaterialInstanceDynamic.h"
 #include "NaiwaP3GridSubsystem.h"
@@ -135,6 +136,16 @@ void ANaiwaP3PlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 	PlayerInputComponent->BindKey(EKeys::Four, IE_Pressed, this, &ANaiwaP3PlayerPawn::SelectRatBomb);
 	PlayerInputComponent->BindKey(EKeys::T, IE_Pressed, this, &ANaiwaP3PlayerPawn::StageChainDrillPressed);
 	PlayerInputComponent->BindKey(EKeys::R, IE_Pressed, this, &ANaiwaP3PlayerPawn::ResetPressed);
+	PlayerInputComponent->BindKey(EKeys::Escape, IE_Pressed, this, &ANaiwaP3PlayerPawn::ReturnToLevelSelect);
+}
+
+void ANaiwaP3PlayerPawn::ReturnToLevelSelect()
+{
+	if (GetWorld())
+	{
+		UGameplayStatics::OpenLevel(this, FName(TEXT("/Game/Naiwa/UI/L_NaiwaMainMenu")),
+			true, TEXT("NaiwaMenuPage=levels"));
+	}
 }
 
 void ANaiwaP3PlayerPawn::SetGridWorldPosition(const FVector& Position)
