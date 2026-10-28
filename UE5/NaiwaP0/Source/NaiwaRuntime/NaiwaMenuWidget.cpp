@@ -1,6 +1,7 @@
 #include "NaiwaMenuWidget.h"
 
 #include "NaiwaMenuProgress.h"
+#include "P5/Data/NaiwaP5SkinCatalog.h"
 #include "Blueprint/WidgetTree.h"
 #include "Components/Border.h"
 #include "Components/Button.h"
@@ -15,10 +16,12 @@
 #include "Components/Spacer.h"
 #include "Components/VerticalBox.h"
 #include "Components/VerticalBoxSlot.h"
+#include "ImageUtils.h"
 #include "Engine/Texture2D.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Misc/Parse.h"
+#include "Misc/Paths.h"
 #include "Styling/CoreStyle.h"
 #include "Brushes/SlateRoundedBoxBrush.h"
 
@@ -29,7 +32,6 @@ namespace
     const FLinearColor MutedColor = FLinearColor::FromSRGBColor(FColor(135, 126, 112));
     const FLinearColor BorderColor = FLinearColor::FromSRGBColor(FColor(226, 219, 207));
     const FLinearColor PaleColor = FLinearColor::FromSRGBColor(FColor(239, 233, 221));
-    const FLinearColor AccentColor = FLinearColor::FromSRGBColor(FColor(220, 145, 48));
 
     UCanvasPanelSlot* PlaceAt(UCanvasPanel* Canvas, UWidget* Widget,
         const FVector2D& Position, const FVector2D& Size)
@@ -71,16 +73,24 @@ void UNaiwaMenuWidget::NativeOnInitialized()
 
     StartCharacterTexture = LoadObject<UTexture2D>(nullptr,
         TEXT("/Game/Naiwa/UI/T_UI_StartNaiwa.T_UI_StartNaiwa"));
-    SelectCharacterTexture = LoadObject<UTexture2D>(nullptr,
-        TEXT("/Game/Naiwa/UI/T_UI_LevelNaiwa_LeftFist.T_UI_LevelNaiwa_LeftFist"));
-    Level11Thumbnail = LoadObject<UTexture2D>(nullptr,
-        TEXT("/Game/Naiwa/UI/T_UI_Thumbnail_11.T_UI_Thumbnail_11"));
-    Level21Thumbnail = LoadObject<UTexture2D>(nullptr,
-        TEXT("/Game/Naiwa/UI/T_UI_Thumbnail_21.T_UI_Thumbnail_21"));
-    Level22Thumbnail = LoadObject<UTexture2D>(nullptr,
-        TEXT("/Game/Naiwa/UI/T_UI_Thumbnail_22.T_UI_Thumbnail_22"));
-    Level23Thumbnail = LoadObject<UTexture2D>(nullptr,
-        TEXT("/Game/Naiwa/UI/T_UI_Thumbnail_23.T_UI_Thumbnail_23"));
+    const FString MenuImageDirectory = FPaths::Combine(FPaths::ProjectDir(), TEXT("SourceAssets/MenuUI"));
+    const auto LoadMenuImage = [&MenuImageDirectory](const TCHAR* Filename) -> UTexture2D*
+    {
+        return FImageUtils::ImportFileAsTexture2D(FPaths::Combine(MenuImageDirectory, Filename));
+    };
+    SelectCharacterTexture = LoadMenuImage(TEXT("T_UI_LevelNaiwa_RightCharacter.png"));
+    if (!SelectCharacterTexture)
+    {
+        SelectCharacterTexture = LoadObject<UTexture2D>(nullptr,
+            TEXT("/Game/Naiwa/UI/T_UI_LevelNaiwa_LeftFist.T_UI_LevelNaiwa_LeftFist"));
+    }
+    LevelSelectBackgroundTexture = LoadMenuImage(TEXT("T_UI_LevelSelect_Background.png"));
+    Level11Thumbnail = LoadMenuImage(TEXT("T_UI_LevelSelect_11.png"));
+    Level21Thumbnail = LoadMenuImage(TEXT("T_UI_LevelSelect_21.png"));
+    Level22Thumbnail = LoadMenuImage(TEXT("T_UI_LevelSelect_22.png"));
+    Level23Thumbnail = LoadMenuImage(TEXT("T_UI_LevelSelect_23.png"));
+    Level31Thumbnail = LoadMenuImage(TEXT("T_UI_LevelSelect_31.png"));
+    Level32Thumbnail = LoadMenuImage(TEXT("T_UI_LevelSelect_32.png"));
 
     RootCanvas = WidgetTree->ConstructWidget<UCanvasPanel>(UCanvasPanel::StaticClass(), TEXT("MenuRoot"));
     WidgetTree->RootWidget = RootCanvas;
@@ -103,6 +113,55 @@ void UNaiwaMenuWidget::NativeOnInitialized()
 void UNaiwaMenuWidget::ShowLevelSelect()
 {
     BuildLevelSelectPage();
+}
+
+void UNaiwaMenuWidget::BuildWardrobePage()
+{
+    RootCanvas->ClearChildren();
+    AddBackground();
+    AddText(TEXT("衣柜"), FVector2D(0.12f, 0.08f), FVector2D(500.0f, 72.0f), 48, InkColor, true);
+    AddText(TEXT("能力和外观由同一份 P5/P6 皮肤配置驱动；永久解锁只使用奶票。"),
+        FVector2D(0.12f, 0.16f), FVector2D(900.0f, 38.0f), 18, MutedColor);
+
+    UNaiwaProgressSubsystem* Progress = GetGameInstance()
+        ? GetGameInstance()->GetSubsystem<UNaiwaProgressSubsystem>() : nullptr;
+    AddText(FString::Printf(TEXT("奶票余额  %d"), Progress ? Progress->GetMilkTickets() : 0),
+        FVector2D(0.72f, 0.105f), FVector2D(320.0f, 44.0f), 24, InkColor, true, ETextJustify::Right);
+
+    const TArray<FNaiwaP5SkinRow>& Rows = FNaiwaP5SkinCatalog::GetRows();
+    for (int32 Index = 0; Index < Rows.Num(); ++Index)
+    {
+        const FNaiwaP5SkinRow& Row = Rows[Index];
+        const float Y = 0.235f + static_cast<float>(Index) * 0.12f;
+        UBorder* Card = WidgetTree->ConstructWidget<UBorder>(UBorder::StaticClass());
+        Card->SetBrush(FSlateRoundedBoxBrush(FLinearColor::White, 8.0f));
+        Card->SetBrushColor(FLinearColor(0.97f, 0.95f, 0.91f, 0.94f));
+        UCanvasPanelSlot* CardSlot = RootCanvas->AddChildToCanvas(Card);
+        CardSlot->SetAnchors(FAnchors(0.12f, Y - 0.01f, 0.88f, Y + 0.105f));
+        CardSlot->SetOffsets(FMargin(0.0f));
+
+        AddText(Row.DisplayName, FVector2D(0.15f, Y), FVector2D(480.0f, 34.0f), 24, InkColor, true);
+        AddText(FString::Printf(TEXT("%s   ·   %d 奶票"), *Row.AbilityDescription, Row.TicketPrice),
+            FVector2D(0.15f, Y + 0.045f), FVector2D(900.0f, 32.0f), 16, MutedColor);
+
+        const bool bOwned = Progress && Progress->IsP5SkinOwned(Row.SkinId);
+        const bool bSelected = Progress && Progress->GetSelectedP5SkinId() == Row.SkinId;
+        const FString ActionLabel = bOwned
+            ? (bSelected ? TEXT("已装备") : TEXT("装备"))
+            : FString::Printf(TEXT("购买 %d 票"), Row.TicketPrice);
+        UButton* ActionButton = AddButton(ActionLabel, bSelected ? InkColor : PaleColor,
+            FVector2D(0.735f, Y + 0.013f), FVector2D(190.0f, 48.0f), 18);
+        if (Row.SkinId == FName(TEXT("NaiwaSkin_Base"))) ActionButton->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnWardrobeBaseClicked);
+        else if (Row.SkinId == FName(TEXT("NaiwaSkin_NaiYu"))) ActionButton->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnWardrobeNaiYuClicked);
+        else if (Row.SkinId == FName(TEXT("NaiwaSkin_NaiCha"))) ActionButton->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnWardrobeNaiChaClicked);
+        else if (Row.SkinId == FName(TEXT("NaiwaSkin_NaiHao"))) ActionButton->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnWardrobeNaiHaoClicked);
+        else if (Row.SkinId == FName(TEXT("NaiwaSkin_NaiSha"))) ActionButton->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnWardrobeNaiShaClicked);
+    }
+
+    AddText(WardrobeFeedback, FVector2D(0.14f, 0.845f), FVector2D(800.0f, 34.0f), 17, MutedColor);
+    UButton* ReturnButton = AddButton(TEXT("返回主菜单"), BackgroundColor,
+        FVector2D(0.025f, 0.91f), FVector2D(190.0f, 54.0f), 18);
+    ReturnButton->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnWardrobeBackClicked);
 }
 
 void UNaiwaMenuWidget::AddBackground()
@@ -149,12 +208,20 @@ void UNaiwaMenuWidget::BuildHomePage()
     AddText(TEXT("N A I W A   &   T H E   S L I N G S H O T"),
         FVector2D(0.075f, 0.205f), FVector2D(700.0f, 34.0f), 15, MutedColor);
     AddText(TEXT("奶蛙闯关"), FVector2D(0.075f, 0.285f), FVector2D(740.0f, 118.0f), 76, InkColor, true);
-    AddText(TEXT("1-1 平台关     →     2-1 / 2-2 / 2-3 弹弓关     ·     同一局连闯"),
+    AddText(TEXT("七关主线：1-1 → 2-1 → 2-2 → 2-3 → 3-1 → 3-2 → 4-1"),
         FVector2D(0.078f, 0.435f), FVector2D(790.0f, 48.0f), 22, MutedColor);
+
+    UNaiwaProgressSubsystem* Progress = GetGameInstance()
+        ? GetGameInstance()->GetSubsystem<UNaiwaProgressSubsystem>() : nullptr;
+    AddText(FString::Printf(TEXT("奶票  %d"), Progress ? Progress->GetMilkTickets() : 0),
+        FVector2D(0.075f, 0.525f), FVector2D(180.0f, 40.0f), 20, MutedColor, true);
 
     UButton* StartButton = AddButton(TEXT("开    始"), InkColor,
         FVector2D(0.075f, 0.585f), FVector2D(300.0f, 70.0f), 22);
     StartButton->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnStartClicked);
+    UButton* WardrobeButton = AddButton(TEXT("衣    柜"), PaleColor,
+        FVector2D(0.42f, 0.585f), FVector2D(180.0f, 70.0f), 20);
+    WardrobeButton->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnWardrobeClicked);
     UButton* ExitButton = AddButton(TEXT("退    出"), BackgroundColor,
         FVector2D(0.255f, 0.585f), FVector2D(180.0f, 70.0f), 20);
     StyleButton(ExitButton, BackgroundColor);
@@ -176,32 +243,49 @@ void UNaiwaMenuWidget::BuildHomePage()
     }
 }
 
-void UNaiwaMenuWidget::AddLevelCard(const FString& LevelId, const FString& Title,
-    const FString& Subtitle, bool bUnlocked, float Left, float Right)
+void UNaiwaMenuWidget::AddLevelCard(const FString& LevelId, bool bUnlocked,
+    const FVector2D& Position, const FVector2D& Size)
 {
     const bool bSelected = SelectedLevel == LevelId;
+    UBorder* Frame = WidgetTree->ConstructWidget<UBorder>(UBorder::StaticClass());
+    Frame->SetBrush(FSlateRoundedBoxBrush(bSelected ? InkColor : FLinearColor::White,
+        bSelected ? 14.0f : 12.0f));
+    Frame->SetBrushColor(bSelected ? InkColor : FLinearColor(0.97f, 0.95f, 0.91f, 0.86f));
+    Frame->SetPadding(FMargin(bSelected ? 2.0f : 0.0f));
+    UCanvasPanelSlot* FrameSlot = RootCanvas->AddChildToCanvas(Frame);
+    FrameSlot->SetAnchors(FAnchors(Position.X, Position.Y,
+        Position.X + Size.X, Position.Y + Size.Y));
+    FrameSlot->SetOffsets(FMargin(0.0f));
+
     UButton* Button = WidgetTree->ConstructWidget<UButton>(UButton::StaticClass());
-    StyleButton(Button, bSelected ? PaleColor : FLinearColor::White);
+    StyleButton(Button, bSelected ? FLinearColor::White : PaleColor);
     Button->SetIsEnabled(bUnlocked);
-    UCanvasPanelSlot* ButtonSlot = RootCanvas->AddChildToCanvas(Button);
-    ButtonSlot->SetAnchors(FAnchors(Left, 0.365f, Right, 0.755f));
-    ButtonSlot->SetOffsets(FMargin(0.0f));
+    Frame->SetContent(Button);
 
     UVerticalBox* Stack = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
-    Button->AddChild(Stack);
+    UButtonSlot* ContentSlot = Cast<UButtonSlot>(Button->AddChild(Stack));
+    if (ContentSlot)
+    {
+        ContentSlot->SetHorizontalAlignment(HAlign_Fill);
+        ContentSlot->SetVerticalAlignment(VAlign_Top);
+    }
 
     USizeBox* ArtSize = WidgetTree->ConstructWidget<USizeBox>(USizeBox::StaticClass());
-    ArtSize->SetWidthOverride(182.0f);
-    ArtSize->SetHeightOverride(182.0f);
+    ArtSize->SetWidthOverride(CurrentLevelPage == 0 ? 420.0f
+        : CurrentLevelPage == 1 ? 370.0f : 410.0f);
+    ArtSize->SetHeightOverride(CurrentLevelPage == 0 ? 350.0f
+        : CurrentLevelPage == 1 ? 330.0f : 370.0f);
     UImage* ArtImage = WidgetTree->ConstructWidget<UImage>(UImage::StaticClass());
     UTexture2D* Thumbnail = nullptr;
     if (LevelId == TEXT("1-1")) Thumbnail = Level11Thumbnail;
     else if (LevelId == TEXT("2-1")) Thumbnail = Level21Thumbnail;
     else if (LevelId == TEXT("2-2")) Thumbnail = Level22Thumbnail;
     else if (LevelId == TEXT("2-3")) Thumbnail = Level23Thumbnail;
+    else if (LevelId == TEXT("3-1")) Thumbnail = Level31Thumbnail;
+    else if (LevelId == TEXT("3-2")) Thumbnail = Level32Thumbnail;
     if (Thumbnail)
     {
-        ArtImage->SetBrushFromTexture(Thumbnail, true);
+        ArtImage->SetBrushFromTexture(Thumbnail, false);
         ArtImage->SetColorAndOpacity(bUnlocked
             ? FLinearColor::White
             : FLinearColor(0.82f, 0.82f, 0.82f, 0.62f));
@@ -212,27 +296,21 @@ void UNaiwaMenuWidget::AddLevelCard(const FString& LevelId, const FString& Title
     }
     ArtSize->AddChild(ArtImage);
     UVerticalBoxSlot* ArtSlot = Stack->AddChildToVerticalBox(ArtSize);
-    ArtSlot->SetPadding(FMargin(12.0f, 12.0f, 12.0f, 4.0f));
+    ArtSlot->SetPadding(FMargin(8.0f, 12.0f, 8.0f, 5.0f));
     ArtSlot->SetHorizontalAlignment(HAlign_Center);
 
-    UVerticalBox* Details = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass());
-    UTextBlock* Number = MakeText(WidgetTree, LevelId, 15, MutedColor);
-    UTextBlock* Name = MakeText(WidgetTree, Title, 25, bUnlocked ? InkColor : MutedColor, true);
-    UTextBlock* State = MakeText(WidgetTree, Subtitle, 15,
-        bUnlocked ? MutedColor : AccentColor);
+    UTextBlock* Number = MakeText(WidgetTree, LevelId, 32, InkColor, true);
     Number->SetAutoWrapText(false);
-    Name->SetAutoWrapText(false);
-    State->SetAutoWrapText(true);
-    Details->AddChildToVerticalBox(Number)->SetPadding(FMargin(0, 8, 0, 1));
-    Details->AddChildToVerticalBox(Name)->SetPadding(FMargin(0, 0, 0, 2));
-    Details->AddChildToVerticalBox(State)->SetPadding(FMargin(0, 0, 0, 0));
-    UVerticalBoxSlot* DetailsSlot = Stack->AddChildToVerticalBox(Details);
-    DetailsSlot->SetPadding(FMargin(24.0f, 9.0f, 20.0f, 10.0f));
+    Number->SetJustification(ETextJustify::Center);
+    Stack->AddChildToVerticalBox(Number)->SetPadding(FMargin(8.0f, 0.0f, 8.0f, 0.0f));
 
     if (LevelId == TEXT("1-1")) Button->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnSelect11);
     if (LevelId == TEXT("2-1")) Button->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnSelect21);
     if (LevelId == TEXT("2-2")) Button->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnSelect22);
     if (LevelId == TEXT("2-3")) Button->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnSelect23);
+    if (LevelId == TEXT("3-1")) Button->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnSelect31);
+    if (LevelId == TEXT("3-2")) Button->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnSelect32);
+    if (LevelId == TEXT("4-1")) Button->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnSelect41);
 }
 
 void UNaiwaMenuWidget::BuildLevelSelectPage()
@@ -240,81 +318,160 @@ void UNaiwaMenuWidget::BuildLevelSelectPage()
     RootCanvas->ClearChildren();
     AddBackground();
 
-    AddText(TEXT("奶蛙闯关"), FVector2D(0.05f, 0.065f), FVector2D(330.0f, 42.0f), 25, InkColor, true);
-    AddText(TEXT("关卡进度"), FVector2D(0.79f, 0.075f), FVector2D(340.0f, 32.0f), 16, MutedColor, false, ETextJustify::Right);
+    if (LevelSelectBackgroundTexture)
+    {
+        UImage* BackgroundImage = WidgetTree->ConstructWidget<UImage>(UImage::StaticClass());
+        BackgroundImage->SetBrushFromTexture(LevelSelectBackgroundTexture, false);
+        UCanvasPanelSlot* BackgroundSlot = RootCanvas->AddChildToCanvas(BackgroundImage);
+        BackgroundSlot->SetAnchors(FAnchors(0.0f, 0.0f, 1.0f, 1.0f));
+        BackgroundSlot->SetOffsets(FMargin(0.0f));
+    }
 
-    UBorder* Divider = WidgetTree->ConstructWidget<UBorder>(UBorder::StaticClass());
-    Divider->SetBrushColor(BorderColor);
-    UCanvasPanelSlot* DividerSlot = RootCanvas->AddChildToCanvas(Divider);
-    DividerSlot->SetAnchors(FAnchors(0.05f, 0.142f, 0.77f, 0.144f));
-    DividerSlot->SetOffsets(FMargin(0.0f));
+    const TCHAR* StageTitle = CurrentLevelPage == 0 ? TEXT("第一大关")
+        : CurrentLevelPage == 1 ? TEXT("第二大关")
+        : CurrentLevelPage == 2 ? TEXT("第三大关") : TEXT("第四大关");
+    AddText(TEXT("N A I W A   &   T H E   S L I N G S H O T"),
+        FVector2D(0.05f, 0.055f), FVector2D(560.0f, 28.0f), 15, MutedColor);
+    AddText(TEXT("选择关卡"), FVector2D(0.05f, 0.115f), FVector2D(620.0f, 82.0f), 58, InkColor, true);
+    AddText(StageTitle, FVector2D(0.05f, 0.225f), FVector2D(420.0f, 48.0f), 34, MutedColor, true);
 
-    AddText(TEXT("S E L E C T   L E V E L"), FVector2D(0.05f, 0.18f), FVector2D(360.0f, 26.0f), 14, MutedColor);
-    AddText(TEXT("关卡选择"), FVector2D(0.05f, 0.215f), FVector2D(620.0f, 78.0f), 54, InkColor, true);
-    AddText(TEXT("1-1 与 2-1 可直接进入；2-2 需通关 2-1，2-3 需通关 2-2。"),
-        FVector2D(0.05f, 0.29f), FVector2D(770.0f, 34.0f), 18, MutedColor);
+    AddText(FString::Printf(TEXT("%02d / 04"), CurrentLevelPage + 1),
+        FVector2D(0.82f, 0.065f), FVector2D(240.0f, 38.0f), 29, InkColor, true, ETextJustify::Right);
+    for (int32 DotIndex = 0; DotIndex < 4; ++DotIndex)
+    {
+        AddText(TEXT("●"), FVector2D(0.895f + DotIndex * 0.026f, 0.124f),
+            FVector2D(24.0f, 24.0f), 14, DotIndex == CurrentLevelPage ? InkColor : BorderColor,
+            false, ETextJustify::Center);
+    }
 
     UNaiwaProgressSubsystem* Progress = GetGameInstance()
         ? GetGameInstance()->GetSubsystem<UNaiwaProgressSubsystem>() : nullptr;
-    const int32 ClearedCount = Progress ? Progress->GetClearedLevelCount() : 0;
-    AddText(FString::Printf(TEXT("通关 %d / 4     ·     收集进度保存于本机"), ClearedCount),
-        FVector2D(0.78f, 0.18f), FVector2D(0.17f, 0.035f), 15, MutedColor, false, ETextJustify::Right);
 
     if (SelectCharacterTexture)
     {
-        UScaleBox* Scale = WidgetTree->ConstructWidget<UScaleBox>(UScaleBox::StaticClass());
-        Scale->SetStretch(EStretch::ScaleToFit);
         UImage* Image = WidgetTree->ConstructWidget<UImage>(UImage::StaticClass());
         Image->SetBrushFromTexture(SelectCharacterTexture, false);
-        Scale->SetContent(Image);
-        UCanvasPanelSlot* ImageSlot = RootCanvas->AddChildToCanvas(Scale);
-        ImageSlot->SetAnchors(FAnchors(0.82f, 0.055f, 0.965f, 0.285f));
+        UCanvasPanelSlot* ImageSlot = RootCanvas->AddChildToCanvas(Image);
+        ImageSlot->SetAnchors(FAnchors(0.83f, 0.565f, 1.0f, 0.94f));
         ImageSlot->SetOffsets(FMargin(0.0f));
     }
 
-    FNaiwaLevelRecord Record;
-    const bool bCleared11 = Progress && Progress->GetLevelRecord(TEXT("1-1"), Record) && Record.bCleared;
-    const FString Sub11 = bCleared11
-        ? FString::Printf(TEXT("已通关    %.1f 秒    %d 死亡"), Record.BestTimeSeconds, Record.BestDeaths)
-        : TEXT("平台关    ·    直接进入");
-    const bool bCleared21 = Progress && Progress->GetLevelRecord(TEXT("2-1"), Record) && Record.bCleared;
-    const FString Sub21 = bCleared21
-        ? FString::Printf(TEXT("已通关    %d 发    最佳记录"), Record.BestShots)
-        : TEXT("弹弓关    ·    直接进入");
-    const bool bCleared22 = Progress && Progress->GetLevelRecord(TEXT("2-2"), Record) && Record.bCleared;
-    const FString Sub22 = bCleared22
-        ? FString::Printf(TEXT("已通关    %d 发    最佳记录"), Record.BestShots)
-        : TEXT("未解锁    ·    通关 2-1");
     const bool bUnlocked22 = Progress && Progress->IsLevelUnlocked(TEXT("2-2"));
-    const bool bCleared23 = Progress && Progress->GetLevelRecord(TEXT("2-3"), Record) && Record.bCleared;
-    const FString Sub23 = bCleared23
-        ? FString::Printf(TEXT("已通关    %d 发    最佳记录"), Record.BestShots)
-        : TEXT("未解锁    ·    通关 2-2");
     const bool bUnlocked23 = Progress && Progress->IsLevelUnlocked(TEXT("2-3"));
+    const bool bUnlocked31 = Progress && Progress->IsLevelUnlocked(TEXT("3-1"));
+    const bool bUnlocked32 = Progress && Progress->IsLevelUnlocked(TEXT("3-2"));
+    const bool bUnlocked41 = Progress && Progress->IsLevelUnlocked(TEXT("4-1"));
 
-    AddLevelCard(TEXT("1-1"), TEXT("斩首之前"), Sub11, true, 0.05f, 0.265f);
-    AddLevelCard(TEXT("2-1"), TEXT("斩首"), Sub21, true, 0.29f, 0.505f);
-    AddLevelCard(TEXT("2-2"), TEXT("选蛋"), Sub22, bUnlocked22, 0.53f, 0.745f);
-    AddLevelCard(TEXT("2-3"), TEXT("综合"), Sub23, bUnlocked23, 0.77f, 0.985f);
+    FVector2D SelectedPosition(0.38f, 0.267f);
+    FVector2D CardSize(0.25f, 0.52f);
+    float StartButtonY = 0.704f;
+    if (CurrentLevelPage == 0)
+    {
+        AddLevelCard(TEXT("1-1"), true, SelectedPosition, CardSize);
+    }
+    else if (CurrentLevelPage == 1)
+    {
+        const FVector2D CardSizeP2(0.212f, 0.465f);
+        const FVector2D SelectedCardSizeP2(0.212f, 0.525f);
+        const FVector2D Pos21(0.165f, SelectedLevel == TEXT("2-1") ? 0.295f : 0.313f);
+        const FVector2D Pos22(0.395f, SelectedLevel == TEXT("2-2") ? 0.295f : 0.313f);
+        const FVector2D Pos23(0.625f, SelectedLevel == TEXT("2-3") ? 0.295f : 0.313f);
+        const FVector2D Size21 = SelectedLevel == TEXT("2-1") ? SelectedCardSizeP2 : CardSizeP2;
+        const FVector2D Size22 = SelectedLevel == TEXT("2-2") ? SelectedCardSizeP2 : CardSizeP2;
+        const FVector2D Size23 = SelectedLevel == TEXT("2-3") ? SelectedCardSizeP2 : CardSizeP2;
+        AddLevelCard(TEXT("2-1"), true, Pos21, Size21);
+        AddLevelCard(TEXT("2-2"), bUnlocked22, Pos22, Size22);
+        AddLevelCard(TEXT("2-3"), bUnlocked23, Pos23, Size23);
+        SelectedPosition = SelectedLevel == TEXT("2-2") ? Pos22
+            : SelectedLevel == TEXT("2-3") ? Pos23 : Pos21;
+        CardSize = SelectedLevel == TEXT("2-2") ? Size22
+            : SelectedLevel == TEXT("2-3") ? Size23 : Size21;
+        StartButtonY = 0.738f;
+    }
+    else if (CurrentLevelPage == 2)
+    {
+        const FVector2D CardSizeP3(0.25f, 0.495f);
+        const FVector2D SelectedCardSizeP3(0.25f, 0.54f);
+        const FVector2D Pos31(0.245f, SelectedLevel == TEXT("3-1") ? 0.294f : 0.30f);
+        const FVector2D Pos32(0.512f, SelectedLevel == TEXT("3-2") ? 0.294f : 0.30f);
+        const FVector2D Size31 = SelectedLevel == TEXT("3-1") ? SelectedCardSizeP3 : CardSizeP3;
+        const FVector2D Size32 = SelectedLevel == TEXT("3-2") ? SelectedCardSizeP3 : CardSizeP3;
+        AddLevelCard(TEXT("3-1"), bUnlocked31, Pos31, Size31);
+        AddLevelCard(TEXT("3-2"), bUnlocked32, Pos32, Size32);
+        SelectedPosition = SelectedLevel == TEXT("3-2") ? Pos32 : Pos31;
+        CardSize = SelectedLevel == TEXT("3-2") ? Size32 : Size31;
+        StartButtonY = 0.755f;
+    }
+    else
+    {
+        SelectedPosition = FVector2D(0.38f, 0.29f);
+        CardSize = FVector2D(0.25f, 0.52f);
+        AddLevelCard(TEXT("4-1"), bUnlocked41, SelectedPosition, CardSize);
+        StartButtonY = 0.704f;
+    }
 
-    UBorder* DetailPanel = WidgetTree->ConstructWidget<UBorder>(UBorder::StaticClass());
-    DetailPanel->SetBrushColor(FLinearColor::White);
-    UCanvasPanelSlot* DetailSlot = RootCanvas->AddChildToCanvas(DetailPanel);
-    DetailSlot->SetAnchors(FAnchors(0.05f, 0.80f, 0.95f, 0.94f));
-    DetailSlot->SetOffsets(FMargin(0.0f));
-    AddText(SelectedLevel, FVector2D(0.065f, 0.818f), FVector2D(180.0f, 34.0f), 24, InkColor, true);
-
-    FString Detail = TEXT("选择一关开始。1-1 通关后会自动进入 2-1；从 2-1 开始的流程不会返回 1-1。");
-    if (SelectedLevel == TEXT("2-1")) Detail = TEXT("弹弓关    ·    可直接进入    ·    通关后解锁 2-2");
-    if (SelectedLevel == TEXT("2-2")) Detail = TEXT("弹弓关    ·    通关后解锁 2-3");
-    if (SelectedLevel == TEXT("2-3")) Detail = TEXT("综合关    ·    完成两阶段后返回关卡选择");
-    AddText(Detail, FVector2D(0.065f, 0.858f), FVector2D(980.0f, 30.0f), 16, MutedColor);
-
-    StartLevelButton = AddButton(TEXT("开始这一关"), InkColor,
-        FVector2D(0.835f, 0.823f), FVector2D(220.0f, 60.0f), 20);
+    const float ButtonWidthFraction = 0.117f;
+    const FVector2D StartButtonPosition(
+        SelectedPosition.X + (CardSize.X - ButtonWidthFraction) * 0.5f, StartButtonY);
+    StartLevelButton = AddButton(TEXT("开    始"), InkColor,
+        StartButtonPosition, FVector2D(225.0f, 58.0f), 20);
     StartLevelButton->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnStartSelectedLevel);
     StartLevelButton->SetIsEnabled(SelectedLevel == TEXT("1-1") || SelectedLevel == TEXT("2-1")
         || (Progress && Progress->IsLevelUnlocked(SelectedLevel)));
+
+    UButton* ReturnButton = AddButton(TEXT("返回主菜单"), BackgroundColor,
+        FVector2D(0.025f, 0.905f), FVector2D(180.0f, 54.0f), 18);
+    ReturnButton->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnReturnHomeClicked);
+
+    UButton* PreviousButton = AddButton(TEXT("←  上一页"), BackgroundColor,
+        FVector2D(0.35f, 0.88f), FVector2D(230.0f, 64.0f), 20);
+    PreviousButton->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnPreviousPageClicked);
+    PreviousButton->SetIsEnabled(CurrentLevelPage > 0);
+
+    UButton* NextButton = AddButton(TEXT("下一页  →"), BackgroundColor,
+        FVector2D(0.51f, 0.88f), FVector2D(230.0f, 64.0f), 20);
+    NextButton->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnNextPageClicked);
+    NextButton->SetIsEnabled(CurrentLevelPage < 3);
+}
+
+void UNaiwaMenuWidget::GoToLevelPage(int32 PageIndex)
+{
+    CurrentLevelPage = FMath::Clamp(PageIndex, 0, 3);
+    if (CurrentLevelPage == 0)
+    {
+        SelectedLevel = TEXT("1-1");
+    }
+    else if (CurrentLevelPage == 1)
+    {
+        UNaiwaProgressSubsystem* Progress = GetGameInstance()
+            ? GetGameInstance()->GetSubsystem<UNaiwaProgressSubsystem>() : nullptr;
+        SelectedLevel = Progress && Progress->IsLevelUnlocked(TEXT("2-2"))
+            ? TEXT("2-2") : TEXT("2-1");
+    }
+    else if (CurrentLevelPage == 2)
+    {
+        SelectedLevel = TEXT("3-1");
+    }
+    else
+    {
+        SelectedLevel = TEXT("4-1");
+    }
+    BuildLevelSelectPage();
+}
+
+void UNaiwaMenuWidget::OnPreviousPageClicked()
+{
+    GoToLevelPage(CurrentLevelPage - 1);
+}
+
+void UNaiwaMenuWidget::OnNextPageClicked()
+{
+    GoToLevelPage(CurrentLevelPage + 1);
+}
+
+void UNaiwaMenuWidget::OnReturnHomeClicked()
+{
+    BuildHomePage();
 }
 
 void UNaiwaMenuWidget::SelectLevel(const FString& LevelId)
@@ -323,12 +480,16 @@ void UNaiwaMenuWidget::SelectLevel(const FString& LevelId)
         ? GetGameInstance()->GetSubsystem<UNaiwaProgressSubsystem>() : nullptr;
     if (!Progress || !Progress->IsLevelUnlocked(LevelId)) return;
     SelectedLevel = LevelId;
+    CurrentLevelPage = LevelId.StartsWith(TEXT("1-")) ? 0
+        : LevelId.StartsWith(TEXT("2-")) ? 1
+        : LevelId.StartsWith(TEXT("3-")) ? 2 : 3;
     BuildLevelSelectPage();
 }
 
 void UNaiwaMenuWidget::OnStartClicked()
 {
     SelectedLevel = TEXT("1-1");
+    CurrentLevelPage = 0;
     BuildLevelSelectPage();
 }
 
@@ -343,6 +504,17 @@ void UNaiwaMenuWidget::OnStartSelectedLevel()
     {
         UGameplayStatics::OpenLevel(this, FName(TEXT("/Game/Naiwa/P1/Maps/L_NaiwaP1_v7")),
             true, TEXT("NaiwaLinkRun=1"));
+    }
+    else if (SelectedLevel == TEXT("3-1") || SelectedLevel == TEXT("3-2"))
+    {
+        const FString MapPath = SelectedLevel == TEXT("3-1")
+            ? TEXT("/Game/Naiwa/P3/Maps/L_NaiwaP3_31")
+            : TEXT("/Game/Naiwa/P3/Maps/L_NaiwaP3_32");
+        UGameplayStatics::OpenLevel(this, FName(*MapPath), true, TEXT("NaiwaLinkRun=1"));
+    }
+    else if (SelectedLevel == TEXT("4-1"))
+    {
+        UGameplayStatics::OpenLevel(this, FName(TEXT("/Game/Naiwa/P5/Maps/L_NaiwaP5_M2Prototype")), true);
     }
     else if (SelectedLevel == TEXT("2-1") || SelectedLevel == TEXT("2-2") || SelectedLevel == TEXT("2-3"))
     {
@@ -360,3 +532,53 @@ void UNaiwaMenuWidget::OnSelect11() { SelectLevel(TEXT("1-1")); }
 void UNaiwaMenuWidget::OnSelect21() { SelectLevel(TEXT("2-1")); }
 void UNaiwaMenuWidget::OnSelect22() { SelectLevel(TEXT("2-2")); }
 void UNaiwaMenuWidget::OnSelect23() { SelectLevel(TEXT("2-3")); }
+void UNaiwaMenuWidget::OnSelect31() { SelectLevel(TEXT("3-1")); }
+void UNaiwaMenuWidget::OnSelect32() { SelectLevel(TEXT("3-2")); }
+void UNaiwaMenuWidget::OnSelect41() { SelectLevel(TEXT("4-1")); }
+
+void UNaiwaMenuWidget::OnWardrobeClicked()
+{
+    WardrobeFeedback.Empty();
+    BuildWardrobePage();
+}
+
+void UNaiwaMenuWidget::OnWardrobeBackClicked()
+{
+    WardrobeFeedback.Empty();
+    BuildHomePage();
+}
+
+void UNaiwaMenuWidget::PurchaseOrEquipP5Skin(const FName SkinId)
+{
+    UNaiwaProgressSubsystem* Progress = GetGameInstance()
+        ? GetGameInstance()->GetSubsystem<UNaiwaProgressSubsystem>() : nullptr;
+    if (!Progress)
+    {
+        WardrobeFeedback = TEXT("存档系统暂时不可用。");
+        BuildWardrobePage();
+        return;
+    }
+
+    if (!Progress->IsP5SkinOwned(SkinId) && !Progress->TryPurchaseP5Skin(SkinId))
+    {
+        WardrobeFeedback = TEXT("奶票不足，或皮肤配置不存在。");
+        BuildWardrobePage();
+        return;
+    }
+
+    if (Progress->SetSelectedP5Skin(SkinId))
+    {
+        WardrobeFeedback = TEXT("已保存并装备；下次开始 P5 时生效。");
+    }
+    else
+    {
+        WardrobeFeedback = TEXT("皮肤已购买，但当前无法装备。");
+    }
+    BuildWardrobePage();
+}
+
+void UNaiwaMenuWidget::OnWardrobeBaseClicked() { PurchaseOrEquipP5Skin(FName(TEXT("NaiwaSkin_Base"))); }
+void UNaiwaMenuWidget::OnWardrobeNaiYuClicked() { PurchaseOrEquipP5Skin(FName(TEXT("NaiwaSkin_NaiYu"))); }
+void UNaiwaMenuWidget::OnWardrobeNaiChaClicked() { PurchaseOrEquipP5Skin(FName(TEXT("NaiwaSkin_NaiCha"))); }
+void UNaiwaMenuWidget::OnWardrobeNaiHaoClicked() { PurchaseOrEquipP5Skin(FName(TEXT("NaiwaSkin_NaiHao"))); }
+void UNaiwaMenuWidget::OnWardrobeNaiShaClicked() { PurchaseOrEquipP5Skin(FName(TEXT("NaiwaSkin_NaiSha"))); }
