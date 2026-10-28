@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">肚子更圆 · 图标候选 v01</title>
+  <desc id="desc">圆润奶蛙肚子配三格冲撞充能标记。</desc>
+  <defs>
+    <linearGradient id="frog" x1=".15" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#FFE58B"/>
+      <stop offset=".64" stop-color="#F5C34F"/>
+      <stop offset="1" stop-color="#D99235"/>
+    </linearGradient>
+    <linearGradient id="belly" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF8E7"/>
+      <stop offset="1" stop-color="#E8D3A7"/>
+    </linearGradient>
+  </defs>
+  <path d="M104 300 C103 238 139 193 180 185 C202 140 229 116 256 116 C286 116 314 141 333 184 C375 194 407 242 407 301 C407 366 383 415 350 433 L162 433 C126 412 104 364 104 300Z" fill="url(#frog)" stroke="#513A2C" stroke-width="20" stroke-linejoin="round"/>
+  <path d="M160 298 C160 257 201 231 256 231 C311 231 352 257 352 298 C352 356 314 390 256 390 C198 390 160 356 160 298Z" fill="url(#belly)" stroke="#9B7445" stroke-width="12"/>
+  <path d="M130 345 C105 359 87 382 83 407" fill="none" stroke="#513A2C" stroke-width="24" stroke-linecap="round"/>
+  <path d="M382 345 C407 359 425 382 429 407" fill="none" stroke="#513A2C" stroke-width="24" stroke-linecap="round"/>
+  <g stroke="#513A2C" stroke-width="13">
+    <circle cx="171" cy="101" r="39" fill="#F6D77C"/>
+    <circle cx="256" cy="82" r="43" fill="#F6D77C"/>
+    <circle cx="341" cy="101" r="39" fill="#82B473"/>
+  </g>
+  <path d="M324 101 L337 115 L362 84" fill="none" stroke="#FFFBEF" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M219 270 C238 253 272 249 296 261" fill="none" stroke="#FFFDF5" stroke-width="11" stroke-linecap="round" opacity=".8"/>
+</svg>

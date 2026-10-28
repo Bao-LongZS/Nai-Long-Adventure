@@ -1,0 +1,49 @@
+{
+  "schema": "naiwa.p4.alpha_card_faces/1",
+  "asset_id": "P4_ALPHA_CARD_FACES",
+  "version": "v01",
+  "status": "visual_layout_candidate_superseded_by_v02",
+  "runtime_imported": false,
+  "source_of_truth": "UE5/Records/p4_alpha/design_reference/P4_章节数据_v1.json",
+  "preview": "UE5/Records/p4_alpha/evidence/W3/P4_A3_AlphaCardFaces_v01.html",
+  "preview_sha256": "5e3e89bb1a00ebf3661819ac0659e7f3655ab74bd931b3439b87f5f6ef5baa7c",
+  "approved_icon_manifest": "UE5/SourceAssets/P4/Manifests/P4_A3_AlphaCardIcons_manifest_v02.json",
+  "sample_scope": {
+    "purpose": "Card face hierarchy and choice-state visual sample",
+    "three_cards_are_a_real_offer": false,
+    "interaction_is_live": false,
+    "states_shown": [
+      "default",
+      "selected",
+      "already_owned_unavailable"
+    ]
+  },
+  "art_direction": {
+    "canvas": "Responsive HTML review mockup",
+    "palette": {
+      "paper": "#FFF8E9",
+      "ink": "#49372E",
+      "bullet_line": "#D59A3B",
+      "charge_line": "#78A86C",
+      "laugh_line": "#D98273"
+    },
+    "note": "Line colors are visual category aids; effects and combo rules remain sourced from P4 chapter data."
+  },
+  "cards": [
+    {
+      "card_id": "bounce_ball",
+      "icon": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_bounce_ball_v01.svg",
+      "displayed_combo_rule": "与「一口俩」同持时，只有第一发弹射。"
+    },
+    {
+      "card_id": "rounder_belly",
+      "icon": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_rounder_belly_v02.svg",
+      "displayed_combo_rule": "与「奶凶」同持时，硬直加成取最高值，不叠加。"
+    },
+    {
+      "card_id": "cant_hold",
+      "icon": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_cant_hold_v02.svg",
+      "displayed_trigger_rule": "受击无敌 0.9 秒内不重复触发。"
+    }
+  ]
+}

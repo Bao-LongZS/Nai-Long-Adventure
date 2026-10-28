@@ -1,0 +1,139 @@
+{
+  "status": "saved_pending_w1_acceptance",
+  "map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_W1Preview",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "ownership_tag": "NaiwaP4W1Preview",
+  "sprite_plane_rotations": {
+    "idle_neutral": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 89.99999999999999
+    },
+    "hit_reaction": {
+      "pitch": 0.0,
+      "yaw": 0.0,
+      "roll": 89.99999999999999
+    }
+  },
+  "camera": {
+    "horizontal_fov_degrees": 37.0,
+    "pitch_degrees": 57.0,
+    "distance_uu": 1900.0
+  },
+  "resolution": [
+    1920,
+    1080
+  ],
+  "rulers": {
+    "x_1000uu_expected_px": 1510.7392509361987,
+    "x_ruler_depth_y_uu": 92.5,
+    "x_ruler_view_depth_uu": 1899.1613294320546,
+    "depth_y_185uu_expected_px": 234.45869571792423,
+    "same_depth_left_right_foot_delta_px_expected": 0.0,
+    "arena_x_screen_bounds_expected_px": [
+      129.0934119850907,
+      1790.9065880149092
+    ],
+    "arena_horizontal_screen_margin_expected_px": 129.0934119850907,
+    "logical_arena_uu": [
+      1100.0,
+      185.0
+    ]
+  },
+  "sprite_samples": {
+    "idle_neutral": {
+      "world_height_uu": 180.0,
+      "world_x": 280.0,
+      "depth_y": 125.0,
+      "cell": {
+        "material": "/Game/Naiwa/P4/Materials/W1/M_P4_W1_Sprite_idle_neutral",
+        "atlas_rect": [
+          0,
+          0,
+          509,
+          480
+        ],
+        "visible_rect": [
+          91,
+          0,
+          326,
+          456
+        ],
+        "foot_anchor": [
+          254,
+          456
+        ],
+        "frame_texture": "/Game/Naiwa/P4/Art/W1/T_P4_Player_W1_idle_neutral.T_P4_Player_W1_idle_neutral",
+        "sampling": "isolated transparent cell on the mesh's default UVs",
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "saved_material_readback": "passed"
+      }
+    },
+    "hit_reaction": {
+      "world_height_uu": 180.0,
+      "world_x": 820.0,
+      "depth_y": 125.0,
+      "cell": {
+        "material": "/Game/Naiwa/P4/Materials/W1/M_P4_W1_Sprite_hit_reaction",
+        "atlas_rect": [
+          511,
+          0,
+          509,
+          480
+        ],
+        "visible_rect": [
+          535,
+          14,
+          461,
+          442
+        ],
+        "foot_anchor": [
+          765,
+          456
+        ],
+        "frame_texture": "/Game/Naiwa/P4/Art/W1/T_P4_Player_W1_hit_reaction.T_P4_Player_W1_hit_reaction",
+        "sampling": "isolated transparent cell on the mesh's default UVs",
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "saved_material_readback": "passed"
+      }
+    }
+  },
+  "limitations": [
+    "Two static poses only; this is not animation approval.",
+    "A 1920x1080 Standalone capture exists; exact ruler and foot-anchor pixel checks plus frame-time sampling remain pending.",
+    "The shadow is a soft translucent ellipse approximation; final depth sorting and art readability need visual review."
+  ],
+  "saved_owned_actor_labels": [
+    "P4W1_FixedCamera",
+    "P4W1_Ground",
+    "P4W1_KeyLight",
+    "P4W1_PlayerStart",
+    "P4W1_Player_hit_reaction",
+    "P4W1_Player_idle_neutral",
+    "P4W1_Ruler_X_1000uu",
+    "P4W1_Ruler_Y_185uu",
+    "P4W1_Shadow_hit_reaction",
+    "P4W1_Shadow_idle_neutral",
+    "P4W1_SkyLight",
+    "P4W1_X_End",
+    "P4W1_X_Start",
+    "P4W1_Y_End",
+    "P4W1_Y_Start"
+  ],
+  "sprite_material_readback": "passed",
+  "shadow_material_compile": "passed"
+}

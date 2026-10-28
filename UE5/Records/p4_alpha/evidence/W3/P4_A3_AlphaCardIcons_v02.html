@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P4 α 强化卡图标候选 v02</title>
+<style>
+:root{color-scheme:dark;--ink:#49372e;--paper:#fff8e9;--sand:#e7d4ad;--gold:#efc35a;--green:#78a86c}
+*{box-sizing:border-box}body{margin:0;padding:28px;background:#20242a;color:#f4eee2;font:15px/1.55 "Segoe UI","Microsoft YaHei",sans-serif}
+h1{margin:0 0 8px;font-size:26px}.intro{max-width:900px;color:#c8c2b7}.badge{display:inline-block;padding:5px 10px;border:1px solid #d3a95c;border-radius:999px;color:#ffe1a0;background:#3a3024}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(230px,340px));gap:20px;margin:24px 0}.card{overflow:hidden;border:1px solid #d9c9a6;border-radius:18px;background:var(--paper);color:var(--ink);box-shadow:0 10px 26px #090b0e66}
+.head{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;background:var(--sand);font-size:13px;font-weight:700;letter-spacing:.04em}.line{display:flex;align-items:center;gap:7px}.dot{width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid var(--ink)}
+.status{padding:3px 8px;border-radius:999px;font-size:11px;letter-spacing:0}.status.approved{background:#dce9cd;color:#365b37}.status.revision{background:#f2dfb8;color:#65451d}
+.icon{height:204px;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 110%,#ecdcb9 0,transparent 65%),linear-gradient(#fff9ec,#f4ead5)}.icon img{width:184px;height:184px;object-fit:contain}.body{padding:14px 18px 19px}.body h2{margin:0 0 8px;font-size:20px}.body p{min-height:52px;margin:0;color:#57493e;font-size:14px}.id{margin-top:12px;color:#806c56;font:12px/1.4 Consolas,monospace}
+.scales{display:flex;align-items:center;flex-wrap:wrap;gap:16px;margin-top:26px;padding:16px;border:1px solid #42474e;border-radius:12px;background:#292e35}.scale{display:flex;align-items:center;gap:9px;color:#c8c2b7}.scale img{width:64px;height:64px;padding:4px;border-radius:8px;background:#fff8e9}.scale.small img{width:40px;height:40px}.notes{max-width:900px;color:#bbb4a8;font-size:13px}
+@media(max-width:850px){.cards{grid-template-columns:1fr;max-width:360px}.cards .card{width:100%}}
+</style></head>
+<body>
+<span class="badge">A3 三张图标视觉已通过 · 非 UE 运行时素材</span>
+<h1>P4 α 强化卡图标</h1>
+<p class="intro">按卡牌效果重画两张图标：肚子更圆表现三格充能下的奶蛙大肚冲撞；憋不住表现奶蛙受击后笑出能量。跳弹奶球保持已通过图案。卡名和效果文案与 α 固定卡池一致；缩放条用于检查 40 px 下的独立图形辨识。</p>
+<main class="cards">
+  <article class="card"><header class="head"><span class="line"><i class="dot"></i>子弹强化</span><span class="status approved">图标已通过</span></header><div class="icon"><img src="../../../../SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_bounce_ball_v01.svg" alt="奶球弹向第二个目标"></div><div class="body"><h2>跳弹奶球</h2><p>命中后弹向最近敌人 1 次；第二跳伤害 ×0.40。</p><div class="id">bounce_ball · 保留通过版</div></div></article>
+  <article class="card"><header class="head"><span class="line"><i class="dot"></i>冲撞强化</span><span class="status approved">视觉已通过</span></header><div class="icon"><img src="../../../../SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_rounder_belly_v02.svg" alt="大肚奶蛙撞向靶体，顶部显示三格充能"></div><div class="body"><h2>肚子更圆</h2><p>冲撞充能上限 2→3；撞后硬直 0.24→0.34 秒。</p><div class="id">rounder_belly · 三格充能 / 大肚冲撞</div></div></article>
+  <article class="card"><header class="head"><span class="line"><i class="dot"></i>大笑强化</span><span class="status approved">视觉已通过</span></header><div class="icon"><img src="../../../../SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_cant_hold_v02.svg" alt="奶蛙被击中后闭眼张嘴大笑，笑声带出能量亮点"></div><div class="body"><h2>憋不住</h2><p>每次受击能量 +15；受击无敌 0.9 秒内不重复触发。</p><div class="id">cant_hold · 受击触发大笑与能量</div></div></article>
+</main>
+<div class="scales"><strong>40 px 缩放检查</strong><span class="scale small"><img src="../../../../SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_bounce_ball_v01.svg" alt="跳弹奶球图标 40 像素"><span>跳弹奶球</span></span><span class="scale small"><img src="../../../../SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_rounder_belly_v02.svg" alt="肚子更圆图标 40 像素"><span>肚子更圆</span></span><span class="scale small"><img src="../../../../SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_cant_hold_v02.svg" alt="憋不住图标 40 像素"><span>憋不住</span></span><span class="notes">这里只检查概念图在缩小时的图形辨识；完整卡面、HUD 状态、色盲替代编码和游戏内显示仍待 A3/UE 样片复核。</span></div>
+</body></html>

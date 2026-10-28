@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">憋不住 · 受击笑出能量 · 图标候选 v02</title>
+  <desc id="desc">奶蛙被击中后闭眼张嘴大笑，笑声带出能量亮点。</desc>
+  <defs>
+    <linearGradient id="frog" x1=".15" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#FFE58B"/>
+      <stop offset=".64" stop-color="#F5C34F"/>
+      <stop offset="1" stop-color="#D99235"/>
+    </linearGradient>
+    <linearGradient id="tongue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5988A"/>
+      <stop offset="1" stop-color="#D85F63"/>
+    </linearGradient>
+  </defs>
+  <!-- Laughter carries energy upward -->
+  <path d="M361 229 C400 205 425 178 438 144 M369 268 C417 257 448 236 470 205" fill="none" stroke="#78A86C" stroke-width="17" stroke-linecap="round"/>
+  <circle cx="412" cy="111" r="16" fill="#F6D77C" stroke="#513A2C" stroke-width="8"/>
+  <circle cx="461" cy="164" r="12" fill="#F6D77C" stroke="#513A2C" stroke-width="7"/>
+  <path d="M387 137 L395 118 M440 199 L453 184" fill="none" stroke="#FFF8E7" stroke-width="8" stroke-linecap="round"/>
+  <!-- Soft, rounded frog silhouette -->
+  <path d="M256 83 C226 83 204 101 190 130 C140 137 102 175 91 226 C76 293 108 360 160 395 C188 414 222 427 256 427 C290 427 324 414 352 395 C404 360 436 293 421 226 C410 175 372 137 322 130 C308 101 286 83 256 83Z" fill="url(#frog)" stroke="#513A2C" stroke-width="19" stroke-linejoin="round"/>
+  <!-- A hit sparks against the cheek -->
+  <path d="M98 202 L112 218 L133 210 L126 232 L145 246 L121 250 L116 274 L101 254 L80 263 L87 239 L68 226 L92 221Z" fill="#F08D51" stroke="#513A2C" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M98 222 L108 230 L101 241" fill="none" stroke="#FFF8E7" stroke-width="7" stroke-linecap="round"/>
+  <!-- Laughing, squeezed-shut eyes -->
+  <path d="M164 216 C177 185 207 182 224 211 M288 211 C305 182 335 185 348 216" fill="none" stroke="#513A2C" stroke-width="15" stroke-linecap="round"/>
+  <path d="M156 247 C168 239 179 239 191 247 M321 247 C333 239 344 239 356 247" fill="none" stroke="#D98B72" stroke-width="10" stroke-linecap="round" opacity=".8"/>
+  <!-- Big open laugh -->
+  <path d="M190 251 C207 227 305 227 322 251 C340 302 311 351 256 359 C201 351 172 302 190 251Z" fill="#513A2C"/>
+  <ellipse cx="256" cy="319" rx="38" ry="22" fill="url(#tongue)"/>
+  <path d="M209 261 C230 248 282 248 303 261" fill="none" stroke="#7B322C" stroke-width="8" stroke-linecap="round"/>
+  <!-- Laugh tears and energy sparks -->
+  <path d="M151 263 C137 278 139 293 151 298 C164 294 165 277 151 263Z" fill="#A7D5DC" stroke="#513A2C" stroke-width="6"/>
+  <path d="M360 263 C347 277 348 294 361 298 C374 293 374 277 360 263Z" fill="#A7D5DC" stroke="#513A2C" stroke-width="6"/>
+  <path d="M385 322 L401 328 L415 315 L414 334 L430 343 L411 349 L408 367 L396 352 L378 357 L386 340Z" fill="#F6D77C" stroke="#513A2C" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M77 312 L64 324 M88 338 L74 353" fill="none" stroke="#D9853B" stroke-width="11" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">P4 α 沙丘竞技场环境方向候选 v01</title>
+  <desc id="desc">为黄色奶蛙角色准备的低细节、宽而浅的沙丘练场构图与颜色候选。</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F0E3"/>
+      <stop offset="1" stop-color="#E8DDC7"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#718071"/>
+      <stop offset="1" stop-color="#596A5F"/>
+    </linearGradient>
+    <linearGradient id="frog" x1=".1" y1="0" x2=".9" y2="1">
+      <stop offset="0" stop-color="#FFE488"/>
+      <stop offset="1" stop-color="#EAB447"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="900" rx="28" fill="url(#paper)"/>
+  <text x="62" y="70" fill="#48392E" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">P4 α · 沙丘晒笑场</text>
+  <text x="64" y="110" fill="#786956" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18">环境方向候选 v01 · 仅供固定透视构图与色彩评审，不是运行时贴图</text>
+  <rect x="1130" y="45" width="250" height="42" rx="21" fill="#E8CF9B"/>
+  <text x="1255" y="72" text-anchor="middle" fill="#5A4735" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="16" font-weight="700">1100 × 185 uu · 3/4 固定机位</text>
+
+  <text x="64" y="178" fill="#48392E" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">环境色板</text>
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" fill="#544637">
+    <rect x="64" y="205" width="64" height="54" rx="10" fill="#596A5F" stroke="#44382F" stroke-width="2"/><text x="145" y="228" font-weight="700">场地底色 · #596A5F</text><text x="145" y="250" fill="#806F5A">低饱和灰绿，托出奶黄主角</text>
+    <rect x="64" y="275" width="64" height="54" rx="10" fill="#718071" stroke="#44382F" stroke-width="2"/><text x="145" y="298" font-weight="700">受光地面 · #718071</text><text x="145" y="320" fill="#806F5A">平整、低频，避免地面抢动作</text>
+    <rect x="64" y="345" width="64" height="54" rx="10" fill="#C49A58" stroke="#44382F" stroke-width="2"/><text x="145" y="368" font-weight="700">沙岩边界 · #C49A58</text><text x="145" y="390" fill="#806F5A">少量暖色只放外沿与立面</text>
+    <rect x="64" y="415" width="64" height="54" rx="10" fill="#A96F45" stroke="#44382F" stroke-width="2"/><text x="145" y="438" font-weight="700">岩块/矮柱 · #A96F45</text><text x="145" y="460" fill="#806F5A">圆角低矮，不侵入角色脚底层</text>
+    <rect x="64" y="485" width="64" height="54" rx="10" fill="#44382F" stroke="#44382F" stroke-width="2"/><text x="145" y="508" font-weight="700">轮廓/缝线 · #44382F</text><text x="145" y="530" fill="#806F5A">只用于边界与少量分层</text>
+  </g>
+
+  <text x="64" y="610" fill="#48392E" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">预警双编码候选</text>
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="15" fill="#544637">
+    <circle cx="89" cy="658" r="20" fill="none" stroke="#CE554B" stroke-width="8"/><path d="M82 641 L82 658 L96 651 Z" fill="#CE554B"/><text x="125" y="664">攻击：红色圆环 + 朝内尖角</text>
+    <path d="M69 718 L109 718 L89 683 Z" fill="#E1B13F" stroke="#765B2E" stroke-width="3"/><text x="125" y="713">位移：琥珀三角 + 方向箭头</text>
+    <path d="M89 746 L112 769 L89 792 L66 769 Z" fill="#FFF9E9" stroke="#76664F" stroke-width="4"/><text x="125" y="775">不可挡：白色菱形 + 断边</text>
+  </g>
+
+  <g transform="translate(530 172)">
+    <text x="0" y="0" fill="#48392E" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">可读性构图草图</text>
+    <text x="0" y="28" fill="#786956" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="14">横向主战场 · 纵深只表达前后位置 · 中心保持安静</text>
+    <path d="M76 202 Q450 177 808 202 L854 405 Q458 441 30 405 Z" fill="#44382F" opacity=".18" transform="translate(0 18)"/>
+    <path d="M76 202 Q450 177 808 202 L854 405 Q458 441 30 405 Z" fill="url(#floor)" stroke="#44382F" stroke-width="7"/>
+    <path d="M76 202 Q450 177 808 202 L808 229 Q450 206 82 227 Z" fill="#C49A58" stroke="#44382F" stroke-width="5"/>
+    <path d="M30 380 Q458 412 854 380 L854 405 Q458 441 30 405 Z" fill="#A96F45" stroke="#44382F" stroke-width="5"/>
+    <path d="M135 205 Q458 198 753 207 M103 258 Q458 249 791 258 M78 313 Q458 304 820 310 M55 359 Q458 356 838 352" fill="none" stroke="#A6AD91" stroke-width="3" opacity=".65"/>
+    <path d="M203 212 L171 397 M325 205 L315 405 M450 203 L451 412 M575 204 L592 411 M696 206 L730 400" fill="none" stroke="#A6AD91" stroke-width="2" opacity=".48"/>
+    <g stroke="#44382F" stroke-width="5" stroke-linejoin="round">
+      <path d="M118 216 L166 213 L182 252 L132 254 Z" fill="#A96F45"/>
+      <path d="M131 213 L166 213 L157 194 L139 194 Z" fill="#D4AC6C"/>
+      <path d="M720 215 L762 216 L777 253 L733 253 Z" fill="#A96F45"/>
+      <path d="M732 216 L762 216 L756 197 L740 196 Z" fill="#D4AC6C"/>
+    </g>
+    <ellipse cx="450" cy="317" rx="56" ry="37" fill="url(#frog)" stroke="#44382F" stroke-width="6"/>
+    <ellipse cx="450" cy="323" rx="28" ry="15" fill="#FFF2D6" opacity=".9"/>
+    <text x="450" y="374" text-anchor="middle" fill="#F7F0DE" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="14" font-weight="700">角色对比区</text>
+    <g fill="none" stroke-width="6">
+      <circle cx="255" cy="286" r="25" stroke="#CE554B"/><path d="M244 267 L244 285 L260 277 Z" fill="#CE554B" stroke="none"/>
+      <path d="M665 287 L708 287 L686 250 Z" fill="#E1B13F" stroke="#765B2E" stroke-width="3"/>
+      <path d="M554 274 L574 294 L554 314 L534 294 Z" stroke="#FFF9E9"/>
+    </g>
+    <text x="5" y="485" fill="#786956" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="14">草图强调角色、脚底和预警的层次，场景几何数量保持克制；不表示已冻结模型、材质或障碍摆位。</text>
+  </g>
+  <text x="64" y="855" fill="#7E705D" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13">P4 独占方向稿 · 避免直接复用 P3 夜巡地砖；P2 低多边形材料仅作风格参考 · 颜色/对比需在 UE 固定机位复核</text>
+</svg>

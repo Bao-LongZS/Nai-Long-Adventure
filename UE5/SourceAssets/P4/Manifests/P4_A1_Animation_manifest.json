@@ -1,0 +1,1672 @@
+{
+  "schema": "naiwa.p4.alpha_animation/1",
+  "asset_id": "P4_ALPHA_A1_FROG_ANIMATION",
+  "status": "visual_acceptance_passed_pending_technical_integration",
+  "direction": {
+    "selected": "rounded cute first draft approved by project owner on 2026-10-28",
+    "excluded": "the stronger/muscular alternate draft is excluded and not part of this package"
+  },
+  "rejected_versions": [
+    {
+      "id": "laugh_open_arms_wide",
+      "disposition": "excluded at owner request; rejected source strip and frame exports were removed from the A1 package",
+      "replacement": "laugh_open_belly_hand"
+    }
+  ],
+  "generation": {
+    "tool": "built-in image_gen",
+    "format": "PNG RGBA",
+    "no_pixel_retouch": true,
+    "frames_are_lossless_cells_from_original_three_view_strips": true,
+    "owner_visual_acceptance": "passed by project owner on 2026-10-28 for all 33 frame cells, including the replacement belly-laugh pose; technical validation not included",
+    "acceptance_record": "UE5/Records/p4_alpha/evidence/W2/P4_A1_视觉验收记录.md"
+  },
+  "view_mapping": {
+    "columns": [
+      "front",
+      "back",
+      "side_right"
+    ],
+    "left_side": "horizontal mirror of side_right; no separate pose cell",
+    "diagonal_views": "not included"
+  },
+  "import_recommendation": {
+    "color_space": "sRGB",
+    "alpha": "straight alpha retained",
+    "ue_texture_group": "Character",
+    "ue_mip_generation": "Sharpen0",
+    "ue_compression": "Default",
+    "runtime_alignment": "align each pose by foot_anchor_px; offsets are metadata only and require in-engine calibration"
+  },
+  "qa": {
+    "source_sheet_count": 11,
+    "pose_cell_count": 33,
+    "all_source_sheets_rgba_2172x724": true,
+    "all_cells_724x724": true,
+    "edge_specks": "unretouched generator output may include isolated low-alpha pixels; inspect at 720p/1080p before production import",
+    "foot_anchor": "algorithmic estimate from opaque brown pixels near lowest opaque row; not approved against a rendered UE foot baseline",
+    "ue_import_or_preview": "not run",
+    "owner_visual_review": "passed by project owner on 2026-10-28",
+    "w1_gate": "still open; A1 visual acceptance does not close runtime, performance, or DataTable checks"
+  },
+  "source_sheets": [
+    {
+      "file": "SourceSheets/P4_A1_Idle_source_3view.png",
+      "sha256": "714af9fa991305a9e42f91065737f6acd866e5c68b5255ad616533b59650608f",
+      "size_px": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "cell_size_px": [
+        724,
+        724
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "note": "Original generator output retained unchanged; inspect stray edge pixels at in-game scale."
+    },
+    {
+      "file": "SourceSheets/P4_A1_Move_StepA_source_3view.png",
+      "sha256": "dc82c5dac05d406553af215d6d0302a1be874cf186c0ba808f335fe5cc04a6fb",
+      "size_px": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "cell_size_px": [
+        724,
+        724
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "note": "Original generator output retained unchanged; inspect stray edge pixels at in-game scale."
+    },
+    {
+      "file": "SourceSheets/P4_A1_Move_StepB_source_3view.png",
+      "sha256": "c09556419e9d74c4a40736a554ee83c3d7863fb09f45465565a2c64598f92d27",
+      "size_px": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "cell_size_px": [
+        724,
+        724
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "note": "Original generator output retained unchanged; inspect stray edge pixels at in-game scale."
+    },
+    {
+      "file": "SourceSheets/P4_A1_Attack_Windup_source_3view.png",
+      "sha256": "6ae0050f773db276b6214e9383619e3c0dee95a8e405985ba87b6b378e1cc552",
+      "size_px": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "cell_size_px": [
+        724,
+        724
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "note": "Original generator output retained unchanged; inspect stray edge pixels at in-game scale."
+    },
+    {
+      "file": "SourceSheets/P4_A1_Attack_Contact_source_3view.png",
+      "sha256": "60355a05b50b00cd22b02542592d637fa001f1824f8a69f726656376b9f16e6d",
+      "size_px": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "cell_size_px": [
+        724,
+        724
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "note": "Original generator output retained unchanged; inspect stray edge pixels at in-game scale."
+    },
+    {
+      "file": "SourceSheets/P4_A1_Dash_Launch_source_3view.png",
+      "sha256": "e004970b8f68cf6eaef35536d3cbed2dac636272ff00cbf19c4429930d390fd7",
+      "size_px": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "cell_size_px": [
+        724,
+        724
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "note": "Original generator output retained unchanged; inspect stray edge pixels at in-game scale."
+    },
+    {
+      "file": "SourceSheets/P4_A1_Dash_Stride_source_3view.png",
+      "sha256": "a78a8c315da4871e30721d1ace313c3644f137baec142e9ba2a05c797fe6faf3",
+      "size_px": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "cell_size_px": [
+        724,
+        724
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "note": "Original generator output retained unchanged; inspect stray edge pixels at in-game scale."
+    },
+    {
+      "file": "SourceSheets/P4_A1_Defend_source_3view.png",
+      "sha256": "b8704f58ed7505c6a44d65d5ba144c91cfc37b46f00ddfaf7b92d77cbc1a83db",
+      "size_px": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "cell_size_px": [
+        724,
+        724
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "note": "Original generator output retained unchanged; inspect stray edge pixels at in-game scale."
+    },
+    {
+      "file": "SourceSheets/P4_A1_Hit_source_3view.png",
+      "sha256": "cbdab322cd575180d5e889f9bc61265e82353ffc1e226b2af440147628eba8d3",
+      "size_px": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "cell_size_px": [
+        724,
+        724
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "note": "Original generator output retained unchanged; inspect stray edge pixels at in-game scale."
+    },
+    {
+      "file": "SourceSheets/P4_A1_Laugh_OpenBelly_source_3view.png",
+      "sha256": "e897eeeb08891e8dcea65d8b30f65756492427af2837c72c9d40ef5ba6972d76",
+      "size_px": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "cell_size_px": [
+        724,
+        724
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "note": "Original generator output retained unchanged; inspect stray edge pixels at in-game scale."
+    },
+    {
+      "file": "SourceSheets/P4_A1_Laugh_Recover_source_3view.png",
+      "sha256": "980008891be6cd50dca8ba16c5a8a0253952e71965080c78d9fc0efb53eceaa0",
+      "size_px": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "cell_size_px": [
+        724,
+        724
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "note": "Original generator output retained unchanged; inspect stray edge pixels at in-game scale."
+    }
+  ],
+  "actions": [
+    {
+      "id": "idle",
+      "name_zh": "待机",
+      "poses": [
+        "neutral"
+      ],
+      "frame_ids": [
+        "idle_neutral_front",
+        "idle_neutral_back",
+        "idle_neutral_side_right"
+      ],
+      "source_view_count": 3
+    },
+    {
+      "id": "move",
+      "name_zh": "移动",
+      "poses": [
+        "step_a",
+        "step_b"
+      ],
+      "frame_ids": [
+        "move_step_a_front",
+        "move_step_a_back",
+        "move_step_a_side_right",
+        "move_step_b_front",
+        "move_step_b_back",
+        "move_step_b_side_right"
+      ],
+      "source_view_count": 3
+    },
+    {
+      "id": "attack",
+      "name_zh": "普攻",
+      "poses": [
+        "windup",
+        "contact"
+      ],
+      "frame_ids": [
+        "attack_windup_front",
+        "attack_windup_back",
+        "attack_windup_side_right",
+        "attack_contact_front",
+        "attack_contact_back",
+        "attack_contact_side_right"
+      ],
+      "source_view_count": 3
+    },
+    {
+      "id": "dash",
+      "name_zh": "冲撞",
+      "poses": [
+        "launch",
+        "stride"
+      ],
+      "frame_ids": [
+        "dash_launch_front",
+        "dash_launch_back",
+        "dash_launch_side_right",
+        "dash_stride_front",
+        "dash_stride_back",
+        "dash_stride_side_right"
+      ],
+      "source_view_count": 3
+    },
+    {
+      "id": "defend",
+      "name_zh": "防御",
+      "poses": [
+        "guard"
+      ],
+      "frame_ids": [
+        "defend_guard_front",
+        "defend_guard_back",
+        "defend_guard_side_right"
+      ],
+      "source_view_count": 3
+    },
+    {
+      "id": "hit",
+      "name_zh": "受击",
+      "poses": [
+        "recoil"
+      ],
+      "frame_ids": [
+        "hit_recoil_front",
+        "hit_recoil_back",
+        "hit_recoil_side_right"
+      ],
+      "source_view_count": 3
+    },
+    {
+      "id": "laugh",
+      "name_zh": "大笑",
+      "poses": [
+        "open",
+        "recover"
+      ],
+      "frame_ids": [
+        "laugh_open_front",
+        "laugh_open_back",
+        "laugh_open_side_right",
+        "laugh_recover_front",
+        "laugh_recover_back",
+        "laugh_recover_side_right"
+      ],
+      "source_view_count": 3
+    }
+  ],
+  "frames": [
+    {
+      "id": "idle_neutral_front",
+      "action": "idle",
+      "action_name_zh": "待机",
+      "pose": "neutral",
+      "pose_name_zh": "稳定站姿",
+      "view": "front",
+      "view_name_zh": "正面",
+      "file": "Frames/idle/P4_A1_idle_neutral_front.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Idle_source_3view.png",
+      "source_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        123,
+        65,
+        660,
+        664
+      ],
+      "foot_anchor_px": [
+        390,
+        662
+      ],
+      "sha256": "d71b7e39a55434afbddf3116e6d3c2e40752086f1fc3ecfbfd4f2fa36927a978"
+    },
+    {
+      "id": "idle_neutral_back",
+      "action": "idle",
+      "action_name_zh": "待机",
+      "pose": "neutral",
+      "pose_name_zh": "稳定站姿",
+      "view": "back",
+      "view_name_zh": "背面",
+      "file": "Frames/idle/P4_A1_idle_neutral_back.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Idle_source_3view.png",
+      "source_rect_px": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        94,
+        66,
+        627,
+        662
+      ],
+      "foot_anchor_px": [
+        360,
+        660
+      ],
+      "sha256": "0502e93086043634835637980c90a02ef6bacee4280808c530ffb4c04cb8346e"
+    },
+    {
+      "id": "idle_neutral_side_right",
+      "action": "idle",
+      "action_name_zh": "待机",
+      "pose": "neutral",
+      "pose_name_zh": "稳定站姿",
+      "view": "side_right",
+      "view_name_zh": "右侧面源图",
+      "file": "Frames/idle/P4_A1_idle_neutral_side_right.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Idle_source_3view.png",
+      "source_rect_px": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        142,
+        65,
+        526,
+        668
+      ],
+      "foot_anchor_px": [
+        343,
+        666
+      ],
+      "sha256": "2683833302db6a299382b9a591a9bc642b3b7203606ad4d1113d91ba84d4e282"
+    },
+    {
+      "id": "move_step_a_front",
+      "action": "move",
+      "action_name_zh": "移动",
+      "pose": "step_a",
+      "pose_name_zh": "跨步 A",
+      "view": "front",
+      "view_name_zh": "正面",
+      "file": "Frames/move/P4_A1_move_step_a_front.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Move_StepA_source_3view.png",
+      "source_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        142,
+        64,
+        646,
+        653
+      ],
+      "foot_anchor_px": [
+        399,
+        651
+      ],
+      "sha256": "fb09c98e89aeaea5ef9d7f99e82a249e4b5ef860467f6e634581d10f217669ed"
+    },
+    {
+      "id": "move_step_a_back",
+      "action": "move",
+      "action_name_zh": "移动",
+      "pose": "step_a",
+      "pose_name_zh": "跨步 A",
+      "view": "back",
+      "view_name_zh": "背面",
+      "file": "Frames/move/P4_A1_move_step_a_back.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Move_StepA_source_3view.png",
+      "source_rect_px": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        90,
+        64,
+        618,
+        653
+      ],
+      "foot_anchor_px": [
+        388,
+        651
+      ],
+      "sha256": "79b924023f50c704f15f4315c715144b77f5863b391abf46432113edf584c319"
+    },
+    {
+      "id": "move_step_a_side_right",
+      "action": "move",
+      "action_name_zh": "移动",
+      "pose": "step_a",
+      "pose_name_zh": "跨步 A",
+      "view": "side_right",
+      "view_name_zh": "右侧面源图",
+      "file": "Frames/move/P4_A1_move_step_a_side_right.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Move_StepA_source_3view.png",
+      "source_rect_px": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        155,
+        67,
+        598,
+        657
+      ],
+      "foot_anchor_px": [
+        421,
+        655
+      ],
+      "sha256": "a8d6293211a391984f24d4dfc129bd05341b13d5b6727dc8e6825c44203cb957"
+    },
+    {
+      "id": "move_step_b_front",
+      "action": "move",
+      "action_name_zh": "移动",
+      "pose": "step_b",
+      "pose_name_zh": "跨步 B",
+      "view": "front",
+      "view_name_zh": "正面",
+      "file": "Frames/move/P4_A1_move_step_b_front.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Move_StepB_source_3view.png",
+      "source_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        134,
+        64,
+        655,
+        664
+      ],
+      "foot_anchor_px": [
+        478,
+        662
+      ],
+      "sha256": "988113838edbab9e4a7182c9db9b2911e8f3d2df74bb94ed898e3891f0afb05e"
+    },
+    {
+      "id": "move_step_b_back",
+      "action": "move",
+      "action_name_zh": "移动",
+      "pose": "step_b",
+      "pose_name_zh": "跨步 B",
+      "view": "back",
+      "view_name_zh": "背面",
+      "file": "Frames/move/P4_A1_move_step_b_back.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Move_StepB_source_3view.png",
+      "source_rect_px": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        101,
+        62,
+        619,
+        657
+      ],
+      "foot_anchor_px": [
+        415,
+        655
+      ],
+      "sha256": "ca942878b8c4abdef99838fd99f450d31473dabeea030bfe1dd1e40dc878dd90"
+    },
+    {
+      "id": "move_step_b_side_right",
+      "action": "move",
+      "action_name_zh": "移动",
+      "pose": "step_b",
+      "pose_name_zh": "跨步 B",
+      "view": "side_right",
+      "view_name_zh": "右侧面源图",
+      "file": "Frames/move/P4_A1_move_step_b_side_right.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Move_StepB_source_3view.png",
+      "source_rect_px": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        115,
+        62,
+        565,
+        664
+      ],
+      "foot_anchor_px": [
+        429,
+        662
+      ],
+      "sha256": "174fadd69d565d9f41cd4b9c7a2f6c4045b851d59a70366bf7c47e179c222c23"
+    },
+    {
+      "id": "attack_windup_front",
+      "action": "attack",
+      "action_name_zh": "普攻",
+      "pose": "windup",
+      "pose_name_zh": "起手蓄势",
+      "view": "front",
+      "view_name_zh": "正面",
+      "file": "Frames/attack/P4_A1_attack_windup_front.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Attack_Windup_source_3view.png",
+      "source_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        77,
+        65,
+        721,
+        658
+      ],
+      "foot_anchor_px": [
+        570,
+        656
+      ],
+      "sha256": "be7db62882e1fc5226852fa42f0d99821a55e012af70ab38a5f555d85776f456"
+    },
+    {
+      "id": "attack_windup_back",
+      "action": "attack",
+      "action_name_zh": "普攻",
+      "pose": "windup",
+      "pose_name_zh": "起手蓄势",
+      "view": "back",
+      "view_name_zh": "背面",
+      "file": "Frames/attack/P4_A1_attack_windup_back.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Attack_Windup_source_3view.png",
+      "source_rect_px": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        74,
+        65,
+        661,
+        655
+      ],
+      "foot_anchor_px": [
+        410,
+        653
+      ],
+      "sha256": "151d7865279e59763b21782f196e485a4332afd4dc9b88d621542067b12c8f2e"
+    },
+    {
+      "id": "attack_windup_side_right",
+      "action": "attack",
+      "action_name_zh": "普攻",
+      "pose": "windup",
+      "pose_name_zh": "起手蓄势",
+      "view": "side_right",
+      "view_name_zh": "右侧面源图",
+      "file": "Frames/attack/P4_A1_attack_windup_side_right.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Attack_Windup_source_3view.png",
+      "source_rect_px": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        70,
+        65,
+        678,
+        657
+      ],
+      "foot_anchor_px": [
+        195,
+        655
+      ],
+      "sha256": "985697bf68c9b9ce7825e75ece113cbf2d24992df15f3ab1145000f734fe3280"
+    },
+    {
+      "id": "attack_contact_front",
+      "action": "attack",
+      "action_name_zh": "普攻",
+      "pose": "contact",
+      "pose_name_zh": "出拳接触",
+      "view": "front",
+      "view_name_zh": "正面",
+      "file": "Frames/attack/P4_A1_attack_contact_front.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Attack_Contact_source_3view.png",
+      "source_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        65,
+        63,
+        692,
+        658
+      ],
+      "foot_anchor_px": [
+        408,
+        657
+      ],
+      "sha256": "f9313f26789caeb92e99c4f2cefed7e265aeeb564256c6d5809755cd35a924f8"
+    },
+    {
+      "id": "attack_contact_back",
+      "action": "attack",
+      "action_name_zh": "普攻",
+      "pose": "contact",
+      "pose_name_zh": "出拳接触",
+      "view": "back",
+      "view_name_zh": "背面",
+      "file": "Frames/attack/P4_A1_attack_contact_back.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Attack_Contact_source_3view.png",
+      "source_rect_px": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        76,
+        64,
+        689,
+        654
+      ],
+      "foot_anchor_px": [
+        339,
+        652
+      ],
+      "sha256": "502cd1bf665af4ed211649cb39b353f533b274e1e71c37618e643c2212a61ff1"
+    },
+    {
+      "id": "attack_contact_side_right",
+      "action": "attack",
+      "action_name_zh": "普攻",
+      "pose": "contact",
+      "pose_name_zh": "出拳接触",
+      "view": "side_right",
+      "view_name_zh": "右侧面源图",
+      "file": "Frames/attack/P4_A1_attack_contact_side_right.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Attack_Contact_source_3view.png",
+      "source_rect_px": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        109,
+        66,
+        695,
+        671
+      ],
+      "foot_anchor_px": [
+        219,
+        670
+      ],
+      "sha256": "525c858f18752591bc3e57c19b26e5f1b0f86698aa02842ff58fc1e7fa54973c"
+    },
+    {
+      "id": "dash_launch_front",
+      "action": "dash",
+      "action_name_zh": "冲撞",
+      "pose": "launch",
+      "pose_name_zh": "冲撞起步",
+      "view": "front",
+      "view_name_zh": "正面",
+      "file": "Frames/dash/P4_A1_dash_launch_front.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Dash_Launch_source_3view.png",
+      "source_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        136,
+        89,
+        666,
+        650
+      ],
+      "foot_anchor_px": [
+        492,
+        648
+      ],
+      "sha256": "c4dd38ce18298317aa57f918e2eb4309a3f05a53858e1a79b2d8151670cb0ab6"
+    },
+    {
+      "id": "dash_launch_back",
+      "action": "dash",
+      "action_name_zh": "冲撞",
+      "pose": "launch",
+      "pose_name_zh": "冲撞起步",
+      "view": "back",
+      "view_name_zh": "背面",
+      "file": "Frames/dash/P4_A1_dash_launch_back.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Dash_Launch_source_3view.png",
+      "source_rect_px": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        104,
+        82,
+        641,
+        644
+      ],
+      "foot_anchor_px": [
+        286,
+        642
+      ],
+      "sha256": "9de2f8af8a1d1ec5717d51b0b9d485f5a5611d82a04b2383ccb3e1c692ea3ddd"
+    },
+    {
+      "id": "dash_launch_side_right",
+      "action": "dash",
+      "action_name_zh": "冲撞",
+      "pose": "launch",
+      "pose_name_zh": "冲撞起步",
+      "view": "side_right",
+      "view_name_zh": "右侧面源图",
+      "file": "Frames/dash/P4_A1_dash_launch_side_right.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Dash_Launch_source_3view.png",
+      "source_rect_px": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        110,
+        88,
+        620,
+        639
+      ],
+      "foot_anchor_px": [
+        487,
+        637
+      ],
+      "sha256": "547bc9500f9890a3041e8ed9f90094c1d78c00dc3ff871992fd9f8f7104f2f6d"
+    },
+    {
+      "id": "dash_stride_front",
+      "action": "dash",
+      "action_name_zh": "冲撞",
+      "pose": "stride",
+      "pose_name_zh": "冲撞跨步",
+      "view": "front",
+      "view_name_zh": "正面",
+      "file": "Frames/dash/P4_A1_dash_stride_front.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Dash_Stride_source_3view.png",
+      "source_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        136,
+        60,
+        662,
+        659
+      ],
+      "foot_anchor_px": [
+        449,
+        657
+      ],
+      "sha256": "3c8e4f21c61de685f7c9249bcf6ab602548956303aa1249a6438f7e1783eb354"
+    },
+    {
+      "id": "dash_stride_back",
+      "action": "dash",
+      "action_name_zh": "冲撞",
+      "pose": "stride",
+      "pose_name_zh": "冲撞跨步",
+      "view": "back",
+      "view_name_zh": "背面",
+      "file": "Frames/dash/P4_A1_dash_stride_back.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Dash_Stride_source_3view.png",
+      "source_rect_px": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        85,
+        60,
+        605,
+        651
+      ],
+      "foot_anchor_px": [
+        472,
+        650
+      ],
+      "sha256": "9fffd3242a05d737e325f5efdbfff13e8f50d9346a1adbde4096f5987957c059"
+    },
+    {
+      "id": "dash_stride_side_right",
+      "action": "dash",
+      "action_name_zh": "冲撞",
+      "pose": "stride",
+      "pose_name_zh": "冲撞跨步",
+      "view": "side_right",
+      "view_name_zh": "右侧面源图",
+      "file": "Frames/dash/P4_A1_dash_stride_side_right.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Dash_Stride_source_3view.png",
+      "source_rect_px": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        67,
+        63,
+        581,
+        659
+      ],
+      "foot_anchor_px": [
+        440,
+        657
+      ],
+      "sha256": "87922ce15b5f5f1427adc2f39b129628fcf25e8836d4493f91fc9254321419d4"
+    },
+    {
+      "id": "defend_guard_front",
+      "action": "defend",
+      "action_name_zh": "防御",
+      "pose": "guard",
+      "pose_name_zh": "防御架势",
+      "view": "front",
+      "view_name_zh": "正面",
+      "file": "Frames/defend/P4_A1_defend_guard_front.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Defend_source_3view.png",
+      "source_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        97,
+        64,
+        656,
+        652
+      ],
+      "foot_anchor_px": [
+        446,
+        650
+      ],
+      "sha256": "f590005bd1c2c011e1fe4cada29a628e172673a1e021193352c9652636e6b339"
+    },
+    {
+      "id": "defend_guard_back",
+      "action": "defend",
+      "action_name_zh": "防御",
+      "pose": "guard",
+      "pose_name_zh": "防御架势",
+      "view": "back",
+      "view_name_zh": "背面",
+      "file": "Frames/defend/P4_A1_defend_guard_back.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Defend_source_3view.png",
+      "source_rect_px": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        103,
+        62,
+        631,
+        651
+      ],
+      "foot_anchor_px": [
+        367,
+        650
+      ],
+      "sha256": "72090a3587320d06d7e041ee11a953e764e8467ba51f4a5d488141702e1c1c67"
+    },
+    {
+      "id": "defend_guard_side_right",
+      "action": "defend",
+      "action_name_zh": "防御",
+      "pose": "guard",
+      "pose_name_zh": "防御架势",
+      "view": "side_right",
+      "view_name_zh": "右侧面源图",
+      "file": "Frames/defend/P4_A1_defend_guard_side_right.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Defend_source_3view.png",
+      "source_rect_px": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        119,
+        62,
+        595,
+        664
+      ],
+      "foot_anchor_px": [
+        270,
+        662
+      ],
+      "sha256": "b895261b8edabdfaacbb1742dbab68d972116c104d4563e7c553a2c713c101ae"
+    },
+    {
+      "id": "hit_recoil_front",
+      "action": "hit",
+      "action_name_zh": "受击",
+      "pose": "recoil",
+      "pose_name_zh": "受击后仰",
+      "view": "front",
+      "view_name_zh": "正面",
+      "file": "Frames/hit/P4_A1_hit_recoil_front.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Hit_source_3view.png",
+      "source_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        124,
+        71,
+        616,
+        660
+      ],
+      "foot_anchor_px": [
+        409,
+        658
+      ],
+      "sha256": "8cb52acb57db0e5350a3026b531396819c2b8b999208767c86eeb89191c02fe5"
+    },
+    {
+      "id": "hit_recoil_back",
+      "action": "hit",
+      "action_name_zh": "受击",
+      "pose": "recoil",
+      "pose_name_zh": "受击后仰",
+      "view": "back",
+      "view_name_zh": "背面",
+      "file": "Frames/hit/P4_A1_hit_recoil_back.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Hit_source_3view.png",
+      "source_rect_px": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        146,
+        67,
+        615,
+        658
+      ],
+      "foot_anchor_px": [
+        373,
+        657
+      ],
+      "sha256": "ab592c56a7ed51d03324fd5f028ae4bf360cd5ed276f907dbd00955db312f3af"
+    },
+    {
+      "id": "hit_recoil_side_right",
+      "action": "hit",
+      "action_name_zh": "受击",
+      "pose": "recoil",
+      "pose_name_zh": "受击后仰",
+      "view": "side_right",
+      "view_name_zh": "右侧面源图",
+      "file": "Frames/hit/P4_A1_hit_recoil_side_right.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Hit_source_3view.png",
+      "source_rect_px": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        198,
+        69,
+        588,
+        662
+      ],
+      "foot_anchor_px": [
+        386,
+        661
+      ],
+      "sha256": "5b9bf9b40931211d09854f7500e32e5c5ac88ad40934bcc4c5603331b60c7a1d"
+    },
+    {
+      "id": "laugh_open_front",
+      "action": "laugh",
+      "action_name_zh": "大笑",
+      "pose": "open",
+      "pose_name_zh": "开怀大笑（抱肚）",
+      "view": "front",
+      "view_name_zh": "正面",
+      "file": "Frames/laugh/P4_A1_laugh_open_front.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Laugh_OpenBelly_source_3view.png",
+      "source_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        145,
+        58,
+        621,
+        664
+      ],
+      "foot_anchor_px": [
+        392,
+        662
+      ],
+      "sha256": "8ba47320f8510e93215c9a3969234429f79200884948a27acb3106db6791ced5"
+    },
+    {
+      "id": "laugh_open_back",
+      "action": "laugh",
+      "action_name_zh": "大笑",
+      "pose": "open",
+      "pose_name_zh": "开怀大笑（抱肚）",
+      "view": "back",
+      "view_name_zh": "背面",
+      "file": "Frames/laugh/P4_A1_laugh_open_back.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Laugh_OpenBelly_source_3view.png",
+      "source_rect_px": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        113,
+        57,
+        609,
+        661
+      ],
+      "foot_anchor_px": [
+        362,
+        660
+      ],
+      "sha256": "c5d648b8adcf61df5013df561156b82acec4d838362f85d2c998c97cd65c8b78"
+    },
+    {
+      "id": "laugh_open_side_right",
+      "action": "laugh",
+      "action_name_zh": "大笑",
+      "pose": "open",
+      "pose_name_zh": "开怀大笑（抱肚）",
+      "view": "side_right",
+      "view_name_zh": "右侧面源图",
+      "file": "Frames/laugh/P4_A1_laugh_open_side_right.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Laugh_OpenBelly_source_3view.png",
+      "source_rect_px": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        118,
+        58,
+        580,
+        666
+      ],
+      "foot_anchor_px": [
+        323,
+        664
+      ],
+      "sha256": "8a28a7d2b3dcc62457ae7706d7e1e3bb53feb2eda210257c415552997cba4dce"
+    },
+    {
+      "id": "laugh_recover_front",
+      "action": "laugh",
+      "action_name_zh": "大笑",
+      "pose": "recover",
+      "pose_name_zh": "大笑回收",
+      "view": "front",
+      "view_name_zh": "正面",
+      "file": "Frames/laugh/P4_A1_laugh_recover_front.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Laugh_Recover_source_3view.png",
+      "source_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        159,
+        61,
+        641,
+        661
+      ],
+      "foot_anchor_px": [
+        393,
+        660
+      ],
+      "sha256": "fe39aee6e5f54ea885bb2b06a51a42c2eef57465664a51a9d99d1ff30cc50cb1"
+    },
+    {
+      "id": "laugh_recover_back",
+      "action": "laugh",
+      "action_name_zh": "大笑",
+      "pose": "recover",
+      "pose_name_zh": "大笑回收",
+      "view": "back",
+      "view_name_zh": "背面",
+      "file": "Frames/laugh/P4_A1_laugh_recover_back.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Laugh_Recover_source_3view.png",
+      "source_rect_px": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        111,
+        59,
+        612,
+        659
+      ],
+      "foot_anchor_px": [
+        361,
+        657
+      ],
+      "sha256": "0644d034aa8c1763783eb6e5b2c91d5e1d81d9919ef94b496052d300ea11dccd"
+    },
+    {
+      "id": "laugh_recover_side_right",
+      "action": "laugh",
+      "action_name_zh": "大笑",
+      "pose": "recover",
+      "pose_name_zh": "大笑回收",
+      "view": "side_right",
+      "view_name_zh": "右侧面源图",
+      "file": "Frames/laugh/P4_A1_laugh_recover_side_right.png",
+      "size_px": [
+        724,
+        724
+      ],
+      "source_sheet": "SourceSheets/P4_A1_Laugh_Recover_source_3view.png",
+      "source_rect_px": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "cell_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visible_rect_alpha16_px": [
+        111,
+        60,
+        527,
+        663
+      ],
+      "foot_anchor_px": [
+        306,
+        661
+      ],
+      "sha256": "21f4b04c70bc7393de9398869a7fbd81a965122006ad8c66a5eb11b813963ed0"
+    }
+  ]
+}

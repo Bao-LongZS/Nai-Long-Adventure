@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "material": "/Game/Naiwa/P4/Materials/W1/M_P4_W1_SoftShadow_RadialV6",
+  "backup": "/Game/Naiwa/P4/Materials/W1/M_P4_W1_SoftShadow_RadialV6_BeforeOpacityTune",
+  "old_strength_expected": 0.45,
+  "new_strength": 0.58,
+  "level_opened_or_changed": false,
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/Scripts/p4_tune_w1_soft_shadow.py\", line 97, in <module>\n    main()\n  File \"C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/Scripts/p4_tune_w1_soft_shadow.py\", line 57, in main\n    current_strength = read_strength(material)\n                       ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/Scripts/p4_tune_w1_soft_shadow.py\", line 47, in read_strength\n    return float(find_strength_constant(material).get_editor_property(\"r\"))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/Scripts/p4_tune_w1_soft_shadow.py\", line 34, in find_strength_constant\n    for expression in material.get_editor_property(\"expressions\"):\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nException: Material: Property 'Expressions' for attribute 'expressions' on 'Material' is protected and cannot be read\n"
+}

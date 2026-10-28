@@ -1,0 +1,650 @@
+{
+  "schema": "naiwa.p4.arena.chapters/2",
+  "version": "2.0",
+  "project": "奶龙大冒险 · P4 单屏清版竞技场",
+  "mode": {
+    "id": "P4",
+    "kind": "sub_mode",
+    "independent": true,
+    "note": "独立子模式：独立地图/GameMode/Pawn/存档槽；不与 P1/P2/P3 任何关卡合并，不共享关卡进度与存档",
+    "platform": "PC-Keyboard-Only",
+    "perspective": "3-4 斜视单屏 1280x720 逻辑分辨率",
+    "control": "8 向贴地走位；无主动跳跃；z 轴仅用于击飞/击退",
+    "floor_band_px": [432, 617],
+    "camera": "固定，无滚动"
+  },
+  "ui_entry": {
+    "screen": "WBP_LevelSelect",
+    "structure_change": "none",
+    "structure_frozen": ["WBP_StartScreen", "4 张关卡卡", "关卡前置解锁链", "1-1→2-1 战役路由", "UNaiwaSaveGame"],
+    "region": "页面底部独立「模式条」Mode Strip：横跨屏宽、高 96px，与关卡卡网格间 32px + 1px 分隔线；条内 1 个按钮块，水平居中偏左，右侧留空供后续子模式横向追加",
+    "excluded_from": ["关卡卡编号序列", "前置解锁链", "通关数 x/4 统计", "WBP_LevelCard::SetData 关卡字段"],
+    "reuse": "只复用视觉语言（T_UI_CardRound 九宫格 + 同一套字号/颜色 token），不复用 FLevelEntry 数据模型",
+    "states": {
+      "locked": {
+        "condition": "UNaiwaProgressSubsystem 中不存在 1-1 的通关记录（含全新存档）",
+        "title": "奶蛙擂台（锁）",
+        "subtitle": "先过 1-1，再来挨揍",
+        "visual": "立绘降饱和 + 明度 60%，右上角锁图标",
+        "interaction": "可点，只弹 1 行提示「先过 1-1」，不进图"
+      },
+      "available": {
+        "condition": "1-1 已通关 且 UNaiwaP4SaveGame.bRunCleared == false",
+        "title": "奶蛙擂台",
+        "subtitle": "十关连打，憋不住就笑",
+        "visual": "立绘原色 + 呼吸微光",
+        "interaction": "点击进 P4 第 1 章"
+      },
+      "cleared": {
+        "condition": "UNaiwaP4SaveGame.bRunCleared == true",
+        "title": "奶蛙擂台 · 再来一轮",
+        "subtitle": "最佳 {best_time} · 最高连击 {best_combo}",
+        "visual": "金色描边 + 左上角「已通关」角标",
+        "interaction": "点击进第 1 章开新一轮（局内卡清空，不动历史最佳）"
+      }
+    },
+    "click_flow": {
+      "recommended": "direct_to_chapter_1",
+      "sequence": "直接进第 1 章，不做章选页；章内逐章推进（通关自动进下一章）；死亡回本章入口并保留已抽强化",
+      "reason": "单局 28-36 分钟是一条连续强化曲线（9 次抽取决定终局 DPS 与 Boss 是否超时），章选/跳章会切断曲线并让 DPS 校验失效",
+      "rejected": {
+        "chapter_select_page": "要维护 10 个进度位，且与「抽取次数 = 通关章数」冲突",
+        "unlock_all_chapters": "一次性给完，前 3 章（冲撞/大笑/防御教学）失去意义",
+        "per_wave_checkpoint": "Boss 战失去压力（见设计文档 §11 问题 4）"
+      }
+    },
+    "relationship_one_line": "不共享关卡进度、不共享存档槽、互不影响，只共用奶蛙资产",
+    "save_slot": "UNaiwaP4SaveGame",
+    "cross_mode_reads": [
+      { "api": "UNaiwaProgressSubsystem::IsUnlocked(\"1-1\")", "readonly": true, "purpose": "解锁门判定" }
+    ],
+    "cross_mode_writes": []
+  },
+  "naming": {
+    "family": "奶家体系",
+    "rule": "全部角色名 = 奶 + 单字（P3 已有 奶察/奶杀/奶豪/奶雨/奶蛋 同族，保留不改）；P4 不出现任何外部作品角色名",
+    "canon_rules": ["中文名一律奶X", "id 一律小写拼音（Boss 加 boss_ 前缀）", "卡名用奶家语气，id 用英文功能短语"],
+    "no_literal_policy": "本文件不含任何外部作品角色名，连黑名单本身也不落字样（否则回归 grep 会自判命中）。16 条黑名单见任务单 P4-ARENA-DESIGN-04，回归检查请放独立 blacklist 文件，勿写回本 JSON。",
+    "forbidden_check_result": { "hits_json": 0, "hits_md": 0, "checked_at": "2026-10-27", "verdict": "PASS" },
+    "rename_map_note": "只保留 旧 id → 新名/新 id（工程侧按 id 迁移，中文旧名不落盘）；P3 复用/换皮 5 个角色名与 id 均未变。",
+    "rename_map": [
+      { "kind": "enemy", "old_id": "xiaobing", "new_name": "奶丁", "new_id": "naiding" },
+      { "kind": "enemy", "old_id": "fashi", "new_name": "奶咒", "new_id": "naizhou" },
+      { "kind": "enemy", "old_id": "bomb", "new_name": "奶瓶雷", "new_id": "naiping_lei" },
+      { "kind": "enemy", "old_id": "clown", "new_name": "奶跳", "new_id": "naitiao" },
+      { "kind": "enemy", "old_id": "dunwei", "new_name": "奶盾", "new_id": "naidun" },
+      { "kind": "enemy", "old_id": "yaoling", "new_name": "奶铃", "new_id": "nailing" },
+      { "kind": "enemy", "old_id": "hammer", "new_name": "奶锤", "new_id": "naichui" },
+      { "kind": "enemy", "old_id": "chest", "new_name": "奶箱", "new_id": "naixiang" },
+      { "kind": "enemy", "old_id": "shuli", "new_name": "奶霜", "new_id": "naishuang" },
+      { "kind": "enemy", "old_id": "dog", "new_name": "奶刀", "new_id": "naidao" },
+      { "kind": "enemy", "old_id": "penguin", "new_name": "奶企", "new_id": "naiqi" },
+      { "kind": "enemy", "old_id": "chacha", "new_name": "奶察", "new_id": "chacha" },
+      { "kind": "enemy", "old_id": "shasha", "new_name": "奶杀", "new_id": "shasha" },
+      { "kind": "enemy", "old_id": "haohao", "new_name": "奶豪", "new_id": "haohao" },
+      { "kind": "enemy", "old_id": "yuyu", "new_name": "奶雨", "new_id": "yuyu" },
+      { "kind": "enemy", "old_id": "dandan", "new_name": "奶蛋", "new_id": "dandan" },
+      { "kind": "boss", "old_id": "boss_tie_tong", "new_name": "奶桶队长", "new_id": "boss_nai_tong" },
+      { "kind": "boss", "old_id": "boss_lie_jia", "new_name": "奶甲将军", "new_id": "boss_nai_jia" },
+      { "kind": "boss", "old_id": "boss_jian_mo", "new_name": "奶缄大将军", "new_id": "boss_nai_jian" },
+      { "kind": "boss", "old_id": "boss_bie_xiao", "new_name": "奶魔王", "new_id": "boss_nai_mo" },
+      { "kind": "chapter", "old_id": "ch04", "new_name": "奶桶擂台", "new_id": "ch04" },
+      { "kind": "chapter", "old_id": "ch08", "new_name": "奶缄铜锣厅", "new_id": "ch08" },
+      { "kind": "chapter", "old_id": "ch10", "new_name": "奶魔王殿", "new_id": "ch10" }
+    ],
+    "provenance": "战斗数值基线沿用逆向真值（通用玩法机制）；16 敌 + 4 Boss 的名称、剪影方向、全部台词与 16 张卡为原创。v2.0 已无任何外部角色名。"
+  },
+  "player": {
+    "hp": 120,
+    "move_speed_px_s": 270,
+    "depth_speed_px_s": 165,
+    "invuln_on_hit_s": 0.9,
+    "knockback_px": 22,
+    "basic_attack": { "name": "奶球", "damage": 12, "interval_s": 0.59, "projectile_speed": 760, "auto_aim_range": 690 },
+    "charge": { "name": "肚皮冲撞", "speed_px_s": 1120, "duration_s": 0.24, "recovery_s": 0.24, "damage": 35, "charges": 2, "recharge_s": 2.0, "invuln_s": 0.48, "unlock": "chapter_1_clear", "note": "无敌 0.48s = 冲刺 0.24s + 尾硬直 0.24s（本次显式定义，数值未改）" },
+    "ultimate": { "name": "大笑", "energy_required": 100, "radius": 400, "damage": 65, "heal": 17.6, "invuln_s": 1.2, "clears_enemy_projectiles": true, "unlock": "chapter_3" },
+    "defend": { "damage_reduction": 0.30, "move_speed_multiplier": 0.45, "reduction_cards": [0.42, 0.54] },
+    "energy_gain": { "normal_enemy_multiplier": 0.08, "boss_multiplier": 0.15, "basis": "damage_dealt" }
+  },
+  "scaling": {
+    "normal_enemy_hp": "base_hp * (1.08 + (wave_index - 1) * 0.28 + chapter_index * 0.065) * 1.2",
+    "enemy_damage": "base_damage * (1 + 0.05 * (chapter_index - 1))",
+    "concurrent_cap": "min(12, 4 + floor(wave_index / 3))",
+    "concurrent_cap_note": "上限=同屏存活数，非波次总量；超出部分分批入场",
+    "boss_phase_threshold": [0.40, 0.45],
+    "notes": ["普通怪 HP 公式沿用基线；敌人伤害缩放为本方案新增"]
+  },
+  "enemies": {
+    "naiding":     { "name": "奶丁",   "hp": 36,  "damage": 8,  "telegraph_s": 0.35, "behavior": "chase", "threat": 1, "debut_chapter": 1, "source": "p4_original", "silhouette": "圆身短肢，头顶一撮呆毛" },
+    "naizhou":     { "name": "奶咒",   "hp": 42,  "damage": 10, "telegraph_s": 0.70, "behavior": "ranged_line", "threat": 2, "debut_chapter": 1, "source": "p4_original", "silhouette": "尖帽 + 卷轴" },
+    "naiping_lei": { "name": "奶瓶雷", "hp": 30,  "damage": 26, "telegraph_s": 0.80, "behavior": "suicide_proximity", "threat": 2, "debut_chapter": 1, "source": "p4_original", "silhouette": "奶瓶 + 引信" },
+    "naitiao":     { "name": "奶跳",   "hp": 45,  "damage": 12, "telegraph_s": 0.60, "behavior": "leap_slam", "threat": 2, "debut_chapter": 2, "source": "p4_original", "silhouette": "弹簧腿" },
+    "naidun":      { "name": "奶盾",   "hp": 65,  "damage": 12, "telegraph_s": 0.50, "behavior": "front_shield_75", "threat": 3, "debut_chapter": 2, "source": "p4_original", "silhouette": "半身大盾" },
+    "nailing":     { "name": "奶铃",   "hp": 48,  "damage": 14, "telegraph_s": 1.00, "behavior": "bell_aoe_r130", "threat": 2, "debut_chapter": 3, "source": "p4_original", "silhouette": "项圈铃铛" },
+    "naichui":     { "name": "奶锤",   "hp": 90,  "damage": 22, "telegraph_s": 0.90, "behavior": "slow_heavy_slam", "threat": 3, "debut_chapter": 3, "source": "p4_original", "silhouette": "巨锤拖地" },
+    "naixiang":    { "name": "奶箱",   "hp": 52,  "damage": 12, "telegraph_s": 0.30, "behavior": "disguise_ambush", "threat": 2, "debut_chapter": 1, "source": "p4_original", "silhouette": "奶箱 + 一条缝的眼睛" },
+    "naishuang":   { "name": "奶霜",   "hp": 55,  "damage": 8,  "telegraph_s": 0.80, "behavior": "slow_projectile_40pct_3s", "threat": 2, "debut_chapter": 5, "source": "p4_original", "silhouette": "霜枝权杖" },
+    "naidao":      { "name": "奶刀",   "hp": 108, "damage": 14, "telegraph_s": 0.55, "behavior": "four_stage_split_on_25pct", "threat": 4, "debut_chapter": 7, "source": "p4_original", "silhouette": "背刀 + 四段护甲" },
+    "naiqi":       { "name": "奶企",   "hp": 108, "damage": 16, "telegraph_s": 0.50, "behavior": "enrage_at_25pct_10s", "threat": 4, "debut_chapter": 7, "source": "p4_original", "silhouette": "黑白分色 + 围巾" },
+    "chacha":      { "name": "奶察",   "hp": 44,  "damage": 10, "telegraph_s": 0.75, "behavior": "patrol_then_call_reinforce", "threat": 2, "debut_chapter": 5, "source": "p3_reuse", "silhouette": "望远镜" },
+    "shasha":      { "name": "奶杀",   "hp": 58,  "damage": 12, "telegraph_s": 0.20, "behavior": "fast_rush_self_stun_on_wall", "threat": 4, "debut_chapter": 7, "source": "p3_reuse", "silhouette": "前倾冲刺姿" },
+    "haohao":      { "name": "奶豪",   "hp": 50,  "damage": 12, "telegraph_s": 0.80, "behavior": "lob_projectile", "threat": 3, "debut_chapter": 5, "source": "p3_reuse", "silhouette": "大金链 + 抛掷手" },
+    "yuyu":        { "name": "奶雨",   "hp": 55,  "damage": 8,  "telegraph_s": 0.80, "behavior": "slow_field_plus_50pct", "threat": 2, "debut_chapter": 9, "source": "p3_reskin_of:naishuang", "silhouette": "漏斗帽（换皮识别点）" },
+    "dandan":      { "name": "奶蛋",   "hp": 34,  "damage": 26, "telegraph_s": 3.00, "behavior": "rolling_fuse_bomb", "threat": 2, "debut_chapter": 5, "source": "p3_reskin_of:naiping_lei", "silhouette": "蛋形 + 滚动尾迹" }
+  },
+  "reskin_rule": "只改材质参数 + 音色 + 一处剪影特征（如奶雨加漏斗帽），不改行为/血量/伤害；不做贴片式换皮",
+  "bosses": {
+    "boss_nai_tong": {
+      "name": "奶桶队长", "chapter": 4, "hp": 3168, "phase2_at": 0.45,
+      "attacks": ["charge_wall_stun", "lid_slam_triple", "summon_2_minions", "phase2_spin"],
+      "telegraph_s_min": 0.65, "break_window": "撞墙硬直 1.6s，受到伤害 x1.5",
+      "lines": {
+        "intro": "我这一桶奶，别晃",
+        "phase2": "不装了，我倒给你看",
+        "death": "记得…把奶皮捞走",
+        "event": "桶…桶裂了"
+      },
+      "gag": "每次撞墙掉一个配件：桶箍 → 长勺 → 围裙，最后只剩荷叶边围兜"
+    },
+    "boss_nai_jia": {
+      "name": "奶甲将军", "chapter": 6, "hp": 5280, "phase2_at": 0.42,
+      "attacks": ["triple_slash", "ground_wave_x2", "shield_wall_advance", "phase2_summon_shield_guards"],
+      "telegraph_s_min": 0.65, "break_window": "盾墙推进结束硬直 1.2s，背面 x2",
+      "lines": {
+        "intro": "这身甲，一升奶一滴汗",
+        "phase2": "甲…甲掉了",
+        "death": "记得…分期",
+        "event": "…不是我"
+      },
+      "gag": "二阶段崩飞的胸甲砸死自己身后小兵（40 伤），Boss 僵 0.8s 小声「…不是我」"
+    },
+    "boss_nai_jian": {
+      "name": "奶缄大将军", "chapter": 8, "hp": 7480, "phase2_at": 0.40,
+      "attacks": ["gong_screen_wave", "silence_zone_6s", "grab_dash", "phase2_summon_nailing_shasha"],
+      "telegraph_s_min": 0.65,
+      "hp_lock": { "at": 0.30, "hold_s": 4, "clears_projectiles_on_release": true },
+      "lines": {
+        "intro": "奶缄堂，止笑",
+        "phase2": "…其实我也想笑",
+        "death": "噗…（第一个笑出声）",
+        "event": "安静"
+      },
+      "gag": "喊「安静」时全场连 BGM 静音 1s，只剩字幕「（我憋不住了）」"
+    },
+    "boss_nai_mo": {
+      "name": "奶魔王", "chapter": 10, "hp": 8800, "phase2_at": 0.45,
+      "attacks": ["laugh_barrage_fan8", "teleport_backstab", "summon_3_waves", "root_player_1_5s", "phase2_ban_laugh_12s", "phase2_bullet_wall"],
+      "telegraph_s_min": 0.50,
+      "hp_locks": [{ "at": 0.20, "hold_s": 5 }, { "at": 0.10, "hold_s": 0, "trigger": "final_mash" }],
+      "final_mash": { "duration_s": 7.6, "damage_budget_ratio_of_max_hp": 0.20, "uses_per_run": 1, "fail_effect": "player_hp_set_to_1" },
+      "required_signature_moves": ["root_player", "ban_laugh", "final_mash"],
+      "lines": {
+        "intro": "奶家祖训：不许笑",
+        "phase2": "奶不笑",
+        "death": "…噗（奶喷了）",
+        "root": "别动，让我称称你几斤",
+        "mash_start": "来啊，一起笑",
+        "mash_win": "先笑先赢，奶家规矩",
+        "mash_lose": "…你笑早了"
+      },
+      "gag": "终局 7.6s 连点对拼，双方脸从黄涨到紫，Boss「噗」地漏气变回原形"
+    }
+  },
+  "chapters": [
+    {
+      "chapter": 1, "name": "沙丘晒笑场", "type": "wave",
+      "scene": { "base": "Desert", "tint": "noon_native", "props": [], "light": "top_flat" },
+      "waves": [
+        { "wave": 1, "spawns": { "naiding": 3 } },
+        { "wave": 2, "spawns": { "naiding": 4 } },
+        { "wave": 3, "spawns": { "naiding": 3, "naiping_lei": 2 } },
+        { "wave": 4, "spawns": { "naiding": 3, "naizhou": 1, "naiping_lei": 1 } },
+        { "wave": 5, "spawns": { "naiding": 2, "naixiang": 1 } }
+      ],
+      "boss_id": null, "duration_target_s": 150,
+      "teaching": ["8 向走位", "自动索敌", "按住 F 连发", "与炸弹拉开距离"],
+      "laugh_beat": "奶丁死亡漏气缩成一张「照片」平铺留 8s，玩家踩过自己战利品；音效 哎呦我去",
+      "acceptance": ">=90% 试玩者 3 次内通关；中位 90-150s"
+    },
+    {
+      "chapter": 2, "name": "沙丘补给线", "type": "wave",
+      "scene": { "base": "Desert", "tint": "dusk_orange_purple", "props": ["p2_wood_box_stack"], "light": "low_angle_long_shadow" },
+      "waves": [
+        { "wave": 1, "spawns": { "naiding": 4 } },
+        { "wave": 2, "spawns": { "naizhou": 2, "naiding": 3 } },
+        { "wave": 3, "spawns": { "naiping_lei": 3, "naiding": 3 } },
+        { "wave": 4, "spawns": { "naitiao": 2, "naizhou": 2 } },
+        { "wave": 5, "spawns": { "naiding": 4, "naidun": 1 } },
+        { "wave": 6, "spawns": { "naitiao": 2, "naiping_lei": 2, "naiding": 2 } }
+      ],
+      "boss_id": null, "duration_target_s": 165,
+      "teaching": ["冲撞解锁（章1通关）", "防御 30%", "冲撞击退可处理奶盾"],
+      "laugh_beat": "冲撞把奶盾顶到墙上，贴墙 1.5s 抠不下来；音效 巴哈哈哈哈",
+      "acceptance": ">=80% 玩家第 2 波内用冲撞 3 次以上；奶盾击杀 >=50% 来自背面/冲撞"
+    },
+    {
+      "chapter": 3, "name": "沙暴猪圈", "type": "wave",
+      "scene": { "base": "Desert", "tint": "sandstorm_desaturated", "props": ["p3_stone_brick_recolor_sandbag"], "light": "diffuse_hazy", "particles": "sandstorm" },
+      "waves": [
+        { "wave": 1, "spawns": { "naiding": 5 } },
+        { "wave": 2, "spawns": { "naizhou": 3, "naiding": 2 } },
+        { "wave": 3, "spawns": { "nailing": 2, "naiding": 3 } },
+        { "wave": 4, "spawns": { "naidun": 2, "naizhou": 2 } },
+        { "wave": 5, "spawns": { "naiping_lei": 3, "naitiao": 2, "naiding": 2 } },
+        { "wave": 6, "spawns": { "nailing": 2, "naichui": 1, "naiding": 4 } },
+        { "wave": 7, "spawns": { "naidun": 2, "naizhou": 3, "naiding": 4 } }
+      ],
+      "boss_id": null, "duration_target_s": 195,
+      "teaching": ["大笑解锁：能量满清场+清弹幕", "能量管理"],
+      "laugh_beat": "首次按 E，全场敌人同步后退一步（集体怂）；音效 哟嚯嚯嚯",
+      "acceptance": ">=80% 玩家满能量后 5s 内按 E；本关死亡 <=1 次"
+    },
+    {
+      "chapter": 4, "name": "奶桶擂台", "type": "midboss",
+      "scene": { "base": "Desert", "tint": "dusk_arena", "props": ["p2_tower_spectator_rows", "arena_fence"], "light": "arena_spot" },
+      "waves": [
+        { "wave": 1, "spawns": { "naiding": 4 } },
+        { "wave": 2, "spawns": { "naidun": 2, "naizhou": 1 } },
+        { "wave": 3, "spawns": { "naiping_lei": 2 } }
+      ],
+      "boss_id": "boss_nai_tong", "duration_target_s": 165,
+      "teaching": ["预警圈读条：先躲后打", "撞墙硬直=输出窗口"],
+      "laugh_beat": "每次撞墙掉一个配件（桶箍→长勺→围裙），最后只剩荷叶边围兜；音效 冰冰冰",
+      "acceptance": "平均死亡 <=2 次；>=70% 玩家能说出撞墙后可打"
+    },
+    {
+      "chapter": 5, "name": "沙丘夜市", "type": "wave",
+      "scene": { "base": "Desert", "tint": "night_market_amber", "props": ["p3_vault_door_lantern", "cloth_stall"], "light": "warm_point_lights" },
+      "waves": [
+        { "wave": 1, "spawns": { "naiding": 6 } },
+        { "wave": 2, "spawns": { "dandan": 4, "naiding": 3 } },
+        { "wave": 3, "spawns": { "chacha": 2, "naizhou": 3 } },
+        { "wave": 4, "spawns": { "naitiao": 2, "naiping_lei": 2, "naishuang": 2 } },
+        { "wave": 5, "spawns": { "naidun": 2, "nailing": 2, "naiding": 3 } },
+        { "wave": 6, "spawns": { "naixiang": 3, "haohao": 2, "naiding": 3 } },
+        { "wave": 7, "spawns": { "naichui": 2, "naitiao": 3, "dandan": 3 } },
+        { "wave": 8, "spawns": { "chacha": 2, "naidun": 2, "naiding": 5 } }
+      ],
+      "boss_id": null, "duration_target_s": 210,
+      "teaching": ["多目标优先级：先清远程", "冲撞充能管理"],
+      "laugh_beat": "奶箱伪装成三选一强化箱，撞上去弹出大嘴咬 12 伤；音效 嗯？",
+      "acceptance": "平均死亡 <=2 次；奶箱骗到 >=40% 玩家"
+    },
+    {
+      "chapter": 6, "name": "秋林校场", "type": "midboss",
+      "scene": { "base": "Forest", "tint": "autumn_green_to_red", "props": ["p3_stone_brick_recolor_stump"], "light": "backlit_slant", "particles": "falling_leaves" },
+      "waves": [
+        { "wave": 1, "spawns": { "naizhou": 2, "naitiao": 2 } },
+        { "wave": 2, "spawns": { "naidun": 3 } },
+        { "wave": 3, "spawns": { "nailing": 2, "naichui": 1, "naiding": 2 } }
+      ],
+      "boss_id": "boss_nai_jia", "duration_target_s": 180,
+      "teaching": ["二阶段识别：roar 清弹幕+招式扩容"],
+      "laugh_beat": "二阶段崩飞的胸甲砸死自己身后小兵（40 伤），Boss 僵 0.8s 小声「…不是我」",
+      "acceptance": ">=70% 玩家识别 roar 会清弹幕（roar 期间不乱滚）"
+    },
+    {
+      "chapter": 7, "name": "落叶长街", "type": "wave",
+      "scene": { "base": "Forest", "tint": "late_autumn_night", "props": ["p3_portal_recolor_hanging_lamp"], "light": "firefly_points", "particles": "dense_leaves" },
+      "waves": [
+        { "wave": 1, "spawns": { "naiding": 6 } },
+        { "wave": 2, "spawns": { "naidao": 1, "naizhou": 3 } },
+        { "wave": 3, "spawns": { "shasha": 2, "naiding": 4 } },
+        { "wave": 4, "spawns": { "nailing": 3, "naiping_lei": 3 } },
+        { "wave": 5, "spawns": { "naidun": 3, "naizhou": 3, "naiding": 3 } },
+        { "wave": 6, "spawns": { "naiqi": 1, "naitiao": 3, "dandan": 2 } },
+        { "wave": 7, "spawns": { "naidao": 1, "naidun": 2, "shasha": 2, "naiding": 4 } },
+        { "wave": 8, "spawns": { "naichui": 2, "nailing": 2, "chacha": 2, "naizhou": 3, "naiding": 5 } }
+      ],
+      "boss_id": null, "duration_target_s": 225,
+      "teaching": ["分裂/狂暴失控管理", "大笑应急"],
+      "laugh_beat": "奶刀分裂出的小兵配色接近奶蛙，玩家常误打；假货无米白肚皮（可判读）；音效 干巴爹",
+      "acceptance": "平均死亡 <=3 次；假奶蛙误打率 30%-60%"
+    },
+    {
+      "chapter": 8, "name": "奶缄铜锣厅", "type": "midboss",
+      "scene": { "base": "Forest", "tint": "polar_night", "props": ["p2_tower_base_recolor_gong", "banner_flags"], "light": "cold_top" },
+      "waves": [
+        { "wave": 1, "spawns": { "naiding": 4, "naizhou": 2 } },
+        { "wave": 2, "spawns": { "naidun": 2, "naidao": 1 } },
+        { "wave": 3, "spawns": { "nailing": 2, "shasha": 2, "naichui": 1 } }
+      ],
+      "boss_id": "boss_nai_jian", "duration_target_s": 195,
+      "teaching": ["沉默领域：禁大招期间改用冲撞/普攻"],
+      "laugh_beat": "Boss 喊「安静！」时全场连 BGM 一起静音 1s，只剩字幕「（我憋不住了）」",
+      "acceptance": ">=70% 玩家在禁笑令期间改用冲撞/普攻而非站等"
+    },
+    {
+      "chapter": 9, "name": "雪原坟场", "type": "wave",
+      "scene": { "base": "Snow", "tint": "polar_blue_violet", "props": ["p3_stone_brick_recolor_gravestone"], "light": "cold_moonlight", "particles": "snow" },
+      "waves": [
+        { "wave": 1, "spawns": { "naiding": 6 } },
+        { "wave": 2, "spawns": { "yuyu": 3, "naizhou": 3 } },
+        { "wave": 3, "spawns": { "naidao": 1, "naiding": 5 } },
+        { "wave": 4, "spawns": { "naiqi": 1, "shasha": 3 } },
+        { "wave": 5, "spawns": { "naidun": 3, "nailing": 3, "naiding": 3 } },
+        { "wave": 6, "spawns": { "naixiang": 4, "naizhou": 2 } },
+        { "wave": 7, "spawns": { "naichui": 2, "naitiao": 4, "dandan": 3 } },
+        { "wave": 8, "spawns": { "naidao": 2, "naidun": 3, "yuyu": 2, "naiding": 4 } },
+        { "wave": 9, "spawns": { "naiqi": 2, "shasha": 3, "chacha": 2, "naichui": 2, "naiding": 5 } }
+      ],
+      "boss_id": null, "duration_target_s": 240,
+      "teaching": ["全敌池混编", "双精英同场", "资源极限"],
+      "laugh_beat": "两只奶企同时狂暴互相撞飞；狂暴配色是故意贴错的紫红",
+      "acceptance": "平均死亡 <=3 次；通关率 >=50%"
+    },
+    {
+      "chapter": 10, "name": "奶魔王殿", "type": "finalboss",
+      "scene": { "base": "NightPatrol", "tint": "overlord_purple_red", "props": ["arena_spotlight_cone", "dark_spectator_stands"], "light": "stage_spotlight_only_on_player" },
+      "waves": [
+        { "wave": 1, "spawns": { "naiding": 6 } },
+        { "wave": 2, "spawns": { "shasha": 2, "naizhou": 3 } },
+        { "wave": 3, "spawns": { "naidun": 2, "nailing": 2 } },
+        { "wave": 4, "spawns": { "naidao": 1 } }
+      ],
+      "boss_id": "boss_nai_mo", "duration_target_s": 240,
+      "teaching": ["定身→打完就解", "禁笑令→冲撞撑过", "锁血读秒", "连点对拼"],
+      "laugh_beat": "终局 7.6s 连点对拼：双方脸从黄涨到紫；赢面判定后 Boss「噗」地漏气变回原形「先笑先赢，奶家规矩」",
+      "acceptance": "通关率 40%-60%；对拼失败率 <=30%；平均死亡 <=4 次"
+    }
+  ],
+  "cards": {
+    "rules": {
+      "pick": "每章通关三选一",
+      "no_duplicates": true,
+      "total_picks": 9,
+      "quota": { "bullet": 4, "charge": 3, "laugh": 3, "defense": 3, "cross": 2 },
+      "basic_bullet_upgrades": ["fatter_ball", "quick_nip", "two_balls"],
+      "alpha_cards": { "bounce_ball": "bullet", "rounder_belly": "charge", "cant_hold": "laugh" },
+      "prerequisite": { "thick_skin_2": ["thick_skin"] },
+      "mutually_exclusive": [["laugh_burp", "laugh_tooth"]],
+      "filler_id": "fallback_ball_plus",
+      "filler_note": "保底卡可重复选取，不进已选集合，不参与唯一性判定与配额计数",
+      "bundle_virtual_id": "thick_skin_bundle",
+      "bundle_note": "虚卡，不入池；仅 S3 兜底时以「奶皮厚了 + 更厚」连体卡形式出现（占 1 次抽取，同时获得两张）",
+      "stacking_rules": {
+        "damage_formula": "single_shot = (12 + card_flat + ball_bonus) * volley_factor；volley_factor = two_balls ? 0.75 : 1.0",
+        "interval_formula": "interval = 0.59 * interval_multiplier（quick_nip → 0.80）",
+        "charge_recovery": "recovery = 0.24 + max(卡加值)，rounder_belly 与 fierce_milk 的 +0.10 取最高、不叠加",
+        "bounce_limit": "bounce_ball 与 two_balls 同持时，只有第一发会弹射"
+      },
+      "redline_mitigation": {
+        "thick_skin_2+skin_bounce": "反弹取消（只留 54% 减伤）",
+        "cant_hold+laugh_tooth": "回血 17.6 → 8.8（只做 AOE 不做续航）",
+        "laugh_then_charge+rounder_belly": "回满充能改为 +1 充能",
+        "rounder_belly+fierce_milk": "硬直加成取最高一张，不叠加",
+        "bounce_ball+two_balls": "只有第一发弹射"
+      },
+      "selection_rules": {
+        "seed": "run_seed XOR (chapter_index * 0x9E3779B9)",
+        "shuffle": "fisher_yates",
+        "S1": "C = pool - picked - exclusion_removed - prerequisite_unmet",
+        "S2": "if len(C) >= 3: shuffle(C) and take first 3; first_pick_guarantee: on pick #1, if none of the 3 is in basic_bullet_upgrades, replace slot 3 with the earliest-shuffled basic bullet card in C",
+        "S3": "if len(C) == 2: show C + 1 filler; if filler already picked twice, offer bundle card 'thick_skin_bundle' (thick_skin + thick_skin_2 as one pick)",
+        "S4": "if len(C) <= 1: show C + fillers up to 3 slots (same filler id may appear at most twice)",
+        "S5": "no card may ever become unobtainable; fall back to bundle form",
+        "note": "理论上 C 的最小值 = 15 - 8 - 1(互斥) - 1(前置) = 5，主路径永不触发 S3/S4；S3/S4 是安全网",
+        "settle": "抽取在通关瞬间一次性结算并落盘（run_seed + pick_index + picked_ids），载入存档时不得重算，避免数值表更新后随机结果漂移"
+      }
+    },
+    "pool": [
+      { "id": "bounce_ball", "name": "跳弹奶球", "line": "bullet", "alpha": true, "summary": "命中后弹向最近敌人 1 次，第 2 跳伤害 ×0.40", "values": { "bounce_count": 1, "bounce_damage_ratio": 0.40, "search_px": 690 }, "prerequisite": [], "excludes": [], "redline": "low" },
+      { "id": "fatter_ball", "name": "奶球加料", "line": "bullet", "alpha": false, "summary": "单发伤害 +5（12→17），纯基础子弹强化", "values": { "bullet_damage_flat": 5, "damage_after": 17 }, "prerequisite": [], "excludes": [], "redline": "low" },
+      { "id": "quick_nip", "name": "奶嘴松了", "line": "bullet", "alpha": false, "summary": "发射间隔 ×0.80（0.59→0.472s）", "values": { "interval_multiplier": 0.80, "interval_after_s": 0.472 }, "prerequisite": [], "excludes": [], "redline": "low" },
+      { "id": "two_balls", "name": "一口俩", "line": "bullet", "alpha": false, "summary": "每次 2 发，每发 ×0.75，扇散 10°，远距只中 1 发", "values": { "projectile_count": 2, "per_projectile_multiplier": 0.75, "spread_deg": 10, "far_target_hits": 1 }, "prerequisite": [], "excludes": [], "redline": "medium" },
+      { "id": "rounder_belly", "name": "肚子更圆", "line": "charge", "alpha": true, "summary": "冲撞充能上限 2→3；撞后硬直 0.24→0.34s", "values": { "charges": 3, "recovery_after_s": 0.34 }, "prerequisite": [], "excludes": [], "redline": "medium" },
+      { "id": "belly_bounce", "name": "奶膘回弹", "line": "charge", "alpha": false, "summary": "冲撞结束对落点 r170 造成 30 伤（无击退、不回能）", "values": { "radius_px": 170, "damage": 30, "knockback": false, "energy_gain": false }, "prerequisite": [], "excludes": [], "redline": "medium" },
+      { "id": "fierce_milk", "name": "奶凶", "line": "charge", "alpha": false, "summary": "冲撞伤害 35→52；撞后硬直 0.24→0.34s", "values": { "charge_damage": 52, "recovery_after_s": 0.34 }, "prerequisite": [], "excludes": [], "redline": "medium" },
+      { "id": "cant_hold", "name": "憋不住", "line": "laugh", "alpha": true, "summary": "每次受击能量 +15（受击无敌 0.9s 内不重复触发）", "values": { "energy_per_hit": 15, "gate_s": 0.9 }, "prerequisite": [], "excludes": [], "redline": "medium" },
+      { "id": "laugh_burp", "name": "笑到打嗝", "line": "laugh", "alpha": false, "summary": "大笑半径 400→560；伤害 65→92", "values": { "radius": 560, "damage": 92 }, "prerequisite": [], "excludes": ["laugh_tooth"], "redline": "high" },
+      { "id": "laugh_tooth", "name": "笑掉大牙", "line": "laugh", "alpha": false, "summary": "大笑每命中 1 敌返还 3 能量，单次上限 +30（净耗 ≥70）", "values": { "energy_per_target": 3, "cap": 30 }, "prerequisite": [], "excludes": ["laugh_burp"], "redline": "medium" },
+      { "id": "thick_skin", "name": "奶皮厚了", "line": "defense", "alpha": false, "summary": "减伤 30%→42%", "values": { "damage_reduction": 0.42 }, "prerequisite": [], "excludes": [], "redline": "low" },
+      { "id": "thick_skin_2", "name": "奶皮更厚", "line": "defense", "alpha": false, "summary": "减伤 42%→54%（前置：奶皮厚了）", "values": { "damage_reduction": 0.54 }, "prerequisite": ["thick_skin"], "excludes": [], "redline": "high" },
+      { "id": "skin_bounce", "name": "奶皮弹弹", "line": "defense", "alpha": false, "summary": "防御中受近战伤害反弹 6 伤，0.30s 最多 1 次；远程不反弹", "values": { "reflect_damage": 6, "melee_only": true, "cooldown_s": 0.30 }, "prerequisite": [], "excludes": [], "redline": "medium" },
+      { "id": "laugh_then_charge", "name": "笑完就撞", "line": "cross", "alpha": false, "summary": "大笑结束立刻回满冲撞充能；每 15s 最多 1 次", "values": { "refill_to_max": true, "cooldown_s": 15 }, "prerequisite": [], "excludes": [], "redline": "medium" },
+      { "id": "not_naiwa_bait", "name": "我不是奶蛙", "line": "cross", "alpha": false, "summary": "每波生成 1 只 8s 假奶蛙（无米白肚皮）吸引近战仇恨，被打中「噗」一声消失", "values": { "count_per_wave": 1, "lifetime_s": 8, "has_cream_belly": false }, "prerequisite": [], "excludes": [], "redline": "low" },
+      { "id": "fallback_ball_plus", "name": "加一勺", "line": "filler", "alpha": false, "summary": "奶球单发 +2；可重复选取、可叠加、无上限；仅在候选不足 3 张时补位", "values": { "bullet_damage_flat": 2 }, "prerequisite": [], "excludes": [], "redline": "low", "repeatable": true, "not_unique": true, "stack_field": "ball_bonus" }
+    ]
+  },
+  "combat_semantics": {
+    "phase2": {
+      "trigger": "hp <= ceil(max_hp * phase2_at), first downward crossing only",
+      "clamp_hp": false,
+      "invuln": true,
+      "invuln_duration_s": "per-boss roar_s (1.35-1.70)",
+      "overflow_damage": "discard",
+      "on_enter": ["clear_enemy_projectiles", "damage_multiplier_1.25", "expand_moveset"]
+    },
+    "hp_lock": {
+      "trigger": "hp <= ceil(max_hp * at), first downward crossing, and this lock has never fired this run",
+      "clamp_hp": true,
+      "clamped_hp_value": "ceil(max_hp * at)",
+      "invuln_while_locked": true,
+      "overflow_damage": "discard, never carried past release",
+      "lock_duration_s": "hold_s",
+      "on_release": ["clear_enemy_projectiles", "resume_damage", "hud_bar_shake_once"],
+      "countdown_start": "这一笔伤害结算完成、血量被钳制的那一帧（HUD 该帧显示 hold_s，之后逐帧递减），不从动画事件回调起算",
+      "can_advance_to_next_phase_while_locked": false,
+      "release_order": "同一帧内先清敌方弹幕、再恢复可受伤，避免解锁瞬间被弹幕击杀",
+      "multi_threshold_single_hit": "only the topmost (first reached) unfired threshold fires; later thresholds stay unfired; all remaining damage is discarded",
+      "per_lock_once_per_run": true
+    },
+    "final_mash": {
+      "trigger": "hp <= ceil(max_hp * 0.10) for boss_nai_mo",
+      "clamp_hp": true,
+      "invuln_both_sides": true,
+      "duration_s": 7.6,
+      "win": "boss hp set to 0",
+      "lose": "player hp set to 1, boss hp restored to 10% and fight continues",
+      "retriggerable": false
+    },
+    "hud_contract": "boss bar draws fixed ticks at phase2_at / lock_at; locked segment freezes hp and overlays a countdown ring of remaining hold_s"
+  },
+  "frozen_ids": {
+    "policy": "v2.0 因整体改名重新冻结一次（旧 id 不再受理）；此后新增只能追加。改名 = 老存档已选卡清空 / 工厂映射断裂。",
+    "naming_rule": "全小写 ASCII + 下划线；卡=英文功能短语；敌人=拼音；Boss=boss_+拼音；行为=英文动作短语(可带关键数值后缀)；字幕=sub.<触发类>.<定位>。禁止中文/空格/大小写混用/版本后缀。",
+    "datatable_keys": {
+      "cards": "cards.pool[].id",
+      "enemies": "enemies{} 的键名",
+      "behaviors": "frozen_ids.behavior_ids（与 enemies[].behavior 一一对应）",
+      "bosses": "bosses{} 的键名",
+      "subtitles": "subtitles.entries[].id"
+    },
+    "note_duplication": "本块是 id 的唯一清单；不要在别处再抄一份数组，工程侧从这里生成 DataTable 行名",
+    "card_ids": ["bounce_ball", "fatter_ball", "quick_nip", "two_balls", "rounder_belly", "belly_bounce", "fierce_milk", "cant_hold", "laugh_burp", "laugh_tooth", "thick_skin", "thick_skin_2", "skin_bounce", "laugh_then_charge", "not_naiwa_bait", "fallback_ball_plus"],
+    "virtual_card_ids": ["thick_skin_bundle"],
+    "behavior_ids": ["chase", "ranged_line", "suicide_proximity", "disguise_ambush", "leap_slam", "front_shield_75", "bell_aoe_r130", "slow_heavy_slam", "patrol_then_call_reinforce", "lob_projectile", "rolling_fuse_bomb", "four_stage_split_on_25pct", "enrage_at_25pct_10s", "fast_rush_self_stun_on_wall", "slow_field_plus_50pct", "slow_projectile_40pct_3s"],
+    "behavior_note": "rolling_fuse_bomb 与 suicide_proximity、slow_field_plus_50pct 与 slow_projectile_40pct_3s 是参数变体关系，但仍各自保留独立 behavior id（音色/剪影/参数不同），不要合并",
+    "enemy_ids": ["naiding", "naizhou", "naiping_lei", "naitiao", "naidun", "nailing", "naichui", "naixiang", "naishuang", "naidao", "naiqi", "chacha", "shasha", "haohao", "yuyu", "dandan"],
+    "boss_ids": ["boss_nai_tong", "boss_nai_jia", "boss_nai_jian", "boss_nai_mo"],
+    "event_ids": ["first_enemy_killed", "first_charge_hit", "first_energy_full", "first_fake_frog_hit", "first_ban_laugh", "boss_break", "boss_killed_own_minion", "silence_zone_start", "root_player_start"],
+    "event_ids_note": "字幕触发器枚举，冻结；改名会导致 subtitles.entries[].event 找不到触发点",
+    "final_mash_event_ids": ["mash_start", "mash_win", "mash_lose"],
+    "final_mash_event_ids_note": "trigger=final_mash 的条目使用自己的 3 个事件名，与上面 9 个 event 枚举互不重叠"
+  },
+  "subtitles": {
+    "rules": {
+      "source_of_truth": "本数组为唯一真源；设计文档 §13 若与此不符，以本数组为准",
+      "max_on_screen": 1,
+      "override_policy": "新条 priority 高于当前条则立即覆盖，否则丢弃（不排队）",
+      "input_blocking": false,
+      "skippable": false,
+      "fade_out_s": 0.2,
+      "trigger_types": ["chapter_open", "event", "boss_intro", "boss_phase2", "boss_death", "chapter_clear", "final_mash"],
+      "priority_map": { "chapter_open": 1, "chapter_clear": 1, "event": 2, "boss_intro": 3, "boss_phase2": 3, "boss_death": 3, "final_mash": 3 },
+      "audio_fields": {
+        "unit_policy": "所有时间类字段单位统一为 tick（1/60 s）；本 schema 不含任何 _ms 字段",
+        "audio_cue": "必填，音频 cue id；无音效写 null（不要省略字段，DataTable 三列全行对齐）",
+        "volume_db": "必填，dB 增益；无音效写 0",
+        "delay_ticks": "必填，音频相对「字幕出现」的延迟，单位 1/60 s；6 tick = 0.1 s，无音效写 0",
+        "subtitle_delay_ticks": "可选，字幕相对「触发事件」的延迟；仅 sub.boss.b3.silence 使用（60 tick = 1 s）",
+        "mute_all_ticks": "可选，触发瞬间先静音全场（含 BGM）的时长；仅 sub.boss.b3.silence 使用（60 tick）。由音频层统一执行，禁止在 BossBrain 里写 boss_id 特判",
+        "extra_cue": "可选，叠加播的第二条 cue（对拼结束的全场嘲讽）"
+      },
+      "generation": "44 条全部显式存在于 entries，运行时不生成；DataTable 直接 44 行",
+      "event_enum": {
+        "path": "subtitles.rules.event_enum（与 audio_fields 同级）",
+        "usage": "trigger=event 的 9 个事件名，冻结；trigger=final_mash 另有 3 个（见 frozen_ids.final_mash_event_ids），两套不重叠",
+        "fired_once": "first_* 五条为本局一次（跨章节累计，不按章重置，死亡重试也不重播）；其余按事件频次触发",
+        "fired_once_storage": "5 个「已播」标志放在 run state（局内状态）、由 sim 拥有；不写存档、不放 HUD（破坏确定性重放）",
+        "naming_note": "emitted_by 写真实类名（工程侧为纯 C++ 系统、零 UObject），不要写成 UE Component 形式",
+        "table": {
+          "first_enemy_killed": { "when": "玩家击杀本局第一个敌人后 0.2 s", "emitted_by": "FNaiwaP4CombatResolve（敌人 OnDeath 结算后）" },
+          "first_charge_hit": { "when": "本局玩家第一次用冲撞命中敌人", "emitted_by": "FNaiwaP4PlayerSim（冲撞命中判定子状态）" },
+          "first_energy_full": { "when": "能量首次到达 100 的那一帧", "emitted_by": "FNaiwaP4PlayerSim（能量钳制处）" },
+          "first_fake_frog_hit": { "when": "玩家第一次打中「我不是奶蛙」生成的假奶蛙", "emitted_by": "FNaiwaP4UpgradeSystem（生成物受击）" },
+          "first_ban_laugh": { "when": "B4 首次「禁笑令」生效，玩家按 E 被拒的那一刻", "emitted_by": "FNaiwaP4BossBrain（B4）→ 能力禁用回调" },
+          "boss_break": { "when": "Boss 进入破防/硬直窗口首帧（B1 撞墙硬直）", "emitted_by": "FNaiwaP4BossBrain（通用 BreakWindow 状态进入）" },
+          "boss_killed_own_minion": { "when": "Boss 的招式伤害打死自己召唤的小兵（B2 胸甲崩飞）", "emitted_by": "FNaiwaP4CombatResolve（友军伤害分支）" },
+          "silence_zone_start": { "when": "B3 沉默领域生成完成的那一帧", "emitted_by": "FNaiwaP4BossBrain（B3）→ 场地效果子系统" },
+          "root_player_start": { "when": "B4 定身命中玩家、禁移生效的那一帧", "emitted_by": "FNaiwaP4BossBrain（B4）→ 玩家禁移标记" }
+        }
+      }
+    },
+    "entries": [
+      { "id": "sub.open.ch01", "trigger": "chapter_open", "chapter": 1, "text": "第 1 章 · 沙丘晒笑场", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.open.ch02", "trigger": "chapter_open", "chapter": 2, "text": "第 2 章 · 沙丘补给线", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.open.ch03", "trigger": "chapter_open", "chapter": 3, "text": "第 3 章 · 沙暴猪圈", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.open.ch04", "trigger": "chapter_open", "chapter": 4, "text": "第 4 章 · 奶桶擂台", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.open.ch05", "trigger": "chapter_open", "chapter": 5, "text": "第 5 章 · 沙丘夜市", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.open.ch06", "trigger": "chapter_open", "chapter": 6, "text": "第 6 章 · 秋林校场", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.open.ch07", "trigger": "chapter_open", "chapter": 7, "text": "第 7 章 · 落叶长街", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.open.ch08", "trigger": "chapter_open", "chapter": 8, "text": "第 8 章 · 奶缄铜锣厅", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.open.ch09", "trigger": "chapter_open", "chapter": 9, "text": "第 9 章 · 雪原坟场", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.open.ch10", "trigger": "chapter_open", "chapter": 10, "text": "第 10 章 · 奶魔王殿", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+
+      { "id": "sub.gag.first_kill", "trigger": "event", "event": "first_enemy_killed", "chapter": 1, "style": "inner_monologue", "text": "（…它怎么扁了）", "duration_s": 1.6, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.gag.first_charge", "trigger": "event", "event": "first_charge_hit", "chapter": 2, "style": "inner_monologue", "text": "（贴住了）", "duration_s": 1.2, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.gag.first_energy", "trigger": "event", "event": "first_energy_full", "chapter": 3, "style": "inner_monologue", "text": "（憋不住了）", "duration_s": 1.4, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.gag.fake_frog", "trigger": "event", "event": "first_fake_frog_hit", "chapter": 7, "style": "inner_monologue", "text": "（打错了）", "duration_s": 1.2, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.gag.ban_laugh", "trigger": "event", "event": "first_ban_laugh", "chapter": 8, "style": "inner_monologue", "text": "（我憋不住了）", "duration_s": 1.6, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+
+      { "id": "sub.boss.b1.intro", "trigger": "boss_intro", "boss": "boss_nai_tong", "text": "我这一桶奶，别晃", "duration_s": 2.2, "audio_cue": "vo.boss.b1.intro", "volume_db": 0, "delay_ticks": 6 },
+      { "id": "sub.boss.b1.phase2", "trigger": "boss_phase2", "boss": "boss_nai_tong", "text": "不装了，我倒给你看", "duration_s": 1.8, "audio_cue": "vo.boss.b1.roar", "volume_db": 0, "delay_ticks": 6 },
+      { "id": "sub.boss.b1.death", "trigger": "boss_death", "boss": "boss_nai_tong", "text": "记得…把奶皮捞走", "duration_s": 2.4, "audio_cue": "vo.boss.b1.death", "volume_db": 0, "delay_ticks": 6 },
+      { "id": "sub.boss.b1.break", "trigger": "event", "event": "boss_break", "boss": "boss_nai_tong", "text": "桶…桶裂了", "duration_s": 1.4, "audio_cue": "vo.boss.b1.break", "volume_db": 0, "delay_ticks": 6 },
+
+      { "id": "sub.boss.b2.intro", "trigger": "boss_intro", "boss": "boss_nai_jia", "text": "这身甲，一升奶一滴汗", "duration_s": 2.2, "audio_cue": "vo.boss.b2.intro", "volume_db": 0, "delay_ticks": 6 },
+      { "id": "sub.boss.b2.phase2", "trigger": "boss_phase2", "boss": "boss_nai_jia", "text": "甲…甲掉了", "duration_s": 1.8, "audio_cue": "vo.boss.b2.roar", "volume_db": 0, "delay_ticks": 6 },
+      { "id": "sub.boss.b2.death", "trigger": "boss_death", "boss": "boss_nai_jia", "text": "记得…分期", "duration_s": 2.4, "audio_cue": "vo.boss.b2.death", "volume_db": 0, "delay_ticks": 6 },
+      { "id": "sub.boss.b2.friendly_fire", "trigger": "event", "event": "boss_killed_own_minion", "boss": "boss_nai_jia", "text": "…不是我", "duration_s": 1.2, "audio_cue": "vo.boss.b2.small", "volume_db": -8, "delay_ticks": 6 },
+
+      { "id": "sub.boss.b3.intro", "trigger": "boss_intro", "boss": "boss_nai_jian", "text": "奶缄堂，止笑", "duration_s": 2.2, "audio_cue": "vo.boss.b3.intro", "volume_db": 0, "delay_ticks": 6 },
+      { "id": "sub.boss.b3.phase2", "trigger": "boss_phase2", "boss": "boss_nai_jian", "text": "…其实我也想笑", "duration_s": 1.8, "audio_cue": "vo.boss.b3.roar", "volume_db": 0, "delay_ticks": 6 },
+      { "id": "sub.boss.b3.death", "trigger": "boss_death", "boss": "boss_nai_jian", "text": "噗…（第一个笑出声）", "duration_s": 2.4, "audio_cue": "vo.boss.b3.death", "volume_db": 0, "delay_ticks": 6 },
+      { "id": "sub.boss.b3.silence", "trigger": "event", "event": "silence_zone_start", "boss": "boss_nai_jian", "text": "安静", "duration_s": 1.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0, "subtitle_delay_ticks": 60, "mute_all_ticks": 60, "note": "先静音全场 1s（含 BGM），再出字幕，不挂配音" },
+
+      { "id": "sub.boss.b4.intro", "trigger": "boss_intro", "boss": "boss_nai_mo", "text": "奶家祖训：不许笑", "duration_s": 2.2, "audio_cue": "vo.boss.b4.intro", "volume_db": 0, "delay_ticks": 6 },
+      { "id": "sub.boss.b4.phase2", "trigger": "boss_phase2", "boss": "boss_nai_mo", "text": "奶不笑", "duration_s": 1.8, "audio_cue": "vo.boss.b4.ban", "volume_db": 0, "delay_ticks": 6 },
+      { "id": "sub.boss.b4.death", "trigger": "boss_death", "boss": "boss_nai_mo", "text": "…噗（奶喷了）", "duration_s": 2.4, "audio_cue": "vo.boss.b4.death", "volume_db": 0, "delay_ticks": 6 },
+      { "id": "sub.boss.b4.root", "trigger": "event", "event": "root_player_start", "boss": "boss_nai_mo", "text": "别动，让我称称你几斤", "duration_s": 1.4, "audio_cue": "vo.boss.b4.root", "volume_db": 0, "delay_ticks": 6 },
+
+      { "id": "sub.boss.b4.mash_start", "trigger": "final_mash", "event": "mash_start", "boss": "boss_nai_mo", "text": "来啊，一起笑", "duration_s": 2.0, "audio_cue": "vo.boss.b4.mash", "volume_db": 0, "delay_ticks": 6 },
+      { "id": "sub.boss.b4.mash_win", "trigger": "final_mash", "event": "mash_win", "boss": "boss_nai_mo", "text": "先笑先赢，奶家规矩", "duration_s": 2.4, "audio_cue": "vo.boss.b4.win", "volume_db": 0, "delay_ticks": 18, "extra_cue": "sfx.laugh_crowd" },
+      { "id": "sub.boss.b4.mash_lose", "trigger": "final_mash", "event": "mash_lose", "boss": "boss_nai_mo", "text": "…你笑早了", "duration_s": 2.0, "audio_cue": "vo.boss.b4.lose", "volume_db": 0, "delay_ticks": 18, "extra_cue": "sfx.laugh_crowd" },
+
+      { "id": "sub.clear.ch01", "trigger": "chapter_clear", "chapter": 1, "text": "第 1 章 完成", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.clear.ch02", "trigger": "chapter_clear", "chapter": 2, "text": "第 2 章 完成", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.clear.ch03", "trigger": "chapter_clear", "chapter": 3, "text": "第 3 章 完成", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.clear.ch04", "trigger": "chapter_clear", "chapter": 4, "text": "第 4 章 完成", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.clear.ch05", "trigger": "chapter_clear", "chapter": 5, "text": "第 5 章 完成", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.clear.ch06", "trigger": "chapter_clear", "chapter": 6, "text": "第 6 章 完成", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.clear.ch07", "trigger": "chapter_clear", "chapter": 7, "text": "第 7 章 完成", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.clear.ch08", "trigger": "chapter_clear", "chapter": 8, "text": "第 8 章 完成", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.clear.ch09", "trigger": "chapter_clear", "chapter": 9, "text": "第 9 章 完成", "duration_s": 2.0, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 },
+      { "id": "sub.clear.ch10", "trigger": "chapter_clear", "chapter": 10, "text": "通关 · 整轮完成", "duration_s": 2.4, "audio_cue": null, "volume_db": 0, "delay_ticks": 0 }
+    ]
+  },
+  "ui_hud_required": ["hp_bar", "energy_bar", "charge_pips_x2_or_x3", "combo_counter", "chapter_wave_progress", "boss_bar_with_phase_and_hplock", "card_pick_3of1", "result_screen", "auto_aim_indicator", "telegraph_render", "subtitle_layer", "mode_entry_strip_on_level_select"],
+  "keymap": {
+    "move": ["W", "A", "S", "D", "ArrowKeys"],
+    "attack_hold": "F",
+    "charge": "LeftShift",
+    "ultimate": "E",
+    "defend_hold": "Space",
+    "final_mash": "F",
+    "retry_chapter": "R (hold 0.6s)",
+    "pause_menu": "Esc",
+    "unbound_reserved": { "Q": "讲笑话蓄力-未实现", "C": "黄桃罐头-改卡池", "V": "召唤奶蛋-改卡池 not_naiwa_bait", "J": "跳跃-本模式无跳跃" }
+  },
+  "validation": {
+    "rules": [
+      "chapters.length == 10",
+      "chapter ids == 1..10 no gaps",
+      "enemy_total == sum(waves[*].spawns values)",
+      "every spawns key exists in enemies",
+      "every boss_id exists in bosses",
+      "exactly 1 finalboss and it is chapter 10",
+      "midboss chapters == 3",
+      "wave chapters == 6",
+      "sum(duration_target_s) within 1680..2160 (28-36 min)",
+      "card_ids unique and every id listed in frozen_ids.card_ids",
+      "card_ids minus filler == 15 real cards",
+      "card line quota == bullet 4 / charge 3 / laugh 3 / defense 3 / cross 2",
+      "basic_bullet_upgrades.length >= 3 and all are line==bullet with flat damage or interval or projectile count",
+      "alpha_cards == [bounce_ball(bullet), rounder_belly(charge), cant_hold(laugh)] and all present in pool",
+      "selection_rules.S2 contains first_pick_guarantee (pick #1 always offers >=1 basic bullet upgrade)",
+      "every prerequisite id exists and is not self",
+      "every excludes pair is symmetric",
+      "set(enemies[*].behavior) == set(frozen_ids.behavior_ids)",
+      "subtitle ids unique",
+      "every subtitle.chapter exists in chapters",
+      "every subtitle.boss exists in bosses",
+      "subtitles count == 44 (10 open + 10 clear + 9 event + 4 intro + 4 phase2 + 4 death + 3 mash)",
+      "every subtitle has audio_cue / volume_db / delay_ticks three fields (audio_cue may be null)",
+      "subtitles.event_enum.table keys == frozen_ids.event_ids (9)",
+      "every event_enum row has when and emitted_by",
+      "every boss line string appears verbatim in some subtitle text (single source of truth)",
+      "zero hits of the 16-name blacklist (task P4-ARENA-DESIGN-04) across JSON text and design md",
+      "every enemy name starts with 奶 and every boss name starts with 奶"
+    ],
+    "results": {
+      "checked_at": "2026-10-27",
+      "method": "python inline 断言脚本（同目录不留脚本文件，只落结论）",
+      "schema_version": "2.0",
+      "chapters_count": 10,
+      "chapter_ids_contiguous": true,
+      "enemy_totals_per_chapter": { "1": 20, "2": 30, "3": 42, "4": 9, "5": 56, "6": 12, "7": 60, "8": 14, "9": 71, "10": 16 },
+      "enemy_total_all": 330,
+      "wave_total_all": 330,
+      "wave_index_continuity": true,
+      "type_counts": { "wave": 6, "midboss": 3, "finalboss": 1 },
+      "all_spawn_ids_known": true,
+      "all_boss_ids_known": true,
+      "debut_chapter_matches_first_spawn": true,
+      "unused_enemies": [],
+      "enemy_ids_count": 16,
+      "boss_ids_count": 4,
+      "duration_total_s": 1965,
+      "duration_total_min": 32.75,
+      "duration_within_target": true,
+      "card_pool_total": 16,
+      "card_pool_real_cards": 15,
+      "card_pool_filler": 1,
+      "card_ids_unique": true,
+      "card_line_quota": { "bullet": 4, "charge": 3, "laugh": 3, "defense": 3, "cross": 2 },
+      "card_quota_matches": true,
+      "basic_bullet_upgrades_count": 3,
+      "basic_bullet_upgrades": ["fatter_ball", "quick_nip", "two_balls"],
+      "alpha_cards_present": true,
+      "alpha_cards_lines": { "bounce_ball": "bullet", "rounder_belly": "charge", "cant_hold": "laugh" },
+      "prerequisite_valid": true,
+      "excludes_symmetric": true,
+      "behavior_ids_cover_all_enemies": true,
+      "behavior_ids_count": 16,
+      "subtitle_count": 44,
+      "subtitle_with_audio_cue": 18,
+      "subtitle_without_audio_cue": 26,
+      "subtitle_audio_fields_complete": true,
+      "event_enum_rows": 9,
+      "event_enum_matches_frozen_event_ids": true,
+      "subtitle_ids_unique": true,
+      "subtitle_chapter_refs_valid": true,
+      "subtitle_boss_refs_valid": true,
+      "boss_lines_match_subtitles": true,
+      "forbidden_name_hits_json": 0,
+      "forbidden_name_hits_md": 0,
+      "verdict": "ALL_PASS"
+    }
+  }
+}

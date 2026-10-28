@@ -1,0 +1,44 @@
+{
+  "schema": "naiwa.p4.alpha_hud_visual/1",
+  "asset_id": "P4_ALPHA_HUD_TELEGRAPH",
+  "version": "v01",
+  "status": "style_approved_scale_revision_approved_superseded_by_v02",
+  "runtime_imported": false,
+  "source_of_truth": "UE5/Records/p4_alpha/design_reference/P4_章节数据_v1.json",
+  "ui_spec_reference": "UE5/Records/p4_alpha/design_reference/P4_竞技场设计_v1.md",
+  "owner_feedback": {
+    "date": "2026-10-28",
+    "style": "通过",
+    "requested_revision": "缩小 HUD，减少对战斗画面的遮挡。",
+    "revision_result": "v02 占屏比例通过。",
+    "superseded_by": "P4_A3_HUDAndTelegraph_v02.html"
+  },
+  "preview": "UE5/Records/p4_alpha/evidence/W3/P4_A3_HUDAndTelegraph_v01.html",
+  "preview_sha256": "cd24b6c6ec76df83c82be88f54619c84454456ed49fb0e971b3c76dab6fe4b4b",
+  "sample_scope": {
+    "canvas": "Responsive 16:9 HTML review board",
+    "live_game_state": false,
+    "runtime_or_ue_asset": false,
+    "components": [
+      "player_health",
+      "laugh_energy",
+      "charge_pips",
+      "chapter_and_wave",
+      "combo_and_high_score",
+      "boss_health_phase_marker_lock_countdown",
+      "subtitle_slot",
+      "attack_telegraph",
+      "movement_telegraph",
+      "unblockable_telegraph"
+    ]
+  },
+  "references": {
+    "player_frame": "UE5/SourceAssets/P4/Characters/Alpha/A1/Frames/idle/P4_A1_idle_neutral_front.png",
+    "arena_direction": "UE5/SourceAssets/P4/Environment/Alpha/P4_A2_AlphaArena_ArtDirection_v02.svg"
+  },
+  "visual_notes": [
+    "Attack, movement, and unblockable warnings use both distinct color and distinct shape.",
+    "The boss health component is shown separately from the Chapter 1 arena scene; its sample boss is 奶桶队长 from Chapter 4.",
+    "All values and animation states are static visual examples, not bound runtime state."
+  ]
+}

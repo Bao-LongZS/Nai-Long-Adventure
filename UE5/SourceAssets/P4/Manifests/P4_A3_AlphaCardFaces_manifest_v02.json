@@ -1,0 +1,60 @@
+{
+  "previous_version": "UE5/SourceAssets/P4/Manifests/P4_A3_AlphaCardFaces_manifest_v01.json",
+  "runtime_imported": false,
+  "status": "visual_approved_runtime_not_imported",
+  "approved_icon_manifest": "UE5/SourceAssets/P4/Manifests/P4_A3_AlphaCardIcons_manifest_v02.json",
+  "sample_scope": {
+    "three_cards_are_a_real_offer": false,
+    "persistent_selection": false,
+    "keyboard_selection": [
+      "Enter",
+      "Space"
+    ],
+    "states_shown": [
+      "default",
+      "selected",
+      "already_owned_unavailable"
+    ],
+    "interaction_is_live": true,
+    "purpose": "Interactive card face and three-choice flow visual sample",
+    "mouse_selection": true,
+    "confirmation": "Local status text only; no game or save data is written."
+  },
+  "preview": "UE5/Records/p4_alpha/evidence/W3/P4_A3_AlphaCardFaces_v02.html",
+  "runtime_integrated": false,
+  "art_direction": {
+    "canvas": "Responsive HTML review mockup",
+    "note": "Line colors are visual category aids; effects and combo rules remain sourced from P4 chapter data.",
+    "palette": {
+      "laugh_line": "#D98273",
+      "bullet_line": "#D59A3B",
+      "paper": "#FFF8E9",
+      "charge_line": "#78A86C",
+      "ink": "#49372E"
+    }
+  },
+  "cards": [
+    {
+      "displayed_combo_rule": "与「一口俩」同持时，只有第一发弹射。",
+      "icon": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_bounce_ball_v01.svg",
+      "card_id": "bounce_ball"
+    },
+    {
+      "displayed_combo_rule": "与「奶凶」同持时，硬直加成取最高值，不叠加。",
+      "icon": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_rounder_belly_v02.svg",
+      "card_id": "rounder_belly"
+    },
+    {
+      "displayed_trigger_rule": "受击无敌 0.9 秒内不重复触发。",
+      "icon": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_cant_hold_v02.svg",
+      "card_id": "cant_hold"
+    }
+  ],
+  "asset_id": "P4_ALPHA_CARD_FACES",
+  "source_of_truth": "UE5/Records/p4_alpha/design_reference/P4_章节数据_v1.json",
+  "version": "v02",
+  "schema": "naiwa.p4.alpha_card_faces/1",
+  "preview_sha256": "f6ad3580c08aa1a09001e30ae3e2b7ff6dfc30b4fcab053f308fd7f4dfd06fde",
+  "owner_approved_on": "2026-10-28",
+  "owner_approval_evidence": "UE5/Records/p4_alpha/evidence/W3/P4_A3_AlphaCardFaces_v02_approval.md"
+}

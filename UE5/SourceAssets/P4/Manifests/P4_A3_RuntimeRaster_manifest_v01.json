@@ -1,0 +1,88 @@
+{
+  "schema": "naiwa.p4.a3_runtime_raster/1",
+  "version": "v01",
+  "status": "imported_to_p4_content",
+  "output_directory": "UE5/SourceAssets/P4/UI/Alpha/RuntimeReady",
+  "source_svg_preserved": true,
+  "assets": [
+    {
+      "asset_id": "card_icon_bounce_ball",
+      "source_svg": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_bounce_ball_v01.svg",
+      "source_sha256": "0454003f1eb1ff8df48a38f2c3e840af0cd90d2515d873ae3f2efc7e751c62fb",
+      "output_png": "UE5/SourceAssets/P4/UI/Alpha/RuntimeReady/T_P4_A3_CardIcon_bounce_ball.png",
+      "output_sha256": "929f944776e54a685a2fd7991fea3db5eb6bbeb08475706c2f525f4816748b0c",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "alpha": "straight alpha retained",
+      "rasterizer": "sharp 0.35.5 / libvips 8.18.7"
+    },
+    {
+      "asset_id": "card_icon_rounder_belly",
+      "source_svg": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_rounder_belly_v02.svg",
+      "source_sha256": "2d78d5116777c438492c3f31155e93d8920833b561f5f1aac794d58fec16ca05",
+      "output_png": "UE5/SourceAssets/P4/UI/Alpha/RuntimeReady/T_P4_A3_CardIcon_rounder_belly.png",
+      "output_sha256": "30a60e0dc1b335fc839565690f8ae719b6ad9c9610f907acc76df4b4ceab0e96",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "alpha": "straight alpha retained",
+      "rasterizer": "sharp 0.35.5 / libvips 8.18.7"
+    },
+    {
+      "asset_id": "card_icon_cant_hold",
+      "source_svg": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_cant_hold_v02.svg",
+      "source_sha256": "33f1ef99a045bfd19f1d640ccd5d4cba244080d8131d09d2a89f78da78277bab",
+      "output_png": "UE5/SourceAssets/P4/UI/Alpha/RuntimeReady/T_P4_A3_CardIcon_cant_hold.png",
+      "output_sha256": "ea53b54361cd95fa51521d7670e37bc716e526d9b8be710226b1dddec0b7d205",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "alpha": "straight alpha retained",
+      "rasterizer": "sharp 0.35.5 / libvips 8.18.7"
+    },
+    {
+      "asset_id": "category_mark_bullet",
+      "source_svg": "UE5/SourceAssets/P4/UI/Alpha/CategoryMarks/P4_A3_CategoryMark_bullet_v01.svg",
+      "source_sha256": "5124e36a6f42223df93b927778db2dd9d140b36c7b52d40121348867b23d0aeb",
+      "output_png": "UE5/SourceAssets/P4/UI/Alpha/RuntimeReady/T_P4_A3_CategoryMark_bullet.png",
+      "output_sha256": "e3dedfcf0c036a3ffd7e25851c7ce47d03bf53cb5997f1628847e31e3239cd28",
+      "dimensions_px": [
+        256,
+        256
+      ],
+      "alpha": "straight alpha retained",
+      "rasterizer": "sharp 0.35.5 / libvips 8.18.7"
+    },
+    {
+      "asset_id": "category_mark_charge",
+      "source_svg": "UE5/SourceAssets/P4/UI/Alpha/CategoryMarks/P4_A3_CategoryMark_charge_v01.svg",
+      "source_sha256": "58da0c36c339196d39b1ee8f3d974d74f3fe7c2f202860a0993de12c386675c0",
+      "output_png": "UE5/SourceAssets/P4/UI/Alpha/RuntimeReady/T_P4_A3_CategoryMark_charge.png",
+      "output_sha256": "e0a5249d47421542309fc3f93da0a8d9fc03d7f0c04ae292ddd07a38a9aed596",
+      "dimensions_px": [
+        256,
+        256
+      ],
+      "alpha": "straight alpha retained",
+      "rasterizer": "sharp 0.35.5 / libvips 8.18.7"
+    },
+    {
+      "asset_id": "category_mark_laugh",
+      "source_svg": "UE5/SourceAssets/P4/UI/Alpha/CategoryMarks/P4_A3_CategoryMark_laugh_v01.svg",
+      "source_sha256": "0146dc409bec20717eb7ca45a530ba92626e8ef40911b90869a96d64df242822",
+      "output_png": "UE5/SourceAssets/P4/UI/Alpha/RuntimeReady/T_P4_A3_CategoryMark_laugh.png",
+      "output_sha256": "d0bce46c72b01d6823fe8ef160433b2b4167450aea1d4bbb8877e1bcc71701f6",
+      "dimensions_px": [
+        256,
+        256
+      ],
+      "alpha": "straight alpha retained",
+      "rasterizer": "sharp 0.35.5 / libvips 8.18.7"
+    }
+  ],
+  "runtime_asset_root": "/Game/Naiwa/P4/UI/Alpha/RuntimeReady"
+}

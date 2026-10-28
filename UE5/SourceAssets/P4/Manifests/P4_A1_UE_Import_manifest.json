@@ -1,0 +1,1523 @@
+{
+  "schema": "naiwa.p4.alpha_ue_import/1",
+  "status": "owner_approved_for_ue_import",
+  "owner_approval": {
+    "status": "approved",
+    "date": "2026-10-28",
+    "scope": "A1 cleaned frame derivatives and first-pass independent Texture2D import",
+    "evidence": "Project owner approved after reviewing UE5/Records/p4_alpha/evidence/W2/P4_A1_Atlas_TechnicalReview.html"
+  },
+  "import_result": {
+    "status": "imported_pending_visual_calibration",
+    "date": "2026-10-28",
+    "engine": "5.8.3",
+    "imported_count": 33,
+    "reused_count": 0,
+    "report": "UE5/Records/p4_alpha/evidence/A1/P4_A1_clean_frame_import_report.json"
+  },
+  "date": "2026-10-28",
+  "source_visual_acceptance": "passed by project owner on 2026-10-28 for all 33 frame cells, including the replacement belly-laugh pose; technical validation not included",
+  "source_manifest": "UE5/SourceAssets/P4/Manifests/P4_A1_Animation_manifest.json",
+  "source_cells": 33,
+  "cleaned_cells": 33,
+  "action_atlases": 7,
+  "alpha_cleanup_rule": {
+    "connectivity": 8,
+    "alpha_mask": "alpha > 0",
+    "remove_only_when": "component area <= 16 pixels and Euclidean distance from largest component bbox > 24 px",
+    "source_files_modified": false,
+    "total_alpha_pixels_removed_from_derivatives": 2034
+  },
+  "atlas_layout": {
+    "cell_size_px": [
+      724,
+      724
+    ],
+    "outer_padding_px": 8,
+    "gutter_px": 16,
+    "rows": "pose order from source manifest",
+    "columns": [
+      "front",
+      "back",
+      "side_right"
+    ],
+    "mip_bleed_guard": "transparent gutters; still validate UE sampler/UV behavior in engine"
+  },
+  "texture_import": {
+    "color_space": "sRGB",
+    "alpha": "straight alpha retained",
+    "texture_group": "Character",
+    "mip_generation": "Sharpen0",
+    "first_runtime_import_recommendation": "Use cleaned per-frame PNGs as independent Texture2D assets until atlas UV sampling is visually confirmed; the prior W1 atlas material needed this safe path."
+  },
+  "foot_anchor_method": "Bottommost alpha>=128 pixel row within the largest alpha-connected character component; X is weighted center of brown opaque pixels in the lowest 16 rows.",
+  "frames": [
+    {
+      "id": "idle_neutral_front",
+      "action": "idle",
+      "pose": "neutral",
+      "view": "front",
+      "file": "Frames/idle/P4_A1_idle_neutral_front.png",
+      "clean_file": "RuntimeReady/FramesClean/idle/P4_A1_idle_neutral_front.png",
+      "original_sha256": "d71b7e39a55434afbddf3116e6d3c2e40752086f1fc3ecfbfd4f2fa36927a978",
+      "clean_sha256": "0a7a7517b54962b50f478e19e7763d506c4702817c03f526cccbf0f9cab32202",
+      "foot_anchor_px_estimate": [
+        390,
+        662
+      ],
+      "visible_rect_alpha16_px": [
+        123,
+        65,
+        660,
+        664
+      ],
+      "removed_component_count": 17,
+      "removed_alpha_pixels": 32,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_idle_atlas.png",
+      "atlas_cell_rect_px": [
+        0,
+        0,
+        740,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        8,
+        8,
+        732,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 0
+      }
+    },
+    {
+      "id": "idle_neutral_back",
+      "action": "idle",
+      "pose": "neutral",
+      "view": "back",
+      "file": "Frames/idle/P4_A1_idle_neutral_back.png",
+      "clean_file": "RuntimeReady/FramesClean/idle/P4_A1_idle_neutral_back.png",
+      "original_sha256": "0502e93086043634835637980c90a02ef6bacee4280808c530ffb4c04cb8346e",
+      "clean_sha256": "1b703395b08ee3f946dd441d455eaa95b67a2711124a0e0f33f3edea6ab6a221",
+      "foot_anchor_px_estimate": [
+        360,
+        660
+      ],
+      "visible_rect_alpha16_px": [
+        94,
+        66,
+        627,
+        662
+      ],
+      "removed_component_count": 45,
+      "removed_alpha_pixels": 82,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_idle_atlas.png",
+      "atlas_cell_rect_px": [
+        740,
+        0,
+        1480,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        748,
+        8,
+        1472,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 1
+      }
+    },
+    {
+      "id": "idle_neutral_side_right",
+      "action": "idle",
+      "pose": "neutral",
+      "view": "side_right",
+      "file": "Frames/idle/P4_A1_idle_neutral_side_right.png",
+      "clean_file": "RuntimeReady/FramesClean/idle/P4_A1_idle_neutral_side_right.png",
+      "original_sha256": "2683833302db6a299382b9a591a9bc642b3b7203606ad4d1113d91ba84d4e282",
+      "clean_sha256": "c1790aa0b9eedc8337862a43d4e84a126b1c78eab6c96f3bd0b850f53f62341b",
+      "foot_anchor_px_estimate": [
+        343,
+        666
+      ],
+      "visible_rect_alpha16_px": [
+        142,
+        65,
+        526,
+        668
+      ],
+      "removed_component_count": 20,
+      "removed_alpha_pixels": 40,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_idle_atlas.png",
+      "atlas_cell_rect_px": [
+        1480,
+        0,
+        2220,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        1488,
+        8,
+        2212,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 2
+      }
+    },
+    {
+      "id": "move_step_a_front",
+      "action": "move",
+      "pose": "step_a",
+      "view": "front",
+      "file": "Frames/move/P4_A1_move_step_a_front.png",
+      "clean_file": "RuntimeReady/FramesClean/move/P4_A1_move_step_a_front.png",
+      "original_sha256": "fb09c98e89aeaea5ef9d7f99e82a249e4b5ef860467f6e634581d10f217669ed",
+      "clean_sha256": "8a4075869948072cb5dc6dbeef6922331dcda1190fc89b3bdcd780b8d92ef62f",
+      "foot_anchor_px_estimate": [
+        399,
+        651
+      ],
+      "visible_rect_alpha16_px": [
+        142,
+        64,
+        646,
+        653
+      ],
+      "removed_component_count": 9,
+      "removed_alpha_pixels": 20,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_move_atlas.png",
+      "atlas_cell_rect_px": [
+        0,
+        0,
+        740,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        8,
+        8,
+        732,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 0
+      }
+    },
+    {
+      "id": "move_step_a_back",
+      "action": "move",
+      "pose": "step_a",
+      "view": "back",
+      "file": "Frames/move/P4_A1_move_step_a_back.png",
+      "clean_file": "RuntimeReady/FramesClean/move/P4_A1_move_step_a_back.png",
+      "original_sha256": "79b924023f50c704f15f4315c715144b77f5863b391abf46432113edf584c319",
+      "clean_sha256": "2ffe5573515869325ce6dfad6461fee04c8588c40426f073635baa7347fa74de",
+      "foot_anchor_px_estimate": [
+        388,
+        651
+      ],
+      "visible_rect_alpha16_px": [
+        90,
+        64,
+        618,
+        653
+      ],
+      "removed_component_count": 12,
+      "removed_alpha_pixels": 36,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_move_atlas.png",
+      "atlas_cell_rect_px": [
+        740,
+        0,
+        1480,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        748,
+        8,
+        1472,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 1
+      }
+    },
+    {
+      "id": "move_step_a_side_right",
+      "action": "move",
+      "pose": "step_a",
+      "view": "side_right",
+      "file": "Frames/move/P4_A1_move_step_a_side_right.png",
+      "clean_file": "RuntimeReady/FramesClean/move/P4_A1_move_step_a_side_right.png",
+      "original_sha256": "a8d6293211a391984f24d4dfc129bd05341b13d5b6727dc8e6825c44203cb957",
+      "clean_sha256": "61f66675a14c57bd40511671fe841eae2d7502848da10a769c32a472dac9e98b",
+      "foot_anchor_px_estimate": [
+        421,
+        655
+      ],
+      "visible_rect_alpha16_px": [
+        155,
+        67,
+        598,
+        657
+      ],
+      "removed_component_count": 13,
+      "removed_alpha_pixels": 15,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_move_atlas.png",
+      "atlas_cell_rect_px": [
+        1480,
+        0,
+        2220,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        1488,
+        8,
+        2212,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 2
+      }
+    },
+    {
+      "id": "move_step_b_front",
+      "action": "move",
+      "pose": "step_b",
+      "view": "front",
+      "file": "Frames/move/P4_A1_move_step_b_front.png",
+      "clean_file": "RuntimeReady/FramesClean/move/P4_A1_move_step_b_front.png",
+      "original_sha256": "988113838edbab9e4a7182c9db9b2911e8f3d2df74bb94ed898e3891f0afb05e",
+      "clean_sha256": "6da9c30fdf71547256a4bc167a27946ff7cffe40b34fcbbd5e7f3f75bc0eb45e",
+      "foot_anchor_px_estimate": [
+        478,
+        662
+      ],
+      "visible_rect_alpha16_px": [
+        134,
+        64,
+        655,
+        664
+      ],
+      "removed_component_count": 13,
+      "removed_alpha_pixels": 31,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_move_atlas.png",
+      "atlas_cell_rect_px": [
+        0,
+        740,
+        740,
+        1480
+      ],
+      "atlas_sprite_rect_px": [
+        8,
+        748,
+        732,
+        1472
+      ],
+      "atlas_grid": {
+        "row": 1,
+        "column": 0
+      }
+    },
+    {
+      "id": "move_step_b_back",
+      "action": "move",
+      "pose": "step_b",
+      "view": "back",
+      "file": "Frames/move/P4_A1_move_step_b_back.png",
+      "clean_file": "RuntimeReady/FramesClean/move/P4_A1_move_step_b_back.png",
+      "original_sha256": "ca942878b8c4abdef99838fd99f450d31473dabeea030bfe1dd1e40dc878dd90",
+      "clean_sha256": "ff100ca91b766db5ae63d0df76b6f527f81cd77b81be0395694dac0ba4b986e3",
+      "foot_anchor_px_estimate": [
+        415,
+        655
+      ],
+      "visible_rect_alpha16_px": [
+        101,
+        62,
+        619,
+        657
+      ],
+      "removed_component_count": 73,
+      "removed_alpha_pixels": 144,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_move_atlas.png",
+      "atlas_cell_rect_px": [
+        740,
+        740,
+        1480,
+        1480
+      ],
+      "atlas_sprite_rect_px": [
+        748,
+        748,
+        1472,
+        1472
+      ],
+      "atlas_grid": {
+        "row": 1,
+        "column": 1
+      }
+    },
+    {
+      "id": "move_step_b_side_right",
+      "action": "move",
+      "pose": "step_b",
+      "view": "side_right",
+      "file": "Frames/move/P4_A1_move_step_b_side_right.png",
+      "clean_file": "RuntimeReady/FramesClean/move/P4_A1_move_step_b_side_right.png",
+      "original_sha256": "174fadd69d565d9f41cd4b9c7a2f6c4045b851d59a70366bf7c47e179c222c23",
+      "clean_sha256": "c9f8f544982166afc76483c8c28d7292365798c5c7ebf322b64a6494502237d3",
+      "foot_anchor_px_estimate": [
+        429,
+        662
+      ],
+      "visible_rect_alpha16_px": [
+        115,
+        62,
+        565,
+        664
+      ],
+      "removed_component_count": 23,
+      "removed_alpha_pixels": 40,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_move_atlas.png",
+      "atlas_cell_rect_px": [
+        1480,
+        740,
+        2220,
+        1480
+      ],
+      "atlas_sprite_rect_px": [
+        1488,
+        748,
+        2212,
+        1472
+      ],
+      "atlas_grid": {
+        "row": 1,
+        "column": 2
+      }
+    },
+    {
+      "id": "attack_windup_front",
+      "action": "attack",
+      "pose": "windup",
+      "view": "front",
+      "file": "Frames/attack/P4_A1_attack_windup_front.png",
+      "clean_file": "RuntimeReady/FramesClean/attack/P4_A1_attack_windup_front.png",
+      "original_sha256": "be7db62882e1fc5226852fa42f0d99821a55e012af70ab38a5f555d85776f456",
+      "clean_sha256": "ae08dfd9d43103135af8842b6d674f3c14863fd63bb2aca5691cbbda1a5c278b",
+      "foot_anchor_px_estimate": [
+        570,
+        656
+      ],
+      "visible_rect_alpha16_px": [
+        77,
+        65,
+        721,
+        658
+      ],
+      "removed_component_count": 24,
+      "removed_alpha_pixels": 41,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_attack_atlas.png",
+      "atlas_cell_rect_px": [
+        0,
+        0,
+        740,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        8,
+        8,
+        732,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 0
+      }
+    },
+    {
+      "id": "attack_windup_back",
+      "action": "attack",
+      "pose": "windup",
+      "view": "back",
+      "file": "Frames/attack/P4_A1_attack_windup_back.png",
+      "clean_file": "RuntimeReady/FramesClean/attack/P4_A1_attack_windup_back.png",
+      "original_sha256": "151d7865279e59763b21782f196e485a4332afd4dc9b88d621542067b12c8f2e",
+      "clean_sha256": "e859c803f52653b89c116ec88b140746e3a7fd921dea585fc33e4c1b95b4cbbe",
+      "foot_anchor_px_estimate": [
+        410,
+        653
+      ],
+      "visible_rect_alpha16_px": [
+        74,
+        65,
+        661,
+        655
+      ],
+      "removed_component_count": 54,
+      "removed_alpha_pixels": 79,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_attack_atlas.png",
+      "atlas_cell_rect_px": [
+        740,
+        0,
+        1480,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        748,
+        8,
+        1472,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 1
+      }
+    },
+    {
+      "id": "attack_windup_side_right",
+      "action": "attack",
+      "pose": "windup",
+      "view": "side_right",
+      "file": "Frames/attack/P4_A1_attack_windup_side_right.png",
+      "clean_file": "RuntimeReady/FramesClean/attack/P4_A1_attack_windup_side_right.png",
+      "original_sha256": "985697bf68c9b9ce7825e75ece113cbf2d24992df15f3ab1145000f734fe3280",
+      "clean_sha256": "432c5a285383eb4845d1aae51ba9898ace45bb116db40158e3b23f158da4d00d",
+      "foot_anchor_px_estimate": [
+        195,
+        655
+      ],
+      "visible_rect_alpha16_px": [
+        70,
+        65,
+        678,
+        657
+      ],
+      "removed_component_count": 15,
+      "removed_alpha_pixels": 35,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_attack_atlas.png",
+      "atlas_cell_rect_px": [
+        1480,
+        0,
+        2220,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        1488,
+        8,
+        2212,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 2
+      }
+    },
+    {
+      "id": "attack_contact_front",
+      "action": "attack",
+      "pose": "contact",
+      "view": "front",
+      "file": "Frames/attack/P4_A1_attack_contact_front.png",
+      "clean_file": "RuntimeReady/FramesClean/attack/P4_A1_attack_contact_front.png",
+      "original_sha256": "f9313f26789caeb92e99c4f2cefed7e265aeeb564256c6d5809755cd35a924f8",
+      "clean_sha256": "f5a0355f4050f126bf7a8bee326a1ff8af4da0824f255f8f675941f1f5013d9f",
+      "foot_anchor_px_estimate": [
+        408,
+        657
+      ],
+      "visible_rect_alpha16_px": [
+        65,
+        63,
+        692,
+        658
+      ],
+      "removed_component_count": 4,
+      "removed_alpha_pixels": 4,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_attack_atlas.png",
+      "atlas_cell_rect_px": [
+        0,
+        740,
+        740,
+        1480
+      ],
+      "atlas_sprite_rect_px": [
+        8,
+        748,
+        732,
+        1472
+      ],
+      "atlas_grid": {
+        "row": 1,
+        "column": 0
+      }
+    },
+    {
+      "id": "attack_contact_back",
+      "action": "attack",
+      "pose": "contact",
+      "view": "back",
+      "file": "Frames/attack/P4_A1_attack_contact_back.png",
+      "clean_file": "RuntimeReady/FramesClean/attack/P4_A1_attack_contact_back.png",
+      "original_sha256": "502cd1bf665af4ed211649cb39b353f533b274e1e71c37618e643c2212a61ff1",
+      "clean_sha256": "b692b15956dd0b7eba3f43bba8ecb342a2370124daed5c609b43f592de0f4ada",
+      "foot_anchor_px_estimate": [
+        339,
+        652
+      ],
+      "visible_rect_alpha16_px": [
+        76,
+        64,
+        689,
+        654
+      ],
+      "removed_component_count": 3,
+      "removed_alpha_pixels": 3,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_attack_atlas.png",
+      "atlas_cell_rect_px": [
+        740,
+        740,
+        1480,
+        1480
+      ],
+      "atlas_sprite_rect_px": [
+        748,
+        748,
+        1472,
+        1472
+      ],
+      "atlas_grid": {
+        "row": 1,
+        "column": 1
+      }
+    },
+    {
+      "id": "attack_contact_side_right",
+      "action": "attack",
+      "pose": "contact",
+      "view": "side_right",
+      "file": "Frames/attack/P4_A1_attack_contact_side_right.png",
+      "clean_file": "RuntimeReady/FramesClean/attack/P4_A1_attack_contact_side_right.png",
+      "original_sha256": "525c858f18752591bc3e57c19b26e5f1b0f86698aa02842ff58fc1e7fa54973c",
+      "clean_sha256": "5c9c13d1dec6f026acaf30a456a1f7a07eba857cf90d9c588b08338e65e53929",
+      "foot_anchor_px_estimate": [
+        219,
+        670
+      ],
+      "visible_rect_alpha16_px": [
+        109,
+        66,
+        695,
+        671
+      ],
+      "removed_component_count": 9,
+      "removed_alpha_pixels": 24,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_attack_atlas.png",
+      "atlas_cell_rect_px": [
+        1480,
+        740,
+        2220,
+        1480
+      ],
+      "atlas_sprite_rect_px": [
+        1488,
+        748,
+        2212,
+        1472
+      ],
+      "atlas_grid": {
+        "row": 1,
+        "column": 2
+      }
+    },
+    {
+      "id": "dash_launch_front",
+      "action": "dash",
+      "pose": "launch",
+      "view": "front",
+      "file": "Frames/dash/P4_A1_dash_launch_front.png",
+      "clean_file": "RuntimeReady/FramesClean/dash/P4_A1_dash_launch_front.png",
+      "original_sha256": "c4dd38ce18298317aa57f918e2eb4309a3f05a53858e1a79b2d8151670cb0ab6",
+      "clean_sha256": "58982d4e68b659833003ed86bc9fb35d3a6ba25402df7417fda901d4eda5910c",
+      "foot_anchor_px_estimate": [
+        492,
+        648
+      ],
+      "visible_rect_alpha16_px": [
+        136,
+        89,
+        666,
+        650
+      ],
+      "removed_component_count": 26,
+      "removed_alpha_pixels": 36,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_dash_atlas.png",
+      "atlas_cell_rect_px": [
+        0,
+        0,
+        740,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        8,
+        8,
+        732,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 0
+      }
+    },
+    {
+      "id": "dash_launch_back",
+      "action": "dash",
+      "pose": "launch",
+      "view": "back",
+      "file": "Frames/dash/P4_A1_dash_launch_back.png",
+      "clean_file": "RuntimeReady/FramesClean/dash/P4_A1_dash_launch_back.png",
+      "original_sha256": "9de2f8af8a1d1ec5717d51b0b9d485f5a5611d82a04b2383ccb3e1c692ea3ddd",
+      "clean_sha256": "4b5b790e6903cda2d0d59d5d6fd162a0e5e8abfb3681d261e1b60b690b23a42c",
+      "foot_anchor_px_estimate": [
+        286,
+        642
+      ],
+      "visible_rect_alpha16_px": [
+        104,
+        82,
+        641,
+        644
+      ],
+      "removed_component_count": 10,
+      "removed_alpha_pixels": 12,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_dash_atlas.png",
+      "atlas_cell_rect_px": [
+        740,
+        0,
+        1480,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        748,
+        8,
+        1472,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 1
+      }
+    },
+    {
+      "id": "dash_launch_side_right",
+      "action": "dash",
+      "pose": "launch",
+      "view": "side_right",
+      "file": "Frames/dash/P4_A1_dash_launch_side_right.png",
+      "clean_file": "RuntimeReady/FramesClean/dash/P4_A1_dash_launch_side_right.png",
+      "original_sha256": "547bc9500f9890a3041e8ed9f90094c1d78c00dc3ff871992fd9f8f7104f2f6d",
+      "clean_sha256": "5ccd5300e38d17552ed6f0cb45dee51c80eeb4e50118edda093144d92879d8e6",
+      "foot_anchor_px_estimate": [
+        487,
+        637
+      ],
+      "visible_rect_alpha16_px": [
+        110,
+        88,
+        620,
+        639
+      ],
+      "removed_component_count": 19,
+      "removed_alpha_pixels": 24,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_dash_atlas.png",
+      "atlas_cell_rect_px": [
+        1480,
+        0,
+        2220,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        1488,
+        8,
+        2212,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 2
+      }
+    },
+    {
+      "id": "dash_stride_front",
+      "action": "dash",
+      "pose": "stride",
+      "view": "front",
+      "file": "Frames/dash/P4_A1_dash_stride_front.png",
+      "clean_file": "RuntimeReady/FramesClean/dash/P4_A1_dash_stride_front.png",
+      "original_sha256": "3c8e4f21c61de685f7c9249bcf6ab602548956303aa1249a6438f7e1783eb354",
+      "clean_sha256": "7b55ed78eb07db0cdeb5abca8e145924f7879a85e8330bebb99ad66759235900",
+      "foot_anchor_px_estimate": [
+        449,
+        657
+      ],
+      "visible_rect_alpha16_px": [
+        136,
+        60,
+        662,
+        659
+      ],
+      "removed_component_count": 9,
+      "removed_alpha_pixels": 11,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_dash_atlas.png",
+      "atlas_cell_rect_px": [
+        0,
+        740,
+        740,
+        1480
+      ],
+      "atlas_sprite_rect_px": [
+        8,
+        748,
+        732,
+        1472
+      ],
+      "atlas_grid": {
+        "row": 1,
+        "column": 0
+      }
+    },
+    {
+      "id": "dash_stride_back",
+      "action": "dash",
+      "pose": "stride",
+      "view": "back",
+      "file": "Frames/dash/P4_A1_dash_stride_back.png",
+      "clean_file": "RuntimeReady/FramesClean/dash/P4_A1_dash_stride_back.png",
+      "original_sha256": "9fffd3242a05d737e325f5efdbfff13e8f50d9346a1adbde4096f5987957c059",
+      "clean_sha256": "c06acb42a2f8880d8d4223c2b455028f0f65426f06b902fe9da8e18ae2d37621",
+      "foot_anchor_px_estimate": [
+        472,
+        650
+      ],
+      "visible_rect_alpha16_px": [
+        85,
+        60,
+        605,
+        651
+      ],
+      "removed_component_count": 20,
+      "removed_alpha_pixels": 26,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_dash_atlas.png",
+      "atlas_cell_rect_px": [
+        740,
+        740,
+        1480,
+        1480
+      ],
+      "atlas_sprite_rect_px": [
+        748,
+        748,
+        1472,
+        1472
+      ],
+      "atlas_grid": {
+        "row": 1,
+        "column": 1
+      }
+    },
+    {
+      "id": "dash_stride_side_right",
+      "action": "dash",
+      "pose": "stride",
+      "view": "side_right",
+      "file": "Frames/dash/P4_A1_dash_stride_side_right.png",
+      "clean_file": "RuntimeReady/FramesClean/dash/P4_A1_dash_stride_side_right.png",
+      "original_sha256": "87922ce15b5f5f1427adc2f39b129628fcf25e8836d4493f91fc9254321419d4",
+      "clean_sha256": "3579c8d2a9d25c415058611512d1a5ab9965a972ea56741616577260ade4a4fb",
+      "foot_anchor_px_estimate": [
+        440,
+        657
+      ],
+      "visible_rect_alpha16_px": [
+        67,
+        63,
+        581,
+        659
+      ],
+      "removed_component_count": 22,
+      "removed_alpha_pixels": 32,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_dash_atlas.png",
+      "atlas_cell_rect_px": [
+        1480,
+        740,
+        2220,
+        1480
+      ],
+      "atlas_sprite_rect_px": [
+        1488,
+        748,
+        2212,
+        1472
+      ],
+      "atlas_grid": {
+        "row": 1,
+        "column": 2
+      }
+    },
+    {
+      "id": "defend_guard_front",
+      "action": "defend",
+      "pose": "guard",
+      "view": "front",
+      "file": "Frames/defend/P4_A1_defend_guard_front.png",
+      "clean_file": "RuntimeReady/FramesClean/defend/P4_A1_defend_guard_front.png",
+      "original_sha256": "f590005bd1c2c011e1fe4cada29a628e172673a1e021193352c9652636e6b339",
+      "clean_sha256": "8ca787c9853f7d75e4fed0154f2f9998fd19554d901cfbbe74f914f6d826be3a",
+      "foot_anchor_px_estimate": [
+        446,
+        650
+      ],
+      "visible_rect_alpha16_px": [
+        97,
+        64,
+        656,
+        652
+      ],
+      "removed_component_count": 59,
+      "removed_alpha_pixels": 103,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_defend_atlas.png",
+      "atlas_cell_rect_px": [
+        0,
+        0,
+        740,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        8,
+        8,
+        732,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 0
+      }
+    },
+    {
+      "id": "defend_guard_back",
+      "action": "defend",
+      "pose": "guard",
+      "view": "back",
+      "file": "Frames/defend/P4_A1_defend_guard_back.png",
+      "clean_file": "RuntimeReady/FramesClean/defend/P4_A1_defend_guard_back.png",
+      "original_sha256": "72090a3587320d06d7e041ee11a953e764e8467ba51f4a5d488141702e1c1c67",
+      "clean_sha256": "8ddcfd451c34fced5e5c68f5dcf868923ad33bf09348e23f450c2930714e7480",
+      "foot_anchor_px_estimate": [
+        367,
+        650
+      ],
+      "visible_rect_alpha16_px": [
+        103,
+        62,
+        631,
+        651
+      ],
+      "removed_component_count": 29,
+      "removed_alpha_pixels": 40,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_defend_atlas.png",
+      "atlas_cell_rect_px": [
+        740,
+        0,
+        1480,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        748,
+        8,
+        1472,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 1
+      }
+    },
+    {
+      "id": "defend_guard_side_right",
+      "action": "defend",
+      "pose": "guard",
+      "view": "side_right",
+      "file": "Frames/defend/P4_A1_defend_guard_side_right.png",
+      "clean_file": "RuntimeReady/FramesClean/defend/P4_A1_defend_guard_side_right.png",
+      "original_sha256": "b895261b8edabdfaacbb1742dbab68d972116c104d4563e7c553a2c713c101ae",
+      "clean_sha256": "4e2ffa192615d267d9fe8423f98a97239894d485ef274f818b8bac66ac1d0213",
+      "foot_anchor_px_estimate": [
+        270,
+        662
+      ],
+      "visible_rect_alpha16_px": [
+        119,
+        62,
+        595,
+        664
+      ],
+      "removed_component_count": 76,
+      "removed_alpha_pixels": 230,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_defend_atlas.png",
+      "atlas_cell_rect_px": [
+        1480,
+        0,
+        2220,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        1488,
+        8,
+        2212,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 2
+      }
+    },
+    {
+      "id": "hit_recoil_front",
+      "action": "hit",
+      "pose": "recoil",
+      "view": "front",
+      "file": "Frames/hit/P4_A1_hit_recoil_front.png",
+      "clean_file": "RuntimeReady/FramesClean/hit/P4_A1_hit_recoil_front.png",
+      "original_sha256": "8cb52acb57db0e5350a3026b531396819c2b8b999208767c86eeb89191c02fe5",
+      "clean_sha256": "2750fee309c72660b21e05d4a47307dfe5fc1cfff30345addc741eba7a625d5c",
+      "foot_anchor_px_estimate": [
+        409,
+        658
+      ],
+      "visible_rect_alpha16_px": [
+        124,
+        71,
+        616,
+        660
+      ],
+      "removed_component_count": 38,
+      "removed_alpha_pixels": 63,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_hit_atlas.png",
+      "atlas_cell_rect_px": [
+        0,
+        0,
+        740,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        8,
+        8,
+        732,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 0
+      }
+    },
+    {
+      "id": "hit_recoil_back",
+      "action": "hit",
+      "pose": "recoil",
+      "view": "back",
+      "file": "Frames/hit/P4_A1_hit_recoil_back.png",
+      "clean_file": "RuntimeReady/FramesClean/hit/P4_A1_hit_recoil_back.png",
+      "original_sha256": "ab592c56a7ed51d03324fd5f028ae4bf360cd5ed276f907dbd00955db312f3af",
+      "clean_sha256": "8efd05303bb1ed2ebee6696b4f11d53e339c70309df8262ae4534066c1ffc779",
+      "foot_anchor_px_estimate": [
+        373,
+        657
+      ],
+      "visible_rect_alpha16_px": [
+        146,
+        67,
+        615,
+        658
+      ],
+      "removed_component_count": 112,
+      "removed_alpha_pixels": 199,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_hit_atlas.png",
+      "atlas_cell_rect_px": [
+        740,
+        0,
+        1480,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        748,
+        8,
+        1472,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 1
+      }
+    },
+    {
+      "id": "hit_recoil_side_right",
+      "action": "hit",
+      "pose": "recoil",
+      "view": "side_right",
+      "file": "Frames/hit/P4_A1_hit_recoil_side_right.png",
+      "clean_file": "RuntimeReady/FramesClean/hit/P4_A1_hit_recoil_side_right.png",
+      "original_sha256": "5b9bf9b40931211d09854f7500e32e5c5ac88ad40934bcc4c5603331b60c7a1d",
+      "clean_sha256": "daf674ecf65349aa86ea2340f28fcb3a67b3e93056e566bcb18f8a21c25ec21e",
+      "foot_anchor_px_estimate": [
+        386,
+        661
+      ],
+      "visible_rect_alpha16_px": [
+        198,
+        69,
+        588,
+        662
+      ],
+      "removed_component_count": 130,
+      "removed_alpha_pixels": 278,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_hit_atlas.png",
+      "atlas_cell_rect_px": [
+        1480,
+        0,
+        2220,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        1488,
+        8,
+        2212,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 2
+      }
+    },
+    {
+      "id": "laugh_open_front",
+      "action": "laugh",
+      "pose": "open",
+      "view": "front",
+      "file": "Frames/laugh/P4_A1_laugh_open_front.png",
+      "clean_file": "RuntimeReady/FramesClean/laugh/P4_A1_laugh_open_front.png",
+      "original_sha256": "8ba47320f8510e93215c9a3969234429f79200884948a27acb3106db6791ced5",
+      "clean_sha256": "4423b5df9bbdc3cb10c36bc220d14a98ed2d97b309d3bf7ce95e289739f1ac31",
+      "foot_anchor_px_estimate": [
+        392,
+        662
+      ],
+      "visible_rect_alpha16_px": [
+        145,
+        58,
+        621,
+        664
+      ],
+      "removed_component_count": 42,
+      "removed_alpha_pixels": 130,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_laugh_atlas.png",
+      "atlas_cell_rect_px": [
+        0,
+        0,
+        740,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        8,
+        8,
+        732,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 0
+      }
+    },
+    {
+      "id": "laugh_open_back",
+      "action": "laugh",
+      "pose": "open",
+      "view": "back",
+      "file": "Frames/laugh/P4_A1_laugh_open_back.png",
+      "clean_file": "RuntimeReady/FramesClean/laugh/P4_A1_laugh_open_back.png",
+      "original_sha256": "c5d648b8adcf61df5013df561156b82acec4d838362f85d2c998c97cd65c8b78",
+      "clean_sha256": "0fbe4e36c597fca9efe78da0e35367644759c6fcad03a3ee9bebd4c59c81a7d4",
+      "foot_anchor_px_estimate": [
+        362,
+        660
+      ],
+      "visible_rect_alpha16_px": [
+        113,
+        57,
+        609,
+        661
+      ],
+      "removed_component_count": 42,
+      "removed_alpha_pixels": 94,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_laugh_atlas.png",
+      "atlas_cell_rect_px": [
+        740,
+        0,
+        1480,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        748,
+        8,
+        1472,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 1
+      }
+    },
+    {
+      "id": "laugh_open_side_right",
+      "action": "laugh",
+      "pose": "open",
+      "view": "side_right",
+      "file": "Frames/laugh/P4_A1_laugh_open_side_right.png",
+      "clean_file": "RuntimeReady/FramesClean/laugh/P4_A1_laugh_open_side_right.png",
+      "original_sha256": "8a28a7d2b3dcc62457ae7706d7e1e3bb53feb2eda210257c415552997cba4dce",
+      "clean_sha256": "5b4730442e63530da6cdb45fe423287b9cfa6c73ee8c208b92474b841cbe14f3",
+      "foot_anchor_px_estimate": [
+        323,
+        664
+      ],
+      "visible_rect_alpha16_px": [
+        118,
+        58,
+        580,
+        666
+      ],
+      "removed_component_count": 19,
+      "removed_alpha_pixels": 36,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_laugh_atlas.png",
+      "atlas_cell_rect_px": [
+        1480,
+        0,
+        2220,
+        740
+      ],
+      "atlas_sprite_rect_px": [
+        1488,
+        8,
+        2212,
+        732
+      ],
+      "atlas_grid": {
+        "row": 0,
+        "column": 2
+      }
+    },
+    {
+      "id": "laugh_recover_front",
+      "action": "laugh",
+      "pose": "recover",
+      "view": "front",
+      "file": "Frames/laugh/P4_A1_laugh_recover_front.png",
+      "clean_file": "RuntimeReady/FramesClean/laugh/P4_A1_laugh_recover_front.png",
+      "original_sha256": "fe39aee6e5f54ea885bb2b06a51a42c2eef57465664a51a9d99d1ff30cc50cb1",
+      "clean_sha256": "51d03b9d57d91a13b7e5d47ff318bb719a6076cc88f6957dbd6b7c46c9bc0338",
+      "foot_anchor_px_estimate": [
+        393,
+        660
+      ],
+      "visible_rect_alpha16_px": [
+        159,
+        61,
+        641,
+        661
+      ],
+      "removed_component_count": 10,
+      "removed_alpha_pixels": 33,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_laugh_atlas.png",
+      "atlas_cell_rect_px": [
+        0,
+        740,
+        740,
+        1480
+      ],
+      "atlas_sprite_rect_px": [
+        8,
+        748,
+        732,
+        1472
+      ],
+      "atlas_grid": {
+        "row": 1,
+        "column": 0
+      }
+    },
+    {
+      "id": "laugh_recover_back",
+      "action": "laugh",
+      "pose": "recover",
+      "view": "back",
+      "file": "Frames/laugh/P4_A1_laugh_recover_back.png",
+      "clean_file": "RuntimeReady/FramesClean/laugh/P4_A1_laugh_recover_back.png",
+      "original_sha256": "0644d034aa8c1763783eb6e5b2c91d5e1d81d9919ef94b496052d300ea11dccd",
+      "clean_sha256": "2c6067714d9927292c9bfc59e5d4ddf0bdb74aa672f5580ff7f01994820b6854",
+      "foot_anchor_px_estimate": [
+        361,
+        657
+      ],
+      "visible_rect_alpha16_px": [
+        111,
+        59,
+        612,
+        659
+      ],
+      "removed_component_count": 12,
+      "removed_alpha_pixels": 29,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_laugh_atlas.png",
+      "atlas_cell_rect_px": [
+        740,
+        740,
+        1480,
+        1480
+      ],
+      "atlas_sprite_rect_px": [
+        748,
+        748,
+        1472,
+        1472
+      ],
+      "atlas_grid": {
+        "row": 1,
+        "column": 1
+      }
+    },
+    {
+      "id": "laugh_recover_side_right",
+      "action": "laugh",
+      "pose": "recover",
+      "view": "side_right",
+      "file": "Frames/laugh/P4_A1_laugh_recover_side_right.png",
+      "clean_file": "RuntimeReady/FramesClean/laugh/P4_A1_laugh_recover_side_right.png",
+      "original_sha256": "21f4b04c70bc7393de9398869a7fbd81a965122006ad8c66a5eb11b813963ed0",
+      "clean_sha256": "4f5ef62030c8e14ee43d674280fa6b89e2435282b4a02aae1453f362cfc589b2",
+      "foot_anchor_px_estimate": [
+        306,
+        661
+      ],
+      "visible_rect_alpha16_px": [
+        111,
+        60,
+        527,
+        663
+      ],
+      "removed_component_count": 11,
+      "removed_alpha_pixels": 32,
+      "atlas_file": "RuntimeReady/Atlases/P4_A1_laugh_atlas.png",
+      "atlas_cell_rect_px": [
+        1480,
+        740,
+        2220,
+        1480
+      ],
+      "atlas_sprite_rect_px": [
+        1488,
+        748,
+        2212,
+        1472
+      ],
+      "atlas_grid": {
+        "row": 1,
+        "column": 2
+      }
+    }
+  ],
+  "atlases": [
+    {
+      "action": "idle",
+      "name_zh": "待机",
+      "file": "RuntimeReady/Atlases/P4_A1_idle_atlas.png",
+      "size_px": [
+        2220,
+        740
+      ],
+      "row_order": [
+        "neutral"
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "frame_ids": [
+        "idle_neutral_front",
+        "idle_neutral_back",
+        "idle_neutral_side_right"
+      ],
+      "sha256": "b703b72b00ab7b0d2e6655030e1672952471060e74f938661f50451d6b697439"
+    },
+    {
+      "action": "move",
+      "name_zh": "移动",
+      "file": "RuntimeReady/Atlases/P4_A1_move_atlas.png",
+      "size_px": [
+        2220,
+        1480
+      ],
+      "row_order": [
+        "step_a",
+        "step_b"
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "frame_ids": [
+        "move_step_a_front",
+        "move_step_a_back",
+        "move_step_a_side_right",
+        "move_step_b_front",
+        "move_step_b_back",
+        "move_step_b_side_right"
+      ],
+      "sha256": "d2df0656c78a94f2c3a15e3f4cbff1f1d0bf6ff2bd25a93fcdbf51b5944b82d4"
+    },
+    {
+      "action": "attack",
+      "name_zh": "普攻",
+      "file": "RuntimeReady/Atlases/P4_A1_attack_atlas.png",
+      "size_px": [
+        2220,
+        1480
+      ],
+      "row_order": [
+        "windup",
+        "contact"
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "frame_ids": [
+        "attack_windup_front",
+        "attack_windup_back",
+        "attack_windup_side_right",
+        "attack_contact_front",
+        "attack_contact_back",
+        "attack_contact_side_right"
+      ],
+      "sha256": "8c6448ac88c8a10add1fe509b5134a8adbaf2dbafb438af0a77df176eb67b33c"
+    },
+    {
+      "action": "dash",
+      "name_zh": "冲撞",
+      "file": "RuntimeReady/Atlases/P4_A1_dash_atlas.png",
+      "size_px": [
+        2220,
+        1480
+      ],
+      "row_order": [
+        "launch",
+        "stride"
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "frame_ids": [
+        "dash_launch_front",
+        "dash_launch_back",
+        "dash_launch_side_right",
+        "dash_stride_front",
+        "dash_stride_back",
+        "dash_stride_side_right"
+      ],
+      "sha256": "8908417ee1e2b143a5bcdf488ec17dfb1e5bdfa8dbe8d1d8a73d3ce074a170b3"
+    },
+    {
+      "action": "defend",
+      "name_zh": "防御",
+      "file": "RuntimeReady/Atlases/P4_A1_defend_atlas.png",
+      "size_px": [
+        2220,
+        740
+      ],
+      "row_order": [
+        "guard"
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "frame_ids": [
+        "defend_guard_front",
+        "defend_guard_back",
+        "defend_guard_side_right"
+      ],
+      "sha256": "1e2e29ac60301692c51914bbd5334f58c32a6740f53272203e72d619520a7120"
+    },
+    {
+      "action": "hit",
+      "name_zh": "受击",
+      "file": "RuntimeReady/Atlases/P4_A1_hit_atlas.png",
+      "size_px": [
+        2220,
+        740
+      ],
+      "row_order": [
+        "recoil"
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "frame_ids": [
+        "hit_recoil_front",
+        "hit_recoil_back",
+        "hit_recoil_side_right"
+      ],
+      "sha256": "6bd39b68d9d52d3b3233defdbe550b5697150f882fb3c1f4b5e1c485e883c41d"
+    },
+    {
+      "action": "laugh",
+      "name_zh": "大笑",
+      "file": "RuntimeReady/Atlases/P4_A1_laugh_atlas.png",
+      "size_px": [
+        2220,
+        1480
+      ],
+      "row_order": [
+        "open",
+        "recover"
+      ],
+      "column_order": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "frame_ids": [
+        "laugh_open_front",
+        "laugh_open_back",
+        "laugh_open_side_right",
+        "laugh_recover_front",
+        "laugh_recover_back",
+        "laugh_recover_side_right"
+      ],
+      "sha256": "64e460bc84b729fbd84d7a9540749d107e937cc09dd68353c05cff299a0b76b1"
+    }
+  ],
+  "evidence": "UE5/Records/p4_alpha/evidence/W2/P4_A1_Atlas_TechnicalReview.html"
+}

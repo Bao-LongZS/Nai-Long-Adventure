@@ -1,0 +1,90 @@
+{
+  "status": "saved_pending_visible_acceptance",
+  "map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_A0PunchPreview",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "owner_tag": "NaiwaP4A0PunchPreview",
+  "resolution_target": [
+    1920,
+    1080
+  ],
+  "logical_arena_uu": [
+    1100.0,
+    185.0
+  ],
+  "sprite_depth_y_uu": 92.5,
+  "frames": [
+    {
+      "id": "punch_windup",
+      "texture": "/Game/Naiwa/P4/Art/Alpha/A0_PunchSample/T_P4_A0_Punch_F01_Windup",
+      "material": "/Game/Naiwa/P4/Materials/Alpha/A0_PunchSample/M_P4_A0_punch_windup",
+      "target_foot_world_x_uu": 260.0,
+      "world_location_uu": [
+        252.16748768472905,
+        92.5,
+        76.25615763546799
+      ],
+      "world_height_uu": 180.0,
+      "foot_anchor_px": [
+        699,
+        1125
+      ],
+      "projected_anchor_offset_x_uu": 7.832512315270936,
+      "projected_anchor_from_bottom_uu": 13.74384236453202
+    },
+    {
+      "id": "punch_contact",
+      "texture": "/Game/Naiwa/P4/Art/Alpha/A0_PunchSample/T_P4_A0_Punch_F02_Contact",
+      "material": "/Game/Naiwa/P4/Materials/Alpha/A0_PunchSample/M_P4_A0_punch_contact",
+      "target_foot_world_x_uu": 550.0,
+      "world_location_uu": [
+        550.4433497536946,
+        92.5,
+        75.51724137931035
+      ],
+      "world_height_uu": 180.0,
+      "foot_anchor_px": [
+        643,
+        1120
+      ],
+      "projected_anchor_offset_x_uu": -0.4433497536945813,
+      "projected_anchor_from_bottom_uu": 14.482758620689655
+    },
+    {
+      "id": "punch_recovery",
+      "texture": "/Game/Naiwa/P4/Art/Alpha/A0_PunchSample/T_P4_A0_Punch_F03_Recovery",
+      "material": "/Game/Naiwa/P4/Materials/Alpha/A0_PunchSample/M_P4_A0_punch_recovery",
+      "target_foot_world_x_uu": 840.0,
+      "world_location_uu": [
+        833.0541871921182,
+        92.5,
+        75.51724137931035
+      ],
+      "world_height_uu": 180.0,
+      "foot_anchor_px": [
+        693,
+        1120
+      ],
+      "projected_anchor_offset_x_uu": 6.945812807881774,
+      "projected_anchor_from_bottom_uu": 14.482758620689655
+    }
+  ],
+  "saved_owned_actor_labels": [
+    "P4A0_FixedCamera",
+    "P4A0_Ground",
+    "P4A0_KeyLight",
+    "P4A0_PlayerStart",
+    "P4A0_Shadow_punch_contact",
+    "P4A0_Shadow_punch_recovery",
+    "P4A0_Shadow_punch_windup",
+    "P4A0_SkyLight",
+    "P4A0_punch_contact",
+    "P4A0_punch_recovery",
+    "P4A0_punch_windup"
+  ],
+  "material_compile": "passed",
+  "limitations": [
+    "Map saved through Editor Python; NullRHI generation does not verify visible rendering.",
+    "A visible Standalone/PIE capture, 1080p and 720p silhouette review, and p95 frame-time sample remain open.",
+    "The sample covers only a front three-quarter punch; back/side direction samples and full Alpha production approval remain open."
+  ]
+}

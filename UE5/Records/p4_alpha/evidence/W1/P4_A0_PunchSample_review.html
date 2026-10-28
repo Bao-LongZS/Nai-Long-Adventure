@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P4 A0 普攻样片复核</title>
+<style>
+  body{margin:24px;background:#10151b;color:#e8edf2;font:16px/1.5 system-ui,"Microsoft YaHei",sans-serif}
+  h1{font-size:24px;margin:0 0 8px}p{color:#b5c0ca;margin:4px 0 18px}
+  .row{display:grid;grid-template-columns:repeat(3,minmax(220px,1fr));gap:16px}
+  figure{margin:0;background:#1d2730;border:1px solid #394651;border-radius:10px;overflow:hidden}
+  figcaption{padding:10px 12px;font-weight:600}
+  .stage{height:480px;position:relative;overflow:hidden;background-color:#27323a;background-image:linear-gradient(45deg,#34414b 25%,transparent 25%),linear-gradient(-45deg,#34414b 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#34414b 75%),linear-gradient(-45deg,transparent 75%,#34414b 75%);background-size:24px 24px;background-position:0 0,0 12px,12px -12px,-12px 0}
+  .floor{position:absolute;left:0;right:0;bottom:0;border-top:2px solid #63d6c6}
+  .stage img{position:absolute;left:50%;height:100%;width:auto;max-width:100%;transform:translateX(-50%)}
+  .f1{bottom:7.64%}.f2,.f3{bottom:8.05%}
+  .note{margin-top:18px;padding:12px 14px;background:#1d2730;border-left:3px solid #e5ae4b;border-radius:4px}
+  @media(max-width:800px){.row{grid-template-columns:1fr}.stage{height:420px}}
+</style>
+<h1>P4 A0 普攻样片 · 首稿方向</h1>
+<p>项目负责人选择圆润 Q 萌首稿。三帧展示预备、出拳、收势；当前图像原始脚底锚点差 5 px，尚待固定机位中按锚点补偿后复测。</p>
+<section class="row">
+  <figure><figcaption>01 · 预备</figcaption><div class="stage"><img class="f1" src="../../../../SourceAssets/P4/Characters/Alpha/A0_PunchSample/P4_A0_Punch_F01_Windup.png" alt="普攻预备帧"><div class="floor"></div></div></figure>
+  <figure><figcaption>02 · 出拳</figcaption><div class="stage"><img class="f2" src="../../../../SourceAssets/P4/Characters/Alpha/A0_PunchSample/P4_A0_Punch_F02_Contact.png" alt="普攻出拳帧"><div class="floor"></div></div></figure>
+  <figure><figcaption>03 · 收势</figcaption><div class="stage"><img class="f3" src="../../../../SourceAssets/P4/Characters/Alpha/A0_PunchSample/P4_A0_Punch_F03_Recovery.png" alt="普攻收势帧"><div class="floor"></div></div></figure>
+</section>
+<div class="note">WIP：这不是生产图集验收。固定机位、锚点偏移、动作节奏、边缘残点和正/背/侧方向仍需在 UE 预览中复核。</div>
+</html>

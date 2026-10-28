@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">冲撞强化类别标记</title>
+  <desc id="desc">叶绿色菱形，代表冲撞强化类别。</desc>
+  <path d="M32 5 59 32 32 59 5 32Z" fill="#78A86C" stroke="#49372E" stroke-width="6" stroke-linejoin="round"/>
+</svg>

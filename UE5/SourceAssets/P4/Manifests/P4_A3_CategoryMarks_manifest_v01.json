@@ -1,0 +1,39 @@
+{
+  "source_basis": "P4_A3_AlphaCardFaces_manifest_v03.json",
+  "cue_mapping": {
+    "charge": "diamond + 冲撞强化 + #78A86C",
+    "bullet": "circle + 子弹强化 + #D59A3B",
+    "laugh": "spark + 大笑强化 + #D98273"
+  },
+  "owner_approved_on": "2026-10-28",
+  "preview_sha256": "c501a3f89a5eaa948f600b95e7da00e66fae66d4ce49af367b98770982fad0d2",
+  "status": "visual_approved_runtime_not_imported",
+  "schema": "naiwa.p4.category_marks/1",
+  "asset_id": "P4_A3_CATEGORY_MARKS",
+  "runtime_imported": true,
+  "approval_source": "P4_A3_AlphaCardFaces_v03_approval.md",
+  "assets": [
+    {
+      "asset_id": "P4_A3_CategoryMark_bullet_v01",
+      "sha256": "5124e36a6f42223df93b927778db2dd9d140b36c7b52d40121348867b23d0aeb",
+      "path": "UE5/SourceAssets/P4/UI/Alpha/CategoryMarks/P4_A3_CategoryMark_bullet_v01.svg",
+      "role": "bullet"
+    },
+    {
+      "asset_id": "P4_A3_CategoryMark_charge_v01",
+      "sha256": "58da0c36c339196d39b1ee8f3d974d74f3fe7c2f202860a0993de12c386675c0",
+      "path": "UE5/SourceAssets/P4/UI/Alpha/CategoryMarks/P4_A3_CategoryMark_charge_v01.svg",
+      "role": "charge"
+    },
+    {
+      "asset_id": "P4_A3_CategoryMark_laugh_v01",
+      "sha256": "0146dc409bec20717eb7ca45a530ba92626e8ef40911b90869a96d64df242822",
+      "path": "UE5/SourceAssets/P4/UI/Alpha/CategoryMarks/P4_A3_CategoryMark_laugh_v01.svg",
+      "role": "laugh"
+    }
+  ],
+  "version": "v01",
+  "preview": "UE5/Records/p4_alpha/evidence/W3/P4_A3_CategoryMarks_v01.html",
+  "note": "Derived vector source exports matching the approved v03 category silhouettes. Gray preview is a silhouette check, not a formal color-vision simulation.",
+  "runtime_asset_root": "/Game/Naiwa/P4/UI/Alpha/RuntimeReady"
+}

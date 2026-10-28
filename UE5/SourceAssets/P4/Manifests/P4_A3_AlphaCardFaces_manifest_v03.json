@@ -1,0 +1,82 @@
+{
+  "source_of_truth": "UE5/Records/p4_alpha/design_reference/P4_章节数据_v1.json",
+  "category_cues": {
+    "rounder_belly": {
+      "color": "#78A86C",
+      "shape": "diamond",
+      "text": "冲撞强化"
+    },
+    "cant_hold": {
+      "color": "#D98273",
+      "shape": "spark",
+      "text": "大笑强化"
+    },
+    "redundant_cues": "color + shape + explicit category text; unique approved card icon remains visible",
+    "bounce_ball": {
+      "color": "#D59A3B",
+      "shape": "circle",
+      "text": "子弹强化"
+    }
+  },
+  "runtime_imported": true,
+  "preview_sha256": "d97c53af332e68f0fbd5ba42054692e967df685160545fddaf0d0229a17a81a6",
+  "previous_version": "UE5/SourceAssets/P4/Manifests/P4_A3_AlphaCardFaces_manifest_v02.json",
+  "runtime_integrated": true,
+  "schema": "naiwa.p4.alpha_card_faces/1",
+  "art_direction": {
+    "palette": {
+      "bullet_line": "#D59A3B",
+      "ink": "#49372E",
+      "laugh_line": "#D98273",
+      "charge_line": "#78A86C",
+      "paper": "#FFF8E9"
+    },
+    "note": "v02 approved card hierarchy and interactions retained. v03 adds category silhouettes and a grayscale review toggle.",
+    "canvas": "Responsive HTML review mockup"
+  },
+  "approved_icon_manifest": "UE5/SourceAssets/P4/Manifests/P4_A3_AlphaCardIcons_manifest_v02.json",
+  "status": "visual_approved_runtime_not_imported",
+  "preview": "UE5/Records/p4_alpha/evidence/W3/P4_A3_AlphaCardFaces_v03.html",
+  "asset_id": "P4_ALPHA_CARD_FACES",
+  "version": "v03",
+  "cards": [
+    {
+      "displayed_combo_rule": "与「一口俩」同持时，只有第一发弹射。",
+      "icon": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_bounce_ball_v01.svg",
+      "card_id": "bounce_ball"
+    },
+    {
+      "displayed_combo_rule": "与「奶凶」同持时，硬直加成取最高值，不叠加。",
+      "icon": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_rounder_belly_v02.svg",
+      "card_id": "rounder_belly"
+    },
+    {
+      "icon": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_cant_hold_v02.svg",
+      "displayed_trigger_rule": "受击无敌 0.9 秒内不重复触发。",
+      "card_id": "cant_hold"
+    }
+  ],
+  "sample_scope": {
+    "confirmation": "Local status text only; no game or save data is written.",
+    "three_cards_are_a_real_offer": false,
+    "mouse_selection": true,
+    "interaction_is_live": true,
+    "grayscale_preview": true,
+    "states_shown": [
+      "default",
+      "selected",
+      "already_owned_unavailable"
+    ],
+    "persistent_selection": false,
+    "keyboard_selection": [
+      "Tab",
+      "Enter",
+      "Space"
+    ],
+    "purpose": "A3 card face and choice flow visual sample with redundant category cues"
+  },
+  "approved_base_version": "UE5/SourceAssets/P4/Manifests/P4_A3_AlphaCardFaces_manifest_v02.json",
+  "owner_approved_on": "2026-10-28",
+  "owner_approval_evidence": "UE5/Records/p4_alpha/evidence/W3/P4_A3_AlphaCardFaces_v03_approval.md",
+  "runtime_preview_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_ArtIntegrationPreview"
+}

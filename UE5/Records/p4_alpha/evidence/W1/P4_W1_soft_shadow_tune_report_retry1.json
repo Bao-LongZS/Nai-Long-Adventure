@@ -1,0 +1,18 @@
+{
+  "status": "material_tuned_backup_not_persisted",
+  "material": "/Game/Naiwa/P4/Materials/W1/M_P4_W1_SoftShadow_RadialV6",
+  "backup": "/Game/Naiwa/P4/Materials/W1/M_P4_W1_SoftShadow_RadialV6_BeforeOpacityTune",
+  "old_strength_expected": 0.45,
+  "new_strength": 0.58,
+  "level_opened_or_changed": false,
+  "strength_before": 0.44999998807907104,
+  "strength_after": 0.5799999833106995,
+  "backup_strength": 0.44999998807907104,
+  "material_compile": "passed",
+  "limitations": [
+    "The shadow remains a soft radial ellipse approximation.",
+    "Visual contact/readability and overlap ordering need owner review in the existing preview map."
+  ],
+  "backup_asset_persisted": false,
+  "follow_up": "The initial duplicate was only readable during that editor session and no backup UAsset was saved; retry2 performs an explicit save and reload check."
+}

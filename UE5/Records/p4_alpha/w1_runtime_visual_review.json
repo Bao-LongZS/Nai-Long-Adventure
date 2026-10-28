@@ -1,0 +1,121 @@
+{
+  "status": "center_rulers_and_foot_baseline_within_tolerance_pending_remaining_w1_acceptance",
+  "capture": "evidence/W1/user_capture_20261028.png",
+  "resolution": [
+    1923,
+    1128
+  ],
+  "observed": {
+    "sprite_atlas": "Both actors show one isolated pose each and are upright. This is a two-pose static preview, not animation approval.",
+    "shadow": "No default gray rectangle is visible. Faint contact-like shading appears under the sprites, but its contrast is too low for a confident shadow acceptance.",
+    "depth_sort": "A single static frame cannot establish that transparent sprites reorder correctly when DepthY changes.",
+    "sprite_orientation": "Upright in the user-provided runtime capture."
+  },
+  "image_measurements": {
+    "method": "User-provided PNG. For each bounded endpoint crop, centroid all pixels with R,G,B > 220; ruler endpoints are white markers. For each pose crop, find the lowest row of warm silhouette pixels satisfying R > 170, R-G > 5, G-B > 3.",
+    "x_ruler_1000uu": {
+      "left_marker_centroid_px": [
+        206.095,
+        583.597
+      ],
+      "right_marker_centroid_px": [
+        1717.691,
+        583.565
+      ],
+      "measured_span_px": 1511.596,
+      "expected_span_px": 1510.739,
+      "error_px": 0.857,
+      "error_percent": 0.057,
+      "depth_y_uu_in_build_report": 92.5,
+      "tolerance_px": 8,
+      "acceptance_status": "within_tolerance"
+    },
+    "depth_y_185uu": {
+      "near_marker_centroid_px": [
+        128.351,
+        704.007
+      ],
+      "far_marker_centroid_px": [
+        171.252,
+        470.098
+      ],
+      "measured_vertical_span_px": 233.909,
+      "expected_vertical_span_px": 234.459,
+      "error_px": -0.55,
+      "error_percent": -0.235,
+      "screen_x_delta_px": 42.901,
+      "tolerance_px": 5,
+      "acceptance_status": "within_tolerance"
+    },
+    "sprite_foot_baseline": {
+      "hit_reaction_lower_edge_row_px": 544,
+      "idle_neutral_lower_edge_row_px": 544,
+      "absolute_delta_px": 0,
+      "tolerance_px": 2,
+      "acceptance_status": "within_tolerance"
+    }
+  },
+  "evidence": {
+    "capture_source": "Project owner supplied the screenshot in the conversation; archived without image edits.",
+    "capture": "UE5/Records/p4_alpha/evidence/W1/user_capture_20261028.png",
+    "preview_build_report": "UE5/Records/p4_alpha/w1_preview_build_report.json",
+    "preview_asset_build_log": ".workbuddy/P4BuildScratch/p4_w1_preview_escalated_engine.log",
+    "historical_capture": "w1_runtime_fixed_1920x1080.png"
+  },
+  "script_changes": {
+    "sprites": "Generate one transparent P4 cell PNG per pose from the atlas, import each as its own texture, and sample it directly in a masked Unlit material.",
+    "shadow": "Build a radial translucent ellipse from Length/Subtract/Max/Power nodes with verified pin names, compile-check it, and use 0.45 center opacity."
+  },
+  "validation": "The user-provided runtime image measures within frozen tolerances for the center-depth 1000 uu X ruler (+0.857 px vs 1510.739 target, tolerance ±8 px), 185 uu depth ruler (-0.550 px vs 234.459 target, tolerance ±5 px), and same-depth pose foot baseline (0 px difference, tolerance ≤2 px). These pixel checks do not close W1: target-PC frame-time data, dynamic DepthY ordering and shadow readability, DataTable CSV reimport without C++ rebuild, A0 approval/art budget and production direction coverage remain open.",
+  "w1_acceptance": "not_passed",
+  "previous_review": {
+    "capture": "w1_runtime_fixed_1920x1080.png",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "image_measurements": {
+      "method": "1920x1080 saved PNG. Ruler endpoints use connected bright marker pixels (all RGB channels > 220), centroid per marker; sprite lower edges use warm silhouette pixels in each pose crop (R > 170, R-G > 5, G-B > 3).",
+      "x_ruler_1000uu": {
+        "left_marker_centroid_px": [
+          184.81,
+          647.94
+        ],
+        "right_marker_centroid_px": [
+          1734.76,
+          647.89
+        ],
+        "measured_span_px": 1549.95,
+        "expected_span_px": 1548.713,
+        "error_px": 1.237,
+        "error_percent": 0.08,
+        "depth_y_uu_in_saved_capture": 7.0,
+        "required_center_depth_y_uu": 92.5,
+        "required_center_depth_target_px": 1510.072,
+        "acceptance_status": "diagnostic_only_saved_ruler_was_at_front_edge"
+      },
+      "depth_ruler_185uu": {
+        "near_marker_centroid_px": [
+          126.22,
+          656.86
+        ],
+        "far_marker_centroid_px": [
+          169.59,
+          422.62
+        ],
+        "measured_vertical_span_px": 234.24,
+        "expected_vertical_span_px": 234.459,
+        "error_px": -0.219,
+        "error_percent": -0.09,
+        "screen_x_delta_px": 43.37
+      },
+      "sprite_foot_baseline": {
+        "hit_reaction_lower_edge_row_px": 539,
+        "idle_neutral_lower_edge_row_px": 539,
+        "absolute_delta_px": 0
+      }
+    },
+    "validation": "UE 5.8.3 Standalone rendered 1920x1080. One pose per actor is visible and upright; the final log has no material compile/default-material failure. The saved screenshot's front-edge X ruler measures within 0.1% of its local geometric target; the Y ruler and same-depth pose baseline are within their targets. This does not pass the frozen X baseline because that ruler was at DepthY=7 instead of the required center depth 92.5. The preview builder now places it at center depth; a new render is pending. Shadow contrast, frame-time sampling, production animation and three-direction coverage remain open."
+  },
+  "render_area_note": "The image bounds include the runtime window title bar. Pixel spans are measured between in-scene ruler markers; vertical offsets from the title bar cancel in span and foot-delta measurements."
+}

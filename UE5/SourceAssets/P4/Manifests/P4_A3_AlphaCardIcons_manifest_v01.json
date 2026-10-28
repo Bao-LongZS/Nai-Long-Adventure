@@ -1,0 +1,47 @@
+{
+  "schema": "naiwa.p4.alpha_card_icons/1",
+  "asset_id": "P4_ALPHA_CARD_ICONS",
+  "version": "v01",
+  "status": "visual_concept_wip_pending_owner_review",
+  "runtime_imported": false,
+  "source_of_truth": "UE5/Records/p4_alpha/design_reference/P4_章节数据_v1.json",
+  "preview": "UE5/Records/p4_alpha/evidence/W3/P4_A3_AlphaCardIcons_v01.html",
+  "art_direction": {
+    "format": "SVG",
+    "view_box_px": [512, 512],
+    "palette": {
+      "cream": "#FFF8E9",
+      "frog_yellow": "#F5C34F",
+      "warm_brown": "#513A2C",
+      "leaf_green_accent": "#78A86C"
+    },
+    "text_embedded_in_icons": false,
+    "note": "Icons are semantic drafts; exact names/effects remain in the card data source. Full card faces, HUD states, and color-blind review are not included."
+  },
+  "cards": [
+    {
+      "card_id": "bounce_ball",
+      "name_zh": "跳弹奶球",
+      "effect_summary": "命中后弹向最近敌人 1 次；第 2 跳伤害 ×0.40。",
+      "visual_semantic": "奶球弹道连接第二个目标点",
+      "file": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_bounce_ball_v01.svg",
+      "sha256": "0454003f1eb1ff8df48a38f2c3e840af0cd90d2515d873ae3f2efc7e751c62fb"
+    },
+    {
+      "card_id": "rounder_belly",
+      "name_zh": "肚子更圆",
+      "effect_summary": "冲撞充能上限 2→3；撞后硬直 0.24→0.34 秒。",
+      "visual_semantic": "奶蛙肚皮与新增第三格充能",
+      "file": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_rounder_belly_v01.svg",
+      "sha256": "7ec3198d6326706c8716ff8dca809989185c11035d113feb1b3b7242594aaead"
+    },
+    {
+      "card_id": "cant_hold",
+      "name_zh": "憋不住",
+      "effect_summary": "每次受击能量 +15；受击无敌 0.9 秒内不重复触发。",
+      "visual_semantic": "受击火花触发笑声能量波",
+      "file": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_cant_hold_v01.svg",
+      "sha256": "526134ac6056809440260b6c95cb955d9a06d54795ebd9efdb5e042ed698670c"
+    }
+  ]
+}

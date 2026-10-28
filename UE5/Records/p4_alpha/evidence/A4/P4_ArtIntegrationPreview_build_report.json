@@ -1,0 +1,106 @@
+{
+  "schema": "naiwa.p4.art_integration_preview_build/1",
+  "status": "preview_assets_generated_pending_visual_review",
+  "map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_ArtIntegrationPreview",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "level_opened_or_changed": true,
+  "runtime_played": false,
+  "frame_table": "/Game/Naiwa/P4/Data/DT_P4_A1_RuntimeFrames",
+  "frame_rows": 33,
+  "upgrade_table": "/Game/Naiwa/P4/Data/DT_P4_Upgrade_Alpha",
+  "upgrade_rows": [
+    "bounce_ball",
+    "cant_hold",
+    "rounder_belly"
+  ],
+  "sprite_material": "/Game/Naiwa/P4/Materials/Alpha/A1/M_P4_A1_SpriteRuntime",
+  "ui_textures": [
+    {
+      "asset_id": "card_icon_bounce_ball",
+      "asset_path": "/Game/Naiwa/P4/UI/Alpha/RuntimeReady/T_P4_A3_CardIcon_bounce_ball",
+      "source_png": "UE5/SourceAssets/P4/UI/Alpha/RuntimeReady/T_P4_A3_CardIcon_bounce_ball.png",
+      "source_sha256": "929f944776e54a685a2fd7991fea3db5eb6bbeb08475706c2f525f4816748b0c",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "alpha": "straight alpha retained",
+      "texture_group": "default (UE Python does not expose TextureGroup on Texture2D)",
+      "mip_generation": "NoMipmaps"
+    },
+    {
+      "asset_id": "card_icon_rounder_belly",
+      "asset_path": "/Game/Naiwa/P4/UI/Alpha/RuntimeReady/T_P4_A3_CardIcon_rounder_belly",
+      "source_png": "UE5/SourceAssets/P4/UI/Alpha/RuntimeReady/T_P4_A3_CardIcon_rounder_belly.png",
+      "source_sha256": "30a60e0dc1b335fc839565690f8ae719b6ad9c9610f907acc76df4b4ceab0e96",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "alpha": "straight alpha retained",
+      "texture_group": "default (UE Python does not expose TextureGroup on Texture2D)",
+      "mip_generation": "NoMipmaps"
+    },
+    {
+      "asset_id": "card_icon_cant_hold",
+      "asset_path": "/Game/Naiwa/P4/UI/Alpha/RuntimeReady/T_P4_A3_CardIcon_cant_hold",
+      "source_png": "UE5/SourceAssets/P4/UI/Alpha/RuntimeReady/T_P4_A3_CardIcon_cant_hold.png",
+      "source_sha256": "ea53b54361cd95fa51521d7670e37bc716e526d9b8be710226b1dddec0b7d205",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "alpha": "straight alpha retained",
+      "texture_group": "default (UE Python does not expose TextureGroup on Texture2D)",
+      "mip_generation": "NoMipmaps"
+    },
+    {
+      "asset_id": "category_mark_bullet",
+      "asset_path": "/Game/Naiwa/P4/UI/Alpha/RuntimeReady/T_P4_A3_CategoryMark_bullet",
+      "source_png": "UE5/SourceAssets/P4/UI/Alpha/RuntimeReady/T_P4_A3_CategoryMark_bullet.png",
+      "source_sha256": "e3dedfcf0c036a3ffd7e25851c7ce47d03bf53cb5997f1628847e31e3239cd28",
+      "dimensions_px": [
+        256,
+        256
+      ],
+      "alpha": "straight alpha retained",
+      "texture_group": "default (UE Python does not expose TextureGroup on Texture2D)",
+      "mip_generation": "NoMipmaps"
+    },
+    {
+      "asset_id": "category_mark_charge",
+      "asset_path": "/Game/Naiwa/P4/UI/Alpha/RuntimeReady/T_P4_A3_CategoryMark_charge",
+      "source_png": "UE5/SourceAssets/P4/UI/Alpha/RuntimeReady/T_P4_A3_CategoryMark_charge.png",
+      "source_sha256": "e0a5249d47421542309fc3f93da0a8d9fc03d7f0c04ae292ddd07a38a9aed596",
+      "dimensions_px": [
+        256,
+        256
+      ],
+      "alpha": "straight alpha retained",
+      "texture_group": "default (UE Python does not expose TextureGroup on Texture2D)",
+      "mip_generation": "NoMipmaps"
+    },
+    {
+      "asset_id": "category_mark_laugh",
+      "asset_path": "/Game/Naiwa/P4/UI/Alpha/RuntimeReady/T_P4_A3_CategoryMark_laugh",
+      "source_png": "UE5/SourceAssets/P4/UI/Alpha/RuntimeReady/T_P4_A3_CategoryMark_laugh.png",
+      "source_sha256": "d0bce46c72b01d6823fe8ef160433b2b4167450aea1d4bbb8877e1bcc71701f6",
+      "dimensions_px": [
+        256,
+        256
+      ],
+      "alpha": "straight alpha retained",
+      "texture_group": "default (UE Python does not expose TextureGroup on Texture2D)",
+      "mip_generation": "NoMipmaps"
+    }
+  ],
+  "arena_materials": {
+    "ground": "/Game/Naiwa/P4/Materials/Alpha/A2/M_P4_A2_Ground.M_P4_A2_Ground",
+    "sandstone": "/Game/Naiwa/P4/Materials/Alpha/A2/M_P4_A2_Sandstone.M_P4_A2_Sandstone",
+    "sandstone_light": "/Game/Naiwa/P4/Materials/Alpha/A2/M_P4_A2_SandstoneLight.M_P4_A2_SandstoneLight",
+    "trim": "/Game/Naiwa/P4/Materials/Alpha/A2/M_P4_A2_Trim.M_P4_A2_Trim",
+    "low_obstacle": "/Game/Naiwa/P4/Materials/Alpha/A2/M_P4_A2_LowObstacle.M_P4_A2_LowObstacle"
+  },
+  "a3_runtime_limit": "HUD health is read from P4 simulation; a T-cycled HUD style preview shows attack ring, displacement arrow, and unblockable starburst. Energy, wave, enemy, and world telegraph gameplay data are not implemented yet.",
+  "card_confirm_limit": "Preview acknowledgement only; does not grant an upgrade."
+}

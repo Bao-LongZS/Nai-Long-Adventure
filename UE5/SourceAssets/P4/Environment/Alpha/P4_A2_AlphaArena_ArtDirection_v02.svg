@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1020" role="img" aria-labelledby="title desc">
+  <title id="title">P4 α 沙丘晒笑场 · 场景可读性深化稿 v02</title>
+  <desc id="desc">固定三分之四镜头下的完整竞技场概念：沙岩拱门与低矮边界、开阔灰绿战斗地面、两侧低障碍、清晰的角色和敌群落位，以及形状与颜色双编码预警。</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBF7ED"/>
+      <stop offset="1" stop-color="#E9DFC9"/>
+    </linearGradient>
+    <linearGradient id="arena" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#728275"/>
+      <stop offset="1" stop-color="#55685D"/>
+    </linearGradient>
+    <linearGradient id="sandstone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D8B777"/>
+      <stop offset="1" stop-color="#A97847"/>
+    </linearGradient>
+    <linearGradient id="frog" x1=".1" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#FFE88D"/>
+      <stop offset="1" stop-color="#E6A83E"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feGaussianBlur stdDeviation="13"/>
+    </filter>
+    <pattern id="quietTiles" width="124" height="68" patternUnits="userSpaceOnUse" patternTransform="skewX(-12)">
+      <path d="M0 0 H124 M0 0 V68" fill="none" stroke="#D4DDC9" stroke-width="2" opacity=".17"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1020" rx="32" fill="url(#paper)"/>
+  <text x="56" y="67" fill="#48392E" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">P4 α · 沙丘晒笑场</text>
+  <text x="58" y="103" fill="#786956" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="18">场景可读性深化稿 v02 · 清晰展示边界、战斗净空、障碍、角色落位与预警样式</text>
+  <rect x="1266" y="43" width="278" height="44" rx="22" fill="#E4D0A8"/>
+  <text x="1405" y="71" text-anchor="middle" fill="#513F2F" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="16" font-weight="700">1100 × 185 uu · 57° / FOV 37°</text>
+
+  <rect x="48" y="143" width="308" height="786" rx="22" fill="#FFF9ED" stroke="#D5C7AA" stroke-width="2"/>
+  <text x="76" y="188" fill="#48392E" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">场景层级</text>
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif" fill="#57493B">
+    <circle cx="91" cy="233" r="17" fill="#D5AE6C"/><text x="91" y="239" text-anchor="middle" fill="#fff9ed" font-size="16" font-weight="700">1</text>
+    <text x="120" y="229" font-size="15" font-weight="700">舞台边界</text><text x="120" y="250" font-size="13" fill="#81715D">拱门、沙岩墙、前沿矮栏</text>
+    <circle cx="91" cy="293" r="17" fill="#64766A"/><text x="91" y="299" text-anchor="middle" fill="#fff9ed" font-size="16" font-weight="700">2</text>
+    <text x="120" y="289" font-size="15" font-weight="700">开阔战斗地面</text><text x="120" y="310" font-size="13" fill="#81715D">低频灰绿，中心不放装饰物</text>
+    <circle cx="91" cy="353" r="17" fill="#A77547"/><text x="91" y="359" text-anchor="middle" fill="#fff9ed" font-size="16" font-weight="700">3</text>
+    <text x="120" y="349" font-size="15" font-weight="700">两侧低障碍</text><text x="120" y="370" font-size="13" fill="#81715D">圆角矮石，脚底线保持可见</text>
+    <circle cx="91" cy="413" r="17" fill="#E6B34D"/><text x="91" y="419" text-anchor="middle" fill="#fff9ed" font-size="16" font-weight="700">4</text>
+    <text x="120" y="409" font-size="15" font-weight="700">角色与敌群</text><text x="120" y="430" font-size="13" fill="#81715D">分开放置，保持轮廓对比</text>
+  </g>
+  <path d="M76 457 H328" stroke="#DED2BC" stroke-width="2"/>
+  <text x="76" y="493" fill="#48392E" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="19" font-weight="700">主色分工</text>
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13" fill="#57493B">
+    <rect x="76" y="515" width="42" height="30" rx="7" fill="#607267"/><text x="132" y="535">战斗地面 · 灰绿</text>
+    <rect x="76" y="555" width="42" height="30" rx="7" fill="#C69B59"/><text x="132" y="575">边界立面 · 沙岩</text>
+    <rect x="76" y="595" width="42" height="30" rx="7" fill="#F3C44F"/><text x="132" y="615">玩家剪影 · 奶黄</text>
+    <rect x="76" y="635" width="42" height="30" rx="7" fill="#5E8293"/><text x="132" y="655">敌群剪影 · 蓝青</text>
+  </g>
+  <path d="M76 686 H328" stroke="#DED2BC" stroke-width="2"/>
+  <text x="76" y="722" fill="#48392E" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="19" font-weight="700">预警双编码</text>
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13" fill="#57493B">
+    <circle cx="94" cy="764" r="16" fill="none" stroke="#CF5048" stroke-width="7"/><path d="M87 750 L87 765 L99 759Z" fill="#CF5048"/><text x="126" y="769">攻击 · 红环 + 内尖角</text>
+    <path d="M76 820 L112 820 L94 788Z" fill="#E5B342" stroke="#72592F" stroke-width="3"/><path d="M92 812 L99 812 L99 805 L106 814 L99 823 L99 817 L92 817Z" fill="#493B2E"/><text x="126" y="818">位移 · 琥珀三角 + 箭头</text>
+    <path d="M94 843 L113 862 L94 881 L75 862Z" fill="#FFFDF5" stroke="#76664F" stroke-width="4" stroke-dasharray="17 7"/><text x="126" y="867">不可挡 · 白菱形 + 断边</text>
+  </g>
+
+  <rect x="386" y="143" width="1166" height="786" rx="22" fill="#E6DDC8" stroke="#C6B89D" stroke-width="2"/>
+  <text x="420" y="187" fill="#48392E" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">竞技场主视图</text>
+  <text x="420" y="215" fill="#786956" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="14">远景立面在上 · 地面中场保持空旷 · 前沿装饰压低，不盖住角色脚底与预警</text>
+
+  <path d="M430 366 Q562 279 697 332 Q823 274 956 332 Q1099 272 1246 329 Q1387 278 1503 345 L1503 427 L430 427Z" fill="#D7C69F"/>
+  <path d="M430 390 Q567 325 711 366 Q854 313 1009 365 Q1188 314 1326 360 Q1422 330 1503 369 L1503 432 L430 432Z" fill="#C7B184"/>
+
+  <path d="M495 359 Q968 324 1444 359 L1459 424 Q966 391 478 424Z" fill="url(#sandstone)" stroke="#634B35" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M903 354 L903 276 Q903 236 945 220 Q974 208 1003 220 Q1045 236 1045 276 L1045 356" fill="#715338" stroke="#513A2C" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M924 350 L924 278 Q924 249 950 239 Q974 229 998 239 Q1024 249 1024 278 L1024 351Z" fill="#607267"/>
+  <circle cx="974" cy="281" r="25" fill="#E6C783" stroke="#513A2C" stroke-width="7"/>
+  <path d="M960 282 Q974 267 988 282 Q974 297 960 282Z" fill="#79583B"/>
+  <path d="M580 375 L580 333 L612 309 L644 333 L644 371 M1301 371 L1301 333 L1333 309 L1365 333 L1365 376" fill="#A87847" stroke="#634B35" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M594 361 L594 338 L612 324 L630 338 L630 360 M1315 360 L1315 338 L1333 324 L1351 338 L1351 363" fill="#E5CE9C"/>
+  <path d="M487 406 Q968 376 1454 406" fill="none" stroke="#F1D89F" stroke-width="10" opacity=".9"/>
+
+  <path d="M476 417 Q957 382 1440 418 L1514 753 Q968 823 410 753Z" fill="#634B35" opacity=".2" transform="translate(0 17)" filter="url(#softShadow)"/>
+  <path d="M476 407 Q957 372 1440 408 L1514 736 Q968 806 410 736Z" fill="url(#sandstone)" stroke="#594431" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M500 427 Q959 395 1417 428 L1480 712 Q970 778 444 712Z" fill="url(#arena)" stroke="#463A30" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M500 427 Q959 395 1417 428 L1480 712 Q970 778 444 712Z" fill="url(#quietTiles)"/>
+
+  <path d="M476 488 Q961 454 1430 491 M463 636 Q966 680 1458 635" fill="none" stroke="#B9C3AA" stroke-width="4" opacity=".48"/>
+  <path d="M673 416 L633 748 M1251 417 L1307 746" fill="none" stroke="#B9C3AA" stroke-width="3" opacity=".3"/>
+  <path d="M754 432 Q967 422 1172 434" fill="none" stroke="#DAE0C8" stroke-width="4" stroke-dasharray="12 14" opacity=".38"/>
+
+  <g stroke="#594431" stroke-width="7" stroke-linejoin="round">
+    <path d="M542 500 L608 494 L635 519 L627 552 L553 557 L531 537Z" fill="#A87547"/>
+    <path d="M547 498 L609 494 L595 476 L563 480Z" fill="#D9B678"/>
+    <path d="M1332 507 L1400 510 L1413 539 L1389 563 L1321 551 L1312 528Z" fill="#A87547"/>
+    <path d="M1332 507 L1400 510 L1383 491 L1348 490Z" fill="#D9B678"/>
+  </g>
+  <ellipse cx="593" cy="552" rx="51" ry="11" fill="#2B3932" opacity=".24"/>
+  <ellipse cx="1360" cy="558" rx="52" ry="11" fill="#2B3932" opacity=".24"/>
+
+  <ellipse cx="757" cy="575" rx="49" ry="23" fill="none" stroke="#D4C58D" stroke-width="4" stroke-dasharray="9 9" opacity=".8"/>
+  <path d="M757 545 L766 563 L757 579 L748 563Z" fill="#F2CF70" opacity=".8"/>
+  <ellipse cx="1312" cy="603" rx="51" ry="24" fill="none" stroke="#9DB2A0" stroke-width="4" stroke-dasharray="9 9" opacity=".8"/>
+  <path d="M1312 572 L1321 590 L1312 606 L1303 590Z" fill="#AEC0A5"/>
+
+  <ellipse cx="827" cy="626" rx="57" ry="17" fill="#26332D" opacity=".32"/>
+  <path d="M772 579 C766 553 779 526 802 515 C806 489 823 476 844 480 C866 484 878 502 879 519 C901 530 910 555 902 579 C897 603 882 614 864 618 L806 618 C787 612 776 599 772 579Z" fill="url(#frog)" stroke="#49372E" stroke-width="8" stroke-linejoin="round"/>
+  <ellipse cx="838" cy="573" rx="36" ry="30" fill="#FFF1D8" stroke="#9B7445" stroke-width="5"/>
+  <ellipse cx="817" cy="522" rx="8" ry="10" fill="#FFF9E8" stroke="#49372E" stroke-width="4"/>
+  <ellipse cx="850" cy="520" rx="8" ry="10" fill="#FFF9E8" stroke="#49372E" stroke-width="4"/>
+  <circle cx="819" cy="523" r="3.5" fill="#49372E"/><circle cx="852" cy="521" r="3.5" fill="#49372E"/>
+  <path d="M829 540 Q838 547 847 540" fill="none" stroke="#49372E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M795 611 Q808 626 822 616 M863 614 Q877 628 891 610" fill="none" stroke="#49372E" stroke-width="8" stroke-linecap="round"/>
+
+  <ellipse cx="1226" cy="637" rx="53" ry="14" fill="#26332D" opacity=".28"/>
+  <path d="M1187 603 Q1185 575 1202 555 Q1223 538 1248 555 Q1269 575 1265 603 L1253 622 L1200 622Z" fill="#648A9A" stroke="#344A50" stroke-width="8" stroke-linejoin="round"/>
+  <circle cx="1212" cy="576" r="5" fill="#F6E8C9"/><circle cx="1238" cy="576" r="5" fill="#F6E8C9"/>
+  <path d="M1208 598 Q1226 587 1244 598" fill="none" stroke="#344A50" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="1354" cy="656" rx="42" ry="12" fill="#26332D" opacity=".23"/>
+  <path d="M1322 626 Q1320 606 1334 592 Q1353 578 1372 592 Q1388 607 1385 626 L1376 640 L1332 640Z" fill="#7D9D9F" stroke="#344A50" stroke-width="7" stroke-linejoin="round"/>
+  <circle cx="1342" cy="608" r="4" fill="#F6E8C9"/><circle cx="1362" cy="608" r="4" fill="#F6E8C9"/>
+
+  <circle cx="1226" cy="607" r="69" fill="#D55049" opacity=".11"/>
+  <circle cx="1226" cy="607" r="59" fill="none" stroke="#D55049" stroke-width="8"/>
+  <path d="M1212 548 L1212 566 L1228 557Z" fill="#D55049"/>
+  <path d="M1117 598 L1144 598 M1135 589 L1144 598 L1135 607" fill="none" stroke="#E5B342" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M410 736 Q968 806 1514 736 L1503 768 Q970 837 420 767Z" fill="#A87547" stroke="#594431" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M459 754 Q970 816 1466 754" fill="none" stroke="#E3C58C" stroke-width="7" opacity=".9"/>
+
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="13" font-weight="700" fill="#4C3C2F">
+    <path d="M974 226 L974 187 L1135 187" fill="none" stroke="#72563B" stroke-width="2.5"/>
+    <rect x="1135" y="169" width="212" height="34" rx="17" fill="#FFF7E6" stroke="#C5A36B" stroke-width="2"/>
+    <text x="1241" y="191" text-anchor="middle">入场拱门 · 远景地标</text>
+    <path d="M592 516 L503 482 L462 482" fill="none" stroke="#72563B" stroke-width="2.5"/>
+    <rect x="397" y="464" width="176" height="34" rx="17" fill="#FFF7E6" stroke="#C5A36B" stroke-width="2"/>
+    <text x="485" y="486" text-anchor="middle">两侧矮石 · 不挡中场</text>
+    <path d="M828 643 L828 700 L696 700" fill="none" stroke="#72563B" stroke-width="2.5"/>
+    <rect x="483" y="682" width="213" height="34" rx="17" fill="#FFF7E6" stroke="#C5A36B" stroke-width="2"/>
+    <text x="589" y="704" text-anchor="middle">玩家落位 · 脚底影清楚</text>
+    <path d="M1230 681 L1230 726 L1326 726" fill="none" stroke="#72563B" stroke-width="2.5"/>
+    <rect x="1326" y="708" width="188" height="34" rx="17" fill="#FFF7E6" stroke="#C5A36B" stroke-width="2"/>
+    <text x="1420" y="730" text-anchor="middle">敌群与攻击预警</text>
+  </g>
+  <rect x="420" y="870" width="1092" height="36" rx="18" fill="#F7EEDB"/>
+  <text x="966" y="893" text-anchor="middle" fill="#665540" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="14">概念稿：预警只作示意；角色/敌群为可读性占位；模型、材质、摆位和特效均未冻结，待固定机位审核</text>
+</svg>

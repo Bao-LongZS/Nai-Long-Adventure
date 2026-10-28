@@ -1,0 +1,13 @@
+{
+  "status": "already_tuned_backup_persisted",
+  "material": "/Game/Naiwa/P4/Materials/W1/M_P4_W1_SoftShadow_RadialV6",
+  "backup": "/Game/Naiwa/P4/Materials/W1/M_P4_W1_SoftShadow_RadialV6_BeforeOpacityTune",
+  "old_strength_expected": 0.45,
+  "new_strength": 0.58,
+  "level_opened_or_changed": false,
+  "strength_before": 0.5799999833106995,
+  "strength_after": 0.5799999833106995,
+  "backup_strength": 0.44999998807907104,
+  "backup_asset_persisted": true,
+  "material_compile": "previously_passed"
+}

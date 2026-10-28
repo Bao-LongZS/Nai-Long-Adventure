@@ -1,0 +1,4 @@
+Name,Title,EffectKind,P0,P1,P2,bUnique,PrerequisiteCardIds,ExcludedCardIds,RedlineGroup,Rarity,IconSoftRef
+bounce_ball,跳弹奶球,projectile_bounce,1,0.40,690,true,(),(),low,None,None
+rounder_belly,肚子更圆,charge_capacity_recovery,3,0.34,0,true,(),(),medium,None,None
+cant_hold,憋不住,laugh_energy_on_hit,15,0.9,0,true,(),(),medium,None,None

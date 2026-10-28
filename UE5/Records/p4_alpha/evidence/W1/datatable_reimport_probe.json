@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "project": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\.workbuddy\\P4BuildScratch\\NaiwaP0",
+  "asset": "/Game/Naiwa/P4/Data/DT_P4_Upgrade_ReimportProbe",
+  "csv_import_factory": "CSVImportFactory",
+  "row_struct": "/Script/NaiwaRuntime.NaiwaP4UpgradeRow",
+  "row": "bounce_ball",
+  "column": "P0",
+  "baseline_value": 1.0,
+  "reimported_value": 1.25,
+  "restored_value": 1.0,
+  "cpp_recompiled_between_imports": false,
+  "scope": "DataTable import/readback only; gameplay runtime consumption is not implemented by this probe."
+}

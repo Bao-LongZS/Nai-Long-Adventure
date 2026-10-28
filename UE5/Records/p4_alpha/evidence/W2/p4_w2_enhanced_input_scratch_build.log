@@ -1,0 +1,46 @@
+Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Nai_LongEditor Win64 Development -Project=C:\Users\31314\Desktop\Nai-Long-Adventure\.workbuddy\P4BuildScratch\NaiwaP0\Nai_Long.uproject -WaitMutex -NoHotReloadFromIDE -NoUBA -MaxParallelActions=1 -UBARootDir=C:\Users\31314\Desktop\Nai-Long-Adventure\.workbuddy\P4BuildScratch\UBA -Progress
+Log file: C:\Users\31314\AppData\Local\Packages\sandbox.{e9cf704f-82cd-45f1-aac0-374d46826568}\AC\UnrealBuildTool\Log.txt
+Executing up to 1 actions based on MaxProcessorCount override
+UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+Invalidating makefile for Nai_LongEditor (source file added)
+Available x64 toolchains (1):
+ * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231
+    (Family=14.51.36231, FamilyRank=2, Version=14.51.36256, HostArchitecture=x64, ReleaseChannel=Latest, Architecture=x64)
+Visual Studio compiler version 14.51.36256 is newer than latest preferred version 14.50.35717. Please use caution as this compiler has not been heavily tested
+@progress push 5%
+@progress 'Generating code...' 0%
+@progress 'Generating code...' 33%
+UHT compiled-in object format Default
+@progress 'Generating code...' 67%
+@progress 'Generating code...' 100%
+@progress pop
+Building Nai_LongEditor...
+===== Toolchain Information =====
+Using ISPC compiler (C:\Program Files\Epic Games\UE_5.8\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+  Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2) 
+Using Visual Studio 14.51.36256 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+Warning: Visual Studio compiler 14.51.36256 is not a preferred version
+[Adaptive Build] Excluded from NaiwaRuntime unity file: NaiwaAnimInstance.cpp, NaiwaAutoTestComponent.cpp, NaiwaCharacter.cpp, NaiwaGameMode.cpp, NaiwaHUD.cpp, NaiwaMenuGameMode.cpp, NaiwaMenuPlayerController.cpp, NaiwaMenuProgress.cpp, NaiwaMenuWidget.cpp, NaiwaP1BouncePad.cpp, NaiwaP1CameraManager.cpp, NaiwaP1GameMode.cpp, NaiwaP1PlayerController.cpp, NaiwaP1SwitchPlatform.cpp, NaiwaP1TimedPlatform.cpp, NaiwaP1Trigger.cpp, NaiwaP2Archer.cpp, NaiwaP2ArcherAnimInstance.cpp, NaiwaP2Ballistics.cpp, NaiwaP2GameMode.cpp, NaiwaP2HUD.cpp, NaiwaP2ImpactEffectSubsystem.cpp, NaiwaP2PhysicsEgg.cpp, NaiwaP2PhysicsGoal.cpp, NaiwaP2PlayerController.cpp, NaiwaP2Probe.cpp, NaiwaP2SceneLibrary.cpp, NaiwaP2StructureBlock.cpp, NaiwaP3BombActor.cpp, NaiwaP3BombTypes.cpp, NaiwaP3FogOfWar.cpp, NaiwaP3GridSubsystem.cpp, NaiwaP3ItemEffects.cpp, NaiwaP3LootTable.cpp, NaiwaP3M1Actors.cpp, NaiwaP3M1GameMode.cpp, NaiwaP3M1HUD.cpp, NaiwaP3M1Settings.cpp, NaiwaP3M2EnemyAI.cpp, NaiwaP3M2GameMode.cpp, NaiwaP3M2HUD.cpp, NaiwaP3M2LevelSession.cpp, NaiwaP3M2MechanicsSettings.cpp, NaiwaP3M2RuntimeSubsystem.cpp, NaiwaP3M2ScenarioPreviewActor.cpp, NaiwaP3M2SeededMap.cpp, NaiwaP3M2Settings.cpp, NaiwaP3M2WorldPresentation.cpp, NaiwaP3Mechanics.cpp, NaiwaP3PlayerPawn.cpp, NaiwaRuntime.cpp, NaiwaVisualReviewComponent.cpp, NaiwaP4ArenaSubsystem.cpp, NaiwaP4Determinism.cpp, NaiwaP4Settings.cpp, NaiwaP4UpgradeCatalog.cpp, NaiwaP4InputBuffer.cpp, NaiwaP4PlayerController.cpp, NaiwaP4CameraRig.cpp, NaiwaP4W1PreviewGameMode.cpp, NaiwaP4DeterminismTests.cpp
+=================================
+Using Unreal Build Accelerator local executor to run 5 action(s)
+  CPU 24 physical cores, 24 logical cores
+  Memory 31.47 GB physical, 26.59 GB/44.97 GB committed
+  UBA Storage capacity 40 GB
+@progress 'Compiling C++ source code...' 0%
+@progress 'Compiling C++ source code...' 20%
+@progress 'Compiling C++ source code...' 40%
+[1/5] Compile [x64] Module.NaiwaRuntime.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[2/5] Compile [x64] NaiwaP4PlayerController.cpp [NoUba]
+C:\Users\31314\Desktop\Nai-Long-Adventure\.workbuddy\P4BuildScratch\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(9,1): fatal error C1083: ￎ￞ﾷﾨﾴ￲﾿ﾪﾰ￼￀ﾨￎￄﾼ￾: ﾡﾰNaiwaP4ArenaSubsystem.hﾡﾱ: No such file or directory
+#include "NaiwaP4ArenaSubsystem.h"
+^
+Some action result store tasks did not succeed
+Total time in Unreal Build Accelerator local executor: 7.36 seconds
+
+Result: Failed (OtherCompilationError)
+Total execution time: 11.34 seconds
+Trace written to file C:\Users\31314\AppData\Local\Packages\sandbox.{e9cf704f-82cd-45f1-aac0-374d46826568}\AC\UnrealBuildTool\Trace.uba with size 4.4kb

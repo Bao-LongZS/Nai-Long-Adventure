@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">子弹强化类别标记</title>
+  <desc id="desc">暖金色圆点，代表子弹强化类别。</desc>
+  <circle cx="32" cy="32" r="22" fill="#D59A3B" stroke="#49372E" stroke-width="6"/>
+</svg>

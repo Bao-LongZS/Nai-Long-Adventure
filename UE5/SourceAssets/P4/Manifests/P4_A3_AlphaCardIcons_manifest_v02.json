@@ -1,0 +1,65 @@
+{
+  "schema": "naiwa.p4.alpha_card_icons/1",
+  "asset_id": "P4_ALPHA_CARD_ICONS",
+  "version": "v02",
+  "status": "visual_approved_runtime_not_imported",
+  "visual_approved_date": "2026-10-28",
+  "runtime_imported": true,
+  "source_of_truth": "UE5/Records/p4_alpha/design_reference/P4_章节数据_v1.json",
+  "previous_manifest": "UE5/SourceAssets/P4/Manifests/P4_A3_AlphaCardIcons_manifest_v01.json",
+  "owner_feedback": {
+    "date": "2026-10-28",
+    "bounce_ball": "通过，保留原图案。",
+    "rounder_belly_and_cant_hold": "图案不够形象，换稿后供负责人审核。",
+    "final_review": "2026-10-28: 跳弹奶球、肚子更圆 v02、憋不住 v02 全部通过。"
+  },
+  "preview": "UE5/Records/p4_alpha/evidence/W3/P4_A3_AlphaCardIcons_v02.html",
+  "art_direction": {
+    "format": "SVG",
+    "view_box_px": [
+      512,
+      512
+    ],
+    "palette": {
+      "cream": "#FFF8E9",
+      "frog_yellow": "#F5C34F",
+      "warm_brown": "#513A2C",
+      "leaf_green_accent": "#78A86C"
+    },
+    "text_embedded_in_icons": false,
+    "note": "Independent semantic icon drafts only. Full card faces, HUD states and color-blind review are not included."
+  },
+  "cards": [
+    {
+      "card_id": "bounce_ball",
+      "name_zh": "跳弹奶球",
+      "effect_summary": "命中后弹向最近敌人 1 次；第 2 跳伤害 ×0.40。",
+      "visual_status": "owner_approved",
+      "approval_basis": "User feedback 2026-10-28: 跳弹奶球通过。",
+      "visual_semantic": "奶球沿弧线弹向第二个目标点",
+      "file": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_bounce_ball_v01.svg",
+      "sha256": "0454003f1eb1ff8df48a38f2c3e840af0cd90d2515d873ae3f2efc7e751c62fb"
+    },
+    {
+      "card_id": "rounder_belly",
+      "name_zh": "肚子更圆",
+      "effect_summary": "冲撞充能上限 2→3；撞后硬直 0.24→0.34 秒。",
+      "visual_status": "owner_approved",
+      "approval_basis": "User feedback 2026-10-28: v02 revision approved.",
+      "visual_semantic": "三格充能的奶蛙鼓起大肚撞向靶体",
+      "file": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_rounder_belly_v02.svg",
+      "sha256": "2d78d5116777c438492c3f31155e93d8920833b561f5f1aac794d58fec16ca05"
+    },
+    {
+      "card_id": "cant_hold",
+      "name_zh": "憋不住",
+      "effect_summary": "每次受击能量 +15；受击无敌 0.9 秒内不重复触发。",
+      "visual_status": "owner_approved",
+      "approval_basis": "User feedback 2026-10-28: v02 revision approved.",
+      "visual_semantic": "奶蛙受击后闭眼大笑，笑声带出能量亮点",
+      "file": "UE5/SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_cant_hold_v02.svg",
+      "sha256": "33f1ef99a045bfd19f1d640ccd5d4cba244080d8131d09d2a89f78da78277bab"
+    }
+  ],
+  "runtime_asset_root": "/Game/Naiwa/P4/UI/Alpha/RuntimeReady"
+}

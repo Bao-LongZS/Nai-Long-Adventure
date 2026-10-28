@@ -1,0 +1,80 @@
+{
+  "schema": "naiwa.p4.art_sample/1",
+  "asset_id": "P4_ALPHA_A0_PUNCH_SAMPLE",
+  "status": "owner_approved_cute_direction_sample_wip",
+  "selected_direction": "First round, cute draft; retain the mascot's soft, friendly proportions. Express punch force through stance, body lean and arm extension rather than redesigning the character.",
+  "action": {
+    "id": "basic_punch",
+    "view": "front_three_quarter",
+    "cycle": ["windup", "contact", "recovery"],
+    "frames": 3,
+    "direction_coverage": ["front"],
+    "notes": "This is an A0 front-view action sample, not approval of the 33-frame Alpha atlas. Back/side samples remain open."
+  },
+  "generation": {
+    "tool": "built-in image_gen",
+    "identity_reference": "UE5/SourceAssets/Common/CharacterReferences/player_reference.png",
+    "style_references": [
+      "UE5/SourceAssets/P4/Portraits/W1/P4_Player_W1_idle_neutral.png",
+      "UE5/SourceAssets/P4/Portraits/W1/P4_Player_W1_hit_reaction.png"
+    ],
+    "chosen_draft": "The first, rounded/cute direction, per project owner instruction on 2026-10-28.",
+    "generated_wall_clock_seconds_approx": 114,
+    "wall_clock_note": "Approximate image-generation call time for the three selected frames only; excludes prompt iterations, inspection, integration, QA and any human art effort. It is not a production artist-day estimate."
+  },
+  "image_spec": {
+    "format": "PNG RGBA",
+    "resolution": [1292, 1218],
+    "alpha_threshold_for_measurement": 16,
+    "source_art_editing": "No crop or paint-over applied. Per-frame foot anchors are retained in metadata for runtime alignment.",
+    "foot_anchor_method": "Approximate horizontal center of the dark-brown foot pixels in the lower body region; vertical anchor is the alpha>=16 lowest visible row. Confirm both in the fixed-camera UE render.",
+    "color_space": "sRGB",
+    "ue_import_recommendation": {
+      "srgb": true,
+      "compression": "Default",
+      "mip_generation": "Sharpen0",
+      "texture_group": "Character",
+      "alpha_usage": "Opacity mask; verify masked edge at 720p and 1080p"
+    }
+  },
+  "frames": [
+    {
+      "id": "punch_windup",
+      "file": "P4_A0_Punch_F01_Windup.png",
+      "source_role": "windup",
+      "visible_rect_alpha16": [136, 75, 1117, 1126],
+      "foot_anchor_px": [699, 1125],
+      "anchor_from_bottom_px": 93,
+      "sha256": "D165DA2326908BB40031F50B145E0071D94719B62D33B158BC41C0FA8DEE95AC"
+    },
+    {
+      "id": "punch_contact",
+      "file": "P4_A0_Punch_F02_Contact.png",
+      "source_role": "contact",
+      "visible_rect_alpha16": [178, 77, 1261, 1121],
+      "foot_anchor_px": [643, 1120],
+      "anchor_from_bottom_px": 98,
+      "sha256": "1E36C2B2DE55B42B9BB97A69AF582DD3870976B093BB058C8DDB9D3198C90DBD"
+    },
+    {
+      "id": "punch_recovery",
+      "file": "P4_A0_Punch_F03_Recovery.png",
+      "source_role": "recovery",
+      "visible_rect_alpha16": [238, 76, 1139, 1121],
+      "foot_anchor_px": [693, 1120],
+      "anchor_from_bottom_px": 98,
+      "sha256": "A4EA7961260997CA464449F412A75BE525EB723E32CBA22FB96A6B385F174983"
+    }
+  ],
+  "qa": {
+    "alpha_extrema": [0, 255],
+    "frame_1_2_foot_baseline_delta_px_source": 5,
+    "frame_2_3_foot_baseline_delta_px_source": 0,
+    "runtime_anchor_compensation_required": true,
+    "character_identity_visual_review": "passed for yellow pear-shaped body, green eyes, cream belly and brown hands/feet",
+    "cycle_readability_visual_review": "windup, extended contact and guarded recovery are distinct; verify timing and foot anchoring in the fixed-camera UE preview",
+    "edge_cleanup": "review threshold-alpha bounds; low-alpha specks outside the visible silhouette are present in generated source and should be evaluated at runtime import",
+    "owner_visual_direction_approval": "passed on 2026-10-28 for the first rounded/cute draft; the stronger/muscular alternate is excluded",
+    "production_approval": "A0 art direction/sample approved by the owner; fixed-camera runtime, anchor compensation, full direction coverage and effort review remain pending"
+  }
+}

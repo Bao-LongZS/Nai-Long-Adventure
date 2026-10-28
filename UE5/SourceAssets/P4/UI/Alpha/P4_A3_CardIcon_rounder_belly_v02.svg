@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">肚子更圆 · 冲撞大肚靶体 · 图标候选 v02</title>
+  <desc id="desc">三格充能的奶蛙鼓起圆肚向靶体冲撞，突出充能上限增加和冲撞强化。</desc>
+  <defs>
+    <linearGradient id="frog" x1=".15" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#FFE58B"/>
+      <stop offset=".64" stop-color="#F5C34F"/>
+      <stop offset="1" stop-color="#D99235"/>
+    </linearGradient>
+    <linearGradient id="belly" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF8E7"/>
+      <stop offset="1" stop-color="#E8D3A7"/>
+    </linearGradient>
+    <linearGradient id="stone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E8D6B3"/>
+      <stop offset="1" stop-color="#B99A70"/>
+    </linearGradient>
+  </defs>
+  <!-- Three dash charges -->
+  <g stroke="#513A2C" stroke-width="11">
+    <circle cx="170" cy="55" r="25" fill="#F6D77C"/>
+    <circle cx="242" cy="55" r="25" fill="#F6D77C"/>
+    <circle cx="314" cy="55" r="25" fill="#82B473"/>
+  </g>
+  <!-- Impact target -->
+  <path d="M432 225 H484 V388 H432 Q421 388 421 377 V236 Q421 225 432 225Z" fill="url(#stone)" stroke="#513A2C" stroke-width="15" stroke-linejoin="round"/>
+  <path d="M447 245 L460 272 L444 292 L463 313 L449 344 M474 268 L460 282 M473 330 L458 346" fill="none" stroke="#806349" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 264 H75 M20 311 H65 M35 357 H79" fill="none" stroke="#D9853B" stroke-width="13" stroke-linecap="round"/>
+  <!-- Round, charging frog body -->
+  <path d="M83 361 C65 324 73 273 98 236 C120 203 151 187 184 178 C187 132 218 103 255 103 C291 103 320 132 324 177 C358 188 385 215 399 251 C415 292 406 343 379 374 C356 402 323 416 284 420 L148 420 C117 408 96 389 83 361Z" fill="url(#frog)" stroke="#513A2C" stroke-width="19" stroke-linejoin="round"/>
+  <path d="M145 367 C124 378 110 394 106 414 M323 374 C341 387 351 400 353 416" fill="none" stroke="#513A2C" stroke-width="19" stroke-linecap="round"/>
+  <!-- Face -->
+  <ellipse cx="217" cy="157" rx="22" ry="27" fill="#FFF8E7" stroke="#513A2C" stroke-width="9"/>
+  <ellipse cx="292" cy="157" rx="22" ry="27" fill="#FFF8E7" stroke="#513A2C" stroke-width="9"/>
+  <circle cx="222" cy="164" r="9" fill="#513A2C"/>
+  <circle cx="297" cy="164" r="9" fill="#513A2C"/>
+  <path d="M240 193 Q256 204 273 193" fill="none" stroke="#513A2C" stroke-width="8" stroke-linecap="round"/>
+  <!-- Oversized cream belly -->
+  <ellipse cx="269" cy="306" rx="111" ry="99" fill="url(#belly)" stroke="#9B7445" stroke-width="13"/>
+  <path d="M226 248 C246 232 278 230 301 243" fill="none" stroke="#FFFDF5" stroke-width="10" stroke-linecap="round" opacity=".85"/>
+  <!-- Belly-first impact burst -->
+  <path d="M399 268 L409 286 L429 283 L419 301 L432 316 L411 315 L402 335 L393 316 L374 321 L382 302 L369 289 L391 288Z" fill="#F29A49" stroke="#513A2C" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M401 289 L402 299 L411 301" fill="none" stroke="#FFF8E7" stroke-width="6" stroke-linecap="round"/>
+</svg>

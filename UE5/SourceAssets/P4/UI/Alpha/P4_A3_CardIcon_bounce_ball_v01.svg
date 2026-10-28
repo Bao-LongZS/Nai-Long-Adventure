@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">跳弹奶球 · 图标候选 v01</title>
+  <desc id="desc">一颗奶黄色弹丸沿弧线弹向第二个目标点。</desc>
+  <defs>
+    <linearGradient id="ball" x1="0" y1="0" x2=".82" y2="1">
+      <stop offset="0" stop-color="#FFF4B9"/>
+      <stop offset=".58" stop-color="#F5CB58"/>
+      <stop offset="1" stop-color="#D99432"/>
+    </linearGradient>
+    <linearGradient id="smallBall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF8DC"/>
+      <stop offset="1" stop-color="#E9AC42"/>
+    </linearGradient>
+  </defs>
+  <path d="M61 357 C127 394 170 373 206 326 S275 219 337 208" fill="none" stroke="#6A4934" stroke-width="20" stroke-linecap="round" stroke-dasharray="2 34"/>
+  <path d="M319 177 L354 205 L313 217" fill="none" stroke="#6A4934" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="378" cy="188" r="62" fill="url(#smallBall)" stroke="#513A2C" stroke-width="18"/>
+  <path d="M306 300 C354 267 409 270 442 305" fill="none" stroke="#78A86C" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="183" cy="347" r="113" fill="url(#ball)" stroke="#513A2C" stroke-width="22"/>
+  <ellipse cx="151" cy="308" rx="39" ry="24" transform="rotate(-31 151 308)" fill="#FFFBE9" opacity=".8"/>
+  <path d="M133 431 C174 456 225 453 259 425" fill="none" stroke="#C27A31" stroke-width="12" stroke-linecap="round" opacity=".6"/>
+</svg>

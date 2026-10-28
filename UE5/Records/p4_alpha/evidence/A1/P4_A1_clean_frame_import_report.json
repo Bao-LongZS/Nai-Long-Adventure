@@ -1,0 +1,397 @@
+{
+  "status": "imported_pending_visual_calibration",
+  "manifest": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Manifests\\P4_A1_UE_Import_manifest.json",
+  "destination_root": "/Game/Naiwa/P4/Art/Alpha/A1/Frames",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "level_opened_or_changed": false,
+  "frames": [
+    {
+      "id": "idle_neutral_front",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/idle/T_P4_A1_idle_neutral_front",
+      "source_sha256": "0a7a7517b54962b50f478e19e7763d506c4702817c03f526cccbf0f9cab32202",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "idle_neutral_back",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/idle/T_P4_A1_idle_neutral_back",
+      "source_sha256": "1b703395b08ee3f946dd441d455eaa95b67a2711124a0e0f33f3edea6ab6a221",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "idle_neutral_side_right",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/idle/T_P4_A1_idle_neutral_side_right",
+      "source_sha256": "c1790aa0b9eedc8337862a43d4e84a126b1c78eab6c96f3bd0b850f53f62341b",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "move_step_a_front",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/move/T_P4_A1_move_step_a_front",
+      "source_sha256": "8a4075869948072cb5dc6dbeef6922331dcda1190fc89b3bdcd780b8d92ef62f",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "move_step_a_back",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/move/T_P4_A1_move_step_a_back",
+      "source_sha256": "2ffe5573515869325ce6dfad6461fee04c8588c40426f073635baa7347fa74de",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "move_step_a_side_right",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/move/T_P4_A1_move_step_a_side_right",
+      "source_sha256": "61f66675a14c57bd40511671fe841eae2d7502848da10a769c32a472dac9e98b",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "move_step_b_front",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/move/T_P4_A1_move_step_b_front",
+      "source_sha256": "6da9c30fdf71547256a4bc167a27946ff7cffe40b34fcbbd5e7f3f75bc0eb45e",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "move_step_b_back",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/move/T_P4_A1_move_step_b_back",
+      "source_sha256": "ff100ca91b766db5ae63d0df76b6f527f81cd77b81be0395694dac0ba4b986e3",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "move_step_b_side_right",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/move/T_P4_A1_move_step_b_side_right",
+      "source_sha256": "c9f8f544982166afc76483c8c28d7292365798c5c7ebf322b64a6494502237d3",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "attack_windup_front",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/attack/T_P4_A1_attack_windup_front",
+      "source_sha256": "ae08dfd9d43103135af8842b6d674f3c14863fd63bb2aca5691cbbda1a5c278b",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "attack_windup_back",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/attack/T_P4_A1_attack_windup_back",
+      "source_sha256": "e859c803f52653b89c116ec88b140746e3a7fd921dea585fc33e4c1b95b4cbbe",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "attack_windup_side_right",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/attack/T_P4_A1_attack_windup_side_right",
+      "source_sha256": "432c5a285383eb4845d1aae51ba9898ace45bb116db40158e3b23f158da4d00d",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "attack_contact_front",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/attack/T_P4_A1_attack_contact_front",
+      "source_sha256": "f5a0355f4050f126bf7a8bee326a1ff8af4da0824f255f8f675941f1f5013d9f",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "attack_contact_back",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/attack/T_P4_A1_attack_contact_back",
+      "source_sha256": "b692b15956dd0b7eba3f43bba8ecb342a2370124daed5c609b43f592de0f4ada",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "attack_contact_side_right",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/attack/T_P4_A1_attack_contact_side_right",
+      "source_sha256": "5c9c13d1dec6f026acaf30a456a1f7a07eba857cf90d9c588b08338e65e53929",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "dash_launch_front",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/dash/T_P4_A1_dash_launch_front",
+      "source_sha256": "58982d4e68b659833003ed86bc9fb35d3a6ba25402df7417fda901d4eda5910c",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "dash_launch_back",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/dash/T_P4_A1_dash_launch_back",
+      "source_sha256": "4b5b790e6903cda2d0d59d5d6fd162a0e5e8abfb3681d261e1b60b690b23a42c",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "dash_launch_side_right",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/dash/T_P4_A1_dash_launch_side_right",
+      "source_sha256": "5ccd5300e38d17552ed6f0cb45dee51c80eeb4e50118edda093144d92879d8e6",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "dash_stride_front",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/dash/T_P4_A1_dash_stride_front",
+      "source_sha256": "7b55ed78eb07db0cdeb5abca8e145924f7879a85e8330bebb99ad66759235900",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "dash_stride_back",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/dash/T_P4_A1_dash_stride_back",
+      "source_sha256": "c06acb42a2f8880d8d4223c2b455028f0f65426f06b902fe9da8e18ae2d37621",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "dash_stride_side_right",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/dash/T_P4_A1_dash_stride_side_right",
+      "source_sha256": "3579c8d2a9d25c415058611512d1a5ab9965a972ea56741616577260ade4a4fb",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "defend_guard_front",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/defend/T_P4_A1_defend_guard_front",
+      "source_sha256": "8ca787c9853f7d75e4fed0154f2f9998fd19554d901cfbbe74f914f6d826be3a",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "defend_guard_back",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/defend/T_P4_A1_defend_guard_back",
+      "source_sha256": "8ddcfd451c34fced5e5c68f5dcf868923ad33bf09348e23f450c2930714e7480",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "defend_guard_side_right",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/defend/T_P4_A1_defend_guard_side_right",
+      "source_sha256": "4e2ffa192615d267d9fe8423f98a97239894d485ef274f818b8bac66ac1d0213",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "hit_recoil_front",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/hit/T_P4_A1_hit_recoil_front",
+      "source_sha256": "2750fee309c72660b21e05d4a47307dfe5fc1cfff30345addc741eba7a625d5c",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "hit_recoil_back",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/hit/T_P4_A1_hit_recoil_back",
+      "source_sha256": "8efd05303bb1ed2ebee6696b4f11d53e339c70309df8262ae4534066c1ffc779",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "hit_recoil_side_right",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/hit/T_P4_A1_hit_recoil_side_right",
+      "source_sha256": "daf674ecf65349aa86ea2340f28fcb3a67b3e93056e566bcb18f8a21c25ec21e",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "laugh_open_front",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/laugh/T_P4_A1_laugh_open_front",
+      "source_sha256": "4423b5df9bbdc3cb10c36bc220d14a98ed2d97b309d3bf7ce95e289739f1ac31",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "laugh_open_back",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/laugh/T_P4_A1_laugh_open_back",
+      "source_sha256": "0fbe4e36c597fca9efe78da0e35367644759c6fcad03a3ee9bebd4c59c81a7d4",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "laugh_open_side_right",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/laugh/T_P4_A1_laugh_open_side_right",
+      "source_sha256": "5b4730442e63530da6cdb45fe423287b9cfa6c73ee8c208b92474b841cbe14f3",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "laugh_recover_front",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/laugh/T_P4_A1_laugh_recover_front",
+      "source_sha256": "51d03b9d57d91a13b7e5d47ff318bb719a6076cc88f6957dbd6b7c46c9bc0338",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "laugh_recover_back",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/laugh/T_P4_A1_laugh_recover_back",
+      "source_sha256": "2c6067714d9927292c9bfc59e5d4ddf0bdb74aa672f5580ff7f01994820b6854",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    },
+    {
+      "id": "laugh_recover_side_right",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/A1/Frames/laugh/T_P4_A1_laugh_recover_side_right",
+      "source_sha256": "4f5ef62030c8e14ee43d674280fa6b89e2435282b4a02aae1453f362cfc589b2",
+      "dimensions_px": [
+        724,
+        724
+      ],
+      "result": "imported",
+      "texture_readback": "passed"
+    }
+  ],
+  "manifest_status": "owner_approved_for_ue_import",
+  "preflight": {
+    "status": "passed",
+    "frame_count": 33,
+    "actions": [
+      "attack",
+      "dash",
+      "defend",
+      "hit",
+      "idle",
+      "laugh",
+      "move"
+    ],
+    "dimensions_px": [
+      724,
+      724
+    ],
+    "existing_same_source_assets": 0
+  },
+  "imported_count": 33,
+  "reused_count": 0,
+  "limitations": [
+    "Texture import and property readback do not verify visible sprite sampling or character calibration.",
+    "The script did not open or switch a level and did not run PIE/Standalone."
+  ]
+}

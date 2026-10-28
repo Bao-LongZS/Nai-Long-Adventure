@@ -1,0 +1,35 @@
+{
+  "schema": "naiwa.p4.alpha_hud_visual/1",
+  "asset_id": "P4_ALPHA_HUD_TELEGRAPH",
+  "version": "v02",
+  "status": "visual_approved_runtime_not_imported",
+  "visual_approved_date": "2026-10-28",
+  "runtime_imported": true,
+  "source_of_truth": "UE5/Records/p4_alpha/design_reference/P4_章节数据_v1.json",
+  "ui_spec_reference": "UE5/Records/p4_alpha/design_reference/P4_竞技场设计_v1.md",
+  "previous_manifest": "UE5/SourceAssets/P4/Manifests/P4_A3_HUDAndTelegraph_manifest_v01.json",
+  "owner_feedback": {
+    "date": "2026-10-28",
+    "style": "通过",
+    "requested_revision": "缩小 HUD，减少对战斗画面的遮挡。",
+    "final_review": "2026-10-28: 缩小占屏比例 v02 通过。"
+  },
+  "preview": "UE5/Records/p4_alpha/evidence/W3/P4_A3_HUDAndTelegraph_v02.html",
+  "preview_sha256": "ea9c88b150747db96e76a0af88aada9d30d3df301b1ca4668b52b098166fadea",
+  "revision_summary": {
+    "changed": [
+      "缩窄左上血量/能量/冲撞面板",
+      "缩小章节、连击面板文字与内边距",
+      "缩短并缩窄底部字幕条",
+      "调整窄屏断点的面板位置，减少相互遮挡"
+    ],
+    "kept": [
+      "已通过的颜色、形状、描边与信息层级",
+      "三类双编码预警",
+      "HUD 字段、数值和 A1 角色参照帧"
+    ]
+  },
+  "runtime_integrated": true,
+  "runtime_preview_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_ArtIntegrationPreview",
+  "runtime_limit": "Native HUD, card offer, and T-cycled telegraph style preview are wired; energy, wave, enemy, and world telegraph gameplay data await combat simulation."
+}

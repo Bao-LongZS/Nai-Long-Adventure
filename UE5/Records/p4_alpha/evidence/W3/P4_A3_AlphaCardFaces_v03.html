@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P4 A3 α 卡面与三选一流程样片 v03</title>
+<style>
+:root{color-scheme:dark;--ink:#49372e;--paper:#fff8e9;--sand:#e7d4ad;--gold:#efc35a;--green:#78a86c;--coral:#d98273;--night:#24282d}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;padding:28px;background:radial-gradient(ellipse at 50% -15%,#5d5140 0,#303237 37%,var(--night) 75%);color:#f6f0e5;font:15px/1.5 "Segoe UI","Microsoft YaHei",sans-serif}
+.shell{max-width:1440px;margin:0 auto}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:0 auto 18px;padding:0 8px}
+.brand{color:#e2d4b8;font-size:13px;font-weight:700;letter-spacing:.1em}
+.contrast-toggle{padding:8px 11px;border:1px solid #867456;border-radius:999px;background:#35363a;color:#efe7d5;font:inherit;font-size:12px;font-weight:700;cursor:pointer}
+.contrast-toggle[aria-pressed="true"]{background:#f2e7d1;color:#49372e;border-color:#c9ad76}
+.contrast-toggle:focus-visible{outline:3px solid #c69335;outline-offset:3px}
+.progress{display:flex;align-items:center;gap:10px;color:#ddd3c0;font-size:13px}
+.pips{display:flex;gap:5px}.pip{width:12px;height:12px;border:2px solid #b29b70;border-radius:50%}.pip.filled{background:#efc35a;border-color:#efc35a}
+.modal{padding:30px 34px 26px;border:1px solid #c9ad76;border-radius:24px;background:linear-gradient(135deg,#fffaf0,#f2e7d1);color:var(--ink);box-shadow:0 26px 80px #0c0e11a8,inset 0 1px #fff}
+.titlebar{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:23px}
+.eyebrow{margin:0 0 5px;color:#8f7754;font-size:12px;font-weight:800;letter-spacing:.12em}
+h1{margin:0;font-size:30px;line-height:1.15;letter-spacing:.02em}
+.sub{margin:8px 0 0;color:#75634c;font-size:14px}
+.chapter{padding:9px 13px;border:1px solid #c4a777;border-radius:999px;background:#f3e6c9;color:#654b2e;font-size:13px;font-weight:800;white-space:nowrap}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{width:100%;padding:0;text-align:left;color:inherit;font:inherit;appearance:none;cursor:pointer;position:relative;display:flex;flex-direction:column;min-height:516px;overflow:hidden;border:2px solid #cabb9f;border-radius:19px;background:linear-gradient(#fffdf7,#f4ead6);box-shadow:0 9px 18px #5d4a3016;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.card:hover:not(.selected){transform:translateY(-5px) scale(1.012);box-shadow:0 15px 26px #6a4d301f}
+.card:focus-visible{outline:4px solid #5d4932;outline-offset:4px}
+.card.selected{transform:translateY(-8px);border:3px solid #c69335;box-shadow:0 0 0 5px #f2d89777,0 18px 30px #6a4d241f}
+.card::before{position:absolute;inset:0 0 auto;height:8px;background:var(--line);content:""}
+.line-bullet{--line:#d59a3b}.line-charge{--line:#78a86c}.line-laugh{--line:#d98273}
+.line-charge .kindmark{border-radius:2px;transform:rotate(45deg)}
+.line-laugh .kindmark{border-radius:0;clip-path:polygon(50% 0%,61% 34%,100% 50%,61% 66%,50% 100%,39% 66%,0 50%,39% 34%);box-shadow:none;filter:drop-shadow(0 0 1px #6b5242)}
+.cardhead{display:flex;align-items:center;justify-content:space-between;padding:18px 18px 0}
+.kind{display:flex;align-items:center;gap:8px;color:#69553b;font-size:13px;font-weight:800;letter-spacing:.03em}
+.kindmark{width:12px;height:12px;border-radius:50%;background:var(--line);box-shadow:0 0 0 3px #fff9ec,0 0 0 5px color-mix(in srgb,var(--line) 50%,transparent)}
+.alpha{padding:4px 9px;border-radius:999px;background:#463a31;color:#fff3d7;font-size:10px;font-weight:800;letter-spacing:.1em}
+.art{display:grid;place-items:center;height:154px;margin:15px 18px 4px;border:1px solid #e4d6bc;border-radius:15px;background:radial-gradient(ellipse at 50% 105%,#e4d2aa 0,transparent 68%),linear-gradient(#fffaf0,#f2e6ce)}
+.art img{width:128px;height:128px;object-fit:contain;filter:drop-shadow(0 5px 4px #513a2c22)}
+.copy{padding:5px 21px 0}
+.copy h2{margin:0 0 9px;font-size:23px;line-height:1.2}
+.effect{min-height:66px;margin:0;color:#574a3b;font-size:14px;line-height:1.55}
+.effect strong{color:#49372e;font-weight:800}
+.rule{margin:15px 0 0;padding:10px 11px;border-left:4px solid var(--line);border-radius:0 9px 9px 0;background:#eee4d1;color:#6e5c45;font-size:12px;line-height:1.45}
+.rule b{display:block;margin-bottom:3px;color:#8b6d3b;font-size:10px;letter-spacing:.08em}
+.spacer{flex:1}
+.action{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:18px 18px 18px;padding:11px 13px;border:1px solid #c8b99e;border-radius:12px;background:#fffaf0;color:#6b563b;font-size:13px;font-weight:800}
+.card.selected .action{border-color:#a97928;background:linear-gradient(180deg,#f1cf7d,#e3b452);color:#49372e}
+.check{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#fff8e9;color:#6a4b20;font-size:16px}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:20px;padding-top:18px;border-top:1px solid #ddd0b8}
+.states{display:flex;align-items:center;gap:10px;color:#77644b;font-size:12px}
+.state-title{font-weight:800;letter-spacing:.04em}
+.owned{display:flex;align-items:center;gap:9px;padding:7px 10px;border:1px solid #d2c7b4;border-radius:11px;background:#e8e0d1;color:#877d6c}
+.owned img{width:34px;height:34px;padding:3px;border-radius:7px;background:#d8d1c4;filter:grayscale(1);opacity:.62}
+.ownedtext strong{display:block;color:#6d6559;font-size:11px}
+.ownedtext span{font-size:10px}
+.choice-status{max-width:300px;margin:0 auto 0 0;color:#77644b;font-size:12px;line-height:1.45}
+.confirm{padding:12px 24px;border:1px solid #6e562f;border-radius:12px;background:#5d4932;color:#fff5df;font-size:14px;font-weight:800;letter-spacing:.03em;cursor:pointer;transition:background .15s ease,transform .15s ease}
+.confirm:hover{background:#745a3b;transform:translateY(-1px)}
+.confirm:focus-visible{outline:3px solid #c69335;outline-offset:3px}
+.note{margin:16px 7px 0;color:#c2b9a8;font-size:12px}
+body.grayscale-preview .modal{filter:grayscale(1)}
+@media(max-width:1050px){body{padding:18px}.cards{gap:13px}.modal{padding:24px 20px}.card{min-height:530px}.cardhead{padding-left:14px;padding-right:14px}.copy{padding-left:15px;padding-right:15px}.action{margin-left:14px;margin-right:14px}}
+@media(max-width:760px){.toolbar,.titlebar,.foot{align-items:flex-start;flex-direction:column}.cards{grid-template-columns:1fr;max-width:470px;margin:auto}.card{min-height:490px}.titlebar{margin-bottom:17px}.progress{align-self:flex-end}}
+</style>
+</head>
+<body><main class="shell">
+  <div class="toolbar">
+    <div class="brand">NAIWA · P4 α · INTERACTIVE CARD MOCKUP</div>
+    <button class="contrast-toggle" id="contrastToggle" type="button" aria-pressed="false">灰度检查：关</button>
+    <div class="progress"><span>本局强化进度 · 样式示意</span><div class="pips" aria-label="九次强化示意"><i class="pip filled"></i><i class="pip"></i><i class="pip"></i><i class="pip"></i><i class="pip"></i><i class="pip"></i><i class="pip"></i><i class="pip"></i><i class="pip"></i></div><b>1 / 9</b></div>
+  </div>
+  <section class="modal">
+    <header class="titlebar">
+      <div><p class="eyebrow">章节奖励 · 三选一</p><h1>选择一张强化</h1><p class="sub">卡面互动样片；三张代表卡并排用于评审，不代表真实抽取。类别同时用颜色、形状和文字标识。</p></div>
+      <div class="chapter">沙丘晒笑场 · 第 1 章完成</div>
+    </header>
+    <div class="cards">
+      <article class="card line-bullet" role="button" tabindex="0" data-card="bounce_ball" aria-pressed="false">
+        <header class="cardhead"><span class="kind"><i class="kindmark"></i>子弹强化</span><span class="alpha">ALPHA</span></header>
+        <div class="art"><img src="../../../../SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_bounce_ball_v01.svg" alt="已通过图标：跳弹奶球"></div>
+        <div class="copy"><h2>跳弹奶球</h2><p class="effect">命中后弹向 <strong>690 px 内</strong>最近敌人 1 次；第 2 跳伤害 ×<strong>0.40</strong>。</p><div class="rule"><b>组合提示</b>与「一口俩」同持时，只有第一发弹射。</div></div>
+        <div class="spacer"></div><div class="action"><span class="choice-label">选择此卡</span><span class="choice-state">未选</span></div>
+      </article>
+      <article class="card line-charge selected" role="button" tabindex="0" data-card="rounder_belly" aria-pressed="true">
+        <header class="cardhead"><span class="kind"><i class="kindmark"></i>冲撞强化</span><span class="alpha">ALPHA</span></header>
+        <div class="art"><img src="../../../../SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_rounder_belly_v02.svg" alt="已通过图标：肚子更圆"></div>
+        <div class="copy"><h2>肚子更圆</h2><p class="effect">冲撞充能上限 <strong>2 → 3</strong>；撞后硬直 <strong>0.24 → 0.34 秒</strong>。</p><div class="rule"><b>组合提示</b>与「奶凶」同持时，硬直加成取最高值，不叠加。</div></div>
+        <div class="spacer"></div><div class="action"><span class="choice-label">当前选择</span><span class="choice-state check">✓</span></div>
+      </article>
+      <article class="card line-laugh" role="button" tabindex="0" data-card="cant_hold" aria-pressed="false">
+        <header class="cardhead"><span class="kind"><i class="kindmark"></i>大笑强化</span><span class="alpha">ALPHA</span></header>
+        <div class="art"><img src="../../../../SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_cant_hold_v02.svg" alt="已通过图标：憋不住"></div>
+        <div class="copy"><h2>憋不住</h2><p class="effect">每次受击能量 <strong>+15</strong>；受击无敌 <strong>0.9 秒</strong>内不重复触发。</p><div class="rule"><b>触发限制</b>同一受击无敌窗口只记一次能量。</div></div>
+        <div class="spacer"></div><div class="action"><span class="choice-label">选择此卡</span><span class="choice-state">未选</span></div>
+      </article>
+    </div>
+    <footer class="foot">
+      <div class="states"><span class="state-title">不可选状态样例</span><div class="owned"><img src="../../../../SourceAssets/P4/UI/Alpha/P4_A3_CardIcon_bounce_ball_v01.svg" alt=""><div class="ownedtext"><strong>跳弹奶球 · 已获得</strong><span>本局不重复出现</span></div></div></div>
+      <p class="choice-status" id="choiceStatus" aria-live="polite">点击卡牌切换选择；确认仅演示界面反馈。</p><button class="confirm" id="confirmChoice" type="button">确认所选强化</button>
+    </footer>
+  </section>
+  <p class="note">互动视觉候选 v03 · 类别增加形状冗余 · 可切换灰度检查 · 卡牌选择和确认仍为本地演示</p>
+</main>
+<script>
+(() => {
+  const cards = Array.from(document.querySelectorAll(".card[role=\"button\"]"));
+  const status = document.getElementById("choiceStatus");
+  const confirmButton = document.getElementById("confirmChoice");
+  const contrastToggle = document.getElementById("contrastToggle");
+  let selectedCard = cards.find((card) => card.classList.contains("selected")) || null;
+
+  function selectCard(card) {
+    selectedCard = card;
+    cards.forEach((item) => {
+      const selected = item === card;
+      item.classList.toggle("selected", selected);
+      item.setAttribute("aria-pressed", String(selected));
+      item.querySelector(".choice-label").textContent = selected ? "当前选择" : "选择此卡";
+      const state = item.querySelector(".choice-state");
+      state.classList.toggle("check", selected);
+      state.textContent = selected ? "✓" : "未选";
+    });
+    confirmButton.textContent = "确认所选强化";
+    status.textContent = `当前选择「${card.querySelector("h2").textContent}」。点击确认可预览反馈。`;
+  }
+
+    cards.forEach((card) => {
+    card.addEventListener("click", () => selectCard(card));
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        selectCard(card);
+      }
+    });
+  });
+  contrastToggle.addEventListener("click", () => {
+    const active = document.body.classList.toggle("grayscale-preview");
+    contrastToggle.setAttribute("aria-pressed", String(active));
+    contrastToggle.textContent = active ? "灰度检查：开" : "灰度检查：关";
+  });
+  confirmButton.addEventListener("click", () => {
+    if (!selectedCard) return;
+    const name = selectedCard.querySelector("h2").textContent;
+    status.textContent = `已确认选择「${name}」（仅本地界面演示；未写入游戏或存档）。`;
+    confirmButton.textContent = "已确认 · 本地演示";
+  });
+})();
+</script>
+</body>
+</html>
+</html>
+
+
+
+

@@ -1,0 +1,72 @@
+{
+  "status": "static_pose_render_probe",
+  "atlas": "UE5/SourceAssets/P4/Portraits/W1/P4_Player_W1_StaticPoseAtlas.png",
+  "size": [
+    1020,
+    480
+  ],
+  "layout": "2 cells, horizontal; transparent RGBA; baseline-aligned foot anchors",
+  "cell_size": [
+    509,
+    480
+  ],
+  "frames": [
+    {
+      "id": "idle_neutral",
+      "source": "UE5/SourceAssets/P3/Portraits/Processed/SPR_Player_Neutral_A.png",
+      "source_alpha_bounds": [
+        20,
+        20,
+        346,
+        476
+      ],
+      "atlas_rect": [
+        0,
+        0,
+        509,
+        480
+      ],
+      "frame_texture": "UE5/SourceAssets/P4/Portraits/W1/P4_Player_W1_idle_neutral.png",
+      "visible_rect": [
+        91,
+        0,
+        326,
+        456
+      ],
+      "foot_anchor": [
+        254,
+        456
+      ],
+      "production_animation_frame": false
+    },
+    {
+      "id": "hit_reaction",
+      "source": "UE5/SourceAssets/P3/Portraits/Processed/SPR_Player_Hit_A.png",
+      "source_alpha_bounds": [
+        20,
+        20,
+        481,
+        462
+      ],
+      "atlas_rect": [
+        511,
+        0,
+        509,
+        480
+      ],
+      "frame_texture": "UE5/SourceAssets/P4/Portraits/W1/P4_Player_W1_hit_reaction.png",
+      "visible_rect": [
+        535,
+        14,
+        461,
+        442
+      ],
+      "foot_anchor": [
+        765,
+        456
+      ],
+      "production_animation_frame": false
+    }
+  ],
+  "limitation": "Two static poses only; does not satisfy idle/move/attack/dash/defend/laugh animation production or three-direction coverage."
+}

@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "asset": "/Game/Naiwa/P4/Data/DT_P4_Upgrade_Smoke",
+  "row_struct": "/Script/NaiwaRuntime.NaiwaP4UpgradeRow",
+  "columns": [
+    "EffectKind",
+    "ExcludedCardIds",
+    "IconSoftRef",
+    "P0",
+    "P1",
+    "P2",
+    "PrerequisiteCardIds",
+    "Rarity",
+    "RedlineGroup",
+    "Title",
+    "bUnique"
+  ],
+  "factory": "CSVImportFactory",
+  "imported_object_paths": [
+    "/Game/Naiwa/P4/Data/DT_P4_Upgrade_Smoke.DT_P4_Upgrade_Smoke"
+  ],
+  "row_names": [
+    "bounce_ball",
+    "cant_hold",
+    "rounder_belly"
+  ],
+  "row_count": 3,
+  "rows": {
+    "bounce_ball": {
+      "Title": "NSLOCTEXT(\"DT_P4_Upgrade_Smoke [5B1EEE8A15E65763DB7B1B09D5120DE2]\", \"bounce_ball_Title\", \"跳弹奶球\")",
+      "EffectKind": "projectile_bounce",
+      "P0": "1.000000",
+      "P1": "0.400000",
+      "P2": "690.000000",
+      "bUnique": "True",
+      "PrerequisiteCardIds": "",
+      "ExcludedCardIds": "",
+      "RedlineGroup": "low",
+      "Rarity": "None",
+      "IconSoftRef": "None"
+    },
+    "rounder_belly": {
+      "Title": "NSLOCTEXT(\"DT_P4_Upgrade_Smoke [5B1EEE8A15E65763DB7B1B09D5120DE2]\", \"rounder_belly_Title\", \"肚子更圆\")",
+      "EffectKind": "charge_capacity_recovery",
+      "P0": "3.000000",
+      "P1": "0.340000",
+      "P2": "0.000000",
+      "bUnique": "True",
+      "PrerequisiteCardIds": "",
+      "ExcludedCardIds": "",
+      "RedlineGroup": "medium",
+      "Rarity": "None",
+      "IconSoftRef": "None"
+    },
+    "cant_hold": {
+      "Title": "NSLOCTEXT(\"DT_P4_Upgrade_Smoke [5B1EEE8A15E65763DB7B1B09D5120DE2]\", \"cant_hold_Title\", \"憋不住\")",
+      "EffectKind": "laugh_energy_on_hit",
+      "P0": "15.000000",
+      "P1": "0.900000",
+      "P2": "0.000000",
+      "bUnique": "True",
+      "PrerequisiteCardIds": "",
+      "ExcludedCardIds": "",
+      "RedlineGroup": "medium",
+      "Rarity": "None",
+      "IconSoftRef": "None"
+    }
+  },
+  "cpp_compile_after_csv_edit": false
+}
