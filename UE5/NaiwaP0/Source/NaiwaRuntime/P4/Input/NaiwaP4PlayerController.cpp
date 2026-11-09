@@ -1,6 +1,7 @@
 #include "NaiwaP4PlayerController.h"
 
 #include "EnhancedInputComponent.h"
+#include "Components/InputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputAction.h"
 #include "InputActionValue.h"
@@ -8,6 +9,7 @@
 #include "InputModifiers.h"
 #include "../Core/NaiwaP4ArenaSubsystem.h"
 #include "Engine/LocalPlayer.h"
+#include "Engine/World.h"
 #include "InputCoreTypes.h"
 
 void ANaiwaP4PlayerController::BeginPlay()
@@ -41,9 +43,9 @@ void ANaiwaP4PlayerController::SetupInputComponent()
 	EnhancedInput->BindAction(MoveYAction, ETriggerEvent::Triggered, this, &ThisClass::OnMoveY);
 	EnhancedInput->BindAction(MoveYAction, ETriggerEvent::Completed, this, &ThisClass::OnMoveYEnded);
 	EnhancedInput->BindAction(MoveYAction, ETriggerEvent::Canceled, this, &ThisClass::OnMoveYEnded);
-	EnhancedInput->BindAction(AttackAction, ETriggerEvent::Started, this, &ThisClass::OnAttackStarted);
-	EnhancedInput->BindAction(AttackAction, ETriggerEvent::Completed, this, &ThisClass::OnAttackEnded);
-	EnhancedInput->BindAction(AttackAction, ETriggerEvent::Canceled, this, &ThisClass::OnAttackEnded);
+	EnhancedInput->BindAction(MeleeAction, ETriggerEvent::Started, this, &ThisClass::OnMeleeStarted);
+	EnhancedInput->BindAction(MeleeAction, ETriggerEvent::Completed, this, &ThisClass::OnMeleeEnded);
+	EnhancedInput->BindAction(MeleeAction, ETriggerEvent::Canceled, this, &ThisClass::OnMeleeEnded);
 	EnhancedInput->BindAction(DashAction, ETriggerEvent::Started, this, &ThisClass::OnDashStarted);
 	EnhancedInput->BindAction(BlockAction, ETriggerEvent::Started, this, &ThisClass::OnBlockStarted);
 	EnhancedInput->BindAction(BlockAction, ETriggerEvent::Completed, this, &ThisClass::OnBlockEnded);
@@ -62,16 +64,16 @@ void ANaiwaP4PlayerController::CreateRuntimeInputContext()
 	RuntimeInputContext = NewObject<UInputMappingContext>(this, TEXT("IMC_NaiwaP4_Runtime"));
 	MoveXAction = NewObject<UInputAction>(this, TEXT("IA_P4_MoveX"));
 	MoveYAction = NewObject<UInputAction>(this, TEXT("IA_P4_MoveY"));
-	AttackAction = NewObject<UInputAction>(this, TEXT("IA_P4_Attack"));
+	MeleeAction = NewObject<UInputAction>(this, TEXT("IA_P4_Melee"));
 	DashAction = NewObject<UInputAction>(this, TEXT("IA_P4_Dash"));
 	BlockAction = NewObject<UInputAction>(this, TEXT("IA_P4_Block"));
 	UltimateAction = NewObject<UInputAction>(this, TEXT("IA_P4_Ultimate"));
-	check(RuntimeInputContext && MoveXAction && MoveYAction && AttackAction
+	check(RuntimeInputContext && MoveXAction && MoveYAction && MeleeAction
 		&& DashAction && BlockAction && UltimateAction);
 
 	MoveXAction->ValueType = EInputActionValueType::Axis1D;
 	MoveYAction->ValueType = EInputActionValueType::Axis1D;
-	AttackAction->ValueType = EInputActionValueType::Boolean;
+	MeleeAction->ValueType = EInputActionValueType::Boolean;
 	DashAction->ValueType = EInputActionValueType::Boolean;
 	BlockAction->ValueType = EInputActionValueType::Boolean;
 	UltimateAction->ValueType = EInputActionValueType::Boolean;
@@ -94,7 +96,7 @@ void ANaiwaP4PlayerController::CreateRuntimeInputContext()
 	MapKey(MoveYAction, EKeys::Up, false);
 	MapKey(MoveYAction, EKeys::S, true);
 	MapKey(MoveYAction, EKeys::Down, true);
-	MapKey(AttackAction, EKeys::F, false);
+	MapKey(MeleeAction, EKeys::J, false);
 	MapKey(DashAction, EKeys::LeftShift, false);
 	MapKey(BlockAction, EKeys::SpaceBar, false);
 	MapKey(UltimateAction, EKeys::E, false);
@@ -168,24 +170,24 @@ void ANaiwaP4PlayerController::OnMoveYEnded(const FInputActionValue& Value)
 	SubmitMoveAxis();
 }
 
-void ANaiwaP4PlayerController::OnAttackStarted(const FInputActionValue& Value)
+void ANaiwaP4PlayerController::OnMeleeStarted(const FInputActionValue& Value)
 {
 	if (UWorld* World = GetWorld())
 	{
 		if (UNaiwaP4ArenaSubsystem* ArenaSubsystem = World->GetSubsystem<UNaiwaP4ArenaSubsystem>())
 		{
-			ArenaSubsystem->SetPlayerAttackHeld(true);
+			ArenaSubsystem->SetPlayerMeleeHeld(true);
 		}
 	}
 }
 
-void ANaiwaP4PlayerController::OnAttackEnded(const FInputActionValue& Value)
+void ANaiwaP4PlayerController::OnMeleeEnded(const FInputActionValue& Value)
 {
 	if (UWorld* World = GetWorld())
 	{
 		if (UNaiwaP4ArenaSubsystem* ArenaSubsystem = World->GetSubsystem<UNaiwaP4ArenaSubsystem>())
 		{
-			ArenaSubsystem->SetPlayerAttackHeld(false);
+			ArenaSubsystem->SetPlayerMeleeHeld(false);
 		}
 	}
 }

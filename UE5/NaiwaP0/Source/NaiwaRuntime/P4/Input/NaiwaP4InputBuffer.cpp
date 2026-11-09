@@ -3,8 +3,8 @@
 void FNaiwaP4InputBuffer::Reset()
 {
 	MoveAxis = FVector2D::ZeroVector;
-	bAttackPressed = false;
-	bAttackHeld = false;
+	bMeleePressed = false;
+	bMeleeHeld = false;
 	bDashPressed = false;
 	bBlockHeld = false;
 	bUltimatePressed = false;
@@ -27,27 +27,27 @@ void FNaiwaP4InputBuffer::SetMoveAxis(FVector2D Axis)
 	MoveAxis = Axis;
 }
 
-void FNaiwaP4InputBuffer::SetAttackHeld(const bool bHeld)
+void FNaiwaP4InputBuffer::SetMeleeHeld(const bool bHeld)
 {
-	if (bHeld && !bAttackHeld)
+	if (bHeld && !bMeleeHeld)
 	{
-		bAttackPressed = true;
+		bMeleePressed = true;
 	}
-	bAttackHeld = bHeld;
+	bMeleeHeld = bHeld;
 }
 
 FNaiwaP4InputCommand FNaiwaP4InputBuffer::ConsumeForFixedStep()
 {
 	FNaiwaP4InputCommand Command;
 	Command.MoveAxis = MoveAxis;
-	Command.bAttackPressed = bAttackPressed;
-	Command.bAttackHeld = bAttackHeld;
+	Command.bMeleePressed = bMeleePressed;
+	Command.bMeleeHeld = bMeleeHeld;
 	Command.bDashPressed = bDashPressed;
 	Command.bBlockHeld = bBlockHeld;
 	Command.bUltimatePressed = bUltimatePressed;
 
 	// Edge events are consumed once; held states remain for later fixed steps.
-	bAttackPressed = false;
+	bMeleePressed = false;
 	bDashPressed = false;
 	bUltimatePressed = false;
 	return Command;

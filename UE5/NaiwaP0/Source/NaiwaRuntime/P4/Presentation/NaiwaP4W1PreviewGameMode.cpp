@@ -2,6 +2,7 @@
 
 #include "../Core/NaiwaP4ArenaSubsystem.h"
 #include "Engine/DataTable.h"
+#include "Engine/World.h"
 #include "GameFramework/PlayerController.h"
 
 ANaiwaP4W1PreviewGameMode::ANaiwaP4W1PreviewGameMode()

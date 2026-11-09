@@ -47,7 +47,9 @@
     "color_space": "sRGB",
     "alpha": "straight alpha retained",
     "texture_group": "Character",
-    "mip_generation": "Sharpen0",
+    "compression": "UserInterface2D (uncompressed RGBA8)",
+    "mip_generation": "Sharpen3",
+    "never_stream": true,
     "first_runtime_import_recommendation": "Use cleaned per-frame PNGs as independent Texture2D assets until atlas UV sampling is visually confirmed; the prior W1 atlas material needed this safe path."
   },
   "foot_anchor_method": "Bottommost alpha>=128 pixel row within the largest alpha-connected character component; X is weighted center of brown opaque pixels in the lowest 16 rows.",

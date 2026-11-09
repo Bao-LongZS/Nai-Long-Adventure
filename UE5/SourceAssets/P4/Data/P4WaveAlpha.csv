@@ -1,0 +1,9 @@
+RowName,WaveIndex,SpawnOrder,EnemyTypeId,Count,SpawnIntervalSeconds
+wave1_naiding,1,0,naiding,4,0.55
+wave2_naiding,2,0,naiding,4,0.55
+wave3_naiding,3,0,naiding,3,0.55
+wave3_naidun,3,1,naidun,1,0.55
+wave4_naiding,4,0,naiding,2,0.55
+wave4_naidun,4,1,naidun,2,0.55
+wave5_naiding,5,0,naiding,2,0.55
+wave5_naidun,5,1,naidun,2,0.55

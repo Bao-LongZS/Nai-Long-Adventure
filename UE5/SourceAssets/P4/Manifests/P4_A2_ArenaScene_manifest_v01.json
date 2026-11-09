@@ -1,0 +1,23 @@
+{
+  "schema": "naiwa.p4.a2_arena_scene/1",
+  "version": "v01",
+  "status": "owner_requested_ue_preview",
+  "asset_id": "P4_A2_REFINED_ARENA_SCENE",
+  "source_png": "UE5/SourceAssets/P4/Environment/Alpha/P4_A2_ArenaScene_v01.png",
+  "source_sha256": "B7A30593863C9BA37E76DBEFA3DA00E1E8F7489A3E3161660F4A86D343C32C5D",
+  "dimensions_px": [1672, 941],
+  "alpha": "opaque RGB",
+  "use": "fixed-camera 2.5D arena background plate; moving characters and gameplay feedback remain world-space runtime layers",
+  "visual_review_scope": "preview asset only; owner visual acceptance and 720p/1080p runtime alignment remain pending",
+  "generation": {
+    "tool": "built-in image_gen",
+    "prompt": "Create a polished full-bleed 16:9 stylized 3D game environment for P4's Dune Laughing Arena: warm carved sandstone courtyard, centered far-wall arched entrance, restrained teal banners and edge-only pottery/desert plants, a broad muted sage-gray green stone floor with subtle large paving seams, thin boundary trim, soft daylight and contact shadows. Keep the middle 65 percent of the floor open and low contrast for moving sprites, danger markers and shadows. Fixed elevated 3/4 camera looking down onto a broad shallow rectangular arena. No characters, text, logos, HUD, symbols, attacks, or black empty regions. Refined toy-like game-art materials with clean bevels and restrained surface detail.",
+    "transparent_background": false
+  },
+  "ue_preview": {
+    "texture_asset": "/Game/Naiwa/P4/Art/Alpha/A2/T_P4_A2_ArenaScene_v01",
+    "material_asset": "/Game/Naiwa/P4/Materials/Alpha/A2/M_P4_A2_RefinedBackdrop",
+    "map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_A2_RefinedArena_v01",
+    "texture_profile": "UserInterface2D uncompressed RGBA8; sRGB; UI group; no mips; non-streaming"
+  }
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>P4 W3 敌人六状态姿势稿审阅 v01</title>
+  <style>
+    :root { color-scheme: dark; --bg:#101419; --panel:#1a222b; --line:#35424e; --ink:#edf3f6; --muted:#b7c3cc; --accent:#78d2c5; --warn:#ffc277; }
+    * { box-sizing:border-box; }
+    body { margin:0; padding:28px; color:var(--ink); background:var(--bg); font:16px/1.55 system-ui,"Microsoft YaHei",sans-serif; }
+    main { max-width:1400px; margin:auto; }
+    h1,h2,h3 { line-height:1.2; }
+    h1 { margin:0 0 8px; font-size:30px; }
+    h2 { margin:32px 0 14px; border-bottom:1px solid var(--line); padding-bottom:8px; }
+    p { margin:8px 0 14px; }
+    a { color:var(--accent); }
+    .lead { color:var(--muted); }
+    .notice { padding:16px 18px; border:1px solid #805a30; border-left:5px solid var(--warn); border-radius:10px; background:#2a2118; margin:18px 0 24px; }
+    .meta { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0; }
+    .tag { border:1px solid var(--line); border-radius:999px; padding:4px 10px; color:var(--muted); font-size:13px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(360px,1fr)); gap:16px; }
+    article { min-width:0; padding:14px; border:1px solid var(--line); border-radius:12px; background:var(--panel); }
+    article h3 { margin:0; font-size:18px; }
+    .sub { color:var(--muted); font-size:13px; margin:4px 0 10px; }
+    .image-wrap { display:flex; justify-content:center; align-items:center; min-height:220px; padding:8px; border-radius:8px; background-color:#222a31; background-image:linear-gradient(45deg,#2b333b 25%,transparent 25%),linear-gradient(-45deg,#2b333b 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#2b333b 75%),linear-gradient(-45deg,transparent 75%,#2b333b 75%); background-size:20px 20px; background-position:0 0,0 10px,10px -10px,-10px 0; }
+    img { display:block; width:100%; max-height:520px; object-fit:contain; }
+    .issue { color:#ffd18f; font-size:14px; margin:10px 0 0; }
+    .ok { color:#a9e5d7; }
+    .summary { border-collapse:collapse; width:100%; margin:12px 0; }
+    .summary th,.summary td { text-align:left; vertical-align:top; padding:9px 10px; border-bottom:1px solid var(--line); }
+    .summary th { color:var(--accent); }
+    code { color:#d4e1e9; }
+    @media(max-width:600px) { body { padding:16px; } .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>P4 W3 敌人六状态姿势稿 v01</h1>
+  <p class="lead">奶丁 <code>naiding</code> / 奶盾 <code>naidun</code> · 概念方向已通过，进入动画姿势探索。</p>
+  <div class="meta"><span class="tag">2026-10-29</span><span class="tag">12 张状态姿势板</span><span class="tag">112 个建议帧格</span><span class="tag">Built-in ImageGen</span></div>
+  <div class="notice"><strong>当前是审阅用 WIP，不可直接导入 UE。</strong> 图像仍是姿势板，不是独立 512×512 帧。部分图集的像素尺寸与网格不整除；透明边缘、脚底锚点、循环连贯性和奶盾盾牌拆层仍待整理。Naiding 待机有散点，死亡背面有面部痕迹，需修正后再做生产导出。</div>
+  <p>大多数图按状态横向查看帧顺序、按视图纵向排列；hit 图每个视图只有 1 帧，视图从左到右排列。Naiding 视图顺序：正面、背面、右侧；Naidun 视图顺序：正面、背面、右侧、左侧。Naidun 左右侧分开保留，以确保盾牌始终朝向移动前方。</p>
+  <p><a href="../../../../SourceAssets/P4/Manifests/P4_W3_EnemyAnimation_manifest_v01.json">查看动画 manifest</a> · <a href="P4_W3_EnemyConceptReview_v01.html">返回概念方向审阅页</a></p>
+  <h2>奶丁 Naiding</h2>
+  <section class="grid">
+    <article><h3>Idle · 3 帧/视图</h3><p class="sub">naiding_idle_grid_v03.png · 1278×1230 · 3×3 · 每格 426×410</p><div class="image-wrap"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naiding_idle_grid_v03.png" alt="奶丁待机姿势板"></div><p class="issue">已替换旧背面脸部痕迹；仍有透明边缘散点需清理。</p></article>
+    <article><h3>Move · 4 帧/视图</h3><p class="sub">naiding_move_grid_v01.png · 1448×1086 · 4×3 · 每格 362×362</p><div class="image-wrap"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naiding_move_grid_v01.png" alt="奶丁移动姿势板"></div><p class="issue">网格等分；仍需统一脚底锚点并导出 512 像素源帧。</p></article>
+    <article><h3>Telegraph · 2 帧/视图</h3><p class="sub">naiding_telegraph_grid_v01.png · 1295×1215 · 2×3</p><div class="image-wrap"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naiding_telegraph_grid_v01.png" alt="奶丁攻击前摇姿势板"></div><p class="issue">姿势前倾意图清楚；当前网格不可等分，待重新排版。</p></article>
+    <article><h3>Attack · 3 帧/视图</h3><p class="sub">naiding_attack_grid_v01.png · 1536×1024 · 3×3</p><div class="image-wrap"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naiding_attack_grid_v01.png" alt="奶丁攻击姿势板"></div><p class="issue">需复核透明边缘和攻击动作起止，再按准确网格重新排版。</p></article>
+    <article><h3>Hit · 1 帧/视图</h3><p class="sub">naiding_hit_grid_v01.png · 2172×724 · 3 个视图横排 · 每格 724×724</p><div class="image-wrap"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naiding_hit_grid_v01.png" alt="奶丁受击姿势板"></div><p class="issue">单姿势覆盖三个方向；需统一正式源帧画布。</p></article>
+    <article><h3>Death · 3 帧/视图</h3><p class="sub">naiding_death_grid_v01.png · 1536×1024 · 3×3</p><div class="image-wrap"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naiding_death_grid_v01.png" alt="奶丁死亡姿势板"></div><p class="issue">背面出现面部痕迹，需要修正；网格待重新排版。</p></article>
+  </section>
+  <h2>奶盾 Naidun</h2>
+  <section class="grid">
+    <article><h3>Idle · 3 帧/视图</h3><p class="sub">naidun_idle_grid_v01.png · 1312×1199 · 3×4</p><div class="image-wrap"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naidun_idle_grid_v01.png" alt="奶盾待机姿势板"></div><p class="issue">盾牌正面位置可读；网格待重新排版，盾牌还未拆独立图层。</p></article>
+    <article><h3>Move · 4 帧/视图</h3><p class="sub">naidun_move_grid_v01.png · 1427×1102 · 4×4</p><div class="image-wrap"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naidun_move_grid_v01.png" alt="奶盾移动姿势板"></div><p class="issue">四方向均有独立稿；网格不可等分，盾牌层待拆分。</p></article>
+    <article><h3>Telegraph · 2 帧/视图</h3><p class="sub">naidun_telegraph_grid_v01.png · 1024×1536 · 2×4 · 每格 512×384</p><div class="image-wrap"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naidun_telegraph_grid_v01.png" alt="奶盾攻击前摇姿势板"></div><p class="issue">盾击前摇意图清楚；仍需校正锚点、清边和盾牌拆层。</p></article>
+    <article><h3>Attack · 3 帧/视图</h3><p class="sub">naidun_attack_grid_v01.png · 1536×1024 · 3×4 · 每格 512×256</p><div class="image-wrap"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naidun_attack_grid_v01.png" alt="奶盾盾击姿势板"></div><p class="issue">盾击动作读得清楚；母版高度较窄，正式帧需要统一到 512×512。</p></article>
+    <article><h3>Hit · 1 帧/视图</h3><p class="sub">naidun_hit_grid_v01.png · 2172×724 · 4 个视图横排 · 每格 543×724</p><div class="image-wrap"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naidun_hit_grid_v01.png" alt="奶盾受击姿势板"></div><p class="issue">单姿势覆盖四方向；需统一正式源帧画布。</p></article>
+    <article><h3>Death · 3 帧/视图</h3><p class="sub">naidun_death_grid_v01.png · 1086×1448 · 3×4 · 每格 362×362</p><div class="image-wrap"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naidun_death_grid_v01.png" alt="奶盾死亡姿势板"></div><p class="issue">盾牌仍握在手中；循环节奏、透明边缘与脚底锚点待制作 QA。</p></article>
+  </section>
+  <h2>建议播放节奏（待工程联调）</h2>
+  <table class="summary"><thead><tr><th>状态</th><th>每视图帧数</th><th>首轮建议</th></tr></thead><tbody>
+    <tr><td>idle</td><td>3</td><td>0.25 秒/帧，循环</td></tr>
+    <tr><td>move</td><td>4</td><td>0.10 秒/帧，循环</td></tr>
+    <tr><td>telegraph</td><td>2</td><td>0.175 秒/帧，单次；后续按现有敌人前摇时长校准</td></tr>
+    <tr><td>attack</td><td>3</td><td>0.10 秒/帧，单次</td></tr>
+    <tr><td>hit</td><td>1</td><td>停留约 0.14 秒</td></tr>
+    <tr><td>death</td><td>3</td><td>0.12 秒/帧，单次</td></tr>
+  </tbody></table>
+  <p class="lead">播放时间是初始视觉提案。正式 PNG 帧、锚点、动画循环和运行时导入仍需在清理、精确排版与游戏画面复核后另行交付。</p>
+</main>
+</body>
+</html>

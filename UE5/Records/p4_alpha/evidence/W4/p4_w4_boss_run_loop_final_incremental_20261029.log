@@ -1,0 +1,41 @@
+Log started at 10/29/2026 19:52:47 (2026-10-29T11:52:47Z)
+Resolved project argument C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Nai_Long.uproject to C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Nai_Long.uproject
+No config file at C:\ProgramData\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+No config file at C:\Users\31314\AppData\Local\Packages\sandbox.{6785e609-0905-4940-9212-70a371cd6a94}\AC\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+No config file at C:\Users\31314\Documents\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Configuration will be read from:
+  C:\Users\31314\AppData\Roaming\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Reading configuration file from: C:\Users\31314\AppData\Roaming\Unreal Engine\UnrealBuildTool\BuildConfiguration.xml
+Reading configuration file from: C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Saved\UnrealBuildTool\BuildConfiguration.xml
+Reading configuration file from: C:\Users\31314\AppData\Local\Packages\sandbox.{6785e609-0905-4940-9212-70a371cd6a94}\AC\UnrealEngine\Intermediate\Build\UnrealBuildTool.Env.BuildConfiguration.xml
+Log file: C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\Records\p4_alpha\evidence\W4\p4_w4_boss_run_loop_final_incremental_20261029.log
+
+Setting temp directory to 'C:\Users\31314\AppData\Local\Packages\sandbox.{6785e609-0905-4940-9212-70a371cd6a94}\AC\Temp\UnrealBuildTool\eb6d2d82'
+    Registering build platform: UnrealBuildTool.AndroidPlatformFactory
+    Registering build platform: UnrealBuildTool.IOSPlatformFactory
+    Registering build platform: UnrealBuildTool.LinuxPlatformFactory
+    Registering build platform: UnrealBuildTool.MacPlatformFactory
+    Registering build platform: UnrealBuildTool.TVOSPlatformFactory
+    Registering build platform: UnrealBuildTool.WindowsPlatformFactory
+Found Windows 10 SDK root at C:\Program Files (x86)\Windows Kits\10 (1)
+Found Windows 10 SDK root at C:\Program Files (x86)\Windows Kits\10 (2)
+Found Windows 10 SDK version 10.0.26100.0 at C:\Program Files (x86)\Windows Kits\10
+Found Universal CRT version 10.0.26100.0 at C:\Program Files (x86)\Windows Kits\10
+Win64 Installed SDK(s): MinVersion_Sdk=10.0.19041.0, MaxVersion_Sdk=10.9.99999.0, CurrentVersion_Sdk=10.0.26100.0, Version_AutoSdk=10.0.22621.0, CurrentVersion_AutoSdk=
+        Registering build platform: Win64 - buildable: True
+    Registering build platform: UnrealBuildTool.VisionOSPlatformFactory
+Command line: "C:\Program Files\Epic Games\UE_5.8\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Nai_LongEditor Win64 Development -Project=C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Nai_Long.uproject -WaitMutex -NoSharedPCH -NoHotReloadFromIDE -NoLiveCoding -UBARootDir=C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Intermediate\UBARoot -MaxParallelActions=16 -Log=C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\Records\p4_alpha\evidence\W4\p4_w4_boss_run_loop_final_incremental_20261029.log
+Executing up to 16 actions based on MaxProcessorCount override
+UbaServer - Listening on 0.0.0.0:1345
+Skipping C:\Program Files\Epic Games\UE_5.8\Engine\Intermediate\Build\BuildRules\UE5Rules.dll: File is installed
+Skipping C:\Program Files\Epic Games\UE_5.8\Engine\Intermediate\Build\BuildRules\UE5ProgramRules.dll: File is installed
+Available x64 toolchains (1):
+ * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231
+    (Family=14.51.36231, FamilyRank=2, Version=14.51.36256, HostArchitecture=x64, ReleaseChannel=Latest, Architecture=x64)
+Visual Studio compiler version 14.51.36256 is newer than latest preferred version 14.50.35717. Please use caution as this compiler has not been heavily tested
+Building UnrealEditor - Nai_LongEditor - Win64 - Development
+Generated code is up to date.
+Target is up to date
+Using Unreal Build Accelerator local executor to run 0 action(s)
+Total time in Unreal Build Accelerator local executor: 0.10 seconds
+Output binary: C:\Program Files\Epic Games\UE_5.8\Engine\Binaries\Win64\UnrealEditor.exe

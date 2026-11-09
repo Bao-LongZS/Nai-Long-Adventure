@@ -1,0 +1,52 @@
+{
+  "status": "imported_static_preview_pending_runtime_review",
+  "manifest": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Manifests\\P4_W3_StaticPreview_manifest_v02.json",
+  "destination_root": "/Game/Naiwa/P4/Art/Alpha/W3_Enemies/StaticPreview",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "level_opened_or_changed": false,
+  "runtime_played": false,
+  "manifest_status": "approved_for_static_preview_only",
+  "preflight": {
+    "status": "passed",
+    "asset_count": 2,
+    "dimensions_px": [
+      512,
+      512
+    ],
+    "existing_same_source_assets": 2
+  },
+  "assets": [
+    {
+      "enemy_id": "naiding",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W3_Enemies/StaticPreview/T_P4_W3_Naiding_IdleFront_StaticPreview_v01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W3_Enemies\\RuntimePreview\\naiding_idle_front_static_preview_v01.png",
+      "source_sha256": "14ad0a625a754eaada44687c7b127af94d6807e95b6ee52d3c6783824b46b5c2",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "mip_generation": "Sharpen0",
+      "compression": "TC_EditorIcon (uncompressed RGBA8)"
+    },
+    {
+      "enemy_id": "naidun",
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W3_Enemies/StaticPreview/T_P4_W3_Naidun_IdleFront_StaticPreview_v01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W3_Enemies\\RuntimePreview\\naidun_idle_front_static_preview_v01.png",
+      "source_sha256": "0d10a52ec37059640de3dbdc7a07124111f3e1293590375fc3d3f36993cde60f",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "mip_generation": "Sharpen0",
+      "compression": "TC_EditorIcon (uncompressed RGBA8)"
+    }
+  ],
+  "limitations": [
+    "These are static front-view preview textures only; no six-state animation frames were imported.",
+    "The script did not open or switch a level and did not run PIE/Standalone."
+  ]
+}

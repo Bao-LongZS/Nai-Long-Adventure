@@ -84,5 +84,13 @@
       "rasterizer": "sharp 0.35.5 / libvips 8.18.7"
     }
   ],
-  "runtime_asset_root": "/Game/Naiwa/P4/UI/Alpha/RuntimeReady"
+  "runtime_asset_root": "/Game/Naiwa/P4/UI/Alpha/RuntimeReady",
+  "texture_import": {
+    "color_space": "sRGB",
+    "alpha": "straight alpha retained",
+    "compression": "TC_EditorIcon (uncompressed RGBA8)",
+    "texture_group": "UI",
+    "mip_generation": "NoMipmaps",
+    "never_stream": true
+  }
 }

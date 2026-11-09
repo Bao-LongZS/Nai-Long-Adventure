@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "package_id": "p4_w4_boss_and_vfx",
+  "version": "v01",
+  "created_date": "2026-10-29",
+  "status": "concept_review_pending",
+  "scope": "W4 Boss concept and first-batch battle VFX, expanded to include the playable protagonist's skill and damage feedback effects",
+  "generation": {
+    "tool": "built-in image_gen",
+    "prompt_set_summary": "Soft rounded Q-cute, softly 3D-shaded P4 sprite language; warm ivory, oak, brass and caramel Boss distinct from Naidun; isolated concise gameplay VFX in cream, honey, coral and mint; no baked HUD or combat rules.",
+    "reference_assets": [
+      "UE5/SourceAssets/P4/Characters/Alpha/A1/RuntimeReady/FramesClean/idle/P4_A1_idle_neutral_front.png",
+      "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naidun_turnaround_v01_concept.png"
+    ]
+  },
+  "global_constraints": {
+    "concept_only": true,
+    "runtime_ready": false,
+    "ue_imported": false,
+    "boss_visual_scale_vs_player": "about 1.45x; art proposal pending owner review",
+    "runtime_display_scale": 0.82,
+    "target_frame_canvas_px": [512, 512],
+    "provisional_foot_anchor_px": [256, 466],
+    "anchor_status": "estimated from existing P4 preview convention; freeze only after frame export and fixed-camera review",
+    "alpha_edge_qa": "pending; concept-board alpha and edge cleanup are not production-approved",
+    "source_project_files": "not included in concept generation; add editable source after direction approval"
+  },
+  "assets": [
+    {
+      "asset_id": "boss_nai_tong_turnaround_v01",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_turnaround_v01_concept.png",
+      "type": "concept_turnaround",
+      "dimensions_px": [2172, 724],
+      "views": ["front", "back", "side_right"],
+      "includes_player_scale_reference": true,
+      "lid_carry": "held at the front/side; review whether this reads too much like a shield",
+      "sha256": "7131E19C936F1DF4723913EB24E24B96595A37BFD7C762BD45DD285996A71014",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_turnaround_v02",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_turnaround_v02_concept.png",
+      "type": "concept_turnaround_alternate_prop_carry",
+      "dimensions_px": [2172, 724],
+      "views": ["front", "back", "side_right"],
+      "includes_player_scale_reference": true,
+      "lid_carry": "hanging low at the hip on a strap; preferred candidate to separate idle silhouette from Naidun",
+      "sha256": "2D653078C49F66B7C5B738D794DF34130589C435CD3909492FD799722B00AF52",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_action_keyposes_v01",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_action_keyposes_v01_concept.png",
+      "type": "concept_pose_board",
+      "dimensions_px": [1536, 1024],
+      "poses": ["idle", "charge_telegraph", "charge_attack", "lid_slam_telegraph", "lid_slam_impact"],
+      "sha256": "D3FF8184852F4831412B5883D42EB4953587692E04A4DB98E20078D183DCC0C9",
+      "runtime_ready": false,
+      "notes": "Concept board only; no frame slicing, timing, or three-view consistency pass."
+    },
+    {
+      "asset_id": "boss_nai_tong_phase_two_v01",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_phase_two_v01_concept.png",
+      "type": "single_pose_concept",
+      "dimensions_px": [1292, 1217],
+      "poses": ["phase_two_transition_pose"],
+      "sha256": "C07B708590197CC994804F3793381DC6578B8F8DD5FA5A77D4B9E047DF8DC4D5",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "p4_w4_fx_sample_sheet_v01",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/p4_w4_fx_sample_sheet_v01_concept.png",
+      "type": "vfx_concept_sheet",
+      "dimensions_px": [2172, 724],
+      "effects": [
+        {"id": "fx_melee_impact", "event_id": "player_melee_hit", "play_on_miss": false},
+        {"id": "fx_dash_impact", "event_id": "player_dash_hit", "play_on_miss": false},
+        {"id": "fx_boss_lid_slam", "event_ids": ["boss_lid_slam_hit", "boss_lid_slam_missed"], "meaning": "slam occurred; does not assert player damage"}
+      ],
+      "sha256": "939AA33F1ACEA1057217AC161A3B3D1375F9017A2768727BA9E83BD4DBEBE96A",
+      "runtime_ready": false,
+      "notes": "Review sheet only; no isolated frame exports or alpha-edge QA."
+    },
+    {
+      "asset_id": "p4_player_fx_sample_sheet_v01",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/p4_player_fx_sample_sheet_v01_concept.png",
+      "type": "player_vfx_concept_sheet",
+      "dimensions_px": [1536, 1024],
+      "effects": [
+        {"id": "fx_milk_shot", "event_id": null, "event_status": "projectile spawn/render hook to confirm with engineering"},
+        {"id": "fx_melee_swing", "event_id": null, "event_status": "attack-start hook to confirm; contact remains player_melee_hit/miss"},
+        {"id": "fx_player_dash_trail", "event_id": null, "event_status": "dash-state start/end hook to confirm"},
+        {"id": "fx_laugh_burst", "event_id": null, "event_status": "laugh action hook to confirm"},
+        {"id": "fx_player_hit", "event_id": "player_damaged"},
+        {"id": "fx_defend_guard", "event_id": null, "event_status": "held defend state; bind after Presenter hook confirmation"}
+      ],
+      "sha256": "7ADDE6D34003C7181204B426AD5ADC6FF1D982B847E811FAA8B46B2EE637660F",
+      "runtime_ready": false,
+      "notes": "Review sheet only; no isolated frame exports or alpha-edge QA."
+    }
+  ],
+  "event_coverage_backlog": [
+    {"effect_id": "fx_enemy_hit", "event_id": "enemy_damaged", "status": "not_in_first_sample"},
+    {"effect_id": "fx_enemy_death", "event_id": "enemy_killed", "status": "not_in_first_sample"},
+    {"effect_id": "fx_boss_charge_trail", "event_id": "boss_telegraph_charge plus charge-state presentation; end on boss_charge_hit/missed", "status": "not_in_first_sample"},
+    {"effect_id": "fx_boss_phase_two", "event_id": "boss_phase_two", "status": "not_in_first_sample"},
+    {"effect_id": "fx_boss_death", "event_id": "boss_killed", "status": "optional; event spelling needs engineering confirmation; not_in_first_sample"}
+  ],
+  "visual_timing_proposals": {
+    "boss_charge_telegraph_seconds": 0.90,
+    "boss_lid_slam_telegraph_seconds": 1.05,
+    "boss_phase_two_seconds": 1.35,
+    "boss_animation_preview_fps": 24,
+    "note": "Timing proposals follow the engineering handoff; they do not set hitboxes, damage, or gameplay timing. VFX frame counts remain pending art direction and integration review."
+  },
+  "provisional_added_scope_estimate_art_person_days": {
+    "boss_design_and_three_view_nine_state_animation": "5-8",
+    "player_and_combat_vfx_full_event_set": "4-6",
+    "export_alpha_anchor_and_fixed_camera_qa": "1-2",
+    "total": "10-16",
+    "hours_per_person_day": 6,
+    "status": "planning estimate only; confirm frame counts, editable-source format, and event hooks before production"
+  }
+}

@@ -32,8 +32,8 @@ private:
 	void OnMoveYEnded(const FInputActionValue& Value);
 	void SubmitMoveAxis();
 
-	void OnAttackStarted(const FInputActionValue& Value);
-	void OnAttackEnded(const FInputActionValue& Value);
+	void OnMeleeStarted(const FInputActionValue& Value);
+	void OnMeleeEnded(const FInputActionValue& Value);
 	void OnDashStarted(const FInputActionValue& Value);
 	void OnBlockStarted(const FInputActionValue& Value);
 	void OnBlockEnded(const FInputActionValue& Value);
@@ -50,7 +50,7 @@ private:
 	TObjectPtr<UInputAction> MoveYAction;
 
 	UPROPERTY(Transient)
-	TObjectPtr<UInputAction> AttackAction;
+	TObjectPtr<UInputAction> MeleeAction;
 
 	UPROPERTY(Transient)
 	TObjectPtr<UInputAction> DashAction;

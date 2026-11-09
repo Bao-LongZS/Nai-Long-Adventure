@@ -1,0 +1,47 @@
+{
+  "schema": "naiwa.p4.w4_vfx_runtime_preview_runtime/1",
+  "status": "runtime_preview_booted_partial_effect_event_observation",
+  "date": "2026-10-30",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_ArtIntegrationPreview",
+  "import_report": "UE5/Records/p4_alpha/evidence/W4/P4_W4_VFX_RuntimePreview_import_report_v01.json",
+  "presenter": {
+    "sequence_count_loaded": 13,
+    "frame_row_count_loaded": 57,
+    "runtime_log": "UE5/NaiwaP0/Saved/Logs/Nai_Long.log",
+    "runtime_log_evidence": "P4 W4 VFX preview presenter loaded 13 sequences from 57 rows.",
+    "map_load": "passed"
+  },
+  "observed_effect_components": [
+    "fx_milk_shot",
+    "fx_player_hit",
+    "fx_enemy_hit",
+    "fx_enemy_death"
+  ],
+  "observed_effect_count": 4,
+  "event_trigger_coverage": "Partial. These four effect components appeared in the preview run. The remaining effect bindings are implemented but were not individually triggered and inspected in this capture.",
+  "material_parent_warning_count": 0,
+  "screenshot": {
+    "file": "UE5/NaiwaP0/Saved/Screenshots/WindowsEditor/HighresScreenshot00016.png",
+    "dimensions_px": [
+      1920,
+      1080
+    ],
+    "captured_utc": "2026-10-30T09:47:09Z",
+    "capture": "Delayed until after map startup and exposure adaptation; valid runtime scene capture."
+  },
+  "build": {
+    "result": "succeeded",
+    "log": "UE5/Records/p4_alpha/evidence/W4/P4_W4_VFX_RuntimePreview_build_final_20261030.log",
+    "module": "NaiwaRuntime",
+    "compiled_source": "UE5/NaiwaP0/Source/NaiwaRuntime/P4/Presentation/NaiwaP4ArtIntegrationPawn.cpp"
+  },
+  "source_manifest_promoted": false,
+  "production_approval": false,
+  "limitations": [
+    "The 57 frames remain timing/transform previews made from approved stills; they have no per-frame silhouette redraw.",
+    "The runtime map boot and frame catalog load are confirmed; only four of thirteen effect paths appeared in this capture.",
+    "Final anchor/size review, low-flash variants, all-event runtime inspection, and production art approval remain pending.",
+    "The preview log also contains existing non-VFX A3/W3 missing-asset or CSV-fallback messages; these did not prevent the W4 sequence catalog from loading."
+  ]
+}

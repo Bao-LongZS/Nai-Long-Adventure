@@ -15,7 +15,7 @@ public:
 	double FixedStepSeconds = 1.0 / 60.0;
 
 	UPROPERTY(Config, EditAnywhere, Category="Simulation", meta=(ClampMin="1", ClampMax="8"))
-	int32 MaxCatchUpSteps = 4;
+	int32 MaxCatchUpSteps = 8;
 
 	UPROPERTY(Config, EditAnywhere, Category="Arena", meta=(ClampMin="100.0"))
 	float LogicalArenaWidth = 1100.0f;

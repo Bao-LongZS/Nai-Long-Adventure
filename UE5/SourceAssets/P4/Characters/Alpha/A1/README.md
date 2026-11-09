@@ -33,4 +33,8 @@
 - `RuntimeReady/Atlases/`：按动作拆分的 7 张 RGBA 图集。列顺序为正面 / 背面 / 右侧面，行顺序见导入清单；格间 16 px 透明 gutter、四周 8 px 留边。
 - 导入矩形、清理规则、哈希和脚底锚点估算见 `UE5/SourceAssets/P4/Manifests/P4_A1_UE_Import_manifest.json`；逐帧原图/清理副本对照与图集预览见 `UE5/Records/p4_alpha/evidence/W2/P4_A1_Atlas_TechnicalReview.html`。
 - 首次 UE 接入建议使用 `FramesClean/` 中的独立帧纹理；图集先作为打包与复核产物，待 UE UV 单格采样确认后再作为运行时单纹理方案。W1 预览曾遇到 atlas UV 切格错误，独立纹理是已验证的呈现路径。
-- 当前状态：A1 原始帧的美术视觉验收通过；清理副本是待负责人确认的技术候选。动作图集与导入映射已准备，UE 导入、三朝向镜像、脚底投影校准及 720p/1080p 固定机位复核仍待完成。
+- 当前状态：A1 原始帧与已批准清理副本的美术验收通过。33 张独立 Texture2D 已在 UE 5.8.3 导入并完成属性回读；三朝向实际镜像、脚底投影校准及 720p/1080p 固定机位画面复核仍待完成。
+
+## UE 画质修复（2026-10-30）
+
+UE 5.8.3 已对 33 张同源 Texture2D 重写并回读成功：`TC_EditorIcon` 无压缩 RGBA8、sRGB、Character 组、Sharpen0 mip、不流送。运行时角色材质现使用直通 alpha 半透明，保留轮廓抗锯齿；不会再按 Masked cutoff 把半透明边缘硬切。资产/材质构建见 `UE5/Records/p4_alpha/evidence/A1/P4_A1_clean_frame_import_report_v02.json` 与 `UE5/Records/p4_alpha/evidence/A4/P4_ArtIntegrationPreview_build_report_v02.json`。脚底、720p/1080p 与零星源图低 alpha 边缘仍待负责人实际运行复核。

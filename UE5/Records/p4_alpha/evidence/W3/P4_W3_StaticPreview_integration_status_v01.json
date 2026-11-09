@@ -1,0 +1,52 @@
+{
+  "schema": "naiwa.p4.w3_enemy_static_preview_integration_status/1",
+  "created_date": "2026-10-29",
+  "status": "textures_imported_runtime_code_built_runtime_review_pending",
+  "scope": "Two approved static front-view W3 preview frames only; not production animation approval",
+  "source_assets": {
+    "status": "ready",
+    "count": 2,
+    "dimensions_px": [512, 512],
+    "manifest": "UE5/SourceAssets/P4/Manifests/P4_W3_StaticPreview_manifest_v01.json"
+  },
+  "runtime_code": {
+    "status": "integrated_and_full_editor_target_built",
+    "file": "UE5/NaiwaP0/Source/NaiwaRuntime/P4/Presentation/NaiwaP4ArtIntegrationPawn.cpp",
+    "warning_marker_file": "UE5/NaiwaP0/Source/NaiwaRuntime/P4/Presentation/NaiwaP4ArtIntegrationWidget.cpp",
+    "scope": "W3 wave-spawned Naiding and Naidun only; graybox fallback when static preview material is unavailable",
+    "build_evidence": {
+      "translation_unit": "NaiwaP4ArtIntegrationPawn.cpp compiled in the full editor target",
+      "full_target": "Nai_LongEditor Win64 Development compiled the updated P4 Pawn translation unit, then the link-only retry completed 2/2 actions with Result: Succeeded. The linked NaiwaRuntime DLL contains the W3 static enemy art path, narrower enemy sprite widths, W1 contact shadows, art-height attack-warning and damage-number placement, load-state diagnostics, and upright damage-number billboard.",
+      "translation_unit_build_log": "UE5/Records/p4_alpha/evidence/W3/p4_w3_enemy_composition_soft_shadows_compile_retry4_20261029.log",
+      "build_log": "UE5/Records/p4_alpha/evidence/W3/p4_w3_enemy_composition_soft_shadows_link_retry2_20261029.log"
+    }
+  },
+  "presentation_tuning": {
+    "static_preview_width_scale": {
+      "naiding": 0.9,
+      "naidun": 0.82
+    },
+    "enemy_contact_shadow": "W1 calibrated radial soft-shadow material; collider-scaled beneath living training and wave enemies",
+    "damage_numbers_and_attack_warning": "anchored above visible enemy art height"
+  },
+  "ue_content_import": {
+    "status": "imported",
+    "destination": "/Game/Naiwa/P4/Art/Alpha/W3_Enemies/StaticPreview",
+    "texture_assets_present": true,
+    "import_script": "UE5/Scripts/p4_import_w3_static_previews.py",
+    "report": "UE5/Records/p4_alpha/evidence/W3/P4_W3_StaticPreview_import_report.json",
+    "report_generated": true,
+    "engine": "5.8.3-58210709+++UE5+Release-5.8",
+    "verification": "Both Texture2D assets were imported. Source hashes and 512x512 RGBA dimensions passed preflight; sRGB, alpha, mip, and Character texture group settings passed readback."
+  },
+  "runtime_review": {
+    "status": "not_performed",
+    "pie_or_standalone": false,
+    "notes": [
+      "No UE runtime screenshot or in-map visual check is available yet; updated runtime code is built but still needs PIE/Standalone review for art scale, contact-shadow strength, foot alignment, and warning-marker headroom.",
+      "The six-state pose boards were not imported.",
+      "Naiding still needs alpha-edge cleanup; Naidun shield remains baked into the static frame."
+    ]
+  },
+  "next_step": "Review the P4 art-integration preview map for enemy size, transparency, foot alignment, warning-marker headroom, and contrast; then decide whether the W3 runtime review gate passes."
+}

@@ -1,0 +1,1304 @@
+{
+  "schema_version": "1.0",
+  "package_id": "p4_w4_boss_and_vfx",
+  "version": "v02",
+  "created_date": "2026-10-30",
+  "status": "wip_candidate_review",
+  "scope": "W4 Boss concept and first-batch battle VFX, expanded to include the playable protagonist's skill and damage feedback effects",
+  "generation": {
+    "tool": "built-in image_gen",
+    "prompt_set_summary": "Soft rounded Q-cute, softly 3D-shaded P4 sprite language; warm ivory, oak, brass and caramel Boss distinct from Naidun; isolated concise gameplay VFX in cream, honey, coral and mint; no baked HUD or combat rules.",
+    "reference_assets": [
+      "UE5/SourceAssets/P4/Characters/Alpha/A1/RuntimeReady/FramesClean/idle/P4_A1_idle_neutral_front.png",
+      "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naidun_turnaround_v01_concept.png"
+    ],
+    "second_batch_prompt_set_summary": "Single isolated full-body Boss state/view keyframes and isolated single-effect samples; transparent alpha; P4 cream, honey oak, brass, coral and mint palette; no HUD, hit rules, field, warning icon or baked gameplay background. Charge attack revision explicitly requests low grounded forward motion with both feet near the ground."
+  },
+  "global_constraints": {
+    "concept_only": false,
+    "runtime_ready": false,
+    "ue_imported": false,
+    "boss_visual_scale_vs_player": "about 1.45x; art proposal pending owner review",
+    "runtime_display_scale": 0.82,
+    "target_frame_canvas_px": [
+      512,
+      512
+    ],
+    "provisional_foot_anchor_px": [
+      256,
+      466
+    ],
+    "anchor_status": "estimated from existing P4 preview convention; freeze only after frame export and fixed-camera review",
+    "alpha_edge_qa": "All candidate PNGs are RGBA 512x512 with four transparent corners and zero visible pixels on the outer canvas border. Full fringe inspection and in-engine review remain pending.",
+    "source_project_files": "not included in concept generation; add editable source after direction approval",
+    "delivery_status": "single-frame WIP candidates; animation, detailed alpha/fringe, fixed-camera and UE integration review pending",
+    "candidate_canvas_px": [
+      512,
+      512
+    ]
+  },
+  "assets": [
+    {
+      "asset_id": "boss_nai_tong_turnaround_v01",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_turnaround_v01_concept.png",
+      "type": "concept_turnaround",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "views": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "includes_player_scale_reference": true,
+      "lid_carry": "held at the front/side; review whether this reads too much like a shield",
+      "sha256": "7131E19C936F1DF4723913EB24E24B96595A37BFD7C762BD45DD285996A71014",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_turnaround_v02",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_turnaround_v02_concept.png",
+      "type": "concept_turnaround_alternate_prop_carry",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "views": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "includes_player_scale_reference": true,
+      "lid_carry": "hanging low at the hip on a strap; preferred candidate to separate idle silhouette from Naidun",
+      "sha256": "2D653078C49F66B7C5B738D794DF34130589C435CD3909492FD799722B00AF52",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_action_keyposes_v01",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_action_keyposes_v01_concept.png",
+      "type": "concept_pose_board",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "poses": [
+        "idle",
+        "charge_telegraph",
+        "charge_attack",
+        "lid_slam_telegraph",
+        "lid_slam_impact"
+      ],
+      "sha256": "D3FF8184852F4831412B5883D42EB4953587692E04A4DB98E20078D183DCC0C9",
+      "runtime_ready": false,
+      "notes": "Concept board only; no frame slicing, timing, or three-view consistency pass."
+    },
+    {
+      "asset_id": "boss_nai_tong_phase_two_v01",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_phase_two_v01_concept.png",
+      "type": "single_pose_concept",
+      "dimensions_px": [
+        1292,
+        1217
+      ],
+      "poses": [
+        "phase_two_transition_pose"
+      ],
+      "sha256": "C07B708590197CC994804F3793381DC6578B8F8DD5FA5A77D4B9E047DF8DC4D5",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "p4_w4_fx_sample_sheet_v01",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/p4_w4_fx_sample_sheet_v01_concept.png",
+      "type": "vfx_concept_sheet",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "effects": [
+        {
+          "id": "fx_melee_impact",
+          "event_id": "player_melee_hit",
+          "play_on_miss": false
+        },
+        {
+          "id": "fx_dash_impact",
+          "event_id": "player_dash_hit",
+          "play_on_miss": false
+        },
+        {
+          "id": "fx_boss_lid_slam",
+          "event_ids": [
+            "boss_lid_slam_hit",
+            "boss_lid_slam_missed"
+          ],
+          "meaning": "slam occurred; does not assert player damage"
+        }
+      ],
+      "sha256": "939AA33F1ACEA1057217AC161A3B3D1375F9017A2768727BA9E83BD4DBEBE96A",
+      "runtime_ready": false,
+      "notes": "Review sheet only; no isolated frame exports or alpha-edge QA."
+    },
+    {
+      "asset_id": "p4_player_fx_sample_sheet_v01",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/p4_player_fx_sample_sheet_v01_concept.png",
+      "type": "player_vfx_concept_sheet",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "effects": [
+        {
+          "id": "fx_milk_shot",
+          "event_id": null,
+          "event_status": "projectile spawn/render hook to confirm with engineering"
+        },
+        {
+          "id": "fx_melee_swing",
+          "event_id": null,
+          "event_status": "attack-start hook to confirm; contact remains player_melee_hit/miss"
+        },
+        {
+          "id": "fx_player_dash_trail",
+          "event_id": null,
+          "event_status": "dash-state start/end hook to confirm"
+        },
+        {
+          "id": "fx_laugh_burst",
+          "event_id": null,
+          "event_status": "laugh action hook to confirm"
+        },
+        {
+          "id": "fx_player_hit",
+          "event_id": "player_damaged"
+        },
+        {
+          "id": "fx_defend_guard",
+          "event_id": null,
+          "event_status": "held defend state; bind after Presenter hook confirmation"
+        }
+      ],
+      "sha256": "7ADDE6D34003C7181204B426AD5ADC6FF1D982B847E811FAA8B46B2EE637660F",
+      "runtime_ready": false,
+      "notes": "Review sheet only; no isolated frame exports or alpha-edge QA."
+    },
+    {
+      "asset_id": "boss_nai_tong_charge_attack_side_right_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_charge_attack_side_right_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_charge_attack_side_right_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 297568,
+      "source_file_size_bytes": 1532708,
+      "sha256": "EDCB5C13AE14FEDF2A1BA4FE96A1A664788CC20E91879938E03086752D6F9812",
+      "source_sha256": "B7383C7D91E21259C9B80655F18C9BE083D1DDBF054072CAA76FAF5B119E32C4",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "charge_attack",
+      "view": "side_right",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Grounded forward-driving keyframe revised from a leap-like candidate; still needs foot contact, direction and three-view animation review."
+    },
+    {
+      "asset_id": "boss_nai_tong_charge_telegraph_side_right_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_charge_telegraph_side_right_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_charge_telegraph_side_right_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 285890,
+      "source_file_size_bytes": 1320018,
+      "sha256": "6E5335E68535CD7546CB91C4B8A2BC0A46B5FAA73341B27D7E238036C66C9EB7",
+      "source_sha256": "F94F068E30C8E2A732981013491B8A99EFE26501D0AD3699D66ACE8DF8DFA6D9",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "charge_telegraph",
+      "view": "side_right",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": 0.9,
+      "timing_status": "engineering presentation timing reference; not a new gameplay rule",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "boss_nai_tong_death_front_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_death_front_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_death_front_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 178885,
+      "source_file_size_bytes": 921824,
+      "sha256": "1CCB9CD5E69F3A5366B31815571FE2E968BF93D5F6680B4D400CBAA594428E88",
+      "source_sha256": "E3F7443089FCCA8FCFB4283F633FAA4610AFFC7612396FF08873F32B75A5573D",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "death",
+      "view": "front",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Single ending pose only; no full defeat/recoil sequence."
+    },
+    {
+      "asset_id": "boss_nai_tong_hit_front_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_hit_front_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_hit_front_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 329295,
+      "source_file_size_bytes": 1271822,
+      "sha256": "B645B0BB8542AADE9FBC535FA104A55C65D0B364A548ABBC55318462202CDBD9",
+      "source_sha256": "AB0A133A5C9805701532272B516087D3EBC4DB8F6A1F5EA1D97B10C6E09EE8DD",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "hit",
+      "view": "front",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_back_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_back_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_back_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 304876,
+      "source_file_size_bytes": 1310523,
+      "sha256": "FE3A1CEEADA0C78ACC22F16D4CFAFB9A9F56991D7806C6419FE6F3FEE4BD22CB",
+      "source_sha256": "E9E2113A301E1B77CE77116D7BF64702A4984870FB5B35B49830A62B501CD74D",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "idle",
+      "view": "back",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_front_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_front_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_front_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 299368,
+      "source_file_size_bytes": 1323173,
+      "sha256": "C0ABE4140E677F947EE1D291710DA9F54ABC4E9299F3F7282319A7F8D4EDE32A",
+      "source_sha256": "A85F0985ADB0C9BE94CE4A1F1C743EC56AF74112F676CAD95095BDB1D35DF8C0",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "idle",
+      "view": "front",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_side_right_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_side_right_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_side_right_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 282026,
+      "source_file_size_bytes": 1148175,
+      "sha256": "D2C069CFFEA0BD93370391E00C6B7195599AC824CB11043A3E8097D8FADFE2AD",
+      "source_sha256": "EBBA15226A42376788E6C0F876E6495A50167A6E2897694EE0C04A757093D277",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "idle",
+      "view": "side_right",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "boss_nai_tong_lid_slam_impact_front_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_lid_slam_impact_front_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_lid_slam_impact_front_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 300124,
+      "source_file_size_bytes": 1317430,
+      "sha256": "46343D1DFE722ABDF7A3F0010AFB13A5DD05920FD9A15A63C540D5136744C912",
+      "source_sha256": "C99151FB3D5A03E2708302BDCA2FB4C1348524FCF0CA9F4D793CC32C33CC8FD6",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "lid_slam_impact",
+      "view": "front",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Character pose only; ground shock is a separate VFX."
+    },
+    {
+      "asset_id": "boss_nai_tong_lid_slam_telegraph_front_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_lid_slam_telegraph_front_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_lid_slam_telegraph_front_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 268124,
+      "source_file_size_bytes": 1382796,
+      "sha256": "358C5A00FDADA4C3C82FE191763CE6AC6A4610DF1887DF47907B809AE4F1AE5B",
+      "source_sha256": "6FB7EEA96DDCBD09C9267EF6906E30578D42E82F107CC12283F25D5DC1CE5523",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "lid_slam_telegraph",
+      "view": "front",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": 1.05,
+      "timing_status": "engineering presentation timing reference; not a new gameplay rule",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "boss_nai_tong_move_side_right_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_move_side_right_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_move_side_right_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 293314,
+      "source_file_size_bytes": 1212116,
+      "sha256": "D798E438E403B1C1D059DE803037AD13135D2BC2E739E4CEB53217109BD8A920",
+      "source_sha256": "C417B76C80976AA3711D06FD74131D40FCE6B26F0F27B3C979F015EDE5E67FAE",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "move",
+      "view": "side_right",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "boss_nai_tong_phase_two_front_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_phase_two_front_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_phase_two_front_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1292,
+        1217
+      ],
+      "file_size_bytes": 257232,
+      "source_file_size_bytes": 1417041,
+      "sha256": "08B2E4F18B5B1D127ED85E5E00B742B23DB10802879143D211CA204E5CFF4BB5",
+      "source_sha256": "C07B708590197CC994804F3793381DC6578B8F8DD5FA5A77D4B9E047DF8DC4D5",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "phase_two",
+      "view": "front",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": 1.35,
+      "timing_status": "engineering presentation timing reference; not a new gameplay rule",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "fx_boss_charge_trail",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_charge_trail.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_charge_trail_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 90748,
+      "source_file_size_bytes": 408456,
+      "sha256": "DF62DD7AFE3537362F7C1D254413C3BB174070430F3178F945895F48BE6A0463",
+      "source_sha256": "0D989616EF46D32452FD2F6C115BCD1E6583DCDE960165E99B53670DB2816A6C",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "boss_charge_hit",
+        "boss_charge_missed"
+      ],
+      "trigger": "Start only when the charge attack presentation actually begins after its warning; end on boss_charge_hit or boss_charge_missed. Charge-state start hook needs engineering confirmation. Do not start on boss_telegraph_charge.",
+      "notes": "Directional trail/dust candidate.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_boss_lid_slam",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_lid_slam.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_lid_slam_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 110279,
+      "source_file_size_bytes": 522358,
+      "sha256": "1BC03EA81CDF19217FE6315596613C10F8E50146C426552B8F566D51E4AEF175",
+      "source_sha256": "0DDDABF65809ACA826ED9F725C5C15DFF6D08BE6612BEDFD581791F8F3335C21",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "boss_lid_slam_hit",
+        "boss_lid_slam_missed"
+      ],
+      "trigger": "Play when the lid slam occurs for either result.",
+      "notes": "At Boss landing point; does not imply player damage.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_boss_phase_two",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_phase_two.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_phase_two_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 215500,
+      "source_file_size_bytes": 1063643,
+      "sha256": "D02F14CF267F1CDDA00ACC473D0DBD6DDD7BA1B9E87F909FF718BC38B7161A18",
+      "source_sha256": "08175B57D3AC130C2543FE7BDBA8D73D89536B32270F546384FD6BC6318D4F11",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "boss_phase_two"
+      ],
+      "trigger": "Play during the 1.35 second phase transition presentation.",
+      "notes": "No screen flash or long HUD occlusion.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_dash_impact",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_dash_impact.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_dash_impact_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 142858,
+      "source_file_size_bytes": 612849,
+      "sha256": "34AEEE8824E28D595B3CAD13201712CB0A5CD76B5815B1A5007BB91E2FC63E92",
+      "source_sha256": "4C21A4F962A635F61286584E162332FAC435FE118DFB1A70F1C039A7F04C8189",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "player_dash_hit"
+      ],
+      "trigger": "Play at confirmed dash contact only.",
+      "notes": "Contact cue only; dash trail is a separate effect.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_defend_guard",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_defend_guard.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_defend_guard_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 125888,
+      "source_file_size_bytes": 792092,
+      "sha256": "D581CC649A62759D67342F58CC5027925D62E84C55BD330FD07A8299F3ED06D6",
+      "source_sha256": "821C021F590EF28FC4A9D94EAF1B33F4AA9F8906ABE9C8C7BB4D6B2252C98493",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [],
+      "trigger": "Held defend-state presentation hook; Presenter binding pending.",
+      "notes": "Player skill effect; loop/hold behavior is not authored yet.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_enemy_death",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_death.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_enemy_death_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 117023,
+      "source_file_size_bytes": 199037,
+      "sha256": "3EBA99EC7E5D9B037E431D4BD9ECA39AAFFDE0F13ABDCD409F664BEB7F5D6819",
+      "source_sha256": "9A276F5964A38D8357586550DB9C1D91DF242DD4F4FD131DAAB8C57600943433",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "enemy_killed"
+      ],
+      "trigger": "Play on confirmed enemy kill.",
+      "notes": "One isolated sample; no death sequence yet.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_enemy_hit",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_hit.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_enemy_hit_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 107146,
+      "source_file_size_bytes": 180149,
+      "sha256": "FAC2570485EFB143106BF045712F8ADA8612F52B9744CAD168A24AD4D1DB0DA9",
+      "source_sha256": "F382FBF357FC57BA09DA97F7E3BC1C0B04BBAE76655C82B6A5BC166A3249162A",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "enemy_damaged"
+      ],
+      "trigger": "Play when enemy damage is confirmed.",
+      "notes": "Keep separate from the damage number and hit text.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_laugh_burst",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_laugh_burst.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_laugh_burst_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 295280,
+      "source_file_size_bytes": 1122130,
+      "sha256": "9539809FCC3948A10A0220AA4DD2790F364EDD0C8FD0144D9C012379E3660BB8",
+      "source_sha256": "718C9A91D968031640AC61806E2476E21B1E971F60F89BBD55EE705C3BD16ED4",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [],
+      "trigger": "Laugh action hook; Presenter binding pending.",
+      "notes": "Player skill effect.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_melee_impact",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_impact.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_melee_impact_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 242991,
+      "source_file_size_bytes": 506389,
+      "sha256": "49991C8F6F0A789EBEF1F76E2D7D84E7DBE54D324947E5D58B520889CB227024",
+      "source_sha256": "84452DC6D173CC4280D4E668D5871F9ED6EC9C81DB79941BA8ECC4DA594D0DF2",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "player_melee_hit"
+      ],
+      "trigger": "Play at confirmed melee contact only.",
+      "notes": "Never play on player_melee_miss.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_melee_swing",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_swing.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_melee_swing_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 128315,
+      "source_file_size_bytes": 599557,
+      "sha256": "39434E5463432AAFB6041FEC0D987AFA1D0BF0951BC0E4ED2F2577449E5CF2C7",
+      "source_sha256": "9F11A3FA1C75E7EC0F785DF8FACD60D322036517D729EFFB42227D97C572CC52",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [],
+      "trigger": "Player attack-start hook; Presenter binding pending. Contact impact remains player_melee_hit only.",
+      "notes": "Player skill effect; never use as a confirmed hit cue.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_milk_shot",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_milk_shot.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_milk_shot_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 111989,
+      "source_file_size_bytes": 477219,
+      "sha256": "8599D2C358B8FDD0C511753597F44B2C3422259DD8495D13712BDD2F6E15BB1B",
+      "source_sha256": "D850B94B37E1D8D4BDACEFBC7791DBC9D8D2ED580892F4FE63BFE90DB498E8E9",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [],
+      "trigger": "Projectile spawn/render hook; Presenter binding pending.",
+      "notes": "Player skill effect; orient along projectile travel.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_player_dash_trail",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_dash_trail.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_player_dash_trail_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 116272,
+      "source_file_size_bytes": 505287,
+      "sha256": "2E1835434A79EFEA3AB57048674E769A0ACBB40DED6AEEB76044254FBF9FEFDD",
+      "source_sha256": "73113E53F4644397DE7A9D3A62BC68089388C31925E388317F05642733189356",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [],
+      "trigger": "Dash-state start/end hook; Presenter binding pending.",
+      "notes": "Player skill effect; end with dash presentation state.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_player_hit",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_hit.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_player_hit_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 86783,
+      "source_file_size_bytes": 139113,
+      "sha256": "A7BC54AA34BB8CAF0FC6285A88850BF34CB7ED2126CD5D3F987F23F6D6D741C9",
+      "source_sha256": "D09B61BD233474952A898B32D7D6716E725C0C1C8838D83B182C228882A10500",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "player_damaged"
+      ],
+      "trigger": "Play when player damage is confirmed.",
+      "notes": "Do not imply damage during invulnerability.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    }
+  ],
+  "event_coverage_backlog": [
+    {
+      "effect_id": "fx_enemy_hit",
+      "event_id": "enemy_damaged",
+      "status": "not_in_first_sample"
+    },
+    {
+      "effect_id": "fx_enemy_death",
+      "event_id": "enemy_killed",
+      "status": "not_in_first_sample"
+    },
+    {
+      "effect_id": "fx_boss_charge_trail",
+      "event_id": "boss_telegraph_charge plus charge-state presentation; end on boss_charge_hit/missed",
+      "status": "not_in_first_sample"
+    },
+    {
+      "effect_id": "fx_boss_phase_two",
+      "event_id": "boss_phase_two",
+      "status": "not_in_first_sample"
+    },
+    {
+      "effect_id": "fx_boss_death",
+      "event_id": "boss_killed",
+      "status": "optional; event spelling needs engineering confirmation; not_in_first_sample"
+    }
+  ],
+  "visual_timing_proposals": {
+    "boss_charge_telegraph_seconds": 0.9,
+    "boss_lid_slam_telegraph_seconds": 1.05,
+    "boss_phase_two_seconds": 1.35,
+    "boss_animation_preview_fps": 24,
+    "note": "Timing proposals follow the engineering handoff; they do not set hitboxes, damage, or gameplay timing. VFX frame counts remain pending art direction and integration review."
+  },
+  "provisional_added_scope_estimate_art_person_days": {
+    "boss_design_and_three_view_nine_state_animation": "5-8",
+    "player_and_combat_vfx_full_event_set": "4-6",
+    "export_alpha_anchor_and_fixed_camera_qa": "1-2",
+    "total": "10-16",
+    "hours_per_person_day": 6,
+    "status": "planning estimate only; confirm frame counts, editable-source format, and event hooks before production"
+  },
+  "approved_direction": {
+    "turnaround": "boss_nai_tong_turnaround_v02_concept",
+    "barrel_lid_carry": "low at hip on strap",
+    "approval_basis": "User approved the first-batch art direction before this WIP candidate pass."
+  },
+  "generation_revision_notes": [
+    "Second batch isolates Boss and VFX concepts into transparent RGBA PNG candidates on 512x512 canvases.",
+    "Boss charge_attack was regenerated as a grounded forward-driving pose after the first candidate read as a leap; the leap variant is archived under RuntimeWIP/Variants and is excluded from the delivery list.",
+    "The source PNGs are flattened image outputs. Layered PSD, Aseprite or other editable authoring projects are not included."
+  ],
+  "second_batch_summary": {
+    "boss_single_keyframes": 11,
+    "boss_views": [
+      "front",
+      "back",
+      "side_right"
+    ],
+    "boss_state_coverage": [
+      "idle",
+      "move",
+      "charge_telegraph",
+      "charge_attack",
+      "lid_slam_telegraph",
+      "lid_slam_impact",
+      "hit",
+      "phase_two",
+      "death"
+    ],
+    "boss_states_with_incomplete_views": [
+      "move",
+      "charge_telegraph",
+      "charge_attack",
+      "lid_slam_telegraph",
+      "lid_slam_impact",
+      "hit",
+      "phase_two",
+      "death"
+    ],
+    "isolated_vfx_stills": 13,
+    "all_candidates_canvas_px": [
+      512,
+      512
+    ],
+    "all_candidates_are_complete_sequences": false,
+    "all_candidates_runtime_ready": false,
+    "ue_imported": false,
+    "required_before_runtime": [
+      "Complete animation/VFX sequences and frame timing",
+      "Freeze source format, anchors and contact/emission points",
+      "Full alpha/fringe and fixed-camera review",
+      "Confirm Presenter hooks for player action start/hold states",
+      "Engineer-led UE import and P4 viewport/PIE review"
+    ]
+  },
+  "engineering_event_contract": {
+    "source": "UE5/Records/p4_alpha/P4_W4_Boss与战斗特效美术要求_2026-10-29.md",
+    "warning_seconds": {
+      "boss_telegraph_charge": 0.9,
+      "boss_telegraph_lid_slam": 1.05
+    },
+    "phase_two_seconds": 1.35,
+    "boss_charge_distance_uu": {
+      "normal": 280,
+      "phase_two": 340
+    },
+    "boss_lid_slam_radius_uu": {
+      "normal": 205,
+      "phase_two": 248
+    },
+    "rule": "Art timing only follows the existing simulation contract and never changes hitboxes, damage or event IDs.",
+    "event_mapping_notes": [
+      "player_melee_miss must not show a confirmed contact impact.",
+      "fx_boss_lid_slam may play for hit or missed results because the slam occurred, but it is not a player damage signal.",
+      "fx_boss_charge_trail starts only during the actual charge presentation, not in its telegraph."
+    ]
+  }
+}

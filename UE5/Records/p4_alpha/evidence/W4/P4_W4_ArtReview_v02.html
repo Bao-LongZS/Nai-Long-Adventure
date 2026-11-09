@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P4 W4 第二批 Boss 与主角特效候选评审 v02</title>
+<style>
+  :root { color-scheme:light; --ink:#26323a; --muted:#63717a; --line:#d7dfe2; --card:#fff; --bg:#f1f4f4; --gold:#c99a4a; --green:#3f795d; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.55 "Segoe UI","Microsoft YaHei",sans-serif; }
+  main { max-width:1440px; margin:0 auto; padding:30px 22px 56px; }
+  h1,h2,h3,p { margin-top:0; }
+  h1 { margin-bottom:6px; font-size:30px; }
+  h2 { margin:0 0 14px; font-size:22px; }
+  h3 { margin:0 0 8px; font-size:16px; }
+  section { margin:30px 0; }
+  .meta,.small { color:var(--muted); }
+  .meta { margin-bottom:22px; }
+  .callout { padding:14px 18px; border-left:5px solid var(--green); background:#eef7f0; border-radius:8px; margin:18px 0 24px; }
+  .warning { border-left-color:var(--gold); background:#fff8e9; }
+  .conceptGrid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .gallery { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+  .card,.tile { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:13px; box-shadow:0 2px 8px #21313a0b; }
+  .tile { min-width:0; }
+  .board,.thumb { display:flex; align-items:center; justify-content:center; border:1px solid #e4e8e9; border-radius:8px; background-color:#fff; background-image:linear-gradient(45deg,#e8ebec 25%,transparent 25%),linear-gradient(-45deg,#e8ebec 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e8ebec 75%),linear-gradient(-45deg,transparent 75%,#e8ebec 75%); background-size:20px 20px; background-position:0 0,0 10px,10px -10px,-10px 0; }
+  .board { min-height:250px; padding:12px; }
+  .thumb { height:190px; padding:8px; }
+  img { display:block; max-width:100%; max-height:570px; object-fit:contain; }
+  .thumb img { width:100%; height:100%; }
+  .file { color:var(--muted); font:12px/1.4 Consolas,"Cascadia Mono",monospace; overflow-wrap:anywhere; }
+  .tag { display:inline-block; padding:2px 9px; border-radius:999px; background:#f1e7d2; color:#684a16; font-size:12px; margin:0 5px 6px 0; }
+  table { width:100%; border-collapse:collapse; background:#fff; }
+  th,td { text-align:left; vertical-align:top; border:1px solid var(--line); padding:9px 11px; }
+  th { background:#edf0ef; }
+  ul { margin:8px 0; padding-left:22px; }
+  code { background:#edf0ef; padding:1px 4px; border-radius:4px; }
+  @media(max-width:1000px) { .gallery{grid-template-columns:repeat(3,minmax(0,1fr))} }
+  @media(max-width:760px) { main{padding:22px 14px}.gallery,.conceptGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.thumb{height:155px} }
+</style>
+</head>
+<body>
+<main>
+  <h1>P4 W4 第二批 Boss 与主角特效候选</h1>
+  <p class="meta">版本 v02 · 2026-10-30 · 第一批方向 B 已通过 · 第二批 WIP 关键帧/特效静帧评审</p>
+  <div class="callout"><strong>方向确认：</strong>Boss 采用桶盖低挂髋侧。当前页面包含 11 张 Boss 单帧候选与 13 张独立特效候选，所有 512×512 帧均为透明 RGBA PNG。</div>
+  <div class="callout warning"><strong>交付状态：</strong>它们是关键帧和特效形状样本，不是动画或 flipbook；无帧率/显示时长、完整可编辑分层源或 UE 导入。页面中的预警时长仅用于对拍，不能改伤害/碰撞规则。`charge_attack` 已把腾跃旧稿替换为贴地冲锋候选。</div>
+
+  <section>
+    <h2>Boss 造型方向</h2>
+    <div class="conceptGrid">
+      <article class="card">
+        <h3>已通过：桶盖低挂髋侧</h3>
+        <div class="board"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_turnaround_v02_concept.png" alt="奶桶队长三视图与比例稿，桶盖低挂髋侧"></div>
+        <p><span class="tag">front</span><span class="tag">back</span><span class="tag">side_right</span><span class="tag">桶盖低挂</span></p>
+        <p class="small">延续圆润奶油色头部、木桶躯干和黄铜箍；静止轮廓和奶盾举盾姿势区分开。</p>
+      </article>
+      <article class="card">
+        <h3>首批动作板参考</h3>
+        <div class="board"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_action_keyposes_v01_concept.png" alt="Boss 待机与攻击姿势概念板"></div>
+        <p class="small">用于动作轮廓参考。本页的候选帧仍需从关键姿势扩成按帧编号的序列。</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Boss 状态候选（11 张）</h2>
+    <div class="gallery">
+      <article class="tile"><h3>待机 · 正面</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_front_00.png" alt="Boss idle front"></div><p><span class="tag">idle</span><span class="tag">front</span></p><p class="file">boss_nai_tong_idle_front_00.png</p></article>
+      <article class="tile"><h3>待机 · 背面</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_back_00.png" alt="Boss idle back"></div><p><span class="tag">idle</span><span class="tag">back</span></p><p class="file">boss_nai_tong_idle_back_00.png</p></article>
+      <article class="tile"><h3>待机 · 右侧面</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_side_right_00.png" alt="Boss idle right side"></div><p><span class="tag">idle</span><span class="tag">side_right</span></p><p class="file">boss_nai_tong_idle_side_right_00.png</p></article>
+      <article class="tile"><h3>追击移动 · 右侧面</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_move_side_right_00.png" alt="Boss move right side"></div><p><span class="tag">move</span><span class="tag">side_right</span></p><p class="file">boss_nai_tong_move_side_right_00.png</p></article>
+      <article class="tile"><h3>冲锋预警 · 右侧面</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_charge_telegraph_side_right_00.png" alt="Boss charge telegraph right side"></div><p><span class="tag">charge_telegraph</span><span class="tag">0.90 秒</span></p><p class="file">boss_nai_tong_charge_telegraph_side_right_00.png</p></article>
+      <article class="tile"><h3>贴地冲锋 · 右侧面</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_charge_attack_side_right_00.png" alt="Boss grounded charge attack right side"></div><p><span class="tag">charge_attack</span><span class="tag">修订候选</span></p><p class="file">boss_nai_tong_charge_attack_side_right_00.png</p></article>
+      <article class="tile"><h3>桶盖砸地预警 · 正面</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_lid_slam_telegraph_front_00.png" alt="Boss lid slam telegraph front"></div><p><span class="tag">lid_slam_telegraph</span><span class="tag">1.05 秒</span></p><p class="file">boss_nai_tong_lid_slam_telegraph_front_00.png</p></article>
+      <article class="tile"><h3>桶盖砸地 · 正面</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_lid_slam_impact_front_00.png" alt="Boss lid slam impact pose front"></div><p><span class="tag">lid_slam_impact</span><span class="tag">独立冲击 VFX</span></p><p class="file">boss_nai_tong_lid_slam_impact_front_00.png</p></article>
+      <article class="tile"><h3>受击 · 正面</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_hit_front_00.png" alt="Boss hit pose front"></div><p><span class="tag">hit</span><span class="tag">front</span></p><p class="file">boss_nai_tong_hit_front_00.png</p></article>
+      <article class="tile"><h3>二阶段 · 正面</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_phase_two_front_00.png" alt="Boss phase two pose front"></div><p><span class="tag">phase_two</span><span class="tag">1.35 秒</span></p><p class="file">boss_nai_tong_phase_two_front_00.png</p></article>
+      <article class="tile"><h3>败退收尾 · 正面</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_death_front_00.png" alt="Boss death pose front"></div><p><span class="tag">death</span><span class="tag">静帧</span></p><p class="file">boss_nai_tong_death_front_00.png</p></article>
+    </div>
+  </section>
+
+  <section>
+    <h2>主角技能与受击反馈（6 项）</h2>
+    <div class="gallery">
+      <article class="tile"><h3>自动奶球</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_milk_shot.png" alt="奶球发射特效"></div><p class="small">奶球生成/发射接口待工程确认。</p><p class="file">fx_milk_shot.png</p></article>
+      <article class="tile"><h3>近战挥击弧</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_swing.png" alt="近战挥击弧"></div><p class="small">攻击起手接口待确认；接触爆点另用命中事件。</p><p class="file">fx_melee_swing.png</p></article>
+      <article class="tile"><h3>冲撞拖尾</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_dash_trail.png" alt="主角冲撞拖尾"></div><p class="small">冲撞状态起止接口待确认。</p><p class="file">fx_player_dash_trail.png</p></article>
+      <article class="tile"><h3>大笑范围波</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_laugh_burst.png" alt="主角大笑范围波"></div><p class="small">大笑起手接口待确认。</p><p class="file">fx_laugh_burst.png</p></article>
+      <article class="tile"><h3>防御护层</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_defend_guard.png" alt="主角防御护层"></div><p class="small">持续防御展示接口待确认，未制作循环序列。</p><p class="file">fx_defend_guard.png</p></article>
+      <article class="tile"><h3>主角受击</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_hit.png" alt="主角受击效果"></div><p class="small"><code>player_damaged</code>；不可表示无敌状态下受击。</p><p class="file">fx_player_hit.png</p></article>
+    </div>
+  </section>
+
+  <section>
+    <h2>通用战斗/敌人反馈（4 项）</h2>
+    <div class="gallery">
+      <article class="tile"><h3>J 近战确认命中</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_impact.png" alt="J 近战命中爆点"></div><p class="small"><code>player_melee_hit</code>；Miss 不显示。</p><p class="file">fx_melee_impact.png</p></article>
+      <article class="tile"><h3>冲撞确认命中</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_dash_impact.png" alt="主角冲撞命中"></div><p class="small"><code>player_dash_hit</code>。</p><p class="file">fx_dash_impact.png</p></article>
+      <article class="tile"><h3>敌人受击</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_hit.png" alt="敌人受击反馈"></div><p class="small"><code>enemy_damaged</code>。</p><p class="file">fx_enemy_hit.png</p></article>
+      <article class="tile"><h3>敌人击败</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_death.png" alt="敌人击败反馈"></div><p class="small"><code>enemy_killed</code>；只有静帧，未制作完整消散动作。</p><p class="file">fx_enemy_death.png</p></article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Boss 专属特效（3 项）</h2>
+    <div class="gallery">
+      <article class="tile"><h3>冲锋拖尾</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_charge_trail.png" alt="Boss 冲锋方向性拖尾"></div><p class="small">冲锋开始后播放；命中/落空事件结束。蓄力预警阶段不播放。</p><p class="file">fx_boss_charge_trail.png</p></article>
+      <article class="tile"><h3>桶盖砸地波纹</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_lid_slam.png" alt="Boss 桶盖砸地波纹"></div><p class="small"><code>boss_lid_slam_hit</code> 或 <code>boss_lid_slam_missed</code>；不表示玩家受伤。</p><p class="file">fx_boss_lid_slam.png</p></article>
+      <article class="tile"><h3>二阶段转换</h3><div class="thumb"><img src="../../../../SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_phase_two.png" alt="Boss 二阶段转换效果"></div><p class="small"><code>boss_phase_two</code>；需适配 1.35 秒转换表现。</p><p class="file">fx_boss_phase_two.png</p></article>
+    </div>
+  </section>
+
+  <section>
+    <h2>工程映射与验收边界</h2>
+    <table>
+      <thead><tr><th>触发/时序</th><th>表现要求</th><th>当前候选边界</th></tr></thead>
+      <tbody>
+        <tr><td><code>boss_telegraph_charge</code> 0.90 秒；正常/二阶段冲锋 280/340 uu</td><td>先让角色蓄力并锁定朝向，出击后才显示方向拖尾。</td><td>预警、冲锋各一张右侧候选；缺全视图序列和末帧。</td></tr>
+        <tr><td><code>boss_telegraph_lid_slam</code> 1.05 秒；半径 205/248 uu</td><td>预警动作不提前画命中特效；命中和落空都可显示砸地效果。</td><td>仅一张正面预警与冲击姿势。</td></tr>
+        <tr><td><code>boss_phase_two</code> 1.35 秒</td><td>阶段强化清晰，不闪屏、不挡血条和预警。</td><td>各一张 Boss/FX 静帧，需做时长与可读性验收。</td></tr>
+        <tr><td>Player damage / enemy damage / confirmed melee or dash hit</td><td>只在已确认事件播放相应受击/接触反馈。</td><td>命中/受击特效各单帧；特效尺寸、中心点尚待实际机位确认。</td></tr>
+        <tr><td>角色显示缩放 0.82</td><td>Boss 与奶盾静态剪影区分；特效不遮角色/HUD。</td><td>源图未预缩放；本批尚未接入引擎开图或 PIE 预览。</td></tr>
+      </tbody>
+    </table>
+    <p class="small" style="margin-top:14px">详细文件大小、SHA-256、路径、视角、临时锚点和事件映射见 <a href="../../../../SourceAssets/P4/Manifests/P4_W4_BossAndVFX_manifest_v02.json">manifest v02</a>；交付日志见 <a href="P4_W4_第二批美术候选交付记录_2026-10-30.md">第二批交付记录</a>；基线要求见 <a href="../../P4_W4_Boss与战斗特效美术要求_2026-10-29.md">工程美术交接说明</a>。</p>
+  </section>
+</main>
+</body>
+</html>

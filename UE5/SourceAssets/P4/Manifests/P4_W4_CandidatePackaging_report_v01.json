@@ -1,0 +1,218 @@
+[
+  {
+    "Input": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_charge_attack_side_right_00_source.png",
+    "Output": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_charge_attack_side_right_00.png",
+    "Kind": "boss",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "49,97,1188,1062",
+    "CandidateSize": "512x512",
+    "Anchor": "256,466"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_charge_telegraph_side_right_00_source.png",
+    "Output": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_charge_telegraph_side_right_00.png",
+    "Kind": "boss",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "131,236,1089,913",
+    "CandidateSize": "512x512",
+    "Anchor": "256,466"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_death_front_00_source.png",
+    "Output": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_death_front_00.png",
+    "Kind": "boss",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "34,314,1193,672",
+    "CandidateSize": "512x512",
+    "Anchor": "256,466"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_hit_front_00_source.png",
+    "Output": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_hit_front_00.png",
+    "Kind": "boss",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "180,132,932,1021",
+    "CandidateSize": "512x512",
+    "Anchor": "256,466"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_back_00_source.png",
+    "Output": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_back_00.png",
+    "Kind": "boss",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "79,115,1096,1053",
+    "CandidateSize": "512x512",
+    "Anchor": "256,466"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_front_00_source.png",
+    "Output": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_front_00.png",
+    "Kind": "boss",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "67,114,1107,1030",
+    "CandidateSize": "512x512",
+    "Anchor": "256,466"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_side_right_00_source.png",
+    "Output": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_side_right_00.png",
+    "Kind": "boss",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "193,99,854,1073",
+    "CandidateSize": "512x512",
+    "Anchor": "256,466"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_lid_slam_impact_front_00_source.png",
+    "Output": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_lid_slam_impact_front_00.png",
+    "Kind": "boss",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "85,115,1084,1067",
+    "CandidateSize": "512x512",
+    "Anchor": "256,466"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_lid_slam_telegraph_front_00_source.png",
+    "Output": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_lid_slam_telegraph_front_00.png",
+    "Kind": "boss",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "187,29,942,1187",
+    "CandidateSize": "512x512",
+    "Anchor": "256,466"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_move_side_right_00_source.png",
+    "Output": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_move_side_right_00.png",
+    "Kind": "boss",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "136,137,1070,1021",
+    "CandidateSize": "512x512",
+    "Anchor": "256,466"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_phase_two_front_00_source.png",
+    "Output": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_phase_two_front_00.png",
+    "Kind": "boss",
+    "SourceSize": "1292x1217",
+    "VisibleBounds": "52,42,1219,1111",
+    "CandidateSize": "512x512",
+    "Anchor": "256,466"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_charge_trail_source.png",
+    "Output": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_charge_trail.png",
+    "Kind": "effect",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "116,534,1067,287",
+    "CandidateSize": "512x512",
+    "Anchor": "256,256"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_lid_slam_source.png",
+    "Output": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_lid_slam.png",
+    "Kind": "effect",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "59,535,1139,314",
+    "CandidateSize": "512x512",
+    "Anchor": "256,256"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_phase_two_source.png",
+    "Output": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_phase_two.png",
+    "Kind": "effect",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "66,169,1140,868",
+    "CandidateSize": "512x512",
+    "Anchor": "256,256"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_dash_impact_source.png",
+    "Output": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_dash_impact.png",
+    "Kind": "effect",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "114,209,1074,756",
+    "CandidateSize": "512x512",
+    "Anchor": "256,256"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_defend_guard_source.png",
+    "Output": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_defend_guard.png",
+    "Kind": "effect",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "39,221,1190,904",
+    "CandidateSize": "512x512",
+    "Anchor": "256,256"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_enemy_death_source.png",
+    "Output": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_death.png",
+    "Kind": "effect",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "488,368,329,568",
+    "CandidateSize": "512x512",
+    "Anchor": "256,256"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_enemy_hit_source.png",
+    "Output": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_hit.png",
+    "Kind": "effect",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "376,480,540,272",
+    "CandidateSize": "512x512",
+    "Anchor": "256,256"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_laugh_burst_source.png",
+    "Output": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_laugh_burst.png",
+    "Kind": "effect",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "132,149,990,944",
+    "CandidateSize": "512x512",
+    "Anchor": "256,256"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_melee_impact_source.png",
+    "Output": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_impact.png",
+    "Kind": "effect",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "306,232,701,681",
+    "CandidateSize": "512x512",
+    "Anchor": "256,256"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_melee_swing_source.png",
+    "Output": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_swing.png",
+    "Kind": "effect",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "86,218,1150,795",
+    "CandidateSize": "512x512",
+    "Anchor": "256,256"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_milk_shot_source.png",
+    "Output": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_milk_shot.png",
+    "Kind": "effect",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "98,446,1051,421",
+    "CandidateSize": "512x512",
+    "Anchor": "256,256"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_player_dash_trail_source.png",
+    "Output": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_dash_trail.png",
+    "Kind": "effect",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "112,388,1109,489",
+    "CandidateSize": "512x512",
+    "Anchor": "256,256"
+  },
+  {
+    "Input": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_player_hit_source.png",
+    "Output": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_hit.png",
+    "Kind": "effect",
+    "SourceSize": "1254x1254",
+    "VisibleBounds": "382,398,527,453",
+    "CandidateSize": "512x512",
+    "Anchor": "256,256"
+  }
+]

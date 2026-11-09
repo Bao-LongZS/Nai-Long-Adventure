@@ -1,0 +1,4990 @@
+{
+  "schema_version": "1.0",
+  "package_id": "p4_w4_boss_and_vfx",
+  "version": "v04",
+  "created_date": "2026-10-30",
+  "status": "wip_boss_idle_and_vfx_transform_sequences",
+  "scope": "W4 Boss concept and first-batch battle VFX, expanded to include the playable protagonist's skill and damage feedback effects",
+  "generation": {
+    "tool": "built-in image_gen",
+    "prompt_set_summary": "Soft rounded Q-cute, softly 3D-shaded P4 sprite language; warm ivory, oak, brass and caramel Boss distinct from Naidun; isolated concise gameplay VFX in cream, honey, coral and mint; no baked HUD or combat rules.",
+    "reference_assets": [
+      "UE5/SourceAssets/P4/Characters/Alpha/A1/RuntimeReady/FramesClean/idle/P4_A1_idle_neutral_front.png",
+      "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naidun_turnaround_v01_concept.png"
+    ],
+    "second_batch_prompt_set_summary": "Single isolated full-body Boss state/view keyframes and isolated single-effect samples; transparent alpha; P4 cream, honey oak, brass, coral and mint palette; no HUD, hit rules, field, warning icon or baked gameplay background. Charge attack revision explicitly requests low grounded forward motion with both feet near the ground."
+  },
+  "global_constraints": {
+    "concept_only": false,
+    "runtime_ready": false,
+    "ue_imported": false,
+    "boss_visual_scale_vs_player": "about 1.45x; art proposal pending owner review",
+    "runtime_display_scale": 0.82,
+    "target_frame_canvas_px": [
+      512,
+      512
+    ],
+    "provisional_foot_anchor_px": [
+      256,
+      466
+    ],
+    "anchor_status": "estimated from existing P4 preview convention; freeze only after frame export and fixed-camera review",
+    "alpha_edge_qa": "All candidate PNGs are RGBA 512x512 with four transparent corners and zero visible pixels on the outer canvas border. Full fringe inspection and in-engine review remain pending.",
+    "source_project_files": "not included in concept generation; add editable source after direction approval",
+    "candidate_canvas_px": [
+      512,
+      512
+    ],
+    "delivery_status": "WIP Boss idle breathing timing previews and VFX transform sequences; full animation redraw, art cleanup, fixed-camera review and UE integration remain pending."
+  },
+  "assets": [
+    {
+      "asset_id": "boss_nai_tong_turnaround_v01",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_turnaround_v01_concept.png",
+      "type": "concept_turnaround",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "views": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "includes_player_scale_reference": true,
+      "lid_carry": "held at the front/side; review whether this reads too much like a shield",
+      "sha256": "7131E19C936F1DF4723913EB24E24B96595A37BFD7C762BD45DD285996A71014",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_turnaround_v02",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_turnaround_v02_concept.png",
+      "type": "concept_turnaround_alternate_prop_carry",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "views": [
+        "front",
+        "back",
+        "side_right"
+      ],
+      "includes_player_scale_reference": true,
+      "lid_carry": "hanging low at the hip on a strap; preferred candidate to separate idle silhouette from Naidun",
+      "sha256": "2D653078C49F66B7C5B738D794DF34130589C435CD3909492FD799722B00AF52",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_action_keyposes_v01",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_action_keyposes_v01_concept.png",
+      "type": "concept_pose_board",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "poses": [
+        "idle",
+        "charge_telegraph",
+        "charge_attack",
+        "lid_slam_telegraph",
+        "lid_slam_impact"
+      ],
+      "sha256": "D3FF8184852F4831412B5883D42EB4953587692E04A4DB98E20078D183DCC0C9",
+      "runtime_ready": false,
+      "notes": "Concept board only; no frame slicing, timing, or three-view consistency pass."
+    },
+    {
+      "asset_id": "boss_nai_tong_phase_two_v01",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_phase_two_v01_concept.png",
+      "type": "single_pose_concept",
+      "dimensions_px": [
+        1292,
+        1217
+      ],
+      "poses": [
+        "phase_two_transition_pose"
+      ],
+      "sha256": "C07B708590197CC994804F3793381DC6578B8F8DD5FA5A77D4B9E047DF8DC4D5",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "p4_w4_fx_sample_sheet_v01",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/p4_w4_fx_sample_sheet_v01_concept.png",
+      "type": "vfx_concept_sheet",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "effects": [
+        {
+          "id": "fx_melee_impact",
+          "event_id": "player_melee_hit",
+          "play_on_miss": false
+        },
+        {
+          "id": "fx_dash_impact",
+          "event_id": "player_dash_hit",
+          "play_on_miss": false
+        },
+        {
+          "id": "fx_boss_lid_slam",
+          "event_ids": [
+            "boss_lid_slam_hit",
+            "boss_lid_slam_missed"
+          ],
+          "meaning": "slam occurred; does not assert player damage"
+        }
+      ],
+      "sha256": "939AA33F1ACEA1057217AC161A3B3D1375F9017A2768727BA9E83BD4DBEBE96A",
+      "runtime_ready": false,
+      "notes": "Review sheet only; no isolated frame exports or alpha-edge QA."
+    },
+    {
+      "asset_id": "p4_player_fx_sample_sheet_v01",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/p4_player_fx_sample_sheet_v01_concept.png",
+      "type": "player_vfx_concept_sheet",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "effects": [
+        {
+          "id": "fx_milk_shot",
+          "event_id": null,
+          "event_status": "projectile spawn/render hook to confirm with engineering"
+        },
+        {
+          "id": "fx_melee_swing",
+          "event_id": null,
+          "event_status": "attack-start hook to confirm; contact remains player_melee_hit/miss"
+        },
+        {
+          "id": "fx_player_dash_trail",
+          "event_id": null,
+          "event_status": "dash-state start/end hook to confirm"
+        },
+        {
+          "id": "fx_laugh_burst",
+          "event_id": null,
+          "event_status": "laugh action hook to confirm"
+        },
+        {
+          "id": "fx_player_hit",
+          "event_id": "player_damaged"
+        },
+        {
+          "id": "fx_defend_guard",
+          "event_id": null,
+          "event_status": "held defend state; bind after Presenter hook confirmation"
+        }
+      ],
+      "sha256": "7ADDE6D34003C7181204B426AD5ADC6FF1D982B847E811FAA8B46B2EE637660F",
+      "runtime_ready": false,
+      "notes": "Review sheet only; no isolated frame exports or alpha-edge QA."
+    },
+    {
+      "asset_id": "boss_nai_tong_charge_attack_side_right_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_charge_attack_side_right_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_charge_attack_side_right_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 297568,
+      "source_file_size_bytes": 1532708,
+      "sha256": "EDCB5C13AE14FEDF2A1BA4FE96A1A664788CC20E91879938E03086752D6F9812",
+      "source_sha256": "B7383C7D91E21259C9B80655F18C9BE083D1DDBF054072CAA76FAF5B119E32C4",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "charge_attack",
+      "view": "side_right",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Grounded forward-driving keyframe revised from a leap-like candidate; still needs foot contact, direction and three-view animation review."
+    },
+    {
+      "asset_id": "boss_nai_tong_charge_telegraph_side_right_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_charge_telegraph_side_right_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_charge_telegraph_side_right_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 285890,
+      "source_file_size_bytes": 1320018,
+      "sha256": "6E5335E68535CD7546CB91C4B8A2BC0A46B5FAA73341B27D7E238036C66C9EB7",
+      "source_sha256": "F94F068E30C8E2A732981013491B8A99EFE26501D0AD3699D66ACE8DF8DFA6D9",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "charge_telegraph",
+      "view": "side_right",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": 0.9,
+      "timing_status": "engineering presentation timing reference; not a new gameplay rule",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "boss_nai_tong_death_front_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_death_front_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_death_front_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 178885,
+      "source_file_size_bytes": 921824,
+      "sha256": "1CCB9CD5E69F3A5366B31815571FE2E968BF93D5F6680B4D400CBAA594428E88",
+      "source_sha256": "E3F7443089FCCA8FCFB4283F633FAA4610AFFC7612396FF08873F32B75A5573D",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "death",
+      "view": "front",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Single ending pose only; no full defeat/recoil sequence."
+    },
+    {
+      "asset_id": "boss_nai_tong_hit_front_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_hit_front_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_hit_front_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 329295,
+      "source_file_size_bytes": 1271822,
+      "sha256": "B645B0BB8542AADE9FBC535FA104A55C65D0B364A548ABBC55318462202CDBD9",
+      "source_sha256": "AB0A133A5C9805701532272B516087D3EBC4DB8F6A1F5EA1D97B10C6E09EE8DD",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "hit",
+      "view": "front",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_back_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_back_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_back_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 304876,
+      "source_file_size_bytes": 1310523,
+      "sha256": "FE3A1CEEADA0C78ACC22F16D4CFAFB9A9F56991D7806C6419FE6F3FEE4BD22CB",
+      "source_sha256": "E9E2113A301E1B77CE77116D7BF64702A4984870FB5B35B49830A62B501CD74D",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "idle",
+      "view": "back",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_front_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_front_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_front_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 299368,
+      "source_file_size_bytes": 1323173,
+      "sha256": "C0ABE4140E677F947EE1D291710DA9F54ABC4E9299F3F7282319A7F8D4EDE32A",
+      "source_sha256": "A85F0985ADB0C9BE94CE4A1F1C743EC56AF74112F676CAD95095BDB1D35DF8C0",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "idle",
+      "view": "front",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_side_right_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_side_right_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_side_right_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 282026,
+      "source_file_size_bytes": 1148175,
+      "sha256": "D2C069CFFEA0BD93370391E00C6B7195599AC824CB11043A3E8097D8FADFE2AD",
+      "source_sha256": "EBBA15226A42376788E6C0F876E6495A50167A6E2897694EE0C04A757093D277",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "idle",
+      "view": "side_right",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "boss_nai_tong_lid_slam_impact_front_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_lid_slam_impact_front_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_lid_slam_impact_front_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 300124,
+      "source_file_size_bytes": 1317430,
+      "sha256": "46343D1DFE722ABDF7A3F0010AFB13A5DD05920FD9A15A63C540D5136744C912",
+      "source_sha256": "C99151FB3D5A03E2708302BDCA2FB4C1348524FCF0CA9F4D793CC32C33CC8FD6",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "lid_slam_impact",
+      "view": "front",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Character pose only; ground shock is a separate VFX."
+    },
+    {
+      "asset_id": "boss_nai_tong_lid_slam_telegraph_front_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_lid_slam_telegraph_front_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_lid_slam_telegraph_front_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 268124,
+      "source_file_size_bytes": 1382796,
+      "sha256": "358C5A00FDADA4C3C82FE191763CE6AC6A4610DF1887DF47907B809AE4F1AE5B",
+      "source_sha256": "6FB7EEA96DDCBD09C9267EF6906E30578D42E82F107CC12283F25D5DC1CE5523",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "lid_slam_telegraph",
+      "view": "front",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": 1.05,
+      "timing_status": "engineering presentation timing reference; not a new gameplay rule",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "boss_nai_tong_move_side_right_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_move_side_right_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_move_side_right_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 293314,
+      "source_file_size_bytes": 1212116,
+      "sha256": "D798E438E403B1C1D059DE803037AD13135D2BC2E739E4CEB53217109BD8A920",
+      "source_sha256": "C417B76C80976AA3711D06FD74131D40FCE6B26F0F27B3C979F015EDE5E67FAE",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "move",
+      "view": "side_right",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": null,
+      "timing_status": "not specified for this still",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "boss_nai_tong_phase_two_front_00",
+      "type": "boss_single_keyframe_candidate",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_phase_two_front_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_phase_two_front_00_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1292,
+        1217
+      ],
+      "file_size_bytes": 257232,
+      "source_file_size_bytes": 1417041,
+      "sha256": "08B2E4F18B5B1D127ED85E5E00B742B23DB10802879143D211CA204E5CFF4BB5",
+      "source_sha256": "C07B708590197CC994804F3793381DC6578B8F8DD5FA5A77D4B9E047DF8DC4D5",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "state": "phase_two",
+      "view": "front",
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "anchor_status": "estimated preview anchor; calibrate all poses at the fixed camera before freezing",
+      "state_timing_seconds": 1.35,
+      "timing_status": "engineering presentation timing reference; not a new gameplay rule",
+      "notes": "Single keyframe candidate only; not a complete animation state."
+    },
+    {
+      "asset_id": "fx_boss_charge_trail",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_charge_trail.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_charge_trail_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 90748,
+      "source_file_size_bytes": 408456,
+      "sha256": "DF62DD7AFE3537362F7C1D254413C3BB174070430F3178F945895F48BE6A0463",
+      "source_sha256": "0D989616EF46D32452FD2F6C115BCD1E6583DCDE960165E99B53670DB2816A6C",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "boss_charge_hit",
+        "boss_charge_missed"
+      ],
+      "trigger": "Start only when the charge attack presentation actually begins after its warning; end on boss_charge_hit or boss_charge_missed. Charge-state start hook needs engineering confirmation. Do not start on boss_telegraph_charge.",
+      "notes": "Directional trail/dust candidate.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_boss_lid_slam",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_lid_slam.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_lid_slam_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 110279,
+      "source_file_size_bytes": 522358,
+      "sha256": "1BC03EA81CDF19217FE6315596613C10F8E50146C426552B8F566D51E4AEF175",
+      "source_sha256": "0DDDABF65809ACA826ED9F725C5C15DFF6D08BE6612BEDFD581791F8F3335C21",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "boss_lid_slam_hit",
+        "boss_lid_slam_missed"
+      ],
+      "trigger": "Play when the lid slam occurs for either result.",
+      "notes": "At Boss landing point; does not imply player damage.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_boss_phase_two",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_phase_two.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_phase_two_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 215500,
+      "source_file_size_bytes": 1063643,
+      "sha256": "D02F14CF267F1CDDA00ACC473D0DBD6DDD7BA1B9E87F909FF718BC38B7161A18",
+      "source_sha256": "08175B57D3AC130C2543FE7BDBA8D73D89536B32270F546384FD6BC6318D4F11",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "boss_phase_two"
+      ],
+      "trigger": "Play during the 1.35 second phase transition presentation.",
+      "notes": "No screen flash or long HUD occlusion.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_dash_impact",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_dash_impact.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_dash_impact_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 142858,
+      "source_file_size_bytes": 612849,
+      "sha256": "34AEEE8824E28D595B3CAD13201712CB0A5CD76B5815B1A5007BB91E2FC63E92",
+      "source_sha256": "4C21A4F962A635F61286584E162332FAC435FE118DFB1A70F1C039A7F04C8189",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "player_dash_hit"
+      ],
+      "trigger": "Play at confirmed dash contact only.",
+      "notes": "Contact cue only; dash trail is a separate effect.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_defend_guard",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_defend_guard.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_defend_guard_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 125888,
+      "source_file_size_bytes": 792092,
+      "sha256": "D581CC649A62759D67342F58CC5027925D62E84C55BD330FD07A8299F3ED06D6",
+      "source_sha256": "821C021F590EF28FC4A9D94EAF1B33F4AA9F8906ABE9C8C7BB4D6B2252C98493",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [],
+      "trigger": "Held defend-state presentation hook; Presenter binding pending.",
+      "notes": "Player skill effect; loop/hold behavior is not authored yet.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_enemy_death",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_death.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_enemy_death_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 117023,
+      "source_file_size_bytes": 199037,
+      "sha256": "3EBA99EC7E5D9B037E431D4BD9ECA39AAFFDE0F13ABDCD409F664BEB7F5D6819",
+      "source_sha256": "9A276F5964A38D8357586550DB9C1D91DF242DD4F4FD131DAAB8C57600943433",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "enemy_killed"
+      ],
+      "trigger": "Play on confirmed enemy kill.",
+      "notes": "One isolated sample; no death sequence yet.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_enemy_hit",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_hit.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_enemy_hit_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 107146,
+      "source_file_size_bytes": 180149,
+      "sha256": "FAC2570485EFB143106BF045712F8ADA8612F52B9744CAD168A24AD4D1DB0DA9",
+      "source_sha256": "F382FBF357FC57BA09DA97F7E3BC1C0B04BBAE76655C82B6A5BC166A3249162A",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "enemy_damaged"
+      ],
+      "trigger": "Play when enemy damage is confirmed.",
+      "notes": "Keep separate from the damage number and hit text.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_laugh_burst",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_laugh_burst.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_laugh_burst_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 295280,
+      "source_file_size_bytes": 1122130,
+      "sha256": "9539809FCC3948A10A0220AA4DD2790F364EDD0C8FD0144D9C012379E3660BB8",
+      "source_sha256": "718C9A91D968031640AC61806E2476E21B1E971F60F89BBD55EE705C3BD16ED4",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [],
+      "trigger": "Laugh action hook; Presenter binding pending.",
+      "notes": "Player skill effect.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_melee_impact",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_impact.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_melee_impact_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 242991,
+      "source_file_size_bytes": 506389,
+      "sha256": "49991C8F6F0A789EBEF1F76E2D7D84E7DBE54D324947E5D58B520889CB227024",
+      "source_sha256": "84452DC6D173CC4280D4E668D5871F9ED6EC9C81DB79941BA8ECC4DA594D0DF2",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "player_melee_hit"
+      ],
+      "trigger": "Play at confirmed melee contact only.",
+      "notes": "Never play on player_melee_miss.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_melee_swing",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_swing.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_melee_swing_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 128315,
+      "source_file_size_bytes": 599557,
+      "sha256": "39434E5463432AAFB6041FEC0D987AFA1D0BF0951BC0E4ED2F2577449E5CF2C7",
+      "source_sha256": "9F11A3FA1C75E7EC0F785DF8FACD60D322036517D729EFFB42227D97C572CC52",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [],
+      "trigger": "Player attack-start hook; Presenter binding pending. Contact impact remains player_melee_hit only.",
+      "notes": "Player skill effect; never use as a confirmed hit cue.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_milk_shot",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_milk_shot.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_milk_shot_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 111989,
+      "source_file_size_bytes": 477219,
+      "sha256": "8599D2C358B8FDD0C511753597F44B2C3422259DD8495D13712BDD2F6E15BB1B",
+      "source_sha256": "D850B94B37E1D8D4BDACEFBC7791DBC9D8D2ED580892F4FE63BFE90DB498E8E9",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [],
+      "trigger": "Projectile spawn/render hook; Presenter binding pending.",
+      "notes": "Player skill effect; orient along projectile travel.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_player_dash_trail",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_dash_trail.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_player_dash_trail_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 116272,
+      "source_file_size_bytes": 505287,
+      "sha256": "2E1835434A79EFEA3AB57048674E769A0ACBB40DED6AEEB76044254FBF9FEFDD",
+      "source_sha256": "73113E53F4644397DE7A9D3A62BC68089388C31925E388317F05642733189356",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [],
+      "trigger": "Dash-state start/end hook; Presenter binding pending.",
+      "notes": "Player skill effect; end with dash presentation state.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_player_hit",
+      "type": "isolated_vfx_still_candidate",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_hit.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_player_hit_source.png",
+      "candidate_dimensions_px": [
+        512,
+        512
+      ],
+      "source_dimensions_px": [
+        1254,
+        1254
+      ],
+      "file_size_bytes": 86783,
+      "source_file_size_bytes": 139113,
+      "sha256": "A7BC54AA34BB8CAF0FC6285A88850BF34CB7ED2126CD5D3F987F23F6D6D741C9",
+      "source_sha256": "D09B61BD233474952A898B32D7D6716E725C0C1C8838D83B182C228882A10500",
+      "pixel_format": "Format32bppArgb",
+      "alpha_edge_qa": {
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_outer_border_pixels": 0,
+        "status": "candidate border transparency checked; detailed fringe review pending"
+      },
+      "frame_index": 0,
+      "sequence_status": "single still only; no animation frames or playback timing authored",
+      "runtime_ready": false,
+      "event_ids": [
+        "player_damaged"
+      ],
+      "trigger": "Play when player damage is confirmed.",
+      "notes": "Do not imply damage during invulnerability.",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "anchor_status": "centered canvas default; per-effect emission/contact anchor requires TA review"
+    },
+    {
+      "asset_id": "fx_milk_shot_frame_00",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_milk_shot_sequence_v01",
+      "effect_id": "fx_milk_shot",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_milk_shot_00.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_milk_shot.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_milk_shot_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 0,
+      "frame_duration_seconds": 0.075,
+      "playback_mode": "loop",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.9,
+        "scale_y": 0.95,
+        "rotation_degrees": 0.0,
+        "opacity": 0.72,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          168,
+          440,
+          176
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 56475,
+      "sha256": "45D865291E54F8CAE3AC53B497DE03AC4884C730595A176F734691B8503DE42F",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_milk_shot_frame_01",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_milk_shot_sequence_v01",
+      "effect_id": "fx_milk_shot",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_milk_shot_01.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_milk_shot.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_milk_shot_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 1,
+      "frame_duration_seconds": 0.075,
+      "playback_mode": "loop",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.97,
+        "scale_y": 1.0,
+        "rotation_degrees": 0.0,
+        "opacity": 0.9,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          168,
+          440,
+          176
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 72078,
+      "sha256": "C45345643BB44232B057A0285ABBEF1377922932C32695B0D196672F268CBCF9",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_milk_shot_frame_02",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_milk_shot_sequence_v01",
+      "effect_id": "fx_milk_shot",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_milk_shot_02.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_milk_shot.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_milk_shot_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 2,
+      "frame_duration_seconds": 0.075,
+      "playback_mode": "loop",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.02,
+        "scale_y": 1.05,
+        "rotation_degrees": 0.0,
+        "opacity": 1.0,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          168,
+          440,
+          176
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 87199,
+      "sha256": "17878260C20941557098F055D2B752552DF819AB106805FF771CEC0E9800811C",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_milk_shot_frame_03",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_milk_shot_sequence_v01",
+      "effect_id": "fx_milk_shot",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_milk_shot_03.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_milk_shot.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_milk_shot_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 3,
+      "frame_duration_seconds": 0.075,
+      "playback_mode": "loop",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.96,
+        "scale_y": 0.99,
+        "rotation_degrees": 0.0,
+        "opacity": 0.82,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          168,
+          440,
+          176
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 66126,
+      "sha256": "402A8411EC8B6BF772B47067B690FE09E2367CE6AEE0D012FFE730227BA39090",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_melee_swing_frame_00",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_melee_swing_sequence_v01",
+      "effect_id": "fx_melee_swing",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_swing_00.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_swing.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_melee_swing_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 0,
+      "frame_duration_seconds": 0.055,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.72,
+        "scale_y": 0.76,
+        "rotation_degrees": 0.0,
+        "opacity": 0.25,
+        "offset_px": [
+          -12.0,
+          12.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          104,
+          440,
+          304
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 34843,
+      "sha256": "E4B60A05275BFF29AEF15480D82D78937AA18AC6AC9AEFEA0F6F94189A4C6D9D",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_melee_swing_frame_01",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_melee_swing_sequence_v01",
+      "effect_id": "fx_melee_swing",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_swing_01.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_swing.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_melee_swing_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 1,
+      "frame_duration_seconds": 0.055,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.86,
+        "scale_y": 0.9,
+        "rotation_degrees": 0.0,
+        "opacity": 0.62,
+        "offset_px": [
+          -5.0,
+          5.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          104,
+          440,
+          304
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 63577,
+      "sha256": "B7C3D4D455A6C6845AE48E06B6216E7908DD8016D817773B4F6D7987914BEF50",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_melee_swing_frame_02",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_melee_swing_sequence_v01",
+      "effect_id": "fx_melee_swing",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_swing_02.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_swing.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_melee_swing_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 2,
+      "frame_duration_seconds": 0.055,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.0,
+        "scale_y": 1.0,
+        "rotation_degrees": 0.0,
+        "opacity": 1.0,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          104,
+          440,
+          304
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 93207,
+      "sha256": "270CA80501CEBAF64CF96110159225FED1A5CD1412D5CDDF021BC0D996FA4FF9",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_melee_swing_frame_03",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_melee_swing_sequence_v01",
+      "effect_id": "fx_melee_swing",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_swing_03.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_swing.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_melee_swing_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 3,
+      "frame_duration_seconds": 0.055,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.08,
+        "scale_y": 1.06,
+        "rotation_degrees": 0.0,
+        "opacity": 0.65,
+        "offset_px": [
+          5.0,
+          -4.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          104,
+          440,
+          304
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 84283,
+      "sha256": "36CBA537F78B201A0F946C7F4A0B9070C93C3A1DBE910DC36DA4ECEF3A1D96E1",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_melee_swing_frame_04",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_melee_swing_sequence_v01",
+      "effect_id": "fx_melee_swing",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_swing_04.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_swing.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_melee_swing_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 4,
+      "frame_duration_seconds": 0.055,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.13,
+        "scale_y": 1.1,
+        "rotation_degrees": 0.0,
+        "opacity": 0.16,
+        "offset_px": [
+          10.0,
+          -7.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          104,
+          440,
+          304
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 55978,
+      "sha256": "2F52A3EE59555A51AC0834434BF1C2025C0BDC1BDDF776A014955ACE3840C4BC",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_player_dash_trail_frame_00",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_player_dash_trail_sequence_v01",
+      "effect_id": "fx_player_dash_trail",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_dash_trail_00.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_dash_trail.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_player_dash_trail_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 0,
+      "frame_duration_seconds": 0.05,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.88,
+        "scale_y": 0.9,
+        "rotation_degrees": 0.0,
+        "opacity": 1.0,
+        "offset_px": [
+          18.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          159,
+          440,
+          194
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 67842,
+      "sha256": "AEA3242E86EC97979DB5F129632E4D02A1E9C57C1B9564205DAF338904AD6AD8",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_player_dash_trail_frame_01",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_player_dash_trail_sequence_v01",
+      "effect_id": "fx_player_dash_trail",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_dash_trail_01.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_dash_trail.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_player_dash_trail_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 1,
+      "frame_duration_seconds": 0.05,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.96,
+        "scale_y": 0.95,
+        "rotation_degrees": 0.0,
+        "opacity": 0.84,
+        "offset_px": [
+          9.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          159,
+          440,
+          194
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 67033,
+      "sha256": "34EA68A3734D2D671195BD5FA9D206AC8DD04732C1AA7104DE88CC6E9D976A70",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_player_dash_trail_frame_02",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_player_dash_trail_sequence_v01",
+      "effect_id": "fx_player_dash_trail",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_dash_trail_02.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_dash_trail.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_player_dash_trail_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 2,
+      "frame_duration_seconds": 0.05,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.04,
+        "scale_y": 1.0,
+        "rotation_degrees": 0.0,
+        "opacity": 0.66,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          159,
+          440,
+          194
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 71996,
+      "sha256": "B9C0CC80E7D6EF274BF579747C66A5944CB162C564F04AC59209BA7653A854DF",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_player_dash_trail_frame_03",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_player_dash_trail_sequence_v01",
+      "effect_id": "fx_player_dash_trail",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_dash_trail_03.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_dash_trail.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_player_dash_trail_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 3,
+      "frame_duration_seconds": 0.05,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.12,
+        "scale_y": 1.03,
+        "rotation_degrees": 0.0,
+        "opacity": 0.43,
+        "offset_px": [
+          -8.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          159,
+          440,
+          194
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 71748,
+      "sha256": "5EFEECA228DF0B8FE8324652EC0787BA00E01333E0C4DFF990A1CBB65D1A7BA1",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_player_dash_trail_frame_04",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_player_dash_trail_sequence_v01",
+      "effect_id": "fx_player_dash_trail",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_dash_trail_04.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_dash_trail.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_player_dash_trail_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 4,
+      "frame_duration_seconds": 0.05,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.18,
+        "scale_y": 1.06,
+        "rotation_degrees": 0.0,
+        "opacity": 0.2,
+        "offset_px": [
+          -15.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          159,
+          440,
+          194
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 53433,
+      "sha256": "FACD73BF4C4D0BD2BABF26E37FCCF66CBC7700CAC8D913B993C09706B684D580",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_laugh_burst_frame_00",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_laugh_burst_sequence_v01",
+      "effect_id": "fx_laugh_burst",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_laugh_burst_00.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_laugh_burst.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_laugh_burst_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 0,
+      "frame_duration_seconds": 0.07,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.52,
+        "scale_y": 0.52,
+        "rotation_degrees": 0.0,
+        "opacity": 0.32,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          46,
+          440,
+          420
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 48837,
+      "sha256": "C86D8F40A9D539A86A3B79E7AD5FA0FAA970C833B6ACB3180A149E6CBF8CFB27",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_laugh_burst_frame_01",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_laugh_burst_sequence_v01",
+      "effect_id": "fx_laugh_burst",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_laugh_burst_01.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_laugh_burst.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_laugh_burst_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 1,
+      "frame_duration_seconds": 0.07,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.72,
+        "scale_y": 0.72,
+        "rotation_degrees": 0.0,
+        "opacity": 0.72,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          46,
+          440,
+          420
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 112241,
+      "sha256": "956B0E0BCBB6AB06BFA75108F9F9D0A3A90282C16EB5B97E8589CD9E377806E1",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_laugh_burst_frame_02",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_laugh_burst_sequence_v01",
+      "effect_id": "fx_laugh_burst",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_laugh_burst_02.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_laugh_burst.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_laugh_burst_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 2,
+      "frame_duration_seconds": 0.07,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.94,
+        "scale_y": 0.94,
+        "rotation_degrees": 0.0,
+        "opacity": 1.0,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          46,
+          440,
+          420
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 193466,
+      "sha256": "4A6BE2C0845D3C109013751A8685A0AF034C17228311D372B32EB73B4ED20DC3",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_laugh_burst_frame_03",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_laugh_burst_sequence_v01",
+      "effect_id": "fx_laugh_burst",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_laugh_burst_03.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_laugh_burst.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_laugh_burst_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 3,
+      "frame_duration_seconds": 0.07,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.14,
+        "scale_y": 1.14,
+        "rotation_degrees": 0.0,
+        "opacity": 0.66,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          46,
+          440,
+          420
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 235134,
+      "sha256": "4FF39421CF199969DBA6674EF759BE501B89A37E5B57706A024E2C0CB0D8060E",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_laugh_burst_frame_04",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_laugh_burst_sequence_v01",
+      "effect_id": "fx_laugh_burst",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_laugh_burst_04.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_laugh_burst.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_laugh_burst_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 4,
+      "frame_duration_seconds": 0.07,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.3,
+        "scale_y": 1.3,
+        "rotation_degrees": 0.0,
+        "opacity": 0.2,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          46,
+          440,
+          420
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 166746,
+      "sha256": "8115CC8BC534010331D0E607D6BA73988517431A8D64A43A4693CB1950EFF938",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_defend_guard_frame_00",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_defend_guard_sequence_v01",
+      "effect_id": "fx_defend_guard",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_defend_guard_00.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_defend_guard.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_defend_guard_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 0,
+      "frame_duration_seconds": 0.15,
+      "playback_mode": "loop",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.96,
+        "scale_y": 0.96,
+        "rotation_degrees": 0.0,
+        "opacity": 0.42,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          89,
+          440,
+          334
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 64368,
+      "sha256": "636AECDE1F52CF14E6A50A6468746033D346B93F844EA94310CA8B3CD6BF7473",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_defend_guard_frame_01",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_defend_guard_sequence_v01",
+      "effect_id": "fx_defend_guard",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_defend_guard_01.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_defend_guard.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_defend_guard_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 1,
+      "frame_duration_seconds": 0.15,
+      "playback_mode": "loop",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.0,
+        "scale_y": 1.0,
+        "rotation_degrees": 0.0,
+        "opacity": 0.54,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          89,
+          440,
+          334
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 79216,
+      "sha256": "BFD587D371EAD387D80ED4A4D79EB230C4D5071A40942095914457FF997DC9AF",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_defend_guard_frame_02",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_defend_guard_sequence_v01",
+      "effect_id": "fx_defend_guard",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_defend_guard_02.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_defend_guard.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_defend_guard_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 2,
+      "frame_duration_seconds": 0.15,
+      "playback_mode": "loop",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.04,
+        "scale_y": 1.04,
+        "rotation_degrees": 0.0,
+        "opacity": 0.58,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          89,
+          440,
+          334
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 87254,
+      "sha256": "1BFD91B084D106AA53FCFF7B64BD4236672505482F94837AEE10B971ABF47998",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_defend_guard_frame_03",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_defend_guard_sequence_v01",
+      "effect_id": "fx_defend_guard",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_defend_guard_03.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_defend_guard.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_defend_guard_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 3,
+      "frame_duration_seconds": 0.15,
+      "playback_mode": "loop",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.0,
+        "scale_y": 1.0,
+        "rotation_degrees": 0.0,
+        "opacity": 0.46,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          89,
+          440,
+          334
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 71434,
+      "sha256": "B1FA051EDA991C7E33C5826CF050E86C4AA744EF416FD1CD17D2E724BAEB1643",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_player_hit_frame_00",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_player_hit_sequence_v01",
+      "effect_id": "fx_player_hit",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_hit_00.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_hit.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_player_hit_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 0,
+      "frame_duration_seconds": 0.04,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.8,
+        "scale_y": 0.8,
+        "rotation_degrees": 0.0,
+        "opacity": 0.3,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          67,
+          440,
+          378
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 24741,
+      "sha256": "8A48126CB6E74B06DA37CB8AB0ABFE3A25C87F7C63F452AD4427D52A01ECF601",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_player_hit_frame_01",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_player_hit_sequence_v01",
+      "effect_id": "fx_player_hit",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_hit_01.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_hit.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_player_hit_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 1,
+      "frame_duration_seconds": 0.04,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.02,
+        "scale_y": 1.02,
+        "rotation_degrees": 0.0,
+        "opacity": 1.0,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          67,
+          440,
+          378
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 65255,
+      "sha256": "BBA7BE3BF85D0888A46990429F2073554E9651BB204F93190F45C3BF763AFB55",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_player_hit_frame_02",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_player_hit_sequence_v01",
+      "effect_id": "fx_player_hit",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_hit_02.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_hit.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_player_hit_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 2,
+      "frame_duration_seconds": 0.04,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.08,
+        "scale_y": 1.08,
+        "rotation_degrees": 0.0,
+        "opacity": 0.62,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          67,
+          440,
+          378
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 54409,
+      "sha256": "ED77831790CCAB7E76670549F2B011A2E21C4369CB61EF9BD741FB082522AEFB",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_player_hit_frame_03",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_player_hit_sequence_v01",
+      "effect_id": "fx_player_hit",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_hit_03.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_hit.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_player_hit_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 3,
+      "frame_duration_seconds": 0.04,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.12,
+        "scale_y": 1.12,
+        "rotation_degrees": 0.0,
+        "opacity": 0.12,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          67,
+          440,
+          378
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 29111,
+      "sha256": "C7C1896CDD924918C3AA53370F4D0FF3656ACC4ADC32C53C4555E7B91F233C54",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_melee_impact_frame_00",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_melee_impact_sequence_v01",
+      "effect_id": "fx_melee_impact",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_impact_00.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_impact.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_melee_impact_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 0,
+      "frame_duration_seconds": 0.035,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.5,
+        "scale_y": 0.5,
+        "rotation_degrees": 0.0,
+        "opacity": 0.24,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          42,
+          440,
+          427
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 32872,
+      "sha256": "4178C24F9AAA2C3EF137D4936485ACAD47FC0B529396A9E00517613AB2AA39DC",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_melee_impact_frame_01",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_melee_impact_sequence_v01",
+      "effect_id": "fx_melee_impact",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_impact_01.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_impact.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_melee_impact_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 1,
+      "frame_duration_seconds": 0.035,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.82,
+        "scale_y": 0.82,
+        "rotation_degrees": 0.0,
+        "opacity": 1.0,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          42,
+          440,
+          427
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 124497,
+      "sha256": "7246C7BC03B0AEE6DEE9BB7581A2A76DA517A0D2E2EB9559D0A619B0CC5E1238",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_melee_impact_frame_02",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_melee_impact_sequence_v01",
+      "effect_id": "fx_melee_impact",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_impact_02.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_impact.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_melee_impact_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 2,
+      "frame_duration_seconds": 0.035,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.12,
+        "scale_y": 1.12,
+        "rotation_degrees": 0.0,
+        "opacity": 0.66,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          42,
+          440,
+          427
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 177451,
+      "sha256": "80CBEFD986394EA0B777E66AD7563EB71417EBB9F9A55E6D74F00F1D4D7B6ECA",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_melee_impact_frame_03",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_melee_impact_sequence_v01",
+      "effect_id": "fx_melee_impact",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_impact_03.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_impact.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_melee_impact_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 3,
+      "frame_duration_seconds": 0.035,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.34,
+        "scale_y": 1.34,
+        "rotation_degrees": 0.0,
+        "opacity": 0.1,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          42,
+          440,
+          427
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 75569,
+      "sha256": "1B7AD723CB1D3AF96AD2B598699E3A89C265CB490519D668251E7D26EF0CF8E4",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_dash_impact_frame_00",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_dash_impact_sequence_v01",
+      "effect_id": "fx_dash_impact",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_dash_impact_00.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_dash_impact.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_dash_impact_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 0,
+      "frame_duration_seconds": 0.04,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.55,
+        "scale_y": 0.55,
+        "rotation_degrees": 0.0,
+        "opacity": 0.24,
+        "offset_px": [
+          -8.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          37,
+          101,
+          439,
+          310
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 26088,
+      "sha256": "9969E3C00A2B745D94C85C394421C9517D925D69056CAB5561D275B05682E71B",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_dash_impact_frame_01",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_dash_impact_sequence_v01",
+      "effect_id": "fx_dash_impact",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_dash_impact_01.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_dash_impact.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_dash_impact_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 1,
+      "frame_duration_seconds": 0.04,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.86,
+        "scale_y": 0.86,
+        "rotation_degrees": 0.0,
+        "opacity": 1.0,
+        "offset_px": [
+          -3.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          37,
+          101,
+          439,
+          310
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 79340,
+      "sha256": "56438ECD4585CEAA70F7C76D4BDD866797ECB763CA86A98CA5E4BC76B9874B4B",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_dash_impact_frame_02",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_dash_impact_sequence_v01",
+      "effect_id": "fx_dash_impact",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_dash_impact_02.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_dash_impact.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_dash_impact_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 2,
+      "frame_duration_seconds": 0.04,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.14,
+        "scale_y": 1.14,
+        "rotation_degrees": 0.0,
+        "opacity": 0.65,
+        "offset_px": [
+          3.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          37,
+          101,
+          439,
+          310
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 100984,
+      "sha256": "BA281660C07AF1A3F23296EA157A771EC9DDBC327996F1E0B4581FAAEA05A9BA",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_dash_impact_frame_03",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_dash_impact_sequence_v01",
+      "effect_id": "fx_dash_impact",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_dash_impact_03.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_dash_impact.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_dash_impact_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 3,
+      "frame_duration_seconds": 0.04,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.34,
+        "scale_y": 1.34,
+        "rotation_degrees": 0.0,
+        "opacity": 0.1,
+        "offset_px": [
+          8.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          37,
+          101,
+          439,
+          310
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 56918,
+      "sha256": "532E9CE643AA5D875DF0B269E3812981EF628E0D54A672D99DE2C91E41625C78",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_enemy_hit_frame_00",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_enemy_hit_sequence_v01",
+      "effect_id": "fx_enemy_hit",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_hit_00.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_hit.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_enemy_hit_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 0,
+      "frame_duration_seconds": 0.04,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.72,
+        "scale_y": 0.72,
+        "rotation_degrees": 0.0,
+        "opacity": 0.38,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          145,
+          440,
+          222
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 33428,
+      "sha256": "C5017F3F214B11840FE1700230DF815C4A141E45CC30F1DF57927ECE5FCDB6D6",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_enemy_hit_frame_01",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_enemy_hit_sequence_v01",
+      "effect_id": "fx_enemy_hit",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_hit_01.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_hit.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_enemy_hit_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 1,
+      "frame_duration_seconds": 0.04,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.04,
+        "scale_y": 1.04,
+        "rotation_degrees": 0.0,
+        "opacity": 1.0,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          145,
+          440,
+          222
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 80990,
+      "sha256": "4B2BCC330ABD135DB74FDD080E97CE2B9C721138A70E3C06795A994021BB7F76",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_enemy_hit_frame_02",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_enemy_hit_sequence_v01",
+      "effect_id": "fx_enemy_hit",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_hit_02.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_hit.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_enemy_hit_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 2,
+      "frame_duration_seconds": 0.04,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.22,
+        "scale_y": 1.22,
+        "rotation_degrees": 0.0,
+        "opacity": 0.12,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          145,
+          440,
+          222
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 46194,
+      "sha256": "8C840748B6B4D4AF903DB5E5E0F27AE4A9B6EB14B11AD923233CEDF70636755D",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_boss_lid_slam_frame_00",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_boss_lid_slam_sequence_v01",
+      "effect_id": "fx_boss_lid_slam",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_lid_slam_00.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_lid_slam.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_lid_slam_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 0,
+      "frame_duration_seconds": 0.07,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.48,
+        "scale_y": 0.48,
+        "rotation_degrees": 0.0,
+        "opacity": 0.24,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          196,
+          440,
+          121
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 15832,
+      "sha256": "4FF03138265B53A5AF11843F9F4D2D947FC1AE35D5A2B2B3919A3D459B8A6A54",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_boss_lid_slam_frame_01",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_boss_lid_slam_sequence_v01",
+      "effect_id": "fx_boss_lid_slam",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_lid_slam_01.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_lid_slam.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_lid_slam_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 1,
+      "frame_duration_seconds": 0.07,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.8,
+        "scale_y": 0.8,
+        "rotation_degrees": 0.0,
+        "opacity": 1.0,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          196,
+          440,
+          121
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 53526,
+      "sha256": "2ABFEEA8EF76A474448836B8A1771B8B6F1562DF56450CCEBEA72AF30BEDB7A4",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_boss_lid_slam_frame_02",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_boss_lid_slam_sequence_v01",
+      "effect_id": "fx_boss_lid_slam",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_lid_slam_02.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_lid_slam.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_lid_slam_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 2,
+      "frame_duration_seconds": 0.07,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.16,
+        "scale_y": 1.16,
+        "rotation_degrees": 0.0,
+        "opacity": 0.66,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          196,
+          440,
+          121
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 92299,
+      "sha256": "60EDACB319984B41AB17687ABB5D903B149E9677A1E84FA05729E1C826CAF737",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_boss_lid_slam_frame_03",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_boss_lid_slam_sequence_v01",
+      "effect_id": "fx_boss_lid_slam",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_lid_slam_03.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_lid_slam.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_lid_slam_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 3,
+      "frame_duration_seconds": 0.07,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.44,
+        "scale_y": 1.44,
+        "rotation_degrees": 0.0,
+        "opacity": 0.1,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          196,
+          440,
+          121
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 50914,
+      "sha256": "430BBE69A6E98DAA0A6763CC4B9E3B32505E7CF17F9C51D3AA7FF6F46AD95CFA",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_boss_charge_trail_frame_00",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_boss_charge_trail_sequence_v01",
+      "effect_id": "fx_boss_charge_trail",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_charge_trail_00.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_charge_trail.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_charge_trail_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 0,
+      "frame_duration_seconds": 0.045,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.82,
+        "scale_y": 0.92,
+        "rotation_degrees": 0.0,
+        "opacity": 1.0,
+        "offset_px": [
+          18.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          197,
+          440,
+          118
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 51368,
+      "sha256": "BF7178FE1537781A0FA49DC6CABA9470D958E5DD13CA6AFB4099F6B4B6614E5D",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_boss_charge_trail_frame_01",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_boss_charge_trail_sequence_v01",
+      "effect_id": "fx_boss_charge_trail",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_charge_trail_01.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_charge_trail.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_charge_trail_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 1,
+      "frame_duration_seconds": 0.045,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.94,
+        "scale_y": 0.96,
+        "rotation_degrees": 0.0,
+        "opacity": 0.78,
+        "offset_px": [
+          9.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          197,
+          440,
+          118
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 52411,
+      "sha256": "F656A9C239DEA352939DF03B9BB4BC6F3D6FA002969E3ED764A81FC89686F1E1",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_boss_charge_trail_frame_02",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_boss_charge_trail_sequence_v01",
+      "effect_id": "fx_boss_charge_trail",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_charge_trail_02.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_charge_trail.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_charge_trail_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 2,
+      "frame_duration_seconds": 0.045,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.04,
+        "scale_y": 1.0,
+        "rotation_degrees": 0.0,
+        "opacity": 0.56,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          197,
+          440,
+          118
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 56532,
+      "sha256": "C2C3A8CC05CC4408A557934747E2D07906FE1F3D71A0FA3CF60EC498C61E3497",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_boss_charge_trail_frame_03",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_boss_charge_trail_sequence_v01",
+      "effect_id": "fx_boss_charge_trail",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_charge_trail_03.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_charge_trail.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_charge_trail_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 3,
+      "frame_duration_seconds": 0.045,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.12,
+        "scale_y": 1.04,
+        "rotation_degrees": 0.0,
+        "opacity": 0.34,
+        "offset_px": [
+          -9.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          197,
+          440,
+          118
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 50028,
+      "sha256": "41426C73965D7BB30ECF8EAAB3336B581DF486C2707E1D585FDCDB94E79D4A42",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_boss_charge_trail_frame_04",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_boss_charge_trail_sequence_v01",
+      "effect_id": "fx_boss_charge_trail",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_charge_trail_04.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_charge_trail.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_charge_trail_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 4,
+      "frame_duration_seconds": 0.045,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.18,
+        "scale_y": 1.06,
+        "rotation_degrees": 0.0,
+        "opacity": 0.16,
+        "offset_px": [
+          -16.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          197,
+          440,
+          118
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 37170,
+      "sha256": "9D23D9C67C524DAEA9DAC5155C4240B02FF1A33377A81B19393726137441DC92",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_boss_phase_two_frame_00",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_boss_phase_two_sequence_v01",
+      "effect_id": "fx_boss_phase_two",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_phase_two_00.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_phase_two.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_phase_two_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 0,
+      "frame_duration_seconds": 0.27,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.5,
+        "scale_y": 0.5,
+        "rotation_degrees": 0.0,
+        "opacity": 0.22,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          88,
+          440,
+          335
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 30499,
+      "sha256": "CBCC9AC8600268B6221489C4C48F44E1DE53BA84DA34B2D2C1BB5496DB984C74",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_boss_phase_two_frame_01",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_boss_phase_two_sequence_v01",
+      "effect_id": "fx_boss_phase_two",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_phase_two_01.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_phase_two.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_phase_two_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 1,
+      "frame_duration_seconds": 0.27,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.72,
+        "scale_y": 0.72,
+        "rotation_degrees": 0.0,
+        "opacity": 0.52,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          88,
+          440,
+          335
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 75673,
+      "sha256": "DC548F6A716B8E851C3BC88ED4AB9879DE22DEDE2480CE73C3528438E9628B18",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_boss_phase_two_frame_02",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_boss_phase_two_sequence_v01",
+      "effect_id": "fx_boss_phase_two",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_phase_two_02.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_phase_two.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_phase_two_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 2,
+      "frame_duration_seconds": 0.27,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.96,
+        "scale_y": 0.96,
+        "rotation_degrees": 0.0,
+        "opacity": 0.82,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          88,
+          440,
+          335
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 136813,
+      "sha256": "377F293B25105BF7D1EE5196F4B98AF29208ACAF06C052FC058E72C751724971",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_boss_phase_two_frame_03",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_boss_phase_two_sequence_v01",
+      "effect_id": "fx_boss_phase_two",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_phase_two_03.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_phase_two.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_phase_two_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 3,
+      "frame_duration_seconds": 0.27,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.18,
+        "scale_y": 1.18,
+        "rotation_degrees": 0.0,
+        "opacity": 0.56,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          88,
+          440,
+          335
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 175929,
+      "sha256": "6FE1BDC31DA7FFBAF6348B05257E3A165D03C4AF184B0E65CA8B9BAA31297F71",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_boss_phase_two_frame_04",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_boss_phase_two_sequence_v01",
+      "effect_id": "fx_boss_phase_two",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_phase_two_04.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_phase_two.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_boss_phase_two_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 4,
+      "frame_duration_seconds": 0.27,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 1.34,
+        "scale_y": 1.34,
+        "rotation_degrees": 0.0,
+        "opacity": 0.16,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          36,
+          88,
+          440,
+          335
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 114122,
+      "sha256": "F2A3BA7C33FE9E9DAB13B9F588ECC834C98E262DAFC0AD4154F6CA9144BEB81D",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_enemy_death_frame_00",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_enemy_death_sequence_v01",
+      "effect_id": "fx_enemy_death",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_death_00.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_death.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_enemy_death_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 0,
+      "frame_duration_seconds": 0.1,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.98,
+        "scale_y": 0.98,
+        "rotation_degrees": 0.0,
+        "opacity": 1.0,
+        "offset_px": [
+          0.0,
+          0.0
+        ],
+        "source_visible_bounds_px": [
+          128,
+          36,
+          255,
+          440
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 80895,
+      "sha256": "3984C67730DB7B756E14F0083F5ADD66D134C90EE45F1FCB015FD11241E419C3",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_enemy_death_frame_01",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_enemy_death_sequence_v01",
+      "effect_id": "fx_enemy_death",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_death_01.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_death.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_enemy_death_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 1,
+      "frame_duration_seconds": 0.1,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.9,
+        "scale_y": 0.9,
+        "rotation_degrees": 0.0,
+        "opacity": 0.82,
+        "offset_px": [
+          0.0,
+          -5.0
+        ],
+        "source_visible_bounds_px": [
+          128,
+          36,
+          255,
+          440
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 60295,
+      "sha256": "863A74538DEEBE0C755D41C856B00C9E8124CA260BFC6B62C45A32FD32FBB022",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_enemy_death_frame_02",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_enemy_death_sequence_v01",
+      "effect_id": "fx_enemy_death",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_death_02.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_death.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_enemy_death_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 2,
+      "frame_duration_seconds": 0.1,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.76,
+        "scale_y": 0.76,
+        "rotation_degrees": 0.0,
+        "opacity": 0.58,
+        "offset_px": [
+          0.0,
+          -14.0
+        ],
+        "source_visible_bounds_px": [
+          128,
+          36,
+          255,
+          440
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 44043,
+      "sha256": "455BD81D77AF3B51191E01A23D9C2D5D3C586EDEB9D7F14D1939819E7D46A733",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_enemy_death_frame_03",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_enemy_death_sequence_v01",
+      "effect_id": "fx_enemy_death",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_death_03.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_death.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_enemy_death_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 3,
+      "frame_duration_seconds": 0.1,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.58,
+        "scale_y": 0.58,
+        "rotation_degrees": 0.0,
+        "opacity": 0.34,
+        "offset_px": [
+          0.0,
+          -24.0
+        ],
+        "source_visible_bounds_px": [
+          128,
+          36,
+          255,
+          440
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 23488,
+      "sha256": "3A4154450133D8414F5E00AADB0496C5EE020862531448D78DE979A0C01E402F",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "fx_enemy_death_frame_04",
+      "type": "transform_animated_vfx_frame_candidate",
+      "sequence_id": "fx_enemy_death_sequence_v01",
+      "effect_id": "fx_enemy_death",
+      "file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_death_04.png",
+      "source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_death.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/SourceFrames/fx_enemy_death_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "frame_index": 4,
+      "frame_duration_seconds": 0.1,
+      "playback_mode": "once",
+      "provisional_pivot_px": [
+        256,
+        256
+      ],
+      "transform_only": true,
+      "frame_transform": {
+        "scale_x": 0.38,
+        "scale_y": 0.38,
+        "rotation_degrees": 0.0,
+        "opacity": 0.12,
+        "offset_px": [
+          0.0,
+          -34.0
+        ],
+        "source_visible_bounds_px": [
+          128,
+          36,
+          255,
+          440
+        ]
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "file_size_bytes": 9209,
+      "sha256": "87A9A29C649635DEF1387D7FD0814D77D37BA97E5265A695DB92597326ABED57",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_front_frame_00",
+      "type": "boss_idle_transform_frame_candidate",
+      "sequence_id": "boss_nai_tong_idle_front_sequence_v01",
+      "state": "idle",
+      "view": "front",
+      "frame_index": 0,
+      "frame_duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_front_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_front_00.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_front_00_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "measured_visible_bottom_y_px": 465,
+      "transform_only": true,
+      "frame_transform": {
+        "uniform_scale": 1.0,
+        "opacity": 1.0,
+        "rotation_degrees": 0,
+        "foot_anchor_locked": true
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "source_visible_bounds_px": [
+        36,
+        57,
+        440,
+        409
+      ],
+      "output_bounds_px": [
+        36,
+        57,
+        440,
+        409
+      ],
+      "file_size_bytes": 298175,
+      "sha256": "A2E7C57640BEC4063358EA550AD7044D0C7DCE00E6934ABA5B101615B3BFAFEE",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_front_frame_01",
+      "type": "boss_idle_transform_frame_candidate",
+      "sequence_id": "boss_nai_tong_idle_front_sequence_v01",
+      "state": "idle",
+      "view": "front",
+      "frame_index": 1,
+      "frame_duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_front_01.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_front_00.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_front_00_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "measured_visible_bottom_y_px": 465,
+      "transform_only": true,
+      "frame_transform": {
+        "uniform_scale": 1.014,
+        "opacity": 1.0,
+        "rotation_degrees": 0,
+        "foot_anchor_locked": true
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "source_visible_bounds_px": [
+        36,
+        57,
+        440,
+        409
+      ],
+      "output_bounds_px": [
+        33,
+        51,
+        446,
+        415
+      ],
+      "file_size_bytes": 311456,
+      "sha256": "8266843FBDC61E7DDECB85408BAA55CF32C7923F0F2954D9B21C2F7A9A0178F9",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_front_frame_02",
+      "type": "boss_idle_transform_frame_candidate",
+      "sequence_id": "boss_nai_tong_idle_front_sequence_v01",
+      "state": "idle",
+      "view": "front",
+      "frame_index": 2,
+      "frame_duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_front_02.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_front_00.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_front_00_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "measured_visible_bottom_y_px": 465,
+      "transform_only": true,
+      "frame_transform": {
+        "uniform_scale": 1.028,
+        "opacity": 1.0,
+        "rotation_degrees": 0,
+        "foot_anchor_locked": true
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "source_visible_bounds_px": [
+        36,
+        57,
+        440,
+        409
+      ],
+      "output_bounds_px": [
+        30,
+        46,
+        452,
+        420
+      ],
+      "file_size_bytes": 318080,
+      "sha256": "9ADFE1355CC00488F3AA7AC7049432AA62FCC58B030952017351BB091A3730D7",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_front_frame_03",
+      "type": "boss_idle_transform_frame_candidate",
+      "sequence_id": "boss_nai_tong_idle_front_sequence_v01",
+      "state": "idle",
+      "view": "front",
+      "frame_index": 3,
+      "frame_duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_front_03.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_front_00.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_front_00_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "measured_visible_bottom_y_px": 465,
+      "transform_only": true,
+      "frame_transform": {
+        "uniform_scale": 1.014,
+        "opacity": 1.0,
+        "rotation_degrees": 0,
+        "foot_anchor_locked": true
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "source_visible_bounds_px": [
+        36,
+        57,
+        440,
+        409
+      ],
+      "output_bounds_px": [
+        33,
+        51,
+        446,
+        415
+      ],
+      "file_size_bytes": 311456,
+      "sha256": "8266843FBDC61E7DDECB85408BAA55CF32C7923F0F2954D9B21C2F7A9A0178F9",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_back_frame_00",
+      "type": "boss_idle_transform_frame_candidate",
+      "sequence_id": "boss_nai_tong_idle_back_sequence_v01",
+      "state": "idle",
+      "view": "back",
+      "frame_index": 0,
+      "frame_duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_back_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_back_00.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_back_00_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "measured_visible_bottom_y_px": 465,
+      "transform_only": true,
+      "frame_transform": {
+        "uniform_scale": 1.0,
+        "opacity": 1.0,
+        "rotation_degrees": 0,
+        "foot_anchor_locked": true
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "source_visible_bounds_px": [
+        36,
+        43,
+        440,
+        423
+      ],
+      "output_bounds_px": [
+        36,
+        43,
+        440,
+        423
+      ],
+      "file_size_bytes": 303788,
+      "sha256": "C322413DCFA764DD3F5199B267EC8478907095146E7A8B5BF4B54DFB4D7C859A",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_back_frame_01",
+      "type": "boss_idle_transform_frame_candidate",
+      "sequence_id": "boss_nai_tong_idle_back_sequence_v01",
+      "state": "idle",
+      "view": "back",
+      "frame_index": 1,
+      "frame_duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_back_01.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_back_00.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_back_00_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "measured_visible_bottom_y_px": 465,
+      "transform_only": true,
+      "frame_transform": {
+        "uniform_scale": 1.014,
+        "opacity": 1.0,
+        "rotation_degrees": 0,
+        "foot_anchor_locked": true
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "source_visible_bounds_px": [
+        36,
+        43,
+        440,
+        423
+      ],
+      "output_bounds_px": [
+        33,
+        37,
+        446,
+        429
+      ],
+      "file_size_bytes": 317385,
+      "sha256": "8873F9B7C33648F12BF8E94EB95211D81B9F5B4666647BD331A95BB83C24A7C8",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_back_frame_02",
+      "type": "boss_idle_transform_frame_candidate",
+      "sequence_id": "boss_nai_tong_idle_back_sequence_v01",
+      "state": "idle",
+      "view": "back",
+      "frame_index": 2,
+      "frame_duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_back_02.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_back_00.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_back_00_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "measured_visible_bottom_y_px": 465,
+      "transform_only": true,
+      "frame_transform": {
+        "uniform_scale": 1.028,
+        "opacity": 1.0,
+        "rotation_degrees": 0,
+        "foot_anchor_locked": true
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "source_visible_bounds_px": [
+        36,
+        43,
+        440,
+        423
+      ],
+      "output_bounds_px": [
+        30,
+        31,
+        452,
+        435
+      ],
+      "file_size_bytes": 324239,
+      "sha256": "C03BEFFBBFBFA95B5FD4C4296993F75C6DC216FC0050C0E72D90D0CEF8E42152",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_back_frame_03",
+      "type": "boss_idle_transform_frame_candidate",
+      "sequence_id": "boss_nai_tong_idle_back_sequence_v01",
+      "state": "idle",
+      "view": "back",
+      "frame_index": 3,
+      "frame_duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_back_03.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_back_00.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_back_00_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "measured_visible_bottom_y_px": 465,
+      "transform_only": true,
+      "frame_transform": {
+        "uniform_scale": 1.014,
+        "opacity": 1.0,
+        "rotation_degrees": 0,
+        "foot_anchor_locked": true
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "source_visible_bounds_px": [
+        36,
+        43,
+        440,
+        423
+      ],
+      "output_bounds_px": [
+        33,
+        37,
+        446,
+        429
+      ],
+      "file_size_bytes": 317385,
+      "sha256": "8873F9B7C33648F12BF8E94EB95211D81B9F5B4666647BD331A95BB83C24A7C8",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_side_right_frame_00",
+      "type": "boss_idle_transform_frame_candidate",
+      "sequence_id": "boss_nai_tong_idle_side_right_sequence_v01",
+      "state": "idle",
+      "view": "side_right",
+      "frame_index": 0,
+      "frame_duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_side_right_00.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_side_right_00.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_side_right_00_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "measured_visible_bottom_y_px": 465,
+      "transform_only": true,
+      "frame_transform": {
+        "uniform_scale": 1.0,
+        "opacity": 1.0,
+        "rotation_degrees": 0,
+        "foot_anchor_locked": true
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "source_visible_bounds_px": [
+        80,
+        24,
+        352,
+        442
+      ],
+      "output_bounds_px": [
+        80,
+        24,
+        352,
+        442
+      ],
+      "file_size_bytes": 280919,
+      "sha256": "F5585FED8F1F52C447A673C3D5F6CA8317231C8FD1F4B15EEF2F63BEE6DCD685",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_side_right_frame_01",
+      "type": "boss_idle_transform_frame_candidate",
+      "sequence_id": "boss_nai_tong_idle_side_right_sequence_v01",
+      "state": "idle",
+      "view": "side_right",
+      "frame_index": 1,
+      "frame_duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_side_right_01.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_side_right_00.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_side_right_00_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "measured_visible_bottom_y_px": 465,
+      "transform_only": true,
+      "frame_transform": {
+        "uniform_scale": 1.014,
+        "opacity": 1.0,
+        "rotation_degrees": 0,
+        "foot_anchor_locked": true
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "source_visible_bounds_px": [
+        80,
+        24,
+        352,
+        442
+      ],
+      "output_bounds_px": [
+        78,
+        18,
+        357,
+        448
+      ],
+      "file_size_bytes": 292247,
+      "sha256": "D4DC0598AF58D876CB2BFE0F76677FA295DFBAA5154BFCB7A86016593680C5B3",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_side_right_frame_02",
+      "type": "boss_idle_transform_frame_candidate",
+      "sequence_id": "boss_nai_tong_idle_side_right_sequence_v01",
+      "state": "idle",
+      "view": "side_right",
+      "frame_index": 2,
+      "frame_duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_side_right_02.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_side_right_00.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_side_right_00_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "measured_visible_bottom_y_px": 465,
+      "transform_only": true,
+      "frame_transform": {
+        "uniform_scale": 1.028,
+        "opacity": 1.0,
+        "rotation_degrees": 0,
+        "foot_anchor_locked": true
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "source_visible_bounds_px": [
+        80,
+        24,
+        352,
+        442
+      ],
+      "output_bounds_px": [
+        75,
+        12,
+        362,
+        454
+      ],
+      "file_size_bytes": 299631,
+      "sha256": "357213D90AF30E523B461C429F9865265E7BE51F2760C9F8340D272C82738959",
+      "runtime_ready": false
+    },
+    {
+      "asset_id": "boss_nai_tong_idle_side_right_frame_03",
+      "type": "boss_idle_transform_frame_candidate",
+      "sequence_id": "boss_nai_tong_idle_side_right_sequence_v01",
+      "state": "idle",
+      "view": "side_right",
+      "frame_index": 3,
+      "frame_duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_side_right_03.png",
+      "source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_side_right_00.png",
+      "high_resolution_source_file": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/SourceFrames/boss_nai_tong_idle_side_right_00_source.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "provisional_foot_anchor_px": [
+        256,
+        466
+      ],
+      "measured_visible_bottom_y_px": 465,
+      "transform_only": true,
+      "frame_transform": {
+        "uniform_scale": 1.014,
+        "opacity": 1.0,
+        "rotation_degrees": 0,
+        "foot_anchor_locked": true
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_outer_border_pixels": 0,
+      "source_visible_bounds_px": [
+        80,
+        24,
+        352,
+        442
+      ],
+      "output_bounds_px": [
+        78,
+        18,
+        357,
+        448
+      ],
+      "file_size_bytes": 292247,
+      "sha256": "D4DC0598AF58D876CB2BFE0F76677FA295DFBAA5154BFCB7A86016593680C5B3",
+      "runtime_ready": false
+    }
+  ],
+  "event_coverage_backlog": [
+    {
+      "effect_id": "fx_enemy_hit",
+      "event_id": "enemy_damaged",
+      "status": "not_in_first_sample"
+    },
+    {
+      "effect_id": "fx_enemy_death",
+      "event_id": "enemy_killed",
+      "status": "not_in_first_sample"
+    },
+    {
+      "effect_id": "fx_boss_charge_trail",
+      "event_id": "boss_telegraph_charge plus charge-state presentation; end on boss_charge_hit/missed",
+      "status": "not_in_first_sample"
+    },
+    {
+      "effect_id": "fx_boss_phase_two",
+      "event_id": "boss_phase_two",
+      "status": "not_in_first_sample"
+    },
+    {
+      "effect_id": "fx_boss_death",
+      "event_id": "boss_killed",
+      "status": "optional; event spelling needs engineering confirmation; not_in_first_sample"
+    }
+  ],
+  "visual_timing_proposals": {
+    "boss_charge_telegraph_seconds": 0.9,
+    "boss_lid_slam_telegraph_seconds": 1.05,
+    "boss_phase_two_seconds": 1.35,
+    "boss_animation_preview_fps": 24,
+    "note": "Timing proposals follow the engineering handoff; they do not set hitboxes, damage, or gameplay timing. VFX frame counts remain pending art direction and integration review."
+  },
+  "provisional_added_scope_estimate_art_person_days": {
+    "boss_design_and_three_view_nine_state_animation": "5-8",
+    "player_and_combat_vfx_full_event_set": "4-6",
+    "export_alpha_anchor_and_fixed_camera_qa": "1-2",
+    "total": "10-16",
+    "hours_per_person_day": 6,
+    "status": "planning estimate only; confirm frame counts, editable-source format, and event hooks before production"
+  },
+  "approved_direction": {
+    "turnaround": "boss_nai_tong_turnaround_v02_concept",
+    "barrel_lid_carry": "low at hip on strap",
+    "approval_basis": "User approved the first-batch art direction before this WIP candidate pass."
+  },
+  "generation_revision_notes": [
+    "Second batch isolates Boss and VFX concepts into transparent RGBA PNG candidates on 512x512 canvases.",
+    "Boss charge_attack was regenerated as a grounded forward-driving pose after the first candidate read as a leap; the leap variant is archived under RuntimeWIP/Variants and is excluded from the delivery list.",
+    "The source PNGs are flattened image outputs. Layered PSD, Aseprite or other editable authoring projects are not included."
+  ],
+  "second_batch_summary": {
+    "boss_single_keyframes": 11,
+    "boss_views": [
+      "front",
+      "back",
+      "side_right"
+    ],
+    "boss_state_coverage": [
+      "idle",
+      "move",
+      "charge_telegraph",
+      "charge_attack",
+      "lid_slam_telegraph",
+      "lid_slam_impact",
+      "hit",
+      "phase_two",
+      "death"
+    ],
+    "boss_states_with_incomplete_views": [
+      "move",
+      "charge_telegraph",
+      "charge_attack",
+      "lid_slam_telegraph",
+      "lid_slam_impact",
+      "hit",
+      "phase_two",
+      "death"
+    ],
+    "isolated_vfx_stills": 13,
+    "all_candidates_canvas_px": [
+      512,
+      512
+    ],
+    "all_candidates_are_complete_sequences": false,
+    "all_candidates_runtime_ready": false,
+    "ue_imported": false,
+    "required_before_runtime": [
+      "Complete animation/VFX sequences and frame timing",
+      "Freeze source format, anchors and contact/emission points",
+      "Full alpha/fringe and fixed-camera review",
+      "Confirm Presenter hooks for player action start/hold states",
+      "Engineer-led UE import and P4 viewport/PIE review"
+    ]
+  },
+  "engineering_event_contract": {
+    "source": "UE5/Records/p4_alpha/P4_W4_Boss与战斗特效美术要求_2026-10-29.md",
+    "warning_seconds": {
+      "boss_telegraph_charge": 0.9,
+      "boss_telegraph_lid_slam": 1.05
+    },
+    "phase_two_seconds": 1.35,
+    "boss_charge_distance_uu": {
+      "normal": 280,
+      "phase_two": 340
+    },
+    "boss_lid_slam_radius_uu": {
+      "normal": 205,
+      "phase_two": 248
+    },
+    "rule": "Art timing only follows the existing simulation contract and never changes hitboxes, damage or event IDs.",
+    "event_mapping_notes": [
+      "player_melee_miss must not show a confirmed contact impact.",
+      "fx_boss_lid_slam may play for hit or missed results because the slam occurred, but it is not a player damage signal.",
+      "fx_boss_charge_trail starts only during the actual charge presentation, not in its telegraph."
+    ]
+  },
+  "vfx_sequence_batch": {
+    "status": "transform_timing_preview_wip",
+    "source_manifest": "UE5/SourceAssets/P4/Manifests/P4_W4_BossAndVFX_manifest_v02.json",
+    "sequence_root": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/",
+    "sequence_count": 13,
+    "total_frame_count": 57,
+    "canvas_px": [
+      512,
+      512
+    ],
+    "nominal_frame_rate": "per-frame durations are authoritative; sequences use variable display rates",
+    "motion_source": "source stills transformed by scale, opacity and small pivot offsets only; rotation was removed after alpha-edge QA detected clipping",
+    "editable_layered_authoring_source": false,
+    "low_intensity_fallback": "Fade/opacity frames are provided in each sequence; dedicated hand-redrawn accessibility variants remain pending.",
+    "sequences": [
+      {
+        "sequence_id": "fx_milk_shot_sequence_v01",
+        "effect_id": "fx_milk_shot",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_milk_shot_00.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_milk_shot_01.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_milk_shot_02.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_milk_shot_03.png"
+        ],
+        "frame_count": 4,
+        "frame_duration_seconds": 0.075,
+        "sequence_duration_seconds": 0.3,
+        "playback_mode": "loop",
+        "event_ids": [],
+        "trigger": "Projectile spawn/render hook; Presenter binding pending.",
+        "source_still": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_milk_shot.png",
+        "frame_generation": "Non-destructive transform variants from the approved isolated still: scale, opacity, rotation and small pivot offsets only; no per-frame shape redraw.",
+        "status": "timing_preview_candidate; shape animation and gameplay review pending",
+        "runtime_ready": false
+      },
+      {
+        "sequence_id": "fx_melee_swing_sequence_v01",
+        "effect_id": "fx_melee_swing",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_swing_00.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_swing_01.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_swing_02.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_swing_03.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_swing_04.png"
+        ],
+        "frame_count": 5,
+        "frame_duration_seconds": 0.055,
+        "sequence_duration_seconds": 0.275,
+        "playback_mode": "once",
+        "event_ids": [],
+        "trigger": "Player attack-start hook; Presenter binding pending. Contact impact remains player_melee_hit only.",
+        "source_still": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_swing.png",
+        "frame_generation": "Non-destructive transform variants from the approved isolated still: scale, opacity, rotation and small pivot offsets only; no per-frame shape redraw.",
+        "status": "timing_preview_candidate; shape animation and gameplay review pending",
+        "runtime_ready": false
+      },
+      {
+        "sequence_id": "fx_player_dash_trail_sequence_v01",
+        "effect_id": "fx_player_dash_trail",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_dash_trail_00.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_dash_trail_01.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_dash_trail_02.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_dash_trail_03.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_dash_trail_04.png"
+        ],
+        "frame_count": 5,
+        "frame_duration_seconds": 0.05,
+        "sequence_duration_seconds": 0.25,
+        "playback_mode": "once",
+        "event_ids": [],
+        "trigger": "Dash-state start/end hook; Presenter binding pending.",
+        "source_still": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_dash_trail.png",
+        "frame_generation": "Non-destructive transform variants from the approved isolated still: scale, opacity, rotation and small pivot offsets only; no per-frame shape redraw.",
+        "status": "timing_preview_candidate; shape animation and gameplay review pending",
+        "runtime_ready": false
+      },
+      {
+        "sequence_id": "fx_laugh_burst_sequence_v01",
+        "effect_id": "fx_laugh_burst",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_laugh_burst_00.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_laugh_burst_01.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_laugh_burst_02.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_laugh_burst_03.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_laugh_burst_04.png"
+        ],
+        "frame_count": 5,
+        "frame_duration_seconds": 0.07,
+        "sequence_duration_seconds": 0.35,
+        "playback_mode": "once",
+        "event_ids": [],
+        "trigger": "Laugh action hook; Presenter binding pending.",
+        "source_still": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_laugh_burst.png",
+        "frame_generation": "Non-destructive transform variants from the approved isolated still: scale, opacity, rotation and small pivot offsets only; no per-frame shape redraw.",
+        "status": "timing_preview_candidate; shape animation and gameplay review pending",
+        "runtime_ready": false
+      },
+      {
+        "sequence_id": "fx_defend_guard_sequence_v01",
+        "effect_id": "fx_defend_guard",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_defend_guard_00.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_defend_guard_01.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_defend_guard_02.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_defend_guard_03.png"
+        ],
+        "frame_count": 4,
+        "frame_duration_seconds": 0.15,
+        "sequence_duration_seconds": 0.6,
+        "playback_mode": "loop",
+        "event_ids": [],
+        "trigger": "Held defend-state presentation hook; Presenter binding pending.",
+        "source_still": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_defend_guard.png",
+        "frame_generation": "Non-destructive transform variants from the approved isolated still: scale, opacity, rotation and small pivot offsets only; no per-frame shape redraw.",
+        "status": "timing_preview_candidate; shape animation and gameplay review pending",
+        "runtime_ready": false
+      },
+      {
+        "sequence_id": "fx_player_hit_sequence_v01",
+        "effect_id": "fx_player_hit",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_hit_00.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_hit_01.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_hit_02.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_player_hit_03.png"
+        ],
+        "frame_count": 4,
+        "frame_duration_seconds": 0.04,
+        "sequence_duration_seconds": 0.16,
+        "playback_mode": "once",
+        "event_ids": [
+          "player_damaged"
+        ],
+        "trigger": "Play when player damage is confirmed.",
+        "source_still": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_player_hit.png",
+        "frame_generation": "Non-destructive transform variants from the approved isolated still: scale, opacity, rotation and small pivot offsets only; no per-frame shape redraw.",
+        "status": "timing_preview_candidate; shape animation and gameplay review pending",
+        "runtime_ready": false
+      },
+      {
+        "sequence_id": "fx_melee_impact_sequence_v01",
+        "effect_id": "fx_melee_impact",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_impact_00.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_impact_01.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_impact_02.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_melee_impact_03.png"
+        ],
+        "frame_count": 4,
+        "frame_duration_seconds": 0.035,
+        "sequence_duration_seconds": 0.14,
+        "playback_mode": "once",
+        "event_ids": [
+          "player_melee_hit"
+        ],
+        "trigger": "Play at confirmed melee contact only.",
+        "source_still": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_melee_impact.png",
+        "frame_generation": "Non-destructive transform variants from the approved isolated still: scale, opacity, rotation and small pivot offsets only; no per-frame shape redraw.",
+        "status": "timing_preview_candidate; shape animation and gameplay review pending",
+        "runtime_ready": false
+      },
+      {
+        "sequence_id": "fx_dash_impact_sequence_v01",
+        "effect_id": "fx_dash_impact",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_dash_impact_00.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_dash_impact_01.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_dash_impact_02.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_dash_impact_03.png"
+        ],
+        "frame_count": 4,
+        "frame_duration_seconds": 0.04,
+        "sequence_duration_seconds": 0.16,
+        "playback_mode": "once",
+        "event_ids": [
+          "player_dash_hit"
+        ],
+        "trigger": "Play at confirmed dash contact only.",
+        "source_still": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_dash_impact.png",
+        "frame_generation": "Non-destructive transform variants from the approved isolated still: scale, opacity, rotation and small pivot offsets only; no per-frame shape redraw.",
+        "status": "timing_preview_candidate; shape animation and gameplay review pending",
+        "runtime_ready": false
+      },
+      {
+        "sequence_id": "fx_enemy_hit_sequence_v01",
+        "effect_id": "fx_enemy_hit",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_hit_00.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_hit_01.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_hit_02.png"
+        ],
+        "frame_count": 3,
+        "frame_duration_seconds": 0.04,
+        "sequence_duration_seconds": 0.12,
+        "playback_mode": "once",
+        "event_ids": [
+          "enemy_damaged"
+        ],
+        "trigger": "Play when enemy damage is confirmed.",
+        "source_still": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_hit.png",
+        "frame_generation": "Non-destructive transform variants from the approved isolated still: scale, opacity, rotation and small pivot offsets only; no per-frame shape redraw.",
+        "status": "timing_preview_candidate; shape animation and gameplay review pending",
+        "runtime_ready": false
+      },
+      {
+        "sequence_id": "fx_boss_lid_slam_sequence_v01",
+        "effect_id": "fx_boss_lid_slam",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_lid_slam_00.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_lid_slam_01.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_lid_slam_02.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_lid_slam_03.png"
+        ],
+        "frame_count": 4,
+        "frame_duration_seconds": 0.07,
+        "sequence_duration_seconds": 0.28,
+        "playback_mode": "once",
+        "event_ids": [
+          "boss_lid_slam_hit",
+          "boss_lid_slam_missed"
+        ],
+        "trigger": "Play when the lid slam occurs for either result.",
+        "source_still": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_lid_slam.png",
+        "frame_generation": "Non-destructive transform variants from the approved isolated still: scale, opacity, rotation and small pivot offsets only; no per-frame shape redraw.",
+        "status": "timing_preview_candidate; shape animation and gameplay review pending",
+        "runtime_ready": false
+      },
+      {
+        "sequence_id": "fx_boss_charge_trail_sequence_v01",
+        "effect_id": "fx_boss_charge_trail",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_charge_trail_00.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_charge_trail_01.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_charge_trail_02.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_charge_trail_03.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_charge_trail_04.png"
+        ],
+        "frame_count": 5,
+        "frame_duration_seconds": 0.045,
+        "sequence_duration_seconds": 0.225,
+        "playback_mode": "once",
+        "event_ids": [
+          "boss_charge_hit",
+          "boss_charge_missed"
+        ],
+        "trigger": "Start only when the charge attack presentation actually begins after its warning; end on boss_charge_hit or boss_charge_missed. Charge-state start hook needs engineering confirmation. Do not start on boss_telegraph_charge.",
+        "source_still": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_charge_trail.png",
+        "frame_generation": "Non-destructive transform variants from the approved isolated still: scale, opacity, rotation and small pivot offsets only; no per-frame shape redraw.",
+        "status": "timing_preview_candidate; shape animation and gameplay review pending",
+        "runtime_ready": false
+      },
+      {
+        "sequence_id": "fx_boss_phase_two_sequence_v01",
+        "effect_id": "fx_boss_phase_two",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_phase_two_00.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_phase_two_01.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_phase_two_02.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_phase_two_03.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_boss_phase_two_04.png"
+        ],
+        "frame_count": 5,
+        "frame_duration_seconds": 0.27,
+        "sequence_duration_seconds": 1.35,
+        "playback_mode": "once",
+        "event_ids": [
+          "boss_phase_two"
+        ],
+        "trigger": "Play during the 1.35 second phase transition presentation.",
+        "source_still": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_boss_phase_two.png",
+        "frame_generation": "Non-destructive transform variants from the approved isolated still: scale, opacity, rotation and small pivot offsets only; no per-frame shape redraw.",
+        "status": "timing_preview_candidate; shape animation and gameplay review pending",
+        "runtime_ready": false
+      },
+      {
+        "sequence_id": "fx_enemy_death_sequence_v01",
+        "effect_id": "fx_enemy_death",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_death_00.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_death_01.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_death_02.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_death_03.png",
+          "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Sequences/Frames512/fx_enemy_death_04.png"
+        ],
+        "frame_count": 5,
+        "frame_duration_seconds": 0.1,
+        "sequence_duration_seconds": 0.5,
+        "playback_mode": "once",
+        "event_ids": [
+          "enemy_killed"
+        ],
+        "trigger": "Play on confirmed enemy kill.",
+        "source_still": "UE5/SourceAssets/P4/Effects/Alpha/W4/RuntimeWIP/Frames512/fx_enemy_death.png",
+        "frame_generation": "Non-destructive transform variants from the approved isolated still: scale, opacity, rotation and small pivot offsets only; no per-frame shape redraw.",
+        "status": "timing_preview_candidate; shape animation and gameplay review pending",
+        "runtime_ready": false
+      }
+    ]
+  },
+  "vfx_sequence_review_page": "UE5/Records/p4_alpha/evidence/W4/P4_W4_VFXSequenceReview_v01.html",
+  "boss_sequence_batch": {
+    "status": "transform_timing_preview_wip",
+    "sequence_count": 3,
+    "frame_count": 12,
+    "views": [
+      "front",
+      "back",
+      "side_right"
+    ],
+    "frame_duration_seconds": 0.2,
+    "sequence_duration_seconds": 0.8,
+    "playback_mode": "loop",
+    "foot_anchor_px": [
+      256,
+      466
+    ],
+    "motion_source": "Uniform full-sprite scale changes around an estimated foot baseline. No pose redraw, squash/stretch, blinking or independent lid motion.",
+    "foot_baseline_measured_y_px": 465,
+    "sequences": [
+      {
+        "sequence_id": "boss_nai_tong_idle_front_sequence_v01",
+        "character_id": "boss_nai_tong",
+        "state": "idle",
+        "view": "front",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_front_00.png",
+          "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_front_01.png",
+          "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_front_02.png",
+          "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_front_03.png"
+        ],
+        "frame_count": 4,
+        "frame_duration_seconds": 0.2,
+        "sequence_duration_seconds": 0.8,
+        "playback_mode": "loop",
+        "foot_anchor_px": [
+          256,
+          466
+        ],
+        "motion_type": "subtle full-sprite breathing scale; no independently animated limbs, face or prop",
+        "source_still": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_front_00.png",
+        "status": "idle loop timing preview; character shape animation pending",
+        "runtime_ready": false
+      },
+      {
+        "sequence_id": "boss_nai_tong_idle_back_sequence_v01",
+        "character_id": "boss_nai_tong",
+        "state": "idle",
+        "view": "back",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_back_00.png",
+          "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_back_01.png",
+          "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_back_02.png",
+          "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_back_03.png"
+        ],
+        "frame_count": 4,
+        "frame_duration_seconds": 0.2,
+        "sequence_duration_seconds": 0.8,
+        "playback_mode": "loop",
+        "foot_anchor_px": [
+          256,
+          466
+        ],
+        "motion_type": "subtle full-sprite breathing scale; no independently animated limbs, face or prop",
+        "source_still": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_back_00.png",
+        "status": "idle loop timing preview; character shape animation pending",
+        "runtime_ready": false
+      },
+      {
+        "sequence_id": "boss_nai_tong_idle_side_right_sequence_v01",
+        "character_id": "boss_nai_tong",
+        "state": "idle",
+        "view": "side_right",
+        "frame_files": [
+          "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_side_right_00.png",
+          "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_side_right_01.png",
+          "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_side_right_02.png",
+          "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Sequences/Frames512/boss_nai_tong_idle_side_right_03.png"
+        ],
+        "frame_count": 4,
+        "frame_duration_seconds": 0.2,
+        "sequence_duration_seconds": 0.8,
+        "playback_mode": "loop",
+        "foot_anchor_px": [
+          256,
+          466
+        ],
+        "motion_type": "subtle full-sprite breathing scale; no independently animated limbs, face or prop",
+        "source_still": "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/RuntimeWIP/Frames512/boss_nai_tong_idle_side_right_00.png",
+        "status": "idle loop timing preview; character shape animation pending",
+        "runtime_ready": false
+      }
+    ]
+  },
+  "boss_sequence_review_page": "UE5/Records/p4_alpha/evidence/W4/P4_W4_BossIdleSequenceReview_v01.html"
+}

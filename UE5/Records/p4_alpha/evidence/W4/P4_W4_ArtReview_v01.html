@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P4 W4 美术首批风格评审 v01</title>
+<style>
+  :root { color-scheme: light; --ink:#26323a; --muted:#63717a; --line:#d7dfe2; --card:#fff; --bg:#f1f4f4; --gold:#c99a4a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.55 "Segoe UI","Microsoft YaHei",sans-serif; }
+  main { max-width:1280px; margin:0 auto; padding:32px 22px 56px; }
+  h1,h2,h3,p { margin-top:0; }
+  h1 { margin-bottom:6px; font-size:30px; }
+  h2 { margin:0 0 12px; font-size:22px; }
+  h3 { margin:0 0 8px; font-size:17px; }
+  .meta { color:var(--muted); margin-bottom:24px; }
+  .callout { padding:14px 18px; border-left:5px solid var(--gold); background:#fff8e9; border-radius:8px; margin:18px 0 24px; }
+  section { margin:24px 0; }
+  .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px; box-shadow:0 2px 8px #21313a0b; }
+  .wide { grid-column:1/-1; }
+  .board { min-height:240px; display:flex; align-items:center; justify-content:center; padding:8px; border:1px solid #e4e8e9; border-radius:8px; background-color:#f8f8f7; background-image:linear-gradient(45deg,#e8ebec 25%,transparent 25%),linear-gradient(-45deg,#e8ebec 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e8ebec 75%),linear-gradient(-45deg,transparent 75%,#e8ebec 75%); background-size:20px 20px; background-position:0 0,0 10px,10px -10px,-10px 0; }
+  img { display:block; max-width:100%; max-height:640px; object-fit:contain; }
+  .tag { display:inline-block; padding:2px 9px; border-radius:999px; background:#f1e7d2; color:#684a16; font-size:13px; margin:0 6px 6px 0; }
+  ul { padding-left:22px; margin-bottom:8px; }
+  .small { color:var(--muted); font-size:14px; }
+  table { width:100%; border-collapse:collapse; background:#fff; }
+  th,td { text-align:left; vertical-align:top; border:1px solid var(--line); padding:9px 11px; }
+  th { background:#edf0ef; }
+  code { background:#edf0ef; padding:1px 4px; border-radius:4px; }
+  @media(max-width:800px) { .grid{grid-template-columns:1fr}.wide{grid-column:auto} }
+</style>
+</head>
+<body>
+<main>
+  <h1>P4 W4 美术首批风格评审</h1>
+  <p class="meta">版本 v01 · 2026-10-29 · 阶段：待项目负责人视觉确认</p>
+  <div class="callout"><strong>评审范围：</strong>确认奶桶队长造型与桶盖携带方式、攻击姿势方向、主角技能特效风格。以下均为 AI 概念评审板，不是透明逐帧生产素材，尚未导入 UE。</div>
+
+  <section>
+    <h2>奶桶队长三向与比例</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>方案 A · 桶盖持在身前</h3>
+        <div class="board"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_turnaround_v01_concept.png" alt="Boss 正面、背面、右侧面与主角比例稿 v01"></div>
+        <p><span class="tag">front</span><span class="tag">back</span><span class="tag">side_right</span></p>
+        <p class="small">木桶身体的材质与颜色能区别奶盾，但正面桶盖可能接近举盾读法。</p>
+      </article>
+      <article class="card">
+        <h3>方案 B · 桶盖低挂髋侧（当前建议）</h3>
+        <div class="board"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_turnaround_v02_concept.png" alt="Boss 正面、背面、右侧面与主角比例稿 v02"></div>
+        <p><span class="tag">front</span><span class="tag">back</span><span class="tag">side_right</span></p>
+        <p class="small">桶盖垂在身侧，静止剪影更像桶具携行；攻击时再举起桶盖。</p>
+      </article>
+      <article class="card wide">
+        <h3>攻击关键姿势</h3>
+        <div class="board"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_action_keyposes_v01_concept.png" alt="Boss 五个攻击关键姿势概念板"></div>
+        <p class="small">从左到右、先上排再下排：待机、冲锋预警、冲锋出击、桶盖举起预警、桶盖砸地。需要后续补上正/背/侧向逐帧与工程时间对拍。</p>
+      </article>
+      <article class="card wide">
+        <h3>二阶段姿势</h3>
+        <div class="board"><img src="../../../../SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_phase_two_v01_concept.png" alt="Boss 二阶段转换姿势概念稿"></div>
+        <p class="small">单姿势方向稿；1.35 秒保护窗的实际动画帧和特效时长需按工程事件接线。</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>战斗特效与主角能力反馈</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>W4 命中与 Boss 砸地</h3>
+        <div class="board"><img src="../../../../SourceAssets/P4/Effects/Alpha/W4/p4_w4_fx_sample_sheet_v01_concept.png" alt="近战、冲撞和 Boss 砸地特效样式板"></div>
+        <p class="small">从左至右：J 近战接触爆点、冲撞接触反馈、桶盖砸地环波。Miss 不播放命中爆点；砸地波纹本身不代表玩家受伤。</p>
+      </article>
+      <article class="card">
+        <h3>主角技能与受击</h3>
+        <div class="board"><img src="../../../../SourceAssets/P4/Effects/Alpha/W4/p4_player_fx_sample_sheet_v01_concept.png" alt="奶球、挥击、冲撞、大笑、受击和防御特效样式板"></div>
+        <p class="small">从左至右、先上排再下排：奶球、近战挥击弧、冲撞拖尾、大笑范围波、主角受击、防御护层。除受击/命中已有明确事件外，能力触发接口待工程确认。</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>已知工程约束</h2>
+    <table>
+      <thead><tr><th>事项</th><th>当前提案</th><th>工程边界</th></tr></thead>
+      <tbody>
+        <tr><td>Boss 源帧</td><td>512×512；正/背/右侧，统一脚底锚；初始锚点建议 (256,466)</td><td>三向/锚点在实际机位复核后冻结；源画布不按 0.82 预缩放</td></tr>
+        <tr><td>冲锋预警</td><td>对拍 0.90 秒</td><td>不提前播放命中 VFX</td></tr>
+        <tr><td>桶盖砸地预警</td><td>对拍 1.05 秒</td><td>命中/落空都可表现砸地；不改变伤害判定</td></tr>
+        <tr><td>二阶段</td><td>对拍 1.35 秒</td><td>VFX 不闪屏，不盖住血条、预警文字和角色</td></tr>
+        <tr><td>角色显示</td><td>美术比例按源图交付</td><td>工程统一显示缩放为 0.82，不做二次预缩小</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>交付边界与估算</h2>
+    <p>第一批只确认风格。完整 Boss 三向九状态动画、主角与战斗 VFX 序列、透明边缘/锚点/固定机位 QA 暂估 <strong>10–16 美术人天</strong>（按 1 人天=6 小时）。该新增范围不含在原 α 美术预算内，具体帧数和 Presenter 事件冻结后再确认。</p>
+    <p>完整映射、SHA-256 和逐项状态见 <a href="../../../../SourceAssets/P4/Manifests/P4_W4_BossAndVFX_manifest_v01.json">manifest</a>；要求见 <a href="../../P4_W4_Boss与战斗特效美术要求_2026-10-29.md">Boss/VFX 交接要求</a>；执行记录见 <a href="P4_W4_美术首批交付记录_2026-10-29.md">首批交付记录</a>。</p>
+  </section>
+</main>
+</body>
+</html>

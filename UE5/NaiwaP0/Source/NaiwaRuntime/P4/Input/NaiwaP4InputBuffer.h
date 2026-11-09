@@ -11,7 +11,7 @@ struct FNaiwaP4InputBuffer final
 {
 	void Reset();
 	void SetMoveAxis(FVector2D Axis);
-	void SetAttackHeld(bool bHeld);
+	void SetMeleeHeld(bool bHeld);
 	void QueueDashPressed() { bDashPressed = true; }
 	void SetBlockHeld(bool bHeld) { bBlockHeld = bHeld; }
 	void QueueUltimatePressed() { bUltimatePressed = true; }
@@ -20,8 +20,8 @@ struct FNaiwaP4InputBuffer final
 
 private:
 	FVector2D MoveAxis = FVector2D::ZeroVector;
-	bool bAttackPressed = false;
-	bool bAttackHeld = false;
+	bool bMeleePressed = false;
+	bool bMeleeHeld = false;
 	bool bDashPressed = false;
 	bool bBlockHeld = false;
 	bool bUltimatePressed = false;

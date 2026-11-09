@@ -1,0 +1,506 @@
+{
+  "schema": "naiwa.p4.w4_boss_runtime_preview_import/1",
+  "status": "imported_preview_only_pending_runtime_review",
+  "source_manifest": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Manifests\\P4_W4_BossAndVFX_manifest_v06.json",
+  "destination_root": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences",
+  "frame_table": "/Game/Naiwa/P4/Data/DT_P4_W4_Boss_RuntimePreviewFrames",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "source_manifest_promoted": false,
+  "level_opened_or_changed": false,
+  "runtime_played": false,
+  "manifest_version": "v06",
+  "preflight": {
+    "status": "passed",
+    "idle_sequence_count": 3,
+    "action_sequence_count": 7,
+    "frame_count": 26,
+    "dimensions_px": [
+      512,
+      512
+    ],
+    "existing_same_source_assets": 26,
+    "charge_attack_imported": false
+  },
+  "assets": [
+    {
+      "state_id": "idle",
+      "view_id": "front",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/idle_front/T_P4_W4_Boss_idle_front_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_idle_front_00.png",
+      "source_sha256": "a2e7c57640bec4063358ea550ad7044d0c7dce00e6934aba5b101615b3bfafee",
+      "duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "idle",
+      "view_id": "front",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/idle_front/T_P4_W4_Boss_idle_front_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_idle_front_01.png",
+      "source_sha256": "8266843fbdc61e7ddecb85408baa55cf32c7923f0f2954d9b21c2f7a9a0178f9",
+      "duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "idle",
+      "view_id": "front",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/idle_front/T_P4_W4_Boss_idle_front_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_idle_front_02.png",
+      "source_sha256": "9adfe1355cc00488f3aa7ac7049432aa62fcc58b030952017351bb091a3730d7",
+      "duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "idle",
+      "view_id": "front",
+      "frame_index": 3,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/idle_front/T_P4_W4_Boss_idle_front_03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_idle_front_03.png",
+      "source_sha256": "8266843fbdc61e7ddecb85408baa55cf32c7923f0f2954d9b21c2f7a9a0178f9",
+      "duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "idle",
+      "view_id": "back",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/idle_back/T_P4_W4_Boss_idle_back_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_idle_back_00.png",
+      "source_sha256": "c322413dcfa764dd3f5199b267ec8478907095146e7a8b5bf4b54dfb4d7c859a",
+      "duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "idle",
+      "view_id": "back",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/idle_back/T_P4_W4_Boss_idle_back_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_idle_back_01.png",
+      "source_sha256": "8873f9b7c33648f12bf8e94eb95211d81b9f5b4666647bd331a95bb83c24a7c8",
+      "duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "idle",
+      "view_id": "back",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/idle_back/T_P4_W4_Boss_idle_back_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_idle_back_02.png",
+      "source_sha256": "c03beffbbfbfa95b5fd4c4296993f75c6dc216fc0050c0e72d90d0cef8e42152",
+      "duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "idle",
+      "view_id": "back",
+      "frame_index": 3,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/idle_back/T_P4_W4_Boss_idle_back_03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_idle_back_03.png",
+      "source_sha256": "8873f9b7c33648f12bf8e94eb95211d81b9f5b4666647bd331a95bb83c24a7c8",
+      "duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "idle",
+      "view_id": "side_right",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/idle_side_right/T_P4_W4_Boss_idle_side_right_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_idle_side_right_00.png",
+      "source_sha256": "f5585fed8f1f52c447a673c3d5f6ca8317231c8fd1f4b15eef2f63bee6dcd685",
+      "duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "idle",
+      "view_id": "side_right",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/idle_side_right/T_P4_W4_Boss_idle_side_right_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_idle_side_right_01.png",
+      "source_sha256": "d4dc0598af58d876cb2bfe0f76677fa295dfbaa5154bfcb7a86016593680c5b3",
+      "duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "idle",
+      "view_id": "side_right",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/idle_side_right/T_P4_W4_Boss_idle_side_right_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_idle_side_right_02.png",
+      "source_sha256": "357213d90af30e523b461c429f9865265e7be51f2760c9f8340d272c82738959",
+      "duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "idle",
+      "view_id": "side_right",
+      "frame_index": 3,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/idle_side_right/T_P4_W4_Boss_idle_side_right_03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_idle_side_right_03.png",
+      "source_sha256": "d4dc0598af58d876cb2bfe0f76677fa295dfbaa5154bfcb7a86016593680c5b3",
+      "duration_seconds": 0.2,
+      "playback_mode": "loop",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "charge_telegraph",
+      "view_id": "side_right",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/charge_telegraph_side_right/T_P4_W4_Boss_charge_telegraph_side_right_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Frames512\\boss_nai_tong_charge_telegraph_side_right_00.png",
+      "source_sha256": "6e5335e68535cd7546cb91c4b8a2bc0a46b5faa73341b27d7e238036c66c9eb7",
+      "duration_seconds": 0.45,
+      "playback_mode": "once",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "charge_telegraph",
+      "view_id": "side_right",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/charge_telegraph_side_right/T_P4_W4_Boss_charge_telegraph_side_right_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_charge_telegraph_side_right_01.png",
+      "source_sha256": "3a7390dc1247d9f9df02538481a338ea1fa0124738f3c791ac0fe9d4b659312b",
+      "duration_seconds": 0.45,
+      "playback_mode": "once",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "lid_slam_telegraph",
+      "view_id": "front",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/lid_slam_telegraph_front/T_P4_W4_Boss_lid_slam_telegraph_front_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Frames512\\boss_nai_tong_lid_slam_telegraph_front_00.png",
+      "source_sha256": "358c5a00fdada4c3c82fe191763ce6ac6a4610df1887df47907b809ae4f1ae5b",
+      "duration_seconds": 0.525,
+      "playback_mode": "once",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "lid_slam_telegraph",
+      "view_id": "front",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/lid_slam_telegraph_front/T_P4_W4_Boss_lid_slam_telegraph_front_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_lid_slam_telegraph_front_01.png",
+      "source_sha256": "f410c57fc8a3ac092f44bca332a3d8b82db5aec86adf8422c783beb2e8d425a7",
+      "duration_seconds": 0.525,
+      "playback_mode": "once",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "lid_slam_impact",
+      "view_id": "front",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/lid_slam_impact_front/T_P4_W4_Boss_lid_slam_impact_front_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Frames512\\boss_nai_tong_lid_slam_impact_front_00.png",
+      "source_sha256": "46343d1dfe722abdf7a3f0010afb13a5dd05920fd9a15a63c540d5136744c912",
+      "duration_seconds": 0.12,
+      "playback_mode": "once",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "lid_slam_impact",
+      "view_id": "front",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/lid_slam_impact_front/T_P4_W4_Boss_lid_slam_impact_front_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_lid_slam_impact_front_01.png",
+      "source_sha256": "a29f22a513f936b5d5684d0e80655b6f919a6286616498fc63001de50626a892",
+      "duration_seconds": 0.12,
+      "playback_mode": "once",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "move",
+      "view_id": "side_right",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/move_side_right/T_P4_W4_Boss_move_side_right_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Frames512\\boss_nai_tong_move_side_right_00.png",
+      "source_sha256": "d798e438e403b1c1d059de803037ad13135d2bc2e739e4ceb53217109bd8a920",
+      "duration_seconds": 0.12,
+      "playback_mode": "loop",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "move",
+      "view_id": "side_right",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/move_side_right/T_P4_W4_Boss_move_side_right_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_move_side_right_01.png",
+      "source_sha256": "278d8b78c6dae5b0ee56b8c8eca064039f26cd4c6c0187149e8df64a7a4d04b3",
+      "duration_seconds": 0.12,
+      "playback_mode": "loop",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "hit",
+      "view_id": "front",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/hit_front/T_P4_W4_Boss_hit_front_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Frames512\\boss_nai_tong_hit_front_00.png",
+      "source_sha256": "b645b0bb8542aade9fbc535fa104a55c65d0b364a548abbc55318462202cdbd9",
+      "duration_seconds": 0.1,
+      "playback_mode": "once",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "hit",
+      "view_id": "front",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/hit_front/T_P4_W4_Boss_hit_front_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_hit_front_01.png",
+      "source_sha256": "fb5799de3e9f29df79a889c2d2bbb46044605833d7b786b9dce76d09a8a6c75f",
+      "duration_seconds": 0.1,
+      "playback_mode": "once",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "phase_two",
+      "view_id": "front",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/phase_two_front/T_P4_W4_Boss_phase_two_front_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Frames512\\boss_nai_tong_phase_two_front_00.png",
+      "source_sha256": "08b2e4f18b5b1d127ed85e5e00b742b23db10802879143d211ca204e5cff4bb5",
+      "duration_seconds": 0.675,
+      "playback_mode": "once",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "phase_two",
+      "view_id": "front",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/phase_two_front/T_P4_W4_Boss_phase_two_front_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_phase_two_front_01.png",
+      "source_sha256": "8843c5f1fbcd5f68d155f1d27acd25f9dc26baa374b47d2de0ac3abd013eaa2b",
+      "duration_seconds": 0.675,
+      "playback_mode": "once",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "death",
+      "view_id": "front",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/death_front/T_P4_W4_Boss_death_front_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Frames512\\boss_nai_tong_death_front_00.png",
+      "source_sha256": "1ccb9cd5e69f3a5366b31815571fe2e968bf93d5f6680b4d400cbaa594428e88",
+      "duration_seconds": 0.18,
+      "playback_mode": "once",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "state_id": "death",
+      "view_id": "front",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_Boss/Sequences/death_front/T_P4_W4_Boss_death_front_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Characters\\Alpha\\W4_Boss\\RuntimeWIP\\Sequences\\Frames512\\boss_nai_tong_death_front_01.png",
+      "source_sha256": "96f6b056113f4d64cfc2be8f44a97efb7e492fb3b69a5fb49e2e90de34203657",
+      "duration_seconds": 0.18,
+      "playback_mode": "once",
+      "result": "reused_same_source",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    }
+  ],
+  "frame_table_result": {
+    "asset_path": "/Game/Naiwa/P4/Data/DT_P4_W4_Boss_RuntimePreviewFrames",
+    "row_struct": "/Script/NaiwaRuntime.NaiwaP4BossFrameRow",
+    "row_count": 26,
+    "csv_source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Data\\P4_W4_Boss_RuntimePreviewFrames.csv"
+  },
+  "limitations": [
+    "Boss animation candidates use transform/timing previews and adjacent key poses; they are not production animation sequences.",
+    "The rejected charge_attack state was excluded; the runtime uses move art while the simulated Boss charges.",
+    "This report does not update the global source-manifest ue_imported or runtime_ready flags.",
+    "Texture import settings were read back after save; gameplay-state presentation requires a separate runtime review."
+  ]
+}

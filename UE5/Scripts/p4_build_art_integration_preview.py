@@ -17,11 +17,11 @@ import unreal
 
 ROOT = Path(__file__).resolve().parents[2]
 P4_SOURCE = ROOT / "UE5/SourceAssets/P4"
-A1_MANIFEST_PATH = P4_SOURCE / "Manifests/P4_A1_UE_Import_manifest.json"
+A1_MANIFEST_PATH = P4_SOURCE / "Manifests/P4_A1_UE_Import_manifest_v02.json"
 A3_RASTER_MANIFEST_PATH = P4_SOURCE / "Manifests/P4_A3_RuntimeRaster_manifest_v01.json"
 UPGRADE_CSV_PATH = P4_SOURCE / "Data/P4UpgradeAlpha.csv"
 FRAME_CSV_PATH = P4_SOURCE / "Data/P4_A1_RuntimeFrames.csv"
-REPORT_PATH = ROOT / "UE5/Records/p4_alpha/evidence/A4/P4_ArtIntegrationPreview_build_report.json"
+REPORT_PATH = ROOT / "UE5/Records/p4_alpha/evidence/A4/P4_ArtIntegrationPreview_build_report_v02.json"
 
 MAP_PATH = "/Game/Naiwa/P4/Maps/L_NaiwaP4_ArtIntegrationPreview"
 UI_ASSET_ROOT = "/Game/Naiwa/P4/UI/Alpha/RuntimeReady"
@@ -123,7 +123,7 @@ def import_data_table(csv_path: Path, name: str, row_struct):
 def import_ui_textures(raster_manifest: dict) -> list[dict]:
     if raster_manifest.get("schema") != "naiwa.p4.a3_runtime_raster/1":
         raise ValueError("Unexpected A3 raster manifest schema")
-    if raster_manifest.get("status") != "rasterized_pending_ue_import":
+    if raster_manifest.get("status") not in {"rasterized_pending_ue_import", "imported_to_p4_content"}:
         raise ValueError(f"A3 raster sources are not ready to import: {raster_manifest.get('status')!r}")
 
     unreal.EditorAssetLibrary.make_directory(UI_ASSET_ROOT)
@@ -135,6 +135,7 @@ def import_ui_textures(raster_manifest: dict) -> list[dict]:
         asset_name = source.stem
         asset_path = f"{UI_ASSET_ROOT}/{asset_name}"
         texture = unreal.load_asset(asset_path)
+        imported_now = False
         if not texture:
             task = unreal.AssetImportTask()
             task.set_editor_properties({
@@ -147,14 +148,33 @@ def import_ui_textures(raster_manifest: dict) -> list[dict]:
             })
             unreal.AssetToolsHelpers.get_asset_tools().import_asset_tasks([task])
             texture = unreal.load_asset(asset_path)
+            imported_now = True
         if not texture or not isinstance(texture, unreal.Texture2D):
             raise RuntimeError(f"A3 PNG import did not produce Texture2D: {asset_path}")
+        if not imported_now:
+            import_data = texture.get_editor_property("asset_import_data")
+            existing_source = import_data.get_first_filename() if import_data else ""
+            if not existing_source or Path(existing_source).resolve().as_posix().casefold() != source.as_posix().casefold():
+                raise RuntimeError(f"Refusing to update an A3 texture with a different or unknown source: {asset_path}")
         texture.set_editor_properties({
             "srgb": True,
-            "compression_settings": unreal.TextureCompressionSettings.TC_DEFAULT,
+            "compression_settings": unreal.TextureCompressionSettings.TC_EDITOR_ICON,
             "mip_gen_settings": unreal.TextureMipGenSettings.TMGS_NO_MIPMAPS,
+            "lod_group": unreal.TextureGroup.TEXTUREGROUP_UI,
+            "compression_no_alpha": False,
             "never_stream": True,
         })
+        expected_settings = {
+            "srgb": True,
+            "compression_settings": unreal.TextureCompressionSettings.TC_EDITOR_ICON,
+            "mip_gen_settings": unreal.TextureMipGenSettings.TMGS_NO_MIPMAPS,
+            "lod_group": unreal.TextureGroup.TEXTUREGROUP_UI,
+            "compression_no_alpha": False,
+            "never_stream": True,
+        }
+        for property_name, expected in expected_settings.items():
+            if texture.get_editor_property(property_name) != expected:
+                raise RuntimeError(f"A3 texture setting readback failed for {asset_path}: {property_name}")
         if not unreal.EditorAssetLibrary.save_asset(asset_path, only_if_is_dirty=False):
             raise RuntimeError(f"Could not save UI Texture2D: {asset_path}")
         imported.append({
@@ -164,8 +184,11 @@ def import_ui_textures(raster_manifest: dict) -> list[dict]:
             "source_sha256": entry["output_sha256"],
             "dimensions_px": entry["dimensions_px"],
             "alpha": entry["alpha"],
-            "texture_group": "default (UE Python does not expose TextureGroup on Texture2D)",
+            "texture_group": "UI",
+            "compression": "TC_EditorIcon (uncompressed RGBA8)",
             "mip_generation": "NoMipmaps",
+            "result": "imported" if imported_now else "reused_same_source",
+            "texture_readback": "passed",
         })
     if len(imported) != 6:
         raise RuntimeError(f"Expected 6 A3 runtime PNGs, imported {len(imported)}")
@@ -183,9 +206,8 @@ def make_sprite_material(default_texture):
         raise RuntimeError(f"Could not create A1 runtime material: {SPRITE_MATERIAL_PATH}")
     material.set_editor_properties({
         "shading_model": unreal.MaterialShadingModel.MSM_UNLIT,
-        "blend_mode": unreal.BlendMode.BLEND_MASKED,
+        "blend_mode": unreal.BlendMode.BLEND_TRANSLUCENT,
         "two_sided": True,
-        "opacity_mask_clip_value": 0.08,
     })
     unreal.MaterialEditingLibrary.delete_all_material_expressions(material)
     sample = unreal.MaterialEditingLibrary.create_material_expression(
@@ -200,42 +222,14 @@ def make_sprite_material(default_texture):
     ):
         raise RuntimeError("Could not connect A1 sprite RGB to emissive color")
     if not unreal.MaterialEditingLibrary.connect_material_property(
-        sample, "A", unreal.MaterialProperty.MP_OPACITY_MASK
+        sample, "A", unreal.MaterialProperty.MP_OPACITY
     ):
-        raise RuntimeError("Could not connect A1 sprite alpha to opacity mask")
+        raise RuntimeError("Could not connect A1 sprite alpha to translucent opacity")
     errors = unreal.MaterialEditingLibrary.recompile_material(material)
     if errors:
         raise RuntimeError(f"A1 runtime sprite material compile errors: {errors}")
     if not unreal.EditorAssetLibrary.save_asset(SPRITE_MATERIAL_PATH, only_if_is_dirty=False):
         raise RuntimeError(f"Could not save A1 runtime material: {SPRITE_MATERIAL_PATH}")
-    return material
-
-
-def make_emissive_material(name: str, rgb: tuple[float, float, float]):
-    path = f"/Game/Naiwa/P4/Materials/Alpha/A2/{name}"
-    unreal.EditorAssetLibrary.make_directory("/Game/Naiwa/P4/Materials/Alpha/A2")
-    material = unreal.load_asset(path)
-    if not material:
-        material = unreal.AssetToolsHelpers.get_asset_tools().create_asset(
-            name, "/Game/Naiwa/P4/Materials/Alpha/A2", unreal.Material, unreal.MaterialFactoryNew()
-        )
-    if not material:
-        raise RuntimeError(f"Could not create arena material: {path}")
-    material.set_editor_properties({"shading_model": unreal.MaterialShadingModel.MSM_UNLIT})
-    unreal.MaterialEditingLibrary.delete_all_material_expressions(material)
-    color = unreal.MaterialEditingLibrary.create_material_expression(
-        material, unreal.MaterialExpressionConstant3Vector, -300, 0
-    )
-    color.set_editor_property("constant", unreal.LinearColor(rgb[0], rgb[1], rgb[2], 1.0))
-    if not unreal.MaterialEditingLibrary.connect_material_property(
-        color, "", unreal.MaterialProperty.MP_EMISSIVE_COLOR
-    ):
-        raise RuntimeError(f"Could not connect arena material color: {path}")
-    errors = unreal.MaterialEditingLibrary.recompile_material(material)
-    if errors:
-        raise RuntimeError(f"Arena material compile errors for {path}: {errors}")
-    if not unreal.EditorAssetLibrary.save_asset(path, only_if_is_dirty=False):
-        raise RuntimeError(f"Could not save arena material: {path}")
     return material
 
 
@@ -245,23 +239,7 @@ def set_owned(actor, label: str):
     return actor
 
 
-def spawn_cube(actor_subsystem, cube, label, location, scale, material):
-    actor = actor_subsystem.spawn_actor_from_class(
-        unreal.StaticMeshActor, location, unreal.Rotator(0.0, 0.0, 0.0)
-    )
-    if not actor:
-        raise RuntimeError(f"Could not spawn P4 A2 scene piece: {label}")
-    set_owned(actor, label)
-    component = actor.get_component_by_class(unreal.StaticMeshComponent)
-    component.set_static_mesh(cube)
-    component.set_material(0, material)
-    component.set_editor_property("cast_shadow", False)
-    actor.set_actor_scale3d(scale)
-    actor.set_actor_enable_collision(False)
-    return actor
-
-
-def prepare_preview_map(game_mode_class, camera_class, materials):
+def prepare_preview_map(game_mode_class, camera_class):
     levels = unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
     actor_subsystem = unreal.get_editor_subsystem(unreal.EditorActorSubsystem)
     unreal.EditorAssetLibrary.make_directory("/Game/Naiwa/P4/Maps")
@@ -273,6 +251,9 @@ def prepare_preview_map(game_mode_class, camera_class, materials):
         tags = [str(tag) for tag in settings.get_editor_property("tags")]
         if OWNER_TAG not in tags:
             raise RuntimeError(f"Refusing to replace an unowned map: {MAP_PATH}")
+        if "NaiwaP4A2RefinedArena" not in tags:
+            tags.append("NaiwaP4A2RefinedArena")
+            settings.set_editor_property("tags", [unreal.Name(tag) for tag in tags])
         for actor in actor_subsystem.get_all_level_actors():
             tags = [str(tag) for tag in actor.get_editor_property("tags")]
             if ACTOR_TAG in tags:
@@ -283,36 +264,10 @@ def prepare_preview_map(game_mode_class, camera_class, materials):
             raise RuntimeError(f"Could not create P4 art integration map: {MAP_PATH}")
         world = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world()
         settings = world.get_world_settings()
-        settings.set_editor_property("tags", [unreal.Name(OWNER_TAG)])
+        settings.set_editor_property("tags", [
+            unreal.Name(OWNER_TAG), unreal.Name("NaiwaP4A2RefinedArena")
+        ])
     settings.set_editor_property("default_game_mode", game_mode_class)
-
-    cube = unreal.load_asset("/Engine/BasicShapes/Cube")
-    if not cube:
-        raise RuntimeError("Engine basic cube mesh is unavailable")
-
-    # A2 v02 adaptation: muted arena floor, sandstone backdrop, low side blocks,
-    # front boundary, and a rear entry arch. All are P4-owned mesh instances.
-    spawn_cube(actor_subsystem, cube, "P4A2_Ground", unreal.Vector(550, 92.5, -12.5),
-               unreal.Vector(11.0, 1.85, 0.25), materials["ground"])
-    spawn_cube(actor_subsystem, cube, "P4A2_Backdrop", unreal.Vector(550, 222, 84),
-               unreal.Vector(11.0, 0.42, 1.68), materials["sandstone"])
-    spawn_cube(actor_subsystem, cube, "P4A2_FrontBoundary", unreal.Vector(550, 4, 12),
-               unreal.Vector(11.0, 0.12, 0.24), materials["trim"])
-    spawn_cube(actor_subsystem, cube, "P4A2_SideBoundaryLeft", unreal.Vector(10, 92.5, 28),
-               unreal.Vector(0.20, 1.85, 0.56), materials["trim"])
-    spawn_cube(actor_subsystem, cube, "P4A2_SideBoundaryRight", unreal.Vector(1090, 92.5, 28),
-               unreal.Vector(0.20, 1.85, 0.56), materials["trim"])
-    spawn_cube(actor_subsystem, cube, "P4A2_LowObstacleLeft", unreal.Vector(310, 68, 14),
-               unreal.Vector(1.15, 0.28, 0.28), materials["low_obstacle"])
-    spawn_cube(actor_subsystem, cube, "P4A2_LowObstacleRight", unreal.Vector(790, 116, 14),
-               unreal.Vector(0.90, 0.28, 0.28), materials["low_obstacle"])
-    spawn_cube(actor_subsystem, cube, "P4A2_EntryPillarLeft", unreal.Vector(408, 180, 66),
-               unreal.Vector(0.28, 0.30, 1.32), materials["trim"])
-    spawn_cube(actor_subsystem, cube, "P4A2_EntryPillarRight", unreal.Vector(692, 180, 66),
-               unreal.Vector(0.28, 0.30, 1.32), materials["trim"])
-    spawn_cube(actor_subsystem, cube, "P4A2_EntryLintel", unreal.Vector(550, 180, 137),
-               unreal.Vector(3.12, 0.30, 0.30), materials["sandstone_light"])
-
     camera = actor_subsystem.spawn_actor_from_class(camera_class, unreal.Vector(0, 0, 0), unreal.Rotator(0, 0, 0))
     if not camera:
         raise RuntimeError("Could not spawn calibrated P4 camera rig")
@@ -360,7 +315,11 @@ def run() -> dict:
         UPGRADE_CSV_PATH, "DT_P4_Upgrade_Alpha", unreal.NaiwaP4UpgradeRow.static_struct()
     )
     upgrade_ids = sorted(str(name) for name in unreal.DataTableFunctionLibrary.get_data_table_row_names(upgrade_table))
-    if upgrade_ids != ["bounce_ball", "cant_hold", "rounder_belly"]:
+    with UPGRADE_CSV_PATH.open("r", newline="", encoding="utf-8-sig") as stream:
+        expected_upgrade_ids = sorted(row.get("Name", "").strip() for row in csv.DictReader(stream))
+    if not expected_upgrade_ids or "" in expected_upgrade_ids or len(set(expected_upgrade_ids)) != len(expected_upgrade_ids):
+        raise ValueError(f"Alpha upgrade CSV has missing or duplicate row names: {expected_upgrade_ids}")
+    if upgrade_ids != expected_upgrade_ids:
         raise RuntimeError(f"Unexpected Alpha upgrade rows: {upgrade_ids}")
 
     game_mode_class = unreal.load_class(None, GAME_MODE_PATH)
@@ -368,14 +327,11 @@ def run() -> dict:
     if not game_mode_class or not camera_class:
         raise RuntimeError("P4 runtime classes are unavailable; compile the NaiwaRuntime module first")
 
-    arena_materials = {
-        "ground": make_emissive_material("M_P4_A2_Ground", (0.20, 0.25, 0.20)),
-        "sandstone": make_emissive_material("M_P4_A2_Sandstone", (0.40, 0.25, 0.12)),
-        "sandstone_light": make_emissive_material("M_P4_A2_SandstoneLight", (0.58, 0.40, 0.20)),
-        "trim": make_emissive_material("M_P4_A2_Trim", (0.30, 0.19, 0.10)),
-        "low_obstacle": make_emissive_material("M_P4_A2_LowObstacle", (0.31, 0.36, 0.30)),
-    }
-    prepare_preview_map(game_mode_class, camera_class, arena_materials)
+    arena_material_path = "/Game/Naiwa/P4/Materials/Alpha/A2/M_P4_A2_RefinedBackdrop_v02"
+    arena_material = unreal.load_asset(arena_material_path)
+    if not arena_material or not isinstance(arena_material, unreal.MaterialInterface):
+        raise RuntimeError(f"Refined A2 arena material is missing: {arena_material_path}")
+    prepare_preview_map(game_mode_class, camera_class)
     report["level_opened_or_changed"] = True
 
     update_manifest(
@@ -415,8 +371,10 @@ def run() -> dict:
         "upgrade_table": UPGRADE_TABLE_PATH,
         "upgrade_rows": upgrade_ids,
         "sprite_material": SPRITE_MATERIAL_PATH,
+        "sprite_material_alpha_mode": "Translucent; straight-alpha RGBA is connected to material opacity to preserve antialiased sprite edges",
+        "texture_edge_quality": "Uncompressed RGBA8 with Sharpen0 mips; avoids emphasizing low-alpha source-edge specks",
         "ui_textures": ui_textures,
-        "arena_materials": {key: value.get_path_name() for key, value in arena_materials.items()},
+        "arena_backdrop_material": arena_material.get_path_name(),
         "a3_runtime_limit": "HUD health is read from P4 simulation; a T-cycled HUD style preview shows attack ring, displacement arrow, and unblockable starburst. Energy, wave, enemy, and world telegraph gameplay data are not implemented yet.",
         "card_confirm_limit": "Preview acknowledgement only; does not grant an upgrade.",
         "runtime_played": False,

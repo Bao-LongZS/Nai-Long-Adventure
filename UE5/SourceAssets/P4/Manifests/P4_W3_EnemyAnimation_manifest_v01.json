@@ -1,0 +1,200 @@
+{
+  "schema": "naiwa.p4.w3_enemy_animation_pose_boards/1",
+  "version": "v01",
+  "created_date": "2026-10-29",
+  "status": "pose_board_wip_not_runtime_ready",
+  "concept_direction": {
+    "status": "approved_by_user",
+    "approval_date": "2026-10-29",
+    "note": "User approved the concept direction and instructed art production to continue."
+  },
+  "scope": "W3 Chapter 1 enemies Naiding and Naidun; six requested animation states; review pose boards only",
+  "generation": {
+    "tool": "built-in ImageGen",
+    "input_references": [
+      "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naiding_turnaround_v01_concept.png",
+      "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naidun_turnaround_v01_concept.png"
+    ],
+    "prompt_set_summary": "Generate transparent-background pose contact sheets matching the approved concept design. Rows are views and columns are frames. State clauses describe idle breathing, movement, attack telegraph, melee action, hit recoil, and defeat. Naidun uses distinct left/right side views to preserve shield direction."
+  },
+  "frame_plan_per_view": {
+    "idle": { "frames": 3, "loop": true, "seconds_per_frame_proposal": 0.25 },
+    "move": { "frames": 4, "loop": true, "seconds_per_frame_proposal": 0.10 },
+    "telegraph": { "frames": 2, "loop": false, "seconds_per_frame_proposal": 0.175 },
+    "attack": { "frames": 3, "loop": false, "seconds_per_frame_proposal": 0.10 },
+    "hit": { "frames": 1, "loop": false, "total_seconds_proposal": 0.14 },
+    "death": { "frames": 3, "loop": false, "seconds_per_frame_proposal": 0.12 }
+  },
+  "view_order_by_enemy": {
+    "naiding": ["front", "back", "side_right"],
+    "naidun": ["front", "back", "side_right", "side_left"]
+  },
+  "sheet_defaults": {
+    "color_type": "RGBA (PNG color type 6)",
+    "cell_order": "frames progress left_to_right; hit sheets place views left_to_right in columns",
+    "standalone_512px_frames_exported": false,
+    "editable_layered_source_provided": false,
+    "ue_imported": false,
+    "production_ready": false,
+    "alpha_and_anchor_qa": "pending"
+  },
+  "sheets": [
+    {
+      "enemy_id": "naiding",
+      "enemy_name_zh": "奶丁",
+      "state": "idle",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naiding_idle_grid_v03.png",
+      "dimensions_px": [1278, 1230],
+      "sha256": "49574aea62611fd2ae2cb4906b135c466a609ff9c9c8518ac124ad035f3398c3",
+      "grid": { "columns": 3, "rows": 3, "cell_px": [426, 410], "uniform": true, "views_by_row": ["front", "back", "side_right"] },
+      "review_status": "selected_wip",
+      "issues": ["alpha_speckles_need_cleanup"]
+    },
+    {
+      "enemy_id": "naiding",
+      "enemy_name_zh": "奶丁",
+      "state": "move",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naiding_move_grid_v01.png",
+      "dimensions_px": [1448, 1086],
+      "sha256": "201465bacccf51144d049a8dcc4a95f7d048952797233d73aadbb9b8344b6dee",
+      "grid": { "columns": 4, "rows": 3, "cell_px": [362, 362], "uniform": true, "views_by_row": ["front", "back", "side_right"] },
+      "review_status": "selected_wip",
+      "issues": ["needs_512px_frame_export", "alpha_and_anchor_qa_pending"]
+    },
+    {
+      "enemy_id": "naiding",
+      "enemy_name_zh": "奶丁",
+      "state": "telegraph",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naiding_telegraph_grid_v01.png",
+      "dimensions_px": [1295, 1215],
+      "sha256": "d963e9ab10ae2ab225f4295f8b0f21aa056af83cc10f8586277495a58f51f72f",
+      "grid": { "columns": 2, "rows": 3, "cell_px": null, "uniform": false, "views_by_row": ["front", "back", "side_right"] },
+      "review_status": "selected_wip",
+      "issues": ["non_divisible_grid_needs_relayout", "needs_512px_frame_export"]
+    },
+    {
+      "enemy_id": "naiding",
+      "enemy_name_zh": "奶丁",
+      "state": "attack",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naiding_attack_grid_v01.png",
+      "dimensions_px": [1536, 1024],
+      "sha256": "6a3a82bc0ca9231451e4bddd1dabea0c99b540dbc7bee4f986b5605b39808793",
+      "grid": { "columns": 3, "rows": 3, "cell_px": null, "uniform": false, "views_by_row": ["front", "back", "side_right"] },
+      "review_status": "selected_wip",
+      "issues": ["non_divisible_grid_needs_relayout", "needs_512px_frame_export", "alpha_and_anchor_qa_pending"]
+    },
+    {
+      "enemy_id": "naiding",
+      "enemy_name_zh": "奶丁",
+      "state": "hit",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naiding_hit_grid_v01.png",
+      "dimensions_px": [2172, 724],
+      "sha256": "96ebc433920a2c890d1b37eb74f8e97d012834e743b5010ab41f1b619988d3da",
+      "grid": { "columns": 3, "rows": 1, "cell_px": [724, 724], "uniform": true, "view_axis": "columns", "views_by_column": ["front", "back", "side_right"] },
+      "review_status": "selected_wip",
+      "issues": ["layout_assumption_to_verify", "needs_512px_frame_export"]
+    },
+    {
+      "enemy_id": "naiding",
+      "enemy_name_zh": "奶丁",
+      "state": "death",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naiding_death_grid_v01.png",
+      "dimensions_px": [1536, 1024],
+      "sha256": "afc364e3132d487763d892180b491363b2129f9f2dc9b82ea2b4ae03f129513a",
+      "grid": { "columns": 3, "rows": 3, "cell_px": null, "uniform": false, "views_by_row": ["front", "back", "side_right"] },
+      "review_status": "selected_wip",
+      "issues": ["rear_view_face_marks_need_correction", "non_divisible_grid_needs_relayout", "needs_512px_frame_export"]
+    },
+    {
+      "enemy_id": "naidun",
+      "enemy_name_zh": "奶盾",
+      "state": "idle",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naidun_idle_grid_v01.png",
+      "dimensions_px": [1312, 1199],
+      "sha256": "b8c772a74bcf16dcdf3f01b12fbf32fdaf8c90288da3319bcb34eeea071be8b0",
+      "grid": { "columns": 3, "rows": 4, "cell_px": null, "uniform": false, "views_by_row": ["front", "back", "side_right", "side_left"] },
+      "review_status": "selected_wip",
+      "issues": ["non_divisible_grid_needs_relayout", "shield_layer_not_separated", "needs_512px_frame_export"]
+    },
+    {
+      "enemy_id": "naidun",
+      "enemy_name_zh": "奶盾",
+      "state": "move",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naidun_move_grid_v01.png",
+      "dimensions_px": [1427, 1102],
+      "sha256": "681aca2fc3ca0f96b6499774112ee0e075c40a666a98c9419b538d1ed72b3e46",
+      "grid": { "columns": 4, "rows": 4, "cell_px": null, "uniform": false, "views_by_row": ["front", "back", "side_right", "side_left"] },
+      "review_status": "selected_wip",
+      "issues": ["non_divisible_grid_needs_relayout", "shield_layer_not_separated", "needs_512px_frame_export"]
+    },
+    {
+      "enemy_id": "naidun",
+      "enemy_name_zh": "奶盾",
+      "state": "telegraph",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naidun_telegraph_grid_v01.png",
+      "dimensions_px": [1024, 1536],
+      "sha256": "5d9458ece894d8fff15664a448e49f9763dd91b330c740f3f588428d63e2df88",
+      "grid": { "columns": 2, "rows": 4, "cell_px": [512, 384], "uniform": true, "views_by_row": ["front", "back", "side_right", "side_left"] },
+      "review_status": "selected_wip",
+      "issues": ["shield_layer_not_separated", "needs_512px_frame_export"]
+    },
+    {
+      "enemy_id": "naidun",
+      "enemy_name_zh": "奶盾",
+      "state": "attack",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naidun_attack_grid_v01.png",
+      "dimensions_px": [1536, 1024],
+      "sha256": "6721fe259ed631ed8b532f748f49fe6517ea9fd7137bf63368e226c5aae58c71",
+      "grid": { "columns": 3, "rows": 4, "cell_px": [512, 256], "uniform": true, "views_by_row": ["front", "back", "side_right", "side_left"] },
+      "review_status": "selected_wip",
+      "issues": ["shield_layer_not_separated", "needs_512px_frame_export"]
+    },
+    {
+      "enemy_id": "naidun",
+      "enemy_name_zh": "奶盾",
+      "state": "hit",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naidun_hit_grid_v01.png",
+      "dimensions_px": [2172, 724],
+      "sha256": "fbeede7b8d9bbb5eef4e03b2aca90b49b27452e50ee605d7f5587f4d693bedc6",
+      "grid": { "columns": 4, "rows": 1, "cell_px": [543, 724], "uniform": true, "view_axis": "columns", "views_by_column": ["front", "back", "side_right", "side_left"] },
+      "review_status": "selected_wip",
+      "issues": ["layout_assumption_to_verify", "shield_layer_not_separated", "needs_512px_frame_export"]
+    },
+    {
+      "enemy_id": "naidun",
+      "enemy_name_zh": "奶盾",
+      "state": "death",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naidun_death_grid_v01.png",
+      "dimensions_px": [1086, 1448],
+      "sha256": "d3de5b9efe05fdaa02b1a5109da1c05a92eacba10752adfb88a7ea4afa134934",
+      "grid": { "columns": 3, "rows": 4, "cell_px": [362, 362], "uniform": true, "views_by_row": ["front", "back", "side_right", "side_left"] },
+      "review_status": "selected_wip",
+      "issues": ["shield_layer_not_separated", "needs_512px_frame_export"]
+    }
+  ],
+  "alternates": [
+    {
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naiding_idle_grid_v01.png",
+      "dimensions_px": [1330, 1182],
+      "sha256": "1151000b40ac2afa4994afcc460d3d4f98cd4174324572f3c0670585216f944e",
+      "status": "superseded",
+      "reason": "Rear row contains face-like marks; replaced by v03 for review."
+    },
+    {
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naiding_idle_grid_v02.png",
+      "dimensions_px": [1330, 1182],
+      "sha256": "7c97a519035399c0d9c2d62847862aff842377c4b393312895166e246f6c8cce",
+      "status": "superseded",
+      "reason": "Rear-view cleanup remained insufficient; replaced by v03 for review."
+    },
+    {
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimeWIP/naiding_attack_grid_v02.png",
+      "dimensions_px": [1536, 1024],
+      "sha256": "3ce128d2ef71c9a09bb7d0a5891791667d2c47f0cdfe11e33051aad78e5e3bbe",
+      "status": "alternate",
+      "reason": "Alpha extraction attempt; v01 remains the clearer attack pose candidate."
+    }
+  ],
+  "review_page": "UE5/Records/p4_alpha/evidence/W3/P4_W3_EnemyAnimationReview_v01.html",
+  "next_art_gate": "Correct flagged view/edge issues, establish exact cell boundaries, export consistent 512x512 RGBA frames, align foot anchors, split Naidun shield layer, and complete visual review before UE import."
+}

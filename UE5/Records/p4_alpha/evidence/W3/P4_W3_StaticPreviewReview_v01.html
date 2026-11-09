@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>P4 W3 敌人静态接入预览 v01</title>
+  <style>
+    :root { color-scheme:dark; --bg:#101419; --panel:#1a222b; --line:#35424e; --ink:#edf3f6; --muted:#b7c3cc; --accent:#78d2c5; --warn:#ffc277; }
+    * { box-sizing:border-box; }
+    body { margin:0; padding:28px; color:var(--ink); background:var(--bg); font:16px/1.55 system-ui,"Microsoft YaHei",sans-serif; }
+    main { max-width:1180px; margin:auto; }
+    h1 { margin:0 0 8px; font-size:28px; }
+    h2 { margin:28px 0 12px; }
+    p { margin:8px 0 14px; }
+    a { color:var(--accent); }
+    .muted { color:var(--muted); }
+    .warning { margin:18px 0; padding:14px 16px; border-left:5px solid var(--warn); border-radius:8px; background:#2a2118; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    article { padding:16px; border:1px solid var(--line); border-radius:12px; background:var(--panel); }
+    article h2 { margin:0 0 6px; }
+    .checker { display:grid; place-items:center; padding:14px; border-radius:9px; background-color:#252d35; background-image:linear-gradient(45deg,#313a43 25%,transparent 25%),linear-gradient(-45deg,#313a43 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#313a43 75%),linear-gradient(-45deg,transparent 75%,#313a43 75%); background-size:20px 20px; background-position:0 0,0 10px,10px -10px,-10px 0; }
+    img { width:min(100%,512px); height:auto; display:block; }
+    code { color:#d4e1e9; }
+    @media(max-width:740px) { body { padding:16px; } .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>P4 W3 敌人静态接入预览 v01</h1>
+  <p class="muted">用于核对敌人可读性、画布比例和脚底落点。图像来自已通过的正面概念稿，每只敌人只有一张静态正面帧。</p>
+  <div class="warning"><strong>静态预览帧，非动画验收或生产交付。</strong> 两张 Texture2D 已导入 UE Content 的 StaticPreview 目录。Naiding 原图边缘仍有少量生成痕迹；当前不切换侧面、不播放动作，也不展示独立盾牌层。完整编辑器目标尚未构建通过，故运行时画面还未确认。</div>
+  <section class="grid">
+    <article>
+      <h2>奶丁 · Naiding</h2>
+      <p><code>naiding_idle_front_static_preview_v01.png</code> · 512×512 · 锚点 (256,466) · 平面高度 215 uu</p>
+      <div class="checker"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimePreview/naiding_idle_front_static_preview_v01.png" alt="奶丁正面静态预览帧"></div>
+      <p class="muted">目标可见高度约为已通过 A1 主角的 0.78×。概念提取帧，尚未清理边缘。</p>
+    </article>
+    <article>
+      <h2>奶盾 · Naidun</h2>
+      <p><code>naidun_idle_front_static_preview_v01.png</code> · 512×512 · 锚点 (256,466) · 平面高度 309 uu</p>
+      <div class="checker"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimePreview/naidun_idle_front_static_preview_v01.png" alt="奶盾正面静态预览帧"></div>
+      <p class="muted">目标可见高度约为已通过 A1 主角的 1.12×。盾牌仍合并在角色图中。</p>
+    </article>
+  </section>
+  <h2>接入边界</h2>
+  <p>只替换 P4 美术集成预览中由 W3 波次刷出的奶丁/奶盾灰盒。训练敌和弹体仍用灰盒；缺少贴图时回退灰盒。敌人状态、碰撞、伤害、刷怪与波次数据不变。</p>
+  <h2>当前工程状态</h2>
+  <p>两张 Texture2D 均已导入，资源路径和纹理设置已回读确认。P4 静态预览 Pawn 源文件已在关闭共享 PCH 的诊断构建中编译；完整编辑器目标因其他模块的头文件错误未通过，因此仍需正常构建并在预览地图检查尺寸、透明边缘、脚底落点和对比度。本轮未运行 PIE/Standalone。</p>
+  <p><a href="../../../../SourceAssets/P4/Manifests/P4_W3_StaticPreview_manifest_v01.json">静态预览 manifest</a> · <a href="P4_W3_StaticPreview_import_report.json">Texture2D 导入报告</a> · <a href="P4_W3_StaticPreview_integration_status_v01.json">当前接入状态</a> · <a href="P4_W3_EnemyAnimationReview_v01.html">六状态姿势板审阅</a></p>
+</main>
+</body>
+</html>

@@ -558,14 +558,14 @@
   "ui_hud_required": ["hp_bar", "energy_bar", "charge_pips_x2_or_x3", "combo_counter", "chapter_wave_progress", "boss_bar_with_phase_and_hplock", "card_pick_3of1", "result_screen", "auto_aim_indicator", "telegraph_render", "subtitle_layer", "mode_entry_strip_on_level_select"],
   "keymap": {
     "move": ["W", "A", "S", "D", "ArrowKeys"],
-    "attack_hold": "F",
+    "attack_hold": "J",
     "charge": "LeftShift",
     "ultimate": "E",
     "defend_hold": "Space",
-    "final_mash": "F",
+    "final_mash": "J",
     "retry_chapter": "R (hold 0.6s)",
     "pause_menu": "Esc",
-    "unbound_reserved": { "Q": "讲笑话蓄力-未实现", "C": "黄桃罐头-改卡池", "V": "召唤奶蛋-改卡池 not_naiwa_bait", "J": "跳跃-本模式无跳跃" }
+    "unbound_reserved": { "Q": "讲笑话蓄力-未实现", "C": "黄桃罐头-改卡池", "V": "召唤奶蛋-改卡池 not_naiwa_bait" }
   },
   "validation": {
     "rules": [

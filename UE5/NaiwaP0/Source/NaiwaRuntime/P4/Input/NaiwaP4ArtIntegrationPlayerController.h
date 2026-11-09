@@ -19,6 +19,7 @@ protected:
 private:
 	void ToggleUpgradeOffer();
 	void CycleTelegraphPreview();
+	void RetryRun();
 
 	UPROPERTY(Transient)
 	TObjectPtr<UNaiwaP4ArtIntegrationWidget> ArtIntegrationWidget;

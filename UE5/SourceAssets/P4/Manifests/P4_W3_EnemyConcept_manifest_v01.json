@@ -1,0 +1,60 @@
+{
+  "schema": "naiwa.p4.w3_enemy_concepts/1",
+  "version": "v01",
+  "status": "concept_direction_approved_animation_wip_in_progress",
+  "created_date": "2026-10-29",
+  "scope": "W3 Chapter 1 enemy appearance concepts; direction approved, animation WIP tracked in a separate manifest",
+  "reference_assets": [
+    {
+      "role": "approved P4 rendering style and sprite finish",
+      "path": "UE5/SourceAssets/P4/Characters/Alpha/A1/Frames/idle/P4_A1_idle_neutral_front.png"
+    },
+    {
+      "role": "player identity and visual separation",
+      "path": "UE5/SourceAssets/Common/CharacterReferences/player_reference.png"
+    }
+  ],
+  "scale_proposal": {
+    "baseline": "approved P4 player front idle pose = 1.0 height",
+    "naiding_height_ratio": 0.78,
+    "naidun_height_ratio": 1.12,
+    "approval": "approved_by_user_2026-10-29"
+  },
+  "concepts": [
+    {
+      "id": "naiding",
+      "name_zh": "奶丁",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naiding_turnaround_v01_concept.png",
+      "dimensions_px": [2172, 724],
+      "color_type": "RGBA",
+      "view_order": ["front", "back", "side_right"],
+      "palette": {
+        "body": "#9BDDD2",
+        "secondary": "#68BFB7",
+        "accent": "#F28B79"
+      },
+      "silhouette_note": "Small pear-drop body, swept-back crest, short side flaps and compact feet; reads as a light pursuer and differs from the frog protagonist.",
+      "sha256": "7F7C4097CA23478A5034A3FA0D2C4B169C0E7477CC5C0F003B321679BEECB4B1",
+      "approval": "approved_by_user_2026-10-29"
+    },
+    {
+      "id": "naidun",
+      "name_zh": "奶盾",
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naidun_turnaround_v01_concept.png",
+      "dimensions_px": [2172, 724],
+      "color_type": "RGBA",
+      "view_order": ["front", "back", "side_right", "side_left"],
+      "palette": {
+        "body": "#315967",
+        "shell": "#4B4F5B",
+        "shield_rim": "#E8D6B7",
+        "shield_center": "#C97B60"
+      },
+      "silhouette_note": "Broad, low guard body with a separate, forward-facing rounded shield; rear shell and straps expose a different back silhouette.",
+      "sha256": "5D3F07A46F129EFC957F4E11F533A3C6ADB49DFC7ED16BC71ACA897438392296",
+      "approval": "approved_by_user_2026-10-29"
+    }
+  ],
+  "review_page": "UE5/Records/p4_alpha/evidence/W3/P4_W3_EnemyConceptReview_v01.html",
+  "production_gate": "Concept direction is approved. Pose-board exploration is in progress; do not import into UE until clean 512x512 source frames, anchors, alpha edges, and animation QA are complete."
+}

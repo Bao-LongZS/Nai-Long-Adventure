@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>P4 W3 奶丁 / 奶盾概念方向 v01</title>
+  <style>
+    :root { color-scheme: dark; --bg:#10181b; --panel:#192528; --ink:#f5f0e5; --muted:#bac8c4; --line:#314347; --gold:#e7bd69; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:"Microsoft YaHei UI","Noto Sans CJK SC",sans-serif; line-height:1.55; }
+    main { max-width:1440px; margin:0 auto; padding:28px; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { font-size:30px; margin-bottom:8px; }
+    h2 { font-size:22px; margin-bottom:6px; }
+    h3 { font-size:17px; margin-bottom:6px; }
+    .sub,.muted { color:var(--muted); }
+    .status { display:inline-block; margin:8px 0 22px; padding:5px 12px; border:1px solid #92794b; border-radius:999px; color:#f6d98f; background:#3a3020; font-size:13px; }
+    .intro { max-width:900px; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+    .card-head { padding:18px 20px 10px; }
+    .card-head p { margin:0; color:var(--muted); }
+    .turnaround { margin:0 16px 10px; border:1px solid #39494c; border-radius:10px; overflow:hidden; background-color:#243034; background-image:linear-gradient(45deg,#303c40 25%,transparent 25%),linear-gradient(-45deg,#303c40 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#303c40 75%),linear-gradient(-45deg,transparent 75%,#303c40 75%); background-size:24px 24px; background-position:0 0,0 12px,12px -12px,-12px 0; }
+    .turnaround img { display:block; width:100%; height:auto; }
+    .viewlabels { display:grid; gap:4px; padding:0 20px 18px; text-align:center; color:var(--muted); font-size:12px; }
+    .three { grid-template-columns:repeat(3,1fr); }
+    .four { grid-template-columns:repeat(4,1fr); }
+    .notes { padding:0 20px 20px; }
+    .swatches { display:flex; gap:8px; margin:12px 0 2px; }
+    .swatch { display:flex; align-items:center; gap:7px; font-size:12px; color:var(--muted); }
+    .chip { width:22px; height:22px; border-radius:6px; border:1px solid #ffffff44; }
+    .comparison { margin-top:20px; padding:20px; background:var(--panel); border:1px solid var(--line); border-radius:14px; }
+    .scale-row { display:flex; align-items:flex-end; justify-content:center; gap:34px; min-height:290px; border-bottom:1px solid #788681; padding:10px 12px 0; }
+    .scale-item { width:210px; height:275px; position:relative; display:flex; align-items:flex-end; justify-content:center; }
+    .scale-item img,.scale-crop { display:block; position:absolute; bottom:0; background-repeat:no-repeat; background-position:left bottom; }
+    .scale-item img { width:200px; height:200px; object-fit:contain; }
+    .scale-crop.naiding { width:175px; height:175px; background-size:525px 175px; background-image:url("../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naiding_turnaround_v01_concept.png"); }
+    .scale-crop.naidun { width:184px; height:245px; background-size:735px 245px; background-image:url("../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naidun_turnaround_v01_concept.png"); }
+    .scale-label { position:absolute; left:0; right:0; bottom:-48px; text-align:center; color:var(--muted); font-size:13px; }
+    .scale-label strong { display:block; color:var(--ink); }
+    .scale-note { margin:60px 0 0; color:var(--muted); font-size:13px; }
+    .legend { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:18px; }
+    .legend > div { padding:14px; border:1px solid var(--line); border-radius:10px; }
+    .callout { margin-top:20px; border-left:3px solid var(--gold); padding:10px 14px; background:#25271f; color:#e7dfcb; }
+    @media (max-width:900px) { main{padding:18px}.grid{grid-template-columns:1fr}.scale-row{gap:5px}.scale-item{width:32%;}.legend{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+<main>
+  <h1>P4 W3 奶丁 / 奶盾 · 敌人概念方向 v01</h1>
+  <p class="intro">第一章 W3 两种杂兵的三视概念初稿。奶丁轻快追击，奶盾慢速正面防守；两者都延续 P4 柔和圆润立绘质感，但避开主角的黄身、绿眼和奶白腹部组合。</p>
+  <span class="status">概念方向已通过 · 2026-10-29</span>
+
+  <section class="grid">
+    <article class="card">
+      <div class="card-head"><h2>奶丁 · naiding</h2><p>小型、轻快、向前追逐；建议高度为主角的 0.78 倍。</p></div>
+      <div class="turnaround"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naiding_turnaround_v01_concept.png" alt="奶丁正面、背面、右侧三视概念"></div>
+      <div class="viewlabels three"><span>正面</span><span>背面</span><span>侧面（向右）</span></div>
+      <div class="notes">
+        <p>水滴梨形轮廓、后掠奶旋冠与短小侧鳍强调轻盈和追击方向。表情偏专注，前摇可进一步用低身蓄力区分攻击。</p>
+        <div class="swatches"><span class="swatch"><i class="chip" style="background:#9BDDD2"></i>薄荷青</span><span class="swatch"><i class="chip" style="background:#68BFB7"></i>冷青阴影</span><span class="swatch"><i class="chip" style="background:#F28B79"></i>珊瑚点色</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-head"><h2>奶盾 · naidun</h2><p>宽厚、低重心、防守意图强；建议高度为主角的 1.12 倍。</p></div>
+      <div class="turnaround"><img src="../../../../SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naidun_turnaround_v01_concept.png" alt="奶盾正面、背面、左右侧面四视概念"></div>
+      <div class="viewlabels four"><span>正面</span><span>背面</span><span>侧面（向右）</span><span>侧面（向左）</span></div>
+      <div class="notes">
+        <p>深青厚身与背部甲片建立重量感；独立暖色大盾留出眼睛和表情。两侧面稿都将盾牌放在前进侧，避免运行时镜像后盾牌朝反。</p>
+        <div class="swatches"><span class="swatch"><i class="chip" style="background:#315967"></i>深青身</span><span class="swatch"><i class="chip" style="background:#4B4F5B"></i>石板甲</span><span class="swatch"><i class="chip" style="background:#E8D6B7"></i>浅石盾沿</span><span class="swatch"><i class="chip" style="background:#C97B60"></i>陶红盾面</span></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="comparison">
+    <h2>与主角比例对照（方向提案）</h2>
+    <p class="muted">以通过的 P4 A1 正面待机帧为 1.00 高度。图像只用于概念尺寸比较；脚底锚点和 UE 世界单位需在动画稿及运行时单独校准。</p>
+    <div class="scale-row">
+      <div class="scale-item"><img src="../../../../SourceAssets/P4/Characters/Alpha/A1/Frames/idle/P4_A1_idle_neutral_front.png" alt="通过的 P4 奶蛙正面待机帧"><div class="scale-label"><strong>奶蛙主角</strong>1.00× · 基准</div></div>
+      <div class="scale-item"><div class="scale-crop naiding" role="img" aria-label="奶丁正面概念"></div><div class="scale-label"><strong>奶丁</strong>0.78× · 轻快小型</div></div>
+      <div class="scale-item"><div class="scale-crop naidun" role="img" aria-label="奶盾正面概念"></div><div class="scale-label"><strong>奶盾</strong>1.12× · 宽厚重型</div></div>
+    </div>
+    <p class="scale-note">奶丁以冠尖和短鳍形成细长上扬轮廓；奶盾以外扩的背甲和大盾增加视觉宽度。正式制作时保持三向脚底落点一致，盾牌另做分层，便于正面格挡和受击反馈。</p>
+    <div class="legend">
+      <div><h3>奶丁轮廓</h3><p class="muted">梨滴形躯干 + 后掠奶旋冠 + 短侧鳍；追击姿态以后倾冠尖带出方向。</p></div>
+      <div><h3>奶盾正面</h3><p class="muted">脸部始终露出；盾牌置于身体前侧但不盖住双眼。背视用甲片和背带清楚标识背面。</p></div>
+      <div><h3>敌我区分</h3><p class="muted">奶丁用冷薄荷青；奶盾用深蓝青/石板灰；主角保留奶黄、绿眼与奶白腹部。</p></div>
+    </div>
+    <div class="callout"><strong>审阅状态：</strong>用户已通过两种角色的概念方向，并要求继续制作六状态姿势稿。当前姿势板仍需清边、校正锚点和导出统一源帧后再作生产验收。<a href="P4_W3_EnemyAnimationReview_v01.html">打开六状态姿势稿审阅页</a>。</div>
+  </section>
+</main>
+</body>
+</html>

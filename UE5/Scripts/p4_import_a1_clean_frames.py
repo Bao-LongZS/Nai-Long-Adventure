@@ -18,8 +18,8 @@ import unreal
 
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE_DIR = ROOT / "UE5/SourceAssets/P4/Characters/Alpha/A1"
-MANIFEST_PATH = ROOT / "UE5/SourceAssets/P4/Manifests/P4_A1_UE_Import_manifest.json"
-REPORT_PATH = ROOT / "UE5/Records/p4_alpha/evidence/A1/P4_A1_clean_frame_import_report.json"
+MANIFEST_PATH = ROOT / "UE5/SourceAssets/P4/Manifests/P4_A1_UE_Import_manifest_v02.json"
+REPORT_PATH = ROOT / "UE5/Records/p4_alpha/evidence/A1/P4_A1_clean_frame_import_report_v02.json"
 DEST_ROOT = "/Game/Naiwa/P4/Art/Alpha/A1/Frames"
 APPROVED_STATUS = "owner_approved_for_ue_import"
 EXPECTED_SCHEMA = "naiwa.p4.alpha_ue_import/1"
@@ -84,7 +84,9 @@ def build_preflight(manifest: dict) -> list[dict]:
         "color_space": "sRGB",
         "alpha": "straight alpha retained",
         "texture_group": "Character",
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
         "mip_generation": "Sharpen0",
+        "never_stream": True,
     }
     for key, expected in required_settings.items():
         if texture_import.get(key) != expected:
@@ -162,17 +164,21 @@ def build_preflight(manifest: dict) -> list[dict]:
 def configure_and_save(frame: dict, texture) -> None:
     texture.set_editor_properties({
         "srgb": True,
-        "compression_settings": unreal.TextureCompressionSettings.TC_DEFAULT,
+        # Fixed-camera sprites use lossless RGBA8; avoid extra mip sharpening
+        # because the approved source derivatives can contain faint edge pixels.
+        "compression_settings": unreal.TextureCompressionSettings.TC_EDITOR_ICON,
         "compression_no_alpha": False,
         "mip_gen_settings": unreal.TextureMipGenSettings.TMGS_SHARPEN0,
         "lod_group": unreal.TextureGroup.TEXTUREGROUP_CHARACTER,
+        "never_stream": True,
     })
     expected = {
         "srgb": True,
-        "compression_settings": unreal.TextureCompressionSettings.TC_DEFAULT,
+        "compression_settings": unreal.TextureCompressionSettings.TC_EDITOR_ICON,
         "compression_no_alpha": False,
         "mip_gen_settings": unreal.TextureMipGenSettings.TMGS_SHARPEN0,
         "lod_group": unreal.TextureGroup.TEXTUREGROUP_CHARACTER,
+        "never_stream": True,
     }
     for property_name, value in expected.items():
         actual = texture.get_editor_property(property_name)
@@ -249,6 +255,14 @@ def main() -> None:
             "Texture import and property readback do not verify visible sprite sampling or character calibration.",
             "The script did not open or switch a level and did not run PIE/Standalone.",
         ],
+        "texture_quality": {
+            "compression": "TC_EditorIcon (uncompressed RGBA8)",
+            "mip_generation": "Sharpen0",
+            "texture_group": "Character",
+            "never_stream": True,
+            "estimated_a1_rgba8_base_memory_bytes": len(prepared)
+                * prepared[0]["dimensions_px"][0] * prepared[0]["dimensions_px"][1] * 4,
+        },
     })
 
 

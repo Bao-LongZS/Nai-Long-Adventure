@@ -1,0 +1,126 @@
+{
+  "schema": "naiwa.p4.w3_enemy_static_preview/1",
+  "version": "v02",
+  "created_date": "2026-10-30",
+  "status": "approved_for_static_preview_only",
+  "scope": "Import two static front-view concept crops for isolated W3 art-integration preview; not animation approval",
+  "approval": {
+    "concept_direction": "approved_by_user_2026-10-29",
+    "static_preview_integration": "authorized_by_user_2026-10-29_continue_as_planned"
+  },
+  "source_processing": {
+    "method": "deterministic crop, transparent padding, and rescale with System.Drawing; original concept sheets remain unchanged",
+    "target_canvas_px": [
+      512,
+      512
+    ],
+    "foot_anchor_px": [
+      256,
+      466
+    ],
+    "visible_character_height_px": 400,
+    "alpha_edge_status": "preview_only; Naiding retains visible source-edge artifacts and needs cleanup before production",
+    "editable_layered_source": false
+  },
+  "preview": {
+    "map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_ArtIntegrationPreview",
+    "presentation": "wave enemies display a static front-view image; no animation or view selection; training enemies and projectiles retain graybox",
+    "missing_texture_fallback": "colored graybox sphere",
+    "player_visible_height_uu_reference": 215,
+    "runtime_played_by_this_task": false
+  },
+  "texture_import": {
+    "destination_root": "/Game/Naiwa/P4/Art/Alpha/W3_Enemies/StaticPreview",
+    "color_space": "sRGB",
+    "alpha": "straight alpha retained",
+    "texture_group": "Character",
+    "compression": "TC_EditorIcon (uncompressed RGBA8)",
+    "mip_generation": "Sharpen0",
+    "never_stream": true
+  },
+  "assets": [
+    {
+      "enemy_id": "naiding",
+      "state": "idle_front_static_preview",
+      "source_concept": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naiding_turnaround_v01_concept.png",
+      "source_dimensions_px": [
+        2172,
+        724
+      ],
+      "source_view_rect_px": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "source_crop_px": [
+        88,
+        113,
+        636,
+        550
+      ],
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimePreview/naiding_idle_front_static_preview_v01.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "sha256": "14ad0a625a754eaada44687c7b127af94d6807e95b6ee52d3c6783824b46b5c2",
+      "texture_asset": "/Game/Naiwa/P4/Art/Alpha/W3_Enemies/StaticPreview/T_P4_W3_Naiding_IdleFront_StaticPreview_v01",
+      "target_visible_height_ratio_to_player": 0.78,
+      "plane_canvas_height_uu": 215,
+      "foot_anchor_px": [
+        256,
+        466
+      ],
+      "review_status": "static_preview_wip",
+      "issues": [
+        "source_edge_speckles",
+        "no_animation",
+        "front_view_only"
+      ]
+    },
+    {
+      "enemy_id": "naidun",
+      "state": "idle_front_static_preview",
+      "source_concept": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naidun_turnaround_v01_concept.png",
+      "source_dimensions_px": [
+        2172,
+        724
+      ],
+      "source_view_rect_px": [
+        0,
+        0,
+        543,
+        724
+      ],
+      "source_crop_px": [
+        43,
+        79,
+        500,
+        548
+      ],
+      "file": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/RuntimePreview/naidun_idle_front_static_preview_v01.png",
+      "dimensions_px": [
+        512,
+        512
+      ],
+      "sha256": "0d10a52ec37059640de3dbdc7a07124111f3e1293590375fc3d3f36993cde60f",
+      "texture_asset": "/Game/Naiwa/P4/Art/Alpha/W3_Enemies/StaticPreview/T_P4_W3_Naidun_IdleFront_StaticPreview_v01",
+      "target_visible_height_ratio_to_player": 1.12,
+      "plane_canvas_height_uu": 309,
+      "foot_anchor_px": [
+        256,
+        466
+      ],
+      "review_status": "static_preview_wip",
+      "issues": [
+        "no_animation",
+        "front_view_only",
+        "shield_not_separate_layer"
+      ]
+    }
+  ],
+  "next_gate": "Review the static W3 preview at the fixed camera. If scale/readability passes, clean source alpha, complete per-state/per-view 512x512 frames and split Naidun shield before production import.",
+  "revision_reason": "UE edge-quality correction: lower the mip sharpening from Sharpen3 to Sharpen0 and use the straight-alpha translucent sprite material. Naiding source edge specks remain marked for source cleanup before production.",
+  "runtime_material_alpha_mode": "straight-alpha translucent opacity; preserves antialiased RGBA edges"
+}

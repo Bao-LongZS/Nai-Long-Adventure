@@ -1,0 +1,38 @@
+{
+  "schema": "naiwa.p4.a2_arena_scene/1",
+  "version": "v02",
+  "status": "imported_map_created_pending_owner_visual_review",
+  "asset_id": "P4_A2_REFINED_ARENA_SCENE",
+  "source_png": "UE5/SourceAssets/P4/Environment/Alpha/P4_A2_ArenaScene_v02.png",
+  "source_sha256": "c1bd30f8a6bcee0e687f130c7353c87a436be549926f12f2324e571c369df7f9",
+  "dimensions_px": [
+    1672,
+    941
+  ],
+  "alpha": "opaque RGB",
+  "use": "fixed-camera 2.5D arena background plate; moving characters and gameplay feedback remain world-space runtime layers",
+  "visual_review_scope": "source image reviewed; UE runtime alignment and 720p/1080p acceptance pending",
+  "generation": {
+    "tool": "built-in image_gen",
+    "prompt": "Create a crisp, detailed full-bleed 16:9 stylized arena environment for a 2.5D action game: preserve a central carved sandstone entrance arch, warm sandy far wall, restrained teal banners, small pottery and desert plants only at the side margins, a broad muted sage-gray stone combat floor with large quiet paving slabs and thin boundary trim, soft daylight and contact shadows. Keep the central 65 percent open and low contrast for moving sprites, shadows and attack markers. Fixed elevated 3/4 camera. No characters, HUD, text, logos, symbols or attacks.",
+    "transparent_background": false,
+    "native_output_limit_px": [
+      1672,
+      941
+    ],
+    "target_resolution_px": [
+      2560,
+      1440
+    ],
+    "resolution_gap": "generation service returned 1672x941 despite a 2560x1440 target; do not claim native 1080p"
+  },
+  "ue_preview": {
+    "texture_asset": "/Game/Naiwa/P4/Art/Alpha/A2/T_P4_A2_ArenaScene_v02",
+    "material_asset": "/Game/Naiwa/P4/Materials/Alpha/A2/M_P4_A2_RefinedBackdrop_v02",
+    "map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_A2_RefinedArena_v02",
+    "texture_profile": "TC_EditorIcon uncompressed RGBA8; sRGB; UI group; Sharpen0 mips; non-streaming"
+  },
+  "ue_texture_asset": "/Game/Naiwa/P4/Art/Alpha/A2/T_P4_A2_ArenaScene_v02",
+  "ue_material_asset": "/Game/Naiwa/P4/Materials/Alpha/A2/M_P4_A2_RefinedBackdrop_v02",
+  "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_A2_RefinedArena_v02"
+}

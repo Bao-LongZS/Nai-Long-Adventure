@@ -1,0 +1,1019 @@
+{
+  "schema": "naiwa.p4.w4_vfx_runtime_preview_import/1",
+  "status": "imported_preview_only_runtime_boot_verified",
+  "source_manifest": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Manifests\\P4_W4_BossAndVFX_manifest_v06.json",
+  "destination_root": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences",
+  "frame_table": "/Game/Naiwa/P4/Data/DT_P4_W4_VFX_RuntimePreviewFrames",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "source_manifest_promoted": false,
+  "level_opened_or_changed": false,
+  "runtime_played": true,
+  "runtime_preview": {
+    "map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_ArtIntegrationPreview",
+    "presenter_sequences_loaded": 13,
+    "presenter_rows_loaded": 57,
+    "screenshot": "UE5/NaiwaP0/Saved/Screenshots/WindowsEditor/HighresScreenshot00016.png",
+    "runtime_report": "UE5/Records/p4_alpha/evidence/W4/P4_W4_VFX_RuntimePreview_runtime_report_v01.json",
+    "observed_effect_components": [
+      "fx_milk_shot",
+      "fx_player_hit",
+      "fx_enemy_hit",
+      "fx_enemy_death"
+    ],
+    "material_parent_warning_count_after_fix": 0
+  },
+  "manifest_version": "v06",
+  "preflight": {
+    "status": "passed",
+    "sequence_count": 13,
+    "frame_count": 57,
+    "dimensions_px": [
+      512,
+      512
+    ],
+    "existing_same_source_assets": 0
+  },
+  "assets": [
+    {
+      "effect_id": "fx_milk_shot",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_milk_shot/T_P4_W4_FX_fx_milk_shot_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_milk_shot_00.png",
+      "source_sha256": "45d865291e54f8cae3ac53b497de03ac4884c730595a176f734691b8503de42f",
+      "duration_seconds": 0.075,
+      "playback_mode": "loop",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_milk_shot",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_milk_shot/T_P4_W4_FX_fx_milk_shot_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_milk_shot_01.png",
+      "source_sha256": "c45345643bb44232b057a0285abbef1377922932c32695b0d196672f268cbcf9",
+      "duration_seconds": 0.075,
+      "playback_mode": "loop",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_milk_shot",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_milk_shot/T_P4_W4_FX_fx_milk_shot_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_milk_shot_02.png",
+      "source_sha256": "17878260c20941557098f055d2b752552df819ab106805ff771cec0e9800811c",
+      "duration_seconds": 0.075,
+      "playback_mode": "loop",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_milk_shot",
+      "frame_index": 3,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_milk_shot/T_P4_W4_FX_fx_milk_shot_03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_milk_shot_03.png",
+      "source_sha256": "402a8411ec8b6bf772b47067b690fe09e2367ce6aee0d012ffe730227ba39090",
+      "duration_seconds": 0.075,
+      "playback_mode": "loop",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_melee_swing",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_melee_swing/T_P4_W4_FX_fx_melee_swing_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_melee_swing_00.png",
+      "source_sha256": "e4b60a05275bff29aef15480d82d78937aa18ac6ac9aefea0f6f94189a4c6d9d",
+      "duration_seconds": 0.055,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_melee_swing",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_melee_swing/T_P4_W4_FX_fx_melee_swing_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_melee_swing_01.png",
+      "source_sha256": "b7c3d4d455a6c6845ae48e06b6216e7908dd8016d817773b4f6d7987914bef50",
+      "duration_seconds": 0.055,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_melee_swing",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_melee_swing/T_P4_W4_FX_fx_melee_swing_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_melee_swing_02.png",
+      "source_sha256": "270ca80501cebaf64cf96110159225fed1a5cd1412d5cddf021bc0d996fa4ff9",
+      "duration_seconds": 0.055,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_melee_swing",
+      "frame_index": 3,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_melee_swing/T_P4_W4_FX_fx_melee_swing_03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_melee_swing_03.png",
+      "source_sha256": "36cba537f78b201a0f946c7f4a0b9070c93c3a1dbe910dc36da4ecef3a1d96e1",
+      "duration_seconds": 0.055,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_melee_swing",
+      "frame_index": 4,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_melee_swing/T_P4_W4_FX_fx_melee_swing_04",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_melee_swing_04.png",
+      "source_sha256": "2f52a3ee59555a51ac0834434bf1c2025c0bdc1bddf776a014955ace3840c4bc",
+      "duration_seconds": 0.055,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_player_dash_trail",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_player_dash_trail/T_P4_W4_FX_fx_player_dash_trail_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_player_dash_trail_00.png",
+      "source_sha256": "aea3242e86ec97979db5f129632e4d02a1e9c57c1b9564205daf338904ad6ad8",
+      "duration_seconds": 0.05,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_player_dash_trail",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_player_dash_trail/T_P4_W4_FX_fx_player_dash_trail_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_player_dash_trail_01.png",
+      "source_sha256": "34ea68a3734d2d671195bd5fa9d206ac8dd04732c1aa7104de88cc6e9d976a70",
+      "duration_seconds": 0.05,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_player_dash_trail",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_player_dash_trail/T_P4_W4_FX_fx_player_dash_trail_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_player_dash_trail_02.png",
+      "source_sha256": "b9c0cc80e7d6ef274bf579747c66a5944cb162c564f04ac59209ba7653a854df",
+      "duration_seconds": 0.05,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_player_dash_trail",
+      "frame_index": 3,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_player_dash_trail/T_P4_W4_FX_fx_player_dash_trail_03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_player_dash_trail_03.png",
+      "source_sha256": "5efeeca228df0b8fe8324652ec0787ba00e01333e0c4dff990a1cbb65d1a7ba1",
+      "duration_seconds": 0.05,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_player_dash_trail",
+      "frame_index": 4,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_player_dash_trail/T_P4_W4_FX_fx_player_dash_trail_04",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_player_dash_trail_04.png",
+      "source_sha256": "facd73bf4c4d0bd2babf26e37fccf66cbc7700cac8d913b993c09706b684d580",
+      "duration_seconds": 0.05,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_laugh_burst",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_laugh_burst/T_P4_W4_FX_fx_laugh_burst_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_laugh_burst_00.png",
+      "source_sha256": "c86d8f40a9d539a86a3b79e7ad5fa0faa970c833b6acb3180a149e6cbf8cfb27",
+      "duration_seconds": 0.07,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_laugh_burst",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_laugh_burst/T_P4_W4_FX_fx_laugh_burst_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_laugh_burst_01.png",
+      "source_sha256": "956b0e0bcbb6ab06bfa75108f9f9d0a3a90282c16eb5b97e8589cd9e377806e1",
+      "duration_seconds": 0.07,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_laugh_burst",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_laugh_burst/T_P4_W4_FX_fx_laugh_burst_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_laugh_burst_02.png",
+      "source_sha256": "4a6be2c0845d3c109013751a8685a0af034c17228311d372b32eb73b4ed20dc3",
+      "duration_seconds": 0.07,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_laugh_burst",
+      "frame_index": 3,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_laugh_burst/T_P4_W4_FX_fx_laugh_burst_03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_laugh_burst_03.png",
+      "source_sha256": "4ff39421cf199969dba6674ef759be501b89a37e5b57706a024e2c0cb0d8060e",
+      "duration_seconds": 0.07,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_laugh_burst",
+      "frame_index": 4,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_laugh_burst/T_P4_W4_FX_fx_laugh_burst_04",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_laugh_burst_04.png",
+      "source_sha256": "8115cc8bc534010331d0e607d6ba73988517431a8d64a43a4693cb1950eff938",
+      "duration_seconds": 0.07,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_defend_guard",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_defend_guard/T_P4_W4_FX_fx_defend_guard_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_defend_guard_00.png",
+      "source_sha256": "636aecde1f52cf14e6a50a6468746033d346b93f844ea94310ca8b3cd6bf7473",
+      "duration_seconds": 0.15,
+      "playback_mode": "loop",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_defend_guard",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_defend_guard/T_P4_W4_FX_fx_defend_guard_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_defend_guard_01.png",
+      "source_sha256": "bfd587d371ead387d80ed4a4d79eb230c4d5071a40942095914457ff997dc9af",
+      "duration_seconds": 0.15,
+      "playback_mode": "loop",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_defend_guard",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_defend_guard/T_P4_W4_FX_fx_defend_guard_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_defend_guard_02.png",
+      "source_sha256": "1bfd91b084d106aa53fcff7b64bd4236672505482f94837aee10b971abf47998",
+      "duration_seconds": 0.15,
+      "playback_mode": "loop",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_defend_guard",
+      "frame_index": 3,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_defend_guard/T_P4_W4_FX_fx_defend_guard_03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_defend_guard_03.png",
+      "source_sha256": "b1fa051eda991c7e33c5826cf050e86c4aa744ef416fd1cd17d2e724baeb1643",
+      "duration_seconds": 0.15,
+      "playback_mode": "loop",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_player_hit",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_player_hit/T_P4_W4_FX_fx_player_hit_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_player_hit_00.png",
+      "source_sha256": "8a48126cb6e74b06da37cb8ab0abfe3a25c87f7c63f452ad4427d52a01ecf601",
+      "duration_seconds": 0.04,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_player_hit",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_player_hit/T_P4_W4_FX_fx_player_hit_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_player_hit_01.png",
+      "source_sha256": "bba7be3bf85d0888a46990429f2073554e9651bb204f93190f45c3bf763afb55",
+      "duration_seconds": 0.04,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_player_hit",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_player_hit/T_P4_W4_FX_fx_player_hit_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_player_hit_02.png",
+      "source_sha256": "ed77831790ccab7e76670549f2b011a2e21c4369cb61ef9bd741fb082522aefb",
+      "duration_seconds": 0.04,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_player_hit",
+      "frame_index": 3,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_player_hit/T_P4_W4_FX_fx_player_hit_03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_player_hit_03.png",
+      "source_sha256": "c7c1896cdd924918c3aa53370f4d0ff3656acc4adc32c53c4555e7b91f233c54",
+      "duration_seconds": 0.04,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_melee_impact",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_melee_impact/T_P4_W4_FX_fx_melee_impact_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_melee_impact_00.png",
+      "source_sha256": "4178c24f9aaa2c3ef137d4936485acad47fc0b529396a9e00517613ab2aa39dc",
+      "duration_seconds": 0.035,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_melee_impact",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_melee_impact/T_P4_W4_FX_fx_melee_impact_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_melee_impact_01.png",
+      "source_sha256": "7246c7bc03b0aee6dee9bb7581a2a76da517a0d2e2eb9559d0a619b0cc5e1238",
+      "duration_seconds": 0.035,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_melee_impact",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_melee_impact/T_P4_W4_FX_fx_melee_impact_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_melee_impact_02.png",
+      "source_sha256": "80cbefd986394ea0b777e66ad7563eb71417ebb9f9a55e6d74f00f1d4d7b6eca",
+      "duration_seconds": 0.035,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_melee_impact",
+      "frame_index": 3,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_melee_impact/T_P4_W4_FX_fx_melee_impact_03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_melee_impact_03.png",
+      "source_sha256": "1b7ad723cb1d3af96ad2b598699e3a89c265cb490519d668251e7d26ef0cf8e4",
+      "duration_seconds": 0.035,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_dash_impact",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_dash_impact/T_P4_W4_FX_fx_dash_impact_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_dash_impact_00.png",
+      "source_sha256": "9969e3c00a2b745d94c85c394421c9517d925d69056cab5561d275b05682e71b",
+      "duration_seconds": 0.04,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_dash_impact",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_dash_impact/T_P4_W4_FX_fx_dash_impact_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_dash_impact_01.png",
+      "source_sha256": "56438ecd4585ceaa70f7c76d4bdd866797ecb763ca86a98ca5e4bc76b9874b4b",
+      "duration_seconds": 0.04,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_dash_impact",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_dash_impact/T_P4_W4_FX_fx_dash_impact_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_dash_impact_02.png",
+      "source_sha256": "ba281660c07af1a3f23296ea157a771ec9ddbc327996f1e0b4581faaea05a9ba",
+      "duration_seconds": 0.04,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_dash_impact",
+      "frame_index": 3,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_dash_impact/T_P4_W4_FX_fx_dash_impact_03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_dash_impact_03.png",
+      "source_sha256": "532e9ce643aa5d875df0b269e3812981ef628e0d54a672d99de2c91e41625c78",
+      "duration_seconds": 0.04,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_enemy_hit",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_enemy_hit/T_P4_W4_FX_fx_enemy_hit_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_enemy_hit_00.png",
+      "source_sha256": "c5017f3f214b11840fe1700230df815c4a141e45cc30f1df57927ece5fcdb6d6",
+      "duration_seconds": 0.04,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_enemy_hit",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_enemy_hit/T_P4_W4_FX_fx_enemy_hit_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_enemy_hit_01.png",
+      "source_sha256": "4b2bcc330abd135db74fdd080e97ce2b9c721138a70e3c06795a994021bb7f76",
+      "duration_seconds": 0.04,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_enemy_hit",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_enemy_hit/T_P4_W4_FX_fx_enemy_hit_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_enemy_hit_02.png",
+      "source_sha256": "8c840748b6b4d4af903db5e5e0f27ae4a9b6eb14b11ad923233cedf70636755d",
+      "duration_seconds": 0.04,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_boss_lid_slam",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_boss_lid_slam/T_P4_W4_FX_fx_boss_lid_slam_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_boss_lid_slam_00.png",
+      "source_sha256": "4ff03138265b53a5af11843f9f4d2d947fc1ae35d5a2b2b3919a3d459b8a6a54",
+      "duration_seconds": 0.07,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_boss_lid_slam",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_boss_lid_slam/T_P4_W4_FX_fx_boss_lid_slam_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_boss_lid_slam_01.png",
+      "source_sha256": "2abfeea8ef76a474448836b8a1771b8b6f1562df56450ccebea72af30bedb7a4",
+      "duration_seconds": 0.07,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_boss_lid_slam",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_boss_lid_slam/T_P4_W4_FX_fx_boss_lid_slam_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_boss_lid_slam_02.png",
+      "source_sha256": "60edacb319984b41ab17687abb5d903b149e9677a1e84fa05729e1c826caf737",
+      "duration_seconds": 0.07,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_boss_lid_slam",
+      "frame_index": 3,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_boss_lid_slam/T_P4_W4_FX_fx_boss_lid_slam_03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_boss_lid_slam_03.png",
+      "source_sha256": "430bbe69a6e98daa0a6763cc4b9e3b32505e7cf17f9c51d3aa7ff6f46ad95cfa",
+      "duration_seconds": 0.07,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_boss_charge_trail",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_boss_charge_trail/T_P4_W4_FX_fx_boss_charge_trail_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_boss_charge_trail_00.png",
+      "source_sha256": "bf7178fe1537781a0fa49dc6caba9470d958e5dd13ca6afb4099f6b4b6614e5d",
+      "duration_seconds": 0.045,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_boss_charge_trail",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_boss_charge_trail/T_P4_W4_FX_fx_boss_charge_trail_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_boss_charge_trail_01.png",
+      "source_sha256": "f656a9c239dea352939df03b9bb4bc6f3d6fa002969e3ed764a81fc89686f1e1",
+      "duration_seconds": 0.045,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_boss_charge_trail",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_boss_charge_trail/T_P4_W4_FX_fx_boss_charge_trail_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_boss_charge_trail_02.png",
+      "source_sha256": "c2c3a8cc05cc4408a557934747e2d07906fe1f3d71a0fa3cf60ec498c61e3497",
+      "duration_seconds": 0.045,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_boss_charge_trail",
+      "frame_index": 3,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_boss_charge_trail/T_P4_W4_FX_fx_boss_charge_trail_03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_boss_charge_trail_03.png",
+      "source_sha256": "41426c73965d7bb30ecf8eaab3336b581df486c2707e1d585fdcdb94e79d4a42",
+      "duration_seconds": 0.045,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_boss_charge_trail",
+      "frame_index": 4,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_boss_charge_trail/T_P4_W4_FX_fx_boss_charge_trail_04",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_boss_charge_trail_04.png",
+      "source_sha256": "9d23d9c67c524daea9dac5155c4240b02ff1a33377a81b19393726137441dc92",
+      "duration_seconds": 0.045,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_boss_phase_two",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_boss_phase_two/T_P4_W4_FX_fx_boss_phase_two_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_boss_phase_two_00.png",
+      "source_sha256": "cbcc9ac8600268b6221489c4c48f44e1de53ba84da34b2d2c1bb5496db984c74",
+      "duration_seconds": 0.27,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_boss_phase_two",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_boss_phase_two/T_P4_W4_FX_fx_boss_phase_two_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_boss_phase_two_01.png",
+      "source_sha256": "dc548f6a716b8e851c3bc88ed4ab9879de22dede2480ce73c3528438e9628b18",
+      "duration_seconds": 0.27,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_boss_phase_two",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_boss_phase_two/T_P4_W4_FX_fx_boss_phase_two_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_boss_phase_two_02.png",
+      "source_sha256": "377f293b25105bf7d1ee5196f4b98af29208acaf06c052fc058e72c751724971",
+      "duration_seconds": 0.27,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_boss_phase_two",
+      "frame_index": 3,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_boss_phase_two/T_P4_W4_FX_fx_boss_phase_two_03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_boss_phase_two_03.png",
+      "source_sha256": "6fe1bdc31da7ffbaf6348b05257e3a165d03c4af184b0e65ca8b9baa31297f71",
+      "duration_seconds": 0.27,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_boss_phase_two",
+      "frame_index": 4,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_boss_phase_two/T_P4_W4_FX_fx_boss_phase_two_04",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_boss_phase_two_04.png",
+      "source_sha256": "f2a3ba7c33fe9e9dab13b9f588ecc834c98e262dafc0ad4154f6ca9144beb81d",
+      "duration_seconds": 0.27,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_enemy_death",
+      "frame_index": 0,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_enemy_death/T_P4_W4_FX_fx_enemy_death_00",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_enemy_death_00.png",
+      "source_sha256": "3984c67730db7b756e14f0083f5add66d134c90ee45f1fcb015fd11241e419c3",
+      "duration_seconds": 0.1,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_enemy_death",
+      "frame_index": 1,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_enemy_death/T_P4_W4_FX_fx_enemy_death_01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_enemy_death_01.png",
+      "source_sha256": "863a74538deebe0c755d41c856b00c9e8124ca260bfc6b62c45a32fd32fbb022",
+      "duration_seconds": 0.1,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_enemy_death",
+      "frame_index": 2,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_enemy_death/T_P4_W4_FX_fx_enemy_death_02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_enemy_death_02.png",
+      "source_sha256": "455bd81d77af3b51191e01a23d9c2d5d3c586edeb9d7f14d1939819e7d46a733",
+      "duration_seconds": 0.1,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_enemy_death",
+      "frame_index": 3,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_enemy_death/T_P4_W4_FX_fx_enemy_death_03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_enemy_death_03.png",
+      "source_sha256": "3a4154450133d8414f5e00aadb0496c5ee020862531448d78de979a0c01e402f",
+      "duration_seconds": 0.1,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    },
+    {
+      "effect_id": "fx_enemy_death",
+      "frame_index": 4,
+      "asset_path": "/Game/Naiwa/P4/Art/Alpha/W4_FX/Sequences/fx_enemy_death/T_P4_W4_FX_fx_enemy_death_04",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Effects\\Alpha\\W4\\RuntimeWIP\\Sequences\\Frames512\\fx_enemy_death_04.png",
+      "source_sha256": "87a9a29c649635def1387d7fd0814d77d37ba97e5265a695db92597326abed57",
+      "duration_seconds": 0.1,
+      "playback_mode": "once",
+      "result": "imported",
+      "texture_readback": "passed",
+      "settings": {
+        "compression": "TC_EditorIcon (uncompressed RGBA8)",
+        "mip_generation": "Sharpen0",
+        "texture_group": "Character",
+        "never_stream": true
+      }
+    }
+  ],
+  "frame_table_result": {
+    "asset_path": "/Game/Naiwa/P4/Data/DT_P4_W4_VFX_RuntimePreviewFrames",
+    "row_struct": "/Script/NaiwaRuntime.NaiwaP4VfxFrameRow",
+    "row_count": 57,
+    "csv_source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Data\\P4_W4_VFX_RuntimePreviewFrames.csv"
+  },
+  "limitations": [
+    "Frames remain transform/timing preview WIP; no per-frame shape redraw or accessibility redraw variant was added.",
+    "This report does not update the global source-manifest ue_imported or runtime_ready flags.",
+    "A4 runtime boot and four effect component paths were observed; remaining effect triggers still need individual runtime review.",
+    "Frames remain transform/timing preview WIP; production approval, low-flash variants, and per-frame silhouette refinement are still pending."
+  ]
+}
