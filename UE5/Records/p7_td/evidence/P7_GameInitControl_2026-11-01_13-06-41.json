@@ -1,0 +1,22 @@
+{
+  "test": "Minimal Game target with no P7 or main-project runtime modules",
+  "status": "INCONCLUSIVE_NO_STARTUP_LOG",
+  "startedAt": "2026-11-01 13:07:19+08:00",
+  "processId": 35436,
+  "timeoutSeconds": 60,
+  "executable": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\tmp\\P7GameInitControl_2026-11-01_13-06-41\\Binaries\\Win64\\P7GameInitControl.exe",
+  "project": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\tmp\\P7GameInitControl_2026-11-01_13-06-41\\P7GameInitControl.uproject",
+  "map": "/Engine/Maps/Entry",
+  "buildExitCode": 0,
+  "buildLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_GameInitControlBuild_2026-11-01_13-06-41.log",
+  "processFinishedWithinTimeout": true,
+  "processExitCode": 0,
+  "processExitCodeHex": "0x00000000",
+  "startupLogCreated": false,
+  "engineMapReportedLoaded": false,
+  "cleanEngineExitReported": false,
+  "engineLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_GameInitControlStartup_2026-11-01_13-06-41.log",
+  "stdoutLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_GameInitControlStartup_2026-11-01_13-06-41.stdout.log",
+  "stderrLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_GameInitControlStartup_2026-11-01_13-06-41.stderr.log",
+  "note": "The minimal no-runtime-module target compiled and exited with code 0, but it produced no Unreal startup log and reported no map load or clean engine shutdown. This is not counted as a runtime pass and cannot discriminate whether the isolated P7 startup failure is module-specific."
+}

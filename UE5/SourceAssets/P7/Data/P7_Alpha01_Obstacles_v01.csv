@@ -1,0 +1,3 @@
+---,ObstacleId,Cell,MaxHealth,RewardCoins
+P7_Obstacle_CrateA,P7_Obstacle_CrateA,"(X=4,Y=9)",90,45
+P7_Obstacle_CrateB,P7_Obstacle_CrateB,"(X=15,Y=9)",130,65

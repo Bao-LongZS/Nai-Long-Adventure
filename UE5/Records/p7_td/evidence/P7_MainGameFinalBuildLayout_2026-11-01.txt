@@ -1,0 +1,24 @@
+P7 final main Game build layout snapshot
+Captured: 2026-11-01 18:55 Asia/Shanghai
+
+Build target: Nai_Long Win64 Development
+Project descriptor: C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Nai_Long.uproject
+Build result: Succeeded, 96/96 actions
+Build log: P7_MainNaiLongGameBuild_2026-11-01_18-50-23.log
+The build command used the official project descriptor and did not pass -NoLiveCoding.
+
+Generated Game shared definitions:
+UE5/NaiwaP0/Intermediate/Build/Win64/x64/Nai_Long/Development/CoreUObject/SharedDefinitions.CoreUObject.Cpp20.h
+Line 56: #define WITH_LIVE_CODING 1
+
+Generated Game UHT class registration table:
+UE5/NaiwaP0/Intermediate/Build/Win64/UnrealGame/Inc/NaiwaRuntime/UHT/NaiwaMenuProgress.gen.cpp
+Lines 490-493: static constexpr FClassRegisterCompiledInInfo ClassInfo[] with two rows
+  UNaiwaMenuSaveGame
+  UNaiwaProgressSubsystem
+
+The final Game target therefore generates its reflected registration entries with the live-coding layout enabled, matching the precompiled Engine Game registration layout. The 40-byte engine array stride and the former 32-byte project row mismatch were measured in P7_MainGameRegistryArrayStrides_2026-11-01_19-11-00.txt.
+
+Runtime verification:
+P7_MainGameStartup_2026-11-01_18-52-03.json: PASS; main menu loaded; clean engine exit.
+P7_MainGameCookedStartup_2026-11-01_18-54-22.json: PASS; main menu loaded; clean engine exit.

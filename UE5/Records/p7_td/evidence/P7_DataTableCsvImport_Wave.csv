@@ -1,0 +1,2 @@
+---,WaveIndex,Spawns
+P7WaveCsvProbe,1,"((EnemyId=Enemy_Normal,Count=2,FirstSpawnDelaySteps=0,SpawnIntervalSteps=30),(EnemyId=Enemy_Fast,Count=1,FirstSpawnDelaySteps=60,SpawnIntervalSteps=0))"

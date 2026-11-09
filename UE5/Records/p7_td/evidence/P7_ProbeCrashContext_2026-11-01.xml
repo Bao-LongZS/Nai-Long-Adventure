@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FGenericCrashContext>
+<RuntimeProperties>
+<CrashVersion>3</CrashVersion>
+<ExecutionGuid>D85E7C1D40AC6E52FE7F73A5F00F83AD</ExecutionGuid>
+<CrashGUID>_0000</CrashGUID>
+<IsEnsure>false</IsEnsure>
+<IsStall>false</IsStall>
+<IsAssert>false</IsAssert>
+<CrashType>Crash</CrashType>
+<ErrorMessage>Unhandled Exception: EXCEPTION_ACCESS_VIOLATION reading address 0x0000000000000000</ErrorMessage>
+<CrashReporterMessage></CrashReporterMessage>
+<CrashReporterMessage></CrashReporterMessage>
+<ProcessId>0</ProcessId>
+<SecondsSinceStart>0</SecondsSinceStart>
+<IsInternalBuild>false</IsInternalBuild>
+<IsPerforceBuild>false</IsPerforceBuild>
+<IsWithDebugInfo>false</IsWithDebugInfo>
+<IsSourceDistribution>false</IsSourceDistribution>
+<GameName>UE-P7BuildProbe</GameName>
+<ExecutableName></ExecutableName>
+<BuildConfiguration></BuildConfiguration>
+<GameSessionID></GameSessionID>
+<PlatformName></PlatformName>
+<PlatformFullName></PlatformFullName>
+<PlatformNameIni></PlatformNameIni>
+<EngineMode></EngineMode>
+<EngineModeEx></EngineModeEx>
+<DeploymentName></DeploymentName>
+<EngineVersion></EngineVersion>
+<EngineCompatibleVersion></EngineCompatibleVersion>
+<CommandLine></CommandLine>
+<LanguageLCID>0</LanguageLCID>
+<AppDefaultLocale></AppDefaultLocale>
+<BuildVersion></BuildVersion>
+<Symbols></Symbols>
+<IsUERelease>false</IsUERelease>
+<IsRequestingExit>false</IsRequestingExit>
+<UserName></UserName>
+<BaseDir></BaseDir>
+<RootDir></RootDir>
+<MachineId></MachineId>
+<LoginId></LoginId>
+<EpicAccountId></EpicAccountId>
+<SourceContext></SourceContext>
+<UserDescription></UserDescription>
+<UserActivityHint></UserActivityHint>
+<CrashDumpMode>0</CrashDumpMode>
+<GameStateName></GameStateName>
+<Misc.NumberOfCores>0</Misc.NumberOfCores>
+<Misc.NumberOfCoresIncludingHyperthreads>0</Misc.NumberOfCoresIncludingHyperthreads>
+<Misc.Is64bitOperatingSystem>1</Misc.Is64bitOperatingSystem>
+<Misc.CPUVendor></Misc.CPUVendor>
+<Misc.CPUBrand></Misc.CPUBrand>
+<Misc.CPUModelID>0</Misc.CPUModelID>
+<Misc.CPUMicrocodeRevision>0</Misc.CPUMicrocodeRevision>
+<Misc.PrimaryGPUBrand></Misc.PrimaryGPUBrand>
+<Misc.OSVersionMajor></Misc.OSVersionMajor>
+<Misc.OSVersionMinor></Misc.OSVersionMinor>
+<Misc.AnticheatProvider></Misc.AnticheatProvider>
+<MemoryStats.TotalPhysical>33795887104</MemoryStats.TotalPhysical>
+<MemoryStats.TotalVirtual>49365143552</MemoryStats.TotalVirtual>
+<MemoryStats.PageSize>4096</MemoryStats.PageSize>
+<MemoryStats.TotalPhysicalGB>32</MemoryStats.TotalPhysicalGB>
+<MemoryStats.AvailablePhysical>0</MemoryStats.AvailablePhysical>
+<MemoryStats.AvailableVirtual>0</MemoryStats.AvailableVirtual>
+<MemoryStats.UsedPhysical>0</MemoryStats.UsedPhysical>
+<MemoryStats.PeakUsedPhysical>0</MemoryStats.PeakUsedPhysical>
+<MemoryStats.UsedVirtual>0</MemoryStats.UsedVirtual>
+<MemoryStats.PeakUsedVirtual>0</MemoryStats.PeakUsedVirtual>
+<MemoryStats.bIsOOM>0</MemoryStats.bIsOOM>
+<MemoryStats.OOMAllocationSize>0</MemoryStats.OOMAllocationSize>
+<MemoryStats.OOMAllocationAlignment>0</MemoryStats.OOMAllocationAlignment>
+<NumMinidumpFramesToIgnore>0</NumMinidumpFramesToIgnore>
+<CallStack></CallStack>
+<PCallStack>
+
+ P7BuildProbe 0x00007ff7445d0000 + 1926c36         
+ P7BuildProbe 0x00007ff7445d0000 + 1acb903         
+ P7BuildProbe 0x00007ff7445d0000 + 162c15a         
+ P7BuildProbe 0x00007ff7445d0000 + 162be53         
+ P7BuildProbe 0x00007ff7445d0000 + 1954f9e         
+ P7BuildProbe 0x00007ff7445d0000 + 19739a0         
+ P7BuildProbe 0x00007ff7445d0000 + 1995b85         
+ P7BuildProbe 0x00007ff7445d0000 + 16a540f         
+ P7BuildProbe 0x00007ff7445d0000 + 94e1c53         
+ P7BuildProbe 0x00007ff7445d0000 + 94d8a50         
+ P7BuildProbe 0x00007ff7445d0000 + 94d8d1a         
+ P7BuildProbe 0x00007ff7445d0000 + 94dc890         
+ P7BuildProbe 0x00007ff7445d0000 + 94eb594         
+ P7BuildProbe 0x00007ff7445d0000 + e799f79         
+     KERNEL32 0x00007fffff3a0000 + 2dda7           
+</PCallStack>
+<PCallStackHash>DCE6D4A5C34751FDFAF2D9D22CE18D06FF84FC0E</PCallStackHash>
+<Threads><Thread><CallStack>        ntdll 0x00007fffff8e0000 + 161dd4          
+   KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7BuildProbe 0x00007ff7445d0000 + 1ac73cd         
+ P7BuildProbe 0x00007ff7445d0000 + e7d7c5e         
+ VCRUNTIME140 0x00007fffcc0b0000 + 1a9c0           
+        ntdll 0x00007fffff8e0000 + 1664af          
+        ntdll 0x00007fffff8e0000 + c4065           
+        ntdll 0x00007fffff8e0000 + 165dee          
+ P7BuildProbe 0x00007ff7445d0000 + 1926c36         
+ P7BuildProbe 0x00007ff7445d0000 + 1acb903         
+ P7BuildProbe 0x00007ff7445d0000 + 162c15a         
+ P7BuildProbe 0x00007ff7445d0000 + 162be53         
+ P7BuildProbe 0x00007ff7445d0000 + 1954f9e         
+ P7BuildProbe 0x00007ff7445d0000 + 19739a0         
+ P7BuildProbe 0x00007ff7445d0000 + 1995b85         
+ P7BuildProbe 0x00007ff7445d0000 + 16a540f         
+ P7BuildProbe 0x00007ff7445d0000 + 94e1c53         
+ P7BuildProbe 0x00007ff7445d0000 + 94d8a50         
+ P7BuildProbe 0x00007ff7445d0000 + 94d8d1a         
+ P7BuildProbe 0x00007ff7445d0000 + 94dc890         
+ P7BuildProbe 0x00007ff7445d0000 + 94eb594         
+ P7BuildProbe 0x00007ff7445d0000 + e799f79         
+     KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>true</IsCrashed>
+<Registers></Registers>
+<ThreadID>51420</ThreadID>
+<ThreadName>GameThread</ThreadName>
+</Thread>
+</Threads>
+</RuntimeProperties>
+<PlatformProperties>
+<PlatformIsRunningWindows>1</PlatformIsRunningWindows>
+<PlatformIsRunningWine>false</PlatformIsRunningWine>
+<PlatformSupportsWindows11>true</PlatformSupportsWindows11>
+<IsRunningOnBattery>true</IsRunningOnBattery>
+<IsUsingBatterySaver>false</IsUsingBatterySaver>
+<HostArchitecture>x64</HostArchitecture>
+<IsDeviceHandheld>false</IsDeviceHandheld>
+<PlatformCallbackResult>0</PlatformCallbackResult>
+<CrashTrigger>0</CrashTrigger>
+</PlatformProperties>
+<EngineData>
+</EngineData>
+<GameData>
+</GameData>
+</FGenericCrashContext>

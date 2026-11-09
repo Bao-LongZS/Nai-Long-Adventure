@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="4944" height="1680" viewBox="0 0 4944 1680">
+  <title>P7 A1 Terrain Tile Atlas v01 — 14 logical terrain/path components</title>
+  <defs>
+    <pattern id="soil" patternUnits="userSpaceOnUse" width="160" height="88">
+      <rect width="160" height="88" fill="#F3E7C9"/>
+      <ellipse cx="20" cy="20" rx="5" ry="2.5" fill="#D9D1AD" opacity=".31"/>
+      <ellipse cx="104" cy="63" rx="6" ry="2" fill="#E8DABB" opacity=".34"/>
+      <ellipse cx="143" cy="16" rx="3" ry="2" fill="#9EB092" opacity=".28"/>
+      <ellipse cx="67" cy="41" rx="2.5" ry="2" fill="#F8EFD9" opacity=".52"/>
+      <ellipse cx="148" cy="75" rx="4" ry="2" fill="#D9D1AD" opacity=".30"/>
+      <ellipse cx="43" cy="78" rx="3" ry="1.5" fill="#9EB092" opacity=".23"/>
+    </pattern>
+    <g id="base">
+      <rect width="960" height="528" fill="url(#soil)"/>
+      <g fill="none" stroke="#91A785" stroke-width="9" stroke-linecap="round" opacity=".24">
+        <path d="M119 112q24-40 48 0m-24 0q-18-27-35-24m35 24q20-29 39-23"/>
+        <path d="M820 417q21-35 42 0m-21 0q-16-23-31-20m31 20q18-24 34-20"/>
+      </g>
+      <g fill="#C8BC97" opacity=".34">
+        <circle cx="290" cy="410" r="6"/><circle cx="300" cy="405" r="4"/>
+        <circle cx="703" cy="104" r="5"/><circle cx="716" cy="109" r="3"/>
+      </g>
+    </g>
+    <style>
+      .edge{fill:none;stroke:#B49A6B;stroke-width:372;stroke-linecap:butt;stroke-linejoin:round}
+      .surface{fill:none;stroke:#E5D1A6;stroke-width:338;stroke-linecap:butt;stroke-linejoin:round}
+      .inner{fill:none;stroke:#F1E3C5;stroke-width:258;stroke-linecap:butt;stroke-linejoin:round;opacity:.88}
+      .route{fill:none;stroke:#B49A6B;stroke-width:372;stroke-linecap:butt;stroke-linejoin:round}
+      .route2{fill:none;stroke:#E5D1A6;stroke-width:338;stroke-linecap:butt;stroke-linejoin:round}
+      .route3{fill:none;stroke:#F1E3C5;stroke-width:258;stroke-linecap:butt;stroke-linejoin:round;opacity:.88}
+      .capedge{fill:none;stroke:#B49A6B;stroke-width:372;stroke-linecap:round;stroke-linejoin:round}
+      .capsurface{fill:none;stroke:#E5D1A6;stroke-width:338;stroke-linecap:round;stroke-linejoin:round}
+      .capinner{fill:none;stroke:#F1E3C5;stroke-width:258;stroke-linecap:round;stroke-linejoin:round;opacity:.88}
+    </style>
+    <g id="tile-ground"><use href="#base"/></g>
+    <g id="tile-straight-h"><use href="#base"/><path class="edge" d="M0 264H960"/><path class="surface" d="M0 264H960"/><path class="inner" d="M0 264H960"/></g>
+    <g id="tile-straight-v"><use href="#base"/><path class="edge" d="M480 0V528"/><path class="surface" d="M480 0V528"/><path class="inner" d="M480 0V528"/></g>
+    <g id="tile-corner-ne"><use href="#base"/><path class="edge" d="M480 0V264H960"/><path class="surface" d="M480 0V264H960"/><path class="inner" d="M480 0V264H960"/></g>
+    <g id="tile-corner-es"><use href="#base"/><path class="edge" d="M960 264H480V528"/><path class="surface" d="M960 264H480V528"/><path class="inner" d="M960 264H480V528"/></g>
+    <g id="tile-corner-sw"><use href="#base"/><path class="edge" d="M480 528V264H0"/><path class="surface" d="M480 528V264H0"/><path class="inner" d="M480 528V264H0"/></g>
+    <g id="tile-corner-wn"><use href="#base"/><path class="edge" d="M0 264H480V0"/><path class="surface" d="M0 264H480V0"/><path class="inner" d="M0 264H480V0"/></g>
+    <g id="tile-entry-cap"><use href="#base"/><path class="capedge" d="M0 264H370"/><path class="capsurface" d="M0 264H370"/><path class="capinner" d="M0 264H370"/><circle cx="370" cy="264" r="28" fill="#F3E7C9" stroke="#B49A6B" stroke-width="10"/></g>
+    <g id="tile-exit-cap"><use href="#base"/><path class="capedge" d="M590 264H960"/><path class="capsurface" d="M590 264H960"/><path class="capinner" d="M590 264H960"/><circle cx="590" cy="264" r="28" fill="#F3E7C9" stroke="#B49A6B" stroke-width="10"/></g>
+    <g id="tile-t-n"><use href="#base"/><path class="edge" d="M0 264H960M480 264V528"/><path class="surface" d="M0 264H960M480 264V528"/><path class="inner" d="M0 264H960M480 264V528"/></g>
+    <g id="tile-t-e"><use href="#base"/><path class="edge" d="M0 264H480M480 0V528"/><path class="surface" d="M0 264H480M480 0V528"/><path class="inner" d="M0 264H480M480 0V528"/></g>
+    <g id="tile-t-s"><use href="#base"/><path class="edge" d="M0 264H960M480 0V264"/><path class="surface" d="M0 264H960M480 0V264"/><path class="inner" d="M0 264H960M480 0V264"/></g>
+    <g id="tile-t-w"><use href="#base"/><path class="edge" d="M480 264H960M480 0V528"/><path class="surface" d="M480 264H960M480 0V528"/><path class="inner" d="M480 264H960M480 0V528"/></g>
+    <g id="tile-fork-y"><use href="#base"/><path class="edge" d="M0 264H480M480 264L960 0M480 264L960 528"/><path class="surface" d="M0 264H480M480 264L960 0M480 264L960 528"/><path class="inner" d="M0 264H480M480 264L960 0M480 264L960 528"/></g>
+  </defs>
+  <rect width="4944" height="1680" fill="#F3E7C9"/>
+  <g transform="translate(24 24)"><use href="#tile-ground"/></g>
+  <g transform="translate(1008 24)"><use href="#tile-straight-h"/></g>
+  <g transform="translate(1992 24)"><use href="#tile-straight-v"/></g>
+  <g transform="translate(2976 24)"><use href="#tile-corner-ne"/></g>
+  <g transform="translate(3960 24)"><use href="#tile-corner-es"/></g>
+  <g transform="translate(24 576)"><use href="#tile-corner-sw"/></g>
+  <g transform="translate(1008 576)"><use href="#tile-corner-wn"/></g>
+  <g transform="translate(1992 576)"><use href="#tile-entry-cap"/></g>
+  <g transform="translate(2976 576)"><use href="#tile-exit-cap"/></g>
+  <g transform="translate(3960 576)"><use href="#tile-t-n"/></g>
+  <g transform="translate(24 1128)"><use href="#tile-t-e"/></g>
+  <g transform="translate(1008 1128)"><use href="#tile-t-s"/></g>
+  <g transform="translate(1992 1128)"><use href="#tile-t-w"/></g>
+  <g transform="translate(2976 1128)"><use href="#tile-fork-y"/></g>
+</svg>

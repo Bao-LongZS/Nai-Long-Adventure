@@ -1,0 +1,40 @@
+{
+  "AssetId": "P7-CHR-A0-MILKFROG-EXPRESSIONS",
+  "Version": "v01",
+  "Layout": "2 columns x 1 row, 4px transparent gutter",
+  "Canvas": [
+    2520,
+    1262
+  ],
+  "FrameSize": [
+    1254,
+    1254
+  ],
+  "FrameOrder": [
+    {
+      "index": 0,
+      "name": "smile",
+      "source": "Characters/A0/P7_A0_Character_MilkFrogHUD_v02.png",
+      "rect": [
+        4,
+        4,
+        1254,
+        1254
+      ]
+    },
+    {
+      "index": 1,
+      "name": "belly_laugh",
+      "source": "Characters/A0/P7_A0_Character_MilkFrogLaughHUD_v01.png",
+      "rect": [
+        1262,
+        4,
+        1254,
+        1254
+      ]
+    }
+  ],
+  "Pivot": "center per frame (0.5,0.5), provisional",
+  "Playback": "Frame order only; no duration or playback rate specified",
+  "Notes": "The user-selected clipboard images matched these source PNGs byte-for-byte. Smile is the preceding frame; belly laugh is the following frame."
+}

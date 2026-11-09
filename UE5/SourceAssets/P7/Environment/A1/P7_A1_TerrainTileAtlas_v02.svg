@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="4944" height="1680" viewBox="0 0 4944 1680">
+  <title>P7 A1 terrain tile atlas v02 — bold route contrast</title>
+  <defs>
+    <pattern id="field" patternUnits="userSpaceOnUse" width="192" height="144">
+      <rect width="192" height="144" fill="#E7DFC7"/>
+      <path d="M35 36q14-20 28 0m-14 0q-12-15-22-14m22 14q12-15 23-13" fill="none" stroke="#8DA47B" stroke-width="7" stroke-linecap="round" opacity=".46"/>
+      <circle cx="142" cy="98" r="5" fill="#B9AA86" opacity=".55"/>
+      <circle cx="153" cy="103" r="3" fill="#B9AA86" opacity=".45"/>
+    </pattern>
+    <style>
+      .edge{fill:none;stroke:#72512F;stroke-width:306;stroke-linecap:butt;stroke-linejoin:round}
+      .road{fill:none;stroke:#F6CF5E;stroke-width:256;stroke-linecap:butt;stroke-linejoin:round}
+      .mark{fill:none;stroke:#FFF8DF;stroke-width:18;stroke-dasharray:34 38;stroke-linecap:butt;stroke-linejoin:round}
+      .capedge{fill:none;stroke:#72512F;stroke-width:306;stroke-linecap:round;stroke-linejoin:round}
+      .caproad{fill:none;stroke:#F6CF5E;stroke-width:256;stroke-linecap:round;stroke-linejoin:round}
+      .capmark{fill:none;stroke:#FFF8DF;stroke-width:18;stroke-dasharray:34 38;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+    <g id="ground"><rect width="960" height="528" fill="url(#field)"/></g>
+    <g id="h"><use href="#ground"/><path class="edge" d="M0 264H960"/><path class="road" d="M0 264H960"/><path class="mark" d="M0 264H960"/></g>
+    <g id="v"><use href="#ground"/><path class="edge" d="M480 0V528"/><path class="road" d="M480 0V528"/><path class="mark" d="M480 0V528"/></g>
+    <g id="ne"><use href="#ground"/><path class="edge" d="M480 0V264H960"/><path class="road" d="M480 0V264H960"/><path class="mark" d="M480 0V264H960"/></g>
+    <g id="es"><use href="#ground"/><path class="edge" d="M960 264H480V528"/><path class="road" d="M960 264H480V528"/><path class="mark" d="M960 264H480V528"/></g>
+    <g id="sw"><use href="#ground"/><path class="edge" d="M480 528V264H0"/><path class="road" d="M480 528V264H0"/><path class="mark" d="M480 528V264H0"/></g>
+    <g id="wn"><use href="#ground"/><path class="edge" d="M0 264H480V0"/><path class="road" d="M0 264H480V0"/><path class="mark" d="M0 264H480V0"/></g>
+    <g id="entry"><use href="#ground"/><path class="capedge" d="M0 264H370"/><path class="caproad" d="M0 264H370"/><path class="capmark" d="M0 264H370"/><circle cx="370" cy="264" r="49" fill="#FFF8DF" stroke="#72512F" stroke-width="16"/></g>
+    <g id="exit"><use href="#ground"/><path class="capedge" d="M590 264H960"/><path class="caproad" d="M590 264H960"/><path class="capmark" d="M590 264H960"/><circle cx="590" cy="264" r="49" fill="#FFF8DF" stroke="#72512F" stroke-width="16"/></g>
+    <g id="tn"><use href="#ground"/><path class="edge" d="M0 264H960M480 264V528"/><path class="road" d="M0 264H960M480 264V528"/><path class="mark" d="M0 264H960M480 264V528"/></g>
+    <g id="te"><use href="#ground"/><path class="edge" d="M0 264H480M480 0V528"/><path class="road" d="M0 264H480M480 0V528"/><path class="mark" d="M0 264H480M480 0V528"/></g>
+    <g id="ts"><use href="#ground"/><path class="edge" d="M0 264H960M480 0V264"/><path class="road" d="M0 264H960M480 0V264"/><path class="mark" d="M0 264H960M480 0V264"/></g>
+    <g id="tw"><use href="#ground"/><path class="edge" d="M480 264H960M480 0V528"/><path class="road" d="M480 264H960M480 0V528"/><path class="mark" d="M480 264H960M480 0V528"/></g>
+    <g id="fork"><use href="#ground"/><path class="edge" d="M0 264H480L960 0M480 264L960 528"/><path class="road" d="M0 264H480L960 0M480 264L960 528"/><path class="mark" d="M0 264H480L960 0M480 264L960 528"/></g>
+  </defs>
+  <rect width="4944" height="1680" fill="#E7DFC7"/>
+  <g transform="translate(24 24)"><use href="#ground"/></g>
+  <g transform="translate(1008 24)"><use href="#h"/></g>
+  <g transform="translate(1992 24)"><use href="#v"/></g>
+  <g transform="translate(2976 24)"><use href="#ne"/></g>
+  <g transform="translate(3960 24)"><use href="#es"/></g>
+  <g transform="translate(24 576)"><use href="#sw"/></g>
+  <g transform="translate(1008 576)"><use href="#wn"/></g>
+  <g transform="translate(1992 576)"><use href="#entry"/></g>
+  <g transform="translate(2976 576)"><use href="#exit"/></g>
+  <g transform="translate(3960 576)"><use href="#tn"/></g>
+  <g transform="translate(24 1128)"><use href="#te"/></g>
+  <g transform="translate(1008 1128)"><use href="#ts"/></g>
+  <g transform="translate(1992 1128)"><use href="#tw"/></g>
+  <g transform="translate(2976 1128)"><use href="#fork"/></g>
+</svg>

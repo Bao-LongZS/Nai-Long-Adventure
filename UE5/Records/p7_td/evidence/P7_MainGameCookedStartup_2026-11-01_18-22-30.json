@@ -1,0 +1,18 @@
+{
+  "test": "Cooked Nai_Long Development main menu smoke",
+  "status": "CRASH_DURING_STATIC_INIT",
+  "startedAt": "2026-11-01 18:22:30+08:00",
+  "stageDirectory": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\tmp\\P7CookedMainMenu_2026-11-01_18-20-58\\Windows",
+  "executable": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\tmp\\P7CookedMainMenu_2026-11-01_18-20-58\\Windows\\Nai_Long.exe",
+  "contentPak": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\tmp\\P7CookedMainMenu_2026-11-01_18-20-58\\Windows\\Nai_Long\\Content\\Paks\\Nai_Long-Windows.pak",
+  "processFinishedWithinTimeout": true,
+  "processExitCode": 777006,
+  "map": "/Game/Naiwa/UI/L_NaiwaMainMenu",
+  "targetMapReportedLoaded": false,
+  "cleanEngineExitReported": false,
+  "engineLogCreated": false,
+  "engineLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_MainGameCookedStartup_2026-11-01_18-22-30.log",
+  "stdoutLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_MainGameCookedStartup_2026-11-01_18-22-30.stdout.log",
+  "stderrLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_MainGameCookedStartup_2026-11-01_18-22-30.stderr.log",
+  "crashContext": null
+}

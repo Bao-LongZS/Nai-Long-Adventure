@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1940" height="576" viewBox="0 0 1940 576">
+  <title>P7 A1 fork gate states v02 — open arrow and closed barrier</title>
+  <defs>
+    <g id="fork-base" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M480 500V264L900 50M480 264L900 478" stroke="#453A2C" stroke-width="190"/>
+      <path d="M480 500V264L900 50M480 264L900 478" stroke="#A99C80" stroke-width="142"/>
+      <path d="M480 500V264L900 50M480 264L900 478" stroke="#E8E2D4" stroke-width="90"/>
+    </g>
+    <g id="active-a" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M480 500V264L900 50" stroke="#087B89" stroke-width="122"/>
+      <path d="M480 500V264L900 50" stroke="#16C7CF" stroke-width="88"/>
+      <path d="M480 500V264L900 50" stroke="#E9FFFF" stroke-width="15" stroke-dasharray="30 36"/>
+    </g>
+    <g id="active-b" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M480 500V264L900 478" stroke="#087B89" stroke-width="122"/>
+      <path d="M480 500V264L900 478" stroke="#16C7CF" stroke-width="88"/>
+      <path d="M480 500V264L900 478" stroke="#E9FFFF" stroke-width="15" stroke-dasharray="30 36"/>
+    </g>
+    <g id="barrier-upper">
+      <g transform="rotate(63 715 144)">
+        <rect x="644" y="117" width="142" height="54" rx="12" fill="#E43B36" stroke="#542728" stroke-width="13"/>
+        <path d="M658 130L691 158M691 130L658 158M718 130L751 158M751 130L718 158" stroke="#FFF7E7" stroke-width="12" stroke-linecap="round"/>
+      </g>
+      <circle cx="715" cy="144" r="19" fill="#FFF7E7" stroke="#542728" stroke-width="9"/>
+    </g>
+    <g id="barrier-lower">
+      <g transform="rotate(-63 715 398)">
+        <rect x="644" y="371" width="142" height="54" rx="12" fill="#E43B36" stroke="#542728" stroke-width="13"/>
+        <path d="M658 384L691 412M691 384L658 412M718 384L751 412M751 384L718 412" stroke="#FFF7E7" stroke-width="12" stroke-linecap="round"/>
+      </g>
+      <circle cx="715" cy="398" r="19" fill="#FFF7E7" stroke="#542728" stroke-width="9"/>
+    </g>
+  </defs>
+  <g transform="translate(0 24)">
+    <use href="#fork-base"/>
+    <use href="#active-a"/>
+    <path d="M845 67L941 27L910 121Z" fill="#16C7CF" stroke="#087B89" stroke-width="14" stroke-linejoin="round"/>
+    <use href="#barrier-lower"/>
+    <circle cx="480" cy="264" r="58" fill="#FFF9E9" stroke="#453A2C" stroke-width="17"/>
+    <path d="M462 264L480 282L513 242" fill="none" stroke="#087B89" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(980 24)">
+    <use href="#fork-base"/>
+    <use href="#active-b"/>
+    <path d="M845 461L941 501L910 407Z" fill="#16C7CF" stroke="#087B89" stroke-width="14" stroke-linejoin="round"/>
+    <use href="#barrier-upper"/>
+    <circle cx="480" cy="264" r="58" fill="#FFF9E9" stroke="#453A2C" stroke-width="17"/>
+    <path d="M462 264L480 282L513 242" fill="none" stroke="#087B89" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

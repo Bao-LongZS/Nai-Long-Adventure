@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1664" height="1120" viewBox="0 0 1664 1120">
+  <title>P7 A1 destructible obstacle atlas v01 — six damage states, transparent</title>
+  <defs>
+    <linearGradient id="biscuitTop" x1="0" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#FFE098"/><stop offset="1" stop-color="#F5A63E"/>
+    </linearGradient>
+    <linearGradient id="biscuitFront" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6B54C"/><stop offset="1" stop-color="#D98230"/>
+    </linearGradient>
+    <linearGradient id="biscuitSide" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E99A3C"/><stop offset="1" stop-color="#B85E2C"/>
+    </linearGradient>
+    <style>
+      .outline{stroke:#14213B;stroke-width:14;stroke-linejoin:round;stroke-linecap:round}
+      .inner{stroke:#8D482B;stroke-width:10;stroke-linejoin:round;stroke-linecap:round;fill:none}
+      .crumb{fill:#A85A2E;stroke:#14213B;stroke-width:7;stroke-linejoin:round}
+      .shine{fill:#FFF0C5;opacity:.8}
+    </style>
+    <g id="crate-base">
+      <path class="outline" fill="url(#biscuitFront)" d="M118 158L262 226V399L118 331Z"/>
+      <path class="outline" fill="url(#biscuitSide)" d="M262 226L402 153V326L262 399Z"/>
+      <path class="outline" fill="url(#biscuitTop)" d="M118 158L250 90Q261 84 274 90L402 153L262 226Z"/>
+      <path d="M143 171L168 183V347L143 335Z" fill="#FFF0D0" stroke="#14213B" stroke-width="9" stroke-linejoin="round"/>
+      <path d="M357 177L382 164V337L357 350Z" fill="#F6E4BC" stroke="#14213B" stroke-width="9" stroke-linejoin="round"/>
+      <path d="M188 120L207 111M322 119L341 128" stroke="#FFF0C5" stroke-width="8" stroke-linecap="round" opacity=".78"/>
+      <g fill="#C27531" opacity=".7"><circle cx="216" cy="153" r="6"/><circle cx="298" cy="176" r="6"/><circle cx="216" cy="282" r="5"/><circle cx="216" cy="326" r="5"/><circle cx="319" cy="280" r="5"/><circle cx="319" cy="324" r="5"/></g>
+      <path d="M224 273Q224 263 235 263H289Q300 263 300 274V319Q300 329 290 329H235Q224 329 224 319Z" fill="#23B6B6" stroke="#14213B" stroke-width="11" stroke-linejoin="round"/>
+      <path d="M237 284H286V300H237Z" fill="#C8FFEE" stroke="#146D79" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M241 309H280" stroke="#146D79" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <g id="crate-crack">
+      <path d="M286 250L270 275L286 286L264 308L282 321L265 348" class="inner"/>
+      <path d="M286 250L270 275L286 286L264 308L282 321L265 348" fill="none" stroke="#FFE2A0" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M264 308L238 299M282 321L306 333" class="inner"/>
+    </g>
+    <g id="crate-nearbreak">
+      <path d="M272 238L253 265L274 279L246 301L266 317L243 348L272 360L259 389" class="inner" stroke-width="13"/>
+      <path d="M272 238L253 265L274 279L246 301L266 317L243 348L272 360L259 389" fill="none" stroke="#FFE2A0" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M248 300L214 287M267 317L307 301M271 359L309 371" class="inner"/>
+      <path d="M351 358L377 344L390 366L369 381Z" class="crumb"/>
+      <path d="M130 359L151 347L162 366L142 378Z" class="crumb"/>
+      <path d="M324 395L343 387L354 403L336 415Z" class="crumb"/>
+      <path d="M351 177L382 160V196L356 211Z" fill="#D77D30" stroke="#14213B" stroke-width="9" stroke-linejoin="round"/>
+    </g>
+    <g id="oat-stack-base">
+      <path class="outline" fill="url(#biscuitFront)" d="M100 278L258 356V438L100 359Z"/>
+      <path class="outline" fill="url(#biscuitSide)" d="M258 356L410 278V360L258 438Z"/>
+      <path class="outline" fill="url(#biscuitTop)" d="M100 278L247 203Q258 197 270 203L410 278L258 356Z"/>
+      <path class="outline" fill="url(#biscuitFront)" d="M115 164L258 232V311L115 240Z"/>
+      <path class="outline" fill="url(#biscuitSide)" d="M258 232L397 161V241L258 311Z"/>
+      <path class="outline" fill="url(#biscuitTop)" d="M115 164L247 94Q258 88 270 94L397 161L258 232Z"/>
+      <g fill="#B86A30" stroke="#8C4B2A" stroke-width="5">
+        <ellipse cx="194" cy="151" rx="9" ry="6"/><ellipse cx="252" cy="122" rx="9" ry="6"/><ellipse cx="313" cy="151" rx="9" ry="6"/>
+        <ellipse cx="178" cy="269" rx="9" ry="6"/><ellipse cx="239" cy="239" rx="9" ry="6"/><ellipse cx="324" cy="271" rx="9" ry="6"/>
+        <ellipse cx="148" cy="320" rx="7" ry="5"/><ellipse cx="208" cy="350" rx="7" ry="5"/><ellipse cx="306" cy="389" rx="7" ry="5"/>
+      </g>
+      <path d="M143 178L164 188V251L143 241Z" fill="#FFF0D0" stroke="#14213B" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M345 188L368 176V244L345 256Z" fill="#F6E4BC" stroke="#14213B" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M220 292L258 311L296 292" fill="none" stroke="#23B6B6" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M257 298L281 286L305 299L281 312Z" fill="#C8FFEE" stroke="#146D79" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M150 128L169 119M321 130L339 138" stroke="#FFF0C5" stroke-width="7" stroke-linecap="round" opacity=".8"/>
+    </g>
+    <g id="oat-crack">
+      <path d="M251 180L234 204L252 219L230 242L249 257L232 282" class="inner"/>
+      <path d="M251 180L234 204L252 219L230 242L249 257L232 282" fill="none" stroke="#FFE2A0" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M230 242L198 230M249 257L277 270" class="inner"/>
+      <path d="M291 330L280 349L298 360L282 380" class="inner"/>
+    </g>
+    <g id="oat-nearbreak">
+      <path d="M250 165L227 198L253 216L224 242L248 260L220 292L249 311L231 339" class="inner" stroke-width="13"/>
+      <path d="M250 165L227 198L253 216L224 242L248 260L220 292L249 311L231 339" fill="none" stroke="#FFE2A0" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M224 242L184 224M248 260L292 242M249 311L283 331M280 353L299 367L282 387" class="inner"/>
+      <path d="M391 350L412 337L423 357L405 371Z" class="crumb"/>
+      <path d="M96 369L117 359L128 378L107 390Z" class="crumb"/>
+      <path d="M344 421L362 412L374 428L356 440Z" class="crumb"/>
+      <path d="M340 191L366 178V214L343 227Z" fill="#D77D30" stroke="#14213B" stroke-width="8" stroke-linejoin="round"/>
+    </g>
+  </defs>
+  <g transform="translate(32 32)"><use href="#crate-base"/></g>
+  <g transform="translate(576 32)"><use href="#crate-base"/><use href="#crate-crack"/></g>
+  <g transform="translate(1120 32)"><use href="#crate-base"/><use href="#crate-nearbreak"/></g>
+  <g transform="translate(32 576)"><use href="#oat-stack-base"/></g>
+  <g transform="translate(576 576)"><use href="#oat-stack-base"/><use href="#oat-crack"/></g>
+  <g transform="translate(1120 576)"><use href="#oat-stack-base"/><use href="#oat-nearbreak"/></g>
+</svg>

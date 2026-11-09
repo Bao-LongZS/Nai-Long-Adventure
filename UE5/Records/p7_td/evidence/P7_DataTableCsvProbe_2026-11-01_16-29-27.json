@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/Scripts/p7_datatable_csv_import_probe.py\", line 211, in <module>\n    validate_readback(imported)\n  File \"C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/Scripts/p7_datatable_csv_import_probe.py\", line 191, in validate_readback\n    raise RuntimeError(\"HiddenBuildSites did not round-trip: \" + hidden_sites)\nRuntimeError: HiddenBuildSites did not round-trip: ((Cell=(X=5,Y=9),UnlockObstacleId=\"Obstacle_A\"),(Cell=(X=14,Y=9),UnlockObstacleId=\"Obstacle_B\"))\n",
+  "temporary_asset_cleanup": {
+    "/Game/Naiwa/P7/Tests/DT_P7_Wave_CsvImportProbe": true,
+    "/Game/Naiwa/P7/Tests/DT_P7_Level_CsvImportProbe": true
+  }
+}

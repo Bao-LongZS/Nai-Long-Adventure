@@ -1,0 +1,46 @@
+{
+  "AssetId": "P7-CHR-A0-MILKFROG-EXPRESSIONS",
+  "Version": "v03",
+  "Layout": "2 columns x 1 row, 4px transparent gutter",
+  "Canvas": [
+    2520,
+    1262
+  ],
+  "FrameSize": [
+    1254,
+    1254
+  ],
+  "FrameOrder": [
+    {
+      "index": 0,
+      "name": "glance_smile",
+      "source": "Characters/A0/P7_A0_Character_MilkFrogSmile_v03.png",
+      "rect": [
+        4,
+        4,
+        1254,
+        1254
+      ]
+    },
+    {
+      "index": 1,
+      "name": "belly_laugh_face_refined",
+      "source": "Characters/A0/P7_A0_Character_MilkFrogLaugh_v04.png",
+      "rect": [
+        1262,
+        4,
+        1254,
+        1254
+      ]
+    }
+  ],
+  "Pivot": "center per frame (0.5,0.5), provisional",
+  "Playback": "Order only; duration and rate not specified",
+  "IdentityReferences": [
+    "Big_Laugh.png",
+    "Glance.png",
+    "player.png",
+    "user standard milk-frog side-profile reference"
+  ],
+  "Notes": "Frame 1 facial expression refined against Big_Laugh.png: tight closed eyes, compact oblique open mouth, upper tooth strip, restrained tongue. No UE playback check yet."
+}

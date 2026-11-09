@@ -1,0 +1,40 @@
+{
+  "AssetId": "P7-CHR-A0-MILKFROG-EXPRESSIONS",
+  "Version": "v04",
+  "Layout": "2 columns x 1 row, 4px transparent gutter",
+  "Canvas": [
+    2520,
+    1262
+  ],
+  "FrameSize": [
+    1254,
+    1254
+  ],
+  "FrameOrder": [
+    {
+      "index": 0,
+      "name": "glance_smile",
+      "source": "Characters/A0/P7_A0_Character_MilkFrogSmile_v03.png",
+      "rect": [
+        4,
+        4,
+        1254,
+        1254
+      ]
+    },
+    {
+      "index": 1,
+      "name": "belly_laugh_user_selected",
+      "source": "Characters/A0/P7_A0_Character_MilkFrogLaugh_v05.png",
+      "rect": [
+        1262,
+        4,
+        1254,
+        1254
+      ]
+    }
+  ],
+  "Playback": "Order only; duration/rate not specified",
+  "Approval": "User selected and approved both frames on 2026-11-01",
+  "Notes": "Frame 1 uses the exact laugh image attached by the user. Frame 0 is the exact approved smile image from the prior selected pair."
+}

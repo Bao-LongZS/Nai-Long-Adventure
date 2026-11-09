@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "map": "/Game/Naiwa/P7/Maps/L_P7_Alpha01_Graybox",
+  "map_file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\P7\\Maps\\L_P7_Alpha01_Graybox.umap",
+  "map_package_bytes": 8728,
+  "world_settings_property": "default_game_mode",
+  "game_mode": "/Script/NaiwaP7Runtime.NaiwaP7AlphaGrayboxGameMode",
+  "data_fixture": "P7_Alpha01_v01",
+  "scope": "isolated map creation and GameMode binding; runtime launch is validated separately"
+}

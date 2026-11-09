@@ -1,0 +1,10 @@
+---,TowerId,Role,Level,CostCoins,Damage,AttackIntervalSteps,RangeMilliCells,SplashRadiusMilliCells,SlowPercent,SlowDurationSteps
+P7_MilkChicken_L1,P7_Tower_MilkChicken,DirectDamage,1,100,10,30,4000,0,0,0
+P7_MilkChicken_L2,P7_Tower_MilkChicken,DirectDamage,2,160,18,27,4500,0,0,0
+P7_MilkChicken_L3,P7_Tower_MilkChicken,DirectDamage,3,240,30,24,5000,0,0,0
+P7_MilkDog_L1,P7_Tower_MilkDog,AreaDamage,1,120,6,45,3500,1200,0,0
+P7_MilkDog_L2,P7_Tower_MilkDog,AreaDamage,2,180,10,40,4000,1500,0,0
+P7_MilkDog_L3,P7_Tower_MilkDog,AreaDamage,3,260,15,35,4500,1800,0,0
+P7_MilkMouse_L1,P7_Tower_MilkMouse,SlowSupport,1,130,0,30,4000,0,25,90
+P7_MilkMouse_L2,P7_Tower_MilkMouse,SlowSupport,2,190,0,27,4500,0,35,90
+P7_MilkMouse_L3,P7_Tower_MilkMouse,SlowSupport,3,270,0,24,5000,0,45,90

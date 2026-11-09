@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "import_factory": "CSVImportFactory",
+  "scope": "Editor asset import, saved package, schema and row readback; fixture values are not production data and gameplay consumption is not tested.",
+  "tables": {
+    "level": {
+      "asset": "/Game/Naiwa/P7/Tests/DT_P7_Level_CsvImportProbe",
+      "saved_package_bytes": 3538,
+      "row_struct": "/Script/NaiwaP7Runtime.NaiwaP7LevelRow",
+      "columns": [
+        "HiddenBuildSites",
+        "InterferenceTriggerCell",
+        "LevelId",
+        "ObstacleIds",
+        "RouteACells",
+        "RouteBCells",
+        "StartingCoins",
+        "VisibleBuildCells"
+      ],
+      "row_names": [
+        "P7CsvFileProbe"
+      ],
+      "rows": {
+        "P7CsvFileProbe": {
+          "LevelId": "P7CsvFileProbe",
+          "RouteACells": "((X=0,Y=5),(X=1,Y=5),(X=2,Y=5))",
+          "RouteBCells": "((X=0,Y=6),(X=1,Y=6),(X=2,Y=6))",
+          "InterferenceTriggerCell": "(X=1,Y=5)",
+          "VisibleBuildCells": "((X=3,Y=8),(X=4,Y=8))",
+          "ObstacleIds": "(\"Obstacle_A\",\"Obstacle_B\")",
+          "HiddenBuildSites": "((Cell=(X=5,Y=9),UnlockObstacleId=\"Obstacle_A\"),(Cell=(X=14,Y=9),UnlockObstacleId=\"Obstacle_B\"))",
+          "StartingCoins": "100"
+        }
+      },
+      "source_csv": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_DataTableCsvImport_Level.csv",
+      "imported_object_paths": [
+        "/Game/Naiwa/P7/Tests/DT_P7_Level_CsvImportProbe.DT_P7_Level_CsvImportProbe"
+      ]
+    },
+    "wave": {
+      "asset": "/Game/Naiwa/P7/Tests/DT_P7_Wave_CsvImportProbe",
+      "saved_package_bytes": 3064,
+      "row_struct": "/Script/NaiwaP7Runtime.NaiwaP7WaveRow",
+      "columns": [
+        "Spawns",
+        "WaveIndex"
+      ],
+      "row_names": [
+        "P7WaveCsvProbe"
+      ],
+      "rows": {
+        "P7WaveCsvProbe": {
+          "WaveIndex": "1",
+          "Spawns": "((EnemyId=\"Enemy_Normal\",Count=2,FirstSpawnDelaySteps=0,SpawnIntervalSteps=30),(EnemyId=\"Enemy_Fast\",Count=1,FirstSpawnDelaySteps=60,SpawnIntervalSteps=0))"
+        }
+      },
+      "source_csv": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_DataTableCsvImport_Wave.csv",
+      "imported_object_paths": [
+        "/Game/Naiwa/P7/Tests/DT_P7_Wave_CsvImportProbe.DT_P7_Wave_CsvImportProbe"
+      ]
+    }
+  },
+  "temporary_asset_cleanup": {
+    "/Game/Naiwa/P7/Tests/DT_P7_Wave_CsvImportProbe": true,
+    "/Game/Naiwa/P7/Tests/DT_P7_Level_CsvImportProbe": true
+  }
+}

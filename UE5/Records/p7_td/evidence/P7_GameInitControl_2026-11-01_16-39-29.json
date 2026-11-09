@@ -1,0 +1,21 @@
+{
+  "test": "Minimal Game target with no P7 or main-project runtime modules",
+  "status": "FAIL",
+  "startedAt": "2026-11-01 16:40:17+08:00",
+  "processId": 60136,
+  "timeoutSeconds": 60,
+  "executable": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\tmp\\P7GameInitControl_2026-11-01_16-39-29\\Binaries\\Win64\\P7GameInitControl.exe",
+  "project": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\tmp\\P7GameInitControl_2026-11-01_16-39-29\\P7GameInitControl.uproject",
+  "map": "/Engine/Maps/Entry",
+  "buildExitCode": 0,
+  "buildLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_GameInitControlBuild_2026-11-01_16-39-29.log",
+  "processFinishedWithinTimeout": true,
+  "processExitCode": 1,
+  "processExitCodeHex": "0x00000001",
+  "startupLogCreated": true,
+  "engineMapReportedLoaded": false,
+  "cleanEngineExitReported": true,
+  "engineLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_GameInitControlStartup_2026-11-01_16-39-29.log",
+  "stdoutLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_GameInitControlStartup_2026-11-01_16-39-29.stdout.log",
+  "stderrLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_GameInitControlStartup_2026-11-01_16-39-29.stderr.log"
+}

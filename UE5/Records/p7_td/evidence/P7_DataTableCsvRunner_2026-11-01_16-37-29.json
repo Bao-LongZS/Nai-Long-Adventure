@@ -1,0 +1,29 @@
+{
+  "test": "P7 Level/Wave CSVImportFactory disk import and DataTable readback",
+  "status": "PASS",
+  "startedAt": "2026-11-01 16:37:29+08:00",
+  "finishedWithinTimeout": true,
+  "processExitCode": 0,
+  "executable": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+  "project": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Nai_Long.uproject",
+  "pythonScript": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Scripts\\p7_datatable_csv_import_probe.py",
+  "engineLogCreated": true,
+  "engineLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_DataTableCsvEditorImport_2026-11-01_16-37-29.log",
+  "engineLogObservations": {
+    "unclassifiedAutomationErrorLines": 13,
+    "temporaryAssetRegistryDeletionWarnings": 2
+  },
+  "stdoutLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_DataTableCsvEditorImport_2026-11-01_16-37-29.stdout.log",
+  "stderrLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_DataTableCsvEditorImport_2026-11-01_16-37-29.stderr.log",
+  "probeReportCreated": true,
+  "probeReport": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_DataTableCsvProbe_2026-11-01_16-37-29.json",
+  "probeStatus": "passed",
+  "temporaryAssetCleanup": {
+    "/Game/Naiwa/P7/Tests/DT_P7_Wave_CsvImportProbe": true,
+    "/Game/Naiwa/P7/Tests/DT_P7_Level_CsvImportProbe": true
+  },
+  "diskCleanupPassed": true,
+  "diskCleanupRemovedFiles": [],
+  "crashContext": null,
+  "note": "The CSV import/readback probe passed. The Engine log also contains unclassified automation error lines and/or temporary asset deletion warnings; these observations are reported separately and are not attributed to P7 by this probe."
+}

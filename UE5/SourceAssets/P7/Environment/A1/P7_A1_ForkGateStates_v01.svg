@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1940" height="576" viewBox="0 0 1940 576">
+  <title>P7 A1 fork gate states v01 — transparent overlays</title>
+  <defs>
+    <g id="gate-base">
+      <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M480 456V294L722 102" stroke="#6F654F" stroke-width="56" opacity=".9"/>
+        <path d="M480 456V294L722 102" stroke="#D6C49D" stroke-width="36"/>
+        <path d="M480 456V294L722 102" stroke="#F3E7C9" stroke-width="15"/>
+        <path d="M480 456V294L722 426" stroke="#6F654F" stroke-width="56" opacity=".9"/>
+        <path d="M480 456V294L722 426" stroke="#D6C49D" stroke-width="36"/>
+        <path d="M480 456V294L722 426" stroke="#F3E7C9" stroke-width="15"/>
+      </g>
+      <circle cx="480" cy="294" r="88" fill="#F7EED9" stroke="#796D54" stroke-width="20"/>
+      <circle cx="480" cy="294" r="56" fill="#E7D7B4" stroke="#C0AA7A" stroke-width="10"/>
+      <circle cx="480" cy="294" r="18" fill="#FFF9EA"/>
+      <path d="M480 294L584 294" stroke="#796D54" stroke-width="18" stroke-linecap="round"/>
+      <circle cx="584" cy="294" r="24" fill="#FFF9EA" stroke="#796D54" stroke-width="12"/>
+    </g>
+    <g id="gate-a">
+      <use href="#gate-base"/>
+      <path d="M590 206L701 118" fill="none" stroke="#24AFC0" stroke-width="30" stroke-linecap="round"/>
+      <path d="M686 116L746 90L725 150Z" fill="#24AFC0" stroke="#166E7A" stroke-width="10" stroke-linejoin="round"/>
+      <g transform="rotate(-52 646 357)">
+        <rect x="606" y="339" width="82" height="36" rx="12" fill="#B4A789" stroke="#766A53" stroke-width="12"/>
+        <circle cx="620" cy="357" r="8" fill="#F6EDD8"/><circle cx="674" cy="357" r="8" fill="#F6EDD8"/>
+      </g>
+    </g>
+    <g id="gate-b">
+      <use href="#gate-base"/>
+      <path d="M590 382L701 425" fill="none" stroke="#E99A3E" stroke-width="30" stroke-linecap="round"/>
+      <path d="M682 450L746 438L704 394Z" fill="#E99A3E" stroke="#986126" stroke-width="10" stroke-linejoin="round"/>
+      <g transform="rotate(25 646 232)">
+        <rect x="606" y="214" width="82" height="36" rx="12" fill="#B4A789" stroke="#766A53" stroke-width="12"/>
+        <circle cx="620" cy="232" r="8" fill="#F6EDD8"/><circle cx="674" cy="232" r="8" fill="#F6EDD8"/>
+      </g>
+    </g>
+  </defs>
+  <g transform="translate(0 24)"><use href="#gate-a"/></g>
+  <g transform="translate(980 24)"><use href="#gate-b"/></g>
+</svg>

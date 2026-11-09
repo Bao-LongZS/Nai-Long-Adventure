@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1144" height="1144" viewBox="0 0 1144 1144">
+  <title>P7 A1 HUD icons v01 — 16 high-contrast symbols</title>
+  <defs>
+    <style>
+      .ink{stroke:#14213B;stroke-width:14;stroke-linecap:round;stroke-linejoin:round}
+      .thin{stroke:#14213B;stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+      .cream{fill:#FFF4D8}
+      .gold{fill:#F6C84E}
+      .teal{fill:#18B8C2}
+      .orange{fill:#EF9137}
+      .red{fill:#E84A40}
+      .green{fill:#59A964}
+    </style>
+    <g id="tower-chicken">
+      <path d="M47 189Q50 165 74 162H183Q207 165 209 189V205H47Z" class="cream ink"/>
+      <path d="M91 157L97 139H162L169 157" class="gold ink"/>
+      <path d="M96 113L178 88L193 119L117 145Z" class="teal ink"/>
+      <circle cx="191" cy="104" r="13" class="orange thin"/>
+      <ellipse cx="111" cy="111" rx="47" ry="43" class="gold ink"/>
+      <path d="M88 70L90 49L107 62L120 43L132 64L149 54L146 78Z" class="red ink"/>
+      <circle cx="126" cy="105" r="8" fill="#14213B"/>
+      <path d="M70 116L49 126L71 137Z" class="orange thin"/>
+      <path d="M82 147L71 161M145 147L156 161" fill="none" class="thin"/>
+    </g>
+    <g id="tower-dog">
+      <path d="M68 83Q31 60 35 123Q39 162 82 149Z" class="orange ink"/>
+      <path d="M188 83Q225 60 221 123Q217 162 174 149Z" class="orange ink"/>
+      <path d="M66 109Q68 66 128 61Q188 66 190 109V148Q183 189 128 190Q73 189 66 148Z" class="cream ink"/>
+      <ellipse cx="104" cy="117" rx="9" ry="12" fill="#14213B"/><ellipse cx="152" cy="117" rx="9" ry="12" fill="#14213B"/>
+      <ellipse cx="128" cy="145" rx="18" ry="13" class="orange thin"/>
+      <path d="M112 163Q128 176 144 163" fill="none" class="thin"/>
+      <path d="M48 181Q128 206 208 181V204H48Z" class="teal ink"/>
+      <path d="M201 94Q218 106 201 119M216 78Q245 107 216 136" fill="none" stroke="#18B8C2" stroke-width="11" stroke-linecap="round"/>
+    </g>
+    <g id="tower-mouse">
+      <circle cx="88" cy="85" r="34" class="cream ink"/><circle cx="168" cy="85" r="34" class="cream ink"/>
+      <circle cx="88" cy="85" r="15" fill="#F0A2A4"/><circle cx="168" cy="85" r="15" fill="#F0A2A4"/>
+      <path d="M62 151Q65 105 128 101Q191 105 194 151V180Q191 204 128 204Q65 204 62 180Z" fill="#D5D8CF" class="ink"/>
+      <circle cx="108" cy="147" r="7" fill="#14213B"/><circle cx="148" cy="147" r="7" fill="#14213B"/>
+      <path d="M122 161Q128 154 134 161Q134 170 128 172Q122 170 122 161Z" class="orange thin"/>
+      <path d="M91 170L51 163M91 182L48 188M165 170L205 163M165 182L208 188" fill="none" class="thin"/>
+      <ellipse cx="128" cy="207" rx="84" ry="16" fill="none" stroke="#18B8C2" stroke-width="11"/>
+      <ellipse cx="128" cy="207" rx="60" ry="10" fill="none" stroke="#18B8C2" stroke-width="7"/>
+    </g>
+    <g id="coin"><circle cx="128" cy="128" r="78" class="gold ink"/><circle cx="128" cy="128" r="58" fill="none" stroke="#FFF3BF" stroke-width="9"/><path d="M128 76L143 108L179 112L152 137L159 173L128 156L97 173L104 137L77 112L113 108Z" fill="#FFF5CF" stroke="#9C5E25" stroke-width="8" stroke-linejoin="round"/></g>
+    <g id="milk-egg">
+      <path d="M128 43C82 43 53 83 53 132Q53 207 128 215Q203 207 203 132C203 83 174 43 128 43Z" fill="#F5C94A" class="ink"/>
+      <circle cx="101" cy="119" r="20" fill="#5E9E54" class="thin"/><circle cx="155" cy="119" r="20" fill="#5E9E54" class="thin"/>
+      <circle cx="103" cy="120" r="9" fill="#14213B"/><circle cx="157" cy="120" r="9" fill="#14213B"/>
+      <circle cx="98" cy="113" r="4" fill="#FFFFFF"/><circle cx="152" cy="113" r="4" fill="#FFFFFF"/>
+      <path d="M109 157Q128 171 147 157" fill="none" stroke="#8E4F29" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <g id="wave"><ellipse cx="70" cy="136" rx="23" ry="31" class="orange ink"/><circle cx="63" cy="132" r="4" fill="#14213B"/><circle cx="77" cy="132" r="4" fill="#14213B"/><ellipse cx="126" cy="136" rx="23" ry="31" class="gold ink"/><circle cx="119" cy="132" r="4" fill="#14213B"/><circle cx="133" cy="132" r="4" fill="#14213B"/><ellipse cx="182" cy="136" rx="23" ry="31" class="teal ink"/><circle cx="175" cy="132" r="4" fill="#14213B"/><circle cx="189" cy="132" r="4" fill="#14213B"/><path d="M45 195H197M177 175L199 195L177 215" fill="none" stroke="#14213B" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="pause"><rect x="65" y="55" width="44" height="146" rx="12" class="teal ink"/><rect x="147" y="55" width="44" height="146" rx="12" class="teal ink"/></g>
+    <g id="upgrade"><path d="M73 187V131Q73 112 92 112H164Q183 112 183 131V187Z" class="cream ink"/><path d="M128 148V57M91 96L128 58L165 96" fill="none" stroke="#18B8C2" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/><path d="M105 188H151" stroke="#14213B" stroke-width="12" stroke-linecap="round"/></g>
+    <g id="sell"><path d="M47 174V132Q47 118 62 118H103Q118 118 118 132V174Z" class="cream ink"/><path d="M58 118L64 99H94L101 118" class="teal thin"/><path d="M83 98L104 88" stroke="#F6C84E" stroke-width="12" stroke-linecap="round"/><path d="M161 47V88M140 68L161 89L182 68" fill="none" stroke="#14213B" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><circle cx="161" cy="151" r="51" class="gold ink"/><circle cx="161" cy="151" r="37" fill="none" stroke="#FFF3BF" stroke-width="7"/><path d="M161 119L170 139L193 141L176 157L180 179L161 169L142 179L146 157L129 141L152 139Z" fill="#FFF5CF" stroke="#9C5E25" stroke-width="5" stroke-linejoin="round"/></g>
+    <g id="target"><rect x="68" y="72" width="120" height="112" rx="12" fill="#F3A746" class="ink"/><path d="M68 103H188M98 72V184M158 72V184" fill="none" stroke="#FFF4D8" stroke-width="11"/><circle cx="128" cy="128" r="55" fill="none" stroke="#18B8C2" stroke-width="12"/><circle cx="128" cy="128" r="10" fill="#E84A40" stroke="#14213B" stroke-width="7"/></g>
+    <g id="stamp-untouched"><path d="M128 39L199 67V125Q197 180 128 215Q59 180 57 125V67Z" class="cream ink"/><path d="M128 153C88 130 77 108 94 91C109 78 123 87 128 99C133 87 147 78 162 91C179 108 168 130 128 153Z" fill="#E84A40" class="thin"/><path d="M78 174L99 194L143 146" fill="none" stroke="#59A964" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="stamp-clear"><path d="M128 39L199 67V125Q197 180 128 215Q59 180 57 125V67Z" class="cream ink"/><rect x="83" y="91" width="90" height="67" rx="8" fill="#F3A746" class="thin"/><path d="M92 91L128 71L174 91" fill="#FFD866" class="thin"/><path d="M80 178L105 199L160 143" fill="none" stroke="#59A964" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="route-a"><circle cx="128" cy="128" r="90" class="cream ink"/><path d="M95 190V130L157 70M95 130L153 187" fill="none" stroke="#A7A38F" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><path d="M95 190V130L157 70" fill="none" stroke="#18B8C2" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/><path d="M143 73L173 57L164 90Z" fill="#18B8C2" stroke="#14213B" stroke-width="7"/><circle cx="128" cy="126" r="25" fill="#F6C84E" stroke="#14213B" stroke-width="8"/><text x="128" y="140" text-anchor="middle" font-family="Arial,sans-serif" font-size="39" font-weight="800" fill="#14213B">A</text></g>
+    <g id="route-b"><circle cx="128" cy="128" r="90" class="cream ink"/><path d="M95 190V130L157 70M95 130L153 187" fill="none" stroke="#A7A38F" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/><path d="M95 190V130L153 187" fill="none" stroke="#18B8C2" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/><path d="M143 190L173 206L164 173Z" fill="#18B8C2" stroke="#14213B" stroke-width="7"/><circle cx="128" cy="126" r="25" fill="#F6C84E" stroke="#14213B" stroke-width="8"/><text x="128" y="140" text-anchor="middle" font-family="Arial,sans-serif" font-size="39" font-weight="800" fill="#14213B">B</text></g>
+    <g id="jammed"><path d="M72 185V127Q72 107 92 107H164Q184 107 184 127V185Z" class="cream ink"/><path d="M103 99L124 62L117 96L148 86L121 133L129 104Z" class="red ink"/><circle cx="128" cy="183" r="10" fill="#E84A40"/></g>
+    <g id="recovered"><path d="M72 185V127Q72 107 92 107H164Q184 107 184 127V185Z" class="cream ink"/><circle cx="128" cy="82" r="33" fill="#59A964" class="ink"/><path d="M111 82L124 95L147 68" fill="none" stroke="#FFF9E8" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </defs>
+  <g transform="translate(24 24)"><use href="#tower-chicken"/></g>
+  <g transform="translate(304 24)"><use href="#tower-dog"/></g>
+  <g transform="translate(584 24)"><use href="#tower-mouse"/></g>
+  <g transform="translate(864 24)"><use href="#coin"/></g>
+  <g transform="translate(24 304)"><use href="#milk-egg"/></g>
+  <g transform="translate(304 304)"><use href="#wave"/></g>
+  <g transform="translate(584 304)"><use href="#pause"/></g>
+  <g transform="translate(864 304)"><use href="#upgrade"/></g>
+  <g transform="translate(24 584)"><use href="#sell"/></g>
+  <g transform="translate(304 584)"><use href="#target"/></g>
+  <g transform="translate(584 584)"><use href="#stamp-untouched"/></g>
+  <g transform="translate(864 584)"><use href="#stamp-clear"/></g>
+  <g transform="translate(24 864)"><use href="#route-a"/></g>
+  <g transform="translate(304 864)"><use href="#route-b"/></g>
+  <g transform="translate(584 864)"><use href="#jammed"/></g>
+  <g transform="translate(864 864)"><use href="#recovered"/></g>
+</svg>

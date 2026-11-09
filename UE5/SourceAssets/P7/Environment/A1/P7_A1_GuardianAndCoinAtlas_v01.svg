@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1664" height="576" viewBox="0 0 1664 576">
+  <title>P7 A1 guardian can, liquid mask and coin atlas v01 — transparent</title>
+  <defs>
+    <linearGradient id="canBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF8E8"/><stop offset=".55" stop-color="#F3E5C7"/><stop offset="1" stop-color="#D9C6A2"/>
+    </linearGradient>
+    <linearGradient id="coinGold" x1="0" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#FFE99A"/><stop offset="1" stop-color="#EAA33D"/>
+    </linearGradient>
+    <clipPath id="canOpening">
+      <path d="M195 199Q168 220 164 264L176 390Q177 401 190 401H324Q337 401 338 390L350 264Q346 220 319 199Z"/>
+    </clipPath>
+  </defs>
+  <g id="guardian-can" transform="translate(32 32)" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M190 179C179 84 333 84 322 179" fill="none" stroke="#14213B" stroke-width="25"/>
+    <path d="M190 179C185 104 327 104 322 179" fill="none" stroke="#25AEB5" stroke-width="11"/>
+    <path d="M195 145H317V186Q353 211 361 252L348 398Q346 416 328 416H184Q166 416 164 398L151 252Q159 211 195 186Z" fill="url(#canBody)" stroke="#14213B" stroke-width="15"/>
+    <path d="M190 146H322V190H190Z" fill="#D6C39D" stroke="#14213B" stroke-width="12"/>
+    <path d="M195 147H317V169H195Z" fill="#FFF8E8" stroke="#14213B" stroke-width="9"/>
+    <path d="M157 253Q255 272 355 253" fill="none" stroke="#C1AC7C" stroke-width="8"/>
+    <path d="M170 370Q255 384 342 370" fill="none" stroke="#D1BC91" stroke-width="7" opacity=".9"/>
+    <g fill="none" stroke="#14213B" stroke-width="8">
+      <path d="M315 272H337M315 283H328M315 294H337M315 305H328M315 316H337M315 327H328M315 338H337M315 349H328M315 360H337M315 371H328"/>
+    </g>
+    <path d="M232 239C232 221 255 201 255 201S278 221 278 239A23 23 0 1 1 232 239Z" fill="#24AFC0" stroke="#14213B" stroke-width="9"/>
+    <path d="M244 231Q252 218 260 213" fill="none" stroke="#D7FFFA" stroke-width="6" stroke-linecap="round"/>
+    <path d="M183 184H329" stroke="#FFF8E8" stroke-width="7" opacity=".9"/>
+  </g>
+  <g id="guardian-liquid-mask" transform="translate(576 32)">
+    <path d="M195 199Q168 220 164 264L176 390Q177 401 190 401H324Q337 401 338 390L350 264Q346 220 319 199Z" fill="#FFFFFF"/>
+  </g>
+  <g id="coin" transform="translate(1120 32)" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="256" cy="306" rx="146" ry="128" fill="#B87329" stroke="#14213B" stroke-width="17"/>
+    <ellipse cx="256" cy="284" rx="146" ry="128" fill="url(#coinGold)" stroke="#14213B" stroke-width="17"/>
+    <ellipse cx="256" cy="284" rx="116" ry="101" fill="none" stroke="#FFF1B8" stroke-width="12"/>
+    <path d="M220 286C220 258 256 226 256 226S292 258 292 286A36 36 0 1 1 220 286Z" fill="#FFF7DE" stroke="#8E592B" stroke-width="9"/>
+    <path d="M238 271Q252 250 267 241" fill="none" stroke="#E6B856" stroke-width="7" stroke-linecap="round"/>
+    <path d="M176 224Q199 186 235 172" fill="none" stroke="#FFF6CF" stroke-width="10" opacity=".9"/>
+  </g>
+</svg>

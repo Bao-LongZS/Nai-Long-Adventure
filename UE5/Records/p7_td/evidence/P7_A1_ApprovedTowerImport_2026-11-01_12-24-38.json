@@ -1,0 +1,128 @@
+{
+  "status": "imported_approved_tower_textures_pending_scale_review",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "manifest": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Manifests\\A1\\P7_A1_Assets_v04.csv",
+  "destination": "/Game/Naiwa/P7/Towers/A1",
+  "scope": "nine user-approved P7 A1 tower textures only",
+  "level_opened_or_changed": false,
+  "runtime_played": false,
+  "assets": [
+    {
+      "asset_id": "P7-TWR-A1-MILKCHICKEN-L1",
+      "asset_path": "/Game/Naiwa/P7/Towers/A1/T_P7_A1_SingleTarget_MilkChicken_L1_v01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Towers\\A1\\P7_A1_Tower_SingleTarget_MilkChicken_L1_v01.png",
+      "source_sha256": "5199a365631e934ddf339ff7968f9e92a802b5e53798fb072f154cbae53b33fd",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "result": "imported",
+      "texture_settings_readback": "passed"
+    },
+    {
+      "asset_id": "P7-TWR-A1-MILKCHICKEN-L2",
+      "asset_path": "/Game/Naiwa/P7/Towers/A1/T_P7_A1_SingleTarget_MilkChicken_L2_v03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Towers\\A1\\P7_A1_Tower_SingleTarget_MilkChicken_L2_v03.png",
+      "source_sha256": "a4e24efb0ea0b3a69dfbbbfb7d8febea979b53fac34d8af393798a4dcf76441c",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "result": "imported",
+      "texture_settings_readback": "passed"
+    },
+    {
+      "asset_id": "P7-TWR-A1-MILKCHICKEN-L3",
+      "asset_path": "/Game/Naiwa/P7/Towers/A1/T_P7_A1_SingleTarget_MilkChicken_L3_v03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Towers\\A1\\P7_A1_Tower_SingleTarget_MilkChicken_L3_v03.png",
+      "source_sha256": "76fce859f575f2e816a77dcf6bc405d7a72b7e6cdbb7f3d16143f429fe26ab69",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "result": "imported",
+      "texture_settings_readback": "passed"
+    },
+    {
+      "asset_id": "P7-TWR-A1-MILKDOG-L1",
+      "asset_path": "/Game/Naiwa/P7/Towers/A1/T_P7_A1_Area_MilkDog_L1_v01",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Towers\\A1\\P7_A1_Tower_Area_MilkDog_L1_v01.png",
+      "source_sha256": "9bf48f4bb97ed72e2126ff3f970d03b4b9b7aa5a88217c055b20a3754a9b6bd3",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "result": "imported",
+      "texture_settings_readback": "passed"
+    },
+    {
+      "asset_id": "P7-TWR-A1-MILKDOG-L2",
+      "asset_path": "/Game/Naiwa/P7/Towers/A1/T_P7_A1_Area_MilkDog_L2_v03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Towers\\A1\\P7_A1_Tower_Area_MilkDog_L2_v03.png",
+      "source_sha256": "d37c1adb64fd06824d77c791308e46980ad248d6e791199e9b2ee7def28220df",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "result": "imported",
+      "texture_settings_readback": "passed"
+    },
+    {
+      "asset_id": "P7-TWR-A1-MILKDOG-L3",
+      "asset_path": "/Game/Naiwa/P7/Towers/A1/T_P7_A1_Area_MilkDog_L3_v03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Towers\\A1\\P7_A1_Tower_Area_MilkDog_L3_v03.png",
+      "source_sha256": "9a4177a51ced293c2a5f143a75b683ac0dc779de0a1cb29857b8e88a132783d0",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "result": "imported",
+      "texture_settings_readback": "passed"
+    },
+    {
+      "asset_id": "P7-TWR-A1-MILKMOUSE-L1",
+      "asset_path": "/Game/Naiwa/P7/Towers/A1/T_P7_A1_Slow_MilkMouse_L1_v02",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Towers\\A1\\P7_A1_Tower_Slow_MilkMouse_L1_v02.png",
+      "source_sha256": "57f05ddc1df5c32c9298365356c11a871303600d40bd8e1c7ffbcf0b0da5f4c1",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "result": "imported",
+      "texture_settings_readback": "passed"
+    },
+    {
+      "asset_id": "P7-TWR-A1-MILKMOUSE-L2",
+      "asset_path": "/Game/Naiwa/P7/Towers/A1/T_P7_A1_Slow_MilkMouse_L2_v03",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Towers\\A1\\P7_A1_Tower_Slow_MilkMouse_L2_v03.png",
+      "source_sha256": "9a3b80069d2ec53f978c9361daf10e04cc5a3982fe06937d543f9d3c20e6d746",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "result": "imported",
+      "texture_settings_readback": "passed"
+    },
+    {
+      "asset_id": "P7-TWR-A1-MILKMOUSE-L3",
+      "asset_path": "/Game/Naiwa/P7/Towers/A1/T_P7_A1_Slow_MilkMouse_L3_v04",
+      "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Towers\\A1\\P7_A1_Tower_Slow_MilkMouse_L3_v04.png",
+      "source_sha256": "12ce77f076b51bc86db9014a40e24fdadae4108c9babe5a34f8108bfd66e30b1",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "result": "imported",
+      "texture_settings_readback": "passed"
+    }
+  ],
+  "preflight": {
+    "status": "passed",
+    "approved_source_count": 9,
+    "already_imported_count": 0,
+    "texture_dimensions_px": [
+      1254,
+      1254
+    ]
+  }
+}

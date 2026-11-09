@@ -1,0 +1,319 @@
+{
+  "status": "passed",
+  "fixture_id": "P7_Alpha01_v01",
+  "approval_state": "technical validation candidate; G0 design sign-off pending",
+  "import_factory": "CSVImportFactory",
+  "table_count": 5,
+  "tables": [
+    {
+      "asset_path": "/Game/Naiwa/P7/Data/DT_P7_Alpha01_Level",
+      "source_csv": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Data\\P7_Alpha01_Level_v01.csv",
+      "source_sha256": "1a122dbf2605dee28e893bdfa315302648ef00b5679c17f64b61b1214230f2b8",
+      "saved_package": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\P7\\Data\\DT_P7_Alpha01_Level.uasset",
+      "saved_package_bytes": 3831,
+      "row_struct": "/Script/NaiwaP7Runtime.NaiwaP7LevelRow",
+      "columns": [
+        "HiddenBuildSites",
+        "InterferenceTriggerCell",
+        "LevelId",
+        "ObstacleIds",
+        "RouteACells",
+        "RouteBCells",
+        "StartingCoins",
+        "VisibleBuildCells"
+      ],
+      "row_names": [
+        "P7_Alpha01"
+      ],
+      "rows": {
+        "P7_Alpha01": {
+          "LevelId": "P7_Alpha01",
+          "RouteACells": "((X=0,Y=5),(X=1,Y=5),(X=2,Y=5),(X=3,Y=5),(X=4,Y=5),(X=5,Y=5),(X=6,Y=5),(X=7,Y=5),(X=8,Y=5),(X=9,Y=5),(X=10,Y=5),(X=11,Y=5),(X=12,Y=5),(X=13,Y=5),(X=14,Y=5),(X=15,Y=5),(X=16,Y=5),(X=17,Y=5),(X=18,Y=5),(X=19,Y=5))",
+          "RouteBCells": "((X=0,Y=5),(X=1,Y=5),(X=1,Y=4),(X=2,Y=4),(X=3,Y=4),(X=4,Y=4),(X=5,Y=4),(X=6,Y=4),(X=7,Y=4),(X=8,Y=4),(X=9,Y=4),(X=10,Y=4),(X=11,Y=4),(X=12,Y=4),(X=13,Y=4),(X=14,Y=4),(X=15,Y=4),(X=16,Y=4),(X=17,Y=4),(X=18,Y=4),(X=18,Y=5),(X=19,Y=5))",
+          "InterferenceTriggerCell": "(X=1,Y=5)",
+          "VisibleBuildCells": "((X=2,Y=8),(X=4,Y=8),(X=6,Y=8),(X=8,Y=8),(X=11,Y=8),(X=13,Y=8),(X=15,Y=8),(X=17,Y=8))",
+          "ObstacleIds": "(\"P7_Obstacle_CrateA\",\"P7_Obstacle_CrateB\")",
+          "HiddenBuildSites": "((Cell=(X=5,Y=9),UnlockObstacleId=\"P7_Obstacle_CrateA\"),(Cell=(X=14,Y=9),UnlockObstacleId=\"P7_Obstacle_CrateB\"))",
+          "StartingCoins": "350"
+        }
+      }
+    },
+    {
+      "asset_path": "/Game/Naiwa/P7/Data/DT_P7_Alpha01_Towers",
+      "source_csv": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Data\\P7_Alpha01_Towers_v01.csv",
+      "source_sha256": "cda290443850599cf885590e4595c3279291e4c5dfe727baad40c60a272fa0bf",
+      "saved_package": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\P7\\Data\\DT_P7_Alpha01_Towers.uasset",
+      "saved_package_bytes": 6262,
+      "row_struct": "/Script/NaiwaP7Runtime.NaiwaP7TowerRow",
+      "columns": [
+        "AttackIntervalSteps",
+        "CostCoins",
+        "Damage",
+        "Level",
+        "RangeMilliCells",
+        "Role",
+        "SlowDurationSteps",
+        "SlowPercent",
+        "SplashRadiusMilliCells",
+        "TowerId"
+      ],
+      "row_names": [
+        "P7_MilkChicken_L1",
+        "P7_MilkChicken_L2",
+        "P7_MilkChicken_L3",
+        "P7_MilkDog_L1",
+        "P7_MilkDog_L2",
+        "P7_MilkDog_L3",
+        "P7_MilkMouse_L1",
+        "P7_MilkMouse_L2",
+        "P7_MilkMouse_L3"
+      ],
+      "rows": {
+        "P7_MilkChicken_L1": {
+          "TowerId": "P7_Tower_MilkChicken",
+          "Role": "DirectDamage",
+          "Level": "1",
+          "CostCoins": "100",
+          "Damage": "10",
+          "AttackIntervalSteps": "30",
+          "RangeMilliCells": "4000",
+          "SplashRadiusMilliCells": "0",
+          "SlowPercent": "0",
+          "SlowDurationSteps": "0"
+        },
+        "P7_MilkChicken_L2": {
+          "TowerId": "P7_Tower_MilkChicken",
+          "Role": "DirectDamage",
+          "Level": "2",
+          "CostCoins": "160",
+          "Damage": "18",
+          "AttackIntervalSteps": "27",
+          "RangeMilliCells": "4500",
+          "SplashRadiusMilliCells": "0",
+          "SlowPercent": "0",
+          "SlowDurationSteps": "0"
+        },
+        "P7_MilkChicken_L3": {
+          "TowerId": "P7_Tower_MilkChicken",
+          "Role": "DirectDamage",
+          "Level": "3",
+          "CostCoins": "240",
+          "Damage": "30",
+          "AttackIntervalSteps": "24",
+          "RangeMilliCells": "5000",
+          "SplashRadiusMilliCells": "0",
+          "SlowPercent": "0",
+          "SlowDurationSteps": "0"
+        },
+        "P7_MilkDog_L1": {
+          "TowerId": "P7_Tower_MilkDog",
+          "Role": "AreaDamage",
+          "Level": "1",
+          "CostCoins": "120",
+          "Damage": "6",
+          "AttackIntervalSteps": "45",
+          "RangeMilliCells": "3500",
+          "SplashRadiusMilliCells": "1200",
+          "SlowPercent": "0",
+          "SlowDurationSteps": "0"
+        },
+        "P7_MilkDog_L2": {
+          "TowerId": "P7_Tower_MilkDog",
+          "Role": "AreaDamage",
+          "Level": "2",
+          "CostCoins": "180",
+          "Damage": "10",
+          "AttackIntervalSteps": "40",
+          "RangeMilliCells": "4000",
+          "SplashRadiusMilliCells": "1500",
+          "SlowPercent": "0",
+          "SlowDurationSteps": "0"
+        },
+        "P7_MilkDog_L3": {
+          "TowerId": "P7_Tower_MilkDog",
+          "Role": "AreaDamage",
+          "Level": "3",
+          "CostCoins": "260",
+          "Damage": "15",
+          "AttackIntervalSteps": "35",
+          "RangeMilliCells": "4500",
+          "SplashRadiusMilliCells": "1800",
+          "SlowPercent": "0",
+          "SlowDurationSteps": "0"
+        },
+        "P7_MilkMouse_L1": {
+          "TowerId": "P7_Tower_MilkMouse",
+          "Role": "SlowSupport",
+          "Level": "1",
+          "CostCoins": "130",
+          "Damage": "0",
+          "AttackIntervalSteps": "30",
+          "RangeMilliCells": "4000",
+          "SplashRadiusMilliCells": "0",
+          "SlowPercent": "25",
+          "SlowDurationSteps": "90"
+        },
+        "P7_MilkMouse_L2": {
+          "TowerId": "P7_Tower_MilkMouse",
+          "Role": "SlowSupport",
+          "Level": "2",
+          "CostCoins": "190",
+          "Damage": "0",
+          "AttackIntervalSteps": "27",
+          "RangeMilliCells": "4500",
+          "SplashRadiusMilliCells": "0",
+          "SlowPercent": "35",
+          "SlowDurationSteps": "90"
+        },
+        "P7_MilkMouse_L3": {
+          "TowerId": "P7_Tower_MilkMouse",
+          "Role": "SlowSupport",
+          "Level": "3",
+          "CostCoins": "270",
+          "Damage": "0",
+          "AttackIntervalSteps": "24",
+          "RangeMilliCells": "5000",
+          "SplashRadiusMilliCells": "0",
+          "SlowPercent": "45",
+          "SlowDurationSteps": "90"
+        }
+      }
+    },
+    {
+      "asset_path": "/Game/Naiwa/P7/Data/DT_P7_Alpha01_Enemies",
+      "source_csv": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Data\\P7_Alpha01_Enemies_v01.csv",
+      "source_sha256": "509c35fe01a4e35a82f77f281251ce6c24a3de9f3b5d36d17c689eecf5fecaf4",
+      "saved_package": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\P7\\Data\\DT_P7_Alpha01_Enemies.uasset",
+      "saved_package_bytes": 3527,
+      "row_struct": "/Script/NaiwaP7Runtime.NaiwaP7EnemyRow",
+      "columns": [
+        "EnemyId",
+        "InterferenceDurationSteps",
+        "InterferenceRadiusMilliCells",
+        "Kind",
+        "MaxHealth",
+        "SpeedMilliCellsPerSecond"
+      ],
+      "row_names": [
+        "P7_Enemy_Fast",
+        "P7_Enemy_Jammer",
+        "P7_Enemy_Normal"
+      ],
+      "rows": {
+        "P7_Enemy_Normal": {
+          "EnemyId": "P7_Enemy_Normal",
+          "Kind": "Normal",
+          "MaxHealth": "24",
+          "SpeedMilliCellsPerSecond": "30000",
+          "InterferenceRadiusMilliCells": "0",
+          "InterferenceDurationSteps": "0"
+        },
+        "P7_Enemy_Fast": {
+          "EnemyId": "P7_Enemy_Fast",
+          "Kind": "Fast",
+          "MaxHealth": "18",
+          "SpeedMilliCellsPerSecond": "45000",
+          "InterferenceRadiusMilliCells": "0",
+          "InterferenceDurationSteps": "0"
+        },
+        "P7_Enemy_Jammer": {
+          "EnemyId": "P7_Enemy_Jammer",
+          "Kind": "Interferer",
+          "MaxHealth": "42",
+          "SpeedMilliCellsPerSecond": "24000",
+          "InterferenceRadiusMilliCells": "2500",
+          "InterferenceDurationSteps": "90"
+        }
+      }
+    },
+    {
+      "asset_path": "/Game/Naiwa/P7/Data/DT_P7_Alpha01_Obstacles",
+      "source_csv": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Data\\P7_Alpha01_Obstacles_v01.csv",
+      "source_sha256": "6fb0876f05812827b3a46beeee36e6fbdf16b9b6daf345e69beab028c105e74f",
+      "saved_package": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\P7\\Data\\DT_P7_Alpha01_Obstacles.uasset",
+      "saved_package_bytes": 2921,
+      "row_struct": "/Script/NaiwaP7Runtime.NaiwaP7ObstacleRow",
+      "columns": [
+        "Cell",
+        "MaxHealth",
+        "ObstacleId",
+        "RewardCoins"
+      ],
+      "row_names": [
+        "P7_Obstacle_CrateA",
+        "P7_Obstacle_CrateB"
+      ],
+      "rows": {
+        "P7_Obstacle_CrateA": {
+          "ObstacleId": "P7_Obstacle_CrateA",
+          "Cell": "(X=4,Y=9)",
+          "MaxHealth": "90",
+          "RewardCoins": "45"
+        },
+        "P7_Obstacle_CrateB": {
+          "ObstacleId": "P7_Obstacle_CrateB",
+          "Cell": "(X=15,Y=9)",
+          "MaxHealth": "130",
+          "RewardCoins": "65"
+        }
+      }
+    },
+    {
+      "asset_path": "/Game/Naiwa/P7/Data/DT_P7_Alpha01_Waves",
+      "source_csv": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Data\\P7_Alpha01_Waves_v01.csv",
+      "source_sha256": "495e26d0f8905c6985af8f0daa7637c8eb5f31078a627ce5688ca5a270a7dc13",
+      "saved_package": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\P7\\Data\\DT_P7_Alpha01_Waves.uasset",
+      "saved_package_bytes": 5993,
+      "row_struct": "/Script/NaiwaP7Runtime.NaiwaP7WaveRow",
+      "columns": [
+        "Spawns",
+        "WaveIndex"
+      ],
+      "row_names": [
+        "P7_Wave_01",
+        "P7_Wave_02",
+        "P7_Wave_03",
+        "P7_Wave_04",
+        "P7_Wave_05",
+        "P7_Wave_06",
+        "P7_Wave_07",
+        "P7_Wave_08"
+      ],
+      "rows": {
+        "P7_Wave_01": {
+          "WaveIndex": "1",
+          "Spawns": "((EnemyId=\"P7_Enemy_Normal\",Count=4,FirstSpawnDelaySteps=0,SpawnIntervalSteps=75))"
+        },
+        "P7_Wave_02": {
+          "WaveIndex": "2",
+          "Spawns": "((EnemyId=\"P7_Enemy_Normal\",Count=4,FirstSpawnDelaySteps=0,SpawnIntervalSteps=60),(EnemyId=\"P7_Enemy_Fast\",Count=1,FirstSpawnDelaySteps=120,SpawnIntervalSteps=0))"
+        },
+        "P7_Wave_03": {
+          "WaveIndex": "3",
+          "Spawns": "((EnemyId=\"P7_Enemy_Normal\",Count=5,FirstSpawnDelaySteps=0,SpawnIntervalSteps=54),(EnemyId=\"P7_Enemy_Fast\",Count=2,FirstSpawnDelaySteps=90,SpawnIntervalSteps=72))"
+        },
+        "P7_Wave_04": {
+          "WaveIndex": "4",
+          "Spawns": "((EnemyId=\"P7_Enemy_Normal\",Count=5,FirstSpawnDelaySteps=0,SpawnIntervalSteps=48),(EnemyId=\"P7_Enemy_Fast\",Count=3,FirstSpawnDelaySteps=60,SpawnIntervalSteps=60))"
+        },
+        "P7_Wave_05": {
+          "WaveIndex": "5",
+          "Spawns": "((EnemyId=\"P7_Enemy_Normal\",Count=6,FirstSpawnDelaySteps=0,SpawnIntervalSteps=42),(EnemyId=\"P7_Enemy_Jammer\",Count=1,FirstSpawnDelaySteps=180,SpawnIntervalSteps=0))"
+        },
+        "P7_Wave_06": {
+          "WaveIndex": "6",
+          "Spawns": "((EnemyId=\"P7_Enemy_Normal\",Count=6,FirstSpawnDelaySteps=0,SpawnIntervalSteps=36),(EnemyId=\"P7_Enemy_Fast\",Count=3,FirstSpawnDelaySteps=60,SpawnIntervalSteps=48),(EnemyId=\"P7_Enemy_Jammer\",Count=1,FirstSpawnDelaySteps=120,SpawnIntervalSteps=0))"
+        },
+        "P7_Wave_07": {
+          "WaveIndex": "7",
+          "Spawns": "((EnemyId=\"P7_Enemy_Normal\",Count=7,FirstSpawnDelaySteps=0,SpawnIntervalSteps=36),(EnemyId=\"P7_Enemy_Fast\",Count=4,FirstSpawnDelaySteps=45,SpawnIntervalSteps=42),(EnemyId=\"P7_Enemy_Jammer\",Count=2,FirstSpawnDelaySteps=150,SpawnIntervalSteps=180))"
+        },
+        "P7_Wave_08": {
+          "WaveIndex": "8",
+          "Spawns": "((EnemyId=\"P7_Enemy_Normal\",Count=8,FirstSpawnDelaySteps=0,SpawnIntervalSteps=30),(EnemyId=\"P7_Enemy_Fast\",Count=5,FirstSpawnDelaySteps=30,SpawnIntervalSteps=36),(EnemyId=\"P7_Enemy_Jammer\",Count=3,FirstSpawnDelaySteps=120,SpawnIntervalSteps=120))"
+        }
+      }
+    }
+  ],
+  "failure_cleanup": {}
+}

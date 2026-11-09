@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FGenericCrashContext>
+<RuntimeProperties>
+<CrashVersion>3</CrashVersion>
+<ExecutionGuid>E35519644CB99E89A24C3FA241DEFB3C</ExecutionGuid>
+<CrashGUID>UECC-Windows-B04ECAFC4033428113CF15B0947E6ED7_0000</CrashGUID>
+<IsEnsure>false</IsEnsure>
+<IsStall>false</IsStall>
+<IsAssert>true</IsAssert>
+<CrashType>Assert</CrashType>
+<ErrorMessage>Assertion failed: ReaderPos + Num &lt;= ReaderSize [File:D:\build\++UE5\Sync\Engine\Source\Runtime\Core\Public\Serialization\BufferReader.h] [Line: 52] 
+
+</ErrorMessage>
+<CrashReporterMessage></CrashReporterMessage>
+<CrashReporterMessage>Unattended</CrashReporterMessage>
+<ProcessId>55016</ProcessId>
+<SecondsSinceStart>0</SecondsSinceStart>
+<IsInternalBuild>false</IsInternalBuild>
+<IsPerforceBuild>false</IsPerforceBuild>
+<IsWithDebugInfo>false</IsWithDebugInfo>
+<IsSourceDistribution>false</IsSourceDistribution>
+<GameName>UE-P7GameInitControl</GameName>
+<ExecutableName>P7GameInitControl</ExecutableName>
+<BuildConfiguration>Development</BuildConfiguration>
+<GameSessionID></GameSessionID>
+<PlatformName>Windows</PlatformName>
+<PlatformFullName>Windows</PlatformFullName>
+<PlatformNameIni>Windows</PlatformNameIni>
+<EngineMode>Game</EngineMode>
+<EngineModeEx>Unset</EngineModeEx>
+<DeploymentName></DeploymentName>
+<EngineVersion>5.8.3-58210709+++UE5+Release-5.8</EngineVersion>
+<EngineCompatibleVersion>5.8.3-58210709+++UE5+Release-5.8</EngineCompatibleVersion>
+<CommandLine> -project=C:\Users\31314\Desktop\Nai-Long-Adventure\tmp\P7GameInitControl_2026-11-01_18-06-10\P7GameInitControl.uproject -unattended -nop4 -nosplash -NullRHI -ExecCmds=Quit -stdout -FullStdOutLogOutput -AbsLog=C:\Users\31314\AppData\Local\Temp\P7GameInitControl_20261101180610.log</CommandLine>
+<LanguageLCID>9</LanguageLCID>
+<AppDefaultLocale>zh-CN</AppDefaultLocale>
+<BuildVersion>++UE5+Release-5.8-CL-58210709</BuildVersion>
+<Symbols>**UE5*Release-5.8-CL-58210709-Win64-Development</Symbols>
+<IsUERelease>true</IsUERelease>
+<IsRequestingExit>false</IsRequestingExit>
+<UserName></UserName>
+<BaseDir>C:/Users/31314/Desktop/Nai-Long-Adventure/tmp/P7GameInitControl_2026-11-01_18-06-10/Binaries/Win64/</BaseDir>
+<RootDir>C:/Program Files/Epic Games/UE_5.8/</RootDir>
+<MachineId>530E98AF4EF954BB4C52B68DEA6B788C</MachineId>
+<LoginId>530e98af4ef954bb4c52b68dea6b788c</LoginId>
+<EpicAccountId>23779faf9d754b1eb8215534befd7737</EpicAccountId>
+<SourceContext></SourceContext>
+<UserDescription></UserDescription>
+<UserActivityHint></UserActivityHint>
+<CrashDumpMode>0</CrashDumpMode>
+<GameStateName></GameStateName>
+<Misc.NumberOfCores>24</Misc.NumberOfCores>
+<Misc.NumberOfCoresIncludingHyperthreads>24</Misc.NumberOfCoresIncludingHyperthreads>
+<Misc.Is64bitOperatingSystem>1</Misc.Is64bitOperatingSystem>
+<Misc.CPUVendor>GenuineIntel</Misc.CPUVendor>
+<Misc.CPUBrand>Intel(R) Core(TM) Ultra 9 275HX</Misc.CPUBrand>
+<Misc.CPUModelID>27746</Misc.CPUModelID>
+<Misc.CPUMicrocodeRevision>288</Misc.CPUMicrocodeRevision>
+<Misc.PrimaryGPUBrand>Intel(R) Graphics</Misc.PrimaryGPUBrand>
+<Misc.OSVersionMajor>Windows 11 (25H2) [10.0.26200.9711]</Misc.OSVersionMajor>
+<Misc.OSVersionMinor></Misc.OSVersionMinor>
+<Misc.AnticheatProvider></Misc.AnticheatProvider>
+<MemoryStats.TotalPhysical>33795887104</MemoryStats.TotalPhysical>
+<MemoryStats.TotalVirtual>49365143552</MemoryStats.TotalVirtual>
+<MemoryStats.PageSize>4096</MemoryStats.PageSize>
+<MemoryStats.TotalPhysicalGB>32</MemoryStats.TotalPhysicalGB>
+<MemoryStats.AvailablePhysical>14768029696</MemoryStats.AvailablePhysical>
+<MemoryStats.AvailableVirtual>24497061888</MemoryStats.AvailableVirtual>
+<MemoryStats.UsedPhysical>289038336</MemoryStats.UsedPhysical>
+<MemoryStats.PeakUsedPhysical>289038336</MemoryStats.PeakUsedPhysical>
+<MemoryStats.UsedVirtual>234692608</MemoryStats.UsedVirtual>
+<MemoryStats.PeakUsedVirtual>234692608</MemoryStats.PeakUsedVirtual>
+<MemoryStats.bIsOOM>0</MemoryStats.bIsOOM>
+<MemoryStats.OOMAllocationSize>0</MemoryStats.OOMAllocationSize>
+<MemoryStats.OOMAllocationAlignment>0</MemoryStats.OOMAllocationAlignment>
+<NumMinidumpFramesToIgnore>5</NumMinidumpFramesToIgnore>
+<CallStack></CallStack>
+<PCallStack>
+
+ P7GameInitControl 0x00007ff630a60000 + 17f3788         
+ P7GameInitControl 0x00007ff630a60000 + 18dec1b         
+ P7GameInitControl 0x00007ff630a60000 + 156e863         
+ P7GameInitControl 0x00007ff630a60000 + 18ab491         
+ P7GameInitControl 0x00007ff630a60000 + 2162a91         
+ P7GameInitControl 0x00007ff630a60000 + 216087a         
+ P7GameInitControl 0x00007ff630a60000 + 1f56f14         
+ P7GameInitControl 0x00007ff630a60000 + 1646958         
+ P7GameInitControl 0x00007ff630a60000 + 1638f33         
+ P7GameInitControl 0x00007ff630a60000 + 161ed24         
+ P7GameInitControl 0x00007ff630a60000 + 161da2e         
+ P7GameInitControl 0x00007ff630a60000 + 16f7c78         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</PCallStack>
+<PCallStackHash>5F03E04EAA8FD461C43FD2CEAA78DE0B955A84BF</PCallStackHash>
+<Threads><Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 16211d2         
+ P7GameInitControl 0x00007ff630a60000 + 1654a74         
+ P7GameInitControl 0x00007ff630a60000 + 1f61513         
+ P7GameInitControl 0x00007ff630a60000 + 1f5e816         
+ P7GameInitControl 0x00007ff630a60000 + 21095ed         
+ P7GameInitControl 0x00007ff630a60000 + 2101829         
+ P7GameInitControl 0x00007ff630a60000 + 210c9fe         
+ P7GameInitControl 0x00007ff630a60000 + 23bb7d9         
+ P7GameInitControl 0x00007ff630a60000 + 23a6e05         
+ P7GameInitControl 0x00007ff630a60000 + 23a7a60         
+ P7GameInitControl 0x00007ff630a60000 + 23a8dfa         
+ P7GameInitControl 0x00007ff630a60000 + 23ba35b         
+ P7GameInitControl 0x00007ff630a60000 + 23cb37c         
+ P7GameInitControl 0x00007ff630a60000 + 23aae4d         
+ P7GameInitControl 0x00007ff630a60000 + 1f49c19         
+ P7GameInitControl 0x00007ff630a60000 + 1f4982c         
+ P7GameInitControl 0x00007ff630a60000 + 22ddbd0         
+ P7GameInitControl 0x00007ff630a60000 + 22dd19f         
+ P7GameInitControl 0x00007ff630a60000 + 22dd4ce         
+ P7GameInitControl 0x00007ff630a60000 + 22ea0f7         
+ P7GameInitControl 0x00007ff630a60000 + 22f4787         
+ P7GameInitControl 0x00007ff630a60000 + 22f3fd2         
+ P7GameInitControl 0x00007ff630a60000 + 612fdb6         
+ P7GameInitControl 0x00007ff630a60000 + 613c6fc         
+ P7GameInitControl 0x00007ff630a60000 + 6131c2c         
+ P7GameInitControl 0x00007ff630a60000 + 1fc6150         
+ P7GameInitControl 0x00007ff630a60000 + 229940d         
+ P7GameInitControl 0x00007ff630a60000 + 227ba5a         
+ P7GameInitControl 0x00007ff630a60000 + 94df6cc         
+ P7GameInitControl 0x00007ff630a60000 + 94d89f6         
+ P7GameInitControl 0x00007ff630a60000 + 94d8c9a         
+ P7GameInitControl 0x00007ff630a60000 + 94dc810         
+ P7GameInitControl 0x00007ff630a60000 + 94eb514         
+ P7GameInitControl 0x00007ff630a60000 + e799db9         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>38656</ThreadID>
+<ThreadName>GameThread</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 16f7c16         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>51036</ThreadID>
+<ThreadName>BackgroundThreadPool #0</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 16f7c16         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>43452</ThreadID>
+<ThreadName>BackgroundThreadPool #1</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>58136</ThreadID>
+<ThreadName>Foreground Worker #0</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>34604</ThreadID>
+<ThreadName>Foreground Worker #1</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>52364</ThreadID>
+<ThreadName>Background Worker #0</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>22308</ThreadID>
+<ThreadName>Background Worker #1</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>60148</ThreadID>
+<ThreadName>Background Worker #2</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>60996</ThreadID>
+<ThreadName>Background Worker #3</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>31420</ThreadID>
+<ThreadName>Background Worker #4</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>45032</ThreadID>
+<ThreadName>Background Worker #6</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>46708</ThreadID>
+<ThreadName>Background Worker #5</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>32316</ThreadID>
+<ThreadName>Background Worker #7</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>47420</ThreadID>
+<ThreadName>Background Worker #8</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>38724</ThreadID>
+<ThreadName>Background Worker #9</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>46452</ThreadID>
+<ThreadName>Background Worker #10</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>43352</ThreadID>
+<ThreadName>Background Worker #11</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>34020</ThreadID>
+<ThreadName>Background Worker #12</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>8596</ThreadID>
+<ThreadName>Background Worker #13</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>59576</ThreadID>
+<ThreadName>Background Worker #14</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>61296</ThreadID>
+<ThreadName>Background Worker #16</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>53584</ThreadID>
+<ThreadName>Background Worker #15</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>53876</ThreadID>
+<ThreadName>Background Worker #17</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>53624</ThreadID>
+<ThreadName>Background Worker #18</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>54328</ThreadID>
+<ThreadName>Background Worker #20</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 14621ea         
+ P7GameInitControl 0x00007ff630a60000 + 1490554         
+ P7GameInitControl 0x00007ff630a60000 + 145799a         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>58980</ThreadID>
+<ThreadName>Background Worker #19</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 1623d4          
+             ntdll 0x00007fffff8e0000 + d0fd4           
+        KERNELBASE 0x00007ffffcce0000 + 8b9c1           
+ P7GameInitControl 0x00007ff630a60000 + 16f7f45         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>43312</ThreadID>
+<ThreadName>FHeartBeatThread</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 1623d4          
+             ntdll 0x00007fffff8e0000 + d0fd4           
+        KERNELBASE 0x00007ffffcce0000 + 8b9c1           
+ P7GameInitControl 0x00007ff630a60000 + 19300e2         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>9960</ThreadID>
+<ThreadName>FAsyncWriter_P7GameInitControl_20261101180610</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 66f6dd1         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>57872</ThreadID>
+<ThreadName>FMediaTicker</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 1628a4          
+        KERNELBASE 0x00007ffffcce0000 + 22773           
+ P7GameInitControl 0x00007ff630a60000 + e46b7d6         
+ P7GameInitControl 0x00007ff630a60000 + e46928d         
+ P7GameInitControl 0x00007ff630a60000 + 3b0fb98         
+ P7GameInitControl 0x00007ff630a60000 + 3b1890a         
+ P7GameInitControl 0x00007ff630a60000 + 3b1768c         
+ P7GameInitControl 0x00007ff630a60000 + 3b17f09         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>46676</ThreadID>
+<ThreadName>HttpManagerThread</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + cdb0176         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>53488</ThreadID>
+<ThreadName>OnlineAsyncTaskThreadNull DefaultInstance(1)</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 1659c4          
+             ntdll 0x00007fffff8e0000 + 6ca73           
+        KERNELBASE 0x00007ffffcce0000 + de158           
+ P7GameInitControl 0x00007ff630a60000 + 181ff69         
+ P7GameInitControl 0x00007ff630a60000 + 148eff7         
+ P7GameInitControl 0x00007ff630a60000 + 19385b7         
+ P7GameInitControl 0x00007ff630a60000 + 16f7fe4         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>58692</ThreadID>
+<ThreadName>OutputDeviceRedirector</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 16f7c16         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>14340</ThreadID>
+<ThreadName>IOThreadPool #0</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 16f7c16         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>27328</ThreadID>
+<ThreadName>IOThreadPool #1</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1ac734d         
+ P7GameInitControl 0x00007ff630a60000 + e7cd96e         
+      VCRUNTIME140 0x00007fffcc0b0000 + 1a9c0           
+             ntdll 0x00007fffff8e0000 + 1664af          
+             ntdll 0x00007fffff8e0000 + c4065           
+             ntdll 0x00007fffff8e0000 + 19f3d           
+        KERNELBASE 0x00007ffffcce0000 + c408a           
+ P7GameInitControl 0x00007ff630a60000 + 1aca8de         
+ P7GameInitControl 0x00007ff630a60000 + 1926bc1         
+ P7GameInitControl 0x00007ff630a60000 + 17f2688         
+ P7GameInitControl 0x00007ff630a60000 + 17f383d         
+ P7GameInitControl 0x00007ff630a60000 + 17f3788         
+ P7GameInitControl 0x00007ff630a60000 + 18dec1b         
+ P7GameInitControl 0x00007ff630a60000 + 156e863         
+ P7GameInitControl 0x00007ff630a60000 + 18ab491         
+ P7GameInitControl 0x00007ff630a60000 + 2162a91         
+ P7GameInitControl 0x00007ff630a60000 + 216087a         
+ P7GameInitControl 0x00007ff630a60000 + 1f56f14         
+ P7GameInitControl 0x00007ff630a60000 + 1646958         
+ P7GameInitControl 0x00007ff630a60000 + 1638f33         
+ P7GameInitControl 0x00007ff630a60000 + 161ed24         
+ P7GameInitControl 0x00007ff630a60000 + 161da2e         
+ P7GameInitControl 0x00007ff630a60000 + 16f7c78         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>true</IsCrashed>
+<Registers></Registers>
+<ThreadID>44184</ThreadID>
+<ThreadName>IOThreadPool #2</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 16f7c16         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>35188</ThreadID>
+<ThreadName>IOThreadPool #3</ThreadName>
+</Thread>
+<Thread><CallStack>            win32u 0x00007ffffd0f0000 + 1364            
+            USER32 0x00007ffffedb0000 + 2aea2           
+ P7GameInitControl 0x00007ff630a60000 + 24bb2b9         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>42316</ThreadID>
+<ThreadName>WindowsRawInputThread</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 147f860         
+ P7GameInitControl 0x00007ff630a60000 + 147ff2e         
+ P7GameInitControl 0x00007ff630a60000 + 64d03cf         
+ P7GameInitControl 0x00007ff630a60000 + 64d0bc9         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>41856</ThreadID>
+<ThreadName>RenderThread 0</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 1623d4          
+             ntdll 0x00007fffff8e0000 + d0fd4           
+        KERNELBASE 0x00007ffffcce0000 + 8b9c1           
+ P7GameInitControl 0x00007ff630a60000 + 1accaf5         
+ P7GameInitControl 0x00007ff630a60000 + 64d0ce7         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>30876</ThreadID>
+<ThreadName>RTHeartBeat 0</ThreadName>
+</Thread>
+<Thread><CallStack>             ntdll 0x00007fffff8e0000 + 161dd4          
+        KERNELBASE 0x00007ffffcce0000 + 1be9f           
+ P7GameInitControl 0x00007ff630a60000 + 1acf630         
+ P7GameInitControl 0x00007ff630a60000 + 17d62c1         
+ P7GameInitControl 0x00007ff630a60000 + 1b58428         
+ P7GameInitControl 0x00007ff630a60000 + 1b52055         
+          KERNEL32 0x00007fffff3a0000 + 2dda7           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>60016</ThreadID>
+<ThreadName>IoDispatcher</ThreadName>
+</Thread>
+</Threads>
+</RuntimeProperties>
+<PlatformProperties>
+<PlatformIsRunningWindows>1</PlatformIsRunningWindows>
+<PlatformIsRunningWine>false</PlatformIsRunningWine>
+<PlatformSupportsWindows11>true</PlatformSupportsWindows11>
+<IsRunningOnBattery>true</IsRunningOnBattery>
+<IsUsingBatterySaver>false</IsUsingBatterySaver>
+<HostArchitecture>x64</HostArchitecture>
+<IsDeviceHandheld>false</IsDeviceHandheld>
+<PlatformCallbackResult>0</PlatformCallbackResult>
+<CrashTrigger>0</CrashTrigger>
+</PlatformProperties>
+<EngineData>
+<MatchingDPStatus>WindowsNo errors</MatchingDPStatus>
+<RHI.RHIName>NullRHI</RHI.RHIName>
+<DeviceProfile.Name>Windows</DeviceProfile.Name>
+</EngineData>
+<GameData>
+</GameData>
+</FGenericCrashContext>

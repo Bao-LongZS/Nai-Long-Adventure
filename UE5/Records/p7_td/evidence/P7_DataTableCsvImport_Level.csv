@@ -1,0 +1,2 @@
+---,LevelId,RouteACells,RouteBCells,InterferenceTriggerCell,VisibleBuildCells,ObstacleIds,HiddenBuildSites,StartingCoins
+P7CsvFileProbe,"P7CsvFileProbe","((X=0,Y=5),(X=1,Y=5),(X=2,Y=5))","((X=0,Y=6),(X=1,Y=6),(X=2,Y=6))","(X=1,Y=5)","((X=3,Y=8),(X=4,Y=8))","(Obstacle_A,Obstacle_B)","((Cell=(X=5,Y=9),UnlockObstacleId=Obstacle_A),(Cell=(X=14,Y=9),UnlockObstacleId=Obstacle_B))",100

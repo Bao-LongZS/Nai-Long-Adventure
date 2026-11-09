@@ -1,0 +1,12 @@
+{
+  "test": "Naiwa.P7.Data.AlphaFixtureAssetAssembly",
+  "status": "PASS",
+  "startedAt": "2026-11-02 12:11:33+08:00",
+  "elapsedTimeoutSeconds": 120,
+  "processExitCode": 0,
+  "project": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Nai_Long.uproject",
+  "engineLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_AlphaFixtureAutomation_2026-11-02_12-11-33.log",
+  "consoleLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_AlphaFixtureAutomation_2026-11-02_12-11-33.console.log",
+  "successRecordFound": true,
+  "failureRecordFound": false
+}

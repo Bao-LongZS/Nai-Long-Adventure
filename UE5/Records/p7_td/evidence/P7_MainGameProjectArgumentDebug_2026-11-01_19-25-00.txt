@@ -1,0 +1,5 @@
+﻿APP=C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Binaries\Win64\Nai_Long.exe
+CMD="C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Binaries\Win64\Nai_Long.exe" -project="C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Nai_Long.uproject" -unattended -nop4 -nosplash -NullRHI -Map=/Game/Naiwa/UI/L_NaiwaMainMenu -ExecCmds=Quit -stdout -FullStdOutLogOutput
+CREATE pid=32464 base=0x00007FF6A1750000
+EXIT code=2147483651 0x80000003
+AVEvents=0

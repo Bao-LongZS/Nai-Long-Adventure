@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "asset_path": "/Engine/EngineResources/WhiteSquareTexture.WhiteSquareTexture",
+  "error": "Exception(\"Texture2D: Failed to find property 'size_x' for attribute 'size_x' on 'Texture2D'\")"
+}

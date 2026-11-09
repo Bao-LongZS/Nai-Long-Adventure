@@ -1,0 +1,27 @@
+Failed to load 'aqProf.dll' (GetLastError=126)
+File 'aqProf.dll' does not exist
+Loading WinPixEventRuntime.dll for PIX profiling (from ../../../../../../../../Program Files/Epic Games/UE_5.8/Engine/Binaries/ThirdParty/Windows/WinPixEventRuntime/x64).
+Failed to load 'VtuneApi.dll' (GetLastError=126)
+File 'VtuneApi.dll' does not exist
+Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+File 'VtuneApi32e.dll' does not exist
+Enabling Tpause support
+Custom abort handler registered for crash reporting.
+Running DelayedAutoRegister Phase StartOfEnginePreInit
+UTS: Unreal Trace Server process returned an error (0x0000a005)
+Initializing trace...
+Finished trace initialization.
+Metadata set : platform="Windows"
+Metadata set : config="Development"
+Metadata set : buildversion="++UE5+Release-5.8-CL-58210709"
+Metadata set : engineversion="5.8.3-58210709+++UE5+Release-5.8"
+Metadata set : enginereleaseversion="5.8.3"
+Metadata set : os="Windows 11 (25H2) [10.0.26200.9711] "
+Metadata set : cpu="GenuineIntel|Intel(R) Core(TM) Ultra 9 275HX"
+Metadata set : pgoenabled="0"
+Metadata set : pgoprofilingenabled="0"
+Metadata set : ltoenabled="0"
+Metadata set : asan="0"
+Metadata set : mergedmodules="0"
+Metadata set : compacttset="0"
+Metadata set : commandline="" -project=C:\Users\31314\Desktop\Nai-Long-Adventure\tmp\P7BuildProbe\P7BuildProbe.uproject -unattended -nop4 -nosplash -NullRHI -Map=/Engine/Maps/Entry -ExecCmds=Quit -stdout -FullStdOutLogOutput -AbsLog=C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\Records\p7_td\evidence\P7_EmptyNoP7GameControlStartup_2026-11-01_13-38-10.log""

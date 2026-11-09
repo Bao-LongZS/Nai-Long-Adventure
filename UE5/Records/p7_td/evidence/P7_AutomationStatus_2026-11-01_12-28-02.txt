@@ -1,0 +1,6 @@
+﻿Target: P7BuildProbeEditor
+Command: UnrealEditor-Cmd.exe C:\Users\31314\Desktop\Nai-Long-Adventure\tmp\P7BuildProbe\P7BuildProbe.uproject -ExecCmds=Automation RunTests Naiwa.P7 -TestExit=Automation Test Queue Empty
+Process exit code: 0
+Engine log exists: False
+Console capture bytes: 0
+Outcome: no verifiable engine log; automation tests were not counted as run.

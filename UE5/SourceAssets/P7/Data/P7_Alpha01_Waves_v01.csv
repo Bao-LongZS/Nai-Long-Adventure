@@ -1,0 +1,9 @@
+---,WaveIndex,Spawns
+P7_Wave_01,1,"((EnemyId=P7_Enemy_Normal,Count=4,FirstSpawnDelaySteps=0,SpawnIntervalSteps=75))"
+P7_Wave_02,2,"((EnemyId=P7_Enemy_Normal,Count=4,FirstSpawnDelaySteps=0,SpawnIntervalSteps=60),(EnemyId=P7_Enemy_Fast,Count=1,FirstSpawnDelaySteps=120,SpawnIntervalSteps=0))"
+P7_Wave_03,3,"((EnemyId=P7_Enemy_Normal,Count=5,FirstSpawnDelaySteps=0,SpawnIntervalSteps=54),(EnemyId=P7_Enemy_Fast,Count=2,FirstSpawnDelaySteps=90,SpawnIntervalSteps=72))"
+P7_Wave_04,4,"((EnemyId=P7_Enemy_Normal,Count=5,FirstSpawnDelaySteps=0,SpawnIntervalSteps=48),(EnemyId=P7_Enemy_Fast,Count=3,FirstSpawnDelaySteps=60,SpawnIntervalSteps=60))"
+P7_Wave_05,5,"((EnemyId=P7_Enemy_Normal,Count=6,FirstSpawnDelaySteps=0,SpawnIntervalSteps=42),(EnemyId=P7_Enemy_Jammer,Count=1,FirstSpawnDelaySteps=180,SpawnIntervalSteps=0))"
+P7_Wave_06,6,"((EnemyId=P7_Enemy_Normal,Count=6,FirstSpawnDelaySteps=0,SpawnIntervalSteps=36),(EnemyId=P7_Enemy_Fast,Count=3,FirstSpawnDelaySteps=60,SpawnIntervalSteps=48),(EnemyId=P7_Enemy_Jammer,Count=1,FirstSpawnDelaySteps=120,SpawnIntervalSteps=0))"
+P7_Wave_07,7,"((EnemyId=P7_Enemy_Normal,Count=7,FirstSpawnDelaySteps=0,SpawnIntervalSteps=36),(EnemyId=P7_Enemy_Fast,Count=4,FirstSpawnDelaySteps=45,SpawnIntervalSteps=42),(EnemyId=P7_Enemy_Jammer,Count=2,FirstSpawnDelaySteps=150,SpawnIntervalSteps=180))"
+P7_Wave_08,8,"((EnemyId=P7_Enemy_Normal,Count=8,FirstSpawnDelaySteps=0,SpawnIntervalSteps=30),(EnemyId=P7_Enemy_Fast,Count=5,FirstSpawnDelaySteps=30,SpawnIntervalSteps=36),(EnemyId=P7_Enemy_Jammer,Count=3,FirstSpawnDelaySteps=120,SpawnIntervalSteps=120))"

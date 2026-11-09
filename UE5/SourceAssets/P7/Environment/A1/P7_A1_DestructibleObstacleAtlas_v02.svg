@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1664" height="1120" viewBox="0 0 1664 1120">
+  <title>P7 A1 destructible obstacles v02 — clearly separated damage states</title>
+  <defs>
+    <style>
+      .ink{stroke:#14213B;stroke-width:18;stroke-linejoin:round;stroke-linecap:round}
+      .fracture{fill:none;stroke:#14213B;stroke-width:25;stroke-linejoin:round;stroke-linecap:round}
+      .fractureLight{fill:none;stroke:#FFF0B7;stroke-width:7;stroke-linejoin:round;stroke-linecap:round}
+      .chip{fill:#F7CE59;stroke:#14213B;stroke-width:10;stroke-linejoin:round}
+    </style>
+    <g id="crate">
+      <path class="ink" fill="#E99535" d="M99 164L256 90L413 164V390Q413 418 384 418H128Q99 418 99 390Z"/>
+      <path class="ink" fill="#FFD970" d="M99 164L256 90L413 164L256 240Z"/>
+      <path d="M112 182H400V221H112Z" fill="#FFF0C5" stroke="#14213B" stroke-width="12"/>
+      <path d="M137 246V392M375 246V392" stroke="#FFF0C5" stroke-width="30" stroke-linecap="round"/>
+      <path d="M137 246V392M375 246V392" stroke="#14213B" stroke-width="10" stroke-linecap="round"/>
+      <rect x="219" y="276" width="74" height="62" rx="12" fill="#18BCC6" stroke="#14213B" stroke-width="13"/>
+      <path d="M239 302H273" stroke="#E8FFFF" stroke-width="12" stroke-linecap="round"/>
+      <g fill="#B96B31"><circle cx="200" cy="147" r="8"/><circle cx="256" cy="121" r="8"/><circle cx="312" cy="147" r="8"/></g>
+    </g>
+    <g id="crate-cracked">
+      <path class="fracture" d="M273 233L236 271L276 292L235 329L267 352L244 390"/>
+      <path class="fractureLight" d="M273 233L236 271L276 292L235 329L267 352L244 390"/>
+      <path class="fracture" d="M238 329L193 310M267 352L310 370"/>
+    </g>
+    <g id="crate-near">
+      <path class="fracture" stroke-width="38" d="M273 228L230 271L280 297L230 335L271 359L242 403"/>
+      <path class="fractureLight" stroke-width="10" d="M273 228L230 271L280 297L230 335L271 359L242 403"/>
+      <path d="M241 309L267 330L246 353L222 337Z" fill="#63402B" stroke="#14213B" stroke-width="8"/>
+      <path d="M99 348L128 335L145 365L120 382Z" class="chip"/>
+      <path d="M387 346L415 330L430 361L405 380Z" class="chip"/>
+      <path d="M344 405L362 392L377 415L358 430Z" class="chip"/>
+      <path d="M136 248L163 238" stroke="#14213B" stroke-width="15"/>
+      <path d="M349 244L377 256" stroke="#14213B" stroke-width="15"/>
+    </g>
+    <g id="oat-stack">
+      <rect x="106" y="274" width="300" height="144" rx="48" fill="#E99535" class="ink"/>
+      <rect x="135" y="135" width="250" height="145" rx="48" fill="#F6B94E" class="ink"/>
+      <path d="M155 274H357" stroke="#FFF0C5" stroke-width="19" stroke-linecap="round"/>
+      <path d="M181 160H339" stroke="#FFE89B" stroke-width="15" stroke-linecap="round"/>
+      <g fill="#A95B2D" stroke="#713E28" stroke-width="6">
+        <circle cx="195" cy="202" r="10"/><circle cx="260" cy="202" r="10"/><circle cx="325" cy="202" r="10"/>
+        <circle cx="165" cy="328" r="10"/><circle cx="256" cy="328" r="10"/><circle cx="347" cy="328" r="10"/>
+      </g>
+    </g>
+    <g id="oat-cracked">
+      <path class="fracture" d="M262 151L239 181L267 199L239 225L264 244L245 270"/>
+      <path class="fractureLight" d="M262 151L239 181L267 199L239 225L264 244L245 270"/>
+      <path class="fracture" d="M239 225L204 214M264 244L298 260"/>
+      <path class="fracture" d="M298 304L281 329L304 348L285 374"/>
+      <path class="fractureLight" d="M298 304L281 329L304 348L285 374"/>
+    </g>
+    <g id="oat-near">
+      <path class="fracture" stroke-width="38" d="M262 145L231 179L273 201L228 230L269 251L235 280"/>
+      <path class="fractureLight" stroke-width="10" d="M262 145L231 179L273 201L228 230L269 251L235 280"/>
+      <path d="M130 270L166 280L157 307L118 295Z" class="chip"/>
+      <path d="M334 259L387 280L369 311L328 292Z" class="chip"/>
+      <path class="fracture" stroke-width="38" d="M302 292L279 324L312 344L282 378L304 403"/>
+      <path class="fractureLight" stroke-width="10" d="M302 292L279 324L312 344L282 378L304 403"/>
+      <path d="M256 352L282 371L263 397L239 376Z" fill="#63402B" stroke="#14213B" stroke-width="8"/>
+      <path d="M99 365L124 350L142 380L117 395Z" class="chip"/>
+      <path d="M392 372L418 356L434 384L409 401Z" class="chip"/>
+    </g>
+  </defs>
+  <g transform="translate(32 32)"><use href="#crate"/></g>
+  <g transform="translate(576 32)"><use href="#crate"/><use href="#crate-cracked"/></g>
+  <g transform="translate(1120 32)"><use href="#crate"/><use href="#crate-near"/></g>
+  <g transform="translate(32 576)"><use href="#oat-stack"/></g>
+  <g transform="translate(576 576)"><use href="#oat-stack"/><use href="#oat-cracked"/></g>
+  <g transform="translate(1120 576)"><use href="#oat-stack"/><use href="#oat-near"/></g>
+</svg>

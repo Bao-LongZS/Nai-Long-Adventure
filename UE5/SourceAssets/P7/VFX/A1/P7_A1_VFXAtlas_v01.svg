@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="848" height="848" viewBox="0 0 848 848">
+  <title>P7 A1 VFX atlas v01 — four sequences, four frames each</title>
+  <defs>
+    <style>
+      .ink{stroke:#14213B;stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+      .thin{stroke:#14213B;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+      .gold{fill:#F6C84E}.teal{fill:#18B8C2}.orange{fill:#EF9137}.red{fill:#E84A40}.cream{fill:#FFF4D8}.green{fill:#59A964}.purple{fill:#9C83D6}
+    </style>
+    <g id="mini-crate">
+      <rect x="47" y="54" width="98" height="84" rx="12" fill="#F2A43A" class="ink"/>
+      <path d="M47 80H145M69 54V138M123 54V138" fill="none" stroke="#FFF2CF" stroke-width="10"/>
+      <rect x="86" y="88" width="22" height="22" rx="4" class="teal thin"/>
+    </g>
+    <g id="mini-tower">
+      <path d="M48 137Q50 121 65 121H127Q143 121 145 137V148H48Z" class="cream ink"/>
+      <path d="M72 120V91Q72 77 86 77H108Q122 77 122 91V120Z" class="teal ink"/>
+      <path d="M102 85L142 68L149 84L111 102" class="gold ink"/>
+      <circle cx="144" cy="76" r="7" class="orange thin"/>
+    </g>
+    <g id="small-spark">
+      <path d="M96 40L104 63L127 54L116 77L139 86L115 93L123 117L101 103L88 125L88 99L62 102L80 84L63 67L89 72Z" class="gold ink"/>
+    </g>
+  </defs>
+  <!-- Shooting / hit -->
+  <g transform="translate(16 16)"><path d="M51 127L117 63" stroke="#18B8C2" stroke-width="10" stroke-linecap="round"/><path d="M120 48L139 58L129 77L110 67Z" class="gold ink"/><path d="M42 117L30 105M57 137L45 149" stroke="#EF9137" stroke-width="8" stroke-linecap="round"/></g>
+  <g transform="translate(224 16)"><path d="M39 129L102 69" stroke="#18B8C2" stroke-width="12" stroke-linecap="round"/><path d="M107 54L126 64L116 83L97 73Z" class="gold ink"/><circle cx="140" cy="49" r="15" fill="none" stroke="#EF9137" stroke-width="8"/><path d="M140 24V14M165 49H176M122 31L114 23" stroke="#EF9137" stroke-width="7" stroke-linecap="round"/></g>
+  <g transform="translate(432 16)"><use href="#small-spark"/><path d="M97 35V16M141 57L158 43M63 65L45 53M142 115L159 126M57 117L42 130" stroke="#EF9137" stroke-width="8" stroke-linecap="round"/></g>
+  <g transform="translate(640 16)"><circle cx="96" cy="91" r="38" fill="none" stroke="#18B8C2" stroke-width="8" opacity=".8"/><circle cx="96" cy="91" r="19" fill="none" stroke="#F6C84E" stroke-width="7"/><path d="M54 51L47 44M138 52L146 45M49 131L41 138M144 130L151 137" stroke="#EF9137" stroke-width="7" stroke-linecap="round"/><circle cx="96" cy="91" r="7" class="orange"/></g>
+  <!-- Clear obstacle / open build spot -->
+  <g transform="translate(16 224)"><use href="#mini-crate"/><path d="M82 92L96 103L88 116" fill="none" stroke="#8A4B2A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(224 224)"><use href="#mini-crate"/><path d="M87 69L75 84L94 95L78 112L96 122" fill="none" stroke="#14213B" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M87 69L75 84L94 95L78 112L96 122" fill="none" stroke="#FFF0B7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(432 224)"><path d="M53 61L93 54L111 88L73 124L48 104Z" fill="#F2A43A" class="ink"/><path d="M115 61L144 52L147 99L120 116Z" fill="#E58535" class="ink"/><path d="M101 44L113 31L124 46M40 138L30 149M153 126L163 137M95 150L92 164" fill="none" stroke="#EF9137" stroke-width="9" stroke-linecap="round"/></g>
+  <g transform="translate(640 224)"><path d="M45 139Q47 123 63 123H129Q145 123 147 139V151H45Z" class="cream ink"/><rect x="53" y="96" width="86" height="28" rx="10" fill="#59A964" class="ink"/><path d="M128 61L145 78L174 48" fill="none" stroke="#59A964" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><circle cx="96" cy="82" r="9" fill="#FFF4D8"/></g>
+  <!-- Upgrade / coin -->
+  <g transform="translate(16 432)"><use href="#mini-tower"/><path d="M95 65V34M82 47L95 34L108 47" fill="none" stroke="#18B8C2" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(224 432)"><use href="#mini-tower"/><circle cx="96" cy="100" r="65" fill="none" stroke="#F6C84E" stroke-width="11"/><path d="M56 49L48 39M138 48L148 38M153 111L166 111" stroke="#F6C84E" stroke-width="8" stroke-linecap="round"/><path d="M95 65V41M83 53L95 41L107 53" fill="none" stroke="#18B8C2" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(432 432)"><use href="#mini-tower"/><circle cx="62" cy="61" r="20" class="gold ink"/><circle cx="135" cy="49" r="20" class="gold ink"/><path d="M54 61L62 50L70 61L62 72Z" fill="#FFF4D8"/><path d="M127 49L135 38L143 49L135 60Z" fill="#FFF4D8"/><path d="M47 52Q80 31 96 40M118 37Q137 24 155 35" fill="none" stroke="#18B8C2" stroke-width="7" stroke-linecap="round"/></g>
+  <g transform="translate(640 432)"><use href="#mini-tower"/><path d="M132 57L143 69L164 43" fill="none" stroke="#59A964" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><path d="M92 81V56M81 67L92 56L103 67" fill="none" stroke="#18B8C2" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="56" cy="56" r="10" class="gold"/></g>
+  <!-- Jammed / recovered -->
+  <g transform="translate(16 640)"><use href="#mini-tower"/><path d="M97 26L77 63H96L83 91L124 48H103L116 26Z" class="red ink"/></g>
+  <g transform="translate(224 640)"><use href="#mini-tower"/><circle cx="96" cy="102" r="72" fill="none" stroke="#9C83D6" stroke-width="9"/><circle cx="96" cy="102" r="56" fill="none" stroke="#E84A40" stroke-width="9" stroke-dasharray="20 14"/><path d="M67 72L125 130M125 72L67 130" stroke="#E84A40" stroke-width="10" stroke-linecap="round"/></g>
+  <g transform="translate(432 640)"><use href="#mini-tower"/><circle cx="96" cy="102" r="66" fill="none" stroke="#E84A40" stroke-width="9"/><path d="M70 76L122 128M122 76L70 128" stroke="#E84A40" stroke-width="14" stroke-linecap="round"/><path d="M50 53L38 43M143 54L155 44" stroke="#9C83D6" stroke-width="8" stroke-linecap="round"/></g>
+  <g transform="translate(640 640)"><use href="#mini-tower"/><circle cx="96" cy="91" r="62" fill="none" stroke="#59A964" stroke-width="9"/><path d="M69 92L89 112L126 72" fill="none" stroke="#59A964" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M54 43L44 34M138 43L148 34" stroke="#F6C84E" stroke-width="8" stroke-linecap="round"/></g>
+</svg>

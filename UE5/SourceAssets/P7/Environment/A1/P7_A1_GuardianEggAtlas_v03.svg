@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="576" viewBox="0 0 1120 576">
+  <title>P7 A1 guardian milk egg and ten-point health meter v03</title>
+  <defs>
+    <linearGradient id="shell" x1="0" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#FFFBEF"/><stop offset="1" stop-color="#E6D8B7"/>
+    </linearGradient>
+  </defs>
+  <g id="guardian-milk-egg" transform="translate(32 32)" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M256 76C169 76 112 151 112 248C112 347 171 432 256 432C341 432 400 347 400 248C400 151 343 76 256 76Z" fill="url(#shell)" stroke="#14213B" stroke-width="20"/>
+    <path d="M157 220C165 151 205 112 244 103" fill="none" stroke="#FFFFFF" stroke-width="18"/>
+    <path d="M214 276C214 241 256 207 256 207S298 241 298 276A42 42 0 1 1 214 276Z" fill="#13BFD0" stroke="#14213B" stroke-width="13"/>
+    <path d="M237 266Q252 243 270 231" fill="none" stroke="#E8FFFF" stroke-width="9"/>
+    <g fill="#D7C79F" opacity=".85">
+      <ellipse cx="177" cy="304" rx="10" ry="6"/><ellipse cx="191" cy="349" rx="8" ry="5"/>
+      <ellipse cx="335" cy="315" rx="10" ry="6"/><ellipse cx="320" cy="362" rx="8" ry="5"/>
+      <ellipse cx="256" cy="382" rx="10" ry="6"/>
+    </g>
+    <path d="M185 408Q256 432 327 408" fill="none" stroke="#B79C68" stroke-width="9"/>
+  </g>
+  <g id="egg-health-pips" transform="translate(576 32)" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="20" y="192" width="472" height="144" rx="36" fill="#FFF9E8" stroke="#14213B" stroke-width="18"/>
+    <g fill="#13BFD0" stroke="#14213B" stroke-width="7">
+      <rect x="43" y="224" width="34" height="80" rx="17"/>
+      <rect x="88" y="224" width="34" height="80" rx="17"/>
+      <rect x="133" y="224" width="34" height="80" rx="17"/>
+      <rect x="178" y="224" width="34" height="80" rx="17"/>
+      <rect x="223" y="224" width="34" height="80" rx="17"/>
+      <rect x="268" y="224" width="34" height="80" rx="17"/>
+      <rect x="313" y="224" width="34" height="80" rx="17"/>
+      <rect x="358" y="224" width="34" height="80" rx="17"/>
+      <rect x="403" y="224" width="34" height="80" rx="17"/>
+      <rect x="448" y="224" width="34" height="80" rx="17"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "test": "Isolated P7 Game target startup",
+  "status": "CRASH_DURING_STATIC_INIT",
+  "target": "P7BuildProbe Win64 Development",
+  "modules": [
+    "P7BuildProbe",
+    "NaiwaP7Runtime"
+  ],
+  "buildActions": "25/25",
+  "buildLog": "P7_IsolatedGameBuild_2026-11-01_12-56-53.log",
+  "processId": 46864,
+  "timeoutSeconds": 30,
+  "processFinishedWithinTimeout": true,
+  "processExitCode": 777006,
+  "processExitCodeHex": "0x000BDB2E",
+  "processExitCodeMeaning": "CrashDuringStaticInit (UE ECrashExitCodes)",
+  "unrealStartupLogCreated": false,
+  "stdoutBytes": 0,
+  "stderrBytes": 0,
+  "mainProjectRuntimeIncluded": false,
+  "note": "This minimal Game target contains NaiwaP7Runtime and an empty primary game module, without NaiwaRuntime or P4/P5. The failure reproduces before an Unreal startup log is created; no crash stack was captured, so the responsible static initializer is not identified."
+}

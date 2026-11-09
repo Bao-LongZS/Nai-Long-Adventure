@@ -1,0 +1,46 @@
+{
+  "AssetId": "P7-CHR-A0-MILKFROG-EXPRESSIONS",
+  "Version": "v02",
+  "Layout": "2 columns x 1 row, 4px transparent gutter",
+  "Canvas": [
+    2520,
+    1262
+  ],
+  "FrameSize": [
+    1254,
+    1254
+  ],
+  "FrameOrder": [
+    {
+      "index": 0,
+      "name": "glance_smile",
+      "source": "Characters/A0/P7_A0_Character_MilkFrogSmile_v03.png",
+      "rect": [
+        4,
+        4,
+        1254,
+        1254
+      ]
+    },
+    {
+      "index": 1,
+      "name": "belly_laugh",
+      "source": "Characters/A0/P7_A0_Character_MilkFrogLaugh_v03.png",
+      "rect": [
+        1262,
+        4,
+        1254,
+        1254
+      ]
+    }
+  ],
+  "Pivot": "center per frame (0.5,0.5), provisional",
+  "Playback": "Order only; duration and rate not specified",
+  "IdentityReferences": [
+    "user-provided exec-000b9b85-52f5-422d-8e5e-cede2eeabc88.png",
+    "user-provided Big_Laugh.png",
+    "user-provided Glance.png",
+    "user-provided player.png"
+  ],
+  "Notes": "Both frames share the same generated base anatomy and portrait scale. Preserve the smoother continuous egg/pear body and small integrated eyes."
+}

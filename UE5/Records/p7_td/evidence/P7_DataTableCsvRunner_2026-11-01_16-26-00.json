@@ -1,0 +1,20 @@
+{
+  "test": "P7 Level/Wave CSVImportFactory disk import and DataTable readback",
+  "status": "INCONCLUSIVE_NO_ENGINE_LOG",
+  "startedAt": "2026-11-01 16:26:00+08:00",
+  "finishedWithinTimeout": true,
+  "processExitCode": 0,
+  "executable": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+  "project": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Nai_Long.uproject",
+  "pythonScript": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Scripts\\p7_datatable_csv_import_probe.py",
+  "engineLogCreated": false,
+  "engineLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_DataTableCsvEditorImport_2026-11-01_16-26-00.log",
+  "stdoutLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_DataTableCsvEditorImport_2026-11-01_16-26-00.stdout.log",
+  "stderrLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_DataTableCsvEditorImport_2026-11-01_16-26-00.stderr.log",
+  "probeReportCreated": false,
+  "probeReport": null,
+  "probeStatus": null,
+  "temporaryAssetCleanup": null,
+  "crashContext": null,
+  "note": "UnrealEditor-Cmd exited 0 without a non-empty Engine log or a fresh Python probe report. The import was not counted as run."
+}

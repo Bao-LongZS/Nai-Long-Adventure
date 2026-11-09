@@ -1,0 +1,18 @@
+{
+  "test": "P7 Level/Wave CSVImportFactory probe via full UnrealEditor fallback",
+  "status": "INCONCLUSIVE_NO_ENGINE_LOG",
+  "startedAt": "2026-11-01 16:28:33+08:00",
+  "executable": "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+  "project": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Nai_Long.uproject",
+  "processFinished": true,
+  "processExitCode": 0,
+  "nonEmptyEngineLogCreated": false,
+  "stdoutBytes": 0,
+  "stderrBytes": 0,
+  "pythonProbeReportCreated": false,
+  "temporaryP7DataTableAssetCreated": false,
+  "note": "Full UnrealEditor.exe also exited 0 without an Engine log, stdout/stderr output or Python probe report; the CSV import was not run.",
+  "engineLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_DataTableCsvFullEditor_2026-11-01_16-28-33.log",
+  "stdoutLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_DataTableCsvFullEditor_2026-11-01_16-28-33.stdout.log",
+  "stderrLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_DataTableCsvFullEditor_2026-11-01_16-28-33.stderr.log"
+}
