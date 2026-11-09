@@ -4,9 +4,75 @@
 
 ---
 
+## 2026-11-02
+**P7「奶罐守卫战」独立子模式：从骨架推进到真实数据链与灰盒视口。** 新增独立 UE 模块 `NaiwaP7Runtime`，不依赖 `NaiwaRuntime`、不含 P4/P5 头文件，主游戏与 Editor target 分别注册。五张 `P7_Alpha01` 候选 DataTable 由源 CSV 持久导入 `/Game/Naiwa/P7/Data/`（Level 1 行、Tower 9 行、Enemy 3 行、Obstacle 2 行、Wave 8 行），`ANaiwaP7AlphaGrayboxGameMode` 连接五表，专属地图 `/Game/Naiwa/P7/Maps/L_P7_Alpha01_Graybox` 已 cook/stage。主工程自动化 14/14 通过，验证真实 DataTable 装配、初始购买扣费、首波及首只敌人刷出。Development 包在 PCD3D_SM6 真实路径启动并生成 1280×720 实图，板格、双路线、8 个建造位、2 个障碍、奶蛋耐久、波次金币和交互提示均已绘出。
+
+**P7 尚未达可玩 Alpha。** 720p HUD 字体明显偏小；键鼠输入（`1`–`3` 选塔、点击建造、`U` 升级、`C` 清障、`N` 开波、`A/B` 切路、`Space` 暂停、右键取消）尚未实测；G0 的项目/设计 owner、参考测试 PC、路线与经济数值签收均未完成，CSV 不能标为批准版。A1 美术（塔、敌人、奶蛋、HUD、VFX）只有塔贴图进了 UE，其余仍在源目录，未做游戏内比例检查。详见[进度交接](UE5/Records/p7_td/P7_PROGRESS_CHECKPOINT_2026-11-02.md)。
+
+**P4 推进到 W3/W4。** 敌人序列与 Boss、VFX 的运行时预览接入；W4 Boss 与 VFX 各有一份 DataTable 驱动帧序；战斗中补了受击伤害数字、屏幕控件提示、卡牌下拉与敌人血条；A1 33 帧在 10-30 做过一轮质量重导，A2 精修竞技场与背景另起版本。同时记录了一轮像素探针，用来定位背景朝向与运行时像素偏差。α 竖切仍未接入选关页，也没有主菜单入口。
+
+**P5 4-1 推进到 M3。** 定步长模拟、坡面、金币、树石、冰缝、雪崩 gap 全部由 fixture 驱动；袋鼠骑乘三点位、四皮肤能力、奶票结算、衣柜购买与装备、存档 v3 迁移、主菜单 4-1 入口都接上了。A0 运行时美术接入继续修：坐骑鞍点 UV 校正，v05 样片之外新增 v06 资源目录。**M1 的手感门、M2 试玩、M3 四个状态用例仍未运行验收**，A1 视觉出口门也未通过，A2 批量制作未启动。
+
+**WebNative 网页原生版成立。** 独立于 UE 的 Three.js + Vite + TypeScript 工程，用 UE 只读入口导出 P1 v7 地图几何、角色骨骼网格与跑步动画（`.glb.gz` 侧车）、P2 基础蛋 GLB；导出器不写任何 `.umap` / `.uasset`。现在能玩 1-1 开场到 CP01；另有 P2 物理探针页走 Rapier WASM，按固定步扫掠记录接触与冲量。Rapier 与 Chaos 未做 parity 对照，手机真机帧基准未测，`p2_ballistics_fixture.json` 的显式 Euler 结果不作为物理真值。
+
+**UE 5.8 编译适配。** 主线一批源文件补 `MakeShared<FJsonObject>().ToSharedPtr()`、`SetStringField(FStringView(...))` 与 `Engine/GameInstance.h`、`Containers/StringView.h`；`NaiwaRuntime.Build.cs` 补 `AudioMixerCore`，并在 Editor target 下显式链接 `UnrealEd`、`PropertyEditor`——从零重建 Runtime 模块时，共享 PCH 不再提供这两个模块的内联符号。`NaiwaRuntime.cpp` 增加 `-NaiwaWebExportP2Scene=` 启动分支，供 WebNative 导出 P2 场景数据。
+
+## 2026-10-29
+**P5 A0 背景补底二次修正。** 负责人 669 m 截图表明首版改动确实减少了雪纹条带，但蓝楔仍在。复核发现补底顶缘在路线下方 6.5 m，而侧视正交相机画面下沿约在路线以上 2.5 m，导致补底完全处于视锥下方。这次将沿路线剖面的补底顶缘提高到路线以上 7.5 m，运行版与 Editor Runtime 均编译链接成功（分别 3/3、4/4 actions）。新效果需关闭旧运行进程并重新启动后查看；尚无本次改动后的截图，不能记为视觉通过。详见[根因与修复记录](UE5/Records/p5_m2/P5_A0_背景补底错位与雪纹条带根因修复_2026-10-29.md)、[运行版构建日志](UE5/Records/p5_m2/P5_A0_BackgroundFrustumCorrection_GameBuild_2026-10-29.log)和[Editor 构建日志](UE5/Records/p5_m2/P5_A0_BackgroundFrustumCorrection_EditorBuild_2026-10-29.log)。
+**P5 A0 背景横线与断崖可见深度修订（第八轮）。** 新截图仍有贯穿画面的水平雪线，复核发现补底顶缘仍在路线以上 360 cm，正切过山景 PNG 的透明区；曾下移到路线以下 650 cm，仍位于山景后、天空前。断崖暗腔从低侧崖唇下 450 cm 提至 120 cm，并加深至 2200 cm。`Nai_LongEditor` 全目标构建通过（79/79），`Nai_Long Win64 Development` 通过（78/78）；重编时发现的 `UnrealEd`、`PropertyEditor`、`AudioMixerCore` 链接依赖已显式补齐。`UnrealEditor-Cmd -NullRHI` 启动器静默返回 0，但未生成日志/报告，样片地图仍是旧时间戳，因此不记为重建成功。未开 Editor/PIE，实际运行画面和断崖近景待审核。详见[第八轮记录](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_v05_运行画面第八轮背景与断崖修订_2026-10-29.md)、[Editor 构建日志](UE5/Records/p5_m2/Nai_LongEditor_BackdropCliffFix_Eighth_retry2_2026-10-29.log)、[运行版构建日志](UE5/Records/p5_m2/Nai_Long_BackdropCliffFix_Eighth_2026-10-29.log)和[本轮地图重建尝试](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_EditorSample_v05_attempt_20261029_202229.json)。
+**P5 A0 背景补底遮挡修复（第七轮）。** 负责人新截图显示上一轮把雪色补底放到远山前方后，形成横向雪墙并遮住远山/云层。现将补底恢复到全部景观图层之后、天空之前，并把顶缘下移到景观下沿附近，只填透明底部区域；断崖暗腔仍从低侧崖唇下 450 cm 开始。`Nai_LongEditor` 增量构建通过（4/4 actions），`Nai_Long Win64 Development` 运行版构建通过（78/78 actions）；v05 自有样片地图以 `NullRHI` 重建，12 张 WIP PNG 已重导入。未开 Editor/PIE，运行画面仍待负责人复核。详见[第七轮记录](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_v05_运行画面第七轮背景遮挡修订_2026-10-29.md)、[样片报告](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_EditorSample_v05_build_report.json)、[Editor 构建日志](UE5/Records/p5_m2/Nai_LongEditor_BackdropOverlapFix_final2_2026-10-29.log)与[运行版构建日志](UE5/Records/p5_m2/Nai_Long_BackdropOverlapFix_Game_2026-10-29.log)。
+
+**P5 A0 背景补底与断崖暗腔第六轮修订。** 根据负责人最新运行图，雪色补底前移到远山前、森林与雪脊后，并抬高顶缘，覆盖坡面下缘的蓝色漏空；断崖暗腔改从低侧崖唇下 450 cm 开始，避免暗面高过崖唇而形成墙/坡，同时保留两侧窄肩和上方开放跳跃通道。v05 导图脚本现在每次都从 12 张 WIP 源 PNG 重导入，报告同步运行时图层锚点、补底深度顺序和暗腔尺寸。`Nai_LongEditor Win64 Development` 后台构建成功（80/80 actions）；v05 自有样片地图以 UE 5.8.3 `NullRHI` 命令行重建成功，所有权、GameMode、贴图数和背景组件检查通过。未打开 Editor 或运行 PIE，最终画面与断崖近景仍待负责人审核。详见[本轮记录](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_v05_运行画面第六轮背景与断崖修订_2026-10-29.md)、[地图报告](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_EditorSample_v05_build_report.json)与[构建日志](UE5/Records/p5_m2/Nai_LongEditor_BackdropCliffFix_2026-10-29.log)。
+
+**Nai_LongEditor 全项目构建修复。** 修复 P1–P4 源文件在独立编译下缺失的类型声明与头文件、P1 UE 5.8 JSON 字段接口，以及 P4 临时 DataTable 外层类型。后台 `Nai_LongEditor Win64 Development` 编译并链接成功，79/79 actions；P5 最新轨道表现代码一并链接进 Runtime DLL。未打开 Editor 或 PIE。详见[构建修复记录](UE5/Records/p5_m2/Nai_LongEditor_全项目构建修复_2026-10-29.md)与[构建日志](UE5/Records/p5_m2/Nai_LongEditor_BuildFixPass1_NoSharedPCH_2026-10-29.log)。
+
+**P5 A0 背景透明区与断崖边缘复修。** 455 m 截图中的蓝色三角来自雪脊/森林图层透明下沿与独立雪坡填充之间的空隙；新增跟随路线高度的雪色衔接层。断崖补入连续下凹暗部及两侧窄岩壁，保留中间跳跃通道。首轮构建发现的 P1–P4 编译阻断已在最新全项目构建记录中修复（79/79 actions）；未开编辑器或 PIE。详见 [P5 A0 背景衔接与断崖复修记录](UE5/Records/p5_m2/M2_A0_背景衔接与断崖复修_2026-10-29.md)。
+
+**P4 W2/W3 受击伤害数字。** 表现层按玩家与敌人的实际 HP 损失显示浮动数字；敌人受击为黄色，玩家受击为红色，约 0.9 秒内上浮淡出。仅在 HP 确实下降时显示，因此格挡/减伤后展示的是实际扣血值。`Nai_LongEditor Win64 Development` 编译通过（6/6 actions）；尚未在 Editor/PIE 复核文字朝向与屏幕位置。P5 当前没有敌人 HP/伤害结算路径，本次数字接在 P4 竞技场上。实现见 [P4 ArtIntegrationPawn](UE5/NaiwaP0/Source/NaiwaRuntime/P4/Presentation/NaiwaP4ArtIntegrationPawn.cpp)。
+
+**P5 A0 背景层间摆放与透明过渡修复。** 静态按 2300 cm / 16:9 相机窗口复合后发现，近景雪脊透明轮廓只到世界 Z≈+26 cm，低于平地相机视野下沿约 +73 cm，导致它在运行画面中基本缺席；森林底缘渐隐也被 Masked 材质截断为硬边。近景锚点已从 -20 调到 +260 cm，使雪脊进入画面下沿约 233 cm；UE 5.8.3 后台材质 Commandlet 已重建 12 张纹理及对应材质，far/mid/near 三层均读回 `BLEND_TRANSLUCENT`，三个材质 UAsset 已在 15:34 更新。新增 manifest v08 和 293/1123 m 静态复合预览。Runtime 与材质构建通过；仍需负责人开图确认真实雪道衔接、构图、透明排序与平铺观感。详见[修复记录](UE5/Records/p5_m2/P5_A0_BackgroundPlacement_修复记录_2026-10-29.md)。
+
+**P5 A0 背景横线与雪道占屏二次修复。** 负责人在 293 m、1123 m 两张新图里确认固定高度横线、森林齐底硬边仍在，上一轮构图修订效果为负。定位后将三张背景做透明上下扩边（2048×1536 画布），保留原插画像素比例；森林底部 32 行渐隐并下移图层，镜头基准 600→720 cm 以进一步压低雪坡占屏。背景新资产横向首尾 RGBA 差异为 0；编译时发现 P4 状态结构中存在一个未引用重复成员，移除重复声明后 Editor 链接通过（13/13 actions）。材质专用 Commandlet 重建 12 张纹理/材质，报告确认未加载地图。按负责人安排未开图/PIE；运行时接合、雪坡占比和重复节奏仍待负责人复看。详见 [背景二次修复记录](UE5/Records/p5_m2/M2_A0_背景反馈复修_2026-10-29.md)。
+
+**P5 A0 背景衔接、雪道占屏与清晰度修订。** 根据最新 657 m 画面修复远山/森林高度比例：两张 2048×512 背景不再按 2048×768 拉伸，按原始宽高比接入并与相邻图层重叠；远山和森林新导出图保留全部透明组件且横向首尾 RGBA 列完全一致。相机基准上调到 600 cm，关闭景深和运动模糊并增加轻度锐化；背景纹理 mip 调整为 `TMGS_SHARPEN2`。`Nai_LongEditor Win64 Development` 编译成功（5/5 actions）；材质专用 Commandlet 重导入 12 张纹理并重建对应材质，报告确认未加载地图。平铺预览未见硬接缝，游戏内层间接合、压缩过滤与重复节奏仍待负责人自行开图复核；按安排未打开关卡或运行 PIE。详见 [A0 背景与清晰度修订记录](UE5/Records/p5_m2/M2_A0_背景衔接与清晰度修订_2026-10-29.md)。
+
+**P5 动态质感标准与连续角色动画需求补充。** 按项目负责人要求以《滑雪大冒险》的速度读感为表现标尺，新增慢速/巡航/高速/技巧加速四档反馈规范，并将奶蛙 A4 从静态状态帧补充为约 23 帧的连续动作序列要求。同步修订工程计划、美术执行计划和 A4/A5 资产要求书；复用现有雪粉/板迹资源优先，固定跳高、速度物理与清晰度原则不变。新增帧数和速度效果不在原 40 帧/10.5 美术人天基线内，A2 前需更新 manifest 与工时估算。A1 出口门仍未通过，A2 未启动；本轮仅文档，不开地图、不运行 PIE。详见[速度与连续动作美术需求](UE5/Records/p5_p6_plan/P5_速度与连续动作视觉表现美术需求_v01.md)。
+
+**P5 A1 样片推进：修正静置袋鼠方向。** 负责人反馈 A5 图集左上 Idle 帧在雪道静置状态下左右反向；仅静置道具在图集单元内镜像 U，保留正立所需 V 翻转，骑乘态 DownhillGlide 采样不变。编辑器关闭后增量编译/链接完成（4/4 actions），Runtime DLL 已更新，UBA 有非致命缓存结果写入警告。A1 样片集成/验证标记为进行中；视觉出口证据尚缺，A2 批量制作仍未启动。按负责人要求未打开关卡或运行 PIE。详见 [A1 推进记录](UE5/Records/p5_m2/P5_A1_样片集成与验证推进_2026-10-29.md)。
+
+**P5 A0 雪道占屏第二轮收敛与阶段门结论。** 镜头基准 Z 从 470 提至 520 cm，雪体厚度 95→80 cm、世界纹理重复间距 300→450 cm，中景林线 Z 100→60 cm。1688 m 运行截图支持进入 A1 样片复核，但最新参数尚待负责人开图确认；按负责人要求本轮未打开地图/PIE。当前不能进入 A2 批量制作：1080p/720p 校准、尺寸尺实测、gap 档位、断崖近景、循环接缝与 Editor p95 均未齐。P5 Pawn/TrackActor `.obj` 与 Runtime DLL 已生成，后续 UBT 增量复核为 up-to-date；首次全目标 UBA 执行受 PCH 访问拒绝及内部错误影响，未作为干净全目标构建通过记录。详见 [阶段门复核](UE5/Records/p5_m2/P5_A0_阶段门复核_2026-10-29.md) 与 [A0 表现修订记录](UE5/Records/p5_m2/M2_A0_角色断崖与图层表现调整_2026-10-29.md)。
+
+**P4 ArtIntegrationWidget 构建阻塞复核解除。** 之前的构建日志在 P4 Widget 头/实现同步期间报成员未声明；核对当前文件后，预警控件与函数声明已齐全。重新构建编译 P4 PlayerController/Widget，随后 NaiwaRuntime `.lib`、`.dll` 和 target metadata 均完成（6/6 actions）；UBA 另报部分 action 结果缓存写入失败，但没有 C++ 编译错误。未运行 PIE。详见 [重编日志](UE5/Records/p5_m2/Editor_rebuild_after_P4_widget_sync_2026-10-29.log)。
+
+**P5 A0 角色、断崖、图层与雪道占屏复调。** 中性空中状态改用完整 Glide 雪板剪影，角色放大，Atlas MID 创建失败时回退至 Glide 材质；断崖移除深色方块并用现有雪岩素材铺设下半部，保留上方断口；背景纹理放大并拉开深度层，雪体填充后移到前景树木之后；镜头高度提高 110 cm 以减少雪坡占屏。P5 Pawn 与 TrackActor 编译动作通过；Editor 全目标未能链接，停止于现有 P4 `NaiwaP4ArtIntegrationWidget.cpp` 编译错误。未运行 PIE。详见 [P5 A0 表现修订记录](UE5/Records/p5_m2/M2_A0_角色断崖与图层表现调整_2026-10-29.md) 和[构建日志](UE5/Records/p5_m2/P5_A0_visual_feedback_build_2026-10-29.log)。
+
+**P4 A4 返修卡牌布局与敌人攻击提示。** 移除屏幕中央红条；训练敌攻击前摇时在敌人头顶显示红色“！”。Tab 选择栏仍为顶部下拉，但改用 420–480 高度、288 高卡片框，图标左置、文字右置并分区，防止内容挤叠。UE 5.8.3 隔离 scratch 编译通过 4/4 actions；没有启动 PIE，实际可读性待窗口复核。详见 [W2 工程实现记录](UE5/Records/p4_alpha/W2_工程实现记录.md) 与 [编译日志](UE5/Records/p4_alpha/evidence/W2/p4_w2_card_layout_enemy_marker_compile_20261029.log)。
+
+**P4 A4 扩大场地并修正角色比例。** 按负责人反馈将隔离预览的逻辑纵深由 260 扩至 420 uu，场景块按比例延展到前后空白；保持横向尺寸、相机角度与 W1 默认值不变。A1 立绘高度由 180 调至 200 uu，宽度保持不变并同步脚底锚点补偿。UE 5.8.3 隔离 scratch 最新增量编译通过 4/4 actions；未运行 PIE，视觉效果待开图复核。详见 [W2 工程实现记录](UE5/Records/p4_alpha/W2_工程实现记录.md) 与 [编译日志](UE5/Records/p4_alpha/evidence/W2/p4_w2_expand_arena_taller_sprite_compile_20261029.log)。
+
+**P4 A4 预览调整场地纵深与透视。** 保留已接近满屏的横向宽度，将 P4 隔离预览纵深由 185 提至 260 uu，并把相机俯角从 57° 调至 50°；A4 标记场景块仅运行时按比例扩展，角色阴影稍加宽，主工程设置和地图资产不变。隔离 P4 scratch 编译 5/5 actions 成功；未开图或运行 PIE，待负责人自行体验。详见 [W2 工程实现记录](UE5/Records/p4_alpha/W2_工程实现记录.md) 与 [编译日志](UE5/Records/p4_alpha/evidence/W2/p4_a4_depth_camera_compile_20261029.log)。
+
+**P5 A0 起跳改为单按固定跳高。** 按负责人反馈取消按住蓄力和松键截断：空格按下一次立即起跳，跳高由固定初速/重力决定，按住不会继续加高。接地宽容缓冲保留；同步清除 HUD 中“按住增高”提示，并将预备姿势限制为 0.08 s 的视觉反馈，不延迟实际起跳。UE 5.8.3 `Nai_LongEditor Win64 Development` 编译成功（11/11 actions）。未打开关卡或运行 PIE。详见 [单按起跳调整记录](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_v05_单按起跳调整_2026-10-29.md) 与 [编译日志](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_VisualAdjustCompile_2026-10-29_v04.log)。
+
+**P5 A0 v05 运行画面第四轮调整。** 负责人新截图反馈底部留白、骑乘时奶蛙消失、上坡雪板角度生硬和起跳卡手。A0 镜头构图下移并降低空中垂直跟随、背景层固定在路线高度；骑乘态保留奶蛙并叠在袋鼠前方；角色/坐骑立绘随路线切线旋转。跳跃改为相对雪道高度积分，加入松键短跳、按住增高和更宽松的缓冲/土狼时间，避免上坡地形抵消跳跃弧线。另整理 A4/A5 分层资产要求书，要求雪板、奶蛙、袋鼠独立分层并增加骑乘姿势。UE 5.8.3 `Nai_LongEditor Win64 Development` 编译成功（18/18 actions）；未开关卡或 PIE，实际构图与操作手感待负责人复核。详见 [第四轮调整记录](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_v05_运行画面第四轮调整_2026-10-29.md)、[A4/A5 资产要求书](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_A4雪板贴坡与骑乘角色资产要求书_2026-10-29.md) 与 [编译日志](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_VisualAdjustCompile_2026-10-29_v03.log)。
+
+**P5 A0 v05 运行画面第三轮修复。** 根据负责人最新截图修正奶蛙 atlas 的左右朝向、翻正袋鼠骑乘帧；把天空与三层背景按玩家含跳跃高度跟随，避免跳跃时镜头越过背景出现黑屏；雪道改为按 1 m 采样的连续程序网格，并以三次 Hermite 插值平滑路线高度，保留既有冰隙/断崖断口。UE 5.8.3 `Nai_LongEditor Win64 Development` 编译通过（14/14 actions）。未打开关卡或运行 PIE；实际朝向、层次和跳跃画面需负责人自行开图复核。详见 [第三轮修复记录](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_v05_运行画面第三轮修复_2026-10-29.md) 与 [编译日志](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_VisualAdjustCompile_2026-10-29_v02.log)。
+
+**P5 A0 v05 运行画面二次调整。** 负责人提供 898 m/1048 m 截图后定位背景视差图块落后于全速跟随镜头，改成图块贴镜头覆盖视野、UV 偏移负责视差；同时翻正 0° 空中奶蛙姿势并把可视雪面从 1.5 m 加厚至 2.2 m。UE 5.8.3 `Nai_LongEditor Win64 Development` 主体调整编译 18/18 actions 成功，最终增量编译 4/4 actions 成功。未打开关卡或运行 PIE；背景接缝/层级、角色姿态/锚点及雪面厚度待负责人自行开图复核。详见 [二次调整记录](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_v05_运行画面复核与二次调整_2026-10-29.md) 和 [编译日志](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_VisualAdjustCompile_2026-10-29.log)。
+
+**P4 W2 负责人画面反馈修正。** 普攻键改为 J；修正角色立绘朝屏幕左右的翻转、奶球前置出生与金色辨识度；A4 预览增加运行时场地下衬面，补掉舞台外黑区。相机关闭景深/运动模糊、降低 Bloom 并增强 Sharpen，固定步呈现加插值以改善清晰度和移动观感。隔离 scratch 最终增量编译通过 5/5 actions；未开图或运行 PIE，画面和手感待负责人复核。详见 [W2 工程实现记录](UE5/Records/p4_alpha/W2_工程实现记录.md) 与 [编译日志](UE5/Records/p4_alpha/evidence/W2/p4_w2_feedback_responsiveness_compile_20261029.log)。
+
+**P4 W2 接入战斗灰盒。** 固定步模拟现在支持 J 按住自动索敌奶球、Shift 冲撞/两格充能/冲刺与尾段无敌、Space 防御减伤、E 满能量大笑范围伤害/回血/清敌弹，并以临时追击敌供 A4 预览试玩；HUD 读取真实生命、能量和充能，`p4s2` 哈希扩展覆盖战斗状态。训练敌仅在运行时生成，不改关卡资产。实机手感、屏幕方向与 HUD 验收由项目负责人开图反馈；笑场/Boss 反制和 W2 试玩退出门仍未完成。详见 [W2 工程实现记录](UE5/Records/p4_alpha/W2_工程实现记录.md)。
+
+**P5 A0 v05 材质显示故障修复。** 负责人提供的运行截图对应材质图在 PCD3D_SM6 编译失败：UV 的 float2 与向量参数 float3 直接相乘，UE 因此回退默认材质。现给 UV 缩放/偏移添加 RG 分量遮罩，材质专用 Commandlet 重建 12 张贴图材质和天空材质（0 errors）；骑乘态从绿色方块切换到 A5 袋鼠下坡 atlas 帧。Editor Development 增量编译通过 10/10 actions。未打开地图或运行 PIE；修复后画面和 A0 视觉验收待负责人复核。详见 [P5 A0 修复记录](UE5/Records/p5_p6_plan/P5_A0_运行时美术接入实施记录_2026-10-28.md)、[材质报告](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_v05_material_repair_report.json) 和 [编译日志](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_RideArtCompile_2026-10-29.log)。
+
+**P5 单按高跳、摔倒恢复输入与雪坡画面修订。** 实机截图显示固定跳弧偏低，且恢复期玩家无法起跳；按当前单按固定高度方向，将起跳初速提至 13 m/s、重力保持 18 m/s²，纸面峰高约 4.6 m，并在恢复末段开放起跳缓冲。A0 侧视雪坡厚度由 220 cm 收至 95 cm，并沿坡面补雪体填充，冰缝/断崖仍保留开口，减少大块斜板与坡下空蓝。模拟状态哈希升至 v5。UE 5.8 Editor Development 最终增量编译通过 7/7 actions；未运行 PIE，需负责人检查修复后实际手感与画面。详见 [P5 跳跃与雪坡修复记录](UE5/Records/p5_m2/M2_跳跃与雪坡表现修复_2026-10-29.md) 和 [编译日志](UE5/Records/p5_m2/P5_jump_art_feedback_build_2026-10-29.log)。
+
+**P4 W2 修正屏幕移动方向与预警文案换行。** 固定机位 Yaw 90° 使世界 X 正方向投影到屏幕左侧；A1 Presenter 现把逻辑屏幕 X 映射到反向世界 X，输入/模拟坐标保持“右为正”。右上预警样式栏加宽并调小字体、关闭自动换行。UE 5.8.3 `Nai_LongEditor Win64 Development` 隔离 scratch 编译通过；本轮未开关卡或运行 PIE，实际操控与 HUD 排版待负责人检查。场地尺寸/相机参数保持不变，扁平观感需结合负责人开图后的画面再定。详见 [W2 工程实现记录](UE5/Records/p4_alpha/W2_工程实现记录.md) 和 [编译日志](UE5/Records/p4_alpha/evidence/W2/p4_screen_controls_compile_20261029_final.log)。
+
 ## 2026-10-28
 
-**P5 A0 运行时美术接入按 v02 交接计划推进。** A0 专用代码加入三层可循环视差、路线贴合雪面、跟随仿真状态的奶蛙立绘、路线事件树石/雪崩特效、玩家软影与 HUD 底板；M1/M2 灰盒保持隔离。新增 v05 样片脚本，导入 WIP atlas/UV 材质并新建独立地图供负责人开图。UE 5.8.3 Editor Development 首轮接入编译 10/10、最终增量 4/4 actions 成功；脚本仅做语法解析，未建图、未开图、未运行 PIE。A0/A1 仍待负责人 1080p/720p 运行复核，所有候选保持 WIP。详见 [A0 运行时美术接入记录](UE5/Records/p5_p6_plan/P5_A0_运行时美术接入实施记录_2026-10-28.md)。
+**P5 A0 运行时表现与 v05 样片已接入，首帧复核未通过。** 工程侧完成三层连续视差、路线贴合雪面、A4/A5 静帧表现和紧凑 HUD；侧视金币朝向与袋鼠静帧高度已调整，Editor Development 增量编译 4/4 actions 成功。v05 无界面建图成功，12 张 WIP 贴图和隔离材质已导入。负责人提供 308/1800 m 游戏窗口截图：远中近背景未显现，画面被灰网格/浅蓝空场切开；雪道仍是深灰分段块，断口醒目；奶蛙只呈小色块。HUD 位置较克制但字号偏小。今日只分析归档、不改代码；按负责人要求将工程开工留至 2026-10-29。截图和排查顺序见 [v05 运行画面简析](UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_v05_运行画面简析_2026-10-28.md)。贴图/材质导入成功不代表运行时可视链路或视觉出口门通过。
 
 **P4 W1 负责人放行并开始 W2。** 负责人接受当前 W1 标定画面和软影观感，决定轻微偏亮不再阻断。未采集的运行时卡表日志、动态 DepthY、A1 实际锚点与目标机性能转后续 A6 收口；不冒记为已验证。W2 已实现固定步输入缓冲、玩家移动/朝向和 P4 专属 Enhanced Input 控制器，隔离 UE 5.8.3 scratch 最近增量编译通过（7 actions）。详情见 [W2 工程实现记录](UE5/Records/p4_alpha/W2_工程实现记录.md)。
 

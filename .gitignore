@@ -30,6 +30,19 @@ UE5/NaiwaP0/Intermediate/
 UE5/NaiwaP0/Saved/
 UE5/Records/ReimportBackups/
 
+# ── 1b. 根目录 UE 探针工程残留（只做 git 侧排除，磁盘文件保留）────
+#    2026-11-01 做 P7 隔离编译探针时建在仓库根的一套工程，Content/ 是空的，
+#    Source/ 是当时的旧快照。真工程在 UE5/NaiwaP0/，这套不入库以免 add . 误提交。
+/Source/
+/Intermediate/
+/Binaries/
+/Saved/
+/DerivedDataCache/
+/Config/
+/Content/
+/.workbench/
+/Nai_Long.uproject
+
 # ── 2. 历史 / 候选 / 诊断目录（体积主体，可重建或可重算）────────
 #    P2 奶蛋低模候选：落选方案（运行时用的是 Art/Egg/ 那套），
 #    由 build_naiwa_egg_features.py 一条命令重出。
@@ -111,11 +124,24 @@ NaiwaAnimation_20261009/preview/
 !UE5/SourceAssets/P5/**/*.png
 !UE5/SourceAssets/P6/**/*.png
 !UE5/Records/p5_p6_plan/evidence/**/*.png
+#    P5 A0 背景摆放 v08 两张 293 m / 1123 m 合成图，被
+#    P5_A0_BackgroundPlacement_修复记录_2026-10-29.md 直接引用，删了记录就断链。
+!UE5/Records/p5_m2/*.png
+#    P1 死亡大笑动画的 96 张原始抽帧：B 站 BV1xsRSBQENA 第 2.0 s 起 24 fps，
+#    视频源不在本项目里，改抠图算法时只能靠这批重做。抠好的成品
+#    DeathLaughFrames 已在库内，这批是唯一上游。
+!UE5/SourceAssets/P1_Feedback/DeathLaughVideoFramesRaw/*.png
 #    P4 生产美术与验收证据（W1 历史技术样图保持可重建/忽略）
 !UE5/SourceAssets/P4/Characters/Alpha/**/*.png
 !UE5/SourceAssets/P4/Environment/**/*.png
 !UE5/SourceAssets/P4/UI/**/*.png
+#    W4 特效源（Boss 冲锋/砸盖/二阶段/冲刺撞击/防御/敌人死亡等）85 张，
+#    是 W4 特效的直接输入，AI 生成不可再生。
+!UE5/SourceAssets/P4/Effects/**/*.png
 !UE5/Records/p4_alpha/evidence/**/*.png
+#    P7 奶罐守卫战源美术与计划验收截图
+!UE5/SourceAssets/P7/**/*.png
+!UE5/Records/p7_td/evidence/**/*.png
 #    P4 W1 放行的唯一视觉依据：标定画面修复前/后各一张 1920x1080，
 #    环境再变就重截不出同一张，必须跟着记录走。
 !UE5/Records/p4_alpha/*.png
@@ -125,8 +151,9 @@ NaiwaAnimation_20261009/preview/
 #    P3 正式关设计图 2 张：与同目录的计划书、参数 json 属同一份交付，
 #    注意 Records 的放行必须逐层写，只放行 Records 根级盖不到子目录。
 !UE5/Records/p3_formal/design_reference/*.png
-#    原始解码帧属中间输入，由视频一条命令重新抽帧，点名挡住（须在放行之后）。
-UE5/SourceAssets/P1_Feedback/DeathLaughVideoFramesRaw/
+#    原始解码帧：早前按「可由视频一条命令重新抽帧」挡住。2026-11-09 改判入库 ——
+#    抽帧脚本只读本地 frame_*.png，没有下载逻辑；视频源在 B 站不在本项目控制内，
+#    删了就无法复原同一批。放行规则见上方 §5。
 
 # ── 6. 过程数据 ─────────────────────────────────────────────────
 #    .gitignore 无法按文件体积过滤，故按「目录特征 + 文件名特征」排除。
