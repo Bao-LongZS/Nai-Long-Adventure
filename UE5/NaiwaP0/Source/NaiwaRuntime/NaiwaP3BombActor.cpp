@@ -6,6 +6,7 @@
 #include "Engine/World.h"
 #include "Engine/Texture2D.h"
 #include "Materials/Material.h"
+#include "MaterialDomain.h"
 #include "Materials/MaterialInterface.h"
 #include "Materials/MaterialInstanceDynamic.h"
 #include "UObject/ConstructorHelpers.h"

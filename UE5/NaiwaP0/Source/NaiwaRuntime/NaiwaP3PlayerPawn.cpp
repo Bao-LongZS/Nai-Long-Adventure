@@ -4,6 +4,7 @@
 #include "Components/SceneComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Engine/StaticMesh.h"
+#include "Engine/World.h"
 #include "Engine/Texture2D.h"
 #include "InputCoreTypes.h"
 #include "Kismet/GameplayStatics.h"

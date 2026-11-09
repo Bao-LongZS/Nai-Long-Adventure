@@ -1,6 +1,7 @@
 #include "NaiwaP1PlayerController.h"
 #include "NaiwaP1CameraManager.h"
 #include "Components/InputComponent.h"
+#include "GameFramework/Pawn.h"
 #include "InputCoreTypes.h"
 #include "Kismet/GameplayStatics.h"
 

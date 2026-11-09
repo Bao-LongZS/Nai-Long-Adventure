@@ -15,6 +15,7 @@
 #include "Dom/JsonObject.h"
 #include "Dom/JsonValue.h"
 #include "Engine/World.h"
+#include "Engine/GameInstance.h"
 #include "Engine/StaticMeshActor.h"
 #include "EngineUtils.h"
 #include "GameFramework/CharacterMovementComponent.h"
@@ -24,6 +25,7 @@
 #include "HAL/PlatformTime.h"
 #include "Kismet/GameplayStatics.h"
 #include "Components/AudioComponent.h"
+#include "Containers/StringView.h"
 #include "NiagaraFunctionLibrary.h"
 #include "NiagaraSystem.h"
 #include "NiagaraComponent.h"
@@ -6869,17 +6871,17 @@ bool ANaiwaP1GameMode::TickV7MixedCoreCheckpointRecovery()
         if (ActiveCheckpoint.Get() != Checkpoint
             || !bV7MixedCoreCheckpointReached[V7MixedCoreRecoveryCheckpointIndex]) return false;
 
-        V7MixedCoreRecoveryRecord = MakeShared<FJsonObject>();
-        V7MixedCoreRecoveryRecord->SetStringField(TEXT("checkpoint_id"), Checkpoint->GetStableId().ToString());
-        V7MixedCoreRecoveryRecord->SetBoolField(TEXT("native_checkpoint_activation_observed"), true);
+        V7MixedCoreRecoveryRecord = MakeShared<FJsonObject>().ToSharedPtr();
+        V7MixedCoreRecoveryRecord->SetStringField(FStringView(TEXT("checkpoint_id")), Checkpoint->GetStableId().ToString());
+        V7MixedCoreRecoveryRecord->SetBoolField(FStringView(TEXT("native_checkpoint_activation_observed")), true);
         V7MixedCoreRecoveryDeathCountBefore = DeathEventCount;
         V7MixedCoreRecoveryStartedWall = FPlatformTime::Seconds();
         V7MixedCoreRecoveryPhase = 1;
         Character->StopJumping();
         Character->SetAutomatedMoveInput(FallDirectionByCheckpoint[V7MixedCoreRecoveryCheckpointIndex]);
-        V7MixedCoreRecoveryRecord->SetNumberField(TEXT("natural_fall_direction"),
+        V7MixedCoreRecoveryRecord->SetNumberField(FStringView(TEXT("natural_fall_direction")),
             FallDirectionByCheckpoint[V7MixedCoreRecoveryCheckpointIndex]);
-        V7MixedCoreRecoveryRecord->SetNumberField(TEXT("death_count_before"), DeathEventCount);
+        V7MixedCoreRecoveryRecord->SetNumberField(FStringView(TEXT("death_count_before")), DeathEventCount);
         RecordV7MixedCoreProbe(TEXT("checkpoint_natural_recovery_walk_off_started"));
         return true;
     }
@@ -6898,11 +6900,11 @@ bool ANaiwaP1GameMode::TickV7MixedCoreCheckpointRecovery()
         {
             Character->SetAutomatedMoveInput(0.0f);
             const bool bOneDeath = DeathEventCount == V7MixedCoreRecoveryDeathCountBefore + 1;
-            V7MixedCoreRecoveryRecord->SetBoolField(TEXT("production_dying_state_observed"),
+            V7MixedCoreRecoveryRecord->SetBoolField(FStringView(TEXT("production_dying_state_observed")),
                 State == ENaiwaP1State::Dying || State == ENaiwaP1State::Respawning);
-            V7MixedCoreRecoveryRecord->SetStringField(TEXT("death_cause"), LastDeathCause.ToString());
-            V7MixedCoreRecoveryRecord->SetNumberField(TEXT("death_count_after"), DeathEventCount);
-            V7MixedCoreRecoveryRecord->SetBoolField(TEXT("exactly_one_natural_death"), bOneDeath);
+            V7MixedCoreRecoveryRecord->SetStringField(FStringView(TEXT("death_cause")), LastDeathCause.ToString());
+            V7MixedCoreRecoveryRecord->SetNumberField(FStringView(TEXT("death_count_after")), DeathEventCount);
+            V7MixedCoreRecoveryRecord->SetBoolField(FStringView(TEXT("exactly_one_natural_death")), bOneDeath);
             V7MixedCoreRecoveryPhase = 2;
             RecordV7MixedCoreProbe(TEXT("checkpoint_natural_death_observed"));
             return true;
@@ -6944,16 +6946,16 @@ bool ANaiwaP1GameMode::TickV7MixedCoreCheckpointRecovery()
     const bool bOneDeath = DeathEventCount == V7MixedCoreRecoveryDeathCountBefore + 1;
     const bool bRecoveryPassed = bOneDeath && bExpectedRespawn && bSafeBankGrounded && bControlsRestored && bNoFallback;
 
-    V7MixedCoreRecoveryRecord->SetBoolField(TEXT("respawned_at_expected_checkpoint"), bExpectedRespawn);
-    V7MixedCoreRecoveryRecord->SetBoolField(TEXT("respawned_on_configured_safe_bank"), bSafeBankGrounded);
-    V7MixedCoreRecoveryRecord->SetBoolField(TEXT("controls_restored"), bControlsRestored);
-    V7MixedCoreRecoveryRecord->SetBoolField(TEXT("initial_spawn_fallback_used"), !bNoFallback);
-    V7MixedCoreRecoveryRecord->SetBoolField(TEXT("recovery_passed"), bRecoveryPassed);
-    V7MixedCoreRecoveryRecord->SetNumberField(TEXT("expected_respawn_x_cm"), ExpectedLocation.X);
-    V7MixedCoreRecoveryRecord->SetNumberField(TEXT("actual_respawn_x_cm"), ActualLocation.X);
-    V7MixedCoreRecoveryRecord->SetNumberField(TEXT("actual_respawn_feet_z_cm"), Character->GetCapsuleBottom());
-    V7MixedCoreRecoveryRecord->SetNumberField(TEXT("death_count_after"), DeathEventCount);
-    V7MixedCoreRecoveryRecord->SetNumberField(TEXT("respawn_placements_from_production_flow"), bOneDeath ? 1 : 0);
+    V7MixedCoreRecoveryRecord->SetBoolField(FStringView(TEXT("respawned_at_expected_checkpoint")), bExpectedRespawn);
+    V7MixedCoreRecoveryRecord->SetBoolField(FStringView(TEXT("respawned_on_configured_safe_bank")), bSafeBankGrounded);
+    V7MixedCoreRecoveryRecord->SetBoolField(FStringView(TEXT("controls_restored")), bControlsRestored);
+    V7MixedCoreRecoveryRecord->SetBoolField(FStringView(TEXT("initial_spawn_fallback_used")), !bNoFallback);
+    V7MixedCoreRecoveryRecord->SetBoolField(FStringView(TEXT("recovery_passed")), bRecoveryPassed);
+    V7MixedCoreRecoveryRecord->SetNumberField(FStringView(TEXT("expected_respawn_x_cm")), ExpectedLocation.X);
+    V7MixedCoreRecoveryRecord->SetNumberField(FStringView(TEXT("actual_respawn_x_cm")), ActualLocation.X);
+    V7MixedCoreRecoveryRecord->SetNumberField(FStringView(TEXT("actual_respawn_feet_z_cm")), Character->GetCapsuleBottom());
+    V7MixedCoreRecoveryRecord->SetNumberField(FStringView(TEXT("death_count_after")), DeathEventCount);
+    V7MixedCoreRecoveryRecord->SetNumberField(FStringView(TEXT("respawn_placements_from_production_flow")), bOneDeath ? 1 : 0);
     if (!bRecoveryPassed)
     {
         FinishV7MixedCoreProbe(TEXT("FAIL"), TEXT("Production checkpoint recovery did not return grounded to its exact safe bank with controls restored and no spawn fallback"));
@@ -8027,7 +8029,7 @@ void ANaiwaP1GameMode::FinishV7MixedCoreProbe(const TCHAR* Result, const FString
     Report->SetBoolField(TEXT("checkpoint_recovery_passed"), bV7MixedCoreRecoveryPassed);
     if (V7MixedCoreRecoveryRecord.IsValid())
     {
-        Report->SetObjectField(TEXT("checkpoint_recovery"), V7MixedCoreRecoveryRecord);
+        Report->SetObjectField(FStringView(TEXT("checkpoint_recovery")), V7MixedCoreRecoveryRecord);
         Report->SetBoolField(TEXT("required_pickup_reacquired_after_recovery"),
             bV7MixedCoreRecoveryPassed && bV7MixedCorePickupSeen && V7MixedCorePickup.IsValid()
             && CollectedRequiredPickupIds.Contains(V7MixedCorePickup->GetStableId())

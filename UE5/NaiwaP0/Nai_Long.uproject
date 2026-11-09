@@ -37,6 +37,11 @@
       "Name": "NaiwaRuntime",
       "Type": "Runtime",
       "LoadingPhase": "Default"
+    },
+    {
+      "Name": "NaiwaP7Runtime",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
     }
   ]
 }

@@ -1,6 +1,7 @@
 #include "NaiwaP3GridSubsystem.h"
 
 #include "HAL/PlatformMisc.h"
+#include "Engine/World.h"
 #include "Misc/Crc.h"
 #include "NaiwaP3BombActor.h"
 #include "NaiwaP3M1Settings.h"

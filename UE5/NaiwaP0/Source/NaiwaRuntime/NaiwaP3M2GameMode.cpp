@@ -15,6 +15,7 @@
 #include "NaiwaP3M2RuntimeSubsystem.h"
 #include "NaiwaP3M2WorldPresentation.h"
 #include "NaiwaP3PlayerPawn.h"
+#include "NaiwaP3PlayerController.h"
 #include "Sound/SoundAttenuation.h"
 #include "Sound/SoundBase.h"
 #include "TimerManager.h"
@@ -61,7 +62,7 @@ ANaiwaP3M2GameMode::ANaiwaP3M2GameMode()
 {
 	PrimaryActorTick.bCanEverTick = true;
 	DefaultPawnClass = ANaiwaP3PlayerPawn::StaticClass();
-	PlayerControllerClass = APlayerController::StaticClass();
+	PlayerControllerClass = ANaiwaP3PlayerController::StaticClass();
 	HUDClass = ANaiwaP3M2HUD::StaticClass();
 }
 

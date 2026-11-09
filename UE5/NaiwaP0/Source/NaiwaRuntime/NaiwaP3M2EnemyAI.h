@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "NaiwaP3BombTypes.h"
 #include "NaiwaP3M2SeededMap.h"
+#include "Math/RandomStream.h"
 
 enum class ENaiwaP3M2EnemyAIState : uint8
 {

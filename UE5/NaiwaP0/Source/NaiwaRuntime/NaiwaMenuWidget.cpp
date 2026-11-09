@@ -16,6 +16,7 @@
 #include "Components/Spacer.h"
 #include "Components/VerticalBox.h"
 #include "Components/VerticalBoxSlot.h"
+#include "Engine/GameInstance.h"
 #include "ImageUtils.h"
 #include "Engine/Texture2D.h"
 #include "Kismet/GameplayStatics.h"

@@ -8,5 +8,6 @@ public class Nai_LongTarget : TargetRules
         DefaultBuildSettings = BuildSettingsVersion.V7;
         IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_8;
         ExtraModuleNames.Add("NaiwaRuntime");
+        ExtraModuleNames.Add("NaiwaP7Runtime");
     }
 }

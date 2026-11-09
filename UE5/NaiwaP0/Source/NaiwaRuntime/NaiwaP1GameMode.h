@@ -10,6 +10,7 @@ class AStaticMeshActor;
 class UNiagaraSystem;
 class UAudioComponent;
 class USoundBase;
+class FJsonObject;
 class FJsonValue;
 
 UENUM(BlueprintType)

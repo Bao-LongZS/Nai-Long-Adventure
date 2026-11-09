@@ -2,6 +2,7 @@
 
 #include "Animation/AnimationPoseData.h"
 #include "Animation/AnimInstanceProxy.h"
+#include "Animation/AnimNodeBase.h"
 #include "Animation/AnimSequence.h"
 #include "AnimationRuntime.h"
 

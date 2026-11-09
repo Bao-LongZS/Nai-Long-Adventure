@@ -10,11 +10,12 @@
 #include "NaiwaP3GridSubsystem.h"
 #include "NaiwaP3M1HUD.h"
 #include "NaiwaP3PlayerPawn.h"
+#include "NaiwaP3PlayerController.h"
 
 ANaiwaP3M1GameMode::ANaiwaP3M1GameMode()
 {
 	DefaultPawnClass = ANaiwaP3PlayerPawn::StaticClass();
-	PlayerControllerClass = APlayerController::StaticClass();
+	PlayerControllerClass = ANaiwaP3PlayerController::StaticClass();
 	HUDClass = ANaiwaP3M1HUD::StaticClass();
 }
 

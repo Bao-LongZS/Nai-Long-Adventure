@@ -7,6 +7,7 @@
 #include "NaiwaP3M2Settings.h"
 #include "NaiwaP3M2GameMode.h"
 #include "Engine/Texture2D.h"
+#include "Engine/World.h"
 #include "GameFramework/GameModeBase.h"
 
 namespace

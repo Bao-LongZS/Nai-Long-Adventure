@@ -5,6 +5,7 @@
 #include "Misc/CoreDelegates.h"
 #include "Misc/Parse.h"
 #include "NaiwaP2Probe.h"
+#include "NaiwaWebNativeDataExport.h"
 
 namespace
 {
@@ -30,6 +31,34 @@ namespace
         void OnPostEngineInit()
         {
             const TCHAR* CommandLine = FCommandLine::Get();
+            FString WebP2OutputPath;
+            if (FParse::Value(CommandLine, TEXT("NaiwaWebExportP2Scene="), WebP2OutputPath))
+            {
+                FString SceneSourceHash;
+                FString PhysicsProfileHash;
+                FString ProjectileDriverHash;
+                FString GameModeHash;
+                FString ExporterHash;
+                FString RuntimeEntryHash;
+                const bool bHasHashes =
+                    FParse::Value(CommandLine, TEXT("NaiwaWebP2SceneSourceSha256="), SceneSourceHash) &&
+                    FParse::Value(CommandLine, TEXT("NaiwaWebP2ProfileSourceSha256="), PhysicsProfileHash) &&
+                    FParse::Value(CommandLine, TEXT("NaiwaWebP2ProjectileSourceSha256="), ProjectileDriverHash) &&
+                    FParse::Value(CommandLine, TEXT("NaiwaWebP2GameModeSourceSha256="), GameModeHash) &&
+                    FParse::Value(CommandLine, TEXT("NaiwaWebExporterSha256="), ExporterHash) &&
+                    FParse::Value(CommandLine, TEXT("NaiwaWebRuntimeEntrySha256="), RuntimeEntryHash);
+                const bool bExported = bHasHashes && NaiwaWebNative::FP2SceneExport::Run(
+                    WebP2OutputPath, SceneSourceHash, PhysicsProfileHash, ProjectileDriverHash, GameModeHash,
+                    ExporterHash, RuntimeEntryHash);
+                if (!bHasHashes)
+                {
+                    UE_LOG(LogTemp, Error, TEXT("Naiwa Web P2 export missing source SHA-256 arguments"));
+                }
+                FPlatformMisc::RequestExitWithStatus(false, bExported ? 0 : (bHasHashes ? 1 : 2),
+                    TEXT("Naiwa Web P2 data export completed"));
+                return;
+            }
+
             const bool bRunProbeTraj = FParse::Param(CommandLine, TEXT("NaiwaP2ProbeTraj"));
             const bool bRunProbeShot = FParse::Param(CommandLine, TEXT("NaiwaP2ProbeShot"));
             if (!bRunProbeTraj && !bRunProbeShot)

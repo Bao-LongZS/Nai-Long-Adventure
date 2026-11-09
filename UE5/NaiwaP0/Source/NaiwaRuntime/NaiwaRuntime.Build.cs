@@ -14,10 +14,21 @@ public class NaiwaRuntime : ModuleRules
             "UMG", "Slate", "SlateCore"
         });
         PrivateDependencyModuleNames.AddRange(new[] {
-            "Json", "JsonUtilities", "RenderCore", "RHI", "Niagara",
+            "Json", "JsonUtilities", "RenderCore", "RHI", "Niagara", "AudioMixerCore",
             // P2-ART-INTEG：Geo 风格背景的四层山折线剪影用 ProceduralMeshComponent
             // 在运行时生成三角带，避免为纯色背景引入静态网格资产管线。
             "ProceduralMeshComponent"
         });
+
+        // Editor-only presentation helpers are compiled into this module for the
+        // editor target. Link their owning modules explicitly; relying on the
+        // Editor shared PCH leaves these inline public-header symbols unresolved
+        // when the runtime module is rebuilt from scratch.
+        if (Target.bBuildEditor)
+        {
+            PrivateDependencyModuleNames.AddRange(new[] {
+                "UnrealEd", "PropertyEditor"
+            });
+        }
     }
 }
