@@ -16,6 +16,7 @@ ART_ROOT = "/Game/Naiwa/P5/ArtSample_v05"
 TEXTURE_DEST = "/Game/Naiwa/P5/ArtSample/Textures"
 MATERIAL_DEST = ART_ROOT + "/Materials"
 REPORT_PATH = ROOT / "UE5/Records/p5_p6_plan/evidence/P5_A0/P5_A0_EditorSample_v05_build_report.json"
+MATERIAL_REPAIR_REPORT_PATH = ROOT / "UE5/Records/p5_m2/P5_A0_BackgroundPlacement_materials_report_2026-10-29.json"
 
 report = {
     "status": "running",
@@ -30,24 +31,25 @@ def import_texture(source: Path, asset_name: str):
     assert source.is_file(), f"Missing P5 A0 WIP texture: {source}"
     asset_path = f"{TEXTURE_DEST}/{asset_name}"
     is_new = not unreal.EditorAssetLibrary.does_asset_exist(asset_path)
-    if is_new:
-        task = unreal.AssetImportTask()
-        task.set_editor_properties({
-            "filename": str(source),
-            "destination_path": TEXTURE_DEST,
-            "destination_name": asset_name,
-            "replace_existing": False,
-            "automated": True,
-            "save": True,
-        })
-        unreal.AssetToolsHelpers.get_asset_tools().import_asset_tasks([task])
+    task = unreal.AssetImportTask()
+    task.set_editor_properties({
+        "filename": str(source),
+        "destination_path": TEXTURE_DEST,
+        "destination_name": asset_name,
+        # These are WIP source-controlled sample textures. Reimport so a rebuilt
+        # map cannot silently keep stale pixels when the PNG changed in place.
+        "replace_existing": not is_new,
+        "automated": True,
+        "save": True,
+    })
+    unreal.AssetToolsHelpers.get_asset_tools().import_asset_tasks([task])
     texture = unreal.load_asset(asset_path)
     assert texture, f"Texture import did not produce {asset_path}"
     texture.set_editor_properties({
         "srgb": True,
         "never_stream": True,
         "compression_settings": unreal.TextureCompressionSettings.TC_DEFAULT,
-        "mip_gen_settings": unreal.TextureMipGenSettings.TMGS_SHARPEN0,
+        "mip_gen_settings": unreal.TextureMipGenSettings.TMGS_SHARPEN2,
     })
     assert texture.get_editor_property("srgb") is True, f"sRGB readback failed: {asset_path}"
     assert texture.get_editor_property("never_stream") is True, f"NeverStream readback failed: {asset_path}"
@@ -101,6 +103,17 @@ def make_texture_material(name: str, texture, alpha_mode: str):
         "parameter_name": "A0UVOffset",
         "default_value": unreal.LinearColor(0.0, 0.0, 0.0, 0.0),
     })
+    # VectorParameter emits float3, while UV inputs require float2. Explicitly
+    # mask RG before using the parameters in UV arithmetic; otherwise SM6 falls
+    # back to UE's default material for every A0 texture.
+    uv_scale_rg = unreal.MaterialEditingLibrary.create_material_expression(
+        material, unreal.MaterialExpressionComponentMask, -760, 460
+    )
+    uv_scale_rg.set_editor_properties({"r": True, "g": True, "b": False, "a": False})
+    uv_offset_rg = unreal.MaterialEditingLibrary.create_material_expression(
+        material, unreal.MaterialExpressionComponentMask, -460, 640
+    )
+    uv_offset_rg.set_editor_properties({"r": True, "g": True, "b": False, "a": False})
     uv_multiply = unreal.MaterialEditingLibrary.create_material_expression(
         material, unreal.MaterialExpressionMultiply, -740, 300
     )
@@ -109,14 +122,21 @@ def make_texture_material(name: str, texture, alpha_mode: str):
     )
     for source, output, target, input_name in (
         (uv, "", uv_multiply, "A"),
-        (uv_scale, "", uv_multiply, "B"),
+        (uv_scale, "", uv_scale_rg, ""),
+        (uv_scale_rg, "", uv_multiply, "B"),
         (uv_multiply, "", uv_add, "A"),
-        (uv_offset, "", uv_add, "B"),
-        (uv_add, "", sample, "Coordinates"),
+        (uv_offset, "", uv_offset_rg, ""),
+        (uv_offset_rg, "", uv_add, "B"),
+        (uv_add, "", sample, "UVs"),
     ):
-        assert unreal.MaterialEditingLibrary.connect_material_expressions(
+        if not unreal.MaterialEditingLibrary.connect_material_expressions(
             source, output, target, input_name
-        ), f"Could not connect A0 UV input {input_name} for {name}"
+        ):
+            available = unreal.MaterialEditingLibrary.get_material_expression_input_names(target)
+            raise RuntimeError(
+                f"Could not connect A0 UV input for {name}; "
+                f"requested={input_name!r}, available={list(available)}"
+            )
     assert unreal.MaterialEditingLibrary.connect_material_property(
         sample, "RGB", unreal.MaterialProperty.MP_EMISSIVE_COLOR
     ), f"Could not connect RGB for {name}"
@@ -247,16 +267,16 @@ def prepare_map(game_mode):
     return actors, levels, status
 
 
-def main():
+def build_art_assets():
     unreal.EditorAssetLibrary.make_directory(TEXTURE_DEST)
     unreal.EditorAssetLibrary.make_directory(MATERIAL_DEST)
     assets = {
-        "far": import_and_material("Backgrounds/Exports/BG_Mountain_Far_v01_WIP.png",
-                                   "T_P5_A0_MountainFar_v01", "M_P5_A0_MountainFar"),
-        "mid": import_and_material("Backgrounds/Exports/BG_Forest_Mid_v01_WIP.png",
-                                   "T_P5_A0_ForestMid_v01", "M_P5_A0_ForestMid"),
-        "near": import_and_material("Backgrounds/Exports/BG_Ridge_Near_v03_WIP.png",
-                                     "T_P5_A0_RidgeNear_v03", "M_P5_A0_RidgeNear"),
+        "far": import_and_material("Backgrounds/Exports/BG_Mountain_Far_v03_WIP.png",
+                                   "T_P5_A0_MountainFar_v03", "M_P5_A0_MountainFar", "translucent"),
+        "mid": import_and_material("Backgrounds/Exports/BG_Forest_Mid_v03_WIP.png",
+                                   "T_P5_A0_ForestMid_v03", "M_P5_A0_ForestMid", "translucent"),
+        "near": import_and_material("Backgrounds/Exports/BG_Ridge_Near_v04_WIP.png",
+                                     "T_P5_A0_RidgeNear_v04", "M_P5_A0_RidgeNear", "translucent"),
         "snow": import_and_material("Materials/Exports/T_Snow_Ground_v01_WIP.png",
                                      "T_P5_A0_SnowGround_v01", "M_P5_A0_SnowGround", "opaque"),
         "tree": import_and_material("Environment/Exports/O_Tree_A_v01_WIP.png",
@@ -283,6 +303,40 @@ def main():
                       "material": hero_material, "material_path": hero_material_path,
                       "alpha_mode": "masked"}
     sky_material, sky_material_path = make_solid_sky_material()
+    return assets, sky_material, sky_material_path
+
+
+def rebuild_materials_only():
+    """Recreate and compile v05 materials without loading or modifying any map."""
+    assets, sky_material, sky_material_path = build_art_assets()
+    for key in ("far", "mid", "near"):
+        assert assets[key]["material"].get_editor_property("blend_mode") == unreal.BlendMode.BLEND_TRANSLUCENT, (
+            f"Landscape alpha must remain translucent for {key}: {assets[key]['material_path']}"
+        )
+    assert unreal.EditorAssetLibrary.save_directory(MATERIAL_DEST, only_if_is_dirty=False, recursive=True), (
+        f"Could not save A0 v05 materials: {MATERIAL_DEST}"
+    )
+    materials = {key: value["material_path"] for key, value in assets.items()}
+    materials["sky"] = sky_material_path
+    result = {
+        "status": "materials_rebuilt_without_loading_map",
+        "engine": unreal.SystemLibrary.get_engine_version(),
+        "materials": materials,
+        "texture_count": len(assets),
+        "texture_mip_gen_settings": "TMGS_SHARPEN2",
+        "uv_parameter_dimensions": "A0UVScale/A0UVOffset RG component masks produce float2 UV values",
+        "background_blend_modes": {
+            key: str(assets[key]["material"].get_editor_property("blend_mode"))
+            for key in ("far", "mid", "near")
+        },
+    }
+    MATERIAL_REPAIR_REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    MATERIAL_REPAIR_REPORT_PATH.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    unreal.log("NAIWA_P5_A0_V05_MATERIALS_REBUILT " + json.dumps(result, ensure_ascii=False))
+
+
+def main():
+    assets, sky_material, sky_material_path = build_art_assets()
     game_mode = unreal.load_class(None, GAME_MODE_PATH)
     assert game_mode, f"Could not load P5 M2 GameMode: {GAME_MODE_PATH}"
     actors, levels, map_status = prepare_map(game_mode)
@@ -320,7 +374,48 @@ def main():
         "texture_count": len(assets),
         "background_components_runtime": 9,
         "background_layer_count": 3,
+        "background_layer_source_dimensions": {
+            "far": [2048, 512],
+            "mid": [2048, 512],
+            "near": [2048, 768],
+        },
+        "background_layer_canvas_dimensions": {
+            "far": [2048, 1536],
+            "mid": [2048, 1536],
+            "near": [2048, 1536],
+        },
+        "background_layer_world_sizes_cm": {
+            "far": [3600, 2700],
+            "mid": [3600, 2700],
+            "near": [3600, 2700],
+        },
+        "background_art_world_sizes_cm": {
+            "far": [3600, 900],
+            "mid": [3600, 900],
+            "near": [3600, 1350],
+        },
+        "background_layer_z_anchors_cm": [635, 365, 440],
+        "background_layer_vertical_padding_px": [512, 512, 384],
         "background_parallax": [0.12, 0.30, 0.65],
+        "snow_backdrop": {
+            "depth_y_cm": -1500,
+            "top_offset_from_route_cm": -650,
+            "depth_cm": 5000,
+            "geometry": "procedural route-profile strip sampled at 1 m; continuous through local slope changes",
+            "depth_order": "behind scenic art; in front of sky",
+            "top_edge_rule": "follows local route height instead of using a camera-relative horizontal edge",
+            "texture_mapping": "one vertical tile; 48 m horizontal repeat",
+        },
+        "snow_bank": {
+            "depth_cm": 2600,
+            "texture_mapping": "one vertical tile; 24 m horizontal repeat",
+            "route_surface_repeat_cm": 450,
+        },
+        "cliff_recess": {
+            "top_below_lower_lip_cm": 120,
+            "depth_cm": 2200,
+            "jump_corridor": "open above both route lips",
+        },
         "texture_paths": {key: value["texture_path"] for key, value in assets.items()},
         "material_paths": {key: value["material_path"] for key, value in assets.items()},
         "texture_import_settings_readback": {
@@ -344,8 +439,9 @@ def main():
         "sky_material_path": sky_material_path,
         "sky_material_blend_mode": str(sky_material.get_editor_property("blend_mode")),
         "wip_visual_connections": {
-            "route_background": "three continuously scrolling layers with preserved source aspect ratio",
-            "snow_surface": "route-following 1.5 m visible cutaway, 3 m world texture repeat",
+            "route_background": "three scrolling layers; original art pixel scale is preserved inside transparent vertical bleed canvases",
+            "snow_surface": "route-following 0.8 m textured top at 4.5 m repeat; broad side bank uses one stretched vertical tile and 24 m horizontal repeat",
+            "snow_backdrop": "single procedural profile following every route segment 6.5 m below the local snow line; no camera-height horizontal fill plane",
             "hero": "owner-approved A4 atlas; static frame rectangles, provisional feet anchor",
             "kangaroo": "A5 approved-base v04 WIP atlas; idle cell only, shown as a route prop",
             "coin": "flat coin silhouette for side-view readability",
@@ -356,11 +452,13 @@ def main():
             "All imported PNGs remain WIP and live under /Game/Naiwa/P5/ArtSample/Textures; v05 materials are isolated under ArtSample_v05.",
             "A4 atlas uses the owner-approved six-pose source; frame bounds come from the approved manifest and anchors remain provisional.",
             "A5 mount uses the owner-approved base atlas WIP for its idle frame only; it is a visual sample and has not passed runtime acceptance.",
-            "A0 layers now preserve the 2048x768 source aspect ratio and follow the route height; tile motion includes a continuous remainder for parallax.",
+            "A0 background art preserves source pixel scale (far/mid 2048x512; near 2048x768); snow backdrop follows route height behind scenic art so steep slopes cannot expose a horizontal fill edge.",
+            "The foreground snow bank maps a single texture vertically and uses a broad horizontal repeat to avoid repeated strata across the deep cutaway face.",
+            "Cliff recess begins 1.2 m below the lower lip and extends 22 m; ledge shoulders stay narrow and the jump corridor above both route lips remains open.",
             "The sky fill uses a dedicated unlit material so transparent asset areas do not depend on scene lighting.",
             "Only three reusable tiles per background layer are created at runtime; parallax factors are 0.12 / 0.30 / 0.65.",
             "Sky fill, route-aligned snow, live pawn art, route event sprites, avalanche layers and shadow are runtime-owned by the A0-only presentation path.",
-            "Cutout art uses an explicit unlit masked material; soft mist/shadow remain translucent. Runtime appearance still needs owner review.",
+            "Landscape layers and soft mist/shadow use unlit translucent materials; character and obstacle cutouts use unlit masked materials. Runtime appearance still needs owner review.",
             "Side-view planes use explicit roll=90 degrees (Python Rotator keyword arguments avoid the C++/Python positional-order mismatch).",
             "No 1080p/720p, texture-edge, frame-time, or gameplay acceptance is claimed by this build report; the owner opens and reviews the map.",
         ],
@@ -371,11 +469,26 @@ def main():
 
 
 try:
-    main()
+    command_line = unreal.SystemLibrary.get_command_line()
+    if "-P5MaterialsOnly" in command_line:
+        rebuild_materials_only()
+    elif "-P5BuildMap" in command_line:
+        main()
+    else:
+        raise RuntimeError(
+            "Select an explicit mode: -P5MaterialsOnly or -P5BuildMap. "
+            "Refusing to load or modify any map by default."
+        )
 except Exception:
-    report["status"] = "failed"
-    report["error"] = traceback.format_exc()
-    REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    REPORT_PATH.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
-    unreal.log_error(report["error"])
+    error_text = traceback.format_exc()
+    materials_only = "-P5MaterialsOnly" in unreal.SystemLibrary.get_command_line()
+    error_path = MATERIAL_REPAIR_REPORT_PATH if materials_only else REPORT_PATH
+    failure_report = {
+        "status": "failed",
+        "mode": "materials_only" if materials_only else "build_map",
+        "error": error_text,
+    }
+    error_path.parent.mkdir(parents=True, exist_ok=True)
+    error_path.write_text(json.dumps(failure_report, ensure_ascii=False, indent=2), encoding="utf-8")
+    unreal.log_error(error_text)
     raise

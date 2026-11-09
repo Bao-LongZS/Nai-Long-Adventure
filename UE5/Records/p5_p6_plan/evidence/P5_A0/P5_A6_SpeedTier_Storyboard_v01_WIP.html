@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P5 A6 速度分档美术预览 WIP</title>
+<style>
+  :root { color-scheme: light; --ink:#263648; --blue:#56718a; --ice:#e8f0f5; --snow:#fffdf8; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:28px; background:#e8edf1; color:var(--ink); font:15px/1.45 "Segoe UI","Microsoft YaHei",sans-serif; }
+  main { width:min(1500px,100%); margin:auto; }
+  header { display:flex; justify-content:space-between; align-items:end; gap:20px; margin:0 0 18px; }
+  h1 { margin:0; font-size:25px; letter-spacing:.02em; }
+  .subtitle { margin:4px 0 0; color:#607486; }
+  .badge { border:1px solid #d09a44; color:#865b1e; background:#fff7e5; padding:7px 11px; border-radius:999px; font-size:12px; font-weight:700; white-space:nowrap; }
+  .grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+  article { overflow:hidden; border-radius:16px; background:#fff; box-shadow:0 7px 22px #23394d14; border:1px solid #dbe4e9; }
+  .top { padding:15px 16px 11px; display:flex; justify-content:space-between; align-items:baseline; }
+  .top h2 { margin:0; font-size:18px; }
+  .speed { color:#617789; font-size:13px; font-weight:700; }
+  .scene { height:295px; position:relative; overflow:hidden; background:linear-gradient(#eaf3f8 0%,#f7fbfd 64%,#dfeaf0 100%); }
+  .scene::before { content:""; position:absolute; inset:0; opacity:.48; background:radial-gradient(ellipse at 75% 19%,#fff 0,transparent 40%); }
+  .hill { position:absolute; left:-8%; right:-8%; bottom:0; height:104px; background:linear-gradient(180deg,#fffefa 0%,#edf4f7 80%); clip-path:polygon(0 65%,18% 53%,35% 42%,55% 30%,74% 23%,100% 16%,100% 100%,0 100%); }
+  .track { position:absolute; left:var(--track-left); bottom:59px; width:var(--track-width); height:16px; opacity:var(--track-alpha); background:url("../../../../SourceAssets/P5/Materials/Exports/T_Snow_Track_v01_WIP.png") center/100% 100% no-repeat; transform:rotate(-8deg); }
+  .mist { position:absolute; left:var(--mist-left); bottom:58px; width:var(--mist-width); height:var(--mist-height); opacity:var(--mist-alpha); background:url("../../../../SourceAssets/P5/FX/Exports/FX_Snow_Mist_v01_WIP.png") center/100% 100% no-repeat; transform:scaleX(-1) rotate(-8deg); filter:saturate(.8); }
+  /* The exported board has a wide transparent pivot gutter. Size the canvas so the painted board is about 1.6x the frog body. */
+  .board { position:absolute; left:calc(var(--frog-left) - 91px); bottom:13px; width:315px; height:79px; object-fit:contain; transform:rotate(-8deg); filter:drop-shadow(0 2px 1px #697d8b38); }
+  /* Glide_01 footContactUV is x=.5, y=.918. With this cell scale, the visible foot baseline lands on the board's upper edge. */
+  .frog { position:absolute; left:var(--frog-left); bottom:55px; width:138px; height:138px; background:url("../../../../SourceAssets/P5/Characters/Exports/P5_A4_NaiwaBodyAtlas_v05_WIP.png") left top/400% 600% no-repeat; }
+  .flake { display:none; position:absolute; width:14px; height:14px; background:url("../../../../SourceAssets/P5/FX/Exports/FX_Snowflake_v01_WIP.png") center/contain no-repeat; }
+  .f1 { left:67%; top:22%; transform:rotate(12deg); }
+  .f2 { left:30%; top:36%; width:10px; height:10px; transform:rotate(-18deg); }
+  .f3 { left:78%; top:48%; width:18px; height:18px; transform:rotate(32deg); }
+  .f4 { left:53%; top:15%; width:9px; height:9px; transform:rotate(24deg); }
+  .f5 { left:17%; top:52%; width:17px; height:17px; transform:rotate(-12deg); }
+  .puff { display:none; position:absolute; left:calc(var(--frog-left) + 24px); bottom:60px; width:90px; height:90px; opacity:.9; background:url("../../../../SourceAssets/P5/FX/Exports/FX_LandPuff_v01_WIP.png") 33.333% 33.333%/400% 400% no-repeat; }
+  .trick .puff { display:block; }
+  .glint { display:none; position:absolute; left:calc(var(--frog-left) + 65px); bottom:88px; width:9px; height:9px; border-radius:50%; background:#fff7cb; box-shadow:0 0 17px 7px #ffe29b9c; }
+  .trick .glint { display:block; }
+  .note { min-height:110px; padding:13px 16px 16px; border-top:1px solid #edf1f3; }
+  .note strong { display:block; margin-bottom:4px; color:#354e62; font-size:13px; }
+  .note p { margin:0; color:#536a7b; font-size:13px; }
+  .meter { height:6px; margin-top:10px; overflow:hidden; border-radius:99px; background:#e4ecf1; }
+  .meter span { display:block; width:var(--level); height:100%; border-radius:inherit; background:linear-gradient(90deg,#9fb8c8,#4f7893); }
+  .slow-note { --level:22%; }
+  .cruise-note { --level:48%; }
+  .fast-note { --level:82%; }
+  .trick-note { --level:100%; }
+  .scene.slow { --frog-left:99px; --track-left:13px; --track-width:75px; --track-alpha:.30; --mist-left:14px; --mist-width:70px; --mist-height:18px; --mist-alpha:.16; --level:22%; }
+  .scene.cruise { --frog-left:99px; --track-left:0; --track-width:150px; --track-alpha:.50; --mist-left:0; --mist-width:124px; --mist-height:31px; --mist-alpha:.32; --level:48%; }
+  .scene.fast { --frog-left:99px; --track-left:0; --track-width:258px; --track-alpha:.78; --mist-left:0; --mist-width:218px; --mist-height:55px; --mist-alpha:.60; --level:82%; }
+  .scene.trick { --frog-left:99px; --track-left:0; --track-width:258px; --track-alpha:.65; --mist-left:0; --mist-width:224px; --mist-height:56px; --mist-alpha:.48; --level:100%; }
+  .scene.slow .flake { display:none; }
+  .scene.cruise .f1 { display:block; opacity:.26; }
+  .scene.cruise .f3 { display:block; opacity:.18; }
+  .scene.fast .flake { display:block; opacity:.62; }
+  .scene.fast .f2,.scene.fast .f4 { opacity:.44; }
+  .scene.fast .f5 { display:none; }
+  .scene.trick .flake { display:block; opacity:.64; }
+  .scene.trick .f2,.scene.trick .f4 { opacity:.42; }
+  .scene.trick .f5 { opacity:.95; }
+  footer { margin-top:15px; padding:12px 15px; border-radius:12px; background:#f8fbfc; border:1px solid #dce5ea; color:#536a7b; font-size:12px; }
+  footer b { color:#364f63; }
+  @media (max-width:1100px) { .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  @media (max-width:600px) { body { padding:14px; } header { display:block; } .badge { display:inline-block; margin-top:10px; } .grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div><h1>P5 · A6 速度分档</h1><p class="subtitle">同一坡面构图，逐档增强板迹、贴地雪粉与雪粒反馈</p></div>
+    <span class="badge">美术对照样片 WIP · 非 UE 实机截图</span>
+  </header>
+  <section class="grid" aria-label="四档速度效果对照">
+    <article>
+      <div class="top"><h2>慢速 / 上坡</h2><span class="speed">9–14 m/s</span></div>
+      <div class="scene slow"><div class="hill"></div><div class="mist"></div><div class="track"></div><img class="board" src="../../../../SourceAssets/P5/Characters/Exports/P5_A4_Snowboard_v01_WIP.png"><div class="frog"></div><i class="flake f1"></i><i class="flake f2"></i><i class="flake f3"></i><i class="flake f4"></i><i class="flake f5"></i></div>
+      <div class="note slow-note"><strong>短、稀、贴地</strong><p>重心较直略收势；滑痕紧贴板尾，雪粉只出现在接触点。</p><div class="meter" aria-label="效果强度 22%"><span></span></div></div>
+    </article>
+    <article>
+      <div class="top"><h2>巡航</h2><span class="speed">15–21 m/s</span></div>
+      <div class="scene cruise"><div class="hill"></div><div class="mist"></div><div class="track"></div><img class="board" src="../../../../SourceAssets/P5/Characters/Exports/P5_A4_Snowboard_v01_WIP.png"><div class="frog"></div><i class="flake f1"></i><i class="flake f2"></i><i class="flake f3"></i><i class="flake f4"></i><i class="flake f5"></i></div>
+      <div class="note cruise-note"><strong>默认基准</strong><p>稳定前倾循环；轻薄尾迹连续可见，雪粒稀疏且不闪烁。</p><div class="meter" aria-label="效果强度 48%"><span></span></div></div>
+    </article>
+    <article>
+      <div class="top"><h2>快速下坡</h2><span class="speed">22–26 m/s</span></div>
+      <div class="scene fast"><div class="hill"></div><div class="mist"></div><div class="track"></div><img class="board" src="../../../../SourceAssets/P5/Characters/Exports/P5_A4_Snowboard_v01_WIP.png"><div class="frog"></div><i class="flake f1"></i><i class="flake f2"></i><i class="flake f3"></i><i class="flake f4"></i><i class="flake f5"></i></div>
+      <div class="note fast-note"><strong>更长、更密</strong><p>长尾迹和高密贴地雪粉；角色、落点、障碍剪影保持锐利。</p><div class="meter" aria-label="效果强度 82%"><span></span></div></div>
+    </article>
+    <article>
+      <div class="top"><h2>技巧加速</h2><span class="speed">32–38 m/s</span></div>
+      <div class="scene trick"><div class="hill"></div><div class="mist"></div><div class="puff"></div><div class="track"></div><img class="board" src="../../../../SourceAssets/P5/Characters/Exports/P5_A4_Snowboard_v01_WIP.png"><div class="frog"></div><i class="glint"></i><i class="flake f1"></i><i class="flake f2"></i><i class="flake f3"></i><i class="flake f4"></i><i class="flake f5"></i></div>
+      <div class="note trick-note"><strong>短促峰值，再衰减</strong><p>落地点亮起 LandPuff 和雪浪脉冲 0.25–0.5 秒，随后回落到快速档。</p><div class="meter" aria-label="脉冲峰值 100%"><span></span></div></div>
+    </article>
+  </section>
+  <footer><b>使用说明：</b>本页直接引用 P5 现有 WIP 的奶蛙、雪板、T_Snow_Track、FX_Snow_Mist、FX_Snowflake 与 FX_LandPuff；尺寸、透明度和重复数量只表达相对强度方向，未对应 UE 粒子参数或真实运行画面。速度状态、跳高、相机和路线规则保持不变。A1 Editor 样片仍需 1080p/720p 实机截图与效果遮挡复核。</footer>
+</main>
+</body>
+</html>

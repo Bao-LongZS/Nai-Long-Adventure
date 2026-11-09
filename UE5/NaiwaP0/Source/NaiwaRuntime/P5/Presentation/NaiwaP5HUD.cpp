@@ -39,21 +39,101 @@ void ANaiwaP5HUD::DrawHUD()
 	const FLinearColor WarningText = State.bAvalancheWarning ?
 		FLinearColor(1.0f, 0.20f, 0.16f, 1.0f) : FLinearColor(0.35f, 0.90f, 1.0f, 1.0f);
 	const bool bA0ArtSample = IsNaiwaP5A0ArtSampleWorld(GetWorld());
+	if (bA0ArtSample)
+	{
+		// Keep the scene open: only distance/score at upper left, avalanche at upper right,
+		// and a compact control hint at the bottom. Detailed state stays in the log.
+		const float UiScale = FMath::Clamp(Canvas->ClipX / 1920.0f, 0.80f, 1.0f);
+		const float Margin = 24.0f * UiScale;
+		const FLinearColor PanelFill(0.025f, 0.060f, 0.11f, 0.78f);
+		const FLinearColor PanelEdge(0.60f, 0.79f, 0.91f, 0.24f);
+		const float LeftWidth = 410.0f * UiScale;
+		const float PanelHeight = 132.0f * UiScale;
+		const float RightWidth = 330.0f * UiScale;
+		const float LeftX = Margin;
+		const float TopY = Margin;
+		const float RightX = Canvas->ClipX - Margin - RightWidth;
+		const float RightY = Margin;
+		const float Pad = 16.0f * UiScale;
+
+		DrawRect(PanelFill, LeftX, TopY, LeftWidth, PanelHeight);
+		DrawRect(PanelEdge, LeftX, TopY, LeftWidth, 2.0f * UiScale);
+		DrawText(TEXT("P5  /  DOWNHILL"), MainText, LeftX + Pad, TopY + 10.0f * UiScale,
+			Font, 0.82f * UiScale);
+		DrawText(FString::Printf(TEXT("%.0f  /  %.0f m"), State.DistanceMeters, RouteLengthMeters),
+			MainText, LeftX + Pad, TopY + 34.0f * UiScale, Font, 1.48f * UiScale);
+		DrawText(FString::Printf(TEXT("SCORE %d     COINS %d     COMBO x%.1f"),
+			State.Score.GetTotalScore(), State.CollectedCoinIds.Num(), State.ComboMultiplier),
+			MainText, LeftX + Pad, TopY + 78.0f * UiScale, Font, 0.78f * UiScale);
+
+		FString ActionStatus = TEXT("SPACE  JUMP");
+		FLinearColor ActionColor = MainText;
+		if (State.bFallen)
+		{
+			ActionStatus = TEXT("FALLEN  /  PRESS SPACE TO QUEUE JUMP");
+			ActionColor = WarningText;
+		}
+		else if (State.bRiding)
+		{
+			ActionStatus = TEXT("KANGAROO RIDE  /  JUMP TO CLEAR");
+		}
+		else if (State.bAirborne)
+		{
+			const int32 Flips = FMath::Min(2, FMath::FloorToInt(FMath::Abs(State.RotationDegrees) / 360.0));
+			ActionStatus = FString::Printf(TEXT("AIR  %d DEG  /  %d OF 2 FLIPS"),
+				FMath::RoundToInt(State.RotationDegrees), Flips);
+		}
+		DrawText(ActionStatus, ActionColor, LeftX + Pad, TopY + 103.0f * UiScale,
+			Font, 0.76f * UiScale);
+
+		DrawRect(PanelFill, RightX, RightY, RightWidth, PanelHeight);
+		DrawRect(PanelEdge, RightX, RightY, RightWidth, 2.0f * UiScale);
+		DrawText(TEXT("AVALANCHE GAP"), WarningText, RightX + Pad, RightY + 10.0f * UiScale,
+			Font, 0.82f * UiScale);
+		DrawText(FString::Printf(TEXT("%.1f m"), State.AvalancheGapMeters),
+			WarningText, RightX + Pad, RightY + 35.0f * UiScale, Font, 1.48f * UiScale);
+		const float GapBarX = RightX + Pad;
+		const float GapBarY = RightY + 89.0f * UiScale;
+		const float GapBarWidth = RightWidth - 2.0f * Pad;
+		const float GapBarHeight = 10.0f * UiScale;
+		const float GapAlpha = FMath::Clamp(State.AvalancheGapMeters /
+			NaiwaP5Rules::AvalancheGapMaxMeters, 0.0, 1.0);
+		DrawRect(FLinearColor(0.12f, 0.16f, 0.20f, 0.95f), GapBarX, GapBarY, GapBarWidth, GapBarHeight);
+		DrawRect(State.bAvalancheWarning ? FLinearColor(0.95f, 0.13f, 0.12f, 1.0f) :
+			FLinearColor(0.30f, 0.78f, 0.90f, 1.0f), GapBarX, GapBarY,
+			GapBarWidth * GapAlpha, GapBarHeight);
+		DrawText(TEXT("WALL"), WarningText, GapBarX, GapBarY + 13.0f * UiScale, Font, 0.62f * UiScale);
+		DrawText(TEXT("YOU"), MainText, GapBarX + GapBarWidth - 32.0f * UiScale,
+			GapBarY + 13.0f * UiScale, Font, 0.62f * UiScale);
+
+		const float HintHeight = 30.0f * UiScale;
+		const float HintY = Canvas->ClipY - Margin - HintHeight;
+		DrawRect(PanelFill, Margin, HintY, 390.0f * UiScale, HintHeight);
+		DrawText(TEXT("SPACE  JUMP  /  A D  FLIP  /  R  RESTART"), MainText,
+			Margin + 12.0f * UiScale, HintY + 7.0f * UiScale, Font, 0.72f * UiScale);
+
+		if (State.Phase == ENaiwaP5RunPhase::Finished || State.Phase == ENaiwaP5RunPhase::Swallowed)
+		{
+			const float CardWidth = 440.0f * UiScale;
+			const float CardHeight = 104.0f * UiScale;
+			const float CardX = (Canvas->ClipX - CardWidth) * 0.5f;
+			const float CardY = (Canvas->ClipY - CardHeight) * 0.5f;
+			DrawRect(PanelFill, CardX, CardY, CardWidth, CardHeight);
+			DrawText(State.Phase == ENaiwaP5RunPhase::Finished ? TEXT("FINISH") : TEXT("AVALANCHE CAUGHT"),
+				State.Phase == ENaiwaP5RunPhase::Finished ? FLinearColor(0.40f, 1.0f, 0.58f, 1.0f) : WarningText,
+				CardX + 18.0f * UiScale, CardY + 16.0f * UiScale, Font, 1.1f * UiScale);
+			DrawText(FString::Printf(TEXT("+%d TICKETS   /   HOLD R TO RETRY"),
+				State.Score.GetTicketsEarned()), MainText, CardX + 18.0f * UiScale,
+				CardY + 58.0f * UiScale, Font, 0.9f * UiScale);
+		}
+		return;
+	}
 	const float X = 40.0f;
 	float Y = 36.0f;
 	const float Scale = 1.25f;
-	if (bA0ArtSample)
-	{
-		const float PanelWidth = FMath::Min(Canvas->ClipX - 48.0f, 900.0f);
-		const float PanelHeight = FMath::Min(Canvas->ClipY - 36.0f, 520.0f);
-		DrawRect(FLinearColor(0.035f, 0.075f, 0.12f, 0.78f), 24.0f, 20.0f,
-			PanelWidth, PanelHeight);
-	}
-	const FString RouteTitle = bA0ArtSample
-		? TEXT("P5 A0 ART SAMPLE  |  SPACE JUMP / HOLD  |  A / D FLIP")
-		: (State.bM2PrototypeRoute
-			? TEXT("P5 M2 GRAYBOX 1800M  |  SPACE: JUMP (HOLD FOR HEIGHT)  |  A / D: ROTATE")
-			: TEXT("P5 M1 GRAYBOX 100M  |  SPACE: JUMP (HOLD FOR HEIGHT)  |  A / D: ROTATE"));
+	const FString RouteTitle = State.bM2PrototypeRoute
+			? TEXT("P5 M2 GRAYBOX 1800M  |  SPACE: JUMP  |  A / D: ROTATE")
+			: TEXT("P5 M1 GRAYBOX 100M  |  SPACE: JUMP  |  A / D: ROTATE");
 	DrawText(RouteTitle,
 		MainText, X, Y, Font, Scale);
 	Y += 34.0f;
@@ -72,9 +152,9 @@ void ANaiwaP5HUD::DrawHUD()
 		State.ComboMultiplier), MainText, X, Y, Font, 1.1f);
 	Y += 38.0f;
 	const TCHAR* ActionStatus = State.bFallen ? TEXT("FALLEN - RECOVERING") :
-		(State.bAirborne ? TEXT("AIRBORNE - A / D ROTATE, HOLD SPACE FOR HEIGHT") :
+		(State.bAirborne ? TEXT("AIRBORNE - A / D ROTATE") :
 		(State.bRiding ? TEXT("RIDING KANGAROO - JUMP TO CLEAR OBSTACLES") :
-		(State.bJumpCharging ? TEXT("AIRBORNE - HOLD SPACE FOR MORE HEIGHT") : TEXT("READY - PRESS SPACE TO JUMP"))));
+		TEXT("READY - PRESS SPACE TO JUMP")));
 	DrawText(ActionStatus, State.bFallen ? WarningText : MainText, X, Y, Font, 1.0f);
 	Y += 28.0f;
 	if (State.bAirborne)

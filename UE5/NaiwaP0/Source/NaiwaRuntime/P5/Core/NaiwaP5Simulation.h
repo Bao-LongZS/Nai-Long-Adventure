@@ -13,14 +13,12 @@ namespace NaiwaP5Rules
 	inline constexpr double AvalancheGapMaxMeters = 60.0;
 	inline constexpr double AvalancheWarningGapMeters = 20.0;
 
-	inline constexpr double JumpLaunchVelocityMetersPerSecond = 7.4;
-	inline constexpr double JumpHoldAccelerationMetersPerSecondSquared = 20.0;
-	inline constexpr double JumpGravityMetersPerSecondSquared = 16.0;
-	inline constexpr double JumpMaxHoldSeconds = 0.30;
+	inline constexpr double JumpLaunchVelocityMetersPerSecond = 13.0;
+	inline constexpr double JumpGravityMetersPerSecondSquared = 18.0;
 	inline constexpr double RideJumpVelocityMultiplier = 1.225;
 	inline constexpr double CliffLaunchVelocityMetersPerSecond = 13.0;
-	inline constexpr double JumpBufferSeconds = 0.18;
-	inline constexpr double CoyoteTimeSeconds = 0.16;
+	inline constexpr double JumpBufferSeconds = 0.24;
+	inline constexpr double CoyoteTimeSeconds = 0.20;
 
 	inline constexpr double RotationSpeedDegreesPerSecond = 760.0;
 	inline constexpr double MaxRotationDegrees = 720.0;

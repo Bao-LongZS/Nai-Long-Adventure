@@ -1,0 +1,119 @@
+{
+  "manifestId": "P5_A1_Backgrounds",
+  "version": "v06",
+  "created": "2026-10-29",
+  "status": "WIP; far/mid exports now preserve native dimensions and have byte-identical horizontal edge columns; runtime visual acceptance remains pending",
+  "approvedDirection": "P5 A0 natural-tone v02 scene; original character first draft remains frozen",
+  "exportTool": "UE5/Scripts/p5_export_a1_ridge_seamless_candidate.ps1 with -MatchAlphaSeam -PreserveSourceDimensions -KeepAllAlphaComponents",
+  "assets": [
+    {
+      "assetId": "BG_Mountain_Far",
+      "source": "UE5/SourceAssets/P5/Backgrounds/Source/BG_Mountain_Far_Source_v01.png",
+      "sourceDimensions": [
+        2048,
+        512
+      ],
+      "export": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Mountain_Far_v02_WIP.png",
+      "exportDimensions": [
+        2048,
+        512
+      ],
+      "exportSha256": "0E44C3F0029C1F46DDC6B69D86FC2359B02EAAA34B894469B0166DADCE8F9416",
+      "processing": "Preserved all original alpha components and source dimensions; within 16 px at both horizontal edges, alpha coverage and premultiplied color converge toward the lower-coverage edge sample.",
+      "seamReview": {
+        "method": "per-row RGBA edge-column diff plus two-tile visual preview",
+        "edgeMeanAbsDiffRGBA": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "edgeMaxAbsDiffRGBA": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "preview": "UE5/Records/p5_p6_plan/evidence/P5_A1_Backgrounds/P5_A1_MountainFarTiling_v01.png",
+        "status": "Export edges match byte-for-byte in RGBA; runtime parallax/alpha review remains pending."
+      }
+    },
+    {
+      "assetId": "BG_Forest_Mid",
+      "source": "UE5/SourceAssets/P5/Backgrounds/Source/BG_Forest_Mid_Source_v01.png",
+      "sourceDimensions": [
+        2048,
+        512
+      ],
+      "export": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Forest_Mid_v02_WIP.png",
+      "exportDimensions": [
+        2048,
+        512
+      ],
+      "exportSha256": "5087BD283757A75A1F0B51FEFC2DF2128433745662E134B8CB38864F613AFCF2",
+      "processing": "Preserved all original alpha components and source dimensions; within 16 px at both horizontal edges, alpha coverage and premultiplied color converge toward the lower-coverage edge sample.",
+      "seamReview": {
+        "method": "per-row RGBA edge-column diff plus two-tile visual preview",
+        "edgeMeanAbsDiffRGBA": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "edgeMaxAbsDiffRGBA": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "preview": "UE5/Records/p5_p6_plan/evidence/P5_A1_Backgrounds/P5_A1_ForestMidTiling_v01.png",
+        "status": "Export edges match byte-for-byte in RGBA; runtime parallax/alpha review remains pending."
+      }
+    },
+    {
+      "assetId": "BG_Ridge_Near",
+      "source": "UE5/SourceAssets/P5/Backgrounds/Source/BG_Ridge_Near_Source_v04_WIP.png",
+      "sourceDimensions": [
+        2060,
+        763
+      ],
+      "sourceSha256": "4FE56E97FAC24C53E13AC627C700842C53CBA9DDF336D838C029C0FDBAFBEEB6",
+      "export": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Ridge_Near_v03_WIP.png",
+      "exportDimensions": [
+        2048,
+        768
+      ],
+      "exportSha256": "60ADA6D386492EADE090FC6DABCE0EA6A104DF93C0E10C15A99F3BF8C4888C09",
+      "processing": "Removed disconnected alpha components outside the largest terrain component with a 2 px fringe; resized to target dimensions; within 16 px at each horizontal edge, alpha coverage and premultiplied color converge toward the lower-coverage edge sample. Original source remains unchanged.",
+      "seamReview": {
+        "method": "per-row RGBA edge-column diff plus two-tile visual preview",
+        "sourceV04MeanAbsDiffRGBA": [
+          15.713,
+          11.887,
+          6.446,
+          5.097
+        ],
+        "exportV03MeanAbsDiffRGBA": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "exportV03MaxAbsDiffRGBA": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "preview": "UE5/Records/p5_p6_plan/evidence/P5_A1_Backgrounds/P5_A1_RidgeTiling_v09.png",
+        "status": "First and last export columns match byte-for-byte in RGBA. Preview still requires judgment of contour tangent/texture continuity; WIP."
+      }
+    }
+  ],
+  "runtimeAccepted": false,
+  "remainingChecks": [
+    "review far/mid/near overlap and three-tile continuity during intended parallax in UE at 1080p and 720p",
+    "review alpha filtering and compression in the actual project texture/material path",
+    "complete the A0 Editor sample with route geometry, character, obstacle, avalanche wall and HUD"
+  ]
+}

@@ -28,14 +28,14 @@ public:
 
 	const FNaiwaP5RunState& GetState() const { return State; }
 	int32 GetDeferredCatchUpSteps() const { return State.DeferredCatchUpSteps; }
-	uint64 GetSimulationStateHashV4() const;
+	uint64 GetSimulationStateHashV5() const;
 	const FNaiwaP5RouteFixture& GetActivePrototypeFixture() const;
 	FString GetLastAbilityEventText() const;
 
 private:
 	void AdvanceFixedStep();
 	void ApplyInput(const FNaiwaP5InputCommand& Command);
-	void StartJump(bool bChargeWhileHeld = true);
+	void StartJump();
 	void StartCliffLaunch();
 	void ResolveLanding();
 	void StartFall(double GapPenaltyMeters);

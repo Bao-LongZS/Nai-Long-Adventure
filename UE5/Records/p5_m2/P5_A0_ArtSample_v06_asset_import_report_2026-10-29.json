@@ -1,0 +1,88 @@
+{
+  "status": "assets_imported_pending_editor_review",
+  "package": "/Game/Naiwa/P5/ArtSample_v06",
+  "scope": "isolated P5 candidate assets; no map was loaded, created, or saved",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "assets": [
+    {
+      "key": "a4_body",
+      "source": "UE5/SourceAssets/P5/Characters/Exports/P5_A4_NaiwaBodyAtlas_v05_WIP.png",
+      "texture": "/Game/Naiwa/P5/ArtSample_v06/Textures/T_P5_A4_NaiwaBodyAtlas_v05_WIP",
+      "material": "/Game/Naiwa/P5/ArtSample_v06/Materials/M_P5_A4_NaiwaBodyAtlas_v05_WIP",
+      "alpha_mode": "translucent",
+      "wip": true
+    },
+    {
+      "key": "a4_snowboard",
+      "source": "UE5/SourceAssets/P5/Characters/Exports/P5_A4_Snowboard_v01_WIP.png",
+      "texture": "/Game/Naiwa/P5/ArtSample_v06/Textures/T_P5_A4_Snowboard_v01_WIP",
+      "material": "/Game/Naiwa/P5/ArtSample_v06/Materials/M_P5_A4_Snowboard_v01_WIP",
+      "alpha_mode": "translucent",
+      "wip": true
+    },
+    {
+      "key": "a5_mount",
+      "source": "UE5/SourceAssets/P5/Environment/Exports/P5_A5_KangarooMount_v02_WIP.png",
+      "texture": "/Game/Naiwa/P5/ArtSample_v06/Textures/T_P5_A5_KangarooMount_v02_WIP",
+      "material": "/Game/Naiwa/P5/ArtSample_v06/Materials/M_P5_A5_KangarooMount_v02_WIP",
+      "alpha_mode": "translucent",
+      "wip": true
+    },
+    {
+      "key": "a6_land_puff",
+      "source": "UE5/SourceAssets/P5/FX/Exports/FX_LandPuff_v01_WIP.png",
+      "texture": "/Game/Naiwa/P5/ArtSample_v06/Textures/T_P5_A6_LandPuff_v01_WIP",
+      "material": "/Game/Naiwa/P5/ArtSample_v06/Materials/M_P5_A6_LandPuff_v01_WIP",
+      "alpha_mode": "translucent",
+      "wip": true
+    },
+    {
+      "key": "a6_snowflake",
+      "source": "UE5/SourceAssets/P5/FX/Exports/FX_Snowflake_v01_WIP.png",
+      "texture": "/Game/Naiwa/P5/ArtSample_v06/Textures/T_P5_A6_Snowflake_v01_WIP",
+      "material": "/Game/Naiwa/P5/ArtSample_v06/Materials/M_P5_A6_Snowflake_v01_WIP",
+      "alpha_mode": "translucent",
+      "wip": true
+    },
+    {
+      "key": "a3_tree_b",
+      "source": "UE5/SourceAssets/P5/Environment/Exports/O_Tree_B_v01_WIP.png",
+      "texture": "/Game/Naiwa/P5/ArtSample_v06/Textures/T_P5_A3_TreeB_v01_WIP",
+      "material": "/Game/Naiwa/P5/ArtSample_v06/Materials/M_P5_A0_TreeB",
+      "alpha_mode": "masked",
+      "wip": true
+    },
+    {
+      "key": "a3_tree_c",
+      "source": "UE5/SourceAssets/P5/Environment/Exports/O_Tree_C_v01_WIP.png",
+      "texture": "/Game/Naiwa/P5/ArtSample_v06/Textures/T_P5_A3_TreeC_v01_WIP",
+      "material": "/Game/Naiwa/P5/ArtSample_v06/Materials/M_P5_A0_TreeC",
+      "alpha_mode": "masked",
+      "wip": true
+    },
+    {
+      "key": "a3_rock_b",
+      "source": "UE5/SourceAssets/P5/Environment/Exports/O_Rock_B_v01_WIP.png",
+      "texture": "/Game/Naiwa/P5/ArtSample_v06/Textures/T_P5_A3_RockB_v01_WIP",
+      "material": "/Game/Naiwa/P5/ArtSample_v06/Materials/M_P5_A0_RockB",
+      "alpha_mode": "masked",
+      "wip": true
+    },
+    {
+      "key": "a2_snow_track",
+      "source": "UE5/SourceAssets/P5/Materials/Exports/T_Snow_Track_v01_WIP.png",
+      "texture": "/Game/Naiwa/P5/ArtSample_v06/Textures/T_P5_A2_SnowTrack_v01_WIP",
+      "material": "/Game/Naiwa/P5/ArtSample_v06/Materials/M_P5_A2_SnowTrack_v01_WIP",
+      "alpha_mode": "translucent",
+      "wip": true
+    },
+    {
+      "key": "a7_palette",
+      "source": "UE5/SourceAssets/P5/Materials/Exports/Palette_L4_v01_WIP.png",
+      "texture": "/Game/Naiwa/P5/ArtSample_v06/Textures/T_P5_A7_PaletteL4_v01_WIP",
+      "material": null,
+      "alpha_mode": null,
+      "wip": true
+    }
+  ]
+}

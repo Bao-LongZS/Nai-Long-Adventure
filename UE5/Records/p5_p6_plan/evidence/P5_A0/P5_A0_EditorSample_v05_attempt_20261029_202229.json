@@ -1,0 +1,17 @@
+﻿{
+    "exit_code":  0,
+    "log":  "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p5_p6_plan\\evidence\\P5_A0\\P5_A0_EditorSample_v05_build.log",
+    "report_last_write_utc":  null,
+    "map_fresh":  false,
+    "report_fresh":  false,
+    "map_asset":  "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\P5\\Maps\\L_NaiwaP5_A0ArtSample_v05.umap",
+    "launch_error":  null,
+    "map_last_write_utc":  "2026-10-29T10:12:24.8708492Z",
+    "stdout":  "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p5_p6_plan\\evidence\\P5_A0\\P5_A0_EditorSample_v05_stdout_20261029_202229.log",
+    "status":  "map_not_rebuilt",
+    "command":  "C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe",
+    "stderr":  "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p5_p6_plan\\evidence\\P5_A0\\P5_A0_EditorSample_v05_stderr_20261029_202229.log",
+    "report":  "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p5_p6_plan\\evidence\\P5_A0\\P5_A0_EditorSample_v05_build_report.json",
+    "previous_map_last_write_utc":  "2026-10-29T10:12:24.8708492Z",
+    "started_at_utc":  "2026-10-29T12:22:29.3765763Z"
+}

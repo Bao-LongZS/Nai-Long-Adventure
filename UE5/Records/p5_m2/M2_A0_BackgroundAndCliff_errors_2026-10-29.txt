@@ -1,0 +1,164 @@
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,16): error C2065: ﾡﾰFJsonObjectﾡﾱ: ￎﾴ￉￹ￃ￷ﾵￄﾱ￪ￊﾶﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,5): error C2923: "TSharedPtr": "FJsonObject" ﾲﾻￊￇﾲￎￊ� "ObjectType" ﾵￄￓ￐￐ﾧ ￄﾣﾰ￥ ￀￠￐ￍﾲￎￊ�
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,5): error C2976: ﾡﾰTSharedPtr'ﾡﾱ: ￄﾣﾰ￥ ﾲￎￊ�ￌﾫ￉￙
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,29): error C2955: ﾡﾰTSharedPtrﾡﾱ: ￊﾹￓￃ ￀￠ ￄﾣﾰ￥ ￐￨ￒﾪ ￄﾣﾰ￥ ﾲￎￊ�￁￐ﾱ￭
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaMenuWidget.cpp(127,26): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUGameInstanceﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaMenuWidget.cpp(127,68): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaMenuWidget.cpp(215,26): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUGameInstanceﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaMenuWidget.cpp(215,68): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaMenuWidget.cpp(348,26): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUGameInstanceﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaMenuWidget.cpp(348,68): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaMenuWidget.cpp(447,30): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUGameInstanceﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaMenuWidget.cpp(447,72): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaMenuWidget.cpp(480,26): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUGameInstanceﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaMenuWidget.cpp(480,68): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaMenuWidget.cpp(554,26): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUGameInstanceﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaMenuWidget.cpp(554,68): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,16): error C2065: ﾡﾰFJsonObjectﾡﾱ: ￎﾴ￉￹ￃ￷ﾵￄﾱ￪ￊﾶﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,5): error C2923: "TSharedPtr": "FJsonObject" ﾲﾻￊￇﾲￎￊ� "ObjectType" ﾵￄￓ￐￐ﾧ ￄﾣﾰ￥ ￀￠￐ￍﾲￎￊ�
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,5): error C2976: ﾡﾰTSharedPtr'ﾡﾱ: ￄﾣﾰ￥ ﾲￎￊ�ￌﾫ￉￙
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,29): error C2955: ﾡﾰTSharedPtrﾡﾱ: ￊﾹￓￃ ￀￠ ￄﾣﾰ￥ ￐￨ￒﾪ ￄﾣﾰ￥ ﾲￎￊ�￁￐ﾱ￭
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1PlayerController.cpp(20,5): error C2665: ﾡﾰGetNameSafeﾡﾱ: ￃﾻￓ￐ￖ￘ￔ￘ﾺﾯￊ�﾿￉ￒￔￗﾪﾻﾻￋ￹ￓ￐ﾲￎￊ�￀￠￐ￍ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1PlayerController.cpp(20,5): error C2100: ￎ￞ﾷﾨ￈ﾡￏ￻ￒ�ￓￃ￀￠￐ￍￎﾪﾡﾰFStringﾡﾱﾵￄﾲ￙ￗ￷ￊ�
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP2ArcherAnimInstance.cpp(45,13): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰFPoseContextﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP2ArcherAnimInstance.cpp(56,26): error C2079: ﾡﾰIdlePoseﾡﾱￊﾹￓￃￎﾴﾶﾨￒ￥ﾵￄ structﾡﾰFPoseContextﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP2ArcherAnimInstance.cpp(57,26): error C2079: ﾡﾰDrawPoseﾡﾱￊﾹￓￃￎﾴﾶﾨￒ￥ﾵￄ structﾡﾰFPoseContextﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP2ArcherAnimInstance.cpp(58,40): error C2280: ﾡﾰFAnimationPoseData::FAnimationPoseData(const FAnimationPoseData &)ﾡﾱ: ﾳﾢￊￔￒ�ￓￃￒ￑￉ﾾﾳ�ﾵￄﾺﾯￊ�
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP2ArcherAnimInstance.cpp(59,40): error C2280: ﾡﾰFAnimationPoseData::FAnimationPoseData(const FAnimationPoseData &)ﾡﾱ: ﾳﾢￊￔￒ�ￓￃￒ￑￉ﾾﾳ�ﾵￄﾺﾯￊ�
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP2ArcherAnimInstance.cpp(67,17): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰFPoseContextﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP2ArcherAnimInstance.cpp(70,17): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰFPoseContextﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP2ArcherAnimInstance.cpp(70,42): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰFPoseContextﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,16): error C2065: ﾡﾰFJsonObjectﾡﾱ: ￎﾴ￉￹ￃ￷ﾵￄﾱ￪ￊﾶﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,5): error C2923: "TSharedPtr": "FJsonObject" ﾲﾻￊￇﾲￎￊ� "ObjectType" ﾵￄￓ￐￐ﾧ ￄﾣﾰ￥ ￀￠￐ￍﾲￎￊ�
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,5): error C2976: ﾡﾰTSharedPtr'ﾡﾱ: ￄﾣﾰ￥ ﾲￎￊ�ￌﾫ￉￙
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,29): error C2955: ﾡﾰTSharedPtrﾡﾱ: ￊﾹￓￃ ￀￠ ￄﾣﾰ￥ ￐￨ￒﾪ ￄﾣﾰ￥ ﾲￎￊ�￁￐ﾱ￭
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1SwitchPlatform.cpp(156,28): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1SwitchPlatform.cpp(512,35): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,16): error C2065: ﾡﾰFJsonObjectﾡﾱ: ￎﾴ￉￹ￃ￷ﾵￄﾱ￪ￊﾶﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,5): error C2923: "TSharedPtr": "FJsonObject" ﾲﾻￊￇﾲￎￊ� "ObjectType" ﾵￄￓ￐￐ﾧ ￄﾣﾰ￥ ￀￠￐ￍﾲￎￊ�
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,5): error C2976: ﾡﾰTSharedPtr'ﾡﾱ: ￄﾣﾰ￥ ﾲￎￊ�ￌﾫ￉￙
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,29): error C2955: ﾡﾰTSharedPtrﾡﾱ: ￊﾹￓￃ ￀￠ ￄﾣﾰ￥ ￐￨ￒﾪ ￄﾣﾰ￥ ﾲￎￊ�￁￐ﾱ￭
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,16): error C2065: ﾡﾰFJsonObjectﾡﾱ: ￎﾴ￉￹ￃ￷ﾵￄﾱ￪ￊﾶﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,5): error C2923: "TSharedPtr": "FJsonObject" ﾲﾻￊￇﾲￎￊ� "ObjectType" ﾵￄￓ￐￐ﾧ ￄﾣﾰ￥ ￀￠￐ￍﾲￎￊ�
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,5): error C2976: ﾡﾰTSharedPtr'ﾡﾱ: ￄﾣﾰ￥ ﾲￎￊ�ￌﾫ￉￙
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,29): error C2955: ﾡﾰTSharedPtrﾡﾱ: ￊﾹￓￃ ￀￠ ￄﾣﾰ￥ ￐￨ￒﾪ ￄﾣﾰ￥ ﾲￎￊ�￁￐ﾱ￭
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,16): error C2065: ﾡﾰFJsonObjectﾡﾱ: ￎﾴ￉￹ￃ￷ﾵￄﾱ￪ￊﾶﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,5): error C2923: "TSharedPtr": "FJsonObject" ﾲﾻￊￇﾲￎￊ� "ObjectType" ﾵￄￓ￐￐ﾧ ￄﾣﾰ￥ ￀￠￐ￍﾲￎￊ�
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,5): error C2976: ﾡﾰTSharedPtr'ﾡﾱ: ￄﾣﾰ￥ ﾲￎￊ�ￌﾫ￉￙
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.h(948,29): error C2955: ﾡﾰTSharedPtrﾡﾱ: ￊﾹￓￃ ￀￠ ￄﾣﾰ￥ ￐￨ￒﾪ ￄﾣﾰ￥ ﾲￎￊ�￁￐ﾱ￭
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(91,1): error C2512: ﾡﾰTSharedPtrﾡﾱ: ￃﾻￓ￐ﾺￏￊￊﾵￄￄﾬ￈ￏﾹﾹￔ￬ﾺﾯￊ�﾿￉ￓￃ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(529,76): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUGameInstanceﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(529,118): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(530,21): error C2143: ￓ￯ﾷﾨﾴ￭ￎ￳: ￈ﾱ￉￙ﾡﾰ;ﾡﾱ(ￔￚﾡﾰ{ﾡﾱﾵￄￇﾰￃ￦)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6872,9): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ=ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6872,35): error C2582: 'operator =' ﾺﾯￊ�ￔￚ 'TSharedPtr' ￖ￐ﾲﾻ﾿￉ￓￃ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6873,9): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6874,9): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6880,9): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6882,9): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6901,13): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6903,13): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6904,13): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6905,13): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6947,5): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6948,5): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6949,5): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6950,5): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6951,5): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6952,5): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6953,5): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6954,5): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6955,5): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(6956,5): error C2678: ﾶ￾ﾽ￸ￖￆﾡﾰ->ﾡﾱ: ￃﾻￓ￐ￕￒﾵﾽﾽￓￊￜﾡﾰTSharedPtrﾡﾱ￀￠￐ￍﾵￄￗ￳ﾲ￙ￗ￷ￊ�ﾵￄￔￋￋ￣ﾷ￻(ﾻ￲ￃﾻￓ￐﾿￉ﾽￓￊￜﾵￄￗﾪﾻﾻ)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1GameMode.cpp(8030,17): error C2665: ﾡﾰUE::JSON::Private::FJsonObjectSharedStringStorage::SetObjectFieldﾡﾱ: ￃﾻￓ￐ￖ￘ￔ￘ﾺﾯￊ�﾿￉ￒￔￗﾪﾻﾻￋ￹ￓ￐ﾲￎￊ�￀￠￐ￍ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP2GameMode.cpp(2221,13): error C2653: ﾡﾰIFileManagerﾡﾱ: ﾲﾻￊￇ￀￠ﾻ￲ￃ￼ￃ￻﾿ￕﾼ￤ￃ￻ﾳￆ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP2GameMode.cpp(2221,27): error C3861: ﾡﾰGetﾡﾱ: ￕￒﾲﾻﾵﾽﾱ￪ￊﾶﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP2GameMode.cpp(2220,20): error C2737: ﾡﾰbSavedﾡﾱ: ﾱ￘￐￫ﾳ￵ￊﾼﾻﾯ const ﾶￔￏ￳
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP2GameMode.cpp(3870,68): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUGameInstanceﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP2GameMode.cpp(3870,110): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP2GameMode.cpp(3871,13): error C2143: ￓ￯ﾷﾨﾴ￭ￎ￳: ￈ﾱ￉￙ﾡﾰ;ﾡﾱ(ￔￚﾡﾰ{ﾡﾱﾵￄￇﾰￃ￦)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3LootTable.h(27,16): error C3646: ﾡﾰRandomStreamﾡﾱ: ￎﾴￖﾪￖ￘￐ﾴￋﾵￃ￷ﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3LootTable.h(27,2): error C4430: ￈ﾱ￉￙￀￠￐ￍￋﾵￃ￷ﾷ￻ - ﾼ￙ﾶﾨￎﾪ intﾡﾣￗﾢￒ￢: C++ ﾲﾻￖﾧﾳￖￄﾬ￈ￏ int
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3LootTable.h(20,52): error C2614: ﾡﾰFNaiwaP3LootRandomStreamﾡﾱ: ﾷￇﾷﾨﾵￄﾳ￉ￔﾱﾳ￵ￊﾼﾻﾯ:ﾡﾰRandomStreamﾡﾱﾲﾻￊￇﾻ￹ﾻ￲ﾳ￉ￔﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3LootTable.h(27,16): error C3646: ﾡﾰRandomStreamﾡﾱ: ￎﾴￖﾪￖ￘￐ﾴￋﾵￃ￷ﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3LootTable.h(27,2): error C4430: ￈ﾱ￉￙￀￠￐ￍￋﾵￃ￷ﾷ￻ - ﾼ￙ﾶﾨￎﾪ intﾡﾣￗﾢￒ￢: C++ ﾲﾻￖﾧﾳￖￄﾬ￈ￏ int
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3LootTable.h(20,52): error C2614: ﾡﾰFNaiwaP3LootRandomStreamﾡﾱ: ﾷￇﾷﾨﾵￄﾳ￉ￔﾱﾳ￵ￊﾼﾻﾯ:ﾡﾰRandomStreamﾡﾱﾲﾻￊￇﾻ￹ﾻ￲ﾳ￉ￔﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3LootTable.cpp(25,15): error C2065: ﾡﾰRandomStreamﾡﾱ: ￎﾴ￉￹ￃ￷ﾵￄﾱ￪ￊﾶﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3GridSubsystem.cpp(130,21): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3GridSubsystem.cpp(130,56): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3GridSubsystem.cpp(135,23): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3GridSubsystem.cpp(135,60): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3GridSubsystem.cpp(264,41): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3GridSubsystem.cpp(264,75): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2EnemyAI.h(98,16): error C3646: ﾡﾰScriptedAIRandomﾡﾱ: ￎﾴￖﾪￖ￘￐ﾴￋﾵￃ￷ﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2EnemyAI.h(98,2): error C4430: ￈ﾱ￉￙￀￠￐ￍￋﾵￃ￷ﾷ￻ - ﾼ￙ﾶﾨￎﾪ intﾡﾣￗﾢￒ￢: C++ ﾲﾻￖﾧﾳￖￄﾬ￈ￏ int
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2EnemyAI.cpp(24,2): error C2065: ﾡﾰScriptedAIRandomﾡﾱ: ￎﾴ￉￹ￃ￷ﾵￄﾱ￪ￊﾶﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2EnemyAI.cpp(34,26): error C2065: ﾡﾰScriptedAIRandomﾡﾱ: ￎﾴ￉￹ￃ￷ﾵￄﾱ￪ￊﾶﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2EnemyAI.cpp(288,42): error C2065: ﾡﾰScriptedAIRandomﾡﾱ: ￎﾴ￉￹ￃ￷ﾵￄﾱ￪ￊﾶﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2EnemyAI.cpp(539,20): error C2065: ﾡﾰScriptedAIRandomﾡﾱ: ￎﾴ￉￹ￃ￷ﾵￄﾱ￪ￊﾶﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2EnemyAI.cpp(539,71): error C7732: ']' ￓﾦￎﾪﾱ￭ﾴ￯ￊﾽ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3BombActor.cpp(35,57): error C2065: ﾡﾰMD_Surfaceﾡﾱ: ￎﾴ￉￹ￃ￷ﾵￄﾱ￪ￊﾶﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3LootTable.h(27,16): error C3646: ﾡﾰRandomStreamﾡﾱ: ￎﾴￖﾪￖ￘￐ﾴￋﾵￃ￷ﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3LootTable.h(27,2): error C4430: ￈ﾱ￉￙￀￠￐ￍￋﾵￃ￷ﾷ￻ - ﾼ￙ﾶﾨￎﾪ intﾡﾣￗﾢￒ￢: C++ ﾲﾻￖﾧﾳￖￄﾬ￈ￏ int
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3LootTable.h(20,52): error C2614: ﾡﾰFNaiwaP3LootRandomStreamﾡﾱ: ﾷￇﾷﾨﾵￄﾳ￉ￔﾱﾳ￵ￊﾼﾻﾯ:ﾡﾰRandomStreamﾡﾱﾲﾻￊￇﾻ￹ﾻ￲ﾳ￉ￔﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2EnemyAI.h(98,16): error C3646: ﾡﾰScriptedAIRandomﾡﾱ: ￎﾴￖﾪￖ￘￐ﾴￋﾵￃ￷ﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2EnemyAI.h(98,2): error C4430: ￈ﾱ￉￙￀￠￐ￍￋﾵￃ￷ﾷ￻ - ﾼ￙ﾶﾨￎﾪ intﾡﾣￗﾢￒ￢: C++ ﾲﾻￖﾧﾳￖￄﾬ￈ￏ int
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M1Actors.cpp(47,98): error C2065: ﾡﾰMD_Surfaceﾡﾱ: ￎﾴ￉￹ￃ￷ﾵￄﾱ￪ￊﾶﾷ￻
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2RuntimeSubsystem.cpp(16,43): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2RuntimeSubsystem.cpp(16,18): error C2672: ﾡﾰCastﾡﾱ: ￎﾴￕￒﾵﾽￆﾥￅ￤ﾵￄￖ￘ￔ￘ﾺﾯￊ�
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2RuntimeSubsystem.cpp(66,39): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2RuntimeSubsystem.cpp(74,28): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2RuntimeSubsystem.cpp(74,14): error C2737: ﾡﾰNowﾡﾱ: ﾱ￘￐￫ﾳ￵ￊﾼﾻﾯ const ﾶￔￏ￳
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2RuntimeSubsystem.cpp(303,54): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2RuntimeSubsystem.cpp(303,88): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Core\NaiwaP4ArenaSubsystem.cpp(374,27): error C2672: ﾡﾰNewObjectﾡﾱ: ￎﾴￕￒﾵﾽￆﾥￅ￤ﾵￄￖ￘ￔ￘ﾺﾯￊ�
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Core\NaiwaP4ArenaSubsystem.cpp(375,26): error C2672: ﾡﾰNewObjectﾡﾱ: ￎﾴￕￒﾵﾽￆﾥￅ￤ﾵￄￖ￘ￔ￘ﾺﾯￊ�
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Core\NaiwaP4ArenaSubsystem.cpp(529,29): error C2672: ﾡﾰNewObjectﾡﾱ: ￎﾴￕￒﾵﾽￆﾥￅ￤ﾵￄￖ￘ￔ￘ﾺﾯￊ�
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2WorldPresentation.cpp(190,51): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3M2WorldPresentation.cpp(190,13): error C2737: ﾡﾰbRuntimeWorldﾡﾱ: ﾱ￘￐￫ﾳ￵ￊﾼﾻﾯ const ﾶￔￏ￳
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3PlayerPawn.cpp(94,31): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3PlayerPawn.cpp(94,76): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3PlayerPawn.cpp(100,26): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3PlayerPawn.cpp(100,66): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3PlayerPawn.cpp(290,74): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP3PlayerPawn.cpp(290,41): error C2672: ﾡﾰCastﾡﾱ: ￎﾴￕￒﾵﾽￆﾥￅ￤ﾵￄￖ￘ￔ￘ﾺﾯￊ�
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4ArtIntegrationPlayerController.cpp(12,3): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUInputComponentﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4ArtIntegrationPlayerController.cpp(12,19): error C2039: "BindKey": ﾲﾻￊￇ "TObjectPtr<UInputComponent>" ﾵￄﾳ￉ￔﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4ArtIntegrationPlayerController.cpp(13,3): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUInputComponentﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4ArtIntegrationPlayerController.cpp(13,19): error C2039: "BindKey": ﾲﾻￊￇ "TObjectPtr<UInputComponent>" ﾵￄﾳ￉ￔﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Presentation\NaiwaP4ArtIntegrationPawn.cpp(180,42): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Presentation\NaiwaP4ArtIntegrationPawn.cpp(180,86): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Presentation\NaiwaP4ArtIntegrationPawn.cpp(283,42): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Presentation\NaiwaP4ArtIntegrationPawn.cpp(283,86): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Presentation\NaiwaP4ArtIntegrationPawn.cpp(340,47): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Presentation\NaiwaP4ArtIntegrationPawn.cpp(423,42): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Presentation\NaiwaP4ArtIntegrationPawn.cpp(423,86): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Presentation\NaiwaP4CameraRig.cpp(23,45): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Presentation\NaiwaP4CameraRig.cpp(42,100): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Presentation\NaiwaP4CameraRig.cpp(42,63): error C2672: ﾡﾰCastﾡﾱ: ￎﾴￕￒﾵﾽￆﾥￅ￤ﾵￄￖ￘ￔ￘ﾺﾯￊ�
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Presentation\NaiwaP4W1PreviewGameMode.cpp(21,51): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Presentation\NaiwaP4W1PreviewGameMode.cpp(21,95): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(140,48): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(140,92): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(141,3): error C2143: ￓ￯ﾷﾨﾴ￭ￎ￳: ￈ﾱ￉￙ﾡﾰ;ﾡﾱ(ￔￚﾡﾰ{ﾡﾱﾵￄￇﾰￃ￦)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(175,48): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(175,92): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(176,3): error C2143: ￓ￯ﾷﾨﾴ￭ￎ￳: ￈ﾱ￉￙ﾡﾰ;ﾡﾱ(ￔￚﾡﾰ{ﾡﾱﾵￄￇﾰￃ￦)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(186,48): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(186,92): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(187,3): error C2143: ￓ￯ﾷﾨﾴ￭ￎ￳: ￈ﾱ￉￙ﾡﾰ;ﾡﾱ(ￔￚﾡﾰ{ﾡﾱﾵￄￇﾰￃ￦)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(197,48): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(197,92): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(198,3): error C2143: ￓ￯ﾷﾨﾴ￭ￎ￳: ￈ﾱ￉￙ﾡﾰ;ﾡﾱ(ￔￚﾡﾰ{ﾡﾱﾵￄￇﾰￃ￦)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(208,48): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(208,92): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(209,3): error C2143: ￓ￯ﾷﾨﾴ￭ￎ￳: ￈ﾱ￉￙ﾡﾰ;ﾡﾱ(ￔￚﾡﾰ{ﾡﾱﾵￄￇﾰￃ￦)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(219,48): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(219,92): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(220,3): error C2143: ￓ￯ﾷﾨﾴ￭ￎ￳: ￈ﾱ￉￙ﾡﾰ;ﾡﾱ(ￔￚﾡﾰ{ﾡﾱﾵￄￇﾰￃ￦)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(230,48): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(230,92): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(231,3): error C2143: ￓ￯ﾷﾨﾴ￭ￎ￳: ￈ﾱ￉￙ﾡﾰ;ﾡﾱ(ￔￚﾡﾰ{ﾡﾱﾵￄￇﾰￃ￦)
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(242,48): error C2027: ￊﾹￓￃ￁ￋￎﾴﾶﾨￒ￥￀￠￐ￍﾡﾰUWorldﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(242,92): error C2059: ￓ￯ﾷﾨﾴ￭ￎ￳:ﾡﾰ)ﾡﾱ
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\P4\Input\NaiwaP4PlayerController.cpp(243,3): error C2143: ￓ￯ﾷﾨﾴ￭ￎ￳: ￈ﾱ￉￙ﾡﾰ;ﾡﾱ(ￔￚﾡﾰ{ﾡﾱﾵￄￇﾰￃ￦)

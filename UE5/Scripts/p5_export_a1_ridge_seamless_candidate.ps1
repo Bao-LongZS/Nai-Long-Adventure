@@ -3,7 +3,11 @@ param(
     [string]$Source,
     [string]$Output,
     [string]$Preview,
-    [switch]$MatchAlphaSeam
+    [switch]$MatchAlphaSeam,
+    [switch]$PreserveSourceDimensions,
+    [switch]$KeepAllAlphaComponents,
+    [int]$VerticalPadPixels = 0,
+    [int]$FadeBottomSilhouetteRows = 0
 )
 
 $ErrorActionPreference = 'Stop'
@@ -212,7 +216,40 @@ public static class P5RidgeSeamCandidate
         }
     }
 
-    public static string Export(string sourcePath, string outputPath, string previewPath, bool matchAlphaSeam)
+    private static void FadeBottomSilhouette(byte[] pixels, int width, int height, int fadeRows)
+    {
+        if (fadeRows <= 0) return;
+        int baseline = -1;
+        for (int y = height - 1; y >= 0; y--)
+        {
+            int covered = 0;
+            for (int x = 0; x < width; x++)
+                if (pixels[(y * width + x) * 4 + 3] >= 128) covered++;
+            if (covered >= width / 2)
+            {
+                baseline = y;
+                break;
+            }
+        }
+        if (baseline < 0) return;
+        int start = Math.Max(0, baseline - fadeRows);
+        int fadeLength = Math.Max(1, baseline - start);
+        for (int y = start; y <= baseline; y++)
+        {
+            double t = (double)(y - start) / fadeLength;
+            double smooth = t * t * (3.0 - 2.0 * t);
+            double alphaScale = 1.0 - smooth;
+            for (int x = 0; x < width; x++)
+            {
+                int p = (y * width + x) * 4;
+                pixels[p + 3] = Clamp(pixels[p + 3] * alphaScale);
+            }
+        }
+    }
+
+    public static string Export(string sourcePath, string outputPath, string previewPath,
+        bool matchAlphaSeam, bool preserveSourceDimensions, bool keepAllAlphaComponents,
+        int verticalPadPixels, int fadeBottomSilhouetteRows)
     {
         using (Bitmap opened = new Bitmap(sourcePath))
         using (Bitmap source = new Bitmap(opened.Width, opened.Height, PixelFormat.Format32bppArgb))
@@ -225,40 +262,60 @@ public static class P5RidgeSeamCandidate
             byte[] sourcePixels = ReadPixels(source);
             int[] component = LargestAlphaComponent(sourcePixels, source.Width, source.Height, 24);
             if (component.Length == 0) throw new InvalidOperationException("No connected ridge art found.");
-            bool[] keep = MakeFringe(component, source.Width, source.Height, 2);
-            for (int i = 0; i < keep.Length; i++)
+            if (!keepAllAlphaComponents)
             {
-                if (!keep[i])
+                bool[] keep = MakeFringe(component, source.Width, source.Height, 2);
+                for (int i = 0; i < keep.Length; i++)
                 {
-                    int p = i * 4;
-                    sourcePixels[p] = sourcePixels[p + 1] = sourcePixels[p + 2] = sourcePixels[p + 3] = 0;
+                    if (!keep[i])
+                    {
+                        int p = i * 4;
+                        sourcePixels[p] = sourcePixels[p + 1] = sourcePixels[p + 2] = sourcePixels[p + 3] = 0;
+                    }
                 }
             }
+            FadeBottomSilhouette(sourcePixels, source.Width, source.Height, fadeBottomSilhouetteRows);
 
+            int outputWidth = preserveSourceDimensions ? source.Width : 2048;
+            int outputHeight = preserveSourceDimensions ? source.Height : 768;
+            if (verticalPadPixels > 0)
+            {
+                if (!preserveSourceDimensions)
+                    throw new InvalidOperationException("Vertical padding requires PreserveSourceDimensions.");
+                outputHeight += verticalPadPixels * 2;
+            }
             using (Bitmap cleaned = new Bitmap(source.Width, source.Height, PixelFormat.Format32bppArgb))
-            using (Bitmap exported = new Bitmap(2048, 768, PixelFormat.Format32bppArgb))
+            using (Bitmap exported = new Bitmap(outputWidth, outputHeight, PixelFormat.Format32bppArgb))
             {
                 WritePixels(cleaned, sourcePixels);
                 using (Graphics g = Graphics.FromImage(exported))
                 {
                     g.CompositingMode = CompositingMode.SourceCopy;
-                    g.InterpolationMode = InterpolationMode.HighQualityBicubic;
-                    g.PixelOffsetMode = PixelOffsetMode.Half;
-                    g.SmoothingMode = SmoothingMode.HighQuality;
-                    g.DrawImage(cleaned, new Rectangle(0, 0, exported.Width, exported.Height), new Rectangle(0, 0, cleaned.Width, cleaned.Height), GraphicsUnit.Pixel);
+                    g.Clear(Color.Transparent);
+                    if (verticalPadPixels > 0)
+                    {
+                        g.DrawImageUnscaled(cleaned, 0, verticalPadPixels);
+                    }
+                    else
+                    {
+                        g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                        g.PixelOffsetMode = PixelOffsetMode.Half;
+                        g.SmoothingMode = SmoothingMode.HighQuality;
+                        g.DrawImage(cleaned, new Rectangle(0, 0, exported.Width, exported.Height), new Rectangle(0, 0, cleaned.Width, cleaned.Height), GraphicsUnit.Pixel);
+                    }
                 }
                 byte[] result = ReadPixels(exported);
                 CorrectPeriodicEdges(result, exported.Width, exported.Height, matchAlphaSeam);
                 WritePixels(exported, result);
                 exported.Save(outputPath, ImageFormat.Png);
 
-                using (Bitmap preview = new Bitmap(4096, 768, PixelFormat.Format32bppArgb))
+                using (Bitmap preview = new Bitmap(exported.Width * 2, exported.Height, PixelFormat.Format32bppArgb))
                 using (Graphics g = Graphics.FromImage(preview))
                 {
                     g.Clear(Color.FromArgb(255, 115, 137, 161));
                     g.CompositingMode = CompositingMode.SourceOver;
                     g.DrawImageUnscaled(exported, 0, 0);
-                    g.DrawImageUnscaled(exported, 2048, 0);
+                    g.DrawImageUnscaled(exported, exported.Width, 0);
                     preview.Save(previewPath, ImageFormat.Png);
                 }
 
@@ -276,10 +333,11 @@ public static class P5RidgeSeamCandidate
                     }
                 }
                 for (int c = 0; c < 4; c++) means[c] = Math.Round(means[c] / exported.Height, 3);
-                return "largestComponentPixels=" + component.Length + "; removedDisconnectedComponents=thresholded outside major ridge; " +
+                return "largestComponentPixels=" + component.Length + "; preservedAllComponents=" + keepAllAlphaComponents + "; " +
                     "edgeMeanAbsDiffRGBA=" + String.Join(",", means) + "; edgeMaxAbsDiffRGBA=" + String.Join(",", maxes) +
                     "; alphaSeamMatched=" + matchAlphaSeam +
-                    "; sourceDimensions=" + source.Width + "x" + source.Height + "; exportDimensions=2048x768";
+                    "; sourceDimensions=" + source.Width + "x" + source.Height +
+                    "; exportDimensions=" + outputWidth + "x" + outputHeight;
             }
         }
     }
@@ -288,7 +346,9 @@ public static class P5RidgeSeamCandidate
     Add-Type -TypeDefinition $code -ReferencedAssemblies @('System.Drawing.dll')
 }
 
-$summary = [P5RidgeSeamCandidate]::Export($Source, $Output, $Preview, $MatchAlphaSeam.IsPresent)
+$summary = [P5RidgeSeamCandidate]::Export($Source, $Output, $Preview,
+    $MatchAlphaSeam.IsPresent, $PreserveSourceDimensions.IsPresent, $KeepAllAlphaComponents.IsPresent,
+    $VerticalPadPixels, $FadeBottomSilhouetteRows)
 Write-Output $summary
 Write-Output "Source: $Source"
 Write-Output "Output: $Output"

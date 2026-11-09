@@ -7,7 +7,10 @@
 class UStaticMesh;
 class UStaticMeshComponent;
 class UMaterialInterface;
+class UMaterialInstanceDynamic;
+class UProceduralMeshComponent;
 class USceneComponent;
+struct FNaiwaP5RouteFixture;
 
 /** Temporary visible blockout. Collision and event resolution live in the run subsystem. */
 UCLASS()
@@ -26,7 +29,9 @@ private:
 	UStaticMeshComponent* AddA0Sprite(FName Name, UMaterialInterface* Material,
 		const FVector& Location, const FVector2D& SizeCm);
 	void BuildA0BackgroundLayers(double RouteLengthCm);
+	bool BuildA0RouteSurface(const FNaiwaP5RouteFixture& Fixture);
 	void HideLegacyA0SampleActors();
+	void EmitA0VisualProbe(const FString& Trigger);
 
 	UPROPERTY()
 	TObjectPtr<USceneComponent> SceneRoot;
@@ -47,10 +52,22 @@ private:
 	TObjectPtr<UStaticMeshComponent> A0SkyMesh;
 
 	UPROPERTY()
+	TObjectPtr<UProceduralMeshComponent> A0SnowBackdropMesh;
+
+	UPROPERTY()
+	TObjectPtr<UProceduralMeshComponent> A0RouteSurfaceMesh;
+
+	UPROPERTY()
 	TObjectPtr<UStaticMeshComponent> A0PlayerShadowMesh;
 
 	UPROPERTY()
 	TArray<TObjectPtr<UStaticMeshComponent>> A0BackgroundMeshes;
+
+	UPROPERTY()
+	TArray<TObjectPtr<UStaticMeshComponent>> A0KangarooEventMeshes;
+
+	UPROPERTY(Transient)
+	TArray<TObjectPtr<UMaterialInstanceDynamic>> A0BackgroundMaterials;
 
 	UPROPERTY()
 	TObjectPtr<UStaticMesh> CubeMesh;
@@ -68,4 +85,5 @@ private:
 	TObjectPtr<UStaticMesh> PlaneMesh;
 
 	bool bA0ArtSample = false;
+	int32 NextA0VisualProbeIndex = 0;
 };

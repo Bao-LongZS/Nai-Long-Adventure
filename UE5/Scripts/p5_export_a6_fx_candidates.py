@@ -93,6 +93,8 @@ def export_land_puff() -> dict[str, object]:
         source = opened.convert("RGBA")
     columns, rows = 4, 3
     cell_width, cell_height = 128, 128
+    recommended_fps = 30
+    frame_duration_seconds = 1.0 / recommended_fps
     atlas = Image.new("RGBA", (columns * cell_width, rows * cell_height), (0, 0, 0, 0))
     frames = []
     anchor = (64, 120)
@@ -119,6 +121,9 @@ def export_land_puff() -> dict[str, object]:
                 "atlasRect": [column * cell_width, row * cell_height, (column + 1) * cell_width, (row + 1) * cell_height],
                 "anchor": list(anchor),
                 "order": "row-major; one-shot candidate",
+                "durationSeconds": frame_duration_seconds,
+                "phase": "impact" if index == 0 else "expansion" if index <= 3
+                    else "peak" if index <= 7 else "dissipation",
             })
     atlas.save(output_path, format="PNG", optimize=True)
     preview = Image.new("RGBA", (1024, 1080), (115, 137, 161, 255))
@@ -137,9 +142,15 @@ def export_land_puff() -> dict[str, object]:
         "alpha": "preserved",
         "frameCount": len(frames),
         "frameSize": [cell_width, cell_height],
+        "timing": {
+            "playback": "one-shot",
+            "recommendedFps": recommended_fps,
+            "totalDurationSeconds": round(len(frames) * frame_duration_seconds, 3),
+            "note": "Timing proposal only; confirm against the in-engine landing response.",
+        },
         "frames": frames,
         "preview": str(LANDPUFF_PREVIEW_PATH.relative_to(ROOT)).replace("\\", "/"),
-        "reviewStatus": "WIP; per-frame timing and in-engine playback pending",
+        "reviewStatus": "WIP; 30 fps one-shot timing proposed; in-engine playback pending",
     }
 
 
@@ -163,7 +174,7 @@ def main() -> None:
         "pending": [
             "UE material filtering, premultiplied alpha edge review, and intended layer-opacity tuning",
             "Avalanche/character/obstacle scene overlap and 720p readability",
-            "FX_LandPuff per-frame timing and in-engine playback",
+            "Confirm FX_LandPuff timing against the in-engine landing response and verify one-shot playback",
         ],
     }
     MANIFEST_PATH.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

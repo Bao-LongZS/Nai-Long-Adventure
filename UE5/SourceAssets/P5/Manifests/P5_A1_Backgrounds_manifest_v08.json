@@ -1,0 +1,158 @@
+{
+  "manifestId": "P5_A1_Backgrounds",
+  "version": "v08",
+  "created": "2026-10-29",
+  "status": "WIP; near ridge anchor is updated in Runtime source and far/mid/near materials were rebuilt as translucent; runtime visual acceptance remains pending",
+  "approvedDirection": "P5 A0 natural-tone v02 scene; original character first draft remains frozen",
+  "exportTool": "UE5/Scripts/p5_export_a1_ridge_seamless_candidate.ps1 with -MatchAlphaSeam -PreserveSourceDimensions -KeepAllAlphaComponents -VerticalPadPixels; forest also uses -FadeBottomSilhouetteRows 32",
+  "runtimeLayout": {
+    "tileWorldSizeCm": [
+      3600,
+      2700
+    ],
+    "artworkWorldSizeCm": {
+      "far": [
+        3600,
+        900
+      ],
+      "mid": [
+        3600,
+        900
+      ],
+      "near": [
+        3600,
+        1350
+      ]
+    },
+    "zAnchorsCm": [
+      455,
+      185,
+      260
+    ],
+    "backgroundMaterialBlendMode": "translucent",
+    "materialAssetRebuildStatus": "UE 5.8.3 background commandlet succeeded; report confirms far/mid/near BLEND_TRANSLUCENT; material UAssets saved 2026-10-29 15:34",
+    "camera": {
+      "orthoWidthCm": 2300,
+      "cameraBaseZCm": 720,
+      "aspectRatio": "16:9",
+      "estimatedFlatRouteViewZCm": [
+        73,
+        1367
+      ]
+    },
+    "nearRidgeVisibleBandAtFlatRouteCm": [
+      73,
+      306
+    ],
+    "placementRationale": "The v07 near ridge alpha silhouette ended around +26 cm, below the flat-route camera lower edge at about +73 cm. Raising its center anchor from -20 to +260 cm brings about 233 cm of ridge silhouette into the bottom of the camera view while leaving the route and player at the front depth."
+  },
+  "assets": [
+    {
+      "assetId": "BG_Mountain_Far",
+      "source": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Mountain_Far_v02_WIP.png",
+      "sourceDimensions": [
+        2048,
+        512
+      ],
+      "export": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Mountain_Far_v03_WIP.png",
+      "exportDimensions": [
+        2048,
+        1536
+      ],
+      "exportSha256": "B5777B91B3C4D3100D83A7B229512D8E9E758FCCEFA1CE2A37432AC47F79DD4A",
+      "verticalPaddingPixels": 512,
+      "processing": "Retained the complete 2048x512 WIP artwork at its previous world pixel scale; added 512 transparent pixels above and below so the plane boundary extends 900 cm in each direction without stretching the illustration.",
+      "seamReview": {
+        "method": "per-row RGBA edge-column diff plus two-tile visual preview",
+        "edgeMeanAbsDiffRGBA": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "edgeMaxAbsDiffRGBA": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "preview": "UE5/Records/p5_p6_plan/evidence/P5_A1_Backgrounds/P5_A1_MountainFarTiling_v02.png",
+        "status": "Export edges match byte-for-byte in RGBA; transparent padding moves the visible quad edge beyond the expected camera frame."
+      }
+    },
+    {
+      "assetId": "BG_Forest_Mid",
+      "source": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Forest_Mid_v02_WIP.png",
+      "sourceDimensions": [
+        2048,
+        512
+      ],
+      "export": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Forest_Mid_v03_WIP.png",
+      "exportDimensions": [
+        2048,
+        1536
+      ],
+      "exportSha256": "762593AD1D20FF5C6353C14D921A0F81F37CE58FA5B815E744513852E59DC167",
+      "verticalPaddingPixels": 512,
+      "bottomSilhouetteFadeRows": 32,
+      "processing": "Retained all detached cloud/tree components and the existing 2048x512 art scale; feathered the straight forest base over 32 source rows and added 512 transparent pixels above and below.",
+      "seamReview": {
+        "method": "per-row RGBA edge-column diff plus two-tile visual preview",
+        "edgeMeanAbsDiffRGBA": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "edgeMaxAbsDiffRGBA": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "preview": "UE5/Records/p5_p6_plan/evidence/P5_A1_Backgrounds/P5_A1_ForestMidTiling_v02.png",
+        "status": "The repeated base line is softened in the static preview; in-game depth overlap remains unverified."
+      }
+    },
+    {
+      "assetId": "BG_Ridge_Near",
+      "source": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Ridge_Near_v03_WIP.png",
+      "sourceDimensions": [
+        2048,
+        768
+      ],
+      "export": "UE5/SourceAssets/P5/Backgrounds/Exports/BG_Ridge_Near_v04_WIP.png",
+      "exportDimensions": [
+        2048,
+        1536
+      ],
+      "exportSha256": "D3A1399C9EBA2CD4B50CFC11D58058BA1753B765987A888F666B42274837024E",
+      "verticalPaddingPixels": 384,
+      "processing": "Retained the complete 2048x768 near-ridge art at its previous world pixel scale; added 384 transparent pixels above and below without stretching the illustration.",
+      "seamReview": {
+        "method": "per-row RGBA edge-column diff plus two-tile visual preview",
+        "edgeMeanAbsDiffRGBA": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "edgeMaxAbsDiffRGBA": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "preview": "UE5/Records/p5_p6_plan/evidence/P5_A1_Backgrounds/P5_A1_RidgeTiling_v10.png",
+        "status": "First and last export columns match byte-for-byte in RGBA; contour tangent/texture continuity still requires in-game review."
+      }
+    }
+  ],
+  "runtimeAccepted": false,
+  "remainingChecks": [
+    "review all layer overlaps and alpha fades in visible Editor at 1080p and 720p",
+    "review forest fade and raised near-ridge contour against the actual route snow bank",
+    "review the wider camera framing at the 293 m and 1123 m screenshot sections",
+    "review translucent sort order, alpha filtering/compression, and parallax continuity in the actual project material path"
+  ]
+}

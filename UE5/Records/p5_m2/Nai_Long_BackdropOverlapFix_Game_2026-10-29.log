@@ -1,0 +1,673 @@
+Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Nai_Long Win64 Development -Project=C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Nai_Long.uproject -NoUBA -NoSharedPCH -NoHotReloadFromIDE -NoLiveCoding -WaitMutex -MaxParallelActions=8
+Log file: C:\Users\31314\AppData\Local\UnrealBuildTool\Log.txt
+Executing up to 8 actions based on MaxProcessorCount override
+UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+Creating makefile for Nai_Long (command line arguments changed)
+Available x64 toolchains (1):
+ * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231
+    (Family=14.51.36231, FamilyRank=2, Version=14.51.36256, HostArchitecture=x64, ReleaseChannel=Latest, Architecture=x64)
+Visual Studio compiler version 14.51.36256 is newer than latest preferred version 14.50.35717. Please use caution as this compiler has not been heavily tested
+UHT compiled-in object format Default
+Building Nai_Long...
+===== Toolchain Information =====
+Using ISPC compiler (C:\Program Files\Epic Games\UE_5.8\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+  Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2) 
+Using Visual Studio 14.51.36256 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+Warning: Visual Studio compiler 14.51.36256 is not a preferred version
+[Adaptive Build] Excluded from NaiwaRuntime unity file: NaiwaAnimInstance.cpp, NaiwaAutoTestComponent.cpp, NaiwaCharacter.cpp, NaiwaGameMode.cpp, NaiwaHUD.cpp, NaiwaMenuGameMode.cpp, NaiwaMenuPlayerController.cpp, NaiwaMenuProgress.cpp, NaiwaMenuWidget.cpp, NaiwaP1BouncePad.cpp, NaiwaP1CameraManager.cpp, NaiwaP1GameMode.cpp, NaiwaP1PlayerController.cpp, NaiwaP1SwitchPlatform.cpp, NaiwaP1TimedPlatform.cpp, NaiwaP1Trigger.cpp, NaiwaP2Archer.cpp, NaiwaP2ArcherAnimInstance.cpp, NaiwaP2Ballistics.cpp, NaiwaP2GameMode.cpp, NaiwaP2HUD.cpp, NaiwaP2ImpactEffectSubsystem.cpp, NaiwaP2PhysicsEgg.cpp, NaiwaP2PhysicsGoal.cpp, NaiwaP2PlayerController.cpp, NaiwaP2Probe.cpp, NaiwaP2SceneLibrary.cpp, NaiwaP2StructureBlock.cpp, NaiwaP3BombActor.cpp, NaiwaP3BombTypes.cpp, NaiwaP3FogOfWar.cpp, NaiwaP3GridSubsystem.cpp, NaiwaP3ItemEffects.cpp, NaiwaP3LootTable.cpp, NaiwaP3M1Actors.cpp, NaiwaP3M1GameMode.cpp, NaiwaP3M1HUD.cpp, NaiwaP3M1Settings.cpp, NaiwaP3M2EnemyAI.cpp, NaiwaP3M2GameMode.cpp, NaiwaP3M2HUD.cpp, NaiwaP3M2LevelSession.cpp, NaiwaP3M2MechanicsSettings.cpp, NaiwaP3M2RuntimeSubsystem.cpp, NaiwaP3M2ScenarioPreviewActor.cpp, NaiwaP3M2SeededMap.cpp, NaiwaP3M2Settings.cpp, NaiwaP3M2WorldPresentation.cpp, NaiwaP3Mechanics.cpp, NaiwaP3PlayerPawn.cpp, NaiwaRuntime.cpp, NaiwaVisualReviewComponent.cpp, NaiwaWebNativeDataExport.cpp, NaiwaP4ArenaSubsystem.cpp, NaiwaP4Determinism.cpp, NaiwaP4Settings.cpp, NaiwaP4UpgradeCatalog.cpp, NaiwaP4ArtIntegrationPlayerController.cpp, NaiwaP4InputBuffer.cpp, NaiwaP4PlayerController.cpp, NaiwaP4ArtIntegrationGameMode.cpp, NaiwaP4ArtIntegrationPawn.cpp, NaiwaP4ArtIntegrationWidget.cpp, NaiwaP4CameraRig.cpp, NaiwaP4W1PreviewGameMode.cpp, NaiwaP4DeterminismTests.cpp, NaiwaP5RunSubsystem.cpp, NaiwaP5Simulation.cpp, NaiwaP5TrackData.cpp, NaiwaP5SkinCatalog.cpp, NaiwaP5HUD.cpp, NaiwaP5M2PrototypeGameMode.cpp, NaiwaP5PrototypeGameMode.cpp, NaiwaP5PrototypePawn.cpp, NaiwaP5PrototypeTrackActor.cpp
+=================================
+Using Unreal Build Accelerator local executor to run 78 action(s)
+  CPU 24 physical cores, 24 logical cores
+  Memory 31.47 GB physical, 27.44 GB/44.97 GB committed
+  UBA Storage capacity 40 GB
+[1/78] Compile [x64] NaiwaMenuGameMode.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+[2/78] Compile [x64] NaiwaGameMode.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[3/78] Compile [x64] NaiwaHUD.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture2D.h(125,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+[4/78] Compile [x64] NaiwaAnimInstance.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Animation\AnimCompressionTypes.h(518,26): warning C4996: 'ICompressedAnimData::SerializeCompressedData': SerializeCompressedData now accepts the DataOwner as an argument - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SerializeCompressedData(class FArchive& Ar) override;
+	                        ^
+[5/78] Compile [x64] NaiwaMenuPlayerController.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Curves\CurveFloat.h(48,53): warning C4996: 'UCurveBase::GetCurves': Use version taking a TAdderReserverRef - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FRichCurveEditInfoConst> GetCurves() const override;
+	                                                   ^
+[6/78] Compile [x64] NaiwaMenuProgress.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+[7/78] Compile [x64] Module.NaiwaRuntime.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2190,15): warning C4996: 'USkinnedMeshComponent::UpdateSlaveComponent': This method has been deprecated. Please use UpdateFollowerComponent instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void UpdateSlaveComponent() override { UpdateFollowerComponent(); };
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2198,26): warning C4996: 'USkinnedMeshComponent::SetSkeletalMesh': Use USkeletalMeshComponent::SetSkeletalMesh() or SetSkinnedAssetAndUpdate() instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SetSkeletalMesh(class USkeletalMesh* NewMesh, bool bReinitPose = true) override;  // SetSkeletalMesh may remain and become a UFUNCTION but lose its virtual after it is removed from the SkinnedMeshComponent API
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[8/78] Compile [x64] NaiwaP1CameraManager.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Curves\CurveFloat.h(48,53): warning C4996: 'UCurveBase::GetCurves': Use version taking a TAdderReserverRef - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FRichCurveEditInfoConst> GetCurves() const override;
+	                                                   ^
+[9/78] Compile [x64] NaiwaCharacter.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Animation\AnimCompressionTypes.h(518,26): warning C4996: 'ICompressedAnimData::SerializeCompressedData': SerializeCompressedData now accepts the DataOwner as an argument - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SerializeCompressedData(class FArchive& Ar) override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2190,15): warning C4996: 'USkinnedMeshComponent::UpdateSlaveComponent': This method has been deprecated. Please use UpdateFollowerComponent instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void UpdateSlaveComponent() override { UpdateFollowerComponent(); };
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2198,26): warning C4996: 'USkinnedMeshComponent::SetSkeletalMesh': Use USkeletalMeshComponent::SetSkeletalMesh() or SetSkinnedAssetAndUpdate() instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SetSkeletalMesh(class USkeletalMesh* NewMesh, bool bReinitPose = true) override;  // SetSkeletalMesh may remain and become a UFUNCTION but lose its virtual after it is removed from the SkinnedMeshComponent API
+	                        ^
+[10/78] Compile [x64] NaiwaMenuWidget.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture2D.h(125,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+[11/78] Compile [x64] NaiwaP1PlayerController.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+[12/78] Compile [x64] NaiwaP1BouncePad.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1BouncePad.cpp(160,76): warning C4996: 'ACharacter::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    const bool bStandingOnPad = Movement->IsMovingOnGround() && Character->GetMovementBase() == PadCollision.Get();
+                                                                           ^
+[13/78] Compile [x64] NaiwaAutoTestComponent.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Animation\AnimCompressionTypes.h(518,26): warning C4996: 'ICompressedAnimData::SerializeCompressedData': SerializeCompressedData now accepts the DataOwner as an argument - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SerializeCompressedData(class FArchive& Ar) override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2190,15): warning C4996: 'USkinnedMeshComponent::UpdateSlaveComponent': This method has been deprecated. Please use UpdateFollowerComponent instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void UpdateSlaveComponent() override { UpdateFollowerComponent(); };
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2198,26): warning C4996: 'USkinnedMeshComponent::SetSkeletalMesh': Use USkeletalMeshComponent::SetSkeletalMesh() or SetSkinnedAssetAndUpdate() instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SetSkeletalMesh(class USkeletalMesh* NewMesh, bool bReinitPose = true) override;  // SetSkeletalMesh may remain and become a UFUNCTION but lose its virtual after it is removed from the SkinnedMeshComponent API
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(2606,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(3015,57): warning C4996: 'USkinnedAsset::GetLODInfoArray': Use GetLODInfo and GetLODNum instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual const TArray<FSkeletalMeshLODInfo>& GetLODInfoArray() const override;
+	                                                       ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(3009,51): warning C4996: 'USkinnedAsset::GetLODInfoArray': Use GetLODInfo and GetLODNum instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FSkeletalMeshLODInfo>& GetLODInfoArray() override;
+	                                                 ^
+[14/78] Compile [x64] NaiwaP2Ballistics.cpp [NoUba]
+[15/78] Compile [x64] NaiwaP2ArcherAnimInstance.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Animation\AnimCompressionTypes.h(518,26): warning C4996: 'ICompressedAnimData::SerializeCompressedData': SerializeCompressedData now accepts the DataOwner as an argument - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SerializeCompressedData(class FArchive& Ar) override;
+	                        ^
+[16/78] Compile [x64] NaiwaP1Trigger.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+[17/78] Compile [x64] NaiwaP1TimedPlatform.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+[18/78] Compile [x64] NaiwaP1SwitchPlatform.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[19/78] Compile [x64] NaiwaP2HUD.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture2D.h(125,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+[20/78] Compile [x64] NaiwaP1GameMode.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Animation\AnimCompressionTypes.h(518,26): warning C4996: 'ICompressedAnimData::SerializeCompressedData': SerializeCompressedData now accepts the DataOwner as an argument - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SerializeCompressedData(class FArchive& Ar) override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Curves\CurveFloat.h(48,53): warning C4996: 'UCurveBase::GetCurves': Use version taking a TAdderReserverRef - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FRichCurveEditInfoConst> GetCurves() const override;
+	                                                   ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Particles\ParticleSystem.h(433,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Plugins\FX\Niagara\Source\Niagara\Classes\NiagaraSystem.h(421,27): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	NIAGARA_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Plugins\FX\Niagara\Source\Niagara\Classes\NiagaraScript.h(1094,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Plugins\FX\Niagara\Source\Niagara\Classes\NiagaraEmitter.h(688,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+[21/78] Compile [x64] NaiwaP2Archer.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Animation\AnimCompressionTypes.h(518,26): warning C4996: 'ICompressedAnimData::SerializeCompressedData': SerializeCompressedData now accepts the DataOwner as an argument - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SerializeCompressedData(class FArchive& Ar) override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2190,15): warning C4996: 'USkinnedMeshComponent::UpdateSlaveComponent': This method has been deprecated. Please use UpdateFollowerComponent instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void UpdateSlaveComponent() override { UpdateFollowerComponent(); };
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2198,26): warning C4996: 'USkinnedMeshComponent::SetSkeletalMesh': Use USkeletalMeshComponent::SetSkeletalMesh() or SetSkinnedAssetAndUpdate() instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SetSkeletalMesh(class USkeletalMesh* NewMesh, bool bReinitPose = true) override;  // SetSkeletalMesh may remain and become a UFUNCTION but lose its virtual after it is removed from the SkinnedMeshComponent API
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(2606,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(3015,57): warning C4996: 'USkinnedAsset::GetLODInfoArray': Use GetLODInfo and GetLODNum instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual const TArray<FSkeletalMeshLODInfo>& GetLODInfoArray() const override;
+	                                                       ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(3009,51): warning C4996: 'USkinnedAsset::GetLODInfoArray': Use GetLODInfo and GetLODNum instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FSkeletalMeshLODInfo>& GetLODInfoArray() override;
+	                                                 ^
+[22/78] Compile [x64] NaiwaP2SceneLibrary.cpp [NoUba]
+[23/78] Compile [x64] NaiwaP2Probe.cpp [NoUba]
+[24/78] Compile [x64] NaiwaP3BombTypes.cpp [NoUba]
+[25/78] Compile [x64] NaiwaP2PhysicsGoal.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+[26/78] Compile [x64] NaiwaP2PlayerController.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[27/78] Compile [x64] NaiwaP3FogOfWar.cpp [NoUba]
+[28/78] Compile [x64] NaiwaP3ItemEffects.cpp [NoUba]
+[29/78] Compile [x64] NaiwaP2PhysicsEgg.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2190,15): warning C4996: 'USkinnedMeshComponent::UpdateSlaveComponent': This method has been deprecated. Please use UpdateFollowerComponent instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void UpdateSlaveComponent() override { UpdateFollowerComponent(); };
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2198,26): warning C4996: 'USkinnedMeshComponent::SetSkeletalMesh': Use USkeletalMeshComponent::SetSkeletalMesh() or SetSkinnedAssetAndUpdate() instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SetSkeletalMesh(class USkeletalMesh* NewMesh, bool bReinitPose = true) override;  // SetSkeletalMesh may remain and become a UFUNCTION but lose its virtual after it is removed from the SkinnedMeshComponent API
+	                        ^
+[30/78] Compile [x64] NaiwaP3LootTable.cpp [NoUba]
+[31/78] Compile [x64] NaiwaP2GameMode.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Curves\CurveFloat.h(48,53): warning C4996: 'UCurveBase::GetCurves': Use version taking a TAdderReserverRef - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FRichCurveEditInfoConst> GetCurves() const override;
+	                                                   ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(2606,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(3015,57): warning C4996: 'USkinnedAsset::GetLODInfoArray': Use GetLODInfo and GetLODNum instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual const TArray<FSkeletalMeshLODInfo>& GetLODInfoArray() const override;
+	                                                       ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(3009,51): warning C4996: 'USkinnedAsset::GetLODInfoArray': Use GetLODInfo and GetLODNum instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FSkeletalMeshLODInfo>& GetLODInfoArray() override;
+	                                                 ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2190,15): warning C4996: 'USkinnedMeshComponent::UpdateSlaveComponent': This method has been deprecated. Please use UpdateFollowerComponent instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void UpdateSlaveComponent() override { UpdateFollowerComponent(); };
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2198,26): warning C4996: 'USkinnedMeshComponent::SetSkeletalMesh': Use USkeletalMeshComponent::SetSkeletalMesh() or SetSkinnedAssetAndUpdate() instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SetSkeletalMesh(class USkeletalMesh* NewMesh, bool bReinitPose = true) override;  // SetSkeletalMesh may remain and become a UFUNCTION but lose its virtual after it is removed from the SkinnedMeshComponent API
+	                        ^
+[32/78] Compile [x64] NaiwaP2ImpactEffectSubsystem.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Particles\ParticleSystem.h(433,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Plugins\FX\Niagara\Source\Niagara\Classes\NiagaraSystem.h(421,27): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	NIAGARA_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Plugins\FX\Niagara\Source\Niagara\Classes\NiagaraScript.h(1094,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Plugins\FX\Niagara\Source\Niagara\Classes\NiagaraEmitter.h(688,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+[33/78] Compile [x64] NaiwaP3GridSubsystem.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[34/78] Compile [x64] NaiwaP3M2EnemyAI.cpp [NoUba]
+[35/78] Compile [x64] NaiwaP3BombActor.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture2D.h(125,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+[36/78] Compile [x64] NaiwaP2StructureBlock.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Curves\CurveFloat.h(48,53): warning C4996: 'UCurveBase::GetCurves': Use version taking a TAdderReserverRef - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FRichCurveEditInfoConst> GetCurves() const override;
+	                                                   ^
+[37/78] Compile [x64] NaiwaP3M1Settings.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+[38/78] Compile [x64] NaiwaP3M2LevelSession.cpp [NoUba]
+[39/78] Compile [x64] NaiwaP3M1HUD.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[40/78] Compile [x64] NaiwaP3M2MechanicsSettings.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+[41/78] Compile [x64] NaiwaP3M1GameMode.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[42/78] Compile [x64] NaiwaP3M1Actors.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture2D.h(125,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[43/78] Compile [x64] NaiwaP3M2SeededMap.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+[44/78] Compile [x64] NaiwaP3M2HUD.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture2D.h(125,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+[45/78] Compile [x64] NaiwaP3M2Settings.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+[46/78] Compile [x64] NaiwaP3M2RuntimeSubsystem.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture2D.h(125,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+[47/78] Compile [x64] NaiwaP3M2ScenarioPreviewActor.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[48/78] Compile [x64] NaiwaP3M2GameMode.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Curves\CurveFloat.h(48,53): warning C4996: 'UCurveBase::GetCurves': Use version taking a TAdderReserverRef - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FRichCurveEditInfoConst> GetCurves() const override;
+	                                                   ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture2D.h(125,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[49/78] Compile [x64] NaiwaP3Mechanics.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+[50/78] Compile [x64] NaiwaP4ArenaSubsystem.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[51/78] Compile [x64] NaiwaP4ArtIntegrationGameMode.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Curves\CurveFloat.h(48,53): warning C4996: 'UCurveBase::GetCurves': Use version taking a TAdderReserverRef - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FRichCurveEditInfoConst> GetCurves() const override;
+	                                                   ^
+[52/78] Compile [x64] NaiwaP4Determinism.cpp [NoUba]
+[53/78] Compile [x64] NaiwaP3M2WorldPresentation.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture2D.h(125,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+[54/78] Compile [x64] NaiwaP4InputBuffer.cpp [NoUba]
+[55/78] Compile [x64] NaiwaP4ArtIntegrationPlayerController.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[56/78] Compile [x64] NaiwaP3PlayerPawn.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture2D.h(125,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+[57/78] Compile [x64] NaiwaP4DeterminismTests.cpp [NoUba]
+[58/78] Compile [x64] NaiwaP4ArtIntegrationPawn.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture2D.h(125,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+[59/78] Compile [x64] NaiwaP4CameraRig.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[60/78] Compile [x64] NaiwaP4ArtIntegrationWidget.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture2D.h(125,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+[61/78] Compile [x64] NaiwaP4Settings.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+[62/78] Compile [x64] NaiwaP4UpgradeCatalog.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+[63/78] Compile [x64] NaiwaP4PlayerController.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[64/78] Compile [x64] NaiwaP5M2PrototypeGameMode.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[65/78] Compile [x64] NaiwaP5HUD.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[66/78] Compile [x64] NaiwaP4W1PreviewGameMode.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[67/78] Compile [x64] NaiwaP5PrototypeGameMode.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[68/78] Compile [x64] NaiwaP5Simulation.cpp [NoUba]
+[69/78] Compile [x64] NaiwaP5SkinCatalog.cpp [NoUba]
+[70/78] Compile [x64] NaiwaP5TrackData.cpp [NoUba]
+[71/78] Compile [x64] NaiwaRuntime.cpp [NoUba]
+[72/78] Compile [x64] NaiwaP5RunSubsystem.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[73/78] Compile [x64] NaiwaWebNativeDataExport.cpp [NoUba]
+[74/78] Compile [x64] NaiwaP5PrototypePawn.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+[75/78] Compile [x64] NaiwaP5PrototypeTrackActor.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Curves\CurveFloat.h(48,53): warning C4996: 'UCurveBase::GetCurves': Use version taking a TAdderReserverRef - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FRichCurveEditInfoConst> GetCurves() const override;
+	                                                   ^
+[76/78] Compile [x64] NaiwaVisualReviewComponent.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Animation\AnimCompressionTypes.h(518,26): warning C4996: 'ICompressedAnimData::SerializeCompressedData': SerializeCompressedData now accepts the DataOwner as an argument - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SerializeCompressedData(class FArchive& Ar) override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2190,15): warning C4996: 'USkinnedMeshComponent::UpdateSlaveComponent': This method has been deprecated. Please use UpdateFollowerComponent instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void UpdateSlaveComponent() override { UpdateFollowerComponent(); };
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2198,26): warning C4996: 'USkinnedMeshComponent::SetSkeletalMesh': Use USkeletalMeshComponent::SetSkeletalMesh() or SetSkinnedAssetAndUpdate() instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SetSkeletalMesh(class USkeletalMesh* NewMesh, bool bReinitPose = true) override;  // SetSkeletalMesh may remain and become a UFUNCTION but lose its virtual after it is removed from the SkinnedMeshComponent API
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(2606,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(3015,57): warning C4996: 'USkinnedAsset::GetLODInfoArray': Use GetLODInfo and GetLODNum instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual const TArray<FSkeletalMeshLODInfo>& GetLODInfoArray() const override;
+	                                                       ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(3009,51): warning C4996: 'USkinnedAsset::GetLODInfoArray': Use GetLODInfo and GetLODNum instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FSkeletalMeshLODInfo>& GetLODInfoArray() override;
+	                                                 ^
+[77/78] Link [x64] Nai_Long.exe [NoUba]
+  ￕ�ￔￚﾴﾴﾽﾨ﾿￢ C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Binaries\Win64\Nai_Long.lib ﾺￍﾶￔￏ￳ C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Binaries\Win64\Nai_Long.exp
+[78/78] WriteMetadata Nai_Long.target [NoUba]
+
+Total time in Unreal Build Accelerator local executor: 83.15 seconds
+Output binary: C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Binaries\Win64\Nai_Long.exe
+
+Result: Succeeded
+Total execution time: 86.79 seconds
+Trace written to file C:\Users\31314\AppData\Local\UnrealBuildTool\Trace.uba with size 20.0kb

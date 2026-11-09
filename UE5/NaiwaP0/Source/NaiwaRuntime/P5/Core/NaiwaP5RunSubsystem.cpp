@@ -227,10 +227,10 @@ void UNaiwaP5RunSubsystem::NotifySnowContact(const bool bOnSnow)
 	}
 }
 
-uint64 UNaiwaP5RunSubsystem::GetSimulationStateHashV4() const
+uint64 UNaiwaP5RunSubsystem::GetSimulationStateHashV5() const
 {
 	uint64 Hash = 14695981039346656037ull;
-	Hash = HashUInt32LE64(Hash, 4u);
+	Hash = HashUInt32LE64(Hash, 5u);
 	Hash = HashUInt32LE64(Hash, FNaiwaP5TrackData::GetM0BaselineFixture().FixtureHash);
 	Hash = HashUInt32LE64(Hash, GetActivePrototypeFixture().FixtureHash);
 	Hash = HashUInt32LE64(Hash, static_cast<uint32>(FNaiwaP5SkinCatalog::CatalogVersion));
@@ -334,8 +334,6 @@ void UNaiwaP5RunSubsystem::AdvanceFixedStep()
 	const FNaiwaP5RouteFixture& RouteFixture = GetActivePrototypeFixture();
 	const double PreviousDistanceMeters = State.DistanceMeters;
 	const int32 CurrentDistanceMm = FMath::FloorToInt(State.DistanceMeters * 1000.0);
-	const double PreviousSurfaceHeightMeters = FNaiwaP5TrackData::GetRouteSurfaceHeightMeters(
-		RouteFixture, CurrentDistanceMm);
 	const double TerrainSpeed = FNaiwaP5TrackData::GetRouteSpeedMetersPerSecond(RouteFixture, CurrentDistanceMm);
 	if (State.bFallen || State.bFallInvulnerable)
 	{
@@ -345,10 +343,16 @@ void UNaiwaP5RunSubsystem::AdvanceFixedStep()
 		State.bFallInvulnerable = FNaiwaP5Simulation::IsFallInvulnerable(State.FallElapsedSeconds);
 		if (State.FallElapsedSeconds >= NaiwaP5Rules::FallHardStunSeconds + NaiwaP5Rules::FallRecoverySeconds)
 		{
+			const bool bBufferedJumpAfterRecovery = State.bJumpBuffered;
 			State.bFallen = false;
 			State.bOnSnow = true;
 			State.CoyoteElapsedSeconds = 0.0;
 			State.JumpHeightMeters = 0.0;
+			State.bJumpBuffered = false;
+			if (bBufferedJumpAfterRecovery)
+			{
+				StartJump();
+			}
 		}
 	}
 	else
@@ -393,39 +397,19 @@ void UNaiwaP5RunSubsystem::AdvanceFixedStep()
 	bJumpReleaseQueued = false;
 	ApplyInput(StepInput);
 	State.DistanceMeters += State.PlayerSpeedMetersPerSecond * DeltaSeconds;
-	const int32 NextDistanceMm = FMath::FloorToInt(State.DistanceMeters * 1000.0);
-	const double CurrentSurfaceHeightMeters = FNaiwaP5TrackData::GetRouteSurfaceHeightMeters(
-		RouteFixture, NextDistanceMm);
 
 	if (State.bAirborne)
 	{
-		double JumpWorldHeightMeters = PreviousSurfaceHeightMeters + State.JumpHeightMeters;
 		const int8 RotationAxis = FNaiwaP5Simulation::ResolveRotationAxis(
 			StepInput.bRotateLeft, StepInput.bRotateRight);
 		State.RotationDegrees = FNaiwaP5Simulation::AdvanceRotationDegrees(
 			State.RotationDegrees, RotationAxis, DeltaSeconds);
 		State.JumpElapsedSeconds += DeltaSeconds;
-		if (State.bJumpCharging && StepInput.bJumpHeld &&
-			State.JumpChargeSeconds < NaiwaP5Rules::JumpMaxHoldSeconds)
-		{
-			const double ChargeStep = FMath::Min(DeltaSeconds,
-				NaiwaP5Rules::JumpMaxHoldSeconds - State.JumpChargeSeconds);
-			State.JumpChargeSeconds += ChargeStep;
-			State.JumpVerticalVelocityMetersPerSecond +=
-				NaiwaP5Rules::JumpHoldAccelerationMetersPerSecondSquared * ChargeStep;
-			if (State.JumpChargeSeconds >= NaiwaP5Rules::JumpMaxHoldSeconds)
-			{
-				State.bJumpCharging = false;
-			}
-		}
-		if (StepInput.bJumpReleased || !StepInput.bJumpHeld)
-		{
-			State.bJumpCharging = false;
-		}
 		State.JumpVerticalVelocityMetersPerSecond -=
 			NaiwaP5Rules::JumpGravityMetersPerSecondSquared * DeltaSeconds;
-		JumpWorldHeightMeters += State.JumpVerticalVelocityMetersPerSecond * DeltaSeconds;
-		State.JumpHeightMeters = JumpWorldHeightMeters - CurrentSurfaceHeightMeters;
+		// Treat jump height relative to the route. The pawn's world position adds
+		// this arc to the smoothed slope, so climbing terrain cannot cancel takeoff.
+		State.JumpHeightMeters += State.JumpVerticalVelocityMetersPerSecond * DeltaSeconds;
 		if (State.JumpElapsedSeconds > 0.05 && State.JumpHeightMeters <= 0.0)
 		{
 			ResolveLanding();
@@ -458,6 +442,14 @@ void UNaiwaP5RunSubsystem::ApplyInput(const FNaiwaP5InputCommand& Command)
 {
 	if (State.bFallen)
 	{
+		const double RecoveryEndSeconds = NaiwaP5Rules::FallHardStunSeconds +
+			NaiwaP5Rules::FallRecoverySeconds;
+		const double RecoveryRemainingSeconds = RecoveryEndSeconds - State.FallElapsedSeconds;
+		if ((Command.bJumpPressed || Command.bJumpHeld) &&
+			RecoveryRemainingSeconds <= NaiwaP5Rules::JumpBufferSeconds)
+		{
+			State.bJumpBuffered = true;
+		}
 		return;
 	}
 
@@ -472,23 +464,16 @@ void UNaiwaP5RunSubsystem::ApplyInput(const FNaiwaP5InputCommand& Command)
 				State.bJumpBuffered = true;
 			}
 		}
-		else if (!State.bJumpCharging &&
-			(State.bOnSnow || State.CoyoteElapsedSeconds <= NaiwaP5Rules::CoyoteTimeSeconds))
+		else if (State.bOnSnow || State.CoyoteElapsedSeconds <= NaiwaP5Rules::CoyoteTimeSeconds)
 		{
-			StartJump(true);
+			StartJump();
 		}
 	}
-
-	if (State.bAirborne && State.bJumpCharging && (Command.bJumpReleased || !Command.bJumpHeld))
-	{
-		State.bJumpCharging = false;
-	}
-
 }
 
-void UNaiwaP5RunSubsystem::StartJump(const bool bChargeWhileHeld)
+void UNaiwaP5RunSubsystem::StartJump()
 {
-	State.bJumpCharging = bChargeWhileHeld;
+	State.bJumpCharging = false;
 	State.bAirborne = true;
 	State.bOnSnow = false;
 	State.CoyoteElapsedSeconds = 0.0;
@@ -497,6 +482,7 @@ void UNaiwaP5RunSubsystem::StartJump(const bool bChargeWhileHeld)
 	State.JumpElapsedSeconds = 0.0;
 	State.JumpHeightMeters = 0.0;
 	State.RotationDegrees = 0.0;
+	State.JumpChargeSeconds = 0.0;
 	State.JumpVerticalVelocityMetersPerSecond = NaiwaP5Rules::JumpLaunchVelocityMetersPerSecond *
 		(State.bRiding ? NaiwaP5Rules::RideJumpVelocityMultiplier : 1.0);
 }
@@ -572,7 +558,7 @@ void UNaiwaP5RunSubsystem::ResolveLanding()
 	if (State.bJumpBuffered)
 	{
 		State.bJumpBuffered = false;
-		StartJump(false);
+		StartJump();
 	}
 }
 

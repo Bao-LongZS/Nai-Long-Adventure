@@ -1,0 +1,1390 @@
+{
+  "schemaVersion": 1,
+  "status": "WIP; all anchors are provisional and require UE slope/mount calibration",
+  "coordinateSystem": {
+    "origin": "top-left of each sprite cell",
+    "u": "left-to-right",
+    "v": "top-to-bottom",
+    "range": "0..1"
+  },
+  "bodyAtlas": {
+    "file": "UE5/SourceAssets/P5/Characters/Exports/P5_A4_NaiwaBodyAtlas_v04_WIP.png",
+    "columns": 4,
+    "rows": 6,
+    "cellSize": [
+      512,
+      512
+    ],
+    "frames": [
+      {
+        "index": 0,
+        "name": "Glide_01",
+        "sequence": "Glide",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Glide_v03_WIP.png",
+        "sourceCell": [
+          0,
+          0,
+          768,
+          512
+        ],
+        "atlasRect": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          150,
+          456,
+          320
+        ],
+        "durationMs": 100,
+        "loop": true,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.22,
+              0.4
+            ],
+            [
+              0.77,
+              0.43
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 1,
+        "name": "Glide_02",
+        "sequence": "Glide",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Glide_v03_WIP.png",
+        "sourceCell": [
+          768,
+          0,
+          768,
+          512
+        ],
+        "atlasRect": [
+          512,
+          0,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          129,
+          456,
+          341
+        ],
+        "durationMs": 100,
+        "loop": true,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.22,
+              0.4
+            ],
+            [
+              0.77,
+              0.43
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 2,
+        "name": "Glide_03",
+        "sequence": "Glide",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Glide_v03_WIP.png",
+        "sourceCell": [
+          0,
+          512,
+          768,
+          512
+        ],
+        "atlasRect": [
+          1024,
+          0,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          150,
+          456,
+          320
+        ],
+        "durationMs": 100,
+        "loop": true,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.22,
+              0.4
+            ],
+            [
+              0.77,
+              0.43
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 3,
+        "name": "Glide_04",
+        "sequence": "Glide",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Glide_v03_WIP.png",
+        "sourceCell": [
+          768,
+          512,
+          768,
+          512
+        ],
+        "atlasRect": [
+          1536,
+          0,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          120,
+          456,
+          350
+        ],
+        "durationMs": 100,
+        "loop": true,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.22,
+              0.4
+            ],
+            [
+              0.77,
+              0.43
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 4,
+        "name": "Preload_01",
+        "sequence": "PreloadTakeoff",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Takeoff_v02_WIP.png",
+        "sourceCell": [
+          0,
+          0,
+          724,
+          724
+        ],
+        "atlasRect": [
+          0,
+          512,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          121,
+          456,
+          349
+        ],
+        "durationMs": 80,
+        "loop": false,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.29,
+              0.57
+            ],
+            [
+              0.72,
+              0.56
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 5,
+        "name": "Preload_02",
+        "sequence": "PreloadTakeoff",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Takeoff_v02_WIP.png",
+        "sourceCell": [
+          724,
+          0,
+          724,
+          724
+        ],
+        "atlasRect": [
+          512,
+          512,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          106,
+          456,
+          364
+        ],
+        "durationMs": 80,
+        "loop": false,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.29,
+              0.57
+            ],
+            [
+              0.72,
+              0.56
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 6,
+        "name": "Takeoff_Release",
+        "sequence": "PreloadTakeoff",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Takeoff_v02_WIP.png",
+        "sourceCell": [
+          1448,
+          0,
+          724,
+          724
+        ],
+        "atlasRect": [
+          1024,
+          512,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          57,
+          456,
+          413
+        ],
+        "durationMs": 100,
+        "loop": false,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.29,
+              0.57
+            ],
+            [
+              0.72,
+              0.56
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 7,
+        "name": "AirTuck_01",
+        "sequence": "AirTuckExtend",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_AirTuck_v02_WIP.png",
+        "sourceCell": [
+          0,
+          0,
+          724,
+          724
+        ],
+        "atlasRect": [
+          1536,
+          512,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          88,
+          456,
+          382
+        ],
+        "durationMs": 90,
+        "loop": false,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.25,
+              0.47
+            ],
+            [
+              0.72,
+              0.48
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 8,
+        "name": "AirTuck_02",
+        "sequence": "AirTuckExtend",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_AirTuck_v02_WIP.png",
+        "sourceCell": [
+          724,
+          0,
+          724,
+          724
+        ],
+        "atlasRect": [
+          0,
+          1024,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          119,
+          456,
+          351
+        ],
+        "durationMs": 90,
+        "loop": false,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.25,
+              0.47
+            ],
+            [
+              0.72,
+              0.48
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 9,
+        "name": "AirExtend_01",
+        "sequence": "AirTuckExtend",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_AirTuck_v02_WIP.png",
+        "sourceCell": [
+          1448,
+          0,
+          724,
+          724
+        ],
+        "atlasRect": [
+          512,
+          1024,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          104,
+          456,
+          366
+        ],
+        "durationMs": 110,
+        "loop": false,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.25,
+              0.47
+            ],
+            [
+              0.72,
+              0.48
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 10,
+        "name": "AirTurn_01",
+        "sequence": "AirTurnBalance",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_AirTurn_v02_WIP.png",
+        "sourceCell": [
+          0,
+          0,
+          724,
+          724
+        ],
+        "atlasRect": [
+          1024,
+          1024,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          68,
+          456,
+          402
+        ],
+        "durationMs": 100,
+        "loop": true,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.22,
+              0.42
+            ],
+            [
+              0.78,
+              0.43
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 11,
+        "name": "AirTurn_02",
+        "sequence": "AirTurnBalance",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_AirTurn_v02_WIP.png",
+        "sourceCell": [
+          724,
+          0,
+          724,
+          724
+        ],
+        "atlasRect": [
+          1536,
+          1024,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          62,
+          456,
+          408
+        ],
+        "durationMs": 100,
+        "loop": true,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.22,
+              0.42
+            ],
+            [
+              0.78,
+              0.43
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 12,
+        "name": "AirTurn_03",
+        "sequence": "AirTurnBalance",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_AirTurn_v02_WIP.png",
+        "sourceCell": [
+          1448,
+          0,
+          724,
+          724
+        ],
+        "atlasRect": [
+          0,
+          1536,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          85,
+          456,
+          385
+        ],
+        "durationMs": 100,
+        "loop": true,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.22,
+              0.42
+            ],
+            [
+              0.78,
+              0.43
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 13,
+        "name": "Land_Contact",
+        "sequence": "LandRecover",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Land_v01_WIP.png",
+        "sourceCell": [
+          0,
+          0,
+          627,
+          836
+        ],
+        "atlasRect": [
+          512,
+          1536,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          48,
+          456,
+          422
+        ],
+        "durationMs": 80,
+        "loop": false,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.23,
+              0.48
+            ],
+            [
+              0.77,
+              0.48
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 14,
+        "name": "Land_Compress",
+        "sequence": "LandRecover",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Land_v01_WIP.png",
+        "sourceCell": [
+          627,
+          0,
+          627,
+          836
+        ],
+        "atlasRect": [
+          1024,
+          1536,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          53,
+          456,
+          417
+        ],
+        "durationMs": 100,
+        "loop": false,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.23,
+              0.48
+            ],
+            [
+              0.77,
+              0.48
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 15,
+        "name": "Land_ResumeGlide",
+        "sequence": "LandRecover",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Land_v01_WIP.png",
+        "sourceCell": [
+          1254,
+          0,
+          627,
+          836
+        ],
+        "atlasRect": [
+          1536,
+          1536,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          56,
+          456,
+          414
+        ],
+        "durationMs": 160,
+        "loop": false,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.23,
+              0.48
+            ],
+            [
+              0.77,
+              0.48
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 16,
+        "name": "Fall_01",
+        "sequence": "FallRecovery",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Fall_v01_WIP.png",
+        "sourceCell": [
+          0,
+          0,
+          768,
+          512
+        ],
+        "atlasRect": [
+          0,
+          2048,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          177,
+          456,
+          293
+        ],
+        "durationMs": 100,
+        "loop": false,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.3,
+              0.6
+            ],
+            [
+              0.7,
+              0.6
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 17,
+        "name": "Fall_02",
+        "sequence": "FallRecovery",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Fall_v01_WIP.png",
+        "sourceCell": [
+          768,
+          0,
+          768,
+          512
+        ],
+        "atlasRect": [
+          512,
+          2048,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          192,
+          456,
+          278
+        ],
+        "durationMs": 120,
+        "loop": false,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.3,
+              0.6
+            ],
+            [
+              0.7,
+              0.6
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 18,
+        "name": "Recovery_01",
+        "sequence": "FallRecovery",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Fall_v01_WIP.png",
+        "sourceCell": [
+          0,
+          512,
+          768,
+          512
+        ],
+        "atlasRect": [
+          1024,
+          2048,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          100,
+          456,
+          370
+        ],
+        "durationMs": 120,
+        "loop": false,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.3,
+              0.6
+            ],
+            [
+              0.7,
+              0.6
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 19,
+        "name": "Recovery_02",
+        "sequence": "FallRecovery",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Fall_v01_WIP.png",
+        "sourceCell": [
+          768,
+          512,
+          768,
+          512
+        ],
+        "atlasRect": [
+          1536,
+          2048,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          108,
+          456,
+          362
+        ],
+        "durationMs": 180,
+        "loop": false,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.3,
+              0.6
+            ],
+            [
+              0.7,
+              0.6
+            ]
+          ],
+          "rideSeatUV": null,
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 20,
+        "name": "Ride_01",
+        "sequence": "Ride",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Ride_v01_WIP.png",
+        "sourceCell": [
+          0,
+          0,
+          724,
+          724
+        ],
+        "atlasRect": [
+          0,
+          2560,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          33,
+          28,
+          446,
+          456
+        ],
+        "durationMs": 120,
+        "loop": true,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.43,
+              0.57
+            ],
+            [
+              0.6,
+              0.57
+            ]
+          ],
+          "rideSeatUV": [
+            0.5,
+            0.64
+          ],
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 21,
+        "name": "Ride_02",
+        "sequence": "Ride",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Ride_v01_WIP.png",
+        "sourceCell": [
+          724,
+          0,
+          724,
+          724
+        ],
+        "atlasRect": [
+          512,
+          2560,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          32,
+          28,
+          447,
+          456
+        ],
+        "durationMs": 120,
+        "loop": true,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.43,
+              0.57
+            ],
+            [
+              0.6,
+              0.57
+            ]
+          ],
+          "rideSeatUV": [
+            0.5,
+            0.64
+          ],
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      },
+      {
+        "index": 22,
+        "name": "Ride_03",
+        "sequence": "Ride",
+        "sourceSheet": "UE5/SourceAssets/P5/Characters/Source/A4_Animation_v03_WIP/C_Naiwa_Ride_v01_WIP.png",
+        "sourceCell": [
+          1448,
+          0,
+          724,
+          724
+        ],
+        "atlasRect": [
+          1024,
+          2560,
+          512,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          28,
+          456,
+          453
+        ],
+        "durationMs": 120,
+        "loop": true,
+        "anchors": {
+          "footContactUV": [
+            0.5,
+            0.91796875
+          ],
+          "bodyRootUV": [
+            0.5,
+            0.7
+          ],
+          "handAnchorsUV": [
+            [
+              0.43,
+              0.57
+            ],
+            [
+              0.6,
+              0.57
+            ]
+          ],
+          "rideSeatUV": [
+            0.5,
+            0.64
+          ],
+          "status": "provisional; hand points are pose estimates; calibrate against slope, board and mount in UE Editor"
+        }
+      }
+    ]
+  },
+  "snowboard": {
+    "file": "UE5/SourceAssets/P5/Characters/Exports/P5_A4_Snowboard_v01_WIP.png",
+    "size": [
+      1024,
+      256
+    ],
+    "rotationPivotUV": [
+      0.5,
+      0.5
+    ],
+    "contactLineUV": [
+      [
+        0.08,
+        0.76
+      ],
+      [
+        0.92,
+        0.76
+      ]
+    ],
+    "status": "provisional; verify board bottom against feet at -30,-15,0,+15,+30 degrees"
+  },
+  "kangarooAtlas": {
+    "file": "UE5/SourceAssets/P5/Environment/Exports/P5_A5_KangarooMount_v02_WIP.png",
+    "columns": 3,
+    "rows": 2,
+    "size": [
+      1024,
+      1024
+    ],
+    "frames": [
+      {
+        "index": 0,
+        "name": "AvailableIdle",
+        "sourceCell": [
+          0,
+          0,
+          418,
+          627
+        ],
+        "atlasRect": [
+          0,
+          0,
+          341,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          150,
+          285,
+          334
+        ],
+        "anchors": {
+          "footAnchorUV": [
+            0.5,
+            0.965
+          ],
+          "saddleCenterUV": [
+            0.5,
+            0.48
+          ],
+          "saddleForwardUV": [
+            0.68,
+            0.48
+          ],
+          "status": "provisional; align with player Ride frames in UE Editor"
+        }
+      },
+      {
+        "index": 1,
+        "name": "ReadyToCarry",
+        "sourceCell": [
+          418,
+          0,
+          418,
+          627
+        ],
+        "atlasRect": [
+          341,
+          0,
+          342,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          194,
+          286,
+          290
+        ],
+        "anchors": {
+          "footAnchorUV": [
+            0.5,
+            0.965
+          ],
+          "saddleCenterUV": [
+            0.5,
+            0.48
+          ],
+          "saddleForwardUV": [
+            0.68,
+            0.48
+          ],
+          "status": "provisional; align with player Ride frames in UE Editor"
+        }
+      },
+      {
+        "index": 2,
+        "name": "DownhillGlide",
+        "sourceCell": [
+          836,
+          0,
+          418,
+          627
+        ],
+        "atlasRect": [
+          683,
+          0,
+          341,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          233,
+          285,
+          251
+        ],
+        "anchors": {
+          "footAnchorUV": [
+            0.5,
+            0.965
+          ],
+          "saddleCenterUV": [
+            0.5,
+            0.48
+          ],
+          "saddleForwardUV": [
+            0.68,
+            0.48
+          ],
+          "status": "provisional; align with player Ride frames in UE Editor"
+        }
+      },
+      {
+        "index": 3,
+        "name": "ImpactReact",
+        "sourceCell": [
+          0,
+          627,
+          418,
+          627
+        ],
+        "atlasRect": [
+          0,
+          512,
+          341,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          125,
+          285,
+          359
+        ],
+        "anchors": {
+          "footAnchorUV": [
+            0.5,
+            0.965
+          ],
+          "saddleCenterUV": [
+            0.5,
+            0.48
+          ],
+          "saddleForwardUV": [
+            0.68,
+            0.48
+          ],
+          "status": "provisional; align with player Ride frames in UE Editor"
+        }
+      },
+      {
+        "index": 4,
+        "name": "Bounce",
+        "sourceCell": [
+          418,
+          627,
+          418,
+          627
+        ],
+        "atlasRect": [
+          341,
+          512,
+          342,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          164,
+          286,
+          320
+        ],
+        "anchors": {
+          "footAnchorUV": [
+            0.5,
+            0.965
+          ],
+          "saddleCenterUV": [
+            0.5,
+            0.48
+          ],
+          "saddleForwardUV": [
+            0.68,
+            0.48
+          ],
+          "status": "provisional; align with player Ride frames in UE Editor"
+        }
+      },
+      {
+        "index": 5,
+        "name": "RecoveredIdle",
+        "sourceCell": [
+          836,
+          627,
+          418,
+          627
+        ],
+        "atlasRect": [
+          683,
+          512,
+          341,
+          512
+        ],
+        "spriteRectInCell": [
+          28,
+          147,
+          285,
+          337
+        ],
+        "anchors": {
+          "footAnchorUV": [
+            0.5,
+            0.965
+          ],
+          "saddleCenterUV": [
+            0.5,
+            0.48
+          ],
+          "saddleForwardUV": [
+            0.68,
+            0.48
+          ],
+          "status": "provisional; align with player Ride frames in UE Editor"
+        }
+      }
+    ],
+    "status": "saddle anchors are approximate; calibrate against the separate player Ride pose"
+  }
+}

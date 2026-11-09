@@ -1,0 +1,68 @@
+Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Nai_LongEditor Win64 Development -Project=C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Nai_Long.uproject -NoUBA -NoSharedPCH -NoHotReloadFromIDE -NoLiveCoding -WaitMutex -MaxParallelActions=4 -UBARootDir=C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Intermediate\P5BackgroundFixUBA
+Log file: C:\Users\31314\AppData\Local\Packages\sandbox.{38c00563-487c-4385-a162-d97c04d3c1d3}\AC\UnrealBuildTool\Log.txt
+Executing up to 4 actions based on MaxProcessorCount override
+UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+Available x64 toolchains (1):
+ * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231
+    (Family=14.51.36231, FamilyRank=2, Version=14.51.36256, HostArchitecture=x64, ReleaseChannel=Latest, Architecture=x64)
+Visual Studio compiler version 14.51.36256 is newer than latest preferred version 14.50.35717. Please use caution as this compiler has not been heavily tested
+Building Nai_LongEditor...
+===== Toolchain Information =====
+Using ISPC compiler (C:\Program Files\Epic Games\UE_5.8\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+  Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2) 
+Using Visual Studio 14.51.36256 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+Warning: Visual Studio compiler 14.51.36256 is not a preferred version
+[Adaptive Build] Excluded from NaiwaRuntime unity file: NaiwaAnimInstance.cpp, NaiwaAutoTestComponent.cpp, NaiwaCharacter.cpp, NaiwaGameMode.cpp, NaiwaHUD.cpp, NaiwaMenuGameMode.cpp, NaiwaMenuPlayerController.cpp, NaiwaMenuProgress.cpp, NaiwaMenuWidget.cpp, NaiwaP1BouncePad.cpp, NaiwaP1CameraManager.cpp, NaiwaP1GameMode.cpp, NaiwaP1PlayerController.cpp, NaiwaP1SwitchPlatform.cpp, NaiwaP1TimedPlatform.cpp, NaiwaP1Trigger.cpp, NaiwaP2Archer.cpp, NaiwaP2ArcherAnimInstance.cpp, NaiwaP2Ballistics.cpp, NaiwaP2GameMode.cpp, NaiwaP2HUD.cpp, NaiwaP2ImpactEffectSubsystem.cpp, NaiwaP2PhysicsEgg.cpp, NaiwaP2PhysicsGoal.cpp, NaiwaP2PlayerController.cpp, NaiwaP2Probe.cpp, NaiwaP2SceneLibrary.cpp, NaiwaP2StructureBlock.cpp, NaiwaP3BombActor.cpp, NaiwaP3BombTypes.cpp, NaiwaP3FogOfWar.cpp, NaiwaP3GridSubsystem.cpp, NaiwaP3ItemEffects.cpp, NaiwaP3LootTable.cpp, NaiwaP3M1Actors.cpp, NaiwaP3M1GameMode.cpp, NaiwaP3M1HUD.cpp, NaiwaP3M1Settings.cpp, NaiwaP3M2EnemyAI.cpp, NaiwaP3M2GameMode.cpp, NaiwaP3M2HUD.cpp, NaiwaP3M2LevelSession.cpp, NaiwaP3M2MechanicsSettings.cpp, NaiwaP3M2RuntimeSubsystem.cpp, NaiwaP3M2ScenarioPreviewActor.cpp, NaiwaP3M2SeededMap.cpp, NaiwaP3M2Settings.cpp, NaiwaP3M2WorldPresentation.cpp, NaiwaP3Mechanics.cpp, NaiwaP3PlayerPawn.cpp, NaiwaRuntime.cpp, NaiwaVisualReviewComponent.cpp, NaiwaWebNativeDataExport.cpp, NaiwaP4ArenaSubsystem.cpp, NaiwaP4Determinism.cpp, NaiwaP4Settings.cpp, NaiwaP4UpgradeCatalog.cpp, NaiwaP4ArtIntegrationPlayerController.cpp, NaiwaP4InputBuffer.cpp, NaiwaP4PlayerController.cpp, NaiwaP4ArtIntegrationGameMode.cpp, NaiwaP4ArtIntegrationPawn.cpp, NaiwaP4ArtIntegrationWidget.cpp, NaiwaP4CameraRig.cpp, NaiwaP4W1PreviewGameMode.cpp, NaiwaP4DeterminismTests.cpp, NaiwaP5RunSubsystem.cpp, NaiwaP5Simulation.cpp, NaiwaP5TrackData.cpp, NaiwaP5SkinCatalog.cpp, NaiwaP5HUD.cpp, NaiwaP5M2PrototypeGameMode.cpp, NaiwaP5PrototypeGameMode.cpp, NaiwaP5PrototypePawn.cpp, NaiwaP5PrototypeTrackActor.cpp
+=================================
+Using Unreal Build Accelerator local executor to run 4 action(s)
+  CPU 24 physical cores, 24 logical cores
+  Memory 31.47 GB physical, 39.85 GB/44.97 GB committed
+  UBA Storage capacity 40 GB
+[1/4] Compile [x64] NaiwaP5PrototypeTrackActor.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4341,43): warning C4996: 'UStruct::ActivateTrackingPropertyValueFlag': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk.
+	UE_INTERNAL COREUOBJECT_API virtual bool ActivateTrackingPropertyValueFlag(EPropertyValueFlags Flags, void* Data) const override;
+	                                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4342,43): warning C4996: 'UStruct::IsTrackingPropertyValueFlag': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk.
+	UE_INTERNAL COREUOBJECT_API virtual bool IsTrackingPropertyValueFlag(EPropertyValueFlags Flags, const void* Data) const override;
+	                                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4343,43): warning C4996: 'UStruct::HasPropertyValueFlag': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk.
+	UE_INTERNAL COREUOBJECT_API virtual bool HasPropertyValueFlag(EPropertyValueFlags Flags, const void* Data, const FProperty* Property, int32 ArrayIndex = 0) const override;
+	                                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4344,43): warning C4996: 'UStruct::SetPropertyValueFlag': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk.
+	UE_INTERNAL COREUOBJECT_API virtual void SetPropertyValueFlag(EPropertyValueFlags Flags, bool bValue, void* Data, const FProperty* Property, int32 ArrayIndex = 0) const override;
+	                                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4345,43): warning C4996: 'UStruct::ResetPropertyValueFlags': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk.
+	UE_INTERNAL COREUOBJECT_API virtual void ResetPropertyValueFlags(EPropertyValueFlags Flags, void* Data) const override;
+	                                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4346,43): warning C4996: 'UStruct::SerializePropertyValueFlags': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk.
+	UE_INTERNAL COREUOBJECT_API virtual void SerializePropertyValueFlags(EPropertyValueFlags Flags, void* Data, FStructuredArchiveRecord Record, FArchiveFieldName Name) const override;
+	                                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture.h(2069,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Curves\CurveFloat.h(48,53): warning C4996: 'UCurveBase::GetCurves': Use version taking a TAdderReserverRef - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FRichCurveEditInfoConst> GetCurves() const override;
+	                                                   ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Materials\MaterialExpressionMaterialFunctionCall.h(126,51): warning C4996: 'UMaterialExpression::GetInputsView': Use FExpressionInputIterator instead or GetInput() directly. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArrayView<FExpressionInput*> GetInputsView() override;
+	                                                 ^
+[2/4] Link [x64] UnrealEditor-NaiwaRuntime.dll [NoUba]
+LINK : fatal error LNK1104: ￎ￞ﾷﾨﾴ￲﾿ﾪￎￄﾼ￾ﾡﾰC:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Binaries\Win64\UnrealEditor-NaiwaRuntime.dllﾡﾱ
+[3/4] Link [x64] UnrealEditor-NaiwaRuntime.lib [NoUba]
+  ￕ�ￔￚﾴﾴﾽﾨ﾿￢ C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Intermediate/Build/Win64/x64/UnrealEditor/Development/NaiwaRuntime/UnrealEditor-NaiwaRuntime.lib ﾺￍﾶￔￏ￳ C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Intermediate/Build/Win64/x64/UnrealEditor/Development/NaiwaRuntime/UnrealEditor-NaiwaRuntime.exp
+Some action result store tasks did not succeed
+Total time in Unreal Build Accelerator local executor: 18.87 seconds
+
+Result: Failed (OtherCompilationError)
+Total execution time: 22.49 seconds
+Trace written to file C:\Users\31314\AppData\Local\Packages\sandbox.{38c00563-487c-4385-a162-d97c04d3c1d3}\AC\UnrealBuildTool\Trace.uba with size 4.9kb

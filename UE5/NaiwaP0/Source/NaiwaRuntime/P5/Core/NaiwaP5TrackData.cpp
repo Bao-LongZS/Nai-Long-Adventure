@@ -70,23 +70,43 @@ namespace
 		return Hash;
 	}
 
-	const FNaiwaP5RouteSegment* FindRouteSegment(const FNaiwaP5RouteFixture& Fixture,
-		const int32 DistanceMm)
+	int32 FindRouteSegmentIndex(const FNaiwaP5RouteFixture& Fixture, const int32 DistanceMm)
 	{
-		const FNaiwaP5RouteSegment* PreviousSegment = nullptr;
-		for (const FNaiwaP5RouteSegment& Segment : Fixture.Segments)
+		int32 PreviousIndex = INDEX_NONE;
+		for (int32 Index = 0; Index < Fixture.Segments.Num(); ++Index)
 		{
+			const FNaiwaP5RouteSegment& Segment = Fixture.Segments[Index];
 			if (DistanceMm >= Segment.StartDistanceMm && DistanceMm < Segment.EndDistanceMm)
 			{
-				return &Segment;
+				return Index;
 			}
 			if (DistanceMm < Segment.StartDistanceMm)
 			{
-				return PreviousSegment ? PreviousSegment : &Segment;
+				return PreviousIndex != INDEX_NONE ? PreviousIndex : Index;
 			}
-			PreviousSegment = &Segment;
+			PreviousIndex = Index;
 		}
-		return Fixture.Segments.IsEmpty() ? nullptr : &Fixture.Segments.Last();
+		return Fixture.Segments.IsEmpty() ? INDEX_NONE : Fixture.Segments.Num() - 1;
+	}
+
+	const FNaiwaP5RouteSegment* FindRouteSegment(const FNaiwaP5RouteFixture& Fixture,
+		const int32 DistanceMm)
+	{
+		const int32 Index = FindRouteSegmentIndex(Fixture, DistanceMm);
+		return Fixture.Segments.IsValidIndex(Index) ? &Fixture.Segments[Index] : nullptr;
+	}
+
+	double GetRouteSegmentSlope(const FNaiwaP5RouteSegment& Segment)
+	{
+		const int32 Distance = FMath::Max(1, Segment.EndDistanceMm - Segment.StartDistanceMm);
+		return static_cast<double>(Segment.EndHeightMm - Segment.StartHeightMm) / Distance;
+	}
+
+	bool ShareRouteHeightBoundary(const FNaiwaP5RouteSegment& Previous,
+		const FNaiwaP5RouteSegment& Next)
+	{
+		return Previous.EndDistanceMm == Next.StartDistanceMm &&
+			Previous.EndHeightMm == Next.StartHeightMm;
 	}
 }
 
@@ -265,17 +285,49 @@ double FNaiwaP5TrackData::GetRouteSpeedMetersPerSecond(const FNaiwaP5RouteFixtur
 double FNaiwaP5TrackData::GetRouteSurfaceHeightMeters(const FNaiwaP5RouteFixture& Fixture,
 	const int32 DistanceMm)
 {
-	const FNaiwaP5RouteSegment* Segment = FindRouteSegment(Fixture,
-		FMath::Clamp(DistanceMm, 0, Fixture.RouteLengthMm));
-	if (!Segment)
+	const int32 ClampedDistanceMm = FMath::Clamp(DistanceMm, 0, Fixture.RouteLengthMm);
+	const int32 SegmentIndex = FindRouteSegmentIndex(Fixture, ClampedDistanceMm);
+	if (!Fixture.Segments.IsValidIndex(SegmentIndex))
 	{
 		return 0.0;
 	}
-	const int32 SegmentLength = FMath::Max(1, Segment->EndDistanceMm - Segment->StartDistanceMm);
-	const double Alpha = FMath::Clamp(static_cast<double>(DistanceMm - Segment->StartDistanceMm) /
+	const FNaiwaP5RouteSegment& Segment = Fixture.Segments[SegmentIndex];
+	const int32 SegmentLength = FMath::Max(1, Segment.EndDistanceMm - Segment.StartDistanceMm);
+	const double Alpha = FMath::Clamp(static_cast<double>(ClampedDistanceMm - Segment.StartDistanceMm) /
 		static_cast<double>(SegmentLength), 0.0, 1.0);
-	return FMath::Lerp(static_cast<double>(Segment->StartHeightMm),
-		static_cast<double>(Segment->EndHeightMm), Alpha) / 1000.0;
+	const double StartHeightMeters = static_cast<double>(Segment.StartHeightMm) / 1000.0;
+	const double EndHeightMeters = static_cast<double>(Segment.EndHeightMm) / 1000.0;
+	const double SegmentLengthMeters = static_cast<double>(SegmentLength) / 1000.0;
+	const double SegmentSlope = GetRouteSegmentSlope(Segment);
+	double StartSlope = SegmentSlope;
+	if (SegmentIndex > 0)
+	{
+		const FNaiwaP5RouteSegment& Previous = Fixture.Segments[SegmentIndex - 1];
+		if (ShareRouteHeightBoundary(Previous, Segment))
+		{
+			StartSlope = (GetRouteSegmentSlope(Previous) + SegmentSlope) * 0.5;
+		}
+	}
+	double EndSlope = SegmentSlope;
+	if (SegmentIndex + 1 < Fixture.Segments.Num())
+	{
+		const FNaiwaP5RouteSegment& Next = Fixture.Segments[SegmentIndex + 1];
+		if (ShareRouteHeightBoundary(Segment, Next))
+		{
+			EndSlope = (SegmentSlope + GetRouteSegmentSlope(Next)) * 0.5;
+		}
+	}
+
+	// Cubic Hermite interpolation preserves every fixture endpoint while matching
+	// the averaged neighboring slopes at continuous boundaries.
+	const double Alpha2 = Alpha * Alpha;
+	const double Alpha3 = Alpha2 * Alpha;
+	const double H00 = 2.0 * Alpha3 - 3.0 * Alpha2 + 1.0;
+	const double H10 = Alpha3 - 2.0 * Alpha2 + Alpha;
+	const double H01 = -2.0 * Alpha3 + 3.0 * Alpha2;
+	const double H11 = Alpha3 - Alpha2;
+	return H00 * StartHeightMeters + H10 * StartSlope * SegmentLengthMeters +
+		H01 * EndHeightMeters + H11 * EndSlope * SegmentLengthMeters;
 }
 
 ENaiwaP5SurfaceKind FNaiwaP5TrackData::GetRouteSurfaceKind(const FNaiwaP5RouteFixture& Fixture,

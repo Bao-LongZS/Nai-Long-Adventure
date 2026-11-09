@@ -15,6 +15,49 @@
 #include "../Core/NaiwaP5TrackData.h"
 #include "NaiwaP5A0ArtSampleUtils.h"
 
+namespace
+{
+	// The v06 WIP manifests use cell-space UV anchors. Convert them through the
+	// selected crop so the A4 rider and A5 mount stay attached as the crop changes.
+	constexpr double A0RideSeatCellV = 0.64;
+	// Measured against the v06 atlas crops: 0.48 from the WIP manifest lands
+	// above the saddle on the mount's head/ears for these selected poses.
+	constexpr double A0RideSaddleCellV = 0.61;
+	constexpr double A0BounceSaddleCellV = 0.53;
+	constexpr double A0MountCellSizePx = 512.0;
+	constexpr double A0MountArtBottomFromPawnCm = -80.0;
+	constexpr double A0A4RideCellSizePx = 512.0;
+	constexpr double A0A4RideSpriteTopPx = 31.0;
+	constexpr double A0A4RideSpriteHeightPx = 439.0;
+	constexpr double A0FallbackRideHeroBottomCm = 15.0;
+	void SetA0AtlasRegion(UMaterialInstanceDynamic* Material, const int32 TextureWidth,
+		const int32 TextureHeight, const int32 X, const int32 Y, const int32 Width,
+		const int32 Height)
+	{
+		if (!Material || TextureWidth <= 0 || TextureHeight <= 0 || Width <= 0 || Height <= 0)
+		{
+			return;
+		}
+		Material->SetVectorParameterValue(TEXT("A0UVScale"), FLinearColor(
+			static_cast<double>(Width) / TextureWidth,
+			-static_cast<double>(Height) / TextureHeight, 0.0f, 0.0f));
+		Material->SetVectorParameterValue(TEXT("A0UVOffset"), FLinearColor(
+			static_cast<double>(X) / TextureWidth,
+			1.0 - static_cast<double>(Y) / TextureHeight, 0.0f, 0.0f));
+	}
+
+	void SetA0FacingRotation(UStaticMeshComponent* Component, const double SpinDegrees)
+	{
+		if (!Component)
+		{
+			return;
+		}
+		const FQuat FaceCamera(FVector::ForwardVector, FMath::DegreesToRadians(90.0));
+		const FQuat InPlaneSpin(-FVector::RightVector, FMath::DegreesToRadians(SpinDegrees));
+		Component->SetRelativeRotation((InPlaneSpin * FaceCamera).Rotator());
+	}
+}
+
 ANaiwaP5PrototypePawn::ANaiwaP5PrototypePawn()
 {
 	PrimaryActorTick.bCanEverTick = true;
@@ -42,8 +85,8 @@ ANaiwaP5PrototypePawn::ANaiwaP5PrototypePawn()
 	GrayboxSnowboard = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("GrayboxSnowboard"));
 	GrayboxSnowboard->SetupAttachment(CollisionCapsule);
 	if (CubeMesh) GrayboxSnowboard->SetStaticMesh(CubeMesh);
-	GrayboxSnowboard->SetRelativeLocation(FVector(0.0, 0.0, -76.0));
-	GrayboxSnowboard->SetRelativeScale3D(FVector(0.72, 0.18, 0.055));
+	GrayboxSnowboard->SetRelativeLocation(FVector(0.0, 220.0, -68.0));
+	GrayboxSnowboard->SetRelativeScale3D(FVector(2.8, 0.10, 0.24));
 	GrayboxSnowboard->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	GrayboxSnowboard->SetCastShadow(false);
 
@@ -59,15 +102,72 @@ ANaiwaP5PrototypePawn::ANaiwaP5PrototypePawn()
 	A0HeroArt = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("A0HeroArt"));
 	A0HeroArt->SetupAttachment(CollisionCapsule);
 	if (PlaneMesh) A0HeroArt->SetStaticMesh(PlaneMesh);
-	A0HeroArt->SetRelativeLocation(FVector(0.0, 18.0, 24.0));
+	A0HeroArt->SetRelativeLocation(FVector(0.0, 260.0, 24.0));
 	A0HeroArt->SetRelativeRotation(FRotator(0.0, 0.0, 90.0));
 	A0HeroArt->SetRelativeScale3D(FVector(2.0, 2.0, 1.0));
 	A0HeroArt->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	A0HeroArt->SetCastShadow(false);
 	A0HeroArt->SetHiddenInGame(true);
+
+	A0MountArt = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("A0MountArt"));
+	A0MountArt->SetupAttachment(CollisionCapsule);
+	if (PlaneMesh) A0MountArt->SetStaticMesh(PlaneMesh);
+	A0MountArt->SetRelativeLocation(FVector(0.0, 240.0, 5.0));
+	A0MountArt->SetRelativeRotation(FRotator(0.0, 0.0, 90.0));
+	A0MountArt->SetRelativeScale3D(FVector(2.0, 3.0, 1.0));
+	A0MountArt->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	A0MountArt->SetCastShadow(false);
+	A0MountArt->SetHiddenInGame(true);
+
+	A0SnowboardArt = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("A0SnowboardArt"));
+	A0SnowboardArt->SetupAttachment(CollisionCapsule);
+	if (PlaneMesh) A0SnowboardArt->SetStaticMesh(PlaneMesh);
+	A0SnowboardArt->SetRelativeLocation(FVector(0.0, 230.0, -62.0));
+	A0SnowboardArt->SetRelativeRotation(FRotator(90.0, 0.0, 0.0));
+	A0SnowboardArt->SetRelativeScale3D(FVector(2.5, 0.52, 1.0));
+	A0SnowboardArt->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	A0SnowboardArt->SetCastShadow(false);
+	A0SnowboardArt->SetHiddenInGame(true);
+
+	A0SnowTrackArt = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("A0SnowTrackArt"));
+	A0SnowTrackArt->SetupAttachment(CollisionCapsule);
+	if (PlaneMesh) A0SnowTrackArt->SetStaticMesh(PlaneMesh);
+	A0SnowTrackArt->SetRelativeLocation(FVector(-170.0, 220.0, -76.0));
+	A0SnowTrackArt->SetRelativeRotation(FRotator(90.0, 0.0, 0.0));
+	A0SnowTrackArt->SetRelativeScale3D(FVector(3.2, 0.40, 1.0));
+	A0SnowTrackArt->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	A0SnowTrackArt->SetCastShadow(false);
+	A0SnowTrackArt->SetHiddenInGame(true);
+
+	for (int32 SnowflakeIndex = 0; SnowflakeIndex < 4; ++SnowflakeIndex)
+	{
+		UStaticMeshComponent* Snowflake = CreateDefaultSubobject<UStaticMeshComponent>(
+			FName(*FString::Printf(TEXT("A0SnowflakeArt_%d"), SnowflakeIndex)));
+		Snowflake->SetupAttachment(CollisionCapsule);
+		if (PlaneMesh) Snowflake->SetStaticMesh(PlaneMesh);
+		Snowflake->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		Snowflake->SetCastShadow(false);
+		Snowflake->SetHiddenInGame(true);
+		A0SnowflakeArts.Add(Snowflake);
+	}
+
+	A0LandingPuffArt = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("A0LandingPuffArt"));
+	A0LandingPuffArt->SetupAttachment(CollisionCapsule);
+	if (PlaneMesh) A0LandingPuffArt->SetStaticMesh(PlaneMesh);
+	A0LandingPuffArt->SetRelativeLocation(FVector(0.0, 220.0, -106.0));
+	A0LandingPuffArt->SetRelativeRotation(FRotator(90.0, 0.0, 0.0));
+	A0LandingPuffArt->SetRelativeScale3D(FVector(1.8, 1.2, 1.0));
+	A0LandingPuffArt->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	A0LandingPuffArt->SetCastShadow(false);
+	A0LandingPuffArt->SetHiddenInGame(true);
 	if (UMaterialInterface* ParentMaterial = LoadObject<UMaterialInterface>(nullptr,
 		TEXT("/Engine/BasicShapes/BasicShapeMaterial.BasicShapeMaterial")))
 	{
+		if (UMaterialInstanceDynamic* Material = UMaterialInstanceDynamic::Create(ParentMaterial, this))
+		{
+			Material->SetVectorParameterValue(TEXT("Color"), FLinearColor(0.48f, 0.27f, 0.12f, 1.0f));
+			GrayboxSnowboard->SetMaterial(0, Material);
+		}
 		if (UMaterialInstanceDynamic* Material = UMaterialInstanceDynamic::Create(ParentMaterial, this))
 		{
 			Material->SetVectorParameterValue(TEXT("Color"), FLinearColor(0.42f, 0.72f, 0.46f, 1.0f));
@@ -77,7 +177,7 @@ ANaiwaP5PrototypePawn::ANaiwaP5PrototypePawn()
 
 	SideCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("SideCamera"));
 	SideCamera->SetupAttachment(CollisionCapsule);
-	SideCamera->SetRelativeLocation(FVector(0.0, 2500.0, 600.0));
+	SideCamera->SetRelativeLocation(FVector(0.0, 2500.0, 900.0));
 	SideCamera->SetRelativeRotation(FRotator(0.0, 270.0, 0.0));
 	SideCamera->ProjectionMode = ECameraProjectionMode::Orthographic;
 	SideCamera->OrthoWidth = 2300.0f;
@@ -95,26 +195,106 @@ void ANaiwaP5PrototypePawn::BeginPlay()
 	{
 		// Frame the skier in the lower-middle of the view. The graybox camera offset
 		// placed the route at the bottom edge once the run pawn followed the slope.
-		SideCamera->SetRelativeLocation(FVector(0.0, 2500.0, 120.0));
+		SideCamera->SetRelativeLocation(FVector(0.0, 2500.0, 900.0));
+		FPostProcessSettings& A0PostProcess = SideCamera->PostProcessSettings;
+		A0PostProcess.bOverride_DepthOfFieldScale = true;
+		A0PostProcess.DepthOfFieldScale = 0.0f;
+		A0PostProcess.bOverride_MotionBlurAmount = true;
+		A0PostProcess.MotionBlurAmount = 0.0f;
+		A0PostProcess.bOverride_Sharpen = true;
+		A0PostProcess.Sharpen = 0.55f;
 		UMaterialInterface* HeroParentMaterial = LoadObject<UMaterialInterface>(nullptr,
-			TEXT("/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_NaiwaSkiAtlas.M_P5_A0_NaiwaSkiAtlas"));
-		bA0AtlasMaterialActive = HeroParentMaterial != nullptr;
+			TEXT("/Game/Naiwa/P5/ArtSample_v06/Materials/M_P5_A4_NaiwaBodyAtlas_v05_WIP.M_P5_A4_NaiwaBodyAtlas_v05_WIP"));
+		bA0ContinuousAtlasActive = HeroParentMaterial != nullptr;
 		if (!HeroParentMaterial)
 		{
 			HeroParentMaterial = LoadObject<UMaterialInterface>(nullptr,
-				TEXT("/Game/Naiwa/P5/ArtSample_v04/Materials/M_P5_A0_NaiwaGlide.M_P5_A0_NaiwaGlide"));
+				TEXT("/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_NaiwaSkiAtlas.M_P5_A0_NaiwaSkiAtlas"));
+			bA0AtlasMaterialActive = HeroParentMaterial != nullptr;
 		}
 		A0HeroArtMaterial = HeroParentMaterial
 			? UMaterialInstanceDynamic::Create(HeroParentMaterial, this) : nullptr;
+
+		UMaterialInterface* MountParentMaterial = LoadObject<UMaterialInterface>(nullptr,
+			TEXT("/Game/Naiwa/P5/ArtSample_v06/Materials/M_P5_A5_KangarooMount_v02_WIP.M_P5_A5_KangarooMount_v02_WIP"));
+		bA0ContinuousMountAtlasActive = MountParentMaterial != nullptr;
+		if (!MountParentMaterial)
+		{
+			MountParentMaterial = LoadObject<UMaterialInterface>(nullptr,
+				TEXT("/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_KangarooRideAtlas.M_P5_A0_KangarooRideAtlas"));
+		}
+		A0MountArtMaterial = MountParentMaterial
+			? UMaterialInstanceDynamic::Create(MountParentMaterial, this) : nullptr;
+		if (bA0ContinuousMountAtlasActive && A0MountArtMaterial)
+		{
+			// The first candidate frame is the isolated available-idle pose. Runtime
+			// ride-state cropping is updated below; alignment remains WIP.
+			SetA0AtlasRegion(A0MountArtMaterial, 1024, 1024, 28, 150, 285, 334);
+		}
+		else if (A0MountArtMaterial)
+		{
+			// Preserve the existing v05 ride atlas fallback while the candidate package
+			// is absent or has not yet been imported.
+			SetA0AtlasRegion(A0MountArtMaterial, 1024, 1024, 683, 0, 341, 512);
+		}
+		if (A0MountArtMaterial && A0MountArt)
+		{
+			A0MountArt->SetMaterial(0, A0MountArtMaterial);
+		}
+
+		UMaterialInterface* SnowboardParentMaterial = LoadObject<UMaterialInterface>(nullptr,
+			TEXT("/Game/Naiwa/P5/ArtSample_v06/Materials/M_P5_A4_Snowboard_v01_WIP.M_P5_A4_Snowboard_v01_WIP"));
+		A0SnowboardArtMaterial = SnowboardParentMaterial
+			? UMaterialInstanceDynamic::Create(SnowboardParentMaterial, this) : nullptr;
+		if (A0SnowboardArtMaterial && A0SnowboardArt)
+		{
+			// Crop the transparent padding in the delivered 1024x256 board image.
+			SetA0AtlasRegion(A0SnowboardArtMaterial, 1024, 256, 204, 84, 633, 77);
+			A0SnowboardArt->SetMaterial(0, A0SnowboardArtMaterial);
+		}
+
+		UMaterialInterface* SnowTrackParentMaterial = LoadObject<UMaterialInterface>(nullptr,
+			TEXT("/Game/Naiwa/P5/ArtSample_v06/Materials/M_P5_A2_SnowTrack_v01_WIP.M_P5_A2_SnowTrack_v01_WIP"));
+		A0SnowTrackArtMaterial = SnowTrackParentMaterial
+			? UMaterialInstanceDynamic::Create(SnowTrackParentMaterial, this) : nullptr;
+		if (A0SnowTrackArtMaterial && A0SnowTrackArt)
+		{
+			A0SnowTrackArt->SetMaterial(0, A0SnowTrackArtMaterial);
+		}
+
+		UMaterialInterface* SnowflakeParentMaterial = LoadObject<UMaterialInterface>(nullptr,
+			TEXT("/Game/Naiwa/P5/ArtSample_v06/Materials/M_P5_A6_Snowflake_v01_WIP.M_P5_A6_Snowflake_v01_WIP"));
+		A0SnowflakeArtMaterials.Reset(A0SnowflakeArts.Num());
+		for (UStaticMeshComponent* Snowflake : A0SnowflakeArts)
+		{
+			UMaterialInstanceDynamic* SnowflakeMaterial = SnowflakeParentMaterial
+				? UMaterialInstanceDynamic::Create(SnowflakeParentMaterial, this) : nullptr;
+			if (Snowflake && SnowflakeMaterial)
+			{
+				Snowflake->SetMaterial(0, SnowflakeMaterial);
+			}
+			A0SnowflakeArtMaterials.Add(SnowflakeMaterial);
+		}
+
+		UMaterialInterface* LandingPuffParentMaterial = LoadObject<UMaterialInterface>(nullptr,
+			TEXT("/Game/Naiwa/P5/ArtSample_v06/Materials/M_P5_A6_LandPuff_v01_WIP.M_P5_A6_LandPuff_v01_WIP"));
+		A0LandingPuffArtMaterial = LandingPuffParentMaterial
+			? UMaterialInstanceDynamic::Create(LandingPuffParentMaterial, this) : nullptr;
+		if (A0LandingPuffArtMaterial && A0LandingPuffArt)
+		{
+			A0LandingPuffArt->SetMaterial(0, A0LandingPuffArtMaterial);
+		}
 		if (A0HeroArtMaterial && A0HeroArt)
 		{
 			A0HeroArt->SetMaterial(0, A0HeroArtMaterial);
 			A0HeroArt->SetHiddenInGame(false);
 			A0HeroArt->SetVisibility(true, true);
-			// The art proxy now follows the live pawn. Keep the collision capsule and simulation
-			// intact while hiding only the two graybox display meshes in this sample map.
+			// Keep simulation/collision intact and hide graybox displays only when their
+			// corresponding WIP art replacement is present.
 			GrayboxBody->SetHiddenInGame(true);
-			GrayboxSnowboard->SetHiddenInGame(true);
+			// Keep the broad, low-profile board backing visible beneath the cutout art.
+			// The WIP sprite alone was too thin at gameplay scale and could vanish on fallback.
+			GrayboxSnowboard->SetHiddenInGame(false);
 		}
 	}
 	if (APlayerController* PlayerController = Cast<APlayerController>(GetController()))
@@ -152,38 +332,289 @@ void ANaiwaP5PrototypePawn::Tick(const float DeltaSeconds)
 		Location.Z += (RouteHeightMeters - StartHeightMeters + State.JumpHeightMeters) * 100.0;
 		SetActorLocation(Location);
 		SetActorRotation(FRotator::ZeroRotator);
+		if (bA0ArtPresentationActive && SideCamera)
+		{
+			// Keep some vertical camera lag so a jump moves against the scenery,
+			// while moving the route lower in frame to reveal more of the landscape.
+			FVector CameraLocation = SideCamera->GetRelativeLocation();
+			CameraLocation.Z = 900.0 - State.JumpHeightMeters * 100.0 * 0.40;
+			SideCamera->SetRelativeLocation(CameraLocation);
+		}
 		GrayboxMount->SetHiddenInGame(!State.bRiding);
 		const double FallTiltDegrees = State.bFallen ? 72.0 : 0.0;
 		const FRotator VisualRotation(State.RotationDegrees + FallTiltDegrees, 0.0, 0.0);
 		GrayboxBody->SetRelativeRotation(VisualRotation);
 		GrayboxSnowboard->SetRelativeRotation(VisualRotation);
-		UpdateA0ArtPresentation(State, DeltaSeconds);
+		double RouteSlopeDegrees = 0.0;
+		if (bA0ArtPresentationActive)
+		{
+			const int32 BeforeDistanceMm = FMath::Max(0, DistanceMm - 250);
+			const int32 AfterDistanceMm = FMath::Min(RouteFixture.RouteLengthMm, DistanceMm + 250);
+			if (AfterDistanceMm > BeforeDistanceMm)
+			{
+				const double BeforeHeight = FNaiwaP5TrackData::GetRouteSurfaceHeightMeters(
+					RouteFixture, BeforeDistanceMm);
+				const double AfterHeight = FNaiwaP5TrackData::GetRouteSurfaceHeightMeters(
+					RouteFixture, AfterDistanceMm);
+				const double HorizontalMeters = static_cast<double>(AfterDistanceMm - BeforeDistanceMm) / 1000.0;
+				RouteSlopeDegrees = FMath::RadiansToDegrees(FMath::Atan2(
+					AfterHeight - BeforeHeight, HorizontalMeters));
+			}
+		}
+		UpdateA0ArtPresentation(State, DeltaSeconds, RouteSlopeDegrees);
 	}
 }
 
 void ANaiwaP5PrototypePawn::UpdateA0ArtPresentation(const FNaiwaP5RunState& State,
-	const double DeltaSeconds)
+	const double DeltaSeconds, const double RouteSlopeDegrees)
 {
-	if (!bA0ArtPresentationActive || !A0HeroArtMaterial || !A0HeroArt)
+	bA0RideAnchorProbeValid = false;
+	if (!bA0ArtPresentationActive)
 	{
 		return;
 	}
 
 	if (bA0WasAirborne && !State.bAirborne && !State.bFallen)
 	{
-		A0LandingPoseSecondsRemaining = 0.18;
+		A0LandingPoseSecondsRemaining = 0.40;
 	}
 	else
 	{
 		A0LandingPoseSecondsRemaining = FMath::Max(0.0,
 			A0LandingPoseSecondsRemaining - FMath::Max(0.0, DeltaSeconds));
 	}
+	if (!bA0WasAirborne && State.bAirborne)
+	{
+		A0TakeoffPoseSecondsRemaining = 0.08;
+	}
+	else
+	{
+		A0TakeoffPoseSecondsRemaining = FMath::Max(0.0,
+			A0TakeoffPoseSecondsRemaining - FMath::Max(0.0, DeltaSeconds));
+	}
 	bA0WasAirborne = State.bAirborne;
 
-	A0HeroArt->SetVisibility(!State.bRiding, true);
-	A0HeroArt->SetHiddenInGame(State.bRiding);
+	const bool bUseMountArt = A0MountArtMaterial && A0MountArt;
+	double MountHeightForRideAnchorCm = 0.0;
+	double MountSaddleFromSpriteBottomCm = 0.0;
+	if (A0MountArt)
+	{
+		A0MountArt->SetVisibility(State.bRiding && bUseMountArt, true);
+		A0MountArt->SetHiddenInGame(!State.bRiding || !bUseMountArt);
+	}
+	GrayboxMount->SetHiddenInGame(!State.bRiding || bUseMountArt);
+	const bool bUseSnowboardArt = A0SnowboardArtMaterial && A0SnowboardArt;
+	const bool bShowSnowboard = !State.bRiding;
+	GrayboxSnowboard->SetVisibility(bShowSnowboard, true);
+	GrayboxSnowboard->SetHiddenInGame(!bShowSnowboard);
+	GrayboxSnowboard->SetRelativeRotation(FRotator(State.RotationDegrees + RouteSlopeDegrees +
+		(State.bFallen ? 72.0 : 0.0), 0.0, 0.0));
+	if (A0SnowboardArt)
+	{
+		A0SnowboardArt->SetVisibility(bUseSnowboardArt && bShowSnowboard, true);
+		A0SnowboardArt->SetHiddenInGame(!bUseSnowboardArt || !bShowSnowboard);
+	}
+	if (bUseSnowboardArt)
+	{
+		A0SnowboardArt->SetRelativeScale3D(FVector(2.8, 0.36, 1.0));
+	A0SnowboardArt->SetRelativeLocation(FVector(0.0, 230.0, -62.0));
+	}
+	if (A0HeroArt)
+	{
+		const bool bShowHeroArt = A0HeroArtMaterial != nullptr;
+		A0HeroArt->SetVisibility(bShowHeroArt, true);
+		A0HeroArt->SetHiddenInGame(!bShowHeroArt);
+	}
+	const bool bShowLandingPuff = A0LandingPoseSecondsRemaining > 0.0 &&
+		A0LandingPuffArtMaterial && A0LandingPuffArt;
+	if (A0LandingPuffArt)
+	{
+		A0LandingPuffArt->SetVisibility(bShowLandingPuff, true);
+		A0LandingPuffArt->SetHiddenInGame(!bShowLandingPuff);
+	}
+	if (bShowLandingPuff)
+	{
+		const double Elapsed = 0.40 - A0LandingPoseSecondsRemaining;
+		const int32 PuffFrame = FMath::Clamp(FMath::FloorToInt(Elapsed * 30.0), 0, 11);
+		SetA0AtlasRegion(A0LandingPuffArtMaterial, 512, 512,
+			(PuffFrame % 4) * 128, (PuffFrame / 4) * 128, 128, 128);
+	}
+	const bool bShowSnowTrack = A0SnowTrackArtMaterial && A0SnowTrackArt && !State.bRiding &&
+		!State.bFallen && State.PlayerSpeedMetersPerSecond > 1.0;
+	if (A0SnowTrackArt)
+	{
+		A0SnowTrackArt->SetVisibility(bShowSnowTrack, true);
+		A0SnowTrackArt->SetHiddenInGame(!bShowSnowTrack);
+	}
+	if (bShowSnowTrack)
+	{
+		const double TrailWidthCm = FMath::Clamp(State.PlayerSpeedMetersPerSecond * 22.0, 180.0, 360.0);
+		A0SnowTrackArt->SetRelativeScale3D(FVector(TrailWidthCm / 100.0, 0.40, 1.0));
+		SetA0FacingRotation(A0SnowTrackArt, RouteSlopeDegrees);
+	}
+	const bool bSnowflakesEnabled = !State.bFallen &&
+		(State.PlayerSpeedMetersPerSecond >= 12.0 || State.bAvalancheWarning);
+	for (int32 SnowflakeIndex = 0; SnowflakeIndex < A0SnowflakeArts.Num(); ++SnowflakeIndex)
+	{
+		UStaticMeshComponent* Snowflake = A0SnowflakeArts[SnowflakeIndex];
+		const bool bShowSnowflake = bSnowflakesEnabled && Snowflake &&
+			A0SnowflakeArtMaterials.IsValidIndex(SnowflakeIndex) &&
+			A0SnowflakeArtMaterials[SnowflakeIndex];
+		if (Snowflake)
+		{
+			Snowflake->SetVisibility(bShowSnowflake, true);
+			Snowflake->SetHiddenInGame(!bShowSnowflake);
+		}
+		if (bShowSnowflake)
+		{
+			const double Phase = FMath::Fmod(State.DistanceMeters * 0.55 + SnowflakeIndex * 0.27, 1.0);
+			const double DriftXcm = (Phase * 2.0 - 1.0) * 240.0;
+			const double BobZcm = 135.0 + 35.0 * FMath::Sin(State.DistanceMeters * 1.8 + SnowflakeIndex * 1.7);
+			const double SizeCm = 14.0 + static_cast<double>(SnowflakeIndex % 3) * 3.0;
+			Snowflake->SetRelativeLocation(FVector(DriftXcm, 245.0, BobZcm));
+			Snowflake->SetRelativeScale3D(FVector(SizeCm / 100.0, SizeCm / 100.0, 1.0));
+			SetA0FacingRotation(Snowflake, RouteSlopeDegrees);
+		}
+	}
 	if (State.bRiding)
 	{
+		if (bUseMountArt && bA0ContinuousMountAtlasActive)
+		{
+			static const FIntRect MountRects[] = {
+				FIntRect(28, 150, 313, 484),  // AvailableIdle
+				FIntRect(369, 194, 655, 484), // ReadyToCarry
+				FIntRect(711, 233, 996, 484), // DownhillGlide
+				FIntRect(28, 637, 313, 996),  // ImpactReact
+				FIntRect(369, 676, 655, 996), // Bounce
+				FIntRect(711, 659, 996, 996)  // RecoveredIdle
+			};
+			int32 MountFrame = State.RideElapsedSeconds < 0.20 ? 1 : 2;
+			if (A0LandingPoseSecondsRemaining > 0.0)
+			{
+				MountFrame = 4;
+			}
+			const FIntRect& Rect = MountRects[MountFrame];
+			SetA0AtlasRegion(A0MountArtMaterial, 1024, 1024, Rect.Min.X, Rect.Min.Y,
+				Rect.Width(), Rect.Height());
+			const double MountWidthCm = 260.0;
+			const double MountHeightCm = MountWidthCm * Rect.Height() / Rect.Width();
+			MountHeightForRideAnchorCm = MountHeightCm;
+			const int32 MountCellTopPx = MountFrame >= 3 ? 512 : 0;
+			const double SaddleCellV = MountFrame == 4 ? A0BounceSaddleCellV : A0RideSaddleCellV;
+			const double SaddleYInMountCropPx = SaddleCellV * A0MountCellSizePx -
+				(static_cast<double>(Rect.Min.Y - MountCellTopPx));
+			A0MountSaddleMeshLocalY = (0.5 - SaddleYInMountCropPx / Rect.Height()) * 100.0;
+			MountSaddleFromSpriteBottomCm = MountHeightCm *
+				(1.0 - SaddleYInMountCropPx / Rect.Height());
+			A0MountArt->SetRelativeScale3D(FVector(MountWidthCm / 100.0, MountHeightCm / 100.0, 1.0));
+			A0MountArt->SetRelativeLocation(FVector(0.0, 250.0,
+				A0MountArtBottomFromPawnCm + MountHeightCm * 0.5));
+			SetA0FacingRotation(A0MountArt, State.RotationDegrees + RouteSlopeDegrees);
+		}
+		else if (bUseMountArt)
+		{
+			SetA0FacingRotation(A0MountArt, State.RotationDegrees + RouteSlopeDegrees);
+		}
+	}
+	if (!A0HeroArtMaterial || !A0HeroArt)
+	{
+		return;
+	}
+	if (bA0ContinuousAtlasActive)
+	{
+		// Per-frame source rectangles are copied from the v03 WIP manifest. The
+		// sequence timing and attachment points remain provisional until review.
+		static const FIntRect BodySpriteRects[] = {
+			FIntRect(28, 150, 484, 470), FIntRect(28, 129, 484, 470),
+			FIntRect(28, 150, 484, 470), FIntRect(28, 120, 484, 470),
+			FIntRect(28, 121, 484, 470), FIntRect(28, 106, 484, 470),
+			FIntRect(28, 57, 484, 470),  FIntRect(28, 88, 484, 470),
+			FIntRect(28, 119, 484, 470), FIntRect(28, 104, 484, 470),
+			FIntRect(28, 68, 484, 470),  FIntRect(28, 62, 484, 470),
+			FIntRect(28, 85, 484, 470),  FIntRect(28, 103, 484, 470),
+			FIntRect(28, 115, 484, 470), FIntRect(28, 93, 484, 470),
+			FIntRect(28, 209, 484, 470), FIntRect(28, 182, 484, 470),
+			FIntRect(28, 206, 484, 470), FIntRect(28, 158, 484, 470),
+			FIntRect(28, 31, 484, 470),  FIntRect(32, 28, 480, 484),
+			FIntRect(28, 28, 484, 478)
+		};
+		// Hold one pose for each run state. The WIP atlas has no approved
+		// motion-matched loops; cycling large silhouettes reads as flashing.
+		int32 FrameIndex = 0;
+		if (State.bFallen)
+		{
+			FrameIndex = 19;
+		}
+		else if (State.bRiding)
+		{
+			FrameIndex = 20;
+		}
+		else if (A0LandingPoseSecondsRemaining > 0.0)
+		{
+			FrameIndex = 15;
+		}
+		else if (State.bJumpCharging)
+		{
+			FrameIndex = 5;
+		}
+		else if (State.bAirborne)
+		{
+			if (FMath::Abs(State.RotationDegrees) > 20.0)
+			{
+				// Use one turn pose throughout the spin; animation will return when a
+				// motion-matched sequence is available.
+				FrameIndex = 10;
+			}
+			else
+			{
+				FrameIndex = 9;
+			}
+		}
+		else
+		{
+			FrameIndex = 0;
+		}
+
+		const FIntRect& SpriteRect = BodySpriteRects[FrameIndex];
+		const int32 AtlasX = (FrameIndex % 4) * 512 + SpriteRect.Min.X;
+		const int32 AtlasY = (FrameIndex / 4) * 512 + SpriteRect.Min.Y;
+		const int32 SpriteWidthPx = SpriteRect.Width();
+		const int32 SpriteHeightPx = SpriteRect.Height();
+		SetA0AtlasRegion(A0HeroArtMaterial, 2048, 3072, AtlasX, AtlasY,
+			SpriteWidthPx, SpriteHeightPx);
+		const double SpriteWidthCm = State.bRiding ? 220.0 : 300.0;
+		const double SpriteHeightCm = SpriteWidthCm * SpriteHeightPx / SpriteWidthPx;
+		double HeroBottomZcm = -50.0;
+		if (State.bRiding)
+		{
+			const double RideSeatYInSpritePx = A0RideSeatCellV * A0A4RideCellSizePx -
+				A0A4RideSpriteTopPx;
+			A0RideSeatMeshLocalY =
+				(0.5 - RideSeatYInSpritePx / A0A4RideSpriteHeightPx) * 100.0;
+			const double RiderSeatFromSpriteBottomCm = SpriteHeightCm *
+				(1.0 - RideSeatYInSpritePx / A0A4RideSpriteHeightPx);
+			if (MountHeightForRideAnchorCm > 0.0)
+			{
+				HeroBottomZcm = A0MountArtBottomFromPawnCm + MountSaddleFromSpriteBottomCm -
+					RiderSeatFromSpriteBottomCm;
+			}
+			else
+			{
+				HeroBottomZcm = A0FallbackRideHeroBottomCm;
+			}
+		}
+		A0HeroArt->SetRelativeScale3D(FVector(SpriteWidthCm / 100.0, SpriteHeightCm / 100.0, 1.0));
+		A0HeroArt->SetRelativeLocation(FVector(0.0, State.bRiding ? 280.0 : 260.0,
+			HeroBottomZcm + SpriteHeightCm * 0.5));
+		const double HeroSpinDegrees = State.RotationDegrees + RouteSlopeDegrees +
+			(State.bFallen ? 72.0 : 0.0);
+		SetA0FacingRotation(A0HeroArt, HeroSpinDegrees);
+		bA0RideAnchorProbeValid = State.bRiding && bUseMountArt &&
+			bA0ContinuousMountAtlasActive && A0HeroArtMaterial != nullptr;
+		if (bUseSnowboardArt)
+		{
+			SetA0FacingRotation(A0SnowboardArt, HeroSpinDegrees);
+		}
 		return;
 	}
 
@@ -198,7 +629,11 @@ void ANaiwaP5PrototypePawn::UpdateA0ArtPresentation(const FNaiwaP5RunState& Stat
 		FIntRect(1477, 667, 1935, 988) // Fall
 	};
 	int32 FrameIndex = 0;
-	if (State.bFallen)
+	if (State.bRiding)
+	{
+		FrameIndex = 4;
+	}
+	else if (State.bFallen)
 	{
 		FrameIndex = 5;
 	}
@@ -206,13 +641,15 @@ void ANaiwaP5PrototypePawn::UpdateA0ArtPresentation(const FNaiwaP5RunState& Stat
 	{
 		FrameIndex = 4;
 	}
-	else if (State.bAirborne)
-	{
-		FrameIndex = FMath::Abs(State.RotationDegrees) > 20.0 ? 3 : 2;
-	}
-	else if (State.bJumpCharging)
+	else if (A0TakeoffPoseSecondsRemaining > 0.0)
 	{
 		FrameIndex = 1;
+	}
+	else if (State.bAirborne)
+	{
+		// Use the full-board Glide silhouette for neutral airtime; the tighter
+		// AirTuck crop lost board readability at the runtime camera scale.
+		FrameIndex = FMath::Abs(State.RotationDegrees) > 20.0 ? 3 : 0;
 	}
 
 	if (bA0AtlasMaterialActive)
@@ -220,19 +657,22 @@ void ANaiwaP5PrototypePawn::UpdateA0ArtPresentation(const FNaiwaP5RunState& Stat
 		const FIntRect& Rect = SpriteRects[FrameIndex];
 		const double WidthPx = static_cast<double>(Rect.Width());
 		const double HeightPx = static_cast<double>(Rect.Height());
+		// Preserve the approved right-facing +X direction and reverse V to keep
+		// the pose upright in the side-camera atlas crop.
 		A0HeroArtMaterial->SetVectorParameterValue(TEXT("A0UVScale"), FLinearColor(
-			WidthPx / 2048.0, HeightPx / 1024.0, 0.0f, 0.0f));
+			WidthPx / 2048.0, -HeightPx / 1024.0, 0.0f, 0.0f));
 		A0HeroArtMaterial->SetVectorParameterValue(TEXT("A0UVOffset"), FLinearColor(
 			static_cast<double>(Rect.Min.X) / 2048.0,
-			1.0 - static_cast<double>(Rect.Max.Y) / 1024.0, 0.0f, 0.0f));
-		const double SpriteWidthCm = 220.0;
+			1.0 - static_cast<double>(Rect.Min.Y) / 1024.0, 0.0f, 0.0f));
+		const double SpriteWidthCm = State.bRiding ? 220.0 : 300.0;
 		const double SpriteHeightCm = SpriteWidthCm * HeightPx / WidthPx;
 		A0HeroArt->SetRelativeScale3D(FVector(SpriteWidthCm / 100.0, SpriteHeightCm / 100.0, 1.0));
-			A0HeroArt->SetRelativeLocation(FVector(0.0, 20.0,
-			-80.0 + SpriteHeightCm * 0.5));
+		const double HeroBottomZcm = State.bRiding ? A0FallbackRideHeroBottomCm : -50.0;
+		A0HeroArt->SetRelativeLocation(FVector(0.0, State.bRiding ? 280.0 : 260.0,
+			HeroBottomZcm + SpriteHeightCm * 0.5));
 	}
 
-	const double SpinRadians = FMath::DegreesToRadians(State.RotationDegrees +
+	const double SpinRadians = FMath::DegreesToRadians(State.RotationDegrees + RouteSlopeDegrees +
 		(State.bFallen ? 72.0 : 0.0));
 	const FQuat FaceCamera(FVector::ForwardVector, FMath::DegreesToRadians(90.0));
 	const FQuat InPlaneSpin(-FVector::RightVector, SpinRadians);
@@ -316,6 +756,21 @@ void ANaiwaP5PrototypePawn::TogglePause()
 	{
 		RunSubsystem->SetPaused(bPaused);
 	}
+}
+
+bool ANaiwaP5PrototypePawn::GetA0RideAnchorProbeWorldPoints(
+	FVector& OutRiderSeatWorld, FVector& OutMountSaddleWorld) const
+{
+	if (!bA0RideAnchorProbeValid || !A0HeroArt || !A0MountArt)
+	{
+		return false;
+	}
+
+	OutRiderSeatWorld = A0HeroArt->GetComponentTransform().TransformPosition(
+		FVector(0.0, A0RideSeatMeshLocalY, 0.0));
+	OutMountSaddleWorld = A0MountArt->GetComponentTransform().TransformPosition(
+		FVector(0.0, A0MountSaddleMeshLocalY, 0.0));
+	return true;
 }
 
 void ANaiwaP5PrototypePawn::SubmitInput()

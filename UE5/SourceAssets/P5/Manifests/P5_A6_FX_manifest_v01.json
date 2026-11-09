@@ -180,7 +180,9 @@
             64,
             120
           ],
-          "order": "row-major; one-shot candidate"
+          "order": "row-major; one-shot candidate",
+          "durationSeconds": 0.03333333333333333,
+          "phase": "impact"
         },
         {
           "index": 1,
@@ -206,7 +208,9 @@
             64,
             120
           ],
-          "order": "row-major; one-shot candidate"
+          "order": "row-major; one-shot candidate",
+          "durationSeconds": 0.03333333333333333,
+          "phase": "expansion"
         },
         {
           "index": 2,
@@ -232,7 +236,9 @@
             64,
             120
           ],
-          "order": "row-major; one-shot candidate"
+          "order": "row-major; one-shot candidate",
+          "durationSeconds": 0.03333333333333333,
+          "phase": "expansion"
         },
         {
           "index": 3,
@@ -258,7 +264,9 @@
             64,
             120
           ],
-          "order": "row-major; one-shot candidate"
+          "order": "row-major; one-shot candidate",
+          "durationSeconds": 0.03333333333333333,
+          "phase": "expansion"
         },
         {
           "index": 4,
@@ -284,7 +292,9 @@
             64,
             120
           ],
-          "order": "row-major; one-shot candidate"
+          "order": "row-major; one-shot candidate",
+          "durationSeconds": 0.03333333333333333,
+          "phase": "peak"
         },
         {
           "index": 5,
@@ -310,7 +320,9 @@
             64,
             120
           ],
-          "order": "row-major; one-shot candidate"
+          "order": "row-major; one-shot candidate",
+          "durationSeconds": 0.03333333333333333,
+          "phase": "peak"
         },
         {
           "index": 6,
@@ -336,7 +348,9 @@
             64,
             120
           ],
-          "order": "row-major; one-shot candidate"
+          "order": "row-major; one-shot candidate",
+          "durationSeconds": 0.03333333333333333,
+          "phase": "peak"
         },
         {
           "index": 7,
@@ -362,7 +376,9 @@
             64,
             120
           ],
-          "order": "row-major; one-shot candidate"
+          "order": "row-major; one-shot candidate",
+          "durationSeconds": 0.03333333333333333,
+          "phase": "peak"
         },
         {
           "index": 8,
@@ -388,7 +404,9 @@
             64,
             120
           ],
-          "order": "row-major; one-shot candidate"
+          "order": "row-major; one-shot candidate",
+          "durationSeconds": 0.03333333333333333,
+          "phase": "dissipation"
         },
         {
           "index": 9,
@@ -414,7 +432,9 @@
             64,
             120
           ],
-          "order": "row-major; one-shot candidate"
+          "order": "row-major; one-shot candidate",
+          "durationSeconds": 0.03333333333333333,
+          "phase": "dissipation"
         },
         {
           "index": 10,
@@ -440,7 +460,9 @@
             64,
             120
           ],
-          "order": "row-major; one-shot candidate"
+          "order": "row-major; one-shot candidate",
+          "durationSeconds": 0.03333333333333333,
+          "phase": "dissipation"
         },
         {
           "index": 11,
@@ -466,17 +488,25 @@
             64,
             120
           ],
-          "order": "row-major; one-shot candidate"
+          "order": "row-major; one-shot candidate",
+          "durationSeconds": 0.03333333333333333,
+          "phase": "dissipation"
         }
       ],
       "preview": "UE5/Records/p5_p6_plan/evidence/P5_A6_FX/P5_A6_LandPuffAtlas_preview_v01.png",
-      "reviewStatus": "WIP; per-frame timing and in-engine playback pending"
+      "reviewStatus": "WIP; 30 fps one-shot timing proposed; in-engine playback pending",
+      "timing": {
+        "playback": "one-shot",
+        "recommendedFps": 30,
+        "totalDurationSeconds": 0.4,
+        "note": "Timing proposal only; confirm against the in-engine landing response."
+      }
     }
   ],
   "preview": "UE5/Records/p5_p6_plan/evidence/P5_A6_FX/P5_A6_FX_preview_v01.png",
   "pending": [
     "UE material filtering, premultiplied alpha edge review, and intended layer-opacity tuning",
     "Avalanche/character/obstacle scene overlap and 720p readability",
-    "FX_LandPuff per-frame timing and in-engine playback"
+    "Confirm FX_LandPuff timing against the in-engine landing response and verify one-shot playback"
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "status": "materials_rebuilt_without_loading_map",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "materials": {
+    "far": "/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_MountainFar",
+    "mid": "/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_ForestMid",
+    "near": "/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_RidgeNear",
+    "snow": "/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_SnowGround",
+    "tree": "/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_TreeA",
+    "rock": "/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_RockA",
+    "avalanche": "/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_AvalancheCloud",
+    "avalanche_rim": "/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_AvalancheRim",
+    "mist": "/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_SnowMist",
+    "shadow": "/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_SoftShadow",
+    "mount": "/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_KangarooRideAtlas",
+    "hero": "/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_NaiwaSkiAtlas",
+    "sky": "/Game/Naiwa/P5/ArtSample_v05/Materials/M_P5_A0_Sky"
+  },
+  "texture_count": 12,
+  "texture_mip_gen_settings": "TMGS_SHARPEN2",
+  "uv_parameter_dimensions": "A0UVScale/A0UVOffset RG component masks produce float2 UV values",
+  "background_blend_modes": {
+    "far": "<BlendMode.BLEND_TRANSLUCENT: 2>",
+    "mid": "<BlendMode.BLEND_TRANSLUCENT: 2>",
+    "near": "<BlendMode.BLEND_TRANSLUCENT: 2>"
+  }
+}

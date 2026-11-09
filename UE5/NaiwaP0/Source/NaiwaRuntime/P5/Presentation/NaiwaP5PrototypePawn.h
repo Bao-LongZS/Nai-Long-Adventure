@@ -22,6 +22,8 @@ public:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
+	bool GetA0RideAnchorProbeWorldPoints(FVector& OutRiderSeatWorld,
+		FVector& OutMountSaddleWorld) const;
 
 private:
 	void JumpPressed();
@@ -34,7 +36,8 @@ private:
 	void RestartReleased();
 	void TogglePause();
 	void SubmitInput();
-	void UpdateA0ArtPresentation(const struct FNaiwaP5RunState& State, double DeltaSeconds);
+	void UpdateA0ArtPresentation(const struct FNaiwaP5RunState& State, double DeltaSeconds,
+		double RouteSlopeDegrees);
 
 	UPROPERTY()
 	TObjectPtr<UCapsuleComponent> CollisionCapsule;
@@ -52,6 +55,21 @@ private:
 	TObjectPtr<UStaticMeshComponent> A0HeroArt;
 
 	UPROPERTY()
+	TObjectPtr<UStaticMeshComponent> A0MountArt;
+
+	UPROPERTY()
+	TObjectPtr<UStaticMeshComponent> A0SnowboardArt;
+
+	UPROPERTY()
+	TObjectPtr<UStaticMeshComponent> A0LandingPuffArt;
+
+	UPROPERTY()
+	TObjectPtr<UStaticMeshComponent> A0SnowTrackArt;
+
+	UPROPERTY()
+	TArray<TObjectPtr<UStaticMeshComponent>> A0SnowflakeArts;
+
+	UPROPERTY()
 	TObjectPtr<UCameraComponent> SideCamera;
 
 	UPROPERTY()
@@ -62,6 +80,21 @@ private:
 
 	UPROPERTY(Transient)
 	TObjectPtr<UMaterialInstanceDynamic> A0HeroArtMaterial;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UMaterialInstanceDynamic> A0MountArtMaterial;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UMaterialInstanceDynamic> A0SnowboardArtMaterial;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UMaterialInstanceDynamic> A0LandingPuffArtMaterial;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UMaterialInstanceDynamic> A0SnowTrackArtMaterial;
+
+	UPROPERTY(Transient)
+	TArray<TObjectPtr<UMaterialInstanceDynamic>> A0SnowflakeArtMaterials;
 
 	TWeakObjectPtr<UNaiwaP5RunSubsystem> RunSubsystem;
 	FVector RunStartLocation = FVector::ZeroVector;
@@ -77,6 +110,12 @@ private:
 	bool bPaused = false;
 	bool bA0ArtPresentationActive = false;
 	bool bA0AtlasMaterialActive = false;
+	bool bA0ContinuousAtlasActive = false;
+	bool bA0ContinuousMountAtlasActive = false;
 	bool bA0WasAirborne = false;
+	double A0TakeoffPoseSecondsRemaining = 0.0;
 	double A0LandingPoseSecondsRemaining = 0.0;
+	double A0RideSeatMeshLocalY = 0.0;
+	double A0MountSaddleMeshLocalY = 0.0;
+	bool bA0RideAnchorProbeValid = false;
 };
