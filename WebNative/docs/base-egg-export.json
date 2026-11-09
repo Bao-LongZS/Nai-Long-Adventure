@@ -1,0 +1,98 @@
+{
+  "status": "PASS_UE_GLTF_EXPORT",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "asset": "/Game/Naiwa/P2/Art/Egg/SK_NaiwaEgg",
+  "approvedSourceBlend": "NaiwaCharacter/deliveries/NaiwaEgg_S4-S5_v3_candidate/SK_NaiwaEgg_S4-S5.blend",
+  "sourceBlendSha256": "f3e49aedc5a4642617e70fe2d73ae256ca520e7d1002acf7a16c43d96b39db69",
+  "sourceFbxSha256": "70dcd47fab2821e1b2a75d240d0d51ac42d5dd123fcbe9edfd9c777baf3b918b",
+  "ueAssetSha256": "29b70a121c1d810fab9e33f35ad11e7a4240c64902fab82b9cc7224e1950adae",
+  "morphTargets": [
+    "EyeWide",
+    "Scream",
+    "Squash"
+  ],
+  "triangleCount": 1798,
+  "materialSlots": [
+    "M_NaiwaEgg_Body",
+    "M_NaiwaEgg_Eye",
+    "M_NaiwaEgg_Pupil",
+    "M_NaiwaEgg_Mouth"
+  ],
+  "browserMaterialFallback": {
+    "materials": [
+      {
+        "slot": "M_NaiwaEgg_Body",
+        "materialIndex": 0,
+        "baseColorFactorLinear": [
+          0.8631572127342224,
+          0.34670406579971313,
+          0.020288562402129173,
+          1.0
+        ],
+        "colorSource": "UE P2 import report BodyColor",
+        "roughnessFactor": 0.5,
+        "metallicFactor": 0.0
+      },
+      {
+        "slot": "M_NaiwaEgg_Eye",
+        "materialIndex": 1,
+        "baseColorFactorLinear": [
+          0.1119324278369056,
+          0.3277780980565422,
+          0.033104766570885055,
+          1.0
+        ],
+        "colorSource": "UE5/Scripts/import_naiwa_egg_s4_s5.py SOLID_COLORS",
+        "roughnessFactor": 0.5,
+        "metallicFactor": 0.0
+      },
+      {
+        "slot": "M_NaiwaEgg_Pupil",
+        "materialIndex": 2,
+        "baseColorFactorLinear": [
+          0.006995410187265387,
+          0.01520851442291271,
+          0.004391442037410293,
+          1.0
+        ],
+        "colorSource": "UE5/Scripts/import_naiwa_egg_s4_s5.py SOLID_COLORS",
+        "roughnessFactor": 0.5,
+        "metallicFactor": 0.0
+      },
+      {
+        "slot": "M_NaiwaEgg_Mouth",
+        "materialIndex": 3,
+        "baseColorFactorLinear": [
+          0.02315336617811041,
+          0.010329823029626936,
+          0.005181516702338386,
+          1.0
+        ],
+        "colorSource": "UE5/Scripts/import_naiwa_egg_s4_s5.py SOLID_COLORS",
+        "roughnessFactor": 0.5,
+        "metallicFactor": 0.0
+      }
+    ],
+    "vertexColorAttributesRemoved": 4,
+    "vertexColorPolicy": "UE export emitted opaque black COLOR_0 values; removed them so authored UE material colors render correctly.",
+    "gltfBoundsMetersXYZ": [
+      0.849999964,
+      1.149999976,
+      0.820249916
+    ],
+    "ueExpectedGltfBoundsMetersXYZ": [
+      0.85,
+      1.15,
+      0.8202499389648438
+    ],
+    "vertexCountAcrossMaterialPrimitives": 1031,
+    "triangleCount": 1798
+  },
+  "output": "WebNative/public/assets/naiwa-egg-base.glb",
+  "bytes": 112460,
+  "sha256": "14a739d02a4a10008c954f68f097a30ee7c22f1e53fd412fc0be65b2954b2527",
+  "limitations": [
+    "UE material graph baking was unavailable in the headless GLTF export; flat PBR colors use the approved UE instance and solid face-material values, while browser appearance remains unverified.",
+    "The GLB preserves the mesh morph targets but does not include gameplay-specific ability animation logic."
+  ]
+}

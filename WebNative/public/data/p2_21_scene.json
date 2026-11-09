@@ -1,0 +1,335 @@
+{
+	"schemaVersion": 1,
+	"levelId": "2-1",
+	"stage": 1,
+	"maxX": 18,
+	"coordinateSystem": "X/Z side plane; meters; gravity toward -Z",
+	"geometrySource": "NaiwaP2::FSceneLibrary::Make21",
+	"engineVersion": "5.8.3-58210709+++UE5+Release-5.8",
+	"boxes": [
+		{
+			"id": "W.wall",
+			"minX": 5.4000000000000004,
+			"maxX": 6.5999999999999996,
+			"minZ": 0,
+			"maxZ": 0.80000000000000004,
+			"requiredRadius": 0,
+			"isGoal": false,
+			"breakable": false,
+			"role": "Board",
+			"kills": []
+		},
+		{
+			"id": "P.col",
+			"minX": 11.050000000000001,
+			"maxX": 11.949999999999999,
+			"minZ": 0,
+			"maxZ": 3.6000000000000001,
+			"requiredRadius": 0,
+			"isGoal": false,
+			"breakable": true,
+			"role": "Column",
+			"kills": [
+				"P1"
+			]
+		},
+		{
+			"id": "T.base",
+			"minX": 13.9,
+			"maxX": 17.100000000000001,
+			"minZ": 0,
+			"maxZ": 0.29999999999999999,
+			"requiredRadius": 0,
+			"isGoal": false,
+			"breakable": false,
+			"role": "Board",
+			"kills": []
+		},
+		{
+			"id": "T.c1",
+			"minX": 13.949999999999999,
+			"maxX": 14.25,
+			"minZ": 0.29999999999999999,
+			"maxZ": 2.2000000000000002,
+			"requiredRadius": 0,
+			"isGoal": false,
+			"breakable": true,
+			"role": "Column",
+			"kills": []
+		},
+		{
+			"id": "T.c2",
+			"minX": 14.75,
+			"maxX": 15.050000000000001,
+			"minZ": 0.29999999999999999,
+			"maxZ": 2.2000000000000002,
+			"requiredRadius": 0,
+			"isGoal": false,
+			"breakable": true,
+			"role": "Column",
+			"kills": [
+				"T1"
+			]
+		},
+		{
+			"id": "T.c3",
+			"minX": 15.949999999999999,
+			"maxX": 16.25,
+			"minZ": 0.29999999999999999,
+			"maxZ": 2.2000000000000002,
+			"requiredRadius": 0,
+			"isGoal": false,
+			"breakable": true,
+			"role": "Column",
+			"kills": [
+				"T1"
+			]
+		},
+		{
+			"id": "T.c4",
+			"minX": 16.75,
+			"maxX": 17.050000000000001,
+			"minZ": 0.29999999999999999,
+			"maxZ": 2.2000000000000002,
+			"requiredRadius": 0,
+			"isGoal": false,
+			"breakable": true,
+			"role": "Column",
+			"kills": []
+		},
+		{
+			"id": "T.d2",
+			"minX": 13.9,
+			"maxX": 17.100000000000001,
+			"minZ": 2.2000000000000002,
+			"maxZ": 2.5,
+			"requiredRadius": 0,
+			"isGoal": false,
+			"breakable": true,
+			"role": "Board",
+			"kills": []
+		},
+		{
+			"id": "T.c5",
+			"minX": 13.949999999999999,
+			"maxX": 14.300000000000001,
+			"minZ": 2.5,
+			"maxZ": 4.2000000000000002,
+			"requiredRadius": 0,
+			"isGoal": false,
+			"breakable": true,
+			"role": "Column",
+			"kills": [
+				"T1",
+				"T2",
+				"T3"
+			]
+		},
+		{
+			"id": "T.c6",
+			"minX": 16.699999999999999,
+			"maxX": 17.050000000000001,
+			"minZ": 2.5,
+			"maxZ": 4.2000000000000002,
+			"requiredRadius": 0,
+			"isGoal": false,
+			"breakable": true,
+			"role": "Column",
+			"kills": [
+				"T1",
+				"T2",
+				"T3"
+			]
+		},
+		{
+			"id": "T.d3",
+			"minX": 14.25,
+			"maxX": 16.75,
+			"minZ": 4.2000000000000002,
+			"maxZ": 4.5,
+			"requiredRadius": 0,
+			"isGoal": false,
+			"breakable": true,
+			"role": "Board",
+			"kills": []
+		},
+		{
+			"id": "T.post",
+			"minX": 15.35,
+			"maxX": 15.65,
+			"minZ": 4.5,
+			"maxZ": 5.5,
+			"requiredRadius": 0,
+			"isGoal": false,
+			"breakable": true,
+			"role": "Column",
+			"kills": []
+		},
+		{
+			"id": "T.cap",
+			"minX": 15,
+			"maxX": 16,
+			"minZ": 5.5,
+			"maxZ": 5.7999999999999998,
+			"requiredRadius": 0,
+			"isGoal": false,
+			"breakable": true,
+			"role": "Board",
+			"kills": []
+		},
+		{
+			"id": "T1",
+			"minX": 15.074999999999999,
+			"maxX": 15.925000000000001,
+			"minZ": 0.30500000000000005,
+			"maxZ": 1.2549999999999999,
+			"requiredRadius": 0,
+			"isGoal": true,
+			"breakable": false,
+			"role": "Column",
+			"kills": [
+				"T1"
+			]
+		},
+		{
+			"id": "T2",
+			"minX": 14.455,
+			"maxX": 15.305000000000001,
+			"minZ": 2.5049999999999999,
+			"maxZ": 3.4550000000000001,
+			"requiredRadius": 0,
+			"isGoal": true,
+			"breakable": false,
+			"role": "Column",
+			"kills": [
+				"T2"
+			]
+		},
+		{
+			"id": "T3",
+			"minX": 15.695,
+			"maxX": 16.545000000000002,
+			"minZ": 2.5049999999999999,
+			"maxZ": 3.4550000000000001,
+			"requiredRadius": 0,
+			"isGoal": true,
+			"breakable": false,
+			"role": "Column",
+			"kills": [
+				"T3"
+			]
+		},
+		{
+			"id": "P1",
+			"minX": 11.074999999999999,
+			"maxX": 11.925000000000001,
+			"minZ": 3.605,
+			"maxZ": 4.5549999999999997,
+			"requiredRadius": 0,
+			"isGoal": true,
+			"breakable": false,
+			"role": "Column",
+			"kills": [
+				"P1"
+			]
+		}
+	],
+	"goalIds": [
+		"T1",
+		"T2",
+		"T3",
+		"P1"
+	],
+	"ammoRule":
+	{
+		"eggList": [
+			"base"
+		],
+		"totalShots": 3,
+		"repeatAllowed": true,
+		"hasFreeRetry": true
+	},
+	"physicsProfile":
+	{
+		"gravityMPerS2": 15.68,
+		"depthMeters": 1.5,
+		"spawnGapMeters": 0.001,
+		"minBlockDimensionMeters": 0.02,
+		"maxSubstepDeltaTime": 0.0083333333333333332,
+		"maxSubsteps": 8,
+		"maxDepenetrationVelocityCmPerS": 50,
+		"baseEggMassKg": 70,
+		"eggRestitution": 0.37999999523162842,
+		"eggFriction": 0.44999998807907104,
+		"projectileSubstepSeconds": 0.0083333333333333332,
+		"projectileMaxSubstepsPerAdvance": 8,
+		"projectileSettleSpeedCmPerS": 5,
+		"projectileSettleSeconds": 0.29999999999999999,
+		"projectileMaxFlightSeconds": 8,
+		"projectileGroundCenterZCm": -60,
+		"projectileTangentRetention": 0.55000001192092896,
+		"projectileSpinCoupling": 0.75,
+		"projectileMaxSpinDegPerS": 1440,
+		"projectileBounceSeparationCm": 0.050000000000000003,
+		"projectileStopSpeedCmPerS": 20,
+		"stabilityTestSeconds": 5,
+		"stabilityMaxDriftCm": 1,
+		"applyWorldGravity": true,
+		"blockMaterials":
+		{
+			"Foundation":
+			{
+				"densityKgPerM3": 2000,
+				"friction": 0.89999997615814209,
+				"staticFriction": 0.94999998807907104,
+				"restitution": 0.05000000074505806,
+				"linearDamping": 0.05000000074505806,
+				"angularDamping": 0.20000000298023224,
+				"simulate": false,
+				"useCCD": false
+			},
+			"Column":
+			{
+				"densityKgPerM3": 520,
+				"friction": 0.85000002384185791,
+				"staticFriction": 0.89999997615814209,
+				"restitution": 0.11999999731779099,
+				"linearDamping": 0.05000000074505806,
+				"angularDamping": 0.44999998807907104,
+				"simulate": true,
+				"useCCD": false
+			},
+			"Board":
+			{
+				"densityKgPerM3": 680,
+				"friction": 0.85000002384185791,
+				"staticFriction": 0.89999997615814209,
+				"restitution": 0.10000000149011612,
+				"linearDamping": 0.05000000074505806,
+				"angularDamping": 0.40000000596046448,
+				"simulate": true,
+				"useCCD": false
+			},
+			"Goal":
+			{
+				"densityKgPerM3": 240,
+				"friction": 0.60000002384185791,
+				"staticFriction": 0.69999998807907104,
+				"restitution": 0.34999999403953552,
+				"linearDamping": 0.019999999552965164,
+				"angularDamping": 0.10000000149011612,
+				"simulate": true,
+				"useCCD": false
+			}
+		}
+	},
+	"sourceHashes":
+	{
+		"sceneLibrarySha256": "7e423d299c5af31ff314045beca990993bcc955368c8110e1eb5efb95a0f2206",
+		"physicsProfileSha256": "e1a3e4322d4a0d8a0f93a792ea63421322db2797c23ceef74d1548dea3619210",
+		"projectileDriverSha256": "cd5abc468a9a8e34244ae3381701a98517fe617752bec8af0099574284f6544b",
+		"gameModeSha256": "145192d589258c2b5b18682b3c627df8cd387481b9dea69aa73fd071730ed00a",
+		"exporterSha256": "290e8da1ae7cba4e3ae1d14cf46e06d72cbe86423c8d84373c3d888681442298",
+		"runtimeEntrySha256": "342672bd53bb77d0cb42be53a6342b73d9ef20c85a6feef7188aa4c0540b5066"
+	}
+}

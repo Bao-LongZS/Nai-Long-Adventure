@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-29T13:04:58.471Z",
+  "sourceBaseline": "docs/baseline-v1.json",
+  "unrealEngine": "5.8.3-58210709+++UE5+Release-5.8",
+  "assets": [
+    {
+      "id": "naiwa-character-e2",
+      "role": "UE P1 gameplay character mesh (gzip-compressed glTF binary)",
+      "sourcePath": "UE5/NaiwaP0/Content/Naiwa/Gameplay/SK_Naiwa_Elastic.uasset",
+      "sourceSha256": "a05495d621318544fca34e29327e10218d8f76808abcec08cd870ea5ea2ebdf5",
+      "glb": {
+        "status": "present",
+        "path": "public/assets/naiwa-character-e2.glb.gz",
+        "bytes": 10461046,
+        "sha256": "4873d4d08fe32bc3493694700a517cbfdd75011ea67b8937f8b90f34207b25ff",
+        "container": "gzip"
+      }
+    },
+    {
+      "id": "naiwa-egg-base-s4-s5-v3",
+      "role": "UE P2 base egg SkeletalMesh; exported after the source FBX passed UE import validation",
+      "sourcePath": "UE5/NaiwaP0/Content/Naiwa/P2/Art/Egg/SK_NaiwaEgg.uasset",
+      "sourceSha256": "29b70a121c1d810fab9e33f35ad11e7a4240c64902fab82b9cc7224e1950adae",
+      "glb": {
+        "status": "present",
+        "path": "public/assets/naiwa-egg-base.glb",
+        "bytes": 112460,
+        "sha256": "14a739d02a4a10008c954f68f097a30ee7c22f1e53fd412fc0be65b2954b2527",
+        "container": "glb"
+      }
+    },
+    {
+      "id": "naiwa-run-animation",
+      "role": "UE P1 gameplay run animation (gzip-compressed glTF binary)",
+      "sourcePath": "UE5/NaiwaP0/Content/Naiwa/Gameplay/AS_Naiwa_Run.uasset",
+      "sourceSha256": "02b640e491c0dfa2660a6e00bb21d43cf55775d00d1a8a096571f2a793f09bb9",
+      "glb": {
+        "status": "present",
+        "path": "public/assets/naiwa-run.glb.gz",
+        "bytes": 10523,
+        "sha256": "b4051341e78c437adf406c080991ef381f42e4e2d60ccde44cf65a51b46b8116",
+        "container": "gzip"
+      }
+    }
+  ]
+}

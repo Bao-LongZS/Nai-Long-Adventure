@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#101a2c" />
+    <meta name="description" content="奶龙冒险 P2 物理探针：Rapier 结构稳定性与弹丸扫掠事件" />
+    <title>奶龙冒险 · P2 物理探针</title>
+    <style>
+      html, body { min-height: 100%; margin: 0; }
+      body { display: grid; place-items: center; padding: 24px; box-sizing: border-box; background: #101a2c; color: #f5f7fb; font: 16px/1.65 "Segoe UI", "Microsoft YaHei", sans-serif; }
+      .entry-fallback { width: min(620px, 100%); padding: 28px; box-sizing: border-box; border: 1px solid #ffffff24; border-radius: 18px; background: linear-gradient(145deg, #1e2e45, #111b2b); box-shadow: 0 18px 48px #050a1490; }
+      .entry-fallback h1 { margin: 0 0 12px; font-size: 22px; }
+      .entry-fallback p { color: #c4d0e0; }
+      .entry-fallback code { color: #ffe39d; }
+      .entry-fallback pre { overflow-x: auto; padding: 14px; border-radius: 10px; background: #0b1220; color: #ffe39d; }
+    </style>
+  </head>
+  <body>
+    <div id="probe-app">
+      <main class="entry-fallback" role="status">
+        <h1>奶龙冒险 · P2 物理探针</h1>
+        <p>网页资源需要通过 Vite 开发服务器加载。直接双击这个 HTML 文件会使用 <code>file://</code> 地址，浏览器无法解析页面模块，因此探针不会启动。</p>
+        <p>在项目目录运行：</p>
+        <pre>cd WebNative&#10;npm ci&#10;npm run dev</pre>
+        <p>然后访问终端显示的地址，并在后面加上 <code>/p2-probe.html</code>。</p>
+      </main>
+    </div>
+    <script type="module" src="/src/p2-probe.ts"></script>
+  </body>
+</html>

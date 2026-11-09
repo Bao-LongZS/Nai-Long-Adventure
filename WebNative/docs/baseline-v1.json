@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-10-29T08:28:30.009Z",
+  "git": {
+    "head": "10ea1d18b2ec71ce7255643bc04333590ca78b85",
+    "workingTree": "dirty",
+    "changedPathCountExcludingWebNative": 312,
+    "statusSha256ExcludingWebNative": "f0383311d6c884ae9a477024b4a24bfe43403e7fe6755bde7cc78e9960da4c41"
+  },
+  "unreal": {
+    "projectEngineAssociation": "5.8",
+    "reportedVersion": "5.8.3-58210709+++UE5+Release-5.8",
+    "versionEvidencePath": "UE5/Records/build_graybox.json"
+  },
+  "decisions": {
+    "playerCharacter": "E2 model at the versioned candidate path; verify asset manifest and public-use rights before release.",
+    "baseEgg": "S4-S5 v3 FBX has a PASS Unreal import report and is the source for the imported runtime SK_NaiwaEgg mesh.",
+    "p2Ballistics": "Existing p2_ballistics_fixture.json is retained as historical evidence; its 0.004 s integration contract is not assumed to match the current projectile driver."
+  },
+  "sourceFiles": [
+    {
+      "path": "UE5/NaiwaP0/Nai_Long.uproject",
+      "bytes": 745,
+      "sha256": "4dda6aef7606f2d145bb468ed5d9735d178615af165b2b1d055dfbca968e41dd",
+      "status": "present"
+    },
+    {
+      "path": "UE5/Scripts/p1_integrated_v7_config.json",
+      "bytes": 25811,
+      "sha256": "4fd6914655c2ae7c28567bbbdb808b758b0686e7b9bd260a145891d322aa2e59",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/P1/Maps/L_NaiwaP1_v7.umap",
+      "bytes": 259862,
+      "sha256": "4a55ced57ddbe47044aa7f4965fc4013cc82ccc48976a9819a6217a4dbef5754",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP1GameMode.cpp",
+      "bytes": 466978,
+      "sha256": "8f1001c03451d39c8ba95ee78054692dbd0b64e742f7205053fb19d1d5bd441e",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP1GameMode.h",
+      "bytes": 39820,
+      "sha256": "acc28d878c02dbccc5679f0abb4274cae4b3a897f77b66704eb2ad254f5babdd",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP1PlayerController.cpp",
+      "bytes": 1129,
+      "sha256": "fd5b525a1c6bc81fef67538c0a065dc5e9c9fb3903c8b8f9c3c494f4a3848b05",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP1SwitchPlatform.cpp",
+      "bytes": 21159,
+      "sha256": "f4e05b2a30b34c85c357c6f5553eb6d488c3a01698868cf55576b34c5a4ca874",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP2SceneLibrary.cpp",
+      "bytes": 9343,
+      "sha256": "7e423d299c5af31ff314045beca990993bcc955368c8110e1eb5efb95a0f2206",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP2SceneLibrary.h",
+      "bytes": 384,
+      "sha256": "2565eddc0fd522d213b49ac568aa5968506aff0662b895ff7c3df535fe244b0f",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP2Types.h",
+      "bytes": 4027,
+      "sha256": "1d279e47a0c8fe7ed105f464114adc1dc1b97cd5f6e19c22bd959ad6ec4f319c",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP2PhysicsProfile.h",
+      "bytes": 23250,
+      "sha256": "e1a3e4322d4a0d8a0f93a792ea63421322db2797c23ceef74d1548dea3619210",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP2ProjectileDriver.h",
+      "bytes": 8806,
+      "sha256": "cd5abc468a9a8e34244ae3381701a98517fe617752bec8af0099574284f6544b",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP2Ballistics.cpp",
+      "bytes": 11927,
+      "sha256": "77575aa92ee36b3eec9bc4989016dd620d1cb32e605699ce91cffaa5cb0314f1",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP2Ballistics.h",
+      "bytes": 1112,
+      "sha256": "c4d634fa8134424eae489acd21cf4ea254b6ebdaabd20a1ce57e0b48f1f52254",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP2GameMode.cpp",
+      "bytes": 189280,
+      "sha256": "145192d589258c2b5b18682b3c627df8cd387481b9dea69aa73fd071730ed00a",
+      "status": "present"
+    },
+    {
+      "path": "UE5/Records/p2_probe_fixtures/p2_ballistics_fixture.json",
+      "bytes": 1171668,
+      "sha256": "4a30e8392f1d7734382b2242e02f2480ed83200cf9b61c39c9a5d83f2cb4bffe",
+      "status": "present"
+    },
+    {
+      "path": "UE5/Records/p2_probe_fixtures/p2_design_fixture.json",
+      "bytes": 7789,
+      "sha256": "226df1f4588255893fa4a045cc1474445b0b634cce88033de5afa779738bda84",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP3M2SeededMap.cpp",
+      "bytes": 19066,
+      "sha256": "30683598dba0ae821c66e618bb5feaa8d428bb772ed04039b032978d37fd757e",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP3M2SeededMap.h",
+      "bytes": 3057,
+      "sha256": "e6b065f470bcffc81f42f58b7913e84f4f537ff3a351af2545a81a9312eea56a",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP3M2LevelSession.cpp",
+      "bytes": 4758,
+      "sha256": "af9cf3ce56d94819c47edad7edc28a769692da21c81917fafbc80b823384384f",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP3M2LevelSession.h",
+      "bytes": 2588,
+      "sha256": "c4316223f64bb839a1e8853f6ba79ff5afa7b930b1905b050bec1f5ba40be425",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP3M2Settings.cpp",
+      "bytes": 31,
+      "sha256": "652887586a1573ffafba37b7e8ed4ae85f1d78803022852e8f878426a4268a55",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaP3M2Settings.h",
+      "bytes": 1450,
+      "sha256": "b1f8e4951bfadb8344d0962576936d19b0ba2d4c2716e3662a3937139243439a",
+      "status": "present"
+    },
+    {
+      "path": "UE5/Records/p3_formal/design_reference/P3_关卡设计参数_v1.json",
+      "bytes": 20029,
+      "sha256": "cb14a8acea902ec9155c0c93f4263326e91c91e04c0daa7cc17bfc7be81dcdef",
+      "status": "present"
+    },
+    {
+      "path": "UE5/Records/p3_formal/formal_map_build_report.json",
+      "bytes": 1498,
+      "sha256": "6ac068dcee50af72491a931f4b459664b24ca7f80bd12ed83f6143ba27037ba9",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaMenuProgress.cpp",
+      "bytes": 7867,
+      "sha256": "d60cdb509d380c29823d4e37b1a21ab54ec838058710be31ba951c95c5c71c28",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/NaiwaMenuProgress.h",
+      "bytes": 2848,
+      "sha256": "e7677755c4a6a3cd38c9f8b8359bfa21ce8b1282d91a99b426e5f52f1a7451d0",
+      "status": "present"
+    },
+    {
+      "path": "NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/candidate_E2/Naiwa_Character.blend",
+      "bytes": 24034709,
+      "sha256": "317f62278d63217636bf393f831e2fb41ce21acfefbe21beed6ad6d4dc75f322",
+      "status": "present"
+    },
+    {
+      "path": "NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/candidate_E2/Naiwa_Character.fbx",
+      "bytes": 20679580,
+      "sha256": "8dae9ce28c4b44465dcb8e73dd462804c3a561daee9eebaf79842900a3005147",
+      "status": "present"
+    },
+    {
+      "path": "NaiwaCharacter/versions/20261007_H2_E2_overall_refinement/candidate_E2/fbx_validation.json",
+      "bytes": 35019,
+      "sha256": "b2197529f6cb9ffdfffd9be4fba035e8426791b350daa9571cee112e255415be",
+      "status": "present"
+    },
+    {
+      "path": "NaiwaCharacter/deliveries/NaiwaEgg_S4-S5_v3_candidate/SK_NaiwaEgg_S4-S5.blend",
+      "bytes": 142027,
+      "sha256": "f3e49aedc5a4642617e70fe2d73ae256ca520e7d1002acf7a16c43d96b39db69",
+      "status": "present"
+    },
+    {
+      "path": "NaiwaCharacter/deliveries/NaiwaEgg_S4-S5_v3_candidate/SK_NaiwaEgg.fbx",
+      "bytes": 89680,
+      "sha256": "70dcd47fab2821e1b2a75d240d0d51ac42d5dd123fcbe9edfd9c777baf3b918b",
+      "status": "present"
+    },
+    {
+      "path": "NaiwaCharacter/deliveries/NaiwaEgg_S4-S5_v3_candidate/NaiwaEgg_S4-S5_ue_import_report.json",
+      "bytes": 3823,
+      "sha256": "91b31a0560531e88ad7ceebef251ce07ea74fe7f3bebd59cd21d0d7386b94618",
+      "status": "present"
+    },
+    {
+      "path": "UE5/NaiwaP0/Content/Naiwa/P2/Art/Egg/SK_NaiwaEgg.uasset",
+      "bytes": 317179,
+      "sha256": "29b70a121c1d810fab9e33f35ad11e7a4240c64902fab82b9cc7224e1950adae",
+      "status": "present"
+    }
+  ]
+}

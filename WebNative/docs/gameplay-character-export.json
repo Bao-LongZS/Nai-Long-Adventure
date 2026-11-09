@@ -1,0 +1,26 @@
+{
+  "status": "PASS_UE_GLTF_EXPORT",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "mesh": {
+    "asset": "/Game/Naiwa/Gameplay/SK_Naiwa_Elastic",
+    "output": "WebNative/public/assets/naiwa-character-e2.glb",
+    "bytes": 46374232,
+    "sha256": "74bf619d36fa5915ea3b0a2e922164668adb9ab2e33a3906d6882dcfce9c48f6"
+  },
+  "animation": {
+    "asset": "/Game/Naiwa/Gameplay/AS_Naiwa_Run",
+    "output": "WebNative/public/assets/naiwa-run.glb",
+    "bytes": 37876,
+    "sha256": "5dc91c8dbf4d023c97c160714a1d58f71787f4f9646e0a455a23d9eedc4d1ce7"
+  },
+  "morphTargets": [
+    "Belly_Compress",
+    "Belly_Rebound",
+    "Belly_SoftLag"
+  ],
+  "meshHasVertexColors": true,
+  "limitations": [
+    "UE gameplay mesh and run sequence were exported as separate GLBs; runtime track binding must be checked in the browser.",
+    "Custom Unreal material graphs may be baked or simplified by the glTF exporter."
+  ]
+}

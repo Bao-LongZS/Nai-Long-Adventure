@@ -1,0 +1,26 @@
+{
+  "name": "nai-long-adventure-web-native",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": "24.21.0",
+    "npm": "11.19.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.app.json && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.app.json --noEmit"
+  },
+  "dependencies": {
+    "@dimforge/rapier3d-compat": "0.21.0",
+    "three": "0.185.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/three": "0.185.4",
+    "typescript": "5.9.3",
+    "vite": "8.3.5"
+  }
+}
