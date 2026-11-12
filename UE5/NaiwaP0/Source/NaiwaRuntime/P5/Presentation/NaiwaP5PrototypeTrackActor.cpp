@@ -543,11 +543,12 @@ void ANaiwaP5PrototypeTrackActor::EmitA0VisualProbe(const FString& Trigger)
 		PlayerController->GetViewportSize(ViewWidthPx, ViewHeightPx);
 	}
 	UE_LOG(LogTemp, Display,
-		TEXT("NAIWA_P5_A0_PROBE trigger=%s map=%s game_mode=%s route=%s route_mm=%d route_version=%d distance_m=%.3f speed_mps=%.3f gap_m=%.3f riding=%d airborne=%d fallen=%d charging=%d jump_height_m=%.3f avalanche_warning=%d viewport=%dx%d camera=%s projection=%d ortho_width=%.2f camera_loc=%s"),
+		TEXT("NAIWA_P5_A0_PROBE trigger=%s map=%s game_mode=%s route=%s route_mm=%d route_version=%d distance_m=%.3f speed_mps=%.3f gap_m=%.3f boost_level=%d boost_s=%.2f riding=%d airborne=%d fallen=%d charging=%d jump_height_m=%.3f avalanche_warning=%d viewport=%dx%d camera=%s projection=%d ortho_width=%.2f camera_loc=%s"),
 		*Trigger, *GetWorld()->GetMapName(),
 		GameMode ? *GameMode->GetClass()->GetName() : TEXT("NULL"),
 		*Fixture.RouteId.ToString(), Fixture.RouteLengthMm, Fixture.Version, State.DistanceMeters,
 		State.PlayerSpeedMetersPerSecond, State.AvalancheGapMeters,
+		State.TrickBoostLevel, State.TrickBoostSeconds,
 		State.bRiding ? 1 : 0, State.bAirborne ? 1 : 0, State.bFallen ? 1 : 0,
 		State.bJumpCharging ? 1 : 0, State.JumpHeightMeters,
 		State.bAvalancheWarning ? 1 : 0, ViewWidthPx, ViewHeightPx,
@@ -1065,7 +1066,7 @@ void ANaiwaP5PrototypeTrackActor::Tick(const float DeltaSeconds)
 		}
 	}
 	static constexpr double A0ProbeDistancesMeters[] = {
-		0.0, 150.0, 165.0, 336.0, 385.0, 604.0, 617.0, 803.0, 805.0, 1500.0, 1740.0
+		0.0, 150.0, 153.0, 165.0, 336.0, 385.0, 604.0, 617.0, 803.0, 805.0, 1500.0, 1740.0
 	};
 	while (NextA0VisualProbeIndex < UE_ARRAY_COUNT(A0ProbeDistancesMeters) &&
 		State.DistanceMeters >= A0ProbeDistancesMeters[NextA0VisualProbeIndex])
@@ -1080,7 +1081,10 @@ void ANaiwaP5PrototypeTrackActor::Tick(const float DeltaSeconds)
 	{
 		return;
 	}
-	const double FrontDistanceMeters = State.DistanceMeters - State.AvalancheGapMeters;
+	const double RenderGapMeters = bA0ArtSample
+		? State.AvalancheGapMeters * 0.18
+		: State.AvalancheGapMeters;
+	const double FrontDistanceMeters = State.DistanceMeters - RenderGapMeters;
 	const int32 SurfaceDistanceMm = FMath::Clamp(FMath::RoundToInt(FrontDistanceMeters * 1000.0),
 		0, Fixture.RouteLengthMm);
 	const double SurfaceHeightCm = FNaiwaP5TrackData::GetRouteSurfaceHeightMeters(
@@ -1089,13 +1093,13 @@ void ANaiwaP5PrototypeTrackActor::Tick(const float DeltaSeconds)
 
 	if (bA0ArtSample)
 	{
-		AvalancheWallMesh->SetRelativeLocation(FVector(FrontXcm - 800.0, -20.0, SurfaceHeightCm + 580.0));
-		AvalancheCrestMesh->SetRelativeLocation(FVector(FrontXcm - 450.0, -18.0, SurfaceHeightCm + 140.0));
+		AvalancheWallMesh->SetRelativeLocation(FVector(FrontXcm - 450.0, -20.0, SurfaceHeightCm + 580.0));
+		AvalancheCrestMesh->SetRelativeLocation(FVector(FrontXcm - 350.0, -18.0, SurfaceHeightCm + 140.0));
 		const int32 PlayerDistanceMm = FMath::Clamp(FMath::RoundToInt(State.DistanceMeters * 1000.0),
 			0, Fixture.RouteLengthMm);
 		const double PlayerSurfaceZcm = FNaiwaP5TrackData::GetRouteSurfaceHeightMeters(
 			Fixture, PlayerDistanceMm) * 100.0;
-		AvalanchePlumeMesh->SetRelativeLocation(FVector(PlayerXcm - 280.0, -24.0, PlayerSurfaceZcm + 120.0));
+		AvalanchePlumeMesh->SetRelativeLocation(FVector(FrontXcm - 100.0, -24.0, PlayerSurfaceZcm + 120.0));
 		AvalanchePlumeMesh->SetVisibility(State.bAvalancheWarning, true);
 	}
 	else

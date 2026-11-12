@@ -41,14 +41,13 @@ void ANaiwaP5HUD::DrawHUD()
 	const bool bA0ArtSample = IsNaiwaP5A0ArtSampleWorld(GetWorld());
 	if (bA0ArtSample)
 	{
-		// Keep the scene open: only distance/score at upper left, avalanche at upper right,
-		// and a compact control hint at the bottom. Detailed state stays in the log.
+		// Keep the scene open while surfacing speed, trick rewards, and avalanche pressure.
 		const float UiScale = FMath::Clamp(Canvas->ClipX / 1920.0f, 0.80f, 1.0f);
 		const float Margin = 24.0f * UiScale;
 		const FLinearColor PanelFill(0.025f, 0.060f, 0.11f, 0.78f);
 		const FLinearColor PanelEdge(0.60f, 0.79f, 0.91f, 0.24f);
 		const float LeftWidth = 410.0f * UiScale;
-		const float PanelHeight = 132.0f * UiScale;
+		const float PanelHeight = 174.0f * UiScale;
 		const float RightWidth = 330.0f * UiScale;
 		const float LeftX = Margin;
 		const float TopY = Margin;
@@ -85,10 +84,34 @@ void ANaiwaP5HUD::DrawHUD()
 		}
 		DrawText(ActionStatus, ActionColor, LeftX + Pad, TopY + 103.0f * UiScale,
 			Font, 0.76f * UiScale);
+		const bool bTrickBoostActive = State.TrickBoostSeconds > 0.0;
+		const FLinearColor SpeedColor = bTrickBoostActive
+			? FLinearColor(1.0f, 0.82f, 0.25f, 1.0f) : MainText;
+		DrawText(FString::Printf(TEXT("SPEED  %.1f m/s"), State.PlayerSpeedMetersPerSecond),
+			SpeedColor, LeftX + Pad, TopY + 126.0f * UiScale, Font, 0.80f * UiScale);
+		if (bTrickBoostActive)
+		{
+			const int32 BoostPercent = State.TrickBoostLevel >= 2 ? 30 : 15;
+			DrawText(FString::Printf(TEXT("BACKFLIP BOOST  +%d%%   %.1fs"),
+				BoostPercent, State.TrickBoostSeconds), SpeedColor,
+				LeftX + Pad + 150.0f * UiScale, TopY + 126.0f * UiScale,
+				Font, 0.70f * UiScale);
+		}
 
 		DrawRect(PanelFill, RightX, RightY, RightWidth, PanelHeight);
-		DrawRect(PanelEdge, RightX, RightY, RightWidth, 2.0f * UiScale);
-		DrawText(TEXT("AVALANCHE GAP"), WarningText, RightX + Pad, RightY + 10.0f * UiScale,
+		const float WarningPulse = State.bAvalancheWarning
+			? 0.45f + 0.35f * FMath::Sin(static_cast<float>(GetWorld()->GetTimeSeconds()) * 9.0f)
+			: 0.0f;
+		if (State.bAvalancheWarning)
+		{
+			DrawRect(FLinearColor(0.55f, 0.035f, 0.02f, WarningPulse),
+				RightX, RightY, RightWidth, PanelHeight);
+		}
+		DrawRect(State.bAvalancheWarning
+			? FLinearColor(1.0f, 0.20f, 0.12f, 0.5f + WarningPulse * 0.5f) : PanelEdge,
+			RightX, RightY, RightWidth, 2.0f * UiScale);
+		DrawText(State.bAvalancheWarning ? TEXT("AVALANCHE CLOSE") : TEXT("AVALANCHE GAP"),
+			WarningText, RightX + Pad, RightY + 10.0f * UiScale,
 			Font, 0.82f * UiScale);
 		DrawText(FString::Printf(TEXT("%.1f m"), State.AvalancheGapMeters),
 			WarningText, RightX + Pad, RightY + 35.0f * UiScale, Font, 1.48f * UiScale);
@@ -105,6 +128,18 @@ void ANaiwaP5HUD::DrawHUD()
 		DrawText(TEXT("WALL"), WarningText, GapBarX, GapBarY + 13.0f * UiScale, Font, 0.62f * UiScale);
 		DrawText(TEXT("YOU"), MainText, GapBarX + GapBarWidth - 32.0f * UiScale,
 			GapBarY + 13.0f * UiScale, Font, 0.62f * UiScale);
+		if (State.bAvalancheWarning)
+		{
+			DrawText(TEXT("JUMP / FLIP TO OPEN THE GAP"),
+				FLinearColor(1.0f, 0.72f, 0.58f, 1.0f), GapBarX,
+				GapBarY + 33.0f * UiScale, Font, 0.68f * UiScale);
+		}
+		else
+		{
+			DrawText(TEXT("THE WALL IS CLOSING"),
+				FLinearColor(0.55f, 0.82f, 0.93f, 0.95f), GapBarX,
+				GapBarY + 33.0f * UiScale, Font, 0.68f * UiScale);
+		}
 
 		const float HintHeight = 30.0f * UiScale;
 		const float HintY = Canvas->ClipY - Margin - HintHeight;

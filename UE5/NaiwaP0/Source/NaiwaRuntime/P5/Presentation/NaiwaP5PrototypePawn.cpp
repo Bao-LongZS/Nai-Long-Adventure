@@ -337,8 +337,19 @@ void ANaiwaP5PrototypePawn::Tick(const float DeltaSeconds)
 			// Keep some vertical camera lag so a jump moves against the scenery,
 			// while moving the route lower in frame to reveal more of the landscape.
 			FVector CameraLocation = SideCamera->GetRelativeLocation();
-			CameraLocation.Z = 900.0 - State.JumpHeightMeters * 100.0 * 0.40;
+			const double BoostAlpha = State.TrickBoostSeconds > 0.0
+				? FMath::Clamp(State.TrickBoostSeconds / NaiwaP5Rules::TrickBoostTier2DurationSeconds, 0.0, 1.0)
+				: 0.0;
+			const double WarningAlpha = State.bAvalancheWarning
+				? FMath::Clamp((NaiwaP5Rules::AvalancheWarningGapMeters - State.AvalancheGapMeters) /
+					NaiwaP5Rules::AvalancheWarningGapMeters, 0.0, 1.0)
+				: 0.0;
+			const double ShakePhase = GetWorld()->GetTimeSeconds() * 17.0;
+			CameraLocation.X = FMath::Sin(ShakePhase) * 12.0 * WarningAlpha;
+			CameraLocation.Z = 900.0 - State.JumpHeightMeters * 100.0 * 0.40 +
+				FMath::Sin(ShakePhase * 1.31) * 8.0 * WarningAlpha;
 			SideCamera->SetRelativeLocation(CameraLocation);
+			SideCamera->OrthoWidth = static_cast<float>(2300.0 - 140.0 * BoostAlpha - 100.0 * WarningAlpha);
 		}
 		GrayboxMount->SetHiddenInGame(!State.bRiding);
 		const double FallTiltDegrees = State.bFallen ? 72.0 : 0.0;
@@ -439,7 +450,9 @@ void ANaiwaP5PrototypePawn::UpdateA0ArtPresentation(const FNaiwaP5RunState& Stat
 		SetA0AtlasRegion(A0LandingPuffArtMaterial, 512, 512,
 			(PuffFrame % 4) * 128, (PuffFrame / 4) * 128, 128, 128);
 	}
-	const bool bShowSnowTrack = A0SnowTrackArtMaterial && A0SnowTrackArt && !State.bRiding &&
+	const bool bTrickBoostActive = State.TrickBoostSeconds > 0.0;
+	const bool bShowSnowTrack = A0SnowTrackArtMaterial && A0SnowTrackArt &&
+		(!State.bRiding || bTrickBoostActive) &&
 		!State.bFallen && State.PlayerSpeedMetersPerSecond > 1.0;
 	if (A0SnowTrackArt)
 	{
@@ -448,7 +461,10 @@ void ANaiwaP5PrototypePawn::UpdateA0ArtPresentation(const FNaiwaP5RunState& Stat
 	}
 	if (bShowSnowTrack)
 	{
-		const double TrailWidthCm = FMath::Clamp(State.PlayerSpeedMetersPerSecond * 22.0, 180.0, 360.0);
+		const double TrailWidthCm = FMath::Clamp(State.PlayerSpeedMetersPerSecond *
+			(bTrickBoostActive ? 28.0 : 22.0), 180.0, bTrickBoostActive ? 500.0 : 360.0);
+		A0SnowTrackArt->SetRelativeLocation(FVector(bTrickBoostActive ? -280.0 : -170.0,
+			State.bRiding ? 300.0 : 220.0, -76.0));
 		A0SnowTrackArt->SetRelativeScale3D(FVector(TrailWidthCm / 100.0, 0.40, 1.0));
 		SetA0FacingRotation(A0SnowTrackArt, RouteSlopeDegrees);
 	}
@@ -468,9 +484,12 @@ void ANaiwaP5PrototypePawn::UpdateA0ArtPresentation(const FNaiwaP5RunState& Stat
 		if (bShowSnowflake)
 		{
 			const double Phase = FMath::Fmod(State.DistanceMeters * 0.55 + SnowflakeIndex * 0.27, 1.0);
-			const double DriftXcm = (Phase * 2.0 - 1.0) * 240.0;
-			const double BobZcm = 135.0 + 35.0 * FMath::Sin(State.DistanceMeters * 1.8 + SnowflakeIndex * 1.7);
-			const double SizeCm = 14.0 + static_cast<double>(SnowflakeIndex % 3) * 3.0;
+			const double DriftRangeCm = bTrickBoostActive ? 560.0 : (State.bAvalancheWarning ? 420.0 : 240.0);
+			const double DriftXcm = (Phase * 2.0 - 1.0) * DriftRangeCm;
+			const double BobZcm = (bTrickBoostActive || State.bAvalancheWarning ? 180.0 : 135.0) +
+				35.0 * FMath::Sin(State.DistanceMeters * 1.8 + SnowflakeIndex * 1.7);
+			const double SizeCm = (bTrickBoostActive ? 30.0 : (State.bAvalancheWarning ? 24.0 : 14.0)) +
+				static_cast<double>(SnowflakeIndex % 3) * (bTrickBoostActive ? 6.0 : 3.0);
 			Snowflake->SetRelativeLocation(FVector(DriftXcm, 245.0, BobZcm));
 			Snowflake->SetRelativeScale3D(FVector(SizeCm / 100.0, SizeCm / 100.0, 1.0));
 			SetA0FacingRotation(Snowflake, RouteSlopeDegrees);
@@ -496,7 +515,7 @@ void ANaiwaP5PrototypePawn::UpdateA0ArtPresentation(const FNaiwaP5RunState& Stat
 			const FIntRect& Rect = MountRects[MountFrame];
 			SetA0AtlasRegion(A0MountArtMaterial, 1024, 1024, Rect.Min.X, Rect.Min.Y,
 				Rect.Width(), Rect.Height());
-			const double MountWidthCm = 260.0;
+			const double MountWidthCm = 330.0;
 			const double MountHeightCm = MountWidthCm * Rect.Height() / Rect.Width();
 			MountHeightForRideAnchorCm = MountHeightCm;
 			const int32 MountCellTopPx = MountFrame >= 3 ? 512 : 0;
@@ -507,7 +526,7 @@ void ANaiwaP5PrototypePawn::UpdateA0ArtPresentation(const FNaiwaP5RunState& Stat
 			MountSaddleFromSpriteBottomCm = MountHeightCm *
 				(1.0 - SaddleYInMountCropPx / Rect.Height());
 			A0MountArt->SetRelativeScale3D(FVector(MountWidthCm / 100.0, MountHeightCm / 100.0, 1.0));
-			A0MountArt->SetRelativeLocation(FVector(0.0, 250.0,
+			A0MountArt->SetRelativeLocation(FVector(0.0, 330.0,
 				A0MountArtBottomFromPawnCm + MountHeightCm * 0.5));
 			SetA0FacingRotation(A0MountArt, State.RotationDegrees + RouteSlopeDegrees);
 		}
@@ -611,6 +630,18 @@ void ANaiwaP5PrototypePawn::UpdateA0ArtPresentation(const FNaiwaP5RunState& Stat
 		SetA0FacingRotation(A0HeroArt, HeroSpinDegrees);
 		bA0RideAnchorProbeValid = State.bRiding && bUseMountArt &&
 			bA0ContinuousMountAtlasActive && A0HeroArtMaterial != nullptr;
+		if (bA0RideAnchorProbeValid)
+		{
+			const FVector RiderSeatWorld = A0HeroArt->GetComponentTransform().TransformPosition(
+				FVector(0.0, A0RideSeatMeshLocalY, 0.0));
+			const FVector MountSaddleWorld = A0MountArt->GetComponentTransform().TransformPosition(
+				FVector(0.0, A0MountSaddleMeshLocalY, 0.0));
+			FVector ScreenPlaneCorrection = MountSaddleWorld - RiderSeatWorld;
+			// Preserve the depth offset so the mount remains in front of the rider,
+			// while correcting the slope-induced X/Z drift in the side-camera view.
+			ScreenPlaneCorrection.Y = 0.0;
+			A0HeroArt->AddWorldOffset(ScreenPlaneCorrection);
+		}
 		if (bUseSnowboardArt)
 		{
 			SetA0FacingRotation(A0SnowboardArt, HeroSpinDegrees);

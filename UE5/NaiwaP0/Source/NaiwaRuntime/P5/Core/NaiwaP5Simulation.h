@@ -9,9 +9,9 @@ namespace NaiwaP5Rules
 	inline constexpr double MaxPlayerSpeedMetersPerSecond = 26.0;
 	inline constexpr double TrickBoostTier1MaxSpeedMetersPerSecond = 32.0;
 	inline constexpr double TrickBoostTier2MaxSpeedMetersPerSecond = 38.0;
-	inline constexpr double AvalancheSpeedMetersPerSecond = 12.0;
+	inline constexpr double AvalancheSpeedMetersPerSecond = 26.8;
 	inline constexpr double AvalancheGapMaxMeters = 60.0;
-	inline constexpr double AvalancheWarningGapMeters = 20.0;
+	inline constexpr double AvalancheWarningGapMeters = 32.0;
 
 	inline constexpr double JumpLaunchVelocityMetersPerSecond = 13.0;
 	inline constexpr double JumpGravityMetersPerSecondSquared = 18.0;
