@@ -1,0 +1,23 @@
+{
+  "schema": "naiwa.p4.beta6_internal_test_map_build/1",
+  "status": "map_saved_pending_runtime_acceptance",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_InternalTest_v01",
+  "runtime_played": false,
+  "default_game_mode": "/Script/NaiwaRuntime.NaiwaP4Beta6TestGameMode",
+  "required_tables": [
+    "/Game/Naiwa/P4/Data/DT_P4_Beta6_Chapters",
+    "/Game/Naiwa/P4/Data/DT_P4_Beta6_Themes",
+    "/Game/Naiwa/P4/Data/DT_P4_Beta6_WaveSpawns",
+    "/Game/Naiwa/P4/Data/DT_P4_Beta6_Enemies",
+    "/Game/Naiwa/P4/Data/DT_P4_Beta6_Bosses",
+    "/Game/Naiwa/P4/Data/DT_P4_Beta6_BossAttacks",
+    "/Game/Naiwa/P4/Data/DT_P4_Upgrade_Alpha"
+  ],
+  "actors": [
+    "fixed P4 camera rig",
+    "PlayerStart",
+    "neutral test floor"
+  ],
+  "note": "Gameplay test map only; the five chapter scene preview maps and project default GameMode are unchanged."
+}

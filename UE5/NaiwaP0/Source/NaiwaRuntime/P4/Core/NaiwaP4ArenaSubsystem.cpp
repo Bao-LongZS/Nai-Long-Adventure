@@ -3,9 +3,11 @@
 #include "NaiwaP4Determinism.h"
 #include "NaiwaP4Settings.h"
 #include "Engine/DataTable.h"
+#include "Engine/GameInstance.h"
 #include "Containers/StringConv.h"
 #include "Misc/FileHelper.h"
 #include "UObject/UObjectGlobals.h"
+#include "../Progress/NaiwaP4ProgressSubsystem.h"
 
 namespace
 {
@@ -62,6 +64,39 @@ namespace
 		const double T = FMath::Clamp(FVector2D::DotProduct(Point - Start, Segment) / LengthSquared, 0.0, 1.0);
 		const FVector2D Closest = Start + Segment * T;
 		return FVector2D::DistSquared(Point, Closest);
+	}
+
+	bool IsInsideBossHitbox(const FVector2D& Point, const FVector2D& Center,
+		const FVector2D& Direction, const FName Geometry, const double ExtentX,
+		const double ExtentY, const double TargetRadius)
+	{
+		const FVector2D Forward = Direction.GetSafeNormal();
+		const FVector2D Offset = Point - Center;
+		if (Geometry == FName(TEXT("circle")))
+		{
+			return Offset.SizeSquared() <= FMath::Square(ExtentX + TargetRadius);
+		}
+		if (Geometry == FName(TEXT("fan")))
+		{
+			const double ForwardDistance = FVector2D::DotProduct(Offset, Forward);
+			const double SideDistance = FMath::Abs(FVector2D::CrossProduct(Offset, Forward));
+			return ForwardDistance >= -TargetRadius && ForwardDistance <= ExtentX + TargetRadius
+				&& SideDistance <= ExtentY + TargetRadius;
+		}
+		if (Geometry == FName(TEXT("line")) && ExtentX > 0.0)
+		{
+			return DistanceSquaredToSegment(Point, Center, Center + Forward * ExtentX)
+				<= FMath::Square(ExtentY + TargetRadius);
+		}
+		return false;
+	}
+
+	FVector2D RotateDirection(const FVector2D& Direction, const double Radians)
+	{
+		const double Cosine = FMath::Cos(Radians);
+		const double Sine = FMath::Sin(Radians);
+		return FVector2D(Direction.X * Cosine - Direction.Y * Sine,
+			Direction.X * Sine + Direction.Y * Cosine).GetSafeNormal();
 	}
 
 	FVector2D GetImpactKnockbackDirection(const FNaiwaP4EntityState& Target,
@@ -351,7 +386,7 @@ bool UNaiwaP4ArenaSubsystem::LoadCombatDataTables(const UDataTable* EnemyTable,
 
 bool UNaiwaP4ArenaSubsystem::StartWaveCombatPreview()
 {
-	if (WaveSpawnPlan.IsEmpty() || EnemyCatalog.IsEmpty())
+	if (bBeta6RuntimeActive || WaveSpawnPlan.IsEmpty() || EnemyCatalog.IsEmpty())
 	{
 		return false;
 	}
@@ -379,7 +414,7 @@ bool UNaiwaP4ArenaSubsystem::StartWaveCombatPreview()
 
 bool UNaiwaP4ArenaSubsystem::RestartWaveCombatPreview()
 {
-	if (WaveSpawnPlan.IsEmpty() || EnemyCatalog.IsEmpty())
+	if (bBeta6RuntimeActive || WaveSpawnPlan.IsEmpty() || EnemyCatalog.IsEmpty())
 	{
 		return false;
 	}
@@ -483,6 +518,305 @@ bool UNaiwaP4ArenaSubsystem::LoadCombatCsvFiles(const FString& EnemyCsvPath,
 		WaveTable->AddRow(FName(*Cells[0]), Row);
 	}
 	return LoadCombatDataTables(EnemyTable, WaveTable, OutError);
+}
+
+bool UNaiwaP4ArenaSubsystem::LoadBeta6ProgressionTables(const UDataTable* ChapterTable,
+	const UDataTable* ThemeTable, const UDataTable* WaveSpawnTable,
+	const UDataTable* EnemyTable, const UDataTable* BossTable,
+	const UDataTable* BossAttackTable, FString& OutError)
+{
+	if (bBeta6RuntimeActive || (bSimulationActive && State.RunResult == ENaiwaP4RunResult::InProgress))
+	{
+		OutError = TEXT("P4 Beta6 tables cannot be replaced while the arena simulation is active.");
+		return false;
+	}
+	bBeta6CatalogLoaded = Beta6ChapterFlow.LoadCatalog(ChapterTable, ThemeTable,
+		WaveSpawnTable, EnemyTable, BossTable, BossAttackTable, OutError);
+	return bBeta6CatalogLoaded;
+}
+
+UNaiwaP4ProgressSubsystem* UNaiwaP4ArenaSubsystem::GetBeta6ProgressSubsystem() const
+{
+	UWorld* World = GetWorld();
+	UGameInstance* GameInstance = World ? World->GetGameInstance() : nullptr;
+	return GameInstance ? GameInstance->GetSubsystem<UNaiwaP4ProgressSubsystem>() : nullptr;
+}
+
+bool UNaiwaP4ArenaSubsystem::StartBeta6Run(const int64 RunSeed, FString& OutError)
+{
+	if (!bBeta6CatalogLoaded)
+	{
+		OutError = TEXT("P4 Beta6 chapter tables have not been loaded.");
+		return false;
+	}
+	if (bSimulationActive && State.RunResult == ENaiwaP4RunResult::InProgress)
+	{
+		OutError = TEXT("Stop or settle the current P4 arena encounter before starting a Beta6 run.");
+		return false;
+	}
+	if (bBeta6RuntimeActive && State.RunResult == ENaiwaP4RunResult::Victory)
+	{
+		OutError = TEXT("Complete Beta6 chapter settlement before starting another run.");
+		return false;
+	}
+	if (UpgradeCatalog.GetOrderedCardIds().IsEmpty())
+	{
+		OutError = TEXT("P4 upgrade data must be loaded before starting a Beta6 run.");
+		return false;
+	}
+
+	UNaiwaP4ProgressSubsystem* Progress = GetBeta6ProgressSubsystem();
+	if (!Progress)
+	{
+		OutError = TEXT("The P4-specific progress subsystem is unavailable in this game instance.");
+		return false;
+	}
+	if (!Beta6ChapterFlow.StartNewRun(RunSeed, *Progress, OutError))
+	{
+		bBeta6RuntimeActive = false;
+		return false;
+	}
+	return StartActiveBeta6Chapter(*Progress, OutError);
+}
+
+bool UNaiwaP4ArenaSubsystem::ResumeBeta6Run(FString& OutError)
+{
+	if (!bBeta6CatalogLoaded)
+	{
+		OutError = TEXT("P4 Beta6 chapter tables have not been loaded.");
+		return false;
+	}
+	if (bSimulationActive && State.RunResult == ENaiwaP4RunResult::InProgress)
+	{
+		OutError = TEXT("Stop or settle the current P4 arena encounter before resuming Beta6 progress.");
+		return false;
+	}
+	if (UpgradeCatalog.GetOrderedCardIds().IsEmpty())
+	{
+		OutError = TEXT("P4 upgrade data must be loaded before resuming a Beta6 run.");
+		return false;
+	}
+	UNaiwaP4ProgressSubsystem* Progress = GetBeta6ProgressSubsystem();
+	if (!Progress)
+	{
+		OutError = TEXT("The P4-specific progress subsystem is unavailable in this game instance.");
+		return false;
+	}
+	if (!Beta6ChapterFlow.ResumeRun(*Progress, OutError))
+	{
+		bBeta6RuntimeActive = false;
+		return false;
+	}
+	return StartActiveBeta6Chapter(*Progress, OutError);
+}
+
+bool UNaiwaP4ArenaSubsystem::RetryBeta6Chapter(FString& OutError)
+{
+	if (!bBeta6CatalogLoaded || UpgradeCatalog.GetOrderedCardIds().IsEmpty())
+	{
+		OutError = TEXT("P4 Beta6 chapter tables and upgrade data must be loaded before retry.");
+		return false;
+	}
+	UNaiwaP4ProgressSubsystem* Progress = GetBeta6ProgressSubsystem();
+	if (!Progress)
+	{
+		OutError = TEXT("The P4-specific progress subsystem is unavailable in this game instance.");
+		return false;
+	}
+	if (!Beta6ChapterFlow.RetryActiveChapter(*Progress, OutError))
+	{
+		bBeta6RuntimeActive = false;
+		return false;
+	}
+	return StartActiveBeta6Chapter(*Progress, OutError);
+}
+
+bool UNaiwaP4ArenaSubsystem::BeginNextBeta6Chapter(FString& OutError)
+{
+	if (Beta6ChapterFlow.GetPhase() != ENaiwaP4Beta6FlowPhase::AwaitingChapterStart)
+	{
+		OutError = TEXT("The current P4 Beta6 chapter has not been settled for progression.");
+		return false;
+	}
+	if (!bBeta6CatalogLoaded || UpgradeCatalog.GetOrderedCardIds().IsEmpty())
+	{
+		OutError = TEXT("P4 Beta6 chapter tables and upgrade data must be loaded before chapter start.");
+		return false;
+	}
+	UNaiwaP4ProgressSubsystem* Progress = GetBeta6ProgressSubsystem();
+	if (!Progress)
+	{
+		OutError = TEXT("The P4-specific progress subsystem is unavailable in this game instance.");
+		return false;
+	}
+	if (!Beta6ChapterFlow.BeginActiveChapter(*Progress, OutError))
+	{
+		bBeta6RuntimeActive = false;
+		return false;
+	}
+	return StartActiveBeta6Chapter(*Progress, OutError);
+}
+
+bool UNaiwaP4ArenaSubsystem::CompleteBeta6Chapter(int32& OutNextChapterIndex, FString& OutError)
+{
+	OutNextChapterIndex = 0;
+	if (!bBeta6RuntimeActive || State.RunResult != ENaiwaP4RunResult::Victory)
+	{
+		OutError = TEXT("The active Beta6 arena chapter has not reached settlement.");
+		return false;
+	}
+	UNaiwaP4ProgressSubsystem* Progress = GetBeta6ProgressSubsystem();
+	if (!Progress)
+	{
+		OutError = TEXT("The P4-specific progress subsystem is unavailable in this game instance.");
+		return false;
+	}
+	const float CumulativeRunSeconds = Progress->GetRunElapsedSeconds()
+		+ static_cast<float>(static_cast<double>(State.CurrentTick) * FixedStepSeconds);
+	const int32 HighestCombo = Progress->GetRunHighestCombo();
+	if (!Beta6ChapterFlow.CompleteChapter(*Progress, CumulativeRunSeconds,
+		HighestCombo, OutNextChapterIndex, OutError))
+	{
+		return false;
+	}
+	StopSimulation();
+	bBeta6RuntimeActive = false;
+	return true;
+}
+
+bool UNaiwaP4ArenaSubsystem::StartActiveBeta6Chapter(UNaiwaP4ProgressSubsystem& Progress,
+	FString& OutError)
+{
+	if (!bBeta6CatalogLoaded || Beta6ChapterFlow.GetPhase() != ENaiwaP4Beta6FlowPhase::WaveActive)
+	{
+		OutError = TEXT("P4 Beta6 chapter flow is not ready to start combat.");
+		return false;
+	}
+	bBeta6RuntimeActive = false;
+	const FNaiwaP4Beta6ChapterBundle* Bundle = Beta6ChapterFlow.GetCurrentChapter();
+	if (!Bundle)
+	{
+		OutError = TEXT("The selected P4 Beta6 chapter bundle is unavailable.");
+		return false;
+	}
+	if (!Bundle->IsCombatRuntimeReady())
+	{
+		OutError = FString::Printf(TEXT("P4 Beta6 Chapter %d is blocked: %s"),
+			Bundle->Chapter.ChapterIndex, *FString::Join(Bundle->RuntimeBlockers, TEXT(" ")));
+		return false;
+	}
+	const int64 ChapterSeed = Beta6ChapterFlow.GetCurrentChapterSeed();
+	if (ChapterSeed < 0 || ChapterSeed > static_cast<int64>(MAX_uint32)
+		|| Bundle->EnemiesById.IsEmpty() || Bundle->WaveSpawns.IsEmpty())
+	{
+		OutError = TEXT("P4 Beta6 chapter seed or combat rows are invalid.");
+		return false;
+	}
+
+	Beta6EnemyCatalog.Reset();
+	Beta6WaveSpawnPlan.Reset();
+	for (const TPair<FName, FNaiwaP4Beta6EnemyRow>& Pair : Bundle->EnemiesById)
+	{
+		const FNaiwaP4Beta6EnemyRow& Source = Pair.Value;
+		if (!Source.bRuntimeTuningConfigured)
+		{
+			OutError = FString::Printf(TEXT("P4 Beta6 enemy '%s' has no runtime tuning."),
+				*Pair.Key.ToString());
+			return false;
+		}
+		FNaiwaP4EnemyRow RuntimeRow;
+		RuntimeRow.BehaviorId = Source.BehaviorId;
+		RuntimeRow.DisplayName = Source.DisplayName;
+		RuntimeRow.MaxHP = Source.MaxHP;
+		RuntimeRow.Damage = Source.Damage;
+		RuntimeRow.MoveSpeed = Source.MoveSpeed;
+		RuntimeRow.AttackRange = Source.AttackRange;
+		RuntimeRow.AttackIntervalSeconds = Source.AttackIntervalSeconds;
+		RuntimeRow.TelegraphSeconds = Source.TelegraphSeconds;
+		RuntimeRow.CollisionRadius = Source.CollisionRadius;
+		RuntimeRow.bFrontShield75 = Source.bFrontShield75;
+		RuntimeRow.AbilityRadius = Source.AbilityRadius;
+		RuntimeRow.AbilityDurationSeconds = Source.AbilityDurationSeconds;
+		RuntimeRow.ProjectileSpeed = Source.ProjectileSpeed;
+		RuntimeRow.SlowMultiplier = Source.SlowMultiplier;
+		RuntimeRow.SlowDurationSeconds = Source.SlowDurationSeconds;
+		RuntimeRow.SummonEnemyId = Source.SummonEnemyId;
+		RuntimeRow.SummonCount = Source.SummonCount;
+		Beta6EnemyCatalog.Add(Pair.Key, RuntimeRow);
+	}
+	for (const FNaiwaP4Beta6WaveSpawnRow& Source : Bundle->WaveSpawns)
+	{
+		if (!Source.bSpawnIntervalConfigured || !Beta6EnemyCatalog.Contains(Source.EnemyTypeId))
+		{
+			OutError = TEXT("P4 Beta6 wave references an unconfigured interval or missing runtime enemy.");
+			return false;
+		}
+		FNaiwaP4WaveSpawnEntry& Entry = Beta6WaveSpawnPlan.AddDefaulted_GetRef();
+		Entry.WaveIndex = Source.WaveIndex;
+		Entry.SpawnOrder = Source.SpawnOrder;
+		Entry.RowId = FName(*FString::Printf(TEXT("beta6_c%d_w%d_o%d_%s"),
+			Source.ChapterIndex, Source.WaveIndex, Source.SpawnOrder, *Source.EnemyTypeId.ToString()));
+		Entry.EnemyTypeId = Source.EnemyTypeId;
+		Entry.Count = Source.Count;
+		Entry.SpawnIntervalTicks = SecondsToTicks(Source.SpawnIntervalSeconds);
+	}
+	Beta6WaveSpawnPlan.Sort([](const FNaiwaP4WaveSpawnEntry& Left, const FNaiwaP4WaveSpawnEntry& Right)
+	{
+		if (Left.WaveIndex != Right.WaveIndex) return Left.WaveIndex < Right.WaveIndex;
+		if (Left.SpawnOrder != Right.SpawnOrder) return Left.SpawnOrder < Right.SpawnOrder;
+		if (Left.EnemyTypeId != Right.EnemyTypeId) return Left.EnemyTypeId.LexicalLess(Right.EnemyTypeId);
+		return Left.RowId.LexicalLess(Right.RowId);
+	});
+
+	bBeta6RuntimeActive = true;
+	StartSimulation(static_cast<uint32>(ChapterSeed));
+	if (Beta6WaveSpawnPlan.IsEmpty() || Beta6EnemyCatalog.IsEmpty() || !FindPlayerEntity())
+	{
+		bBeta6RuntimeActive = false;
+		StopSimulation();
+		OutError = TEXT("P4 Beta6 fixed-step arena rejected the configured chapter rows.");
+		return false;
+	}
+	if (FNaiwaP4EntityState* Player = FindPlayerEntity())
+	{
+		Player->EnergyHundredths = PlayerEnergyFullHundredths;
+	}
+	State.TotalWaveCount = Beta6WaveSpawnPlan.Last().WaveIndex;
+	for (const FNaiwaP4WaveSpawnEntry& Entry : Beta6WaveSpawnPlan)
+	{
+		State.TotalWaveEnemyCount += Entry.Count;
+	}
+	BeginWave(1);
+	if (!RestoreBeta6UpgradeSequence(Progress, OutError))
+	{
+		bBeta6RuntimeActive = false;
+		StopSimulation();
+		return false;
+	}
+	EmitCombatEvent(TEXT("beta6_chapter_started"), INDEX_NONE, INDEX_NONE,
+		FVector2D(Bundle->Chapter.ChapterIndex, Bundle->Chapter.WaveCount));
+	return true;
+}
+
+bool UNaiwaP4ArenaSubsystem::RestoreBeta6UpgradeSequence(UNaiwaP4ProgressSubsystem& Progress,
+	FString& OutError)
+{
+	bRestoringBeta6Upgrades = true;
+	for (const FName CardId : Progress.GetAcquiredUpgradeCardIds())
+	{
+		State.PendingUpgradeChoices = 1;
+		State.CurrentUpgradeOfferCardIds = { CardId };
+		if (!ConfirmUpgradeChoice(CardId, OutError))
+		{
+			bRestoringBeta6Upgrades = false;
+			State.PendingUpgradeChoices = 0;
+			State.CurrentUpgradeOfferCardIds.Reset();
+			return false;
+		}
+	}
+	bRestoringBeta6Upgrades = false;
+	OutError.Reset();
+	return true;
 }
 
 void UNaiwaP4ArenaSubsystem::StopSimulation()
@@ -746,6 +1080,23 @@ bool UNaiwaP4ArenaSubsystem::ConfirmUpgradeChoice(const FName CardId, FString& O
 		OutError = TEXT("The player or selected upgrade row is unavailable.");
 		return false;
 	}
+	const bool bSupportedEffect = Row->EffectKind == TEXT("projectile_bounce")
+		|| Row->EffectKind == TEXT("charge_capacity_recovery")
+		|| Row->EffectKind == TEXT("laugh_energy_on_hit")
+		|| Row->EffectKind == TEXT("melee_damage");
+	if (!bSupportedEffect)
+	{
+		OutError = FString::Printf(TEXT("Upgrade effect '%s' is not implemented yet."), *Row->EffectKind.ToString());
+		return false;
+	}
+	if (bBeta6RuntimeActive && !bRestoringBeta6Upgrades)
+	{
+		UNaiwaP4ProgressSubsystem* Progress = GetBeta6ProgressSubsystem();
+		if (!Progress || !Beta6ChapterFlow.RecordAcquiredUpgrade(*Progress, CardId, OutError))
+		{
+			return false;
+		}
+	}
 
 	const int32 NewRank = GetUpgradeCardRank(CardId) + 1;
 	if (Row->EffectKind == TEXT("projectile_bounce"))
@@ -813,9 +1164,11 @@ void UNaiwaP4ArenaSubsystem::AdvanceFixedStep()
 	}
 
 	LastConsumedPlayerCommand = InputBuffer.ConsumeForFixedStep();
+	PendingSimulatedEntities.Reset();
 	AdvancePlayerMovement(LastConsumedPlayerCommand);
 	AdvancePlayerAutoFire();
 	AdvanceEnemyBrains();
+	FlushPendingSimulatedEntities();
 	AdvanceProjectiles();
 	ResolvePendingDamage(LastConsumedPlayerCommand.bBlockHeld);
 	TickCombatTimers();
@@ -906,7 +1259,8 @@ void UNaiwaP4ArenaSubsystem::AdvancePlayerMovement(const FNaiwaP4InputCommand& C
 		return;
 	}
 
-	const double SpeedScale = Command.bBlockHeld ? PlayerBlockMoveSpeedScale : 1.0;
+	const double SpeedScale = (Command.bBlockHeld ? PlayerBlockMoveSpeedScale : 1.0)
+		* (Player->SlowTicksRemaining > 0 ? FMath::Clamp(Player->SlowMultiplier, 0.0f, 1.0f) : 1.0);
 	const FVector2D RequestedVelocity(
 		Command.MoveAxis.X * PlayerWalkSpeed * SpeedScale,
 		Command.MoveAxis.Y * PlayerWalkSpeed * PlayerDepthSpeedScale * SpeedScale);
@@ -1056,6 +1410,11 @@ void UNaiwaP4ArenaSubsystem::AdvanceEnemyBrains()
 			AdvanceBossBrain(Enemy, *Player);
 			continue;
 		}
+		if (bBeta6RuntimeActive && Enemy.bWaveEnemy)
+		{
+			AdvanceBeta6EnemyBrain(Enemy, *Player);
+			continue;
+		}
 
 	const FVector2D ToPlayer = Player->Position - Enemy.Position;
 		const double DistanceSquared = ToPlayer.SizeSquared();
@@ -1122,9 +1481,227 @@ void UNaiwaP4ArenaSubsystem::AdvanceEnemyBrains()
 	}
 }
 
+void UNaiwaP4ArenaSubsystem::AdvanceBeta6EnemyBrain(FNaiwaP4EntityState& Enemy,
+	const FNaiwaP4EntityState& Player)
+{
+	const FName Behavior = Enemy.BehaviorId;
+	const FVector2D ToPlayer = Player.Position - Enemy.Position;
+	const double DistanceSquared = ToPlayer.SizeSquared();
+	const int32 AttackIntervalTicks = FMath::Max(1, Enemy.EnemyAttackIntervalTicks);
+	const FVector2D ToPlayerDirection = ToPlayer.GetSafeNormal();
+	auto SetCooldown = [&Enemy, AttackIntervalTicks]()
+	{
+		Enemy.EnemyAttackCooldownTicksRemaining = AttackIntervalTicks;
+		Enemy.EnemySpecialActionTicksRemaining = 0;
+		Enemy.bEnemySpecialActionActive = false;
+		Enemy.HeightZ = 0.0f;
+		Enemy.Velocity = FVector2D::ZeroVector;
+	};
+	auto ApplyPlayerAreaDamage = [this, &Enemy, &Player](const float Radius)
+	{
+		const double HitRadius = static_cast<double>(FMath::Max(0.0f, Radius)) + Player.CollisionRadius;
+		if (FVector2D::DistSquared(Enemy.Position, Player.Position) <= FMath::Square(HitRadius))
+		{
+			QueueDamage(Enemy.EntityId, Player.EntityId, Enemy.EnemyDamage, Enemy.Position);
+			EmitCombatEvent(TEXT("beta6_enemy_attack_hit"), Enemy.EntityId, Player.EntityId, Player.Position);
+		}
+		else
+		{
+			EmitCombatEvent(TEXT("beta6_enemy_attack_missed"), Enemy.EntityId, Player.EntityId, Enemy.Position);
+		}
+	};
+
+	if (Enemy.bEnemySpecialActionActive && Enemy.EnemySpecialActionTicksRemaining > 0)
+	{
+		if (Behavior == FName(TEXT("leap_slam")))
+		{
+			const int32 DurationTicks = FMath::Max(1, Enemy.EnemySpecialActionDurationTicks);
+			const int32 ElapsedTicks = DurationTicks - Enemy.EnemySpecialActionTicksRemaining + 1;
+			const double Alpha = FMath::Clamp(static_cast<double>(ElapsedTicks) / DurationTicks, 0.0, 1.0);
+			const FVector2D PreviousPosition = Enemy.Position;
+			Enemy.Position = FMath::Lerp(Enemy.EnemySpecialStartPosition, Enemy.EnemySpecialTargetPosition, Alpha);
+			Enemy.Position.X = FMath::Clamp(Enemy.Position.X, 0.0, LogicalArenaWidth);
+			Enemy.Position.Y = FMath::Clamp(Enemy.Position.Y, 0.0, LogicalArenaDepth);
+			Enemy.HeightZ = static_cast<float>(FMath::Sin(Alpha * PI) * 86.0);
+			Enemy.Velocity = (Enemy.Position - PreviousPosition) / FixedStepSeconds;
+			Enemy.ActionCue = ENaiwaP4ActionCue::Dash;
+			Enemy.Facing = ENaiwaP4Facing::Side;
+			Enemy.bFacingRight = Enemy.EnemySpecialTargetPosition.X >= Enemy.EnemySpecialStartPosition.X;
+			--Enemy.EnemySpecialActionTicksRemaining;
+			if (Enemy.EnemySpecialActionTicksRemaining == 0)
+			{
+				Enemy.HeightZ = 0.0f;
+				ApplyPlayerAreaDamage(Enemy.EnemyAbilityRadius);
+				EmitCombatEvent(TEXT("beta6_enemy_leap_landed"), Enemy.EntityId, Player.EntityId, Enemy.Position);
+				SetCooldown();
+			}
+			return;
+		}
+		if (Behavior == FName(TEXT("rolling_fuse_bomb")))
+		{
+			const FVector2D Direction = (Enemy.EnemySpecialTargetPosition - Enemy.Position).GetSafeNormal();
+			const FVector2D StartPosition = Enemy.Position;
+			Enemy.Position.X = FMath::Clamp(Enemy.Position.X + Direction.X * Enemy.EnemyMoveSpeed * FixedStepSeconds,
+				0.0, LogicalArenaWidth);
+			Enemy.Position.Y = FMath::Clamp(Enemy.Position.Y + Direction.Y * Enemy.EnemyMoveSpeed
+				* PlayerDepthSpeedScale * FixedStepSeconds, 0.0, LogicalArenaDepth);
+			Enemy.Velocity = (Enemy.Position - StartPosition) / FixedStepSeconds;
+			Enemy.Facing = ENaiwaP4Facing::Side;
+			Enemy.bFacingRight = Direction.X >= 0.0;
+			Enemy.ActionCue = ENaiwaP4ActionCue::Move;
+			++Enemy.ActionTick;
+			--Enemy.EnemySpecialActionTicksRemaining;
+			if (Enemy.EnemySpecialActionTicksRemaining == 0)
+			{
+				ApplyPlayerAreaDamage(Enemy.EnemyAbilityRadius);
+				Enemy.bAlive = false;
+				++State.DefeatedWaveEnemyCount;
+				EmitCombatEvent(TEXT("beta6_enemy_fuse_exploded"), Enemy.EntityId, Player.EntityId, Enemy.Position);
+			}
+			return;
+		}
+	}
+
+	if (Enemy.EnemyTelegraphTicksRemaining > 0)
+	{
+		--Enemy.EnemyTelegraphTicksRemaining;
+		Enemy.ActionCue = ENaiwaP4ActionCue::Attack;
+		Enemy.Velocity = FVector2D::ZeroVector;
+		if (Enemy.EnemyTelegraphTicksRemaining > 0)
+		{
+			return;
+		}
+
+		if (Behavior == FName(TEXT("ranged_line")) || Behavior == FName(TEXT("slow_projectile_40pct_3s"))
+			|| Behavior == FName(TEXT("lob_projectile")))
+		{
+			QueueEnemyProjectile(Enemy.EntityId, Enemy.Position, Enemy.EnemySpecialTargetPosition,
+				Enemy.EnemyProjectileSpeed, Enemy.EnemyDamage,
+				Behavior == FName(TEXT("lob_projectile")) ? Enemy.EnemyAbilityRadius : 0.0f,
+				Behavior == FName(TEXT("slow_projectile_40pct_3s")) ? Enemy.EnemySlowMultiplier : 1.0f,
+				Behavior == FName(TEXT("slow_projectile_40pct_3s")) ? Enemy.EnemySlowDurationTicks : 0);
+			EmitCombatEvent(TEXT("beta6_enemy_projectile_fired"), Enemy.EntityId, Player.EntityId, Enemy.Position);
+			SetCooldown();
+			return;
+		}
+		if (Behavior == FName(TEXT("suicide_proximity")))
+		{
+			ApplyPlayerAreaDamage(Enemy.EnemyAbilityRadius);
+			Enemy.bAlive = false;
+			++State.DefeatedWaveEnemyCount;
+			EmitCombatEvent(TEXT("beta6_enemy_fuse_exploded"), Enemy.EntityId, Player.EntityId, Enemy.Position);
+			return;
+		}
+		if (Behavior == FName(TEXT("leap_slam")))
+		{
+			Enemy.EnemySpecialStartPosition = Enemy.Position;
+			Enemy.EnemySpecialTargetPosition = FVector2D(
+				FMath::Clamp(Enemy.EnemySpecialTargetPosition.X, 0.0, LogicalArenaWidth),
+				FMath::Clamp(Enemy.EnemySpecialTargetPosition.Y, 0.0, LogicalArenaDepth));
+			Enemy.EnemySpecialActionDurationTicks = FMath::Max(1, Enemy.EnemyAbilityDurationTicks);
+			Enemy.EnemySpecialActionTicksRemaining = Enemy.EnemySpecialActionDurationTicks;
+			Enemy.bEnemySpecialActionActive = true;
+			Enemy.ActionTick = 0;
+			EmitCombatEvent(TEXT("beta6_enemy_leap_started"), Enemy.EntityId, Player.EntityId,
+				Enemy.EnemySpecialTargetPosition);
+			return;
+		}
+		if (Behavior == FName(TEXT("patrol_then_call_reinforce")))
+		{
+			QueueSummonedEnemies({ Enemy.EnemySummonId }, Enemy.EnemySummonCount,
+				Enemy.Position, Enemy.SpawnWaveIndex, 4);
+			EmitCombatEvent(TEXT("beta6_enemy_called_reinforcements"), Enemy.EntityId,
+				Player.EntityId, Enemy.Position);
+			SetCooldown();
+			return;
+		}
+		if (Behavior == FName(TEXT("rolling_fuse_bomb")))
+		{
+			Enemy.EnemySpecialTargetPosition = Player.Position;
+			Enemy.EnemySpecialActionDurationTicks = FMath::Max(1,
+				Enemy.EnemyTelegraphDurationTicks > 0 ? Enemy.EnemyTelegraphDurationTicks : Enemy.EnemyAbilityDurationTicks);
+			Enemy.EnemySpecialActionTicksRemaining = Enemy.EnemySpecialActionDurationTicks;
+			Enemy.bEnemySpecialActionActive = true;
+			Enemy.ActionCue = ENaiwaP4ActionCue::Move;
+			return;
+		}
+		ApplyPlayerAreaDamage(Enemy.EnemyAbilityRadius);
+		EmitCombatEvent(TEXT("beta6_enemy_attack_resolved"), Enemy.EntityId, Player.EntityId, Enemy.Position);
+		SetCooldown();
+		return;
+	}
+
+	const double AttackRangeSquared = FMath::Square(static_cast<double>(Enemy.EnemyAttackRange));
+	if (DistanceSquared <= AttackRangeSquared)
+	{
+		Enemy.Facing = ENaiwaP4Facing::Side;
+		Enemy.bFacingRight = ToPlayer.X >= 0.0;
+		Enemy.Velocity = FVector2D::ZeroVector;
+		if (Enemy.EnemyAttackCooldownTicksRemaining <= 0)
+		{
+			Enemy.EnemySpecialTargetPosition = Player.Position;
+			Enemy.EnemyTelegraphTicksRemaining = FMath::Max(1, Enemy.EnemyTelegraphDurationTicks);
+			Enemy.ActionCue = ENaiwaP4ActionCue::Attack;
+			Enemy.ActionTick = 0;
+			EmitCombatEvent(TEXT("beta6_enemy_telegraph"), Enemy.EntityId, Player.EntityId,
+				Behavior == FName(TEXT("ranged_line")) ? Enemy.EnemySpecialTargetPosition : Enemy.Position);
+			if (Behavior == FName(TEXT("rolling_fuse_bomb")))
+			{
+				Enemy.bEnemySpecialActionActive = true;
+				Enemy.EnemySpecialActionDurationTicks = Enemy.EnemyTelegraphTicksRemaining;
+				Enemy.EnemySpecialActionTicksRemaining = Enemy.EnemyTelegraphTicksRemaining;
+				Enemy.EnemyTelegraphTicksRemaining = 0;
+				EmitCombatEvent(TEXT("beta6_enemy_roll_started"), Enemy.EntityId, Player.EntityId, Player.Position);
+			}
+		}
+		return;
+	}
+
+	if (Behavior == FName(TEXT("ranged_line")) || Behavior == FName(TEXT("slow_projectile_40pct_3s"))
+		|| Behavior == FName(TEXT("lob_projectile")) || Behavior == FName(TEXT("disguise_ambush")))
+	{
+		Enemy.Velocity = FVector2D::ZeroVector;
+		Enemy.ActionCue = ENaiwaP4ActionCue::Idle;
+		return;
+	}
+	if (Behavior == FName(TEXT("patrol_then_call_reinforce")))
+	{
+		const int32 PatrolLegTicks = SecondsToTicks(1.4);
+		const bool bMoveRight = ((State.CurrentTick / PatrolLegTicks) & 1) == 0;
+		const double PatrolTargetX = FMath::Clamp(Enemy.EnemySpawnPosition.X + (bMoveRight ? 90.0 : -90.0),
+			0.0, LogicalArenaWidth);
+		const double DirectionX = FMath::Sign(PatrolTargetX - Enemy.Position.X);
+		const FVector2D StartPosition = Enemy.Position;
+		Enemy.Position.X = FMath::Clamp(Enemy.Position.X + DirectionX * Enemy.EnemyMoveSpeed * FixedStepSeconds,
+			0.0, LogicalArenaWidth);
+		Enemy.Velocity = (Enemy.Position - StartPosition) / FixedStepSeconds;
+		Enemy.Facing = ENaiwaP4Facing::Side;
+		Enemy.bFacingRight = DirectionX >= 0.0;
+		Enemy.ActionCue = ENaiwaP4ActionCue::Move;
+		++Enemy.ActionTick;
+		return;
+	}
+
+	const FVector2D Velocity(ToPlayerDirection.X * Enemy.EnemyMoveSpeed,
+		ToPlayerDirection.Y * Enemy.EnemyMoveSpeed * PlayerDepthSpeedScale);
+	const FVector2D StartPosition = Enemy.Position;
+	Enemy.Position.X = FMath::Clamp(Enemy.Position.X + Velocity.X * FixedStepSeconds, 0.0, LogicalArenaWidth);
+	Enemy.Position.Y = FMath::Clamp(Enemy.Position.Y + Velocity.Y * FixedStepSeconds, 0.0, LogicalArenaDepth);
+	Enemy.Velocity = (Enemy.Position - StartPosition) / FixedStepSeconds;
+	Enemy.Facing = ENaiwaP4Facing::Side;
+	Enemy.bFacingRight = ToPlayer.X >= 0.0;
+	Enemy.ActionCue = ENaiwaP4ActionCue::Move;
+	++Enemy.ActionTick;
+}
+
 void UNaiwaP4ArenaSubsystem::AdvanceBossBrain(FNaiwaP4EntityState& Boss,
 	const FNaiwaP4EntityState& Player)
 {
+	if (bBeta6RuntimeActive && !Boss.BossId.IsNone())
+	{
+		AdvanceBeta6BossBrain(Boss, Player);
+		return;
+	}
 	const FVector2D ToPlayer = Player.Position - Boss.Position;
 	const double DistanceSquared = ToPlayer.SizeSquared();
 	if (Boss.BossChargeTicksRemaining > 0)
@@ -1256,16 +1833,313 @@ void UNaiwaP4ArenaSubsystem::AdvanceBossBrain(FNaiwaP4EntityState& Boss,
 	++Boss.ActionTick;
 }
 
+void UNaiwaP4ArenaSubsystem::BeginBeta6BossAttack(FNaiwaP4EntityState& Boss,
+	const FNaiwaP4EntityState& Player, const FNaiwaP4Beta6BossAttackRow& Attack)
+{
+	Boss.BossActiveAttackKind = Attack.DesignActionKind;
+	Boss.BossActiveAttackGeometry = Attack.HitboxGeometry;
+	Boss.BossActiveAttackExtentX = Attack.HitboxExtentX;
+	Boss.BossActiveAttackExtentY = Attack.HitboxExtentY;
+	Boss.BossActiveAttackDamage = Attack.Damage;
+	Boss.BossActiveAttackDamageHit2 = Attack.DamageHit2;
+	Boss.BossActiveAttackDamageHit3 = Attack.DamageHit3;
+	Boss.BossActiveAttackHitCount = Attack.HitCount;
+	Boss.BossActiveAttackPhaseTwoHitCount = Attack.PhaseTwoHitCount;
+	Boss.BossActiveAttackProjectileCount = Attack.HitCount;
+	Boss.BossActiveAttackHitIntervalSeconds = Attack.HitIntervalSeconds;
+	Boss.BossActiveAttackProjectileSpeed = Attack.ProjectileSpeed;
+	Boss.BossActiveAttackMoveSpeed = Attack.MoveSpeed;
+	Boss.BossActiveAttackContactIntervalSeconds = Attack.ContactDamageIntervalSeconds;
+	Boss.BossActiveAttackBreakWindowSeconds = Attack.BreakWindowSeconds;
+	Boss.BossActiveAttackBreakDamageMultiplier = Attack.BreakDamageMultiplier;
+	Boss.BossActiveAttackBackDamageMultiplier = Attack.BackDamageMultiplier;
+	Boss.BossActiveSummonEnemyIds = Attack.SummonEnemyIds;
+	Boss.BossActiveSummonCount = Attack.SummonCount;
+	Boss.BossAttackTicksRemaining = SecondsToTicks(Attack.ActiveDurationSeconds);
+	Boss.BossAttackHitTicksRemaining = 0;
+	Boss.BossAttackHitIndex = 0;
+	Boss.BossContactDamageTicksRemaining = 0;
+	Boss.BossAttackDirection = (Boss.BossLockedTargetPosition - Boss.Position).GetSafeNormal();
+	if (Boss.BossAttackDirection.IsNearlyZero())
+	{
+		Boss.BossAttackDirection = FVector2D(Boss.bFacingRight ? 1.0 : -1.0, 0.0);
+	}
+	Boss.BossAttackStartPosition = Boss.Position;
+	Boss.bBossAttackHitPlayer = false;
+	Boss.bBossAttackHitWall = false;
+	Boss.bBossShieldActive = Attack.DesignActionKind == FName(TEXT("advancing_shield"));
+	Boss.ActionCue = (Attack.DesignActionKind == FName(TEXT("charge"))
+		|| Attack.DesignActionKind == FName(TEXT("advancing_shield")))
+		? ENaiwaP4ActionCue::Dash : ENaiwaP4ActionCue::Attack;
+	Boss.ActionTick = 0;
+	EmitCombatEvent(TEXT("beta6_boss_attack_started"), Boss.EntityId, Player.EntityId,
+		Boss.BossLockedTargetPosition);
+
+	if (Attack.DesignActionKind == FName(TEXT("summon")))
+	{
+		QueueSummonedEnemies(Boss.BossActiveSummonEnemyIds, Boss.BossActiveSummonCount,
+			Boss.Position, State.CurrentWaveIndex, 4);
+		EmitCombatEvent(TEXT("beta6_boss_summoned_enemies"), Boss.EntityId, Player.EntityId, Boss.Position);
+	}
+	else if (Attack.DesignActionKind == FName(TEXT("ground_projectile")))
+	{
+		const int32 ProjectileCount = Boss.BossPhase >= 2
+			? Boss.BossActiveAttackPhaseTwoHitCount : Boss.BossActiveAttackHitCount;
+		const int32 Damage = FMath::Max(1, FMath::RoundToInt(
+			Boss.BossActiveAttackDamage * Boss.BossDamageMultiplier));
+		for (int32 Index = 0; Index < ProjectileCount; ++Index)
+		{
+			const double Spread = (static_cast<double>(Index) - (ProjectileCount - 1) * 0.5) * 0.12;
+			QueueEnemyProjectile(Boss.EntityId, Boss.Position,
+				Boss.Position + RotateDirection(Boss.BossAttackDirection, Spread) * 690.0,
+				Boss.BossActiveAttackProjectileSpeed, Damage);
+		}
+		Boss.BossAttackHitIndex = ProjectileCount;
+	}
+}
+
+void UNaiwaP4ArenaSubsystem::AdvanceBeta6BossBrain(FNaiwaP4EntityState& Boss,
+	const FNaiwaP4EntityState& Player)
+{
+	const FNaiwaP4Beta6ChapterBundle* Bundle = Beta6ChapterFlow.GetCurrentChapter();
+	if (!Bundle || Bundle->Boss.BossId != Boss.BossId)
+	{
+		Boss.Velocity = FVector2D::ZeroVector;
+		return;
+	}
+	if (Boss.BossActionStunTicksRemaining > 0)
+	{
+		Boss.Velocity = FVector2D::ZeroVector;
+		Boss.ActionCue = ENaiwaP4ActionCue::Hit;
+		return;
+	}
+
+	const FVector2D ToPlayer = Player.Position - Boss.Position;
+	const double DistanceSquared = ToPlayer.SizeSquared();
+	if (Boss.EnemyTelegraphTicksRemaining > 0)
+	{
+		--Boss.EnemyTelegraphTicksRemaining;
+		Boss.Velocity = FVector2D::ZeroVector;
+		Boss.ActionCue = ENaiwaP4ActionCue::Attack;
+		if (Boss.EnemyTelegraphTicksRemaining == 0)
+		{
+			const FNaiwaP4Beta6BossAttackRow* Attack = Bundle->FindBossAttack(Boss.CurrentBossAttackId);
+			if (!Attack)
+			{
+				UE_LOG(LogTemp, Error, TEXT("P4 Beta6 Boss '%s' lost attack row '%s'."),
+					*Boss.BossId.ToString(), *Boss.CurrentBossAttackId.ToString());
+				Boss.CurrentBossAttackId = NAME_None;
+				Boss.EnemyAttackCooldownTicksRemaining = SecondsToTicks(1.0);
+				return;
+			}
+			BeginBeta6BossAttack(Boss, Player, *Attack);
+		}
+		return;
+	}
+
+	if (Boss.BossAttackTicksRemaining > 0 && !Boss.CurrentBossAttackId.IsNone())
+	{
+		const FName Kind = Boss.BossActiveAttackKind;
+		const FVector2D PreviousPosition = Boss.Position;
+		if (Kind == FName(TEXT("charge")) || Kind == FName(TEXT("advancing_shield")))
+		{
+			const FVector2D Movement(Boss.BossAttackDirection.X * Boss.BossActiveAttackMoveSpeed,
+				Boss.BossAttackDirection.Y * Boss.BossActiveAttackMoveSpeed * PlayerDepthSpeedScale);
+			Boss.Position.X = FMath::Clamp(Boss.Position.X + Movement.X * FixedStepSeconds,
+				Boss.CollisionRadius, LogicalArenaWidth - Boss.CollisionRadius);
+			Boss.Position.Y = FMath::Clamp(Boss.Position.Y + Movement.Y * FixedStepSeconds,
+				Boss.CollisionRadius, LogicalArenaDepth - Boss.CollisionRadius);
+			Boss.Velocity = (Boss.Position - PreviousPosition) / FixedStepSeconds;
+			Boss.Facing = ENaiwaP4Facing::Side;
+			Boss.bFacingRight = Boss.BossAttackDirection.X >= 0.0;
+			Boss.ActionCue = ENaiwaP4ActionCue::Dash;
+			++Boss.ActionTick;
+			const double WallMargin = Boss.CollisionRadius + 1.0;
+			Boss.bBossAttackHitWall = Boss.bBossAttackHitWall
+				|| Boss.Position.X <= WallMargin || Boss.Position.X >= LogicalArenaWidth - WallMargin
+				|| Boss.Position.Y <= WallMargin || Boss.Position.Y >= LogicalArenaDepth - WallMargin;
+
+			const bool bContact = Kind == FName(TEXT("charge"))
+				? DistanceSquaredToSegment(Player.Position, PreviousPosition, Boss.Position)
+					<= FMath::Square(static_cast<double>(Boss.CollisionRadius + Player.CollisionRadius))
+				: IsInsideBossHitbox(Player.Position, Boss.Position, Boss.BossAttackDirection,
+					Boss.BossActiveAttackGeometry, Boss.BossActiveAttackExtentX,
+					Boss.BossActiveAttackExtentY, Player.CollisionRadius);
+		if (bContact && Boss.BossContactDamageTicksRemaining <= 0)
+		{
+			const int32 AppliedDamage = FMath::Max(1, FMath::RoundToInt(
+				Boss.BossActiveAttackDamage * Boss.BossDamageMultiplier));
+			QueueDamage(Boss.EntityId, Player.EntityId, AppliedDamage, Boss.Position);
+			Boss.bBossAttackHitPlayer = true;
+			Boss.BossContactDamageTicksRemaining = Kind == FName(TEXT("charge"))
+				? Boss.BossAttackTicksRemaining
+				: FMath::Max(1, SecondsToTicks(Boss.BossActiveAttackContactIntervalSeconds));
+			EmitCombatEvent(TEXT("beta6_boss_attack_hit"), Boss.EntityId, Player.EntityId, Player.Position);
+		}
+	}
+		else if (Kind == FName(TEXT("rotating_area")))
+		{
+			const FVector2D Direction = ToPlayer.GetSafeNormal();
+			const FVector2D Movement(Direction.X * Boss.BossActiveAttackMoveSpeed,
+				Direction.Y * Boss.BossActiveAttackMoveSpeed * PlayerDepthSpeedScale);
+			Boss.Position.X = FMath::Clamp(Boss.Position.X + Movement.X * FixedStepSeconds,
+				Boss.CollisionRadius, LogicalArenaWidth - Boss.CollisionRadius);
+			Boss.Position.Y = FMath::Clamp(Boss.Position.Y + Movement.Y * FixedStepSeconds,
+				Boss.CollisionRadius, LogicalArenaDepth - Boss.CollisionRadius);
+			Boss.Velocity = (Boss.Position - PreviousPosition) / FixedStepSeconds;
+			Boss.Facing = ENaiwaP4Facing::Side;
+			Boss.bFacingRight = Direction.X >= 0.0;
+			Boss.ActionCue = ENaiwaP4ActionCue::Move;
+			if (FVector2D::DistSquared(Boss.Position, Player.Position)
+				<= FMath::Square(static_cast<double>(Boss.BossActiveAttackExtentX + Player.CollisionRadius))
+				&& Boss.BossContactDamageTicksRemaining <= 0)
+			{
+				QueueDamage(Boss.EntityId, Player.EntityId,
+					FMath::Max(1, FMath::RoundToInt(Boss.BossActiveAttackDamage * Boss.BossDamageMultiplier)),
+					Boss.Position);
+				Boss.BossContactDamageTicksRemaining = FMath::Max(1,
+					SecondsToTicks(Boss.BossActiveAttackContactIntervalSeconds));
+				EmitCombatEvent(TEXT("beta6_boss_spin_hit"), Boss.EntityId, Player.EntityId, Player.Position);
+			}
+		}
+		else if (Kind == FName(TEXT("melee_strike"))
+			|| Kind == FName(TEXT("ground_projectile")))
+		{
+			if (Boss.BossAttackHitIndex < Boss.BossActiveAttackHitCount
+				&& Boss.BossAttackHitTicksRemaining <= 0)
+			{
+				const int32 HitIndex = Boss.BossAttackHitIndex;
+				const int32 BaseDamage = HitIndex == 1 ? Boss.BossActiveAttackDamageHit2
+					: HitIndex == 2 ? Boss.BossActiveAttackDamageHit3 : Boss.BossActiveAttackDamage;
+				if (Kind == FName(TEXT("ground_projectile")))
+				{
+					const double Spread = (static_cast<double>(HitIndex) - (Boss.BossActiveAttackHitCount - 1) * 0.5) * 0.12;
+					QueueEnemyProjectile(Boss.EntityId, Boss.Position,
+						Boss.Position + RotateDirection(Boss.BossAttackDirection, Spread) * 690.0,
+						Boss.BossActiveAttackProjectileSpeed,
+						FMath::Max(1, FMath::RoundToInt(BaseDamage * Boss.BossDamageMultiplier)));
+				}
+				else if (IsInsideBossHitbox(Player.Position, Boss.Position, Boss.BossAttackDirection,
+					Boss.BossActiveAttackGeometry, Boss.BossActiveAttackExtentX,
+					Boss.BossActiveAttackExtentY, Player.CollisionRadius))
+				{
+					QueueDamage(Boss.EntityId, Player.EntityId,
+						FMath::Max(1, FMath::RoundToInt(BaseDamage * Boss.BossDamageMultiplier)), Boss.Position);
+					EmitCombatEvent(TEXT("beta6_boss_attack_hit"), Boss.EntityId, Player.EntityId, Player.Position);
+				}
+				else
+				{
+					EmitCombatEvent(TEXT("beta6_boss_attack_missed"), Boss.EntityId, Player.EntityId, Boss.Position);
+				}
+				++Boss.BossAttackHitIndex;
+				Boss.BossAttackHitTicksRemaining = FMath::Max(1,
+					SecondsToTicks(Boss.BossActiveAttackHitIntervalSeconds));
+			}
+			else if (Boss.BossAttackHitTicksRemaining > 0)
+			{
+				--Boss.BossAttackHitTicksRemaining;
+			}
+			Boss.ActionCue = ENaiwaP4ActionCue::Attack;
+			Boss.Velocity = FVector2D::ZeroVector;
+		}
+		else
+		{
+			Boss.ActionCue = ENaiwaP4ActionCue::Attack;
+			Boss.Velocity = FVector2D::ZeroVector;
+		}
+
+		--Boss.BossAttackTicksRemaining;
+		if (Boss.BossAttackTicksRemaining <= 0)
+		{
+			const bool bChargeHitWall = Kind == FName(TEXT("charge")) && Boss.bBossAttackHitWall;
+			Boss.bBossShieldActive = false;
+			if (Boss.BossActiveAttackBreakWindowSeconds > 0.0f
+				&& (Kind != FName(TEXT("charge")) || bChargeHitWall))
+			{
+				Boss.BossBreakWindowTicksRemaining = SecondsToTicks(Boss.BossActiveAttackBreakWindowSeconds);
+				Boss.BossActionStunTicksRemaining = Boss.BossBreakWindowTicksRemaining;
+				Boss.BossBreakDamageMultiplier = Boss.BossActiveAttackBreakDamageMultiplier;
+				Boss.BossBackDamageMultiplier = Boss.BossActiveAttackBackDamageMultiplier;
+				if (bChargeHitWall)
+				{
+					EmitCombatEvent(TEXT("beta6_boss_charge_wall_impact"), Boss.EntityId, Player.EntityId, Boss.Position);
+					EmitCombatEvent(TEXT("beta6_boss_gag_equipment_drop"), Boss.EntityId, INDEX_NONE, Boss.Position);
+				}
+			}
+			Boss.EnemyAttackCooldownTicksRemaining = SecondsToTicks(
+				Boss.BossActiveAttackRecoverySeconds * Boss.BossAttackIntervalMultiplier);
+			Boss.CurrentBossAttackId = NAME_None;
+			Boss.BossActiveAttackKind = NAME_None;
+			Boss.ActionCue = ENaiwaP4ActionCue::Idle;
+			Boss.Velocity = FVector2D::ZeroVector;
+			EmitCombatEvent(TEXT("beta6_boss_attack_finished"), Boss.EntityId, Player.EntityId, Boss.Position);
+		}
+		return;
+	}
+
+	if (Boss.EnemyAttackCooldownTicksRemaining > 0)
+	{
+		Boss.Velocity = FVector2D::ZeroVector;
+		Boss.ActionCue = ENaiwaP4ActionCue::Idle;
+		return;
+	}
+
+	if (DistanceSquared <= FMath::Square(static_cast<double>(Boss.EnemyAttackRange)))
+	{
+		TArray<const FNaiwaP4Beta6BossAttackRow*> EligibleAttacks;
+		for (const FNaiwaP4Beta6BossAttackRow& Attack : Bundle->BossAttacks)
+		{
+			if (Boss.BossPhase >= 2 || Attack.PhaseId != FName(TEXT("phase2")))
+			{
+				EligibleAttacks.Add(&Attack);
+			}
+		}
+		if (EligibleAttacks.IsEmpty())
+		{
+			Boss.Velocity = FVector2D::ZeroVector;
+			return;
+		}
+		const int32 SequenceIndex = Boss.BossAttackSequenceIndex++ % EligibleAttacks.Num();
+		const FNaiwaP4Beta6BossAttackRow& Attack = *EligibleAttacks[SequenceIndex];
+		Boss.CurrentBossAttackId = Attack.AttackId;
+		Boss.BossLockedTargetPosition = Player.Position;
+		Boss.BossAttackDirection = (Player.Position - Boss.Position).GetSafeNormal();
+		Boss.EnemyTelegraphDurationTicks = SecondsToTicks(Attack.TelegraphSecondsMinimum);
+		Boss.EnemyTelegraphTicksRemaining = Boss.EnemyTelegraphDurationTicks;
+		Boss.ActionCue = ENaiwaP4ActionCue::Attack;
+		Boss.ActionTick = 0;
+		Boss.Velocity = FVector2D::ZeroVector;
+		EmitCombatEvent(TEXT("beta6_boss_attack_telegraph"), Boss.EntityId, Player.EntityId,
+			Boss.BossLockedTargetPosition);
+		return;
+	}
+
+	const FVector2D Direction = ToPlayer.GetSafeNormal();
+	const FVector2D Velocity(Direction.X * Boss.EnemyMoveSpeed,
+		Direction.Y * Boss.EnemyMoveSpeed * PlayerDepthSpeedScale);
+	const FVector2D StartPosition = Boss.Position;
+	Boss.Position.X = FMath::Clamp(Boss.Position.X + Velocity.X * FixedStepSeconds,
+		Boss.CollisionRadius, LogicalArenaWidth - Boss.CollisionRadius);
+	Boss.Position.Y = FMath::Clamp(Boss.Position.Y + Velocity.Y * FixedStepSeconds,
+		Boss.CollisionRadius, LogicalArenaDepth - Boss.CollisionRadius);
+	Boss.Velocity = (Boss.Position - StartPosition) / FixedStepSeconds;
+	Boss.Facing = ENaiwaP4Facing::Side;
+	Boss.bFacingRight = ToPlayer.X >= 0.0;
+	Boss.ActionCue = ENaiwaP4ActionCue::Move;
+	++Boss.ActionTick;
+}
+
 void UNaiwaP4ArenaSubsystem::BeginWave(const int32 WaveIndex)
 {
+	const TArray<FNaiwaP4WaveSpawnEntry>& ActivePlan = GetActiveWaveSpawnPlan();
 	State.CurrentWaveIndex = WaveIndex;
 	State.WaveSpawnEntryIndex = 0;
 	State.WaveSpawnedInEntry = 0;
 	State.WaveSpawnTicksRemaining = 0;
 	State.bWaveSpawningComplete = false;
 	State.bWaveRunComplete = false;
-	while (State.WaveSpawnEntryIndex < WaveSpawnPlan.Num()
-		&& WaveSpawnPlan[State.WaveSpawnEntryIndex].WaveIndex < WaveIndex)
+	while (State.WaveSpawnEntryIndex < ActivePlan.Num()
+		&& ActivePlan[State.WaveSpawnEntryIndex].WaveIndex < WaveIndex)
 	{
 		++State.WaveSpawnEntryIndex;
 	}
@@ -1274,7 +2148,7 @@ void UNaiwaP4ArenaSubsystem::BeginWave(const int32 WaveIndex)
 
 void UNaiwaP4ArenaSubsystem::SpawnWaveEnemy(const FNaiwaP4WaveSpawnEntry& Entry)
 {
-	const FNaiwaP4EnemyRow* EnemyData = EnemyCatalog.Find(Entry.EnemyTypeId);
+	const FNaiwaP4EnemyRow* EnemyData = GetActiveEnemyCatalog().Find(Entry.EnemyTypeId);
 	if (!EnemyData)
 	{
 		return;
@@ -1306,13 +2180,149 @@ void UNaiwaP4ArenaSubsystem::SpawnWaveEnemy(const FNaiwaP4WaveSpawnEntry& Entry)
 	Enemy.EnemyAttackIntervalTicks = SecondsToTicks(EnemyData->AttackIntervalSeconds);
 	Enemy.EnemyTelegraphDurationTicks = SecondsToTicks(EnemyData->TelegraphSeconds);
 	Enemy.EnemyTypeId = Entry.EnemyTypeId;
+	Enemy.BehaviorId = EnemyData->BehaviorId;
 	Enemy.SpawnWaveIndex = Entry.WaveIndex;
 	Enemy.bFrontShield75 = EnemyData->bFrontShield75;
+	Enemy.EnemyAbilityRadius = EnemyData->AbilityRadius;
+	Enemy.EnemyAbilityDurationTicks = SecondsToTicks(EnemyData->AbilityDurationSeconds);
+	Enemy.EnemyProjectileSpeed = EnemyData->ProjectileSpeed;
+	Enemy.EnemySlowMultiplier = EnemyData->SlowMultiplier;
+	Enemy.EnemySlowDurationTicks = SecondsToTicks(EnemyData->SlowDurationSeconds);
+	Enemy.EnemySummonId = EnemyData->SummonEnemyId;
+	Enemy.EnemySummonCount = EnemyData->SummonCount;
 	Enemy.bWaveEnemy = true;
 	Enemy.bFacingRight = SpawnPosition.X < LogicalArenaWidth * 0.5;
 	Enemy.Facing = ENaiwaP4Facing::Side;
 	PreviousPresentationPositions.Add(Enemy.EntityId, Enemy.Position);
 	EmitCombatEvent(TEXT("wave_enemy_spawned"), Enemy.EntityId, INDEX_NONE, SpawnPosition);
+}
+
+void UNaiwaP4ArenaSubsystem::QueueBeta6EnemySpawn(const FName EnemyId,
+	const FVector2D Position, const int32 WaveIndex)
+{
+	const FNaiwaP4EnemyRow* EnemyData = Beta6EnemyCatalog.Find(EnemyId);
+	if (!EnemyData)
+	{
+		return;
+	}
+
+	FNaiwaP4EntityState Enemy;
+	Enemy.EntityId = State.NextEntityId++;
+	Enemy.Kind = ENaiwaP4EntityKind::Enemy;
+	Enemy.Position = FVector2D(FMath::Clamp(Position.X, 0.0, LogicalArenaWidth),
+		FMath::Clamp(Position.Y, 0.0, LogicalArenaDepth));
+	Enemy.EnemySpawnPosition = Enemy.Position;
+	Enemy.HP = EnemyData->MaxHP;
+	Enemy.MaxHP = EnemyData->MaxHP;
+	Enemy.CollisionRadius = EnemyData->CollisionRadius;
+	Enemy.EnemyMoveSpeed = EnemyData->MoveSpeed;
+	Enemy.EnemyAttackRange = EnemyData->AttackRange;
+	Enemy.EnemyDamage = EnemyData->Damage;
+	Enemy.EnemyAttackIntervalTicks = SecondsToTicks(EnemyData->AttackIntervalSeconds);
+	Enemy.EnemyTelegraphDurationTicks = SecondsToTicks(EnemyData->TelegraphSeconds);
+	Enemy.EnemyTypeId = EnemyId;
+	Enemy.BehaviorId = EnemyData->BehaviorId;
+	Enemy.SpawnWaveIndex = WaveIndex;
+	Enemy.bFrontShield75 = EnemyData->bFrontShield75;
+	Enemy.EnemyAbilityRadius = EnemyData->AbilityRadius;
+	Enemy.EnemyAbilityDurationTicks = SecondsToTicks(EnemyData->AbilityDurationSeconds);
+	Enemy.EnemyProjectileSpeed = EnemyData->ProjectileSpeed;
+	Enemy.EnemySlowMultiplier = EnemyData->SlowMultiplier;
+	Enemy.EnemySlowDurationTicks = SecondsToTicks(EnemyData->SlowDurationSeconds);
+	Enemy.EnemySummonId = EnemyData->SummonEnemyId;
+	Enemy.EnemySummonCount = EnemyData->SummonCount;
+	Enemy.bWaveEnemy = true;
+	Enemy.bFacingRight = Enemy.Position.X < LogicalArenaWidth * 0.5;
+	Enemy.Facing = ENaiwaP4Facing::Side;
+	PendingSimulatedEntities.Add(MoveTemp(Enemy));
+}
+
+void UNaiwaP4ArenaSubsystem::QueueSummonedEnemies(const TArray<FName>& EnemyIds,
+	const int32 Count, const FVector2D Origin, const int32 WaveIndex,
+	const int32 MaxConcurrentEnemies)
+{
+	if (EnemyIds.IsEmpty() || Count <= 0)
+	{
+		return;
+	}
+	int32 LiveEnemyCount = 0;
+	for (const FNaiwaP4EntityState& Entity : State.Entities)
+	{
+		if (Entity.bWaveEnemy && Entity.bAlive)
+		{
+			++LiveEnemyCount;
+		}
+	}
+	for (const FNaiwaP4EntityState& Entity : PendingSimulatedEntities)
+	{
+		if (Entity.bWaveEnemy && Entity.bAlive)
+		{
+			++LiveEnemyCount;
+		}
+	}
+	for (int32 Index = 0; Index < Count && LiveEnemyCount < MaxConcurrentEnemies; ++Index)
+	{
+		const FName EnemyId = EnemyIds[Index % EnemyIds.Num()];
+		const uint32 Random = State.NextRandomUInt32();
+		const double Side = (Random & 1u) == 0u ? -1.0 : 1.0;
+		const double Offset = 120.0 + static_cast<double>((Random >> 1) % 81u);
+		const double DepthOffset = static_cast<double>((Random >> 9) % 41u) - 20.0;
+		QueueBeta6EnemySpawn(EnemyId, FVector2D(Origin.X + Side * Offset, Origin.Y + DepthOffset), WaveIndex);
+		if (!PendingSimulatedEntities.IsEmpty())
+		{
+			++LiveEnemyCount;
+		}
+	}
+}
+
+void UNaiwaP4ArenaSubsystem::QueueEnemyProjectile(const int32 OwnerEntityId,
+	const FVector2D Origin, const FVector2D Target, const float Speed, const int32 Damage,
+	const float ExplosionRadius, const float SlowMultiplier, const int32 SlowDurationTicks)
+{
+	if (Speed <= 0.0f || Damage <= 0)
+	{
+		return;
+	}
+	FVector2D Direction = (Target - Origin).GetSafeNormal();
+	if (Direction.IsNearlyZero())
+	{
+		Direction = FVector2D(1.0, 0.0);
+	}
+	FNaiwaP4EntityState Projectile;
+	Projectile.EntityId = State.NextEntityId++;
+	Projectile.Kind = ENaiwaP4EntityKind::Projectile;
+	Projectile.Position = Origin;
+	Projectile.Velocity = Direction * Speed;
+	Projectile.HeightZ = 16.0f;
+	Projectile.CollisionRadius = static_cast<float>(PlayerProjectileRadius);
+	Projectile.ProjectileOwnerEntityId = OwnerEntityId;
+	Projectile.ProjectileDamage = Damage;
+	Projectile.ProjectileLifetimeTicksRemaining = SecondsToTicks(
+	FVector2D::Distance(Origin, Target) / Speed + 0.4);
+	Projectile.bEnemyProjectile = true;
+	Projectile.ProjectileExplosionRadius = ExplosionRadius;
+	Projectile.ProjectileSlowMultiplier = FMath::Clamp(SlowMultiplier, 0.0f, 1.0f);
+	Projectile.ProjectileSlowDurationTicks = FMath::Max(0, SlowDurationTicks);
+	Projectile.bFacingRight = Direction.X >= 0.0;
+	Projectile.Facing = ENaiwaP4Facing::Side;
+	PendingSimulatedEntities.Add(MoveTemp(Projectile));
+}
+
+void UNaiwaP4ArenaSubsystem::FlushPendingSimulatedEntities()
+{
+	for (FNaiwaP4EntityState& Entity : PendingSimulatedEntities)
+	{
+		PreviousPresentationPositions.Add(Entity.EntityId, Entity.Position);
+		const bool bEnemy = Entity.Kind == ENaiwaP4EntityKind::Enemy;
+		const int32 EntityId = Entity.EntityId;
+		const FVector2D Position = Entity.Position;
+		State.Entities.Add(MoveTemp(Entity));
+		if (bEnemy)
+		{
+			EmitCombatEvent(TEXT("wave_enemy_spawned"), EntityId, INDEX_NONE, Position);
+		}
+	}
+	PendingSimulatedEntities.Reset();
 }
 
 void UNaiwaP4ArenaSubsystem::SpawnWaveBoss()
@@ -1357,6 +2367,7 @@ void UNaiwaP4ArenaSubsystem::SpawnWaveBoss()
 
 void UNaiwaP4ArenaSubsystem::AdvanceWaveDirector()
 {
+	const TArray<FNaiwaP4WaveSpawnEntry>& ActivePlan = GetActiveWaveSpawnPlan();
 	if (State.TotalWaveCount <= 0 || State.CurrentWaveIndex <= 0 || State.bWaveRunComplete)
 	{
 		return;
@@ -1374,15 +2385,15 @@ void UNaiwaP4ArenaSubsystem::AdvanceWaveDirector()
 			--State.WaveSpawnTicksRemaining;
 			return;
 		}
-		while (State.WaveSpawnEntryIndex < WaveSpawnPlan.Num()
-			&& WaveSpawnPlan[State.WaveSpawnEntryIndex].WaveIndex < State.CurrentWaveIndex)
+		while (State.WaveSpawnEntryIndex < ActivePlan.Num()
+			&& ActivePlan[State.WaveSpawnEntryIndex].WaveIndex < State.CurrentWaveIndex)
 		{
 			++State.WaveSpawnEntryIndex;
 		}
-		if (State.WaveSpawnEntryIndex < WaveSpawnPlan.Num()
-			&& WaveSpawnPlan[State.WaveSpawnEntryIndex].WaveIndex == State.CurrentWaveIndex)
+		if (State.WaveSpawnEntryIndex < ActivePlan.Num()
+			&& ActivePlan[State.WaveSpawnEntryIndex].WaveIndex == State.CurrentWaveIndex)
 		{
-			const FNaiwaP4WaveSpawnEntry& Entry = WaveSpawnPlan[State.WaveSpawnEntryIndex];
+			const FNaiwaP4WaveSpawnEntry& Entry = ActivePlan[State.WaveSpawnEntryIndex];
 			SpawnWaveEnemy(Entry);
 			++State.WaveSpawnedInEntry;
 			State.WaveSpawnTicksRemaining = Entry.SpawnIntervalTicks;
@@ -1391,8 +2402,8 @@ void UNaiwaP4ArenaSubsystem::AdvanceWaveDirector()
 				++State.WaveSpawnEntryIndex;
 				State.WaveSpawnedInEntry = 0;
 			}
-			if (State.WaveSpawnEntryIndex >= WaveSpawnPlan.Num()
-				|| WaveSpawnPlan[State.WaveSpawnEntryIndex].WaveIndex != State.CurrentWaveIndex)
+			if (State.WaveSpawnEntryIndex >= ActivePlan.Num()
+				|| ActivePlan[State.WaveSpawnEntryIndex].WaveIndex != State.CurrentWaveIndex)
 			{
 				State.bWaveSpawningComplete = true;
 			}
@@ -1412,6 +2423,31 @@ void UNaiwaP4ArenaSubsystem::AdvanceWaveDirector()
 
 	if (State.CurrentWaveIndex >= State.TotalWaveCount)
 	{
+		if (bBeta6RuntimeActive)
+		{
+			EmitCombatEvent(TEXT("wave_cleared"), INDEX_NONE, INDEX_NONE,
+				FVector2D(State.CurrentWaveIndex, State.TotalWaveCount));
+			FString FlowError;
+			if (!Beta6ChapterFlow.NotifyWaveCleared(FlowError))
+			{
+				UE_LOG(LogTemp, Error, TEXT("P4 Beta6 wave settlement failed: %s"), *FlowError);
+				State.bWaveRunComplete = true;
+				State.RunResult = ENaiwaP4RunResult::Defeat;
+				return;
+			}
+			if (Beta6ChapterFlow.GetPhase() != ENaiwaP4Beta6FlowPhase::ChapterSettlement)
+			{
+				UE_LOG(LogTemp, Error, TEXT("P4 Beta6 reached a Boss phase without an Arena Boss executor."));
+				State.bWaveRunComplete = true;
+				State.RunResult = ENaiwaP4RunResult::Defeat;
+				return;
+			}
+			State.bWaveRunComplete = true;
+			State.RunResult = ENaiwaP4RunResult::Victory;
+			EmitCombatEvent(TEXT("beta6_chapter_settlement_ready"), INDEX_NONE, INDEX_NONE,
+				FVector2D(Beta6ChapterFlow.GetCurrentChapterIndex(), State.TotalWaveCount));
+			return;
+		}
 		if (!State.bBossSpawned)
 		{
 			EmitCombatEvent(TEXT("wave_cleared"), INDEX_NONE, INDEX_NONE,
@@ -1422,6 +2458,17 @@ void UNaiwaP4ArenaSubsystem::AdvanceWaveDirector()
 	}
 	EmitCombatEvent(TEXT("wave_cleared"), INDEX_NONE, INDEX_NONE,
 		FVector2D(State.CurrentWaveIndex, State.TotalWaveCount));
+	if (bBeta6RuntimeActive)
+	{
+		FString FlowError;
+		if (!Beta6ChapterFlow.NotifyWaveCleared(FlowError))
+		{
+			UE_LOG(LogTemp, Error, TEXT("P4 Beta6 wave progression failed: %s"), *FlowError);
+			State.bWaveRunComplete = true;
+			State.RunResult = ENaiwaP4RunResult::Defeat;
+			return;
+		}
+	}
 	BeginWave(State.CurrentWaveIndex + 1);
 }
 
@@ -1437,6 +2484,7 @@ void UNaiwaP4ArenaSubsystem::AdvanceProjectiles()
 		const FVector2D StartPosition = Projectile.Position;
 		Projectile.Position += Projectile.Velocity * FixedStepSeconds;
 		const FVector2D EndPosition = Projectile.Position;
+		bool bImpacted = false;
 		for (const FNaiwaP4EntityState& Target : State.Entities)
 		{
 			if (!IsDamageTarget(Target, !Projectile.bEnemyProjectile)
@@ -1449,9 +2497,28 @@ void UNaiwaP4ArenaSubsystem::AdvanceProjectiles()
 			const double HitRadius = static_cast<double>(Target.CollisionRadius + Projectile.CollisionRadius);
 			if (DistanceSquaredToSegment(Target.Position, StartPosition, EndPosition) <= FMath::Square(HitRadius))
 			{
-				QueueDamage(Projectile.ProjectileOwnerEntityId, Target.EntityId,
-					Projectile.ProjectileDamage, EndPosition);
-				EmitCombatEvent(TEXT("projectile_hit"), Projectile.ProjectileOwnerEntityId, Target.EntityId, EndPosition);
+				if (Projectile.ProjectileExplosionRadius > 0.0f)
+				{
+					for (const FNaiwaP4EntityState& AreaTarget : State.Entities)
+					{
+						if (IsDamageTarget(AreaTarget, !Projectile.bEnemyProjectile)
+							&& FVector2D::DistSquared(AreaTarget.Position, EndPosition)
+								<= FMath::Square(static_cast<double>(Projectile.ProjectileExplosionRadius + AreaTarget.CollisionRadius)))
+						{
+							QueueDamage(Projectile.ProjectileOwnerEntityId, AreaTarget.EntityId,
+								Projectile.ProjectileDamage, EndPosition);
+						}
+					}
+					EmitCombatEvent(TEXT("projectile_exploded"), Projectile.ProjectileOwnerEntityId,
+						Target.EntityId, EndPosition);
+				}
+				else
+				{
+					QueueDamage(Projectile.ProjectileOwnerEntityId, Target.EntityId,
+						Projectile.ProjectileDamage, EndPosition);
+					EmitCombatEvent(TEXT("projectile_hit"), Projectile.ProjectileOwnerEntityId,
+						Target.EntityId, EndPosition);
+				}
 				Projectile.ProjectileHitEntityIds.Add(Target.EntityId);
 
 				bool bBounced = false;
@@ -1492,6 +2559,7 @@ void UNaiwaP4ArenaSubsystem::AdvanceProjectiles()
 				if (!bBounced)
 				{
 					Projectile.bAlive = false;
+					bImpacted = true;
 				}
 				break;
 			}
@@ -1500,6 +2568,21 @@ void UNaiwaP4ArenaSubsystem::AdvanceProjectiles()
 		--Projectile.ProjectileLifetimeTicksRemaining;
 		if (Projectile.ProjectileLifetimeTicksRemaining <= 0)
 		{
+			if (Projectile.bAlive && Projectile.ProjectileExplosionRadius > 0.0f && !bImpacted)
+			{
+				for (const FNaiwaP4EntityState& AreaTarget : State.Entities)
+				{
+					if (IsDamageTarget(AreaTarget, !Projectile.bEnemyProjectile)
+						&& FVector2D::DistSquared(AreaTarget.Position, EndPosition)
+							<= FMath::Square(static_cast<double>(Projectile.ProjectileExplosionRadius + AreaTarget.CollisionRadius)))
+					{
+						QueueDamage(Projectile.ProjectileOwnerEntityId, AreaTarget.EntityId,
+							Projectile.ProjectileDamage, EndPosition);
+					}
+				}
+				EmitCombatEvent(TEXT("projectile_exploded"), Projectile.ProjectileOwnerEntityId,
+					INDEX_NONE, EndPosition);
+			}
 			Projectile.bAlive = false;
 		}
 	}
@@ -1913,6 +2996,16 @@ void UNaiwaP4ArenaSubsystem::UsePlayerUltimate(FNaiwaP4EntityState& Player)
 		}
 	}
 	EmitCombatEvent(TEXT("player_ultimate_used"), Player.EntityId, INDEX_NONE, Origin);
+}
+
+const TMap<FName, FNaiwaP4EnemyRow>& UNaiwaP4ArenaSubsystem::GetActiveEnemyCatalog() const
+{
+	return bBeta6RuntimeActive ? Beta6EnemyCatalog : EnemyCatalog;
+}
+
+const TArray<FNaiwaP4WaveSpawnEntry>& UNaiwaP4ArenaSubsystem::GetActiveWaveSpawnPlan() const
+{
+	return bBeta6RuntimeActive ? Beta6WaveSpawnPlan : WaveSpawnPlan;
 }
 
 FNaiwaP4EntityState* UNaiwaP4ArenaSubsystem::FindPlayerEntity()

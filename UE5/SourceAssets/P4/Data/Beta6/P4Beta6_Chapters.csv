@@ -1,0 +1,7 @@
+RowName,ChapterIndex,DisplayName,ChapterType,ThemeId,WaveCount,OrdinaryEnemyCount,BossId,DurationTargetSeconds,DataSource
+chapter_01,1,沙丘晒笑场,wave,theme_desert_noon_native,5,20,,150,accepted_alpha_wave_csv
+chapter_02,2,沙丘补给线,wave,theme_desert_dusk_orange_purple,6,30,,165,chapter_json_v2
+chapter_03,3,沙暴猪圈,wave,theme_desert_sandstorm_desaturated,7,42,,195,chapter_json_v2
+chapter_04,4,奶桶擂台,midboss,theme_desert_dusk_arena,3,9,boss_nai_tong,165,chapter_json_v2
+chapter_05,5,沙丘夜市,wave,theme_desert_night_market_amber,8,56,,210,chapter_json_v2
+chapter_06,6,秋林校场,midboss,theme_forest_autumn_green_to_red,3,12,boss_nai_jia,180,chapter_json_v2

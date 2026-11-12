@@ -1,0 +1,35 @@
+{
+  "schema": "naiwa.p4.beta6.enemy_turnaround_manifest/1",
+  "version": "v01",
+  "created_date": "2026-11-12",
+  "owner_role": "P4 Character Art",
+  "status": "turnaround_owner_approved_static_reference",
+  "asset_id": "P4_BETA6_NAITIAO_TURNAROUND",
+  "character_id": "naitiao",
+  "display_name": "奶跳",
+  "debut_chapter": "chapter_2",
+  "behavior_visual_basis": "leap_slam; silhouette notes: spring legs",
+  "view": "front, right-side profile, back",
+  "asset_kind": "static character turnaround reference; not a runtime sprite or animation atlas",
+  "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_naitiao_turnaround_v01.png",
+  "style_reference_path": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naiding_turnaround_v01_concept.png",
+  "dimensions_px": [
+    2172,
+    724
+  ],
+  "alpha_mode": "straight RGBA",
+  "color_space": "sRGB",
+  "sha256": "BEA99308AF921243CEE35E96B22B1D86BAE933DDA43CF288AE0CFC6BD9D8C8DA",
+  "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_naitiao_turnaround_v01",
+  "ue_import_settings": {
+    "srgb": true,
+    "compression_settings": "TC_DEFAULT",
+    "compression_no_alpha": false,
+    "mip_gen_settings": "TMGS_NO_MIPMAPS",
+    "lod_group": "TEXTUREGROUP_UI",
+    "never_stream": true
+  },
+  "runtime_reference": "none; visual reference only",
+  "owner_approved_date": "2026-11-12",
+  "review_gate": "owner review passed; production sprites/animation proceed after the engineering action matrix is frozen"
+}

@@ -1,0 +1,257 @@
+{
+  "schema": "naiwa.p4.beta6_art_direction_preview/2",
+  "version": "v02",
+  "created_date": "2026-11-11",
+  "status": "owner_approved_concepts_imported_pending_fixed_camera_visual_review",
+  "owner_direction": {
+    "date": "2026-11-11",
+    "decision": "Every chapter must have a clearly distinct scene; enemy and Nai Jia direction approved; redo scene concepts.",
+    "chapter_1": "Keep accepted Alpha A2 baseline",
+    "chapter_2_to_6": "Separate environments; no shared arena architecture or color-only variants"
+  },
+  "generated_with": "built-in image_gen",
+  "assets": [
+    {
+      "asset_id": "P4_BETA6_ENEMY_DIRECTION_01",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_enemy_concepts_v01.png",
+      "version": "v01",
+      "status": "direction_approved_by_owner_2026-11-11",
+      "runtime_reference": "none; concept direction only",
+      "sha256": "3F9F0BEF61720FC0191CF023F3B9C1C0C80CD30FB0E962D0BBC5B5181294B70D"
+    },
+    {
+      "asset_id": "P4_BETA6_BOSS_NAI_JIA_DIRECTION_01",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_boss_nai_jia_v01.png",
+      "version": "v01",
+      "status": "direction_approved_by_owner_2026-11-11",
+      "runtime_reference": "none; concept direction only",
+      "sha256": "0A9FEEFE0522365782F21DA0C3B7F694A5E5C7042FD163CEF180E482DDF0A27C"
+    },
+    {
+      "asset_id": "P4_BETA6_ARENA_COLOR_STUDY_01",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_arena_color_study_v01.png",
+      "version": "v01",
+      "status": "superseded_by_owner_direction_v02",
+      "runtime_reference": "none; historical scene board",
+      "sha256": "7162809B49C6A9205E1FB4CA2C5143F4D459DD41E5BC8804EA8D45631F23D218"
+    },
+    {
+      "asset_id": "P4_BETA6_CH02_SCENE",
+      "owner_role": "P4 Environment Art",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch02_scene_v02.png",
+      "version": "v02",
+      "chapter_id": "chapter_2",
+      "frame_state_view": "single background concept; fixed elevated three-quarter",
+      "duration_seconds": null,
+      "foot_anchor_px": null,
+      "pivot_px": null,
+      "alpha_mode": "opaque RGB",
+      "color_space": "sRGB",
+      "ue_import_settings": null,
+      "owner_approved_date": "2026-11-11",
+      "runtime_reference": "Beta6 review map only; pending fixed-camera visual review and production cleanup",
+      "references": [
+        "UE5/SourceAssets/P4/Environment/Alpha/P4_A2_ArenaScene_v02.png"
+      ],
+      "prompt_summary": "Distinct dusk canyon supply depot on a suspended timber cargo platform; camera/readability only referenced from Alpha.",
+      "sha256": "B45E1038A6A4D82EFCAFC0E30D0FB272FF754D93411D76EFE7217E50FAEC64DC",
+      "status": "owner_approved_concept_imported_pending_fixed_camera_visual_review",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_2_Scene_v02",
+      "ue_material_asset": "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_2_Backdrop_v02",
+      "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_02ScenePreview_v01"
+    },
+    {
+      "asset_id": "P4_BETA6_CH03_SCENE",
+      "owner_role": "P4 Environment Art",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch03_scene_v02.png",
+      "version": "v02",
+      "chapter_id": "chapter_3",
+      "frame_state_view": "single background concept; fixed elevated three-quarter",
+      "duration_seconds": null,
+      "foot_anchor_px": null,
+      "pivot_px": null,
+      "alpha_mode": "opaque RGB",
+      "color_space": "sRGB",
+      "ue_import_settings": null,
+      "owner_approved_date": "2026-11-11",
+      "runtime_reference": "Beta6 review map only; pending fixed-camera visual review and production cleanup",
+      "references": [
+        "UE5/SourceAssets/P4/Environment/Alpha/P4_A2_ArenaScene_v02.png"
+      ],
+      "prompt_summary": "Wind-battered salt-marsh livestock pen with chalk ground and low reed barriers; camera/readability only referenced from Alpha.",
+      "sha256": "5543F79503BB1A8191AA49B73D4E5F8A95A34508A40836508BC1A59C0B788A9D",
+      "status": "owner_approved_concept_imported_pending_fixed_camera_visual_review",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_3_Scene_v02",
+      "ue_material_asset": "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_3_Backdrop_v02",
+      "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_03ScenePreview_v01"
+    },
+    {
+      "asset_id": "P4_BETA6_CH04_SCENE",
+      "owner_role": "P4 Environment Art",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch04_scene_v02.png",
+      "version": "v02",
+      "chapter_id": "chapter_4",
+      "frame_state_view": "single background concept; fixed elevated three-quarter",
+      "duration_seconds": null,
+      "foot_anchor_px": null,
+      "pivot_px": null,
+      "alpha_mode": "opaque RGB",
+      "color_space": "sRGB",
+      "ue_import_settings": null,
+      "owner_approved_date": "2026-11-11",
+      "runtime_reference": "Beta6 review map only; pending fixed-camera visual review and production cleanup",
+      "references": [
+        "UE5/SourceAssets/P4/Environment/Alpha/P4_A2_ArenaScene_v02.png"
+      ],
+      "prompt_summary": "Distinct red-earth circular competition ring with rope border and timber spectator stands.",
+      "sha256": "5B8777671ECE8BD71268A6BF00773E354E3EA1A479CE89D0BF8E3382823E288A",
+      "status": "owner_approved_concept_imported_pending_fixed_camera_visual_review",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_4_Scene_v02",
+      "ue_material_asset": "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_4_Backdrop_v02",
+      "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_04ScenePreview_v01"
+    },
+    {
+      "asset_id": "P4_BETA6_CH05_SCENE",
+      "owner_role": "P4 Environment Art",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch05_scene_v02.png",
+      "version": "v02",
+      "chapter_id": "chapter_5",
+      "frame_state_view": "single background concept; fixed elevated three-quarter",
+      "duration_seconds": null,
+      "foot_anchor_px": null,
+      "pivot_px": null,
+      "alpha_mode": "opaque RGB",
+      "color_space": "sRGB",
+      "ue_import_settings": null,
+      "owner_approved_date": "2026-11-11",
+      "runtime_reference": "Beta6 review map only; pending fixed-camera visual review and production cleanup",
+      "references": [
+        "UE5/SourceAssets/P4/Environment/Alpha/P4_A2_ArenaScene_v02.png"
+      ],
+      "prompt_summary": "Distinct indigo waterside night market with canal, slate boardwalk and warm stalls at the perimeter.",
+      "sha256": "DE090BF7EB5BBED4E5B79FE3B87541B7898FAA97B720616302421D48F9FB741B",
+      "status": "owner_approved_concept_imported_pending_fixed_camera_visual_review",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_5_Scene_v02",
+      "ue_material_asset": "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_5_Backdrop_v02",
+      "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_05ScenePreview_v01"
+    },
+    {
+      "asset_id": "P4_BETA6_CH06_SCENE",
+      "owner_role": "P4 Environment Art",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch06_scene_v02.png",
+      "version": "v02",
+      "chapter_id": "chapter_6",
+      "frame_state_view": "single background concept; fixed elevated three-quarter",
+      "duration_seconds": null,
+      "foot_anchor_px": null,
+      "pivot_px": null,
+      "alpha_mode": "opaque RGB",
+      "color_space": "sRGB",
+      "ue_import_settings": null,
+      "owner_approved_date": "2026-11-11",
+      "runtime_reference": "Beta6 review map only; pending fixed-camera visual review and production cleanup",
+      "references": [
+        "UE5/SourceAssets/P4/Environment/Alpha/P4_A2_ArenaScene_v02.png"
+      ],
+      "prompt_summary": "Distinct autumn forest training clearing with leaf ground, tree frame and practice posts.",
+      "sha256": "9AA71F6906CDF22F886216276BD8A89D0ACB70BF4FAA747194B1D5A4D75B4BD8",
+      "status": "owner_approved_concept_imported_pending_fixed_camera_visual_review",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_6_Scene_v02",
+      "ue_material_asset": "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_6_Backdrop_v02",
+      "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_06ScenePreview_v01"
+    }
+  ],
+  "ue_preview_build": {
+    "date": "2026-11-11",
+    "status": "maps_saved_pending_visual_review",
+    "engine": "5.8.3-58210709+++UE5+Release-5.8",
+    "items": [
+      {
+        "asset_id": "P4_BETA6_CH02_SCENE",
+        "chapter_id": "chapter_2",
+        "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch02_scene_v02.png",
+        "source_sha256": "B45E1038A6A4D82EFCAFC0E30D0FB272FF754D93411D76EFE7217E50FAEC64DC",
+        "dimensions_px": [
+          1672,
+          941
+        ],
+        "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_2_Scene_v02",
+        "material_asset": "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_2_Backdrop_v02",
+        "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_02ScenePreview_v01",
+        "map_actor_count": 3,
+        "camera": "P4 fixed three-quarter camera, 50-degree pitch, 37-degree horizontal FOV",
+        "texture_settings": "sRGB, TC_EditorIcon (uncompressed), no alpha, Sharpen0 mips, UI group, non-streaming",
+        "build_status": "map_saved_pending_visual_review"
+      },
+      {
+        "asset_id": "P4_BETA6_CH03_SCENE",
+        "chapter_id": "chapter_3",
+        "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch03_scene_v02.png",
+        "source_sha256": "5543F79503BB1A8191AA49B73D4E5F8A95A34508A40836508BC1A59C0B788A9D",
+        "dimensions_px": [
+          1672,
+          941
+        ],
+        "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_3_Scene_v02",
+        "material_asset": "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_3_Backdrop_v02",
+        "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_03ScenePreview_v01",
+        "map_actor_count": 3,
+        "camera": "P4 fixed three-quarter camera, 50-degree pitch, 37-degree horizontal FOV",
+        "texture_settings": "sRGB, TC_EditorIcon (uncompressed), no alpha, Sharpen0 mips, UI group, non-streaming",
+        "build_status": "map_saved_pending_visual_review"
+      },
+      {
+        "asset_id": "P4_BETA6_CH04_SCENE",
+        "chapter_id": "chapter_4",
+        "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch04_scene_v02.png",
+        "source_sha256": "5B8777671ECE8BD71268A6BF00773E354E3EA1A479CE89D0BF8E3382823E288A",
+        "dimensions_px": [
+          1672,
+          941
+        ],
+        "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_4_Scene_v02",
+        "material_asset": "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_4_Backdrop_v02",
+        "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_04ScenePreview_v01",
+        "map_actor_count": 3,
+        "camera": "P4 fixed three-quarter camera, 50-degree pitch, 37-degree horizontal FOV",
+        "texture_settings": "sRGB, TC_EditorIcon (uncompressed), no alpha, Sharpen0 mips, UI group, non-streaming",
+        "build_status": "map_saved_pending_visual_review"
+      },
+      {
+        "asset_id": "P4_BETA6_CH05_SCENE",
+        "chapter_id": "chapter_5",
+        "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch05_scene_v02.png",
+        "source_sha256": "DE090BF7EB5BBED4E5B79FE3B87541B7898FAA97B720616302421D48F9FB741B",
+        "dimensions_px": [
+          1672,
+          941
+        ],
+        "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_5_Scene_v02",
+        "material_asset": "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_5_Backdrop_v02",
+        "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_05ScenePreview_v01",
+        "map_actor_count": 3,
+        "camera": "P4 fixed three-quarter camera, 50-degree pitch, 37-degree horizontal FOV",
+        "texture_settings": "sRGB, TC_EditorIcon (uncompressed), no alpha, Sharpen0 mips, UI group, non-streaming",
+        "build_status": "map_saved_pending_visual_review"
+      },
+      {
+        "asset_id": "P4_BETA6_CH06_SCENE",
+        "chapter_id": "chapter_6",
+        "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch06_scene_v02.png",
+        "source_sha256": "9AA71F6906CDF22F886216276BD8A89D0ACB70BF4FAA747194B1D5A4D75B4BD8",
+        "dimensions_px": [
+          1672,
+          941
+        ],
+        "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_6_Scene_v02",
+        "material_asset": "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_6_Backdrop_v02",
+        "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_06ScenePreview_v01",
+        "map_actor_count": 3,
+        "camera": "P4 fixed three-quarter camera, 50-degree pitch, 37-degree horizontal FOV",
+        "texture_settings": "sRGB, TC_EditorIcon (uncompressed), no alpha, Sharpen0 mips, UI group, non-streaming",
+        "build_status": "map_saved_pending_visual_review"
+      }
+    ],
+    "runtime_scope": "Review maps only; scene concept plates are not production-cleaned runtime delivery assets."
+  }
+}

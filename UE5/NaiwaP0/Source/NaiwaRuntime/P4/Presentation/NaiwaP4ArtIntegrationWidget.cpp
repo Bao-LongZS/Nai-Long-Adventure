@@ -134,6 +134,14 @@ namespace
 void UNaiwaP4ArtIntegrationWidget::NativeOnInitialized()
 {
 	Super::NativeOnInitialized();
+	IdlePortraitTexture = LoadObject<UTexture2D>(nullptr,
+		TEXT("/Game/Naiwa/P4/UI/Alpha/CatalogDirect/T_P4_A1_CatalogPortrait_Idle_Figure139_v01.T_P4_A1_CatalogPortrait_Idle_Figure139_v01"));
+	LaughPortraitTexture = LoadObject<UTexture2D>(nullptr,
+		TEXT("/Game/Naiwa/P4/UI/Alpha/CatalogDirect/T_P4_A1_CatalogPortrait_Laugh_Figure003_v01.T_P4_A1_CatalogPortrait_Laugh_Figure003_v01"));
+	VictoryPortraitTexture = LoadObject<UTexture2D>(nullptr,
+		TEXT("/Game/Naiwa/P4/UI/Alpha/CatalogDirect/T_P4_A1_CatalogPortrait_Victory_Figure121_v01.T_P4_A1_CatalogPortrait_Victory_Figure121_v01"));
+	DistressPortraitTexture = LoadObject<UTexture2D>(nullptr,
+		TEXT("/Game/Naiwa/P4/UI/Alpha/CatalogDirect/T_P4_A1_CatalogPortrait_Distress_Figure106_v01.T_P4_A1_CatalogPortrait_Distress_Figure106_v01"));
 	RootCanvas = WidgetTree->ConstructWidget<UCanvasPanel>(UCanvasPanel::StaticClass(), TEXT("P4ArtIntegrationRoot"));
 	WidgetTree->RootWidget = RootCanvas;
 	BuildBattleHud();
@@ -186,6 +194,7 @@ void UNaiwaP4ArtIntegrationWidget::NativeTick(const FGeometry& MyGeometry, const
 	{
 		return;
 	}
+	UpdatePlayerPortrait(*Player);
 
 	const int32 MaxHP = FMath::Max(Player->MaxHP, 1);
 	HealthBar->SetPercent(FMath::Clamp(static_cast<float>(Player->HP) / MaxHP, 0.0f, 1.0f));
@@ -231,11 +240,40 @@ void UNaiwaP4ArtIntegrationWidget::BuildBattleHud()
 	HudSlot->SetAnchors(FAnchors(0.025f, 0.035f));
 	HudSlot->SetAlignment(FVector2D::ZeroVector);
 	HudSlot->SetPosition(FVector2D::ZeroVector);
-	HudSlot->SetSize(FVector2D(400.0f, 244.0f));
+	HudSlot->SetSize(FVector2D(400.0f, 276.0f));
 
 	UVerticalBox* HudStack = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass(), TEXT("P4BattleHudStack"));
 	HudPanel->SetContent(HudStack);
-	HudStack->AddChildToVerticalBox(MakeText(WidgetTree, TEXT("P4 ARENA  ·  美术接入预览"), 18, InkColor, true));
+	UHorizontalBox* HeaderRow = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass(), TEXT("P4HudPortraitHeader"));
+	if (UVerticalBoxSlot* HeaderSlot = HudStack->AddChildToVerticalBox(HeaderRow))
+	{
+		HeaderSlot->SetPadding(FMargin(0.0f, 0.0f, 0.0f, 7.0f));
+	}
+	USizeBox* PortraitBox = WidgetTree->ConstructWidget<USizeBox>(USizeBox::StaticClass(), TEXT("P4HudPortraitSize"));
+	PortraitBox->SetWidthOverride(54.0f);
+	PortraitBox->SetHeightOverride(54.0f);
+	PlayerPortraitImage = WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(), TEXT("P4HudPortrait"));
+	PlayerPortraitImage->SetColorAndOpacity(FLinearColor::White);
+	if (IdlePortraitTexture)
+	{
+		PlayerPortraitImage->SetBrushFromTexture(IdlePortraitTexture, false);
+		DisplayedPlayerPortraitTexture = IdlePortraitTexture;
+	}
+	PortraitBox->SetContent(PlayerPortraitImage);
+	if (UHorizontalBoxSlot* PortraitSlot = HeaderRow->AddChildToHorizontalBox(PortraitBox))
+	{
+		PortraitSlot->SetVerticalAlignment(VAlign_Center);
+		PortraitSlot->SetPadding(FMargin(0.0f, 0.0f, 12.0f, 0.0f));
+	}
+	UVerticalBox* HeaderText = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass(), TEXT("P4HudPortraitHeaderText"));
+	if (UHorizontalBoxSlot* HeaderTextSlot = HeaderRow->AddChildToHorizontalBox(HeaderText))
+	{
+		HeaderTextSlot->SetVerticalAlignment(VAlign_Center);
+	}
+	HeaderText->AddChildToVerticalBox(MakeText(WidgetTree, TEXT("P4 ARENA  ·  美术接入预览"), 17, InkColor, true));
+	PlayerPortraitStatusText = MakeText(WidgetTree, TEXT("状态 · 仰首静立"), 12, MutedColor);
+	PlayerPortraitStatusText->SetAutoWrapText(false);
+	HeaderText->AddChildToVerticalBox(PlayerPortraitStatusText);
 	HudStack->AddChildToVerticalBox(MakeText(WidgetTree, TEXT("奶蛙生命值"), 14, MutedColor));
 
 	UHorizontalBox* HealthRow = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass(), TEXT("P4HealthRow"));
@@ -318,43 +356,79 @@ void UNaiwaP4ArtIntegrationWidget::BuildRunResultPanel()
 {
 	RunResultPanel = WidgetTree->ConstructWidget<UBorder>(UBorder::StaticClass(), TEXT("P4RunResultPanel"));
 	RunResultPanel->SetBrush(FSlateRoundedBoxBrush(FLinearColor(0.985f, 0.955f, 0.885f, 0.98f), 22.0f));
-	RunResultPanel->SetPadding(FMargin(36.0f, 32.0f));
+	RunResultPanel->SetPadding(FMargin(28.0f, 24.0f));
 	RunResultPanel->SetVisibility(ESlateVisibility::Collapsed);
 	UCanvasPanelSlot* ResultSlot = RootCanvas->AddChildToCanvas(RunResultPanel);
 	ResultSlot->SetAnchors(FAnchors(0.5f, 0.5f));
 	ResultSlot->SetAlignment(FVector2D(0.5f, 0.5f));
 	ResultSlot->SetPosition(FVector2D::ZeroVector);
-	ResultSlot->SetSize(FVector2D(560.0f, 260.0f));
+	ResultSlot->SetSize(FVector2D(640.0f, 280.0f));
 
+	UHorizontalBox* ResultRow = WidgetTree->ConstructWidget<UHorizontalBox>(UHorizontalBox::StaticClass(), TEXT("P4RunResultRow"));
+	RunResultPanel->SetContent(ResultRow);
+	USizeBox* ResultPortraitBox = WidgetTree->ConstructWidget<USizeBox>(USizeBox::StaticClass(), TEXT("P4RunResultPortraitSize"));
+	ResultPortraitBox->SetWidthOverride(132.0f);
+	ResultPortraitBox->SetHeightOverride(132.0f);
+	RunResultPortraitImage = WidgetTree->ConstructWidget<UImage>(UImage::StaticClass(), TEXT("P4RunResultPortrait"));
+	RunResultPortraitImage->SetColorAndOpacity(FLinearColor::White);
+	ResultPortraitBox->SetContent(RunResultPortraitImage);
+	if (UHorizontalBoxSlot* PortraitSlot = ResultRow->AddChildToHorizontalBox(ResultPortraitBox))
+	{
+		PortraitSlot->SetVerticalAlignment(VAlign_Center);
+		PortraitSlot->SetPadding(FMargin(0.0f, 0.0f, 24.0f, 0.0f));
+	}
 	UVerticalBox* Stack = WidgetTree->ConstructWidget<UVerticalBox>(UVerticalBox::StaticClass(), TEXT("P4RunResultStack"));
-	RunResultPanel->SetContent(Stack);
-	RunResultTitle = MakeText(WidgetTree, TEXT("本局完成"), 30, InkColor, true);
-	RunResultTitle->SetJustification(ETextJustify::Center);
+	if (UHorizontalBoxSlot* ContentSlot = ResultRow->AddChildToHorizontalBox(Stack))
+	{
+		ContentSlot->SetSize(FSlateChildSize(ESlateSizeRule::Fill));
+		ContentSlot->SetVerticalAlignment(VAlign_Center);
+	}
+	RunResultTitle = MakeText(WidgetTree, TEXT("本局完成"), 27, InkColor, true);
+	RunResultTitle->SetJustification(ETextJustify::Left);
 	RunResultTitle->SetAutoWrapText(false);
 	Stack->AddChildToVerticalBox(RunResultTitle);
 	RunResultHint = MakeText(WidgetTree, TEXT("按 R 或点击按钮，以相同 seed 重开并保留本局强化"), 16, MutedColor);
-	RunResultHint->SetJustification(ETextJustify::Center);
+	RunResultHint->SetJustification(ETextJustify::Left);
 	Stack->AddChildToVerticalBox(RunResultHint);
 
-	UButton* RetryButton = WidgetTree->ConstructWidget<UButton>(UButton::StaticClass(), TEXT("P4RunRetryButton"));
-	StyleButton(RetryButton);
+	RunResultActionButton = WidgetTree->ConstructWidget<UButton>(UButton::StaticClass(), TEXT("P4RunRetryButton"));
+	StyleButton(RunResultActionButton);
 	PRAGMA_DISABLE_DEPRECATION_WARNINGS
-	RetryButton->IsFocusable = false;
+	RunResultActionButton->IsFocusable = false;
 	PRAGMA_ENABLE_DEPRECATION_WARNINGS
-	RetryButton->OnClicked.AddDynamic(this, &ThisClass::OnRetryRunClicked);
+	RunResultActionButton->OnClicked.AddDynamic(this, &ThisClass::OnRetryRunClicked);
 	UBorder* RetryFace = WidgetTree->ConstructWidget<UBorder>(UBorder::StaticClass(), TEXT("P4RunRetryButtonFace"));
 	RetryFace->SetBrush(FSlateRoundedBoxBrush(FLinearColor(0.35f, 0.48f, 0.34f, 1.0f), 10.0f));
 	RetryFace->SetPadding(FMargin(22.0f, 12.0f));
-	UTextBlock* RetryText = MakeText(WidgetTree, TEXT("重试本章  ·  R"), 17,
+	RunResultActionText = MakeText(WidgetTree, TEXT("重试本章  ·  R"), 17,
 		FLinearColor(1.0f, 0.973f, 0.914f, 1.0f), true);
-	RetryText->SetJustification(ETextJustify::Center);
-	RetryText->SetAutoWrapText(false);
-	RetryFace->SetContent(RetryText);
-	RetryButton->AddChild(RetryFace);
-	if (UVerticalBoxSlot* ButtonSlot = Stack->AddChildToVerticalBox(RetryButton))
+	RunResultActionText->SetJustification(ETextJustify::Center);
+	RunResultActionText->SetAutoWrapText(false);
+	RetryFace->SetContent(RunResultActionText);
+	RunResultActionButton->AddChild(RetryFace);
+	if (UVerticalBoxSlot* ButtonSlot = Stack->AddChildToVerticalBox(RunResultActionButton))
 	{
-		ButtonSlot->SetPadding(FMargin(0.0f, 20.0f, 0.0f, 0.0f));
-		ButtonSlot->SetHorizontalAlignment(HAlign_Center);
+		ButtonSlot->SetPadding(FMargin(0.0f, 14.0f, 0.0f, 0.0f));
+		ButtonSlot->SetHorizontalAlignment(HAlign_Left);
+	}
+}
+
+void UNaiwaP4ArtIntegrationWidget::UpdatePlayerPortrait(const FNaiwaP4EntityState& Player)
+{
+	if (!PlayerPortraitImage)
+	{
+		return;
+	}
+	const bool bLaughing = Player.ActionCue == ENaiwaP4ActionCue::Laugh && Player.LaughTicksRemaining > 0;
+	UTexture2D* DesiredTexture = bLaughing ? LaughPortraitTexture.Get() : IdlePortraitTexture.Get();
+	if (DesiredTexture && DesiredTexture != DisplayedPlayerPortraitTexture)
+	{
+		PlayerPortraitImage->SetBrushFromTexture(DesiredTexture, false);
+		DisplayedPlayerPortraitTexture = DesiredTexture;
+	}
+	if (PlayerPortraitStatusText)
+	{
+		PlayerPortraitStatusText->SetText(FText::FromString(bLaughing ? TEXT("状态 · 捧腹大笑") : TEXT("状态 · 仰首静立")));
 	}
 }
 
@@ -401,12 +475,57 @@ void UNaiwaP4ArtIntegrationWidget::UpdateBossAndResultUI(UNaiwaP4ArenaSubsystem*
 	{
 		return;
 	}
+	if (RunResultPortraitImage)
+	{
+		UTexture2D* ResultTexture = State.RunResult == ENaiwaP4RunResult::Victory
+			? VictoryPortraitTexture.Get() : DistressPortraitTexture.Get();
+		if (ResultTexture)
+		{
+			RunResultPortraitImage->SetBrushFromTexture(ResultTexture, false);
+		}
+	}
 	if (UpgradeOfferPanel && UpgradeOfferPanel->GetVisibility() == ESlateVisibility::Visible)
 	{
 		UpgradeOfferPanel->SetVisibility(ESlateVisibility::Collapsed);
 	}
-	RunResultTitle->SetText(FText::FromString(State.RunResult == ENaiwaP4RunResult::Victory
-		? TEXT("胜利！奶桶队长被击败") : TEXT("本章挑战失败")));
+	if (Arena->GetBeta6FlowPhase() != ENaiwaP4Beta6FlowPhase::NoRun)
+	{
+		const FNaiwaP4Beta6ChapterBundle* Chapter = Arena->GetCurrentBeta6Chapter();
+		const int32 ChapterIndex = Chapter ? Chapter->Chapter.ChapterIndex : 0;
+		const FString ChapterName = Chapter ? Chapter->Chapter.DisplayName.ToString() : TEXT("Beta6");
+		if (State.RunResult == ENaiwaP4RunResult::Victory
+			&& Arena->GetBeta6FlowPhase() == ENaiwaP4Beta6FlowPhase::ChapterSettlement)
+		{
+			RunResultTitle->SetText(FText::FromString(FString::Printf(TEXT("第 %d 章完成 · %s"),
+				ChapterIndex, *ChapterName)));
+			RunResultHint->SetText(FText::FromString(ChapterIndex < 6
+				? TEXT("确认结算后继续下一章；强化卡和固定 seed 会沿用")
+				: TEXT("确认结算，完成本轮 Beta6 六章范围")));
+			RunResultActionText->SetText(FText::FromString(ChapterIndex < 6
+				? TEXT("结算并继续下一章  ·  R") : TEXT("完成六章阶段  ·  R")));
+			RunResultActionButton->SetIsEnabled(true);
+		}
+		else if (State.RunResult == ENaiwaP4RunResult::Defeat)
+		{
+			RunResultTitle->SetText(FText::FromString(FString::Printf(TEXT("第 %d 章挑战失败"), ChapterIndex)));
+			RunResultHint->SetText(FText::FromString(TEXT("重试会按相同章节 seed 重开，并保留本局已选强化")));
+			RunResultActionText->SetText(FText::FromString(TEXT("重试本章  ·  R")));
+			RunResultActionButton->SetIsEnabled(true);
+		}
+		else
+		{
+			RunResultTitle->SetText(FText::FromString(State.RunResult == ENaiwaP4RunResult::Victory
+				? TEXT("本章胜利") : TEXT("本章挑战失败")));
+		}
+	}
+	else
+	{
+		RunResultTitle->SetText(FText::FromString(State.RunResult == ENaiwaP4RunResult::Victory
+			? TEXT("胜利！奶桶队长被击败") : TEXT("本章挑战失败")));
+		RunResultHint->SetText(FText::FromString(TEXT("按 R 或点击按钮，以相同 seed 重开并保留本局强化")));
+		RunResultActionText->SetText(FText::FromString(TEXT("重试本章  ·  R")));
+		RunResultActionButton->SetIsEnabled(true);
+	}
 	RunResultPanel->SetVisibility(ESlateVisibility::Visible);
 	if (APlayerController* PlayerController = GetOwningPlayer())
 	{
@@ -1131,11 +1250,61 @@ void UNaiwaP4ArtIntegrationWidget::RestartRun()
 {
 	UWorld* World = GetWorld();
 	UNaiwaP4ArenaSubsystem* Arena = World ? World->GetSubsystem<UNaiwaP4ArenaSubsystem>() : nullptr;
-	if (!Arena || Arena->GetState().RunResult == ENaiwaP4RunResult::InProgress
-		|| !Arena->RestartWaveCombatPreview())
+	if (!Arena || Arena->GetState().RunResult == ENaiwaP4RunResult::InProgress)
 	{
 		return;
 	}
+
+	if (Arena->GetBeta6FlowPhase() != ENaiwaP4Beta6FlowPhase::NoRun)
+	{
+		if (Arena->GetBeta6FlowPhase() == ENaiwaP4Beta6FlowPhase::Beta6StageEnd)
+		{
+			return;
+		}
+
+		FString Error;
+		if (Arena->GetState().RunResult == ENaiwaP4RunResult::Victory
+			&& Arena->GetBeta6FlowPhase() == ENaiwaP4Beta6FlowPhase::ChapterSettlement)
+		{
+			int32 NextChapterIndex = 0;
+			if (!Arena->CompleteBeta6Chapter(NextChapterIndex, Error))
+			{
+				RunResultHint->SetText(FText::FromString(Error));
+				return;
+			}
+			if (Arena->GetBeta6FlowPhase() == ENaiwaP4Beta6FlowPhase::Beta6StageEnd)
+			{
+				RunResultTitle->SetText(FText::FromString(TEXT("P4 Beta6 六章阶段完成")));
+				RunResultHint->SetText(FText::FromString(TEXT("本轮 Beta6 阶段结束；P4 十章剧情进度不变")));
+				RunResultActionText->SetText(FText::FromString(TEXT("六章阶段已完成")));
+				RunResultActionButton->SetIsEnabled(false);
+				return;
+			}
+			if (!Arena->BeginNextBeta6Chapter(Error))
+			{
+				RunResultHint->SetText(FText::FromString(FString::Printf(TEXT("下一章暂不可启动：%s"), *Error)));
+				RunResultActionButton->SetIsEnabled(false);
+				return;
+			}
+		}
+		else if (Arena->GetState().RunResult == ENaiwaP4RunResult::Defeat)
+		{
+			if (!Arena->RetryBeta6Chapter(Error))
+			{
+				RunResultHint->SetText(FText::FromString(Error));
+				return;
+			}
+		}
+		else
+		{
+			return;
+		}
+	}
+	else if (!Arena->RestartWaveCombatPreview())
+	{
+		return;
+	}
+
 	if (RunResultPanel)
 	{
 		RunResultPanel->SetVisibility(ESlateVisibility::Collapsed);

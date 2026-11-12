@@ -1,0 +1,1166 @@
+{
+    "artifact":  "P4 Beta6 Scope Projection",
+    "projectionVersion":  "0.5",
+    "generatedAtLocalDate":  "2026-11-12",
+    "source":  {
+                   "chapterDataPath":  "UE5/Records/p4_alpha/design_reference/P4_章节数据_v1.json",
+                   "chapterDataSchema":  "naiwa.p4.arena.chapters/2",
+                   "chapterDataVersion":  "2.0",
+                   "chapterDataSha256":  "C4306E634BBFD691A2EF25F95E72EBBB7E9C26D2F34CD1E45F2F72D544BC33D0",
+                   "runtimeTuningPath":  "UE5/SourceAssets/P4/Data/Beta6/P4Beta6_RuntimeTuning_v01.json",
+                   "runtimeTuningSha256":  "BAC5A3649177270ABB18C3E3C56C2B2EB80F12A1003E26808B2BCE2099608FDF",
+                   "runtimeTuningVersion":  "1.0",
+                   "acceptedAlphaWavePath":  "UE5/SourceAssets/P4/Data/P4WaveAlpha.csv",
+                   "acceptedAlphaWaveSha256":  "A59F32468A0928E8485E79232670EFA277954718EC4B5864D7A77C7EF95EFD7A",
+                   "chapterOneAuthority":  "Accepted Alpha wave CSV; JSON chapter 1 is preserved as historical design reference and does not override the accepted runtime wave composition."
+               },
+    "scope":  {
+                  "chapterIndices":  [
+                                         1,
+                                         2,
+                                         3,
+                                         4,
+                                         5,
+                                         6
+                                     ],
+                  "betaAddedChapterIndices":  [
+                                                  2,
+                                                  3,
+                                                  4,
+                                                  5,
+                                                  6
+                                              ],
+                  "deferredChapterIndices":  [
+                                                 7,
+                                                 8,
+                                                 9,
+                                                 10
+                                             ],
+                  "themeIdRule":  "theme_\u003clowercase scene.base\u003e_\u003clowercase scene.tint\u003e; derived from source scene fields",
+                  "themeBackdropRule":  "BackdropTexture projects the accepted Alpha Chapter 1 texture and imported Beta6 Chapter 2-6 production textures; non-Alpha chapter playability remains blocked until runtime binding and readability acceptance.",
+                  "scenePropRule":  "DesignPropIds preserve source design tokens only; they are not approved UE asset bindings.",
+                  "chapterRows":  [
+                                      {
+                                          "RowName":  "chapter_01",
+                                          "ChapterIndex":  1,
+                                          "DisplayName":  "沙丘晒笑场",
+                                          "ChapterType":  "wave",
+                                          "ThemeId":  "theme_desert_noon_native",
+                                          "WaveCount":  5,
+                                          "OrdinaryEnemyCount":  20,
+                                          "BossId":  "",
+                                          "DurationTargetSeconds":  150,
+                                          "DataSource":  "accepted_alpha_wave_csv"
+                                      },
+                                      {
+                                          "RowName":  "chapter_02",
+                                          "ChapterIndex":  2,
+                                          "DisplayName":  "沙丘补给线",
+                                          "ChapterType":  "wave",
+                                          "ThemeId":  "theme_desert_dusk_orange_purple",
+                                          "WaveCount":  6,
+                                          "OrdinaryEnemyCount":  30,
+                                          "BossId":  "",
+                                          "DurationTargetSeconds":  165,
+                                          "DataSource":  "chapter_json_v2"
+                                      },
+                                      {
+                                          "RowName":  "chapter_03",
+                                          "ChapterIndex":  3,
+                                          "DisplayName":  "沙暴猪圈",
+                                          "ChapterType":  "wave",
+                                          "ThemeId":  "theme_desert_sandstorm_desaturated",
+                                          "WaveCount":  7,
+                                          "OrdinaryEnemyCount":  42,
+                                          "BossId":  "",
+                                          "DurationTargetSeconds":  195,
+                                          "DataSource":  "chapter_json_v2"
+                                      },
+                                      {
+                                          "RowName":  "chapter_04",
+                                          "ChapterIndex":  4,
+                                          "DisplayName":  "奶桶擂台",
+                                          "ChapterType":  "midboss",
+                                          "ThemeId":  "theme_desert_dusk_arena",
+                                          "WaveCount":  3,
+                                          "OrdinaryEnemyCount":  9,
+                                          "BossId":  "boss_nai_tong",
+                                          "DurationTargetSeconds":  165,
+                                          "DataSource":  "chapter_json_v2"
+                                      },
+                                      {
+                                          "RowName":  "chapter_05",
+                                          "ChapterIndex":  5,
+                                          "DisplayName":  "沙丘夜市",
+                                          "ChapterType":  "wave",
+                                          "ThemeId":  "theme_desert_night_market_amber",
+                                          "WaveCount":  8,
+                                          "OrdinaryEnemyCount":  56,
+                                          "BossId":  "",
+                                          "DurationTargetSeconds":  210,
+                                          "DataSource":  "chapter_json_v2"
+                                      },
+                                      {
+                                          "RowName":  "chapter_06",
+                                          "ChapterIndex":  6,
+                                          "DisplayName":  "秋林校场",
+                                          "ChapterType":  "midboss",
+                                          "ThemeId":  "theme_forest_autumn_green_to_red",
+                                          "WaveCount":  3,
+                                          "OrdinaryEnemyCount":  12,
+                                          "BossId":  "boss_nai_jia",
+                                          "DurationTargetSeconds":  180,
+                                          "DataSource":  "chapter_json_v2"
+                                      }
+                                  ],
+                  "themeRows":  [
+                                    {
+                                        "RowName":  "theme_desert_noon_native",
+                                        "ThemeId":  "theme_desert_noon_native",
+                                        "SceneBase":  "Desert",
+                                        "SceneTint":  "noon_native",
+                                        "SceneLight":  "top_flat",
+                                        "DesignPropIds":  "()",
+                                        "BackdropTexture":  "Texture2D\u0027/Game/Naiwa/P4/Art/Alpha/A2/T_P4_A2_ArenaScene_v02.T_P4_A2_ArenaScene_v02\u0027",
+                                        "RuntimeAssetBindingsStatus":  "accepted_alpha_theme_frozen"
+                                    },
+                                    {
+                                        "RowName":  "theme_desert_dusk_orange_purple",
+                                        "ThemeId":  "theme_desert_dusk_orange_purple",
+                                        "SceneBase":  "Desert",
+                                        "SceneTint":  "dusk_orange_purple",
+                                        "SceneLight":  "low_angle_long_shadow",
+                                        "DesignPropIds":  "(p2_wood_box_stack)",
+                                        "BackdropTexture":  "Texture2D\u0027/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_2_Environment_v01.T_P4_Beta6_chapter_2_Environment_v01\u0027",
+                                        "RuntimeAssetBindingsStatus":  "production_environment_texture_imported_pending_review_maps_theme_binding_and_readability_review"
+                                    },
+                                    {
+                                        "RowName":  "theme_desert_sandstorm_desaturated",
+                                        "ThemeId":  "theme_desert_sandstorm_desaturated",
+                                        "SceneBase":  "Desert",
+                                        "SceneTint":  "sandstorm_desaturated",
+                                        "SceneLight":  "diffuse_hazy",
+                                        "DesignPropIds":  "(p3_stone_brick_recolor_sandbag)",
+                                        "BackdropTexture":  "Texture2D\u0027/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_3_Environment_v01.T_P4_Beta6_chapter_3_Environment_v01\u0027",
+                                        "RuntimeAssetBindingsStatus":  "production_environment_texture_imported_pending_review_maps_theme_binding_and_readability_review"
+                                    },
+                                    {
+                                        "RowName":  "theme_desert_dusk_arena",
+                                        "ThemeId":  "theme_desert_dusk_arena",
+                                        "SceneBase":  "Desert",
+                                        "SceneTint":  "dusk_arena",
+                                        "SceneLight":  "arena_spot",
+                                        "DesignPropIds":  "(p2_tower_spectator_rows,arena_fence)",
+                                        "BackdropTexture":  "Texture2D\u0027/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_4_Environment_v01.T_P4_Beta6_chapter_4_Environment_v01\u0027",
+                                        "RuntimeAssetBindingsStatus":  "production_environment_texture_imported_pending_review_maps_theme_binding_and_readability_review"
+                                    },
+                                    {
+                                        "RowName":  "theme_desert_night_market_amber",
+                                        "ThemeId":  "theme_desert_night_market_amber",
+                                        "SceneBase":  "Desert",
+                                        "SceneTint":  "night_market_amber",
+                                        "SceneLight":  "warm_point_lights",
+                                        "DesignPropIds":  "(p3_vault_door_lantern,cloth_stall)",
+                                        "BackdropTexture":  "Texture2D\u0027/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_5_Environment_v01.T_P4_Beta6_chapter_5_Environment_v01\u0027",
+                                        "RuntimeAssetBindingsStatus":  "production_environment_texture_imported_pending_review_maps_theme_binding_and_readability_review"
+                                    },
+                                    {
+                                        "RowName":  "theme_forest_autumn_green_to_red",
+                                        "ThemeId":  "theme_forest_autumn_green_to_red",
+                                        "SceneBase":  "Forest",
+                                        "SceneTint":  "autumn_green_to_red",
+                                        "SceneLight":  "backlit_slant",
+                                        "DesignPropIds":  "(p3_stone_brick_recolor_stump)",
+                                        "BackdropTexture":  "Texture2D\u0027/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_6_Environment_v01.T_P4_Beta6_chapter_6_Environment_v01\u0027",
+                                        "RuntimeAssetBindingsStatus":  "production_environment_texture_imported_pending_review_maps_theme_binding_and_readability_review"
+                                    }
+                                ],
+                  "waveSpawnRows":  [
+                                        {
+                                            "RowName":  "ch01_w01_s00_naiding",
+                                            "ChapterIndex":  1,
+                                            "WaveIndex":  1,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  4,
+                                            "SpawnIntervalSeconds":  "0.55",
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "accepted_alpha_wave_csv"
+                                        },
+                                        {
+                                            "RowName":  "ch01_w02_s00_naiding",
+                                            "ChapterIndex":  1,
+                                            "WaveIndex":  2,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  4,
+                                            "SpawnIntervalSeconds":  "0.55",
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "accepted_alpha_wave_csv"
+                                        },
+                                        {
+                                            "RowName":  "ch01_w03_s00_naiding",
+                                            "ChapterIndex":  1,
+                                            "WaveIndex":  3,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  "0.55",
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "accepted_alpha_wave_csv"
+                                        },
+                                        {
+                                            "RowName":  "ch01_w03_s01_naidun",
+                                            "ChapterIndex":  1,
+                                            "WaveIndex":  3,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naidun",
+                                            "Count":  1,
+                                            "SpawnIntervalSeconds":  "0.55",
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "accepted_alpha_wave_csv"
+                                        },
+                                        {
+                                            "RowName":  "ch01_w04_s00_naiding",
+                                            "ChapterIndex":  1,
+                                            "WaveIndex":  4,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  "0.55",
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "accepted_alpha_wave_csv"
+                                        },
+                                        {
+                                            "RowName":  "ch01_w04_s01_naidun",
+                                            "ChapterIndex":  1,
+                                            "WaveIndex":  4,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naidun",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  "0.55",
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "accepted_alpha_wave_csv"
+                                        },
+                                        {
+                                            "RowName":  "ch01_w05_s00_naiding",
+                                            "ChapterIndex":  1,
+                                            "WaveIndex":  5,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  "0.55",
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "accepted_alpha_wave_csv"
+                                        },
+                                        {
+                                            "RowName":  "ch01_w05_s01_naidun",
+                                            "ChapterIndex":  1,
+                                            "WaveIndex":  5,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naidun",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  "0.55",
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "accepted_alpha_wave_csv"
+                                        },
+                                        {
+                                            "RowName":  "ch02_w01_s00_naiding",
+                                            "ChapterIndex":  2,
+                                            "WaveIndex":  1,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  4,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch02_w02_s00_naizhou",
+                                            "ChapterIndex":  2,
+                                            "WaveIndex":  2,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naizhou",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch02_w02_s01_naiding",
+                                            "ChapterIndex":  2,
+                                            "WaveIndex":  2,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch02_w03_s00_naiping_lei",
+                                            "ChapterIndex":  2,
+                                            "WaveIndex":  3,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naiping_lei",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch02_w03_s01_naiding",
+                                            "ChapterIndex":  2,
+                                            "WaveIndex":  3,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch02_w04_s00_naitiao",
+                                            "ChapterIndex":  2,
+                                            "WaveIndex":  4,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naitiao",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch02_w04_s01_naizhou",
+                                            "ChapterIndex":  2,
+                                            "WaveIndex":  4,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naizhou",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch02_w05_s00_naiding",
+                                            "ChapterIndex":  2,
+                                            "WaveIndex":  5,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  4,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch02_w05_s01_naidun",
+                                            "ChapterIndex":  2,
+                                            "WaveIndex":  5,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naidun",
+                                            "Count":  1,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch02_w06_s00_naitiao",
+                                            "ChapterIndex":  2,
+                                            "WaveIndex":  6,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naitiao",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch02_w06_s01_naiping_lei",
+                                            "ChapterIndex":  2,
+                                            "WaveIndex":  6,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naiping_lei",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch02_w06_s02_naiding",
+                                            "ChapterIndex":  2,
+                                            "WaveIndex":  6,
+                                            "SpawnOrder":  2,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w01_s00_naiding",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  1,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  5,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w02_s00_naizhou",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  2,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naizhou",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w02_s01_naiding",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  2,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w03_s00_nailing",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  3,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "nailing",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w03_s01_naiding",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  3,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w04_s00_naidun",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  4,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naidun",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w04_s01_naizhou",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  4,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naizhou",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w05_s00_naiping_lei",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  5,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naiping_lei",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w05_s01_naitiao",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  5,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naitiao",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w05_s02_naiding",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  5,
+                                            "SpawnOrder":  2,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w06_s00_nailing",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  6,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "nailing",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w06_s01_naichui",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  6,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naichui",
+                                            "Count":  1,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w06_s02_naiding",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  6,
+                                            "SpawnOrder":  2,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  4,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w07_s00_naidun",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  7,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naidun",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w07_s01_naizhou",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  7,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naizhou",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch03_w07_s02_naiding",
+                                            "ChapterIndex":  3,
+                                            "WaveIndex":  7,
+                                            "SpawnOrder":  2,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  4,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch04_w01_s00_naiding",
+                                            "ChapterIndex":  4,
+                                            "WaveIndex":  1,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  4,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch04_w02_s00_naidun",
+                                            "ChapterIndex":  4,
+                                            "WaveIndex":  2,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naidun",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch04_w02_s01_naizhou",
+                                            "ChapterIndex":  4,
+                                            "WaveIndex":  2,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naizhou",
+                                            "Count":  1,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch04_w03_s00_naiping_lei",
+                                            "ChapterIndex":  4,
+                                            "WaveIndex":  3,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naiping_lei",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w01_s00_naiding",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  1,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  6,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w02_s00_dandan",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  2,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "dandan",
+                                            "Count":  4,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w02_s01_naiding",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  2,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w03_s00_chacha",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  3,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "chacha",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w03_s01_naizhou",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  3,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naizhou",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w04_s00_naitiao",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  4,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naitiao",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w04_s01_naiping_lei",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  4,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naiping_lei",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w04_s02_naishuang",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  4,
+                                            "SpawnOrder":  2,
+                                            "EnemyTypeId":  "naishuang",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w05_s00_naidun",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  5,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naidun",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w05_s01_nailing",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  5,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "nailing",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w05_s02_naiding",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  5,
+                                            "SpawnOrder":  2,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w06_s00_naixiang",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  6,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naixiang",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w06_s01_haohao",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  6,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "haohao",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w06_s02_naiding",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  6,
+                                            "SpawnOrder":  2,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w07_s00_naichui",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  7,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naichui",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w07_s01_naitiao",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  7,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naitiao",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w07_s02_dandan",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  7,
+                                            "SpawnOrder":  2,
+                                            "EnemyTypeId":  "dandan",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w08_s00_chacha",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  8,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "chacha",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w08_s01_naidun",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  8,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naidun",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch05_w08_s02_naiding",
+                                            "ChapterIndex":  5,
+                                            "WaveIndex":  8,
+                                            "SpawnOrder":  2,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  5,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch06_w01_s00_naizhou",
+                                            "ChapterIndex":  6,
+                                            "WaveIndex":  1,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naizhou",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch06_w01_s01_naitiao",
+                                            "ChapterIndex":  6,
+                                            "WaveIndex":  1,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naitiao",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch06_w02_s00_naidun",
+                                            "ChapterIndex":  6,
+                                            "WaveIndex":  2,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "naidun",
+                                            "Count":  3,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch06_w03_s00_nailing",
+                                            "ChapterIndex":  6,
+                                            "WaveIndex":  3,
+                                            "SpawnOrder":  0,
+                                            "EnemyTypeId":  "nailing",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch06_w03_s01_naichui",
+                                            "ChapterIndex":  6,
+                                            "WaveIndex":  3,
+                                            "SpawnOrder":  1,
+                                            "EnemyTypeId":  "naichui",
+                                            "Count":  1,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        },
+                                        {
+                                            "RowName":  "ch06_w03_s02_naiding",
+                                            "ChapterIndex":  6,
+                                            "WaveIndex":  3,
+                                            "SpawnOrder":  2,
+                                            "EnemyTypeId":  "naiding",
+                                            "Count":  2,
+                                            "SpawnIntervalSeconds":  null,
+                                            "bSpawnIntervalConfigured":  "true",
+                                            "SourceKind":  "chapter_json_v2_plus_engineering_runtime_tuning_v1"
+                                        }
+                                    ],
+                  "totalChapters":  6,
+                  "totalWaves":  32,
+                  "totalOrdinaryEnemies":  169,
+                  "chapterOneOverride":  {
+                                             "applied":  true,
+                                             "jsonWaveTotals":  [
+                                                                    3,
+                                                                    4,
+                                                                    5,
+                                                                    5,
+                                                                    3
+                                                                ],
+                                             "acceptedAlphaWaveTotals":  [
+                                                                             4,
+                                                                             4,
+                                                                             4,
+                                                                             4,
+                                                                             4
+                                                                         ],
+                                             "jsonWaveCompositionDiffers":  true,
+                                             "totalStillMatches":  true
+                                         }
+              },
+    "beta6ScenePreviewImport":  {
+                                    "sourceReportPath":  "UE5/Records/p4_alpha/evidence/Beta6/P4_Beta6_ScenePreview_build_report_v01.json",
+                                    "sourceReportSha256":  "E58D18F074C12504D67A1B9556CE095FC7685C7749C17009CDA6D1295D03ABB7",
+                                    "reviewApprovalPath":  "UE5/Records/p4_alpha/evidence/Beta6/P4_Beta6_SceneReview_Approval_v01.json",
+                                    "reviewApprovalSha256":  "42163B3FC8BE773EA5114810CD50842B9EE394C299AF4F2A06093272F72FCA71",
+                                    "status":  "maps_saved_pending_visual_review",
+                                    "visualReviewStatus":  "owner_visual_review_approved",
+                                    "maps":  [
+                                                 {
+                                                     "asset_id":  "P4_BETA6_CH02_SCENE",
+                                                     "chapter_id":  "chapter_2",
+                                                     "source_path":  "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch02_scene_v02.png",
+                                                     "source_sha256":  "B45E1038A6A4D82EFCAFC0E30D0FB272FF754D93411D76EFE7217E50FAEC64DC",
+                                                     "dimensions_px":  [
+                                                                           1672,
+                                                                           941
+                                                                       ],
+                                                     "texture_asset":  "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_2_Scene_v02",
+                                                     "material_asset":  "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_2_Backdrop_v02",
+                                                     "review_map":  "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_02ScenePreview_v01",
+                                                     "map_actor_count":  3,
+                                                     "camera":  "P4 fixed three-quarter camera, 50-degree pitch, 37-degree horizontal FOV",
+                                                     "texture_settings":  "sRGB, TC_EditorIcon (uncompressed), no alpha, Sharpen0 mips, UI group, non-streaming",
+                                                     "build_status":  "map_saved_pending_visual_review"
+                                                 },
+                                                 {
+                                                     "asset_id":  "P4_BETA6_CH03_SCENE",
+                                                     "chapter_id":  "chapter_3",
+                                                     "source_path":  "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch03_scene_v02.png",
+                                                     "source_sha256":  "5543F79503BB1A8191AA49B73D4E5F8A95A34508A40836508BC1A59C0B788A9D",
+                                                     "dimensions_px":  [
+                                                                           1672,
+                                                                           941
+                                                                       ],
+                                                     "texture_asset":  "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_3_Scene_v02",
+                                                     "material_asset":  "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_3_Backdrop_v02",
+                                                     "review_map":  "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_03ScenePreview_v01",
+                                                     "map_actor_count":  3,
+                                                     "camera":  "P4 fixed three-quarter camera, 50-degree pitch, 37-degree horizontal FOV",
+                                                     "texture_settings":  "sRGB, TC_EditorIcon (uncompressed), no alpha, Sharpen0 mips, UI group, non-streaming",
+                                                     "build_status":  "map_saved_pending_visual_review"
+                                                 },
+                                                 {
+                                                     "asset_id":  "P4_BETA6_CH04_SCENE",
+                                                     "chapter_id":  "chapter_4",
+                                                     "source_path":  "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch04_scene_v02.png",
+                                                     "source_sha256":  "5B8777671ECE8BD71268A6BF00773E354E3EA1A479CE89D0BF8E3382823E288A",
+                                                     "dimensions_px":  [
+                                                                           1672,
+                                                                           941
+                                                                       ],
+                                                     "texture_asset":  "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_4_Scene_v02",
+                                                     "material_asset":  "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_4_Backdrop_v02",
+                                                     "review_map":  "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_04ScenePreview_v01",
+                                                     "map_actor_count":  3,
+                                                     "camera":  "P4 fixed three-quarter camera, 50-degree pitch, 37-degree horizontal FOV",
+                                                     "texture_settings":  "sRGB, TC_EditorIcon (uncompressed), no alpha, Sharpen0 mips, UI group, non-streaming",
+                                                     "build_status":  "map_saved_pending_visual_review"
+                                                 },
+                                                 {
+                                                     "asset_id":  "P4_BETA6_CH05_SCENE",
+                                                     "chapter_id":  "chapter_5",
+                                                     "source_path":  "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch05_scene_v02.png",
+                                                     "source_sha256":  "DE090BF7EB5BBED4E5B79FE3B87541B7898FAA97B720616302421D48F9FB741B",
+                                                     "dimensions_px":  [
+                                                                           1672,
+                                                                           941
+                                                                       ],
+                                                     "texture_asset":  "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_5_Scene_v02",
+                                                     "material_asset":  "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_5_Backdrop_v02",
+                                                     "review_map":  "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_05ScenePreview_v01",
+                                                     "map_actor_count":  3,
+                                                     "camera":  "P4 fixed three-quarter camera, 50-degree pitch, 37-degree horizontal FOV",
+                                                     "texture_settings":  "sRGB, TC_EditorIcon (uncompressed), no alpha, Sharpen0 mips, UI group, non-streaming",
+                                                     "build_status":  "map_saved_pending_visual_review"
+                                                 },
+                                                 {
+                                                     "asset_id":  "P4_BETA6_CH06_SCENE",
+                                                     "chapter_id":  "chapter_6",
+                                                     "source_path":  "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch06_scene_v02.png",
+                                                     "source_sha256":  "9AA71F6906CDF22F886216276BD8A89D0ACB70BF4FAA747194B1D5A4D75B4BD8",
+                                                     "dimensions_px":  [
+                                                                           1672,
+                                                                           941
+                                                                       ],
+                                                     "texture_asset":  "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_6_Scene_v02",
+                                                     "material_asset":  "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_6_Backdrop_v02",
+                                                     "review_map":  "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_06ScenePreview_v01",
+                                                     "map_actor_count":  3,
+                                                     "camera":  "P4 fixed three-quarter camera, 50-degree pitch, 37-degree horizontal FOV",
+                                                     "texture_settings":  "sRGB, TC_EditorIcon (uncompressed), no alpha, Sharpen0 mips, UI group, non-streaming",
+                                                     "build_status":  "map_saved_pending_visual_review"
+                                                 }
+                                             ],
+                                    "runtimeBindingStatus":  "visual review approved; production art, prop audit, and runtime theme/component bindings remain pending"
+                                },
+    "beta6ProductionEnvironmentImport":  {
+                                             "sourceReportPath":  "UE5/Records/p4_alpha/evidence/Beta6/P4_Beta6_EnvironmentArt_import_report_v01.json",
+                                             "sourceReportSha256":  "EB44E11BB8403AF03C401DA9131903C21EF2433347DC62665B03D724A415040A",
+                                             "status":  "textures_imported_pending_engineering_theme_binding_and_readability_review",
+                                             "importedTextureCount":  5,
+                                             "assets":  [
+                                                            {
+                                                                "asset_id":  "P4_BETA6_CH02_ENVIRONMENT",
+                                                                "chapter_id":  "chapter_2",
+                                                                "source_path":  "UE5/SourceAssets/P4/Environment/Beta6/p4_beta6_ch02_environment_v01.png",
+                                                                "source_sha256":  "801279e32f035900b41399fd6ba65d4952e76ad537d49e04ebf80c6e9db47453",
+                                                                "dimensions_px":  [
+                                                                                      1672,
+                                                                                      941
+                                                                                  ],
+                                                                "texture_asset":  "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_2_Environment_v01",
+                                                                "imported_now":  false,
+                                                                "texture_settings":  "sRGB, TC_Default, no alpha, mip settings from World texture group, streamable",
+                                                                "status":  "texture_imported_pending_engineering_theme_binding_and_readability_review"
+                                                            },
+                                                            {
+                                                                "asset_id":  "P4_BETA6_CH03_ENVIRONMENT",
+                                                                "chapter_id":  "chapter_3",
+                                                                "source_path":  "UE5/SourceAssets/P4/Environment/Beta6/p4_beta6_ch03_environment_v01.png",
+                                                                "source_sha256":  "1c8c4125e758ac29d896803a7e74fffe9e667a336fb4706089b644ac76e40c93",
+                                                                "dimensions_px":  [
+                                                                                      1672,
+                                                                                      941
+                                                                                  ],
+                                                                "texture_asset":  "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_3_Environment_v01",
+                                                                "imported_now":  false,
+                                                                "texture_settings":  "sRGB, TC_Default, no alpha, mip settings from World texture group, streamable",
+                                                                "status":  "texture_imported_pending_engineering_theme_binding_and_readability_review"
+                                                            },
+                                                            {
+                                                                "asset_id":  "P4_BETA6_CH04_ENVIRONMENT",
+                                                                "chapter_id":  "chapter_4",
+                                                                "source_path":  "UE5/SourceAssets/P4/Environment/Beta6/p4_beta6_ch04_environment_v01.png",
+                                                                "source_sha256":  "67550a8fe0da554526e9b857440151dd6705c1bb68b5a96e71b356adfacefc6a",
+                                                                "dimensions_px":  [
+                                                                                      1672,
+                                                                                      941
+                                                                                  ],
+                                                                "texture_asset":  "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_4_Environment_v01",
+                                                                "imported_now":  false,
+                                                                "texture_settings":  "sRGB, TC_Default, no alpha, mip settings from World texture group, streamable",
+                                                                "status":  "texture_imported_pending_engineering_theme_binding_and_readability_review"
+                                                            },
+                                                            {
+                                                                "asset_id":  "P4_BETA6_CH05_ENVIRONMENT",
+                                                                "chapter_id":  "chapter_5",
+                                                                "source_path":  "UE5/SourceAssets/P4/Environment/Beta6/p4_beta6_ch05_environment_v01.png",
+                                                                "source_sha256":  "120a75abe6d8396fea281832acd991f50d3a34d11de6bc9f04523d0555283810",
+                                                                "dimensions_px":  [
+                                                                                      1672,
+                                                                                      941
+                                                                                  ],
+                                                                "texture_asset":  "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_5_Environment_v01",
+                                                                "imported_now":  false,
+                                                                "texture_settings":  "sRGB, TC_Default, no alpha, mip settings from World texture group, streamable",
+                                                                "status":  "texture_imported_pending_engineering_theme_binding_and_readability_review"
+                                                            },
+                                                            {
+                                                                "asset_id":  "P4_BETA6_CH06_ENVIRONMENT",
+                                                                "chapter_id":  "chapter_6",
+                                                                "source_path":  "UE5/SourceAssets/P4/Environment/Beta6/p4_beta6_ch06_environment_v01.png",
+                                                                "source_sha256":  "a48b27f8cfed45c89700fa69aa62c46c05f5dde586612fd2f62109e5223cb16c",
+                                                                "dimensions_px":  [
+                                                                                      1672,
+                                                                                      941
+                                                                                  ],
+                                                                "texture_asset":  "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_6_Environment_v01",
+                                                                "imported_now":  false,
+                                                                "texture_settings":  "sRGB, TC_Default, no alpha, mip settings from World texture group, streamable",
+                                                                "status":  "texture_imported_pending_engineering_theme_binding_and_readability_review"
+                                                            }
+                                                        ],
+                                             "reviewMapStatus":  "pending_environment_review_map_generation",
+                                             "runtimeBindingStatus":  "production textures are imported and projected as soft texture references; review materials/maps, actual DataTable import, runtime binding acceptance, and fixed-camera readability review remain pending"
+                                         },
+    "outputs":  [
+                    {
+                        "path":  "UE5/SourceAssets/P4/Data/Beta6/P4Beta6_Chapters.csv",
+                        "rowCount":  6,
+                        "sha256":  "4159F1D7B5BB1537807FE880BFE90EA4177D7E6C85108479F9CB717F1712E58C",
+                        "plannedDataTable":  "/Game/Naiwa/P4/Data/DT_P4_Beta6_Chapters"
+                    },
+                    {
+                        "path":  "UE5/SourceAssets/P4/Data/Beta6/P4Beta6_Themes.csv",
+                        "rowCount":  6,
+                        "sha256":  "85465C1628E0F9D14BC02DCA5E2338E4539D2636131DF879AE75B0B5AE3F9265",
+                        "plannedDataTable":  "/Game/Naiwa/P4/Data/DT_P4_Beta6_Themes"
+                    },
+                    {
+                        "path":  "UE5/SourceAssets/P4/Data/Beta6/P4Beta6_WaveSpawns.csv",
+                        "rowCount":  66,
+                        "sha256":  "2752169998C0D1BB873B4AF58F1CD750B23C1E86420AF028415AC67BC9637E24",
+                        "plannedDataTable":  "/Game/Naiwa/P4/Data/DT_P4_Beta6_WaveSpawns"
+                    }
+                ],
+    "ueDataTableImport":  {
+                              "status":  "pending_row_struct_and_native_asset_import",
+                              "importedAssets":  [
+
+                                                 ],
+                              "rowCounts":  null,
+                              "note":  "CSV projections are authoritative handoff artifacts only; runtime DataTables are not claimed until row structs compile and UE import readback is recorded."
+                          },
+    "unresolvedSourceFields":  [
+                                   {
+                                       "field":  "RuntimeAssetBindings",
+                                       "affectedChapters":  [
+                                                                2,
+                                                                3,
+                                                                4,
+                                                                5,
+                                                                6
+                                                            ],
+                                       "sourceStatus":  "five production environment textures are imported and owner scene review is approved; review materials/maps, production cleanup, prop audit, and Beta runtime bindings remain pending",
+                                       "action":  "Resolve each prop through the reuse/ownership ledger or create a P4 asset mapping, then complete readability acceptance before final visual sign-off."
+                                   }
+                               ],
+    "sourceChapterOneReference":  {
+                                      "chapter":  1,
+                                      "originalJsonWaveTotals":  [
+                                                                     3,
+                                                                     4,
+                                                                     5,
+                                                                     5,
+                                                                     3
+                                                                 ],
+                                      "acceptedAlphaWaveTotals":  [
+                                                                      4,
+                                                                      4,
+                                                                      4,
+                                                                      4,
+                                                                      4
+                                                                  ],
+                                      "usedWaveSource":  "UE5/SourceAssets/P4/Data/P4WaveAlpha.csv",
+                                      "acceptedEnemyCount":  20
+                                  }
+}

@@ -1,0 +1,79 @@
+{
+  "schema": "naiwa.p4.beta6.environment_art_import/1",
+  "status": "textures_imported_pending_engineering_theme_binding_and_readability_review",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "import_scope": "textures only; no materials, maps, theme binding, or runtime readability review",
+  "assets": [
+    {
+      "asset_id": "P4_BETA6_CH02_ENVIRONMENT",
+      "chapter_id": "chapter_2",
+      "source_path": "UE5/SourceAssets/P4/Environment/Beta6/p4_beta6_ch02_environment_v01.png",
+      "source_sha256": "801279e32f035900b41399fd6ba65d4952e76ad537d49e04ebf80c6e9db47453",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_2_Environment_v01",
+      "imported_now": false,
+      "texture_settings": "sRGB, TC_Default, no alpha, mip settings from World texture group, streamable",
+      "status": "texture_imported_pending_engineering_theme_binding_and_readability_review"
+    },
+    {
+      "asset_id": "P4_BETA6_CH03_ENVIRONMENT",
+      "chapter_id": "chapter_3",
+      "source_path": "UE5/SourceAssets/P4/Environment/Beta6/p4_beta6_ch03_environment_v01.png",
+      "source_sha256": "1c8c4125e758ac29d896803a7e74fffe9e667a336fb4706089b644ac76e40c93",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_3_Environment_v01",
+      "imported_now": false,
+      "texture_settings": "sRGB, TC_Default, no alpha, mip settings from World texture group, streamable",
+      "status": "texture_imported_pending_engineering_theme_binding_and_readability_review"
+    },
+    {
+      "asset_id": "P4_BETA6_CH04_ENVIRONMENT",
+      "chapter_id": "chapter_4",
+      "source_path": "UE5/SourceAssets/P4/Environment/Beta6/p4_beta6_ch04_environment_v01.png",
+      "source_sha256": "67550a8fe0da554526e9b857440151dd6705c1bb68b5a96e71b356adfacefc6a",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_4_Environment_v01",
+      "imported_now": false,
+      "texture_settings": "sRGB, TC_Default, no alpha, mip settings from World texture group, streamable",
+      "status": "texture_imported_pending_engineering_theme_binding_and_readability_review"
+    },
+    {
+      "asset_id": "P4_BETA6_CH05_ENVIRONMENT",
+      "chapter_id": "chapter_5",
+      "source_path": "UE5/SourceAssets/P4/Environment/Beta6/p4_beta6_ch05_environment_v01.png",
+      "source_sha256": "120a75abe6d8396fea281832acd991f50d3a34d11de6bc9f04523d0555283810",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_5_Environment_v01",
+      "imported_now": false,
+      "texture_settings": "sRGB, TC_Default, no alpha, mip settings from World texture group, streamable",
+      "status": "texture_imported_pending_engineering_theme_binding_and_readability_review"
+    },
+    {
+      "asset_id": "P4_BETA6_CH06_ENVIRONMENT",
+      "chapter_id": "chapter_6",
+      "source_path": "UE5/SourceAssets/P4/Environment/Beta6/p4_beta6_ch06_environment_v01.png",
+      "source_sha256": "a48b27f8cfed45c89700fa69aa62c46c05f5dde586612fd2f62109e5223cb16c",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_6_Environment_v01",
+      "imported_now": false,
+      "texture_settings": "sRGB, TC_Default, no alpha, mip settings from World texture group, streamable",
+      "status": "texture_imported_pending_engineering_theme_binding_and_readability_review"
+    }
+  ],
+  "asset_count": 5
+}

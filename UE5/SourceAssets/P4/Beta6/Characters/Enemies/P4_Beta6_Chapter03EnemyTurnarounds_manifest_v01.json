@@ -1,0 +1,65 @@
+{
+  "schema": "naiwa.p4.beta6.enemy_turnarounds_manifest/1",
+  "version": "v01",
+  "created_date": "2026-11-12",
+  "owner_role": "P4 Character Art",
+  "status": "chapter03_turnarounds_owner_approved_static_references",
+  "scope": "static Chapter 3 enemy turnaround references; not runtime sprites or animation atlases",
+  "import_settings": {
+    "srgb": true,
+    "compression_settings": "TC_DEFAULT",
+    "compression_no_alpha": false,
+    "mip_gen_settings": "TMGS_NO_MIPMAPS",
+    "lod_group": "TEXTUREGROUP_UI",
+    "never_stream": true
+  },
+  "assets": [
+    {
+      "asset_id": "P4_BETA6_NAILING_TURNAROUND",
+      "character_id": "nailing",
+      "display_name": "奶铃",
+      "debut_chapter": "chapter_3",
+      "behavior_visual_basis": "bell_aoe_r130; silhouette note: 项圈铃铛",
+      "view": "front, right-side profile, back",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_nailing_turnaround_v01.png",
+      "style_reference_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_enemy_concepts_v01.png",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "color_space": "sRGB",
+      "sha256": "65E06B06680F5617068422F5EA14303840EB39304D4DDA1153603AD0D6B0B2F2",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_nailing_turnaround_v01",
+      "runtime_reference": "none; static model-sheet reference only",
+      "status": "turnaround_owner_approved_static_reference",
+      "owner_approved_date": "2026-11-12"
+    },
+    {
+      "asset_id": "P4_BETA6_NAICHUI_TURNAROUND",
+      "character_id": "naichui",
+      "display_name": "奶锤",
+      "debut_chapter": "chapter_3",
+      "behavior_visual_basis": "slow_heavy_slam; silhouette note: 巨锤拖地",
+      "view": "front, right-side profile, back",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_naichui_turnaround_v01.png",
+      "style_reference_path": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naidun_turnaround_v01_concept.png",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "color_space": "sRGB",
+      "sha256": "0A5C2D0D7A14D11EB2207BF2C81AAE3553F3174E5F7CE7742A31FCAA6C0069C8",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_naichui_turnaround_v01",
+      "runtime_reference": "none; static model-sheet reference only",
+      "status": "turnaround_owner_approved_static_reference",
+      "owner_approved_date": "2026-11-12"
+    }
+  ],
+  "notes": [
+    "The visual designs are based on authored silhouette notes and require owner review before production animation frames.",
+    "Attack timing, impact/area effects, hitboxes, and runtime readability are intentionally not represented in these static sheets.",
+    "Engineering owns chapter binding and 720p/1080p fixed-camera readability review."
+  ]
+}

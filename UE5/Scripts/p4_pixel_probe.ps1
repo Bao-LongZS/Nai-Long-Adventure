@@ -2,7 +2,8 @@
 param(
     [string]$RepositoryRoot = '',
     [string]$RuntimeScreenshot = '',
-    [string]$RuntimeViewport = ''
+    [string]$RuntimeViewport = '',
+    [string]$OutputPath = ''
 )
 
 $ErrorActionPreference = 'Stop'
@@ -16,6 +17,7 @@ if ($PSVersionTable.PSEdition -eq 'Core') {
     $legacyArguments = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', $PSCommandPath, '-RepositoryRoot', $RepositoryRoot)
     if (-not [string]::IsNullOrWhiteSpace($RuntimeScreenshot)) { $legacyArguments += @('-RuntimeScreenshot', $RuntimeScreenshot) }
     if (-not [string]::IsNullOrWhiteSpace($RuntimeViewport)) { $legacyArguments += @('-RuntimeViewport', $RuntimeViewport) }
+    if (-not [string]::IsNullOrWhiteSpace($OutputPath)) { $legacyArguments += @('-OutputPath', $OutputPath) }
     & $windowsPowerShell @legacyArguments
     exit $LASTEXITCODE
 }
@@ -230,8 +232,15 @@ $a2ReportPath = Join-Path $root 'UE5/Records/p4_alpha/evidence/A2/P4_A2_RefinedA
 $widgetSourcePath = Join-Path $root 'UE5/NaiwaP0/Source/NaiwaRuntime/P4/Presentation/NaiwaP4ArtIntegrationWidget.cpp'
 $arenaSourcePath = Join-Path $root 'UE5/NaiwaP0/Source/NaiwaRuntime/P4/Core/NaiwaP4ArenaSubsystem.cpp'
 $outputDirectory = Join-Path $root 'UE5/Records/p4_alpha/evidence/PixelProbe'
-$reportPath = Join-Path $outputDirectory 'P4_source_pixel_probe_20261101_v03.json'
+if ([string]::IsNullOrWhiteSpace($OutputPath)) {
+    $reportPath = Join-Path $outputDirectory 'P4_source_pixel_probe_20261101_v03.json'
+} elseif ([System.IO.Path]::IsPathRooted($OutputPath)) {
+    $reportPath = [System.IO.Path]::GetFullPath($OutputPath)
+} else {
+    $reportPath = [System.IO.Path]::GetFullPath((Join-Path $root $OutputPath))
+}
 New-Item -ItemType Directory -Force -Path $outputDirectory | Out-Null
+New-Item -ItemType Directory -Force -Path (Split-Path -Parent $reportPath) | Out-Null
 
 $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
 $checks = [System.Collections.Generic.List[object]]::new()

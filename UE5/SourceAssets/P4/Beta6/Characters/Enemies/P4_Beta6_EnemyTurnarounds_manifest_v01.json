@@ -1,0 +1,86 @@
+{
+  "schema": "naiwa.p4.beta6.enemy_turnarounds_manifest/1",
+  "version": "v01",
+  "created_date": "2026-11-12",
+  "owner_role": "P4 Character Art",
+  "status": "three_turnarounds_owner_approved_static_references",
+  "scope": "static turnarounds for approved Beta6 enemy directions; not runtime sprites or animation atlases",
+  "import_settings": {
+    "srgb": true,
+    "compression_settings": "TC_DEFAULT",
+    "compression_no_alpha": false,
+    "mip_gen_settings": "TMGS_NO_MIPMAPS",
+    "lod_group": "TEXTUREGROUP_UI",
+    "never_stream": true
+  },
+  "assets": [
+    {
+      "asset_id": "P4_BETA6_NAIZHOU_TURNAROUND",
+      "character_id": "naizhou",
+      "display_name": "奶咒",
+      "debut_chapter": "chapter_2",
+      "source_concept_direction": "approved direction reference from 2026-11-11 Beta6 enemy concept sheet",
+      "view": "front, right-side profile, back",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_naizhou_turnaround_v01.png",
+      "concept_reference_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_enemy_concepts_v01.png",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "color_space": "sRGB",
+      "sha256": "0E0B303ADC4A48ED2A1CA0B8E7BFFF9B995E299605A1EF58461E7FC97FDFC39A",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_naizhou_turnaround_v01",
+      "runtime_reference": "none; static model-sheet reference only",
+      "status": "turnaround_owner_approved_static_reference",
+      "owner_approved_date": "2026-11-12"
+    },
+    {
+      "asset_id": "P4_BETA6_NAIPING_LEI_TURNAROUND",
+      "character_id": "naiping_lei",
+      "display_name": "奶瓶雷",
+      "debut_chapter": "chapter_2",
+      "source_concept_direction": "approved direction reference from 2026-11-11 Beta6 enemy concept sheet",
+      "view": "front, right-side profile, back",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_naiping_lei_turnaround_v01.png",
+      "concept_reference_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_enemy_concepts_v01.png",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "color_space": "sRGB",
+      "sha256": "A95F9CC85F21ED4F6CCECC5450E7DC97D55DA041584D48755428524B183681D4",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_naiping_lei_turnaround_v01",
+      "runtime_reference": "none; static model-sheet reference only",
+      "status": "turnaround_owner_approved_static_reference",
+      "owner_approved_date": "2026-11-12"
+    },
+    {
+      "asset_id": "P4_BETA6_NAIXIANG_TURNAROUND",
+      "character_id": "naixiang",
+      "display_name": "奶箱",
+      "debut_chapter": "chapter_5",
+      "source_concept_direction": "approved direction reference from 2026-11-11 Beta6 enemy concept sheet",
+      "view": "front, right-side profile, back",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_naixiang_turnaround_v01.png",
+      "concept_reference_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_enemy_concepts_v01.png",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "color_space": "sRGB",
+      "sha256": "F10FEB55A6E153FE421AB8ED9EACAD516963389FF709B656D235E95C27048047",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_naixiang_turnaround_v01",
+      "runtime_reference": "none; static model-sheet reference only",
+      "status": "turnaround_owner_approved_static_reference",
+      "owner_approved_date": "2026-11-12"
+    }
+  ],
+  "notes": [
+    "The approved concept silhouettes were expanded into matching front, side, and back reference views.",
+    "Character action poses, hitboxes, fuse timing, disguise timing, and runtime readability remain outside this static turnaround package.",
+    "Engineering owns chapter binding and 720p/1080p fixed-camera readability review."
+  ]
+}

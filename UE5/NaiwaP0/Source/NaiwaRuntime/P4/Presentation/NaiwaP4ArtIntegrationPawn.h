@@ -86,6 +86,8 @@ public:
 private:
 	void LoadFrameCatalog();
 	void SyncFromSimulation();
+	void SyncBeta6Backdrop();
+	void ApplyArenaBackdropCameraTransform(float ArenaDepth, float CameraPitchDegrees);
 	void SyncGrayboxEntities(float DeltaSeconds);
 	void SyncDamageNumbers(float DeltaSeconds);
 	void LoadVfxCatalog();
@@ -137,6 +139,12 @@ private:
 
 	UPROPERTY(Transient)
 	TObjectPtr<UMaterialInterface> SpriteMaterialBase;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UMaterialInterface> ArenaBackdropMaterialBase;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UMaterialInstanceDynamic> Beta6ArenaBackdropMaterial;
 
 	UPROPERTY(Transient)
 	TObjectPtr<UMaterialInterface> DamageNumberTextMaterial;
@@ -199,6 +207,7 @@ private:
 	float ImpactPresentationFreezeSecondsRemaining = 0.0f;
 
 	FName CurrentFrameId = NAME_None;
+	FName CurrentBeta6BackdropThemeId = NAME_None;
 	FName CurrentBossSequenceId = NAME_None;
 	int32 CurrentBossFrameIndex = INDEX_NONE;
 	float CurrentBossFrameElapsedSeconds = 0.0f;

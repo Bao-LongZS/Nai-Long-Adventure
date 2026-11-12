@@ -5,6 +5,7 @@
 #include "../Core/NaiwaP4Settings.h"
 #include "../Data/NaiwaP4DataTypes.h"
 #include "NaiwaP4ArtIntegrationGameMode.h"
+#include "NaiwaP4Beta6TestGameMode.h"
 #include "Components/SceneComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/TextRenderComponent.h"
@@ -27,6 +28,7 @@ namespace
 	const TCHAR* SpriteMaterialPath = TEXT("/Game/Naiwa/P4/Materials/Alpha/A1/M_P4_A1_SpriteRuntime.M_P4_A1_SpriteRuntime");
 	const TCHAR* ArenaBackdropMaterialPath = TEXT("/Game/Naiwa/P4/Materials/Alpha/A2/M_P4_A2_RefinedBackdrop_v02.M_P4_A2_RefinedBackdrop_v02");
 	const FName RefinedArenaOwnerTag(TEXT("NaiwaP4A2RefinedArena"));
+	const TCHAR* ArenaBackdropTextureParameter = TEXT("P4ArenaSceneTexture");
 	const TCHAR* NaiDingStaticPreviewTexturePath = TEXT("/Game/Naiwa/P4/Art/Alpha/W3_Enemies/StaticPreview/T_P4_W3_Naiding_IdleFront_StaticPreview_v01.T_P4_W3_Naiding_IdleFront_StaticPreview_v01");
 	const TCHAR* NaiDunStaticPreviewTexturePath = TEXT("/Game/Naiwa/P4/Art/Alpha/W3_Enemies/StaticPreview/T_P4_W3_Naidun_IdleFront_StaticPreview_v01.T_P4_W3_Naidun_IdleFront_StaticPreview_v01");
 	const TCHAR* ShadowMaterialPath = TEXT("/Game/Naiwa/P4/Materials/W1/M_P4_W1_SoftShadow_RadialV6.M_P4_W1_SoftShadow_RadialV6");
@@ -88,45 +90,35 @@ void ANaiwaP4ArtIntegrationPawn::BeginPlay()
 		ContactShadow->SetStaticMesh(Plane);
 		ArenaBackdrop->SetStaticMesh(Plane);
 	}
+	ArenaBackdrop->SetVisibility(false);
 
 	const UNaiwaP4Settings* Settings = GetDefault<UNaiwaP4Settings>();
 	UWorld* World = GetWorld();
 	const ANaiwaP4ArtIntegrationGameMode* PreviewGameMode = World
 		? Cast<ANaiwaP4ArtIntegrationGameMode>(World->GetAuthGameMode())
 		: nullptr;
+	const ANaiwaP4Beta6TestGameMode* Beta6TestGameMode = World
+		? Cast<ANaiwaP4Beta6TestGameMode>(World->GetAuthGameMode())
+		: nullptr;
 	UMaterialInterface* ArenaScene = LoadObject<UMaterialInterface>(nullptr, ArenaBackdropMaterialPath);
+	ArenaBackdropMaterialBase = ArenaScene;
 	const bool bRefinedArenaMap = World && World->GetWorldSettings()
 		&& World->GetWorldSettings()->ActorHasTag(RefinedArenaOwnerTag);
 	if (Settings && ArenaBackdrop && ArenaScene && bRefinedArenaMap)
 	{
 		ArenaBackdrop->SetMaterial(0, ArenaScene);
+		ArenaBackdrop->SetVisibility(true);
 		const float ArenaDepth = PreviewGameMode
 			? PreviewGameMode->GetPreviewArenaDepth()
 			: Settings->LogicalArenaDepth;
 		const float CameraPitchDegrees = PreviewGameMode
 			? PreviewGameMode->GetPreviewCameraPitch()
 			: Settings->CameraPitchDegrees;
-		const float PitchRadians = FMath::DegreesToRadians(CameraPitchDegrees);
-		const float CameraDistance = Settings->CameraDistance;
-		const FVector ArenaCenter(Settings->LogicalArenaWidth * 0.5f, ArenaDepth * 0.5f, 0.0f);
-		const FVector CameraOffset(0.0f,
-			-CameraDistance * FMath::Cos(PitchRadians),
-			 CameraDistance * FMath::Sin(PitchRadians));
-		const FVector CameraLocation = ArenaCenter + CameraOffset;
-		const FRotator CameraRotation(-CameraPitchDegrees, 90.0f, 0.0f);
-		const FVector CameraForward = CameraRotation.Vector().GetSafeNormal();
-		const FVector CameraRight = CameraRotation.RotateVector(FVector::RightVector).GetSafeNormal();
-		const float BackdropDistance = CameraDistance + 650.0f;
-		const float BackdropWidth = 2.0f * BackdropDistance
-			* FMath::Tan(FMath::DegreesToRadians(Settings->CameraHorizontalFOVDegrees * 0.5f)) * 1.06f;
-		const float BackdropHeight = BackdropWidth * (9.0f / 16.0f);
-
-		// The camera is fixed, so a high-resolution scene plate behind the play plane
-		// gives the 2.5D sprites a detailed environment without adding gameplay clutter.
-		// Face the plane toward the camera so the imported scene plate keeps its UV orientation.
-		ArenaBackdrop->SetWorldLocation(CameraLocation + CameraForward * BackdropDistance);
-		ArenaBackdrop->SetWorldRotation(FRotationMatrix::MakeFromXZ(CameraRight, -CameraForward).Rotator());
-		ArenaBackdrop->SetWorldScale3D(FVector(BackdropWidth / 100.0f, BackdropHeight / 100.0f, 1.0f));
+		ApplyArenaBackdropCameraTransform(ArenaDepth, CameraPitchDegrees);
+	}
+	else if (Settings && ArenaBackdrop && ArenaScene && Beta6TestGameMode)
+	{
+		SyncBeta6Backdrop();
 	}
 	else
 	{
@@ -134,6 +126,10 @@ void ANaiwaP4ArtIntegrationPawn::BeginPlay()
 		if (bRefinedArenaMap)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("P4 refined arena background is unavailable: %s"), ArenaBackdropMaterialPath);
+		}
+		else if (Beta6TestGameMode)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("P4 Beta6 preview backdrop material is unavailable: %s"), ArenaBackdropMaterialPath);
 		}
 	}
 
@@ -227,6 +223,7 @@ void ANaiwaP4ArtIntegrationPawn::BeginPlay()
 void ANaiwaP4ArtIntegrationPawn::Tick(const float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
+	SyncBeta6Backdrop();
 	ProcessVfxEvents();
 	BossImpactPoseRemainingSeconds = FMath::Max(0.0f,
 		BossImpactPoseRemainingSeconds - FMath::Max(DeltaSeconds, 0.0f));
@@ -244,6 +241,86 @@ void ANaiwaP4ArtIntegrationPawn::Tick(const float DeltaSeconds)
 	SyncDamageNumbers(DeltaSeconds);
 	SyncActionVfx();
 	SyncActiveVfx(DeltaSeconds);
+}
+
+void ANaiwaP4ArtIntegrationPawn::SyncBeta6Backdrop()
+{
+	UWorld* World = GetWorld();
+	const ANaiwaP4Beta6TestGameMode* Beta6TestGameMode = World
+		? Cast<ANaiwaP4Beta6TestGameMode>(World->GetAuthGameMode())
+		: nullptr;
+	const UNaiwaP4Settings* Settings = GetDefault<UNaiwaP4Settings>();
+	UNaiwaP4ArenaSubsystem* Arena = World ? World->GetSubsystem<UNaiwaP4ArenaSubsystem>() : nullptr;
+	const FNaiwaP4Beta6ChapterBundle* Chapter = Arena ? Arena->GetCurrentBeta6Chapter() : nullptr;
+	if (!Beta6TestGameMode || !Settings || !ArenaBackdrop || !ArenaBackdropMaterialBase)
+	{
+		return;
+	}
+	if (!Chapter)
+	{
+		ArenaBackdrop->SetVisibility(false);
+		return;
+	}
+
+	const FName ThemeId = Chapter->Theme.ThemeId;
+	if (ThemeId.IsNone())
+	{
+		ArenaBackdrop->SetVisibility(false);
+		return;
+	}
+
+	if (CurrentBeta6BackdropThemeId != ThemeId || !Beta6ArenaBackdropMaterial)
+	{
+		UTexture2D* BackdropTexture = Chapter->Theme.BackdropTexture.LoadSynchronous();
+		if (!BackdropTexture)
+		{
+			ArenaBackdrop->SetVisibility(false);
+			return;
+		}
+
+		Beta6ArenaBackdropMaterial = UMaterialInstanceDynamic::Create(ArenaBackdropMaterialBase, this);
+		if (!Beta6ArenaBackdropMaterial)
+		{
+			ArenaBackdrop->SetVisibility(false);
+			return;
+		}
+		Beta6ArenaBackdropMaterial->SetTextureParameterValue(ArenaBackdropTextureParameter, BackdropTexture);
+		CurrentBeta6BackdropThemeId = ThemeId;
+		ArenaBackdrop->SetMaterial(0, Beta6ArenaBackdropMaterial);
+		ApplyArenaBackdropCameraTransform(Beta6TestGameMode->GetPreviewArenaDepth(),
+			Beta6TestGameMode->GetPreviewCameraPitch());
+	}
+	ArenaBackdrop->SetVisibility(true);
+}
+
+void ANaiwaP4ArtIntegrationPawn::ApplyArenaBackdropCameraTransform(
+	const float ArenaDepth, const float CameraPitchDegrees)
+{
+	const UNaiwaP4Settings* Settings = GetDefault<UNaiwaP4Settings>();
+	if (!Settings || !ArenaBackdrop)
+	{
+		return;
+	}
+
+	const float PitchRadians = FMath::DegreesToRadians(CameraPitchDegrees);
+	const float CameraDistance = Settings->CameraDistance;
+	const FVector ArenaCenter(Settings->LogicalArenaWidth * 0.5f, ArenaDepth * 0.5f, 0.0f);
+	const FVector CameraOffset(0.0f,
+		-CameraDistance * FMath::Cos(PitchRadians),
+		 CameraDistance * FMath::Sin(PitchRadians));
+	const FVector CameraLocation = ArenaCenter + CameraOffset;
+	const FRotator CameraRotation(-CameraPitchDegrees, 90.0f, 0.0f);
+	const FVector CameraForward = CameraRotation.Vector().GetSafeNormal();
+	const FVector CameraRight = CameraRotation.RotateVector(FVector::RightVector).GetSafeNormal();
+	const float BackdropDistance = CameraDistance + 650.0f;
+	const float BackdropWidth = 2.0f * BackdropDistance
+		* FMath::Tan(FMath::DegreesToRadians(Settings->CameraHorizontalFOVDegrees * 0.5f)) * 1.06f;
+	const float BackdropHeight = BackdropWidth * (9.0f / 16.0f);
+
+	// Fixed camera scene plates sit behind the play plane and keep sprites and combat feedback in world space.
+	ArenaBackdrop->SetWorldLocation(CameraLocation + CameraForward * BackdropDistance);
+	ArenaBackdrop->SetWorldRotation(FRotationMatrix::MakeFromXZ(CameraRight, -CameraForward).Rotator());
+	ArenaBackdrop->SetWorldScale3D(FVector(BackdropWidth / 100.0f, BackdropHeight / 100.0f, 1.0f));
 }
 
 void ANaiwaP4ArtIntegrationPawn::SyncGrayboxEntities(const float DeltaSeconds)

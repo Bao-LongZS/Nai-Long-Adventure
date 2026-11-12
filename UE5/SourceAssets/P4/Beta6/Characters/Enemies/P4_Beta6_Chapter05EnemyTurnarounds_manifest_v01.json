@@ -1,0 +1,103 @@
+{
+  "schema": "naiwa.p4.beta6.enemy_turnarounds_manifest/1",
+  "version": "v01",
+  "created_date": "2026-11-12",
+  "owner_role": "P4 Character Art",
+  "status": "chapter05_turnarounds_owner_approved_static_references",
+  "scope": "static Chapter 5 enemy turnaround references; not runtime sprites or animation atlases",
+  "import_settings": {
+    "srgb": true,
+    "compression_settings": "TC_DEFAULT",
+    "compression_no_alpha": false,
+    "mip_gen_settings": "TMGS_NO_MIPMAPS",
+    "lod_group": "TEXTUREGROUP_UI",
+    "never_stream": true
+  },
+  "assets": [
+    {
+      "asset_id": "P4_BETA6_NAISHUANG_TURNAROUND",
+      "character_id": "naishuang",
+      "display_name": "奶霜",
+      "debut_chapter": "chapter_5",
+      "behavior_visual_basis": "slow_projectile_40pct_3s; silhouette note: 霜枝权杖",
+      "view": "front, right-side profile, back",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_naishuang_turnaround_v01.png",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "color_space": "sRGB",
+      "sha256": "D9CD0838885E36EDCC81645605BEA7F458687217F96628DA712E519DDF830264",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_naishuang_turnaround_v01",
+      "runtime_reference": "none; static model-sheet reference only",
+      "status": "turnaround_owner_approved_static_reference",
+      "owner_approved_date": "2026-11-12"
+    },
+    {
+      "asset_id": "P4_BETA6_CHACHA_TURNAROUND",
+      "character_id": "chacha",
+      "display_name": "奶察",
+      "debut_chapter": "chapter_5",
+      "behavior_visual_basis": "patrol_then_call_reinforce; silhouette note: 望远镜",
+      "view": "front, right-side profile, back",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_chacha_turnaround_v01.png",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "color_space": "sRGB",
+      "sha256": "01415165BB99943AC28B4D8E1489851F3C6A886CB7C278C02890EF597BD1104F",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_chacha_turnaround_v01",
+      "runtime_reference": "none; static model-sheet reference only",
+      "status": "turnaround_owner_approved_static_reference",
+      "owner_approved_date": "2026-11-12"
+    },
+    {
+      "asset_id": "P4_BETA6_HAOHAO_TURNAROUND",
+      "character_id": "haohao",
+      "display_name": "奶豪",
+      "debut_chapter": "chapter_5",
+      "behavior_visual_basis": "lob_projectile; silhouette note: 大金链 + 抛掷手",
+      "view": "front, right-side profile, back",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_haohao_turnaround_v01.png",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "color_space": "sRGB",
+      "sha256": "91ABE45694068865B6C13F299C48C32737D6C37F8FA23C5EEA6608FC5B600A40",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_haohao_turnaround_v01",
+      "runtime_reference": "none; static model-sheet reference only",
+      "status": "turnaround_owner_approved_static_reference",
+      "owner_approved_date": "2026-11-12"
+    },
+    {
+      "asset_id": "P4_BETA6_DANDAN_TURNAROUND",
+      "character_id": "dandan",
+      "display_name": "奶蛋",
+      "debut_chapter": "chapter_5",
+      "behavior_visual_basis": "rolling_fuse_bomb; silhouette note: 蛋形 + 滚动尾迹",
+      "view": "front, right-side profile, back",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_dandan_turnaround_v01.png",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "color_space": "sRGB",
+      "sha256": "10E600D5715148BF34359402DAFC753FC026CE468DBA56022C0D503C23CBECCC",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_dandan_turnaround_v01",
+      "runtime_reference": "none; static model-sheet reference only",
+      "status": "turnaround_owner_approved_static_reference",
+      "owner_approved_date": "2026-11-12"
+    }
+  ],
+  "notes": [
+    "Distinctive props are kept to the approved authored silhouette cues; no attacks, projectiles, warning indicators, or timings are drawn.",
+    "Dandan retains an egg body and small unlit wick, distinct from Naiping Lei's glass bottle and cork fuse.",
+    "Engineering owns chapter binding and 720p/1080p fixed-camera readability review."
+  ]
+}

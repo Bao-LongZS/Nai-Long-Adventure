@@ -6,9 +6,11 @@
 #include "../Input/NaiwaP4InputBuffer.h"
 #include "../Data/NaiwaP4DataTypes.h"
 #include "../Data/NaiwaP4UpgradeCatalog.h"
+#include "../Progress/NaiwaP4Beta6ChapterFlow.h"
 #include "NaiwaP4ArenaSubsystem.generated.h"
 
 class UDataTable;
+class UNaiwaP4ProgressSubsystem;
 
 struct FNaiwaP4WaveSpawnEntry
 {
@@ -68,6 +70,20 @@ public:
 	bool LoadUpgradeCsvFile(const FString& UpgradeCsvPath, FString& OutError);
 	bool LoadCombatDataTables(const UDataTable* EnemyTable, const UDataTable* WaveTable, FString& OutError);
 	bool LoadCombatCsvFiles(const FString& EnemyCsvPath, const FString& WaveCsvPath, FString& OutError);
+	/** Loads the frozen six-table projection without changing the legacy W3 preview tables. */
+	bool LoadBeta6ProgressionTables(const UDataTable* ChapterTable, const UDataTable* ThemeTable,
+		const UDataTable* WaveSpawnTable, const UDataTable* EnemyTable,
+		const UDataTable* BossTable, const UDataTable* BossAttackTable, FString& OutError);
+	/** Starts/resumes/retries one Beta6 chapter in the fixed-step arena. */
+	bool StartBeta6Run(int64 RunSeed, FString& OutError);
+	bool ResumeBeta6Run(FString& OutError);
+	bool RetryBeta6Chapter(FString& OutError);
+	bool BeginNextBeta6Chapter(FString& OutError);
+	bool CompleteBeta6Chapter(int32& OutNextChapterIndex, FString& OutError);
+	ENaiwaP4Beta6FlowPhase GetBeta6FlowPhase() const { return Beta6ChapterFlow.GetPhase(); }
+	bool IsBeta6RuntimeActive() const { return bBeta6RuntimeActive; }
+	const FNaiwaP4Beta6ChapterBundle* GetCurrentBeta6Chapter() const
+		{ return Beta6ChapterFlow.GetCurrentChapter(); }
 	TArray<FName> GetAvailableUpgradeCardIds() const;
 	int32 GetUpgradeCardRank(FName CardId) const;
 	bool RerollUpgradeChoice(FString& OutError);
@@ -80,11 +96,25 @@ private:
 	void AdvancePlayerMovement(const FNaiwaP4InputCommand& Command);
 	void AdvancePlayerAutoFire();
 	void AdvanceEnemyBrains();
+	void AdvanceBeta6EnemyBrain(FNaiwaP4EntityState& Enemy, const FNaiwaP4EntityState& Player);
 	void AdvanceBossBrain(FNaiwaP4EntityState& Boss, const FNaiwaP4EntityState& Player);
+	void AdvanceBeta6BossBrain(FNaiwaP4EntityState& Boss, const FNaiwaP4EntityState& Player);
+	void BeginBeta6BossAttack(FNaiwaP4EntityState& Boss, const FNaiwaP4EntityState& Player,
+		const FNaiwaP4Beta6BossAttackRow& Attack);
 	void AdvanceWaveDirector();
 	void SpawnWaveEnemy(const FNaiwaP4WaveSpawnEntry& Entry);
 	void SpawnWaveBoss();
+	void QueueBeta6EnemySpawn(FName EnemyId, FVector2D Position, int32 WaveIndex);
+	void QueueSummonedEnemies(const TArray<FName>& EnemyIds, int32 Count,
+		FVector2D Origin, int32 WaveIndex, int32 MaxConcurrentEnemies = 4);
+	void QueueEnemyProjectile(int32 OwnerEntityId, FVector2D Origin, FVector2D Target,
+		float Speed, int32 Damage, float ExplosionRadius = 0.0f,
+		float SlowMultiplier = 1.0f, int32 SlowDurationTicks = 0);
+	void FlushPendingSimulatedEntities();
 	void BeginWave(int32 WaveIndex);
+	bool StartActiveBeta6Chapter(UNaiwaP4ProgressSubsystem& Progress, FString& OutError);
+	bool RestoreBeta6UpgradeSequence(UNaiwaP4ProgressSubsystem& Progress, FString& OutError);
+	UNaiwaP4ProgressSubsystem* GetBeta6ProgressSubsystem() const;
 	void AdvanceProjectiles();
 	void ResolvePendingDamage(bool bPlayerBlockHeld);
 	void GrantKillExperience(int32 SourceEntityId, int32 KilledEntityId);
@@ -99,14 +129,20 @@ private:
 	void UsePlayerUltimate(FNaiwaP4EntityState& Player);
 	FNaiwaP4EntityState* FindPlayerEntity();
 	FNaiwaP4EntityState* FindNearestEnemyTarget(const FVector2D& Origin, double MaxRange);
+	const TMap<FName, FNaiwaP4EnemyRow>& GetActiveEnemyCatalog() const;
+	const TArray<FNaiwaP4WaveSpawnEntry>& GetActiveWaveSpawnPlan() const;
 	int32 SecondsToTicks(double Seconds) const;
 
 	FNaiwaP4ArenaState State;
 	FNaiwaP4InputBuffer InputBuffer;
 	FNaiwaP4InputCommand LastConsumedPlayerCommand;
 	FNaiwaP4UpgradeCatalog UpgradeCatalog;
+	FNaiwaP4Beta6ChapterFlow Beta6ChapterFlow;
 	TMap<FName, FNaiwaP4EnemyRow> EnemyCatalog;
 	TArray<FNaiwaP4WaveSpawnEntry> WaveSpawnPlan;
+	TMap<FName, FNaiwaP4EnemyRow> Beta6EnemyCatalog;
+	TArray<FNaiwaP4WaveSpawnEntry> Beta6WaveSpawnPlan;
+	TArray<FNaiwaP4EntityState> PendingSimulatedEntities;
 	TMap<int32, FVector2D> PreviousPresentationPositions;
 	double FixedAccumulatorSeconds = 0.0;
 	double FixedStepSeconds = 1.0 / 60.0;
@@ -118,4 +154,7 @@ private:
 	double PlayerBlockMoveSpeedScale = 0.45;
 	int32 PlayerMaxHP = 120;
 	bool bSimulationActive = false;
+	bool bBeta6CatalogLoaded = false;
+	bool bBeta6RuntimeActive = false;
+	bool bRestoringBeta6Upgrades = false;
 };

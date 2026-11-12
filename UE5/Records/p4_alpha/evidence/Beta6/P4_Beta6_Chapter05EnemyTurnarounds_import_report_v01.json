@@ -1,0 +1,69 @@
+{
+  "schema": "naiwa.p4.beta6.chapter05_enemy_turnarounds_import/1",
+  "status": "chapter05_turnarounds_imported_pending_owner_review",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "runtime_reference": "none; static Chapter 5 enemy reference sheets only",
+  "assets": [
+    {
+      "asset_id": "P4_BETA6_NAISHUANG_TURNAROUND",
+      "character_id": "naishuang",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_naishuang_turnaround_v01.png",
+      "source_sha256": "d9cd0838885e36edcc81645605bea7f458687217f96628da712e519ddf830264",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_naishuang_turnaround_v01",
+      "imported_now": true,
+      "texture_settings": "sRGB, TC_Default, alpha preserved, no mips, UI group, non-streaming",
+      "status": "turnaround_imported_pending_owner_review"
+    },
+    {
+      "asset_id": "P4_BETA6_CHACHA_TURNAROUND",
+      "character_id": "chacha",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_chacha_turnaround_v01.png",
+      "source_sha256": "01415165bb99943ac28b4d8e1489851f3c6a886cb7c278c02890ef597bd1104f",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_chacha_turnaround_v01",
+      "imported_now": true,
+      "texture_settings": "sRGB, TC_Default, alpha preserved, no mips, UI group, non-streaming",
+      "status": "turnaround_imported_pending_owner_review"
+    },
+    {
+      "asset_id": "P4_BETA6_HAOHAO_TURNAROUND",
+      "character_id": "haohao",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_haohao_turnaround_v01.png",
+      "source_sha256": "91abe45694068865b6c13f299c48c32737d6c37f8fa23c5eea6608fc5b600a40",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_haohao_turnaround_v01",
+      "imported_now": true,
+      "texture_settings": "sRGB, TC_Default, alpha preserved, no mips, UI group, non-streaming",
+      "status": "turnaround_imported_pending_owner_review"
+    },
+    {
+      "asset_id": "P4_BETA6_DANDAN_TURNAROUND",
+      "character_id": "dandan",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_dandan_turnaround_v01.png",
+      "source_sha256": "10e600d5715148bf34359402dafc753fc026ce468dba56022c0d503c23cbeccc",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_dandan_turnaround_v01",
+      "imported_now": true,
+      "texture_settings": "sRGB, TC_Default, alpha preserved, no mips, UI group, non-streaming",
+      "status": "turnaround_imported_pending_owner_review"
+    }
+  ],
+  "asset_count": 4
+}

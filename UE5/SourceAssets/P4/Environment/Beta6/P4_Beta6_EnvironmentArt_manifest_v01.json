@@ -1,0 +1,114 @@
+{
+  "schema": "naiwa.p4.beta6.environment_art_manifest/1",
+  "version": "v01",
+  "created_date": "2026-11-12",
+  "status": "production_backgrounds_imported_pending_engineering_theme_binding_and_readability_review",
+  "owner_role": "P4 Environment Art",
+  "source_art_generated_with": "built-in image_gen",
+  "import_scope": "texture assets only; no material creation, map edits, chapter binding, or runtime readability sign-off",
+  "ue_import_settings": {
+    "srgb": true,
+    "compression_settings": "TC_DEFAULT",
+    "compression_no_alpha": true,
+    "mip_gen_settings": "TMGS_FROM_TEXTURE_GROUP",
+    "lod_group": "TEXTUREGROUP_WORLD",
+    "never_stream": false
+  },
+  "assets": [
+    {
+      "asset_id": "P4_BETA6_CH02_ENVIRONMENT",
+      "chapter_id": "chapter_2",
+      "name": "沙丘补给线",
+      "source_path": "UE5/SourceAssets/P4/Environment/Beta6/p4_beta6_ch02_environment_v01.png",
+      "source_concept_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch02_scene_v02.png",
+      "version": "v01",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "alpha_mode": "opaque RGB",
+      "color_space": "sRGB",
+      "sha256": "801279E32F035900B41399FD6BA65D4952E76AD537D49E04EBF80C6E9DB47453",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_2_Environment_v01",
+      "runtime_reference": "not bound; engineering owns chapter theme binding and fixed-camera readability review",
+      "status": "production_art_imported_pending_engineering_review"
+    },
+    {
+      "asset_id": "P4_BETA6_CH03_ENVIRONMENT",
+      "chapter_id": "chapter_3",
+      "name": "沙暴猪圈",
+      "source_path": "UE5/SourceAssets/P4/Environment/Beta6/p4_beta6_ch03_environment_v01.png",
+      "source_concept_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch03_scene_v02.png",
+      "version": "v01",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "alpha_mode": "opaque RGB",
+      "color_space": "sRGB",
+      "sha256": "1C8C4125E758AC29D896803A7E74FFFE9E667A336FB4706089B644AC76E40C93",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_3_Environment_v01",
+      "runtime_reference": "not bound; engineering owns chapter theme binding and fixed-camera readability review",
+      "status": "production_art_imported_pending_engineering_review"
+    },
+    {
+      "asset_id": "P4_BETA6_CH04_ENVIRONMENT",
+      "chapter_id": "chapter_4",
+      "name": "奶桶擂台",
+      "source_path": "UE5/SourceAssets/P4/Environment/Beta6/p4_beta6_ch04_environment_v01.png",
+      "source_concept_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch04_scene_v02.png",
+      "version": "v01",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "alpha_mode": "opaque RGB",
+      "color_space": "sRGB",
+      "sha256": "67550A8FE0DA554526E9B857440151DD6705C1BB68B5A96E71B356ADFACEFC6A",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_4_Environment_v01",
+      "runtime_reference": "not bound; engineering owns chapter theme binding and fixed-camera readability review",
+      "status": "production_art_imported_pending_engineering_review"
+    },
+    {
+      "asset_id": "P4_BETA6_CH05_ENVIRONMENT",
+      "chapter_id": "chapter_5",
+      "name": "沙丘夜市",
+      "source_path": "UE5/SourceAssets/P4/Environment/Beta6/p4_beta6_ch05_environment_v01.png",
+      "source_concept_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch05_scene_v02.png",
+      "version": "v01",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "alpha_mode": "opaque RGB",
+      "color_space": "sRGB",
+      "sha256": "120A75ABE6D8396FEA281832ACD991F50D3A34D11DE6BC9F04523D0555283810",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_5_Environment_v01",
+      "runtime_reference": "not bound; engineering owns chapter theme binding and fixed-camera readability review",
+      "status": "production_art_imported_pending_engineering_review"
+    },
+    {
+      "asset_id": "P4_BETA6_CH06_ENVIRONMENT",
+      "chapter_id": "chapter_6",
+      "name": "秋林校场",
+      "source_path": "UE5/SourceAssets/P4/Environment/Beta6/p4_beta6_ch06_environment_v01.png",
+      "source_concept_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch06_scene_v02.png",
+      "version": "v01",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "alpha_mode": "opaque RGB",
+      "color_space": "sRGB",
+      "sha256": "A48B27F8CFED45C89700FA69AA62C46C05F5DDE586612FD2F62109E5223CB16C",
+      "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_6_Environment_v01",
+      "runtime_reference": "not bound; engineering owns chapter theme binding and fixed-camera readability review",
+      "status": "production_art_imported_pending_engineering_review"
+    }
+  ],
+  "notes": [
+    "Every Beta6 chapter 2–6 uses a separate environment composition, silhouette, palette, and ground treatment.",
+    "The existing v02 scene plates remain approved direction/review assets; this manifest tracks the new production background images.",
+    "Engineering owns UE map/theme binding and 720p/1080p fixed-camera actor, warning, and HUD readability review. No runtime pass is claimed here."
+  ]
+}

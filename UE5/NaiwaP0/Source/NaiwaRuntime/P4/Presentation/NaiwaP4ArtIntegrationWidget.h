@@ -12,8 +12,9 @@ class UImage;
 class UHorizontalBox;
 class UProgressBar;
 class UTextBlock;
+class UTexture2D;
 
-/** Native UMG implementation of the approved P4 A3 HUD and card-choice layout. */
+/** Native UMG P4 combat HUD; its isolated Beta6 path adds chapter settlement and continuation. */
 UCLASS()
 class NAIWARUNTIME_API UNaiwaP4ArtIntegrationWidget final : public UUserWidget
 {
@@ -42,6 +43,7 @@ private:
 	void RefreshUpgradeRerollState();
 	void UpdateAttackWarnings(class UNaiwaP4ArenaSubsystem* Arena);
 	void UpdateEnemyHealthBars(class UNaiwaP4ArenaSubsystem* Arena);
+	void UpdatePlayerPortrait(const struct FNaiwaP4EntityState& Player);
 	void UpdateBossAndResultUI(class UNaiwaP4ArenaSubsystem* Arena);
 	UFUNCTION()
 	void OnCard0Clicked();
@@ -77,6 +79,22 @@ private:
 	TObjectPtr<UTextBlock> LevelProgressText;
 	UPROPERTY(Transient)
 	TObjectPtr<UTextBlock> WaveProgressText;
+	UPROPERTY(Transient)
+	TObjectPtr<UImage> PlayerPortraitImage;
+	UPROPERTY(Transient)
+	TObjectPtr<UTextBlock> PlayerPortraitStatusText;
+	UPROPERTY(Transient)
+	TObjectPtr<UImage> RunResultPortraitImage;
+	UPROPERTY(Transient)
+	TObjectPtr<UTexture2D> IdlePortraitTexture;
+	UPROPERTY(Transient)
+	TObjectPtr<UTexture2D> LaughPortraitTexture;
+	UPROPERTY(Transient)
+	TObjectPtr<UTexture2D> VictoryPortraitTexture;
+	UPROPERTY(Transient)
+	TObjectPtr<UTexture2D> DistressPortraitTexture;
+	UPROPERTY(Transient)
+	TObjectPtr<UTexture2D> DisplayedPlayerPortraitTexture;
 
 	UPROPERTY(Transient)
 	TObjectPtr<UTextBlock> TelegraphPreviewText;
@@ -94,6 +112,10 @@ private:
 	TObjectPtr<UTextBlock> RunResultTitle;
 	UPROPERTY(Transient)
 	TObjectPtr<UTextBlock> RunResultHint;
+	UPROPERTY(Transient)
+	TObjectPtr<UButton> RunResultActionButton;
+	UPROPERTY(Transient)
+	TObjectPtr<UTextBlock> RunResultActionText;
 
 	UPROPERTY(Transient)
 	TObjectPtr<UTextBlock> ConfirmPreviewText;

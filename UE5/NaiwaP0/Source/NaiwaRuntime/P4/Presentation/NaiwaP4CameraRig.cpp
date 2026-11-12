@@ -5,6 +5,7 @@
 #include "GameFramework/PlayerController.h"
 #include "../Core/NaiwaP4Settings.h"
 #include "NaiwaP4ArtIntegrationGameMode.h"
+#include "NaiwaP4Beta6TestGameMode.h"
 
 ANaiwaP4CameraRig::ANaiwaP4CameraRig()
 {
@@ -44,6 +45,11 @@ void ANaiwaP4CameraRig::ApplyCalibration()
 		{
 			ArenaDepth = PreviewGameMode->GetPreviewArenaDepth();
 			CameraPitch = PreviewGameMode->GetPreviewCameraPitch();
+		}
+		else if (const ANaiwaP4Beta6TestGameMode* Beta6TestGameMode = Cast<ANaiwaP4Beta6TestGameMode>(World->GetAuthGameMode()))
+		{
+			ArenaDepth = Beta6TestGameMode->GetPreviewArenaDepth();
+			CameraPitch = Beta6TestGameMode->GetPreviewCameraPitch();
 		}
 	}
 

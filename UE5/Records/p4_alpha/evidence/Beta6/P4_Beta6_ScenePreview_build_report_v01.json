@@ -1,0 +1,102 @@
+{
+  "schema": "naiwa.p4.beta6_scene_preview_build/1",
+  "status": "maps_saved_pending_visual_review",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "maps_created": [
+    "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_02ScenePreview_v01",
+    "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_03ScenePreview_v01",
+    "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_04ScenePreview_v01",
+    "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_05ScenePreview_v01",
+    "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_06ScenePreview_v01"
+  ],
+  "runtime_played": false,
+  "camera_setup": "P4 art integration camera rig; arena depth 420; pitch 50 degrees; 37-degree horizontal FOV",
+  "scene_plate": "Each chapter has a unique unlit opaque plane sized to the calibrated camera frustum.",
+  "maps": [
+    {
+      "asset_id": "P4_BETA6_CH02_SCENE",
+      "chapter_id": "chapter_2",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch02_scene_v02.png",
+      "source_sha256": "B45E1038A6A4D82EFCAFC0E30D0FB272FF754D93411D76EFE7217E50FAEC64DC",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_2_Scene_v02",
+      "material_asset": "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_2_Backdrop_v02",
+      "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_02ScenePreview_v01",
+      "map_actor_count": 3,
+      "camera": "P4 fixed three-quarter camera, 50-degree pitch, 37-degree horizontal FOV",
+      "texture_settings": "sRGB, TC_EditorIcon (uncompressed), no alpha, Sharpen0 mips, UI group, non-streaming",
+      "build_status": "map_saved_pending_visual_review"
+    },
+    {
+      "asset_id": "P4_BETA6_CH03_SCENE",
+      "chapter_id": "chapter_3",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch03_scene_v02.png",
+      "source_sha256": "5543F79503BB1A8191AA49B73D4E5F8A95A34508A40836508BC1A59C0B788A9D",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_3_Scene_v02",
+      "material_asset": "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_3_Backdrop_v02",
+      "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_03ScenePreview_v01",
+      "map_actor_count": 3,
+      "camera": "P4 fixed three-quarter camera, 50-degree pitch, 37-degree horizontal FOV",
+      "texture_settings": "sRGB, TC_EditorIcon (uncompressed), no alpha, Sharpen0 mips, UI group, non-streaming",
+      "build_status": "map_saved_pending_visual_review"
+    },
+    {
+      "asset_id": "P4_BETA6_CH04_SCENE",
+      "chapter_id": "chapter_4",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch04_scene_v02.png",
+      "source_sha256": "5B8777671ECE8BD71268A6BF00773E354E3EA1A479CE89D0BF8E3382823E288A",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_4_Scene_v02",
+      "material_asset": "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_4_Backdrop_v02",
+      "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_04ScenePreview_v01",
+      "map_actor_count": 3,
+      "camera": "P4 fixed three-quarter camera, 50-degree pitch, 37-degree horizontal FOV",
+      "texture_settings": "sRGB, TC_EditorIcon (uncompressed), no alpha, Sharpen0 mips, UI group, non-streaming",
+      "build_status": "map_saved_pending_visual_review"
+    },
+    {
+      "asset_id": "P4_BETA6_CH05_SCENE",
+      "chapter_id": "chapter_5",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch05_scene_v02.png",
+      "source_sha256": "DE090BF7EB5BBED4E5B79FE3B87541B7898FAA97B720616302421D48F9FB741B",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_5_Scene_v02",
+      "material_asset": "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_5_Backdrop_v02",
+      "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_05ScenePreview_v01",
+      "map_actor_count": 3,
+      "camera": "P4 fixed three-quarter camera, 50-degree pitch, 37-degree horizontal FOV",
+      "texture_settings": "sRGB, TC_EditorIcon (uncompressed), no alpha, Sharpen0 mips, UI group, non-streaming",
+      "build_status": "map_saved_pending_visual_review"
+    },
+    {
+      "asset_id": "P4_BETA6_CH06_SCENE",
+      "chapter_id": "chapter_6",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_ch06_scene_v02.png",
+      "source_sha256": "9AA71F6906CDF22F886216276BD8A89D0ACB70BF4FAA747194B1D5A4D75B4BD8",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Scenes/T_P4_Beta6_chapter_6_Scene_v02",
+      "material_asset": "/Game/Naiwa/P4/Materials/Beta6/Scenes/M_P4_Beta6_chapter_6_Backdrop_v02",
+      "review_map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_Beta6_06ScenePreview_v01",
+      "map_actor_count": 3,
+      "camera": "P4 fixed three-quarter camera, 50-degree pitch, 37-degree horizontal FOV",
+      "texture_settings": "sRGB, TC_EditorIcon (uncompressed), no alpha, Sharpen0 mips, UI group, non-streaming",
+      "build_status": "map_saved_pending_visual_review"
+    }
+  ]
+}

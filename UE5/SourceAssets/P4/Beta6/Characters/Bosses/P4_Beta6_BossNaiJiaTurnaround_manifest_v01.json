@@ -1,0 +1,32 @@
+{
+  "schema": "naiwa.p4.beta6.character_reference_manifest/1",
+  "version": "v01",
+  "created_date": "2026-11-12",
+  "owner_role": "P4 Character Art",
+  "status": "owner_approved_turnaround_imported_static_reference",
+  "owner_approved_date": "2026-11-12",
+  "asset_id": "P4_BETA6_BOSS_NAI_JIA_TURNAROUND",
+  "character_id": "boss_nai_jia",
+  "view": "front, right-side profile, back",
+  "asset_kind": "static character turnaround reference; not a runtime sprite or animation atlas",
+  "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Bosses/p4_beta6_boss_nai_jia_turnaround_v01.png",
+  "approved_direction_reference": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_boss_nai_jia_v01.png",
+  "dimensions_px": [
+    1672,
+    941
+  ],
+  "alpha_mode": "opaque RGB",
+  "color_space": "sRGB",
+  "sha256": "83C9EF97C7FDBF786EA5990C4AFD2369D3A80EDBCB2A20516676C64B63C3FADF",
+  "ue_texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_boss_nai_jia_turnaround_v01",
+  "ue_import_settings": {
+    "srgb": true,
+    "compression_settings": "TC_DEFAULT",
+    "compression_no_alpha": true,
+    "mip_gen_settings": "TMGS_NO_MIPMAPS",
+    "lod_group": "TEXTUREGROUP_UI",
+    "never_stream": true
+  },
+  "runtime_reference": "none; visual reference only",
+  "review_gate": "owner visual review passed on 2026-11-12; production sprite/animation work awaits the engineering action matrix"
+}

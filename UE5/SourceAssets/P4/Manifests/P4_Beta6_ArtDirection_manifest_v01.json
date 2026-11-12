@@ -1,0 +1,92 @@
+{
+  "schema": "naiwa.p4.beta6_art_direction_preview/1",
+  "version": "v01",
+  "created_date": "2026-11-11",
+  "status": "concept_previews_pending_owner_review",
+  "scope": "Beta6 Chapters 2-6 direction previews; not production/runtime-ready",
+  "generated_with": "built-in image_gen",
+  "assets": [
+    {
+      "asset_id": "P4_BETA6_ENEMY_DIRECTION_01",
+      "owner_role": "P4 Art",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_enemy_concepts_v01.png",
+      "export_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_enemy_concepts_v01.png",
+      "version": "v01",
+      "frame_state_view": "single concept contact sheet; three characters; front three-quarter concept",
+      "duration_seconds": null,
+      "foot_anchor_px": null,
+      "pivot_px": null,
+      "alpha_mode": "transparent RGBA requested; preview only",
+      "color_space": "sRGB",
+      "ue_import_settings": null,
+      "runtime_reference": "none; not a runtime asset",
+      "sha256": "3F9F0BEF61720FC0191CF023F3B9C1C0C80CD30FB0E962D0BBC5B5181294B70D",
+      "status": "concept_preview_pending_owner_review",
+      "subjects": [
+        "naizhou",
+        "naiping_lei",
+        "naixiang"
+      ],
+      "references": [
+        "UE5/SourceAssets/P4/Characters/Alpha/A1/RuntimeReady/FramesClean/idle/P4_A1_idle_neutral_front.png",
+        "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naiding_turnaround_v01_concept.png",
+        "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naidun_turnaround_v01_concept.png"
+      ],
+      "prompt_summary": "Three distinct P4 enemy silhouette concepts matching the approved soft shaded sprite finish, without copying the player identity."
+    },
+    {
+      "asset_id": "P4_BETA6_BOSS_NAI_JIA_DIRECTION_01",
+      "owner_role": "P4 Art",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_boss_nai_jia_v01.png",
+      "export_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_boss_nai_jia_v01.png",
+      "version": "v01",
+      "frame_state_view": "two concept poses: armored idle and phase transition; front three-quarter",
+      "duration_seconds": null,
+      "foot_anchor_px": null,
+      "pivot_px": null,
+      "alpha_mode": "transparent RGBA requested; preview only",
+      "color_space": "sRGB",
+      "ue_import_settings": null,
+      "runtime_reference": "none; not a runtime asset",
+      "sha256": "0A9FEEFE0522365782F21DA0C3B7F694A5E5C7042FD163CEF180E482DDF0A27C",
+      "status": "concept_preview_pending_owner_review",
+      "subjects": [
+        "boss_nai_jia"
+      ],
+      "references": [
+        "UE5/SourceAssets/P4/Characters/Alpha/A1/RuntimeReady/FramesClean/idle/P4_A1_idle_neutral_front.png",
+        "UE5/SourceAssets/P4/Characters/Alpha/W4_Boss/boss_nai_tong_turnaround_v02_concept.png",
+        "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naidun_turnaround_v01_concept.png"
+      ],
+      "prompt_summary": "New commander Boss with layered armor, broad shield, short saber and separated chest plates, designed to read above Naidun and apart from Nai Tong."
+    },
+    {
+      "asset_id": "P4_BETA6_ARENA_COLOR_STUDY_01",
+      "owner_role": "P4 Art",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_arena_color_study_v01.png",
+      "export_path": "UE5/SourceAssets/P4/Beta6/Review/p4_beta6_arena_color_study_v01.png",
+      "version": "v01",
+      "frame_state_view": "five-panel arena theme color study for chapters 2-6",
+      "duration_seconds": null,
+      "foot_anchor_px": null,
+      "pivot_px": null,
+      "alpha_mode": "opaque RGB; preview only",
+      "color_space": "sRGB",
+      "ue_import_settings": null,
+      "runtime_reference": "none; not a runtime asset",
+      "sha256": "7162809B49C6A9205E1FB4CA2C5143F4D459DD41E5BC8804EA8D45631F23D218",
+      "status": "concept_preview_pending_owner_review",
+      "subjects": [
+        "chapter_2",
+        "chapter_3",
+        "chapter_4",
+        "chapter_5",
+        "chapter_6"
+      ],
+      "references": [
+        "UE5/SourceAssets/P4/Environment/Alpha/P4_A2_ArenaScene_v02.png"
+      ],
+      "prompt_summary": "Five same-camera modular arena variations preserving central floor readability and subdued ambient effects."
+    }
+  ]
+}

@@ -1,5 +1,11 @@
 # P4 α 卡牌图标候选
 
+## 奶蛙学附录图录肖像（2026-11-12）
+
+负责人要求 P4 直接使用《奶蛙学 必修第一册》附录图录图像。已选用图录 139 常态、003 捧腹、121 胜利、106 失落四张原图，作为 P4 HUD/结算静态肖像并已在 Native UMG 中接线；见 [图录直用包](CatalogDirect/README.md)、[预览页](CatalogDirect/P4_A1_CatalogPortraitsReview_v01.html) 和 [资产 manifest](CatalogDirect/P4_A1_CatalogPortraits_manifest_v01.csv)。图片保留白底和原始颜色，无去底/重绘/调色；只作 UI 肖像，不替换 33 帧 A1 场内动画。
+
+四张图录 Texture2D 已导入 `/Game/Naiwa/P4/UI/Alpha/CatalogDirect/`，并已由 Native UMG 源码接入 HUD 常态/大笑状态及胜负结算卡；UE 设置回读与源哈希见[导入报告](../../../../Records/p4_alpha/evidence/CatalogDirect/P4_A1_CatalogPortraits_Import_2026-11-12_19-42-59.json)，增量编译成功记录见[接入报告](../../../../Records/p4_alpha/evidence/CatalogDirect/P4_A1_CatalogPortraits_HUDIntegration_2026-11-12.json)。复跑导入命令：`powershell -NoProfile -ExecutionPolicy Bypass -File UE5/Scripts/import_p4_catalog_direct_portraits.ps1`。720p/1080p 游戏内画面复核仍待完成。
+
 状态：**三枚图标视觉均已通过，尚未导入 UE。** 三张图标对应 alpha 固定卡池，文件使用透明 SVG，512×512 viewBox；卡名和效果数据仍以 `UE5/Records/p4_alpha/design_reference/P4_章节数据_v1.json` 为准。
 
 | CardId | 图标 | 状态 | 视觉语义 |

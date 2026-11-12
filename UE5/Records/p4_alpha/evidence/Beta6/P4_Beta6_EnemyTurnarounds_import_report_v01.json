@@ -1,0 +1,54 @@
+{
+  "schema": "naiwa.p4.beta6.enemy_turnarounds_import/1",
+  "status": "three_turnarounds_imported_pending_owner_review",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "runtime_reference": "none; static enemy turnaround sheets only",
+  "assets": [
+    {
+      "asset_id": "P4_BETA6_NAIZHOU_TURNAROUND",
+      "character_id": "naizhou",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_naizhou_turnaround_v01.png",
+      "source_sha256": "0e0b303adc4a48ed2a1ca0b8e7bfff9b995e299605a1ef58461e7fc97fdfc39a",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_naizhou_turnaround_v01",
+      "imported_now": true,
+      "texture_settings": "sRGB, TC_Default, alpha preserved, no mips, UI group, non-streaming",
+      "status": "turnaround_imported_pending_owner_review"
+    },
+    {
+      "asset_id": "P4_BETA6_NAIPING_LEI_TURNAROUND",
+      "character_id": "naiping_lei",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_naiping_lei_turnaround_v01.png",
+      "source_sha256": "a95f9cc85f21ed4f6ccecc5450e7dc97d55da041584d48755428524b183681d4",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_naiping_lei_turnaround_v01",
+      "imported_now": true,
+      "texture_settings": "sRGB, TC_Default, alpha preserved, no mips, UI group, non-streaming",
+      "status": "turnaround_imported_pending_owner_review"
+    },
+    {
+      "asset_id": "P4_BETA6_NAIXIANG_TURNAROUND",
+      "character_id": "naixiang",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_naixiang_turnaround_v01.png",
+      "source_sha256": "f10feb55a6e153fe421ab8ed9eacad516963389ff709b656d235e95c27048047",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_naixiang_turnaround_v01",
+      "imported_now": true,
+      "texture_settings": "sRGB, TC_Default, alpha preserved, no mips, UI group, non-streaming",
+      "status": "turnaround_imported_pending_owner_review"
+    }
+  ],
+  "asset_count": 3
+}

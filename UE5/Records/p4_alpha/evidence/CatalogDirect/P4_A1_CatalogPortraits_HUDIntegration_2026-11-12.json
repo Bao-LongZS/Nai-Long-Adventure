@@ -1,0 +1,62 @@
+{
+  "schema": "naiwa.p4.catalog_direct_portrait_hud_integration/1",
+  "date": "2026-11-12",
+  "status": "source_wired_final_incremental_build_succeeded_runtime_visual_review_pending",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "scope": "Direct catalog portrait UI integration only. No gameplay rules, maps, or animation frames changed.",
+  "mappings": [
+    {
+      "caption": "仰首静立",
+      "asset": "/Game/Naiwa/P4/UI/Alpha/CatalogDirect/T_P4_A1_CatalogPortrait_Idle_Figure139_v01",
+      "figure": "139",
+      "state": "HUD neutral/default"
+    },
+    {
+      "caption": "捧腹大笑",
+      "asset": "/Game/Naiwa/P4/UI/Alpha/CatalogDirect/T_P4_A1_CatalogPortrait_Laugh_Figure003_v01",
+      "figure": "003",
+      "state": "HUD while player ActionCue is Laugh and LaughTicksRemaining is positive"
+    },
+    {
+      "caption": "滑跪庆祝",
+      "asset": "/Game/Naiwa/P4/UI/Alpha/CatalogDirect/T_P4_A1_CatalogPortrait_Victory_Figure121_v01",
+      "figure": "121",
+      "state": "run victory"
+    },
+    {
+      "caption": "失落蹲坐",
+      "asset": "/Game/Naiwa/P4/UI/Alpha/CatalogDirect/T_P4_A1_CatalogPortrait_Distress_Figure106_v01",
+      "figure": "106",
+      "state": "run defeat"
+    }
+  ],
+  "implementation": "UE5/NaiwaP0/Source/NaiwaRuntime/P4/Presentation/NaiwaP4ArtIntegrationWidget.cpp",
+  "compile_attempts": [
+    {
+      "log": "P4_A1_CatalogPortraits_Compile_2026-11-12.log",
+      "result": "succeeded",
+      "actions": "18/18"
+    },
+    {
+      "log": "P4_A1_CatalogPortraits_Compile_v02_2026-11-12.log",
+      "result": "failed",
+      "actions": "10/11",
+      "note": "intermediate LNK2019 for UNaiwaP4ArenaSubsystem::FlushPendingSimulatedEntities; no subsystem source was changed in this task"
+    },
+    {
+      "log": "P4_A1_CatalogPortraits_Compile_final_2026-11-12.log",
+      "exit_code": 0,
+      "result": "succeeded",
+      "actions": "7/7"
+    }
+  ],
+  "import_report": "P4_A1_CatalogPortraits_Import_2026-11-12_19-42-59.json",
+  "level_opened_or_changed": false,
+  "runtime_played": false,
+  "viewport_review": "pending; no PIE or GUI review was started",
+  "notes": [
+    "Source crop white backgrounds and colors retained.",
+    "Widget source compiled and final Nai_LongEditor link succeeded.",
+    "Build emits existing MSVC version and APawn::GetMovementBase deprecation warnings."
+  ]
+}

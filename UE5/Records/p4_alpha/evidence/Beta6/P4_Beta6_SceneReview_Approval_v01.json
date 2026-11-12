@@ -1,0 +1,16 @@
+{
+  "schema": "naiwa.p4.beta6_scene_review_approval/1",
+  "approval_date": "2026-11-12",
+  "approver": "Project owner",
+  "scope": "chapter_2_to_6_scene_preview_review",
+  "status": "owner_visual_review_approved",
+  "source": "Explicit project-owner confirmation in the active engineering handoff conversation.",
+  "owner_note": "The scene review has passed; the art tasks are not yet complete.",
+  "not_covered": [
+    "production art completion and cleanup",
+    "environment prop source and reuse audit",
+    "runtime theme and component bindings",
+    "Beta6 gameplay acceptance"
+  ],
+  "evidence_note": "This file records the owner's approval status. The requested 1280x720 Chapter 2 capture was not found in Saved/Screenshots; no screenshot evidence is attached here."
+}

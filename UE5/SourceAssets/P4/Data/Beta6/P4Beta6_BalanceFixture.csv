@@ -1,0 +1,7 @@
+RowName,ChapterIndex,WaveCount,OrdinaryEnemyCount,OrdinaryHpBudget,BossId,BossHp,CombinedHealthBudget,DurationTargetSeconds,PerfectHitBaseProjectileDps,PerfectHitTtkLowerBoundSeconds,TargetSustainedDpsLowerBound,NominalIncomingDamageBudget,OrdinaryKillExperience,CurrentRuntimeLevelUpsThisChapter,CumulativeRuntimeLevelUps,RuntimePlayerLevelAtChapterEnd,RuntimeExperienceTowardNextLevel,SourceKind
+chapter_01,1,5,20,865,,0,865,150,20.339,42.53,5.77,180,20,3,3,4,2,accepted_alpha_wave_csv_plus_source_enemy_stats
+chapter_02,2,6,30,1139,,0,1139,165,20.339,56,6.9,358,30,2,5,6,10,chapter_json_v2
+chapter_03,3,7,42,1778,,0,1778,195,20.339,87.42,9.12,468,42,3,8,9,4,chapter_json_v2
+chapter_04,4,3,9,376,boss_nai_tong,3168,3544,165,20.339,174.25,21.48,118,9,0,8,9,13,chapter_json_v2
+chapter_05,5,8,56,2447,,0,2447,210,20.339,120.31,11.65,720,56,3,11,12,3,chapter_json_v2
+chapter_06,6,3,12,627,boss_nai_jia,5280,5907,180,20.339,290.43,32.82,146,12,0,11,12,15,chapter_json_v2

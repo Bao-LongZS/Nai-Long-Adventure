@@ -1,0 +1,18 @@
+{
+  "schema": "naiwa.p4.beta6.enemy_turnaround_import/1",
+  "status": "reference_texture_imported_pending_owner_review",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "runtime_reference": "none; static Naitiao turnaround reference only",
+  "asset_id": "P4_BETA6_NAITIAO_TURNAROUND",
+  "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_naitiao_turnaround_v01.png",
+  "source_sha256": "bea99308af921243cee35e96b22b1d86bae933dda43cf288ae0cfc6bd9d8c8da",
+  "dimensions_px": [
+    2172,
+    724
+  ],
+  "alpha_mode": "straight RGBA",
+  "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_naitiao_turnaround_v01",
+  "imported_now": true,
+  "texture_settings": "sRGB, TC_Default, alpha preserved, no mips, UI group, non-streaming",
+  "review_gate": "owner review of new Naitiao silhouette before production sprites/animation"
+}

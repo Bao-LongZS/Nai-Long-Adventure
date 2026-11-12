@@ -1,0 +1,199 @@
+{
+  "status": "passed",
+  "factory": "CSVImportFactory",
+  "source_manifest": "UE5/SourceAssets/P4/Data/Beta6/P4Beta6_ScopeProjection.json",
+  "source_json_sha256": "C4306E634BBFD691A2EF25F95E72EBBB7E9C26D2F34CD1E45F2F72D544BC33D0",
+  "imported_tables": {
+    "chapters": {
+      "asset": "/Game/Naiwa/P4/Data/DT_P4_Beta6_Chapters.DT_P4_Beta6_Chapters",
+      "row_struct": "/Script/NaiwaRuntime.NaiwaP4Beta6ChapterRow",
+      "row_count": 6,
+      "row_names": [
+        "chapter_01",
+        "chapter_02",
+        "chapter_03",
+        "chapter_04",
+        "chapter_05",
+        "chapter_06"
+      ],
+      "object_ref_readback": {},
+      "csv_sha256": "4159F1D7B5BB1537807FE880BFE90EA4177D7E6C85108479F9CB717F1712E58C",
+      "imported_object_paths": [
+        "/Game/Naiwa/P4/Data/DT_P4_Beta6_Chapters.DT_P4_Beta6_Chapters"
+      ]
+    },
+    "themes": {
+      "asset": "/Game/Naiwa/P4/Data/DT_P4_Beta6_Themes.DT_P4_Beta6_Themes",
+      "row_struct": "/Script/NaiwaRuntime.NaiwaP4Beta6ThemeRow",
+      "row_count": 6,
+      "row_names": [
+        "theme_desert_dusk_arena",
+        "theme_desert_dusk_orange_purple",
+        "theme_desert_night_market_amber",
+        "theme_desert_noon_native",
+        "theme_desert_sandstorm_desaturated",
+        "theme_forest_autumn_green_to_red"
+      ],
+      "object_ref_readback": {
+        "theme_desert_noon_native": {
+          "BackdropTexture": "/Game/Naiwa/P4/Art/Alpha/A2/T_P4_A2_ArenaScene_v02"
+        },
+        "theme_desert_dusk_orange_purple": {
+          "BackdropTexture": "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_2_Environment_v01"
+        },
+        "theme_desert_sandstorm_desaturated": {
+          "BackdropTexture": "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_3_Environment_v01"
+        },
+        "theme_desert_dusk_arena": {
+          "BackdropTexture": "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_4_Environment_v01"
+        },
+        "theme_desert_night_market_amber": {
+          "BackdropTexture": "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_5_Environment_v01"
+        },
+        "theme_forest_autumn_green_to_red": {
+          "BackdropTexture": "/Game/Naiwa/P4/Art/Beta6/Environment/T_P4_Beta6_chapter_6_Environment_v01"
+        }
+      },
+      "csv_sha256": "85465C1628E0F9D14BC02DCA5E2338E4539D2636131DF879AE75B0B5AE3F9265",
+      "imported_object_paths": [
+        "/Game/Naiwa/P4/Data/DT_P4_Beta6_Themes.DT_P4_Beta6_Themes"
+      ]
+    },
+    "wave_spawns": {
+      "asset": "/Game/Naiwa/P4/Data/DT_P4_Beta6_WaveSpawns.DT_P4_Beta6_WaveSpawns",
+      "row_struct": "/Script/NaiwaRuntime.NaiwaP4Beta6WaveSpawnRow",
+      "row_count": 66,
+      "row_names": [
+        "ch01_w01_s00_naiding",
+        "ch01_w02_s00_naiding",
+        "ch01_w03_s00_naiding",
+        "ch01_w03_s01_naidun",
+        "ch01_w04_s00_naiding",
+        "ch01_w04_s01_naidun",
+        "ch01_w05_s00_naiding",
+        "ch01_w05_s01_naidun",
+        "ch02_w01_s00_naiding",
+        "ch02_w02_s00_naizhou",
+        "ch02_w02_s01_naiding",
+        "ch02_w03_s00_naiping_lei",
+        "ch02_w03_s01_naiding",
+        "ch02_w04_s00_naitiao",
+        "ch02_w04_s01_naizhou",
+        "ch02_w05_s00_naiding",
+        "ch02_w05_s01_naidun",
+        "ch02_w06_s00_naitiao",
+        "ch02_w06_s01_naiping_lei",
+        "ch02_w06_s02_naiding",
+        "ch03_w01_s00_naiding",
+        "ch03_w02_s00_naizhou",
+        "ch03_w02_s01_naiding",
+        "ch03_w03_s00_nailing",
+        "ch03_w03_s01_naiding",
+        "ch03_w04_s00_naidun",
+        "ch03_w04_s01_naizhou",
+        "ch03_w05_s00_naiping_lei",
+        "ch03_w05_s01_naitiao",
+        "ch03_w05_s02_naiding",
+        "ch03_w06_s00_nailing",
+        "ch03_w06_s01_naichui",
+        "ch03_w06_s02_naiding",
+        "ch03_w07_s00_naidun",
+        "ch03_w07_s01_naizhou",
+        "ch03_w07_s02_naiding",
+        "ch04_w01_s00_naiding",
+        "ch04_w02_s00_naidun",
+        "ch04_w02_s01_naizhou",
+        "ch04_w03_s00_naiping_lei",
+        "ch05_w01_s00_naiding",
+        "ch05_w02_s00_dandan",
+        "ch05_w02_s01_naiding",
+        "ch05_w03_s00_chacha",
+        "ch05_w03_s01_naizhou",
+        "ch05_w04_s00_naitiao",
+        "ch05_w04_s01_naiping_lei",
+        "ch05_w04_s02_naishuang",
+        "ch05_w05_s00_naidun",
+        "ch05_w05_s01_nailing",
+        "ch05_w05_s02_naiding",
+        "ch05_w06_s00_naixiang",
+        "ch05_w06_s01_haohao",
+        "ch05_w06_s02_naiding",
+        "ch05_w07_s00_naichui",
+        "ch05_w07_s01_naitiao",
+        "ch05_w07_s02_dandan",
+        "ch05_w08_s00_chacha",
+        "ch05_w08_s01_naidun",
+        "ch05_w08_s02_naiding",
+        "ch06_w01_s00_naizhou",
+        "ch06_w01_s01_naitiao",
+        "ch06_w02_s00_naidun",
+        "ch06_w03_s00_nailing",
+        "ch06_w03_s01_naichui",
+        "ch06_w03_s02_naiding"
+      ],
+      "object_ref_readback": {},
+      "csv_sha256": "F6E3C38684DAE893F359E19001D85916252A6ADC36C0AA1CEE64B3FA83678433",
+      "imported_object_paths": [
+        "/Game/Naiwa/P4/Data/DT_P4_Beta6_WaveSpawns.DT_P4_Beta6_WaveSpawns"
+      ]
+    },
+    "enemies": {
+      "asset": "/Game/Naiwa/P4/Data/DT_P4_Beta6_Enemies.DT_P4_Beta6_Enemies",
+      "row_struct": "/Script/NaiwaRuntime.NaiwaP4Beta6EnemyRow",
+      "row_count": 12,
+      "row_names": [
+        "chacha",
+        "dandan",
+        "haohao",
+        "naichui",
+        "naiding",
+        "naidun",
+        "nailing",
+        "naiping_lei",
+        "naishuang",
+        "naitiao",
+        "naixiang",
+        "naizhou"
+      ],
+      "object_ref_readback": {},
+      "csv_sha256": "4AC864E5DEB6333425EEC9A6DF167CB78F7C15CEB8DAF60DCB0C4A170B3BDBCA",
+      "imported_object_paths": [
+        "/Game/Naiwa/P4/Data/DT_P4_Beta6_Enemies.DT_P4_Beta6_Enemies"
+      ]
+    },
+    "bosses": {
+      "asset": "/Game/Naiwa/P4/Data/DT_P4_Beta6_Bosses.DT_P4_Beta6_Bosses",
+      "row_struct": "/Script/NaiwaRuntime.NaiwaP4Beta6BossRow",
+      "row_count": 2,
+      "row_names": [
+        "boss_nai_jia",
+        "boss_nai_tong"
+      ],
+      "object_ref_readback": {},
+      "csv_sha256": "6AABD1B3BB06AB360276490A2659553D2A02AB27754B4E39AF95791E27D5BFBE",
+      "imported_object_paths": [
+        "/Game/Naiwa/P4/Data/DT_P4_Beta6_Bosses.DT_P4_Beta6_Bosses"
+      ]
+    },
+    "boss_attacks": {
+      "asset": "/Game/Naiwa/P4/Data/DT_P4_Beta6_BossAttacks.DT_P4_Beta6_BossAttacks",
+      "row_struct": "/Script/NaiwaRuntime.NaiwaP4Beta6BossAttackRow",
+      "row_count": 8,
+      "row_names": [
+        "boss_nai_jia_ground_wave_x2",
+        "boss_nai_jia_phase2_summon_shield_guards",
+        "boss_nai_jia_shield_wall_advance",
+        "boss_nai_jia_triple_slash",
+        "boss_nai_tong_charge_wall_stun",
+        "boss_nai_tong_lid_slam_triple",
+        "boss_nai_tong_phase2_spin",
+        "boss_nai_tong_summon_2_minions"
+      ],
+      "object_ref_readback": {},
+      "csv_sha256": "86998706E33EB4FFAEAB0474493305E308C9191EB082732CBECE2C1830214D86",
+      "imported_object_paths": [
+        "/Game/Naiwa/P4/Data/DT_P4_Beta6_BossAttacks.DT_P4_Beta6_BossAttacks"
+      ]
+    }
+  }
+}

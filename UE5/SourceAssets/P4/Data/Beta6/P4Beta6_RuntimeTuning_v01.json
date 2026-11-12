@@ -1,0 +1,41 @@
+{
+  "schema": "naiwa.p4.beta6.runtime_tuning/1",
+  "version": "1.0",
+  "status": "engineering_baseline_for_beta6_runtime",
+  "basis": "Mechanics, damage, warning, phase thresholds, and named effects follow P4_竞技场设计_v1.md and P4_章节数据_v1.json. Movement, cadence, cooldown, collision and hit geometry values absent from those sources are engineering defaults for the first deterministic runtime pass.",
+  "chapterSpawnIntervals": {
+    "2": 0.52,
+    "3": 0.50,
+    "4": 0.62,
+    "5": 0.48,
+    "6": 0.58
+  },
+  "enemies": {
+    "naiding": { "moveSpeed": 132, "attackRange": 72, "attackIntervalSeconds": 1.2, "collisionRadius": 30, "abilityRadius": 0, "abilityDurationSeconds": 0, "projectileSpeed": 0, "slowMultiplier": 1, "slowDurationSeconds": 0, "summonEnemyId": "", "summonCount": 0 },
+    "naizhou": { "moveSpeed": 0, "attackRange": 520, "attackIntervalSeconds": 2.2, "collisionRadius": 28, "abilityRadius": 0, "abilityDurationSeconds": 0, "projectileSpeed": 420, "slowMultiplier": 1, "slowDurationSeconds": 0, "summonEnemyId": "", "summonCount": 0 },
+    "naiping_lei": { "moveSpeed": 118, "attackRange": 150, "attackIntervalSeconds": 2.4, "collisionRadius": 28, "abilityRadius": 110, "abilityDurationSeconds": 0.8, "projectileSpeed": 0, "slowMultiplier": 1, "slowDurationSeconds": 0, "summonEnemyId": "", "summonCount": 0 },
+    "naitiao": { "moveSpeed": 126, "attackRange": 250, "attackIntervalSeconds": 1.8, "collisionRadius": 29, "abilityRadius": 92, "abilityDurationSeconds": 0.42, "projectileSpeed": 0, "slowMultiplier": 1, "slowDurationSeconds": 0, "summonEnemyId": "", "summonCount": 0 },
+    "naidun": { "moveSpeed": 72, "attackRange": 92, "attackIntervalSeconds": 1.4, "collisionRadius": 38, "abilityRadius": 0, "abilityDurationSeconds": 0, "projectileSpeed": 0, "slowMultiplier": 1, "slowDurationSeconds": 0, "summonEnemyId": "", "summonCount": 0 },
+    "nailing": { "moveSpeed": 78, "attackRange": 225, "attackIntervalSeconds": 2.2, "collisionRadius": 32, "abilityRadius": 130, "abilityDurationSeconds": 0, "projectileSpeed": 0, "slowMultiplier": 1, "slowDurationSeconds": 0, "summonEnemyId": "", "summonCount": 0 },
+    "naichui": { "moveSpeed": 66, "attackRange": 112, "attackIntervalSeconds": 1.9, "collisionRadius": 40, "abilityRadius": 90, "abilityDurationSeconds": 0, "projectileSpeed": 0, "slowMultiplier": 1, "slowDurationSeconds": 0, "summonEnemyId": "", "summonCount": 0 },
+    "naixiang": { "moveSpeed": 0, "attackRange": 100, "attackIntervalSeconds": 1.8, "collisionRadius": 32, "abilityRadius": 42, "abilityDurationSeconds": 0, "projectileSpeed": 0, "slowMultiplier": 1, "slowDurationSeconds": 0, "summonEnemyId": "", "summonCount": 0 },
+    "naishuang": { "moveSpeed": 0, "attackRange": 500, "attackIntervalSeconds": 2.3, "collisionRadius": 30, "abilityRadius": 0, "abilityDurationSeconds": 0, "projectileSpeed": 380, "slowMultiplier": 0.6, "slowDurationSeconds": 3, "summonEnemyId": "", "summonCount": 0 },
+    "chacha": { "moveSpeed": 78, "attackRange": 410, "attackIntervalSeconds": 4.8, "collisionRadius": 28, "abilityRadius": 0, "abilityDurationSeconds": 0, "projectileSpeed": 0, "slowMultiplier": 1, "slowDurationSeconds": 0, "summonEnemyId": "naiding", "summonCount": 1 },
+    "haohao": { "moveSpeed": 80, "attackRange": 460, "attackIntervalSeconds": 2.5, "collisionRadius": 32, "abilityRadius": 88, "abilityDurationSeconds": 0, "projectileSpeed": 320, "slowMultiplier": 1, "slowDurationSeconds": 0, "summonEnemyId": "", "summonCount": 0 },
+    "dandan": { "moveSpeed": 145, "attackRange": 360, "attackIntervalSeconds": 5, "collisionRadius": 28, "abilityRadius": 110, "abilityDurationSeconds": 3, "projectileSpeed": 0, "slowMultiplier": 1, "slowDurationSeconds": 0, "summonEnemyId": "", "summonCount": 0 }
+  },
+  "bosses": {
+    "boss_nai_tong": { "moveSpeed": 92, "attackRange": 270, "collisionRadius": 78, "phaseTwoTransitionSeconds": 1.35, "phaseTwoDamageMultiplier": 1.25, "phaseTwoAttackIntervalMultiplier": 0.85, "phaseTwoGagDamage": 0, "phaseTwoGagRadius": 0, "phaseTwoGagStunSeconds": 0 },
+    "boss_nai_jia": { "moveSpeed": 86, "attackRange": 250, "collisionRadius": 92, "phaseTwoTransitionSeconds": 1.45, "phaseTwoDamageMultiplier": 1.25, "phaseTwoAttackIntervalMultiplier": 0.85, "phaseTwoGagDamage": 40, "phaseTwoGagRadius": 240, "phaseTwoGagStunSeconds": 0.8 }
+  },
+  "bossAttacks": {
+    "boss_nai_tong_charge_wall_stun": { "telegraphSecondsMinimum": 0.75, "damage": 24, "activeDurationSeconds": 0.6, "recoverySeconds": 2.2, "hitboxGeometry": "line", "hitboxExtentX": 320, "hitboxExtentY": 42, "hitCount": 1, "hitIntervalSeconds": 0, "damageHit2": 0, "damageHit3": 0, "phaseTwoHitCount": 1, "projectileSpeed": 0, "moveSpeed": 900, "contactDamageIntervalSeconds": 0, "summonEnemyIds": [], "summonCount": 0 },
+    "boss_nai_tong_lid_slam_triple": { "telegraphSecondsMinimum": 0.65, "damage": 20, "activeDurationSeconds": 0.75, "recoverySeconds": 1.8, "hitboxGeometry": "circle", "hitboxExtentX": 140, "hitboxExtentY": 140, "hitCount": 3, "hitIntervalSeconds": 0.35, "damageHit2": 20, "damageHit3": 20, "phaseTwoHitCount": 3, "projectileSpeed": 0, "moveSpeed": 0, "contactDamageIntervalSeconds": 0, "summonEnemyIds": [], "summonCount": 0 },
+    "boss_nai_tong_summon_2_minions": { "telegraphSecondsMinimum": 1.2, "damage": 0, "activeDurationSeconds": 0.1, "recoverySeconds": 5, "hitboxGeometry": "none", "hitboxExtentX": 0, "hitboxExtentY": 0, "hitCount": 0, "hitIntervalSeconds": 0, "damageHit2": 0, "damageHit3": 0, "phaseTwoHitCount": 0, "projectileSpeed": 0, "moveSpeed": 0, "contactDamageIntervalSeconds": 0, "summonEnemyIds": ["naiding"], "summonCount": 2 },
+    "boss_nai_tong_phase2_spin": { "telegraphSecondsMinimum": 0.8, "damage": 18, "activeDurationSeconds": 2.2, "recoverySeconds": 2.6, "hitboxGeometry": "circle", "hitboxExtentX": 130, "hitboxExtentY": 130, "hitCount": 1, "hitIntervalSeconds": 0, "damageHit2": 0, "damageHit3": 0, "phaseTwoHitCount": 1, "projectileSpeed": 0, "moveSpeed": 45, "contactDamageIntervalSeconds": 0.3, "summonEnemyIds": [], "summonCount": 0 },
+    "boss_nai_jia_triple_slash": { "telegraphSecondsMinimum": 0.65, "damage": 22, "activeDurationSeconds": 0.6, "recoverySeconds": 1.8, "hitboxGeometry": "fan", "hitboxExtentX": 210, "hitboxExtentY": 82, "hitCount": 3, "hitIntervalSeconds": 0.22, "damageHit2": 24, "damageHit3": 30, "phaseTwoHitCount": 3, "projectileSpeed": 0, "moveSpeed": 0, "contactDamageIntervalSeconds": 0, "summonEnemyIds": [], "summonCount": 0 },
+    "boss_nai_jia_ground_wave_x2": { "telegraphSecondsMinimum": 0.7, "damage": 22, "activeDurationSeconds": 0.8, "recoverySeconds": 2, "hitboxGeometry": "line", "hitboxExtentX": 0, "hitboxExtentY": 0, "hitCount": 2, "hitIntervalSeconds": 0.28, "damageHit2": 22, "damageHit3": 0, "phaseTwoHitCount": 3, "projectileSpeed": 520, "moveSpeed": 0, "contactDamageIntervalSeconds": 0, "summonEnemyIds": [], "summonCount": 0 },
+    "boss_nai_jia_shield_wall_advance": { "telegraphSecondsMinimum": 0.6, "damage": 22, "activeDurationSeconds": 2.5, "recoverySeconds": 2, "hitboxGeometry": "line", "hitboxExtentX": 160, "hitboxExtentY": 110, "hitCount": 1, "hitIntervalSeconds": 0, "damageHit2": 0, "damageHit3": 0, "phaseTwoHitCount": 1, "projectileSpeed": 0, "moveSpeed": 86, "contactDamageIntervalSeconds": 0.5, "summonEnemyIds": [], "summonCount": 0 },
+    "boss_nai_jia_phase2_summon_shield_guards": { "telegraphSecondsMinimum": 1, "damage": 0, "activeDurationSeconds": 0.1, "recoverySeconds": 5.5, "hitboxGeometry": "none", "hitboxExtentX": 0, "hitboxExtentY": 0, "hitCount": 0, "hitIntervalSeconds": 0, "damageHit2": 0, "damageHit3": 0, "phaseTwoHitCount": 0, "projectileSpeed": 0, "moveSpeed": 0, "contactDamageIntervalSeconds": 0, "summonEnemyIds": ["naidun"], "summonCount": 2 }
+  }
+}

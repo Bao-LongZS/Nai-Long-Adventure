@@ -1,0 +1,9 @@
+RowName,BossId,AttackId,AttackOrder,PhaseId,DesignActionKind,TelegraphSecondsMinimum,Damage,ActiveDurationSeconds,RecoverySeconds,HitboxGeometry,HitboxExtentX,HitboxExtentY,HitCount,HitIntervalSeconds,DamageHit2,DamageHit3,PhaseTwoHitCount,ProjectileSpeed,MoveSpeed,ContactDamageIntervalSeconds,BreakWindowSeconds,BreakDamageMultiplier,BackDamageMultiplier,bBreakWindowConfigured,bSummonsEnemies,SummonEnemyIds,SummonCount,bRuntimeTuningConfigured,RuntimeTuningStatus
+boss_nai_tong_charge_wall_stun,boss_nai_tong,charge_wall_stun,1,phase1,charge,0.75,24,0.6,2.2,line,320,42,1,0,0,0,1,0,900,0,1.6,1.5,1,true,false,,0,true,engineering_runtime_tuning_v1
+boss_nai_tong_lid_slam_triple,boss_nai_tong,lid_slam_triple,2,phase1,melee_strike,0.65,20,0.75,1.8,circle,140,140,3,0.35,20,20,3,0,0,0,0,1,1,false,false,,0,true,engineering_runtime_tuning_v1
+boss_nai_tong_summon_2_minions,boss_nai_tong,summon_2_minions,3,phase1,summon,1.2,0,0.1,5,none,0,0,0,0,0,0,0,0,0,0,0,1,1,false,true,(naiding),2,true,engineering_runtime_tuning_v1
+boss_nai_tong_phase2_spin,boss_nai_tong,phase2_spin,4,phase2,rotating_area,0.8,18,2.2,2.6,circle,130,130,1,0,0,0,1,0,45,0.3,0,1,1,false,false,,0,true,engineering_runtime_tuning_v1
+boss_nai_jia_triple_slash,boss_nai_jia,triple_slash,1,phase1,melee_strike,0.65,22,0.6,1.8,fan,210,82,3,0.22,24,30,3,0,0,0,0,1,1,false,false,,0,true,engineering_runtime_tuning_v1
+boss_nai_jia_ground_wave_x2,boss_nai_jia,ground_wave_x2,2,phase1,ground_projectile,0.7,22,0.8,2,line,0,0,2,0.28,22,0,3,520,0,0,0,1,1,false,false,,0,true,engineering_runtime_tuning_v1
+boss_nai_jia_shield_wall_advance,boss_nai_jia,shield_wall_advance,3,phase1,advancing_shield,0.6,22,2.5,2,line,160,110,1,0,0,0,1,0,86,0.5,1.2,1,2,true,false,,0,true,engineering_runtime_tuning_v1
+boss_nai_jia_phase2_summon_shield_guards,boss_nai_jia,phase2_summon_shield_guards,4,phase2,summon,1,0,0.1,5.5,none,0,0,0,0,0,0,0,0,0,0,0,1,1,false,true,(naidun),2,true,engineering_runtime_tuning_v1

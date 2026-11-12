@@ -1,0 +1,468 @@
+{
+    "artifact":  "P4 Beta6 Chapter Balance Fixture",
+    "fixtureVersion":  "0.1",
+    "generatedAtLocalDate":  "2026-11-11",
+    "source":  {
+                   "chapterDataPath":  "UE5/Records/p4_alpha/design_reference/P4_章节数据_v1.json",
+                   "chapterDataSchema":  "naiwa.p4.arena.chapters/2",
+                   "chapterDataVersion":  "2.0",
+                   "chapterDataSha256":  "C4306E634BBFD691A2EF25F95E72EBBB7E9C26D2F34CD1E45F2F72D544BC33D0",
+                   "acceptedAlphaEnemyPath":  "UE5/SourceAssets/P4/Data/P4EnemyAlpha.csv",
+                   "acceptedAlphaEnemySha256":  "F25B4BD0249ADFB7EBEBDB4938854FDAC1F485D1640B5D45866C1DD28421ED70",
+                   "acceptedAlphaWavePath":  "UE5/SourceAssets/P4/Data/P4WaveAlpha.csv",
+                   "acceptedAlphaWaveSha256":  "A59F32468A0928E8485E79232670EFA277954718EC4B5864D7A77C7EF95EFD7A",
+                   "combatTuningPath":  "UE5/NaiwaP0/Source/NaiwaRuntime/P4/Core/NaiwaP4ArenaSubsystem.cpp",
+                   "combatTuningScope":  "Current frozen runtime reference: 12 damage per projectile, 0.59 second fire interval, one XP per ordinary kill, and next-level thresholds increasing by 2 XP per level (4, 6, 8, ...)."
+               },
+    "method":  {
+                   "perfectHitBaseProjectileDps":  20.339,
+                   "perfectHitTtkLowerBound":  "Combined ordinary-enemy and Boss HP divided by base projectile DPS; assumes every shot hits, continuous target availability, and zero movement/attack downtime.",
+                   "targetSustainedDpsLowerBound":  "Combined health budget divided by chapter target duration; a lower bound, not a predicted playtest DPS.",
+                   "nominalIncomingDamageBudget":  "Sum of enemy damage multiplied by spawn count; does not model attack frequency, behavior, block, misses, or invulnerability.",
+                   "xpAndLevelCurve":  "Existing P4 runtime awards one XP per ordinary kill; Boss XP is excluded because no Beta rule is frozen."
+               },
+    "scope":  {
+                  "chapterRows":  [
+                                      {
+                                          "RowName":  "chapter_01",
+                                          "ChapterIndex":  1,
+                                          "WaveCount":  5,
+                                          "OrdinaryEnemyCount":  20,
+                                          "OrdinaryHpBudget":  865,
+                                          "BossId":  "",
+                                          "BossHp":  0,
+                                          "CombinedHealthBudget":  865,
+                                          "DurationTargetSeconds":  150,
+                                          "PerfectHitBaseProjectileDps":  20.339,
+                                          "PerfectHitTtkLowerBoundSeconds":  42.53,
+                                          "TargetSustainedDpsLowerBound":  5.77,
+                                          "NominalIncomingDamageBudget":  180,
+                                          "OrdinaryKillExperience":  20,
+                                          "CurrentRuntimeLevelUpsThisChapter":  3,
+                                          "CumulativeRuntimeLevelUps":  3,
+                                          "RuntimePlayerLevelAtChapterEnd":  4,
+                                          "RuntimeExperienceTowardNextLevel":  2,
+                                          "SourceKind":  "accepted_alpha_wave_csv_plus_source_enemy_stats"
+                                      },
+                                      {
+                                          "RowName":  "chapter_02",
+                                          "ChapterIndex":  2,
+                                          "WaveCount":  6,
+                                          "OrdinaryEnemyCount":  30,
+                                          "OrdinaryHpBudget":  1139,
+                                          "BossId":  "",
+                                          "BossHp":  0,
+                                          "CombinedHealthBudget":  1139,
+                                          "DurationTargetSeconds":  165,
+                                          "PerfectHitBaseProjectileDps":  20.339,
+                                          "PerfectHitTtkLowerBoundSeconds":  56,
+                                          "TargetSustainedDpsLowerBound":  6.9,
+                                          "NominalIncomingDamageBudget":  358,
+                                          "OrdinaryKillExperience":  30,
+                                          "CurrentRuntimeLevelUpsThisChapter":  2,
+                                          "CumulativeRuntimeLevelUps":  5,
+                                          "RuntimePlayerLevelAtChapterEnd":  6,
+                                          "RuntimeExperienceTowardNextLevel":  10,
+                                          "SourceKind":  "chapter_json_v2"
+                                      },
+                                      {
+                                          "RowName":  "chapter_03",
+                                          "ChapterIndex":  3,
+                                          "WaveCount":  7,
+                                          "OrdinaryEnemyCount":  42,
+                                          "OrdinaryHpBudget":  1778,
+                                          "BossId":  "",
+                                          "BossHp":  0,
+                                          "CombinedHealthBudget":  1778,
+                                          "DurationTargetSeconds":  195,
+                                          "PerfectHitBaseProjectileDps":  20.339,
+                                          "PerfectHitTtkLowerBoundSeconds":  87.42,
+                                          "TargetSustainedDpsLowerBound":  9.12,
+                                          "NominalIncomingDamageBudget":  468,
+                                          "OrdinaryKillExperience":  42,
+                                          "CurrentRuntimeLevelUpsThisChapter":  3,
+                                          "CumulativeRuntimeLevelUps":  8,
+                                          "RuntimePlayerLevelAtChapterEnd":  9,
+                                          "RuntimeExperienceTowardNextLevel":  4,
+                                          "SourceKind":  "chapter_json_v2"
+                                      },
+                                      {
+                                          "RowName":  "chapter_04",
+                                          "ChapterIndex":  4,
+                                          "WaveCount":  3,
+                                          "OrdinaryEnemyCount":  9,
+                                          "OrdinaryHpBudget":  376,
+                                          "BossId":  "boss_nai_tong",
+                                          "BossHp":  3168,
+                                          "CombinedHealthBudget":  3544,
+                                          "DurationTargetSeconds":  165,
+                                          "PerfectHitBaseProjectileDps":  20.339,
+                                          "PerfectHitTtkLowerBoundSeconds":  174.25,
+                                          "TargetSustainedDpsLowerBound":  21.48,
+                                          "NominalIncomingDamageBudget":  118,
+                                          "OrdinaryKillExperience":  9,
+                                          "CurrentRuntimeLevelUpsThisChapter":  0,
+                                          "CumulativeRuntimeLevelUps":  8,
+                                          "RuntimePlayerLevelAtChapterEnd":  9,
+                                          "RuntimeExperienceTowardNextLevel":  13,
+                                          "SourceKind":  "chapter_json_v2"
+                                      },
+                                      {
+                                          "RowName":  "chapter_05",
+                                          "ChapterIndex":  5,
+                                          "WaveCount":  8,
+                                          "OrdinaryEnemyCount":  56,
+                                          "OrdinaryHpBudget":  2447,
+                                          "BossId":  "",
+                                          "BossHp":  0,
+                                          "CombinedHealthBudget":  2447,
+                                          "DurationTargetSeconds":  210,
+                                          "PerfectHitBaseProjectileDps":  20.339,
+                                          "PerfectHitTtkLowerBoundSeconds":  120.31,
+                                          "TargetSustainedDpsLowerBound":  11.65,
+                                          "NominalIncomingDamageBudget":  720,
+                                          "OrdinaryKillExperience":  56,
+                                          "CurrentRuntimeLevelUpsThisChapter":  3,
+                                          "CumulativeRuntimeLevelUps":  11,
+                                          "RuntimePlayerLevelAtChapterEnd":  12,
+                                          "RuntimeExperienceTowardNextLevel":  3,
+                                          "SourceKind":  "chapter_json_v2"
+                                      },
+                                      {
+                                          "RowName":  "chapter_06",
+                                          "ChapterIndex":  6,
+                                          "WaveCount":  3,
+                                          "OrdinaryEnemyCount":  12,
+                                          "OrdinaryHpBudget":  627,
+                                          "BossId":  "boss_nai_jia",
+                                          "BossHp":  5280,
+                                          "CombinedHealthBudget":  5907,
+                                          "DurationTargetSeconds":  180,
+                                          "PerfectHitBaseProjectileDps":  20.339,
+                                          "PerfectHitTtkLowerBoundSeconds":  290.43,
+                                          "TargetSustainedDpsLowerBound":  32.82,
+                                          "NominalIncomingDamageBudget":  146,
+                                          "OrdinaryKillExperience":  12,
+                                          "CurrentRuntimeLevelUpsThisChapter":  0,
+                                          "CumulativeRuntimeLevelUps":  11,
+                                          "RuntimePlayerLevelAtChapterEnd":  12,
+                                          "RuntimeExperienceTowardNextLevel":  15,
+                                          "SourceKind":  "chapter_json_v2"
+                                      }
+                                  ],
+                  "waveRows":  [
+                                   {
+                                       "RowName":  "ch01_w01",
+                                       "ChapterIndex":  1,
+                                       "WaveIndex":  1,
+                                       "OrdinaryEnemyCount":  4,
+                                       "OrdinaryHpBudget":  144,
+                                       "NominalIncomingDamageBudget":  32,
+                                       "SourceKind":  "accepted_alpha_wave_and_enemy_csv"
+                                   },
+                                   {
+                                       "RowName":  "ch01_w02",
+                                       "ChapterIndex":  1,
+                                       "WaveIndex":  2,
+                                       "OrdinaryEnemyCount":  4,
+                                       "OrdinaryHpBudget":  144,
+                                       "NominalIncomingDamageBudget":  32,
+                                       "SourceKind":  "accepted_alpha_wave_and_enemy_csv"
+                                   },
+                                   {
+                                       "RowName":  "ch01_w03",
+                                       "ChapterIndex":  1,
+                                       "WaveIndex":  3,
+                                       "OrdinaryEnemyCount":  4,
+                                       "OrdinaryHpBudget":  173,
+                                       "NominalIncomingDamageBudget":  36,
+                                       "SourceKind":  "accepted_alpha_wave_and_enemy_csv"
+                                   },
+                                   {
+                                       "RowName":  "ch01_w04",
+                                       "ChapterIndex":  1,
+                                       "WaveIndex":  4,
+                                       "OrdinaryEnemyCount":  4,
+                                       "OrdinaryHpBudget":  202,
+                                       "NominalIncomingDamageBudget":  40,
+                                       "SourceKind":  "accepted_alpha_wave_and_enemy_csv"
+                                   },
+                                   {
+                                       "RowName":  "ch01_w05",
+                                       "ChapterIndex":  1,
+                                       "WaveIndex":  5,
+                                       "OrdinaryEnemyCount":  4,
+                                       "OrdinaryHpBudget":  202,
+                                       "NominalIncomingDamageBudget":  40,
+                                       "SourceKind":  "accepted_alpha_wave_and_enemy_csv"
+                                   },
+                                   {
+                                       "RowName":  "ch02_w01",
+                                       "ChapterIndex":  2,
+                                       "WaveIndex":  1,
+                                       "OrdinaryEnemyCount":  4,
+                                       "OrdinaryHpBudget":  144,
+                                       "NominalIncomingDamageBudget":  32,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch02_w02",
+                                       "ChapterIndex":  2,
+                                       "WaveIndex":  2,
+                                       "OrdinaryEnemyCount":  5,
+                                       "OrdinaryHpBudget":  192,
+                                       "NominalIncomingDamageBudget":  44,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch02_w03",
+                                       "ChapterIndex":  2,
+                                       "WaveIndex":  3,
+                                       "OrdinaryEnemyCount":  6,
+                                       "OrdinaryHpBudget":  198,
+                                       "NominalIncomingDamageBudget":  102,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch02_w04",
+                                       "ChapterIndex":  2,
+                                       "WaveIndex":  4,
+                                       "OrdinaryEnemyCount":  4,
+                                       "OrdinaryHpBudget":  174,
+                                       "NominalIncomingDamageBudget":  44,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch02_w05",
+                                       "ChapterIndex":  2,
+                                       "WaveIndex":  5,
+                                       "OrdinaryEnemyCount":  5,
+                                       "OrdinaryHpBudget":  209,
+                                       "NominalIncomingDamageBudget":  44,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch02_w06",
+                                       "ChapterIndex":  2,
+                                       "WaveIndex":  6,
+                                       "OrdinaryEnemyCount":  6,
+                                       "OrdinaryHpBudget":  222,
+                                       "NominalIncomingDamageBudget":  92,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch03_w01",
+                                       "ChapterIndex":  3,
+                                       "WaveIndex":  1,
+                                       "OrdinaryEnemyCount":  5,
+                                       "OrdinaryHpBudget":  180,
+                                       "NominalIncomingDamageBudget":  40,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch03_w02",
+                                       "ChapterIndex":  3,
+                                       "WaveIndex":  2,
+                                       "OrdinaryEnemyCount":  5,
+                                       "OrdinaryHpBudget":  198,
+                                       "NominalIncomingDamageBudget":  46,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch03_w03",
+                                       "ChapterIndex":  3,
+                                       "WaveIndex":  3,
+                                       "OrdinaryEnemyCount":  5,
+                                       "OrdinaryHpBudget":  204,
+                                       "NominalIncomingDamageBudget":  52,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch03_w04",
+                                       "ChapterIndex":  3,
+                                       "WaveIndex":  4,
+                                       "OrdinaryEnemyCount":  4,
+                                       "OrdinaryHpBudget":  214,
+                                       "NominalIncomingDamageBudget":  44,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch03_w05",
+                                       "ChapterIndex":  3,
+                                       "WaveIndex":  5,
+                                       "OrdinaryEnemyCount":  7,
+                                       "OrdinaryHpBudget":  252,
+                                       "NominalIncomingDamageBudget":  118,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch03_w06",
+                                       "ChapterIndex":  3,
+                                       "WaveIndex":  6,
+                                       "OrdinaryEnemyCount":  7,
+                                       "OrdinaryHpBudget":  330,
+                                       "NominalIncomingDamageBudget":  82,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch03_w07",
+                                       "ChapterIndex":  3,
+                                       "WaveIndex":  7,
+                                       "OrdinaryEnemyCount":  9,
+                                       "OrdinaryHpBudget":  400,
+                                       "NominalIncomingDamageBudget":  86,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch04_w01",
+                                       "ChapterIndex":  4,
+                                       "WaveIndex":  1,
+                                       "OrdinaryEnemyCount":  4,
+                                       "OrdinaryHpBudget":  144,
+                                       "NominalIncomingDamageBudget":  32,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch04_w02",
+                                       "ChapterIndex":  4,
+                                       "WaveIndex":  2,
+                                       "OrdinaryEnemyCount":  3,
+                                       "OrdinaryHpBudget":  172,
+                                       "NominalIncomingDamageBudget":  34,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch04_w03",
+                                       "ChapterIndex":  4,
+                                       "WaveIndex":  3,
+                                       "OrdinaryEnemyCount":  2,
+                                       "OrdinaryHpBudget":  60,
+                                       "NominalIncomingDamageBudget":  52,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch05_w01",
+                                       "ChapterIndex":  5,
+                                       "WaveIndex":  1,
+                                       "OrdinaryEnemyCount":  6,
+                                       "OrdinaryHpBudget":  216,
+                                       "NominalIncomingDamageBudget":  48,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch05_w02",
+                                       "ChapterIndex":  5,
+                                       "WaveIndex":  2,
+                                       "OrdinaryEnemyCount":  7,
+                                       "OrdinaryHpBudget":  244,
+                                       "NominalIncomingDamageBudget":  128,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch05_w03",
+                                       "ChapterIndex":  5,
+                                       "WaveIndex":  3,
+                                       "OrdinaryEnemyCount":  5,
+                                       "OrdinaryHpBudget":  214,
+                                       "NominalIncomingDamageBudget":  50,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch05_w04",
+                                       "ChapterIndex":  5,
+                                       "WaveIndex":  4,
+                                       "OrdinaryEnemyCount":  6,
+                                       "OrdinaryHpBudget":  260,
+                                       "NominalIncomingDamageBudget":  92,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch05_w05",
+                                       "ChapterIndex":  5,
+                                       "WaveIndex":  5,
+                                       "OrdinaryEnemyCount":  7,
+                                       "OrdinaryHpBudget":  334,
+                                       "NominalIncomingDamageBudget":  76,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch05_w06",
+                                       "ChapterIndex":  5,
+                                       "WaveIndex":  6,
+                                       "OrdinaryEnemyCount":  8,
+                                       "OrdinaryHpBudget":  364,
+                                       "NominalIncomingDamageBudget":  84,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch05_w07",
+                                       "ChapterIndex":  5,
+                                       "WaveIndex":  7,
+                                       "OrdinaryEnemyCount":  8,
+                                       "OrdinaryHpBudget":  417,
+                                       "NominalIncomingDamageBudget":  158,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch05_w08",
+                                       "ChapterIndex":  5,
+                                       "WaveIndex":  8,
+                                       "OrdinaryEnemyCount":  9,
+                                       "OrdinaryHpBudget":  398,
+                                       "NominalIncomingDamageBudget":  84,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch06_w01",
+                                       "ChapterIndex":  6,
+                                       "WaveIndex":  1,
+                                       "OrdinaryEnemyCount":  4,
+                                       "OrdinaryHpBudget":  174,
+                                       "NominalIncomingDamageBudget":  44,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch06_w02",
+                                       "ChapterIndex":  6,
+                                       "WaveIndex":  2,
+                                       "OrdinaryEnemyCount":  3,
+                                       "OrdinaryHpBudget":  195,
+                                       "NominalIncomingDamageBudget":  36,
+                                       "SourceKind":  "chapter_json_v2"
+                                   },
+                                   {
+                                       "RowName":  "ch06_w03",
+                                       "ChapterIndex":  6,
+                                       "WaveIndex":  3,
+                                       "OrdinaryEnemyCount":  5,
+                                       "OrdinaryHpBudget":  258,
+                                       "NominalIncomingDamageBudget":  66,
+                                       "SourceKind":  "chapter_json_v2"
+                                   }
+                               ],
+                  "totalWaves":  32,
+                  "totalOrdinaryEnemies":  169,
+                  "totalOrdinaryHpBudget":  7232,
+                  "totalBossHp":  8448,
+                  "cumulativeOrdinaryKillExperience":  169
+              },
+    "unresolved":  [
+                       "Chapter 2-6 spawn intervals are not present in the source JSON.",
+                       "Ten Beta enemies have no accepted runtime movement/range/cooldown/collision tuning.",
+                       "Boss per-attack timings, hitboxes, damage, summons and transition details are not frozen.",
+                       "Boss XP, upgrade offer count, retry XP reset behavior and cross-chapter run metrics need Beta progression freeze.",
+                       "Perfect-hit DPS/TTK values are analytical lower bounds and do not replace deterministic simulation or PIE/package measurements."
+                   ],
+    "outputs":  [
+                    {
+                        "path":  "UE5/SourceAssets/P4/Data/Beta6/P4Beta6_BalanceFixture.csv",
+                        "rowCount":  6,
+                        "sha256":  "EEA6FEA3E9DA1425880849AF79E65AD594E035E969439D59074CA3F0E504ED17"
+                    },
+                    {
+                        "path":  "UE5/SourceAssets/P4/Data/Beta6/P4Beta6_BalanceFixture_Waves.csv",
+                        "rowCount":  32,
+                        "sha256":  "940FCFAB18318DCCEF702EE6A09243F571E14CC55621C6A6A65C816FD52E2C38"
+                    }
+                ]
+}

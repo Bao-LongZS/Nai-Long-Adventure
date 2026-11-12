@@ -1,0 +1,84 @@
+{
+  "schema": "naiwa.p4.catalog_direct_portrait_import/1",
+  "status": "textures_imported_pending_hud_layout_and_runtime_review",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "scope": "four direct appendix-catalog portrait textures only; no HUD layout, gameplay, map, or animation changes",
+  "destination_root": "/Game/Naiwa/P4/UI/Alpha/CatalogDirect",
+  "level_opened_or_changed": false,
+  "runtime_played": false,
+  "assets": [
+    {
+      "asset_id": "P4-A1-CAT-139",
+      "figure": "139",
+      "caption": "仰首静立",
+      "asset_path": "/Game/Naiwa/P4/UI/Alpha/CatalogDirect/T_P4_A1_CatalogPortrait_Idle_Figure139_v01",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\UI\\Alpha\\CatalogDirect\\P4_A1_CatalogPortrait_Idle_Figure139_v01.png",
+      "source_sha256": "a6a0d8b28330da41fead19e5e074737de1e524547977048cab23e4b575c5fef9",
+      "dimensions_px": [
+        583,
+        583
+      ],
+      "action": "imported",
+      "texture_group": "UI",
+      "mipmaps": false,
+      "srgb": true,
+      "alpha": false,
+      "texture_settings_readback": "passed"
+    },
+    {
+      "asset_id": "P4-A1-CAT-003",
+      "figure": "003",
+      "caption": "捧腹大笑",
+      "asset_path": "/Game/Naiwa/P4/UI/Alpha/CatalogDirect/T_P4_A1_CatalogPortrait_Laugh_Figure003_v01",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\UI\\Alpha\\CatalogDirect\\P4_A1_CatalogPortrait_Laugh_Figure003_v01.png",
+      "source_sha256": "6c979fe16e956ae160921a81d0dc6153e3767e5fe95c434a19d56e1fca489c4d",
+      "dimensions_px": [
+        604,
+        604
+      ],
+      "action": "imported",
+      "texture_group": "UI",
+      "mipmaps": false,
+      "srgb": true,
+      "alpha": false,
+      "texture_settings_readback": "passed"
+    },
+    {
+      "asset_id": "P4-A1-CAT-121",
+      "figure": "121",
+      "caption": "滑跪庆祝",
+      "asset_path": "/Game/Naiwa/P4/UI/Alpha/CatalogDirect/T_P4_A1_CatalogPortrait_Victory_Figure121_v01",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\UI\\Alpha\\CatalogDirect\\P4_A1_CatalogPortrait_Victory_Figure121_v01.png",
+      "source_sha256": "220189369ab41ae78ab4cf168c2523ad4a2e1f3aa043bb0c2c67058425ed1fae",
+      "dimensions_px": [
+        604,
+        604
+      ],
+      "action": "imported",
+      "texture_group": "UI",
+      "mipmaps": false,
+      "srgb": true,
+      "alpha": false,
+      "texture_settings_readback": "passed"
+    },
+    {
+      "asset_id": "P4-A1-CAT-106",
+      "figure": "106",
+      "caption": "失落蹲坐",
+      "asset_path": "/Game/Naiwa/P4/UI/Alpha/CatalogDirect/T_P4_A1_CatalogPortrait_Distress_Figure106_v01",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\UI\\Alpha\\CatalogDirect\\P4_A1_CatalogPortrait_Distress_Figure106_v01.png",
+      "source_sha256": "1e78beb45e2a105e12541b4b4b27f2ab434cdcc07034f84d86e1eac67b5b1102",
+      "dimensions_px": [
+        604,
+        604
+      ],
+      "action": "imported",
+      "texture_group": "UI",
+      "mipmaps": false,
+      "srgb": true,
+      "alpha": false,
+      "texture_settings_readback": "passed"
+    }
+  ],
+  "catalog_source_pdf_sha256": "1b3d6198eb393e735d34c0ac0ccd6fbc8f1cfc5fb7e91847a7028e25057c9361"
+}

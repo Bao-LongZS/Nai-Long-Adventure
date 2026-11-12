@@ -1,0 +1,22 @@
+{
+  "status": "map_created_pending_runtime_review",
+  "map": "/Game/Naiwa/P4/Maps/L_NaiwaP4_A2_RefinedArena_v02",
+  "source": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P4\\Environment\\Alpha\\P4_A2_ArenaScene_v02.png",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "level_opened_or_changed": true,
+  "runtime_played": false,
+  "source_sha256": "c1bd30f8a6bcee0e687f130c7353c87a436be549926f12f2324e571c369df7f9",
+  "source_dimensions_px": [
+    1672,
+    941
+  ],
+  "texture_asset": "/Game/Naiwa/P4/Art/Alpha/A2/T_P4_A2_ArenaScene_v02",
+  "material_asset": "/Game/Naiwa/P4/Materials/Alpha/A2/M_P4_A2_RefinedBackdrop_v02",
+  "texture_settings_readback": "TC_EditorIcon (uncompressed RGBA8), sRGB, UI group, Sharpen0 mips, non-streaming",
+  "map_actor_count": 2,
+  "material_unlit_opaque": true,
+  "limitations": [
+    "No PIE/Standalone visual check was run.",
+    "Camera framing and sprite-to-floor alignment remain owner runtime visual checks."
+  ]
+}

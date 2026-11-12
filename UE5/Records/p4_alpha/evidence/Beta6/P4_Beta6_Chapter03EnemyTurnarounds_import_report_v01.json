@@ -1,0 +1,41 @@
+{
+  "schema": "naiwa.p4.beta6.chapter03_enemy_turnarounds_import/1",
+  "status": "chapter03_turnarounds_owner_approved_static_references",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "runtime_reference": "none; static Chapter 3 enemy reference sheets only",
+  "assets": [
+    {
+      "asset_id": "P4_BETA6_NAILING_TURNAROUND",
+      "character_id": "nailing",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_nailing_turnaround_v01.png",
+      "source_sha256": "65e06b06680f5617068422f5ea14303840eb39304d4dda1153603ad0d6b0b2f2",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_nailing_turnaround_v01",
+      "imported_now": true,
+      "texture_settings": "sRGB, TC_Default, alpha preserved, no mips, UI group, non-streaming",
+      "status": "turnaround_owner_approved_static_reference",
+      "owner_approved_date": "2026-11-12"
+    },
+    {
+      "asset_id": "P4_BETA6_NAICHUI_TURNAROUND",
+      "character_id": "naichui",
+      "source_path": "UE5/SourceAssets/P4/Beta6/Characters/Enemies/p4_beta6_naichui_turnaround_v01.png",
+      "source_sha256": "0a5c2d0d7a14d11eb2207bf2c81aae3553f3174e5f7ce7742a31fcaa6c0069c8",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_naichui_turnaround_v01",
+      "imported_now": true,
+      "texture_settings": "sRGB, TC_Default, alpha preserved, no mips, UI group, non-streaming",
+      "status": "turnaround_owner_approved_static_reference",
+      "owner_approved_date": "2026-11-12"
+    }
+  ],
+  "asset_count": 2
+}

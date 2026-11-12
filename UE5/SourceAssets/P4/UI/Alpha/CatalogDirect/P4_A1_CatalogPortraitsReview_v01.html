@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>P4 A1 图录直用角色肖像 v01</title>
+  <style>
+    :root { color-scheme: light; --ink:#342d25; --muted:#756b5e; --paper:#f4eee2; --line:#d9cdb9; --card:#fffdf8; --accent:#698a61; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.5 "Microsoft YaHei",sans-serif; }
+    main { width:min(1180px,calc(100% - 40px)); margin:40px auto 56px; }
+    header { padding:0 4px 22px; border-bottom:1px solid var(--line); }
+    h1 { margin:0 0 8px; font-size:30px; }
+    header p { max-width:780px; margin:0; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; margin-top:24px; }
+    article { overflow:hidden; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 5px 20px #342d250d; }
+    article img { display:block; width:100%; aspect-ratio:1; object-fit:contain; background:#fff; }
+    .copy { padding:14px 16px 16px; }
+    h2 { margin:0 0 3px; font-size:19px; }
+    .figure { margin:0 0 8px; color:var(--accent); font-size:14px; font-weight:700; }
+    .copy p { margin:0; color:var(--muted); font-size:13px; }
+    aside { margin-top:22px; padding:14px 18px; border-left:4px solid var(--accent); background:#e8eddf; color:#48523e; }
+    @media(max-width:850px) { .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media(max-width:500px) { main { width:calc(100% - 24px); margin:24px auto; } .grid { gap:10px; } h1 { font-size:24px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>P4 A1 · 奶蛙学附录图录肖像</h1>
+      <p>直接使用图录 139、003、121、106 原图裁切。保留纸面白底和原始角色造型；此组用于静态 HUD/结算肖像审阅，不是动画帧。</p>
+    </header>
+    <section class="grid" aria-label="图录姿态">
+      <article><img src="P4_A1_CatalogPortrait_Idle_Figure139_v01.png" alt="图录139 仰首静立"><div class="copy"><h2>常态</h2><p class="figure">图录 139 · 仰首静立</p><p>PDF 第 118 页 · 书内第 110 页<br>583 × 583 · RGB 白底</p></div></article>
+      <article><img src="P4_A1_CatalogPortrait_Laugh_Figure003_v01.png" alt="图录003 捧腹大笑"><div class="copy"><h2>大笑</h2><p class="figure">图录 003 · 捧腹大笑</p><p>PDF 第 107 页 · 书内第 99 页<br>604 × 604 · RGB 白底</p></div></article>
+      <article><img src="P4_A1_CatalogPortrait_Victory_Figure121_v01.png" alt="图录121 滑跪庆祝"><div class="copy"><h2>胜利</h2><p class="figure">图录 121 · 滑跪庆祝</p><p>PDF 第 117 页 · 书内第 109 页<br>604 × 604 · RGB 白底</p></div></article>
+      <article><img src="P4_A1_CatalogPortrait_Distress_Figure106_v01.png" alt="图录106 失落蹲坐"><div class="copy"><h2>失落</h2><p class="figure">图录 106 · 失落蹲坐</p><p>PDF 第 115 页 · 书内第 107 页<br>604 × 604 · RGB 白底</p></div></article>
+    </section>
+    <aside>用途边界：角色肖像牌。保留已验收的 P4 A1 透明动作帧用于场内角色表现；本组不会覆盖或替代 A1 动画。</aside>
+  </main>
+</body>
+</html>

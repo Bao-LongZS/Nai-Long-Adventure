@@ -1,0 +1,41 @@
+{
+  "schema": "naiwa.p4.beta6.core_enemy_turnarounds_import/1",
+  "status": "core_turnarounds_imported_pending_owner_review",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "runtime_reference": "none; static core enemy references only",
+  "assets": [
+    {
+      "asset_id": "P4_BETA6_NAIDING_TURNAROUND",
+      "character_id": "naiding",
+      "source_path": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naiding_turnaround_v01_concept.png",
+      "source_sha256": "7f7c4097ca23478a5034a3fa0d2c4b169c0e7477cc5c0f003b321679beecb4b1",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_naiding_turnaround_v01",
+      "imported_now": true,
+      "texture_settings": "sRGB, TC_Default, alpha preserved, no mips, UI group, non-streaming",
+      "source_origin": "reused existing P4 Alpha W3 turnaround concept; no new art generated",
+      "status": "turnaround_imported_pending_owner_review"
+    },
+    {
+      "asset_id": "P4_BETA6_NAIDUN_TURNAROUND",
+      "character_id": "naidun",
+      "source_path": "UE5/SourceAssets/P4/Characters/Alpha/W3_Enemies/Concepts/P4_W3_naidun_turnaround_v01_concept.png",
+      "source_sha256": "5d3f07a46f129efc957f4e11f533a3c6adb49dfc7ed16bc71aca897438392296",
+      "dimensions_px": [
+        2172,
+        724
+      ],
+      "alpha_mode": "straight RGBA",
+      "texture_asset": "/Game/Naiwa/P4/Art/Beta6/Characters/Reference/T_P4_Beta6_naidun_turnaround_v01",
+      "imported_now": true,
+      "texture_settings": "sRGB, TC_Default, alpha preserved, no mips, UI group, non-streaming",
+      "source_origin": "reused existing P4 Alpha W3 turnaround concept; no new art generated",
+      "status": "turnaround_imported_pending_owner_review"
+    }
+  ],
+  "asset_count": 2
+}
