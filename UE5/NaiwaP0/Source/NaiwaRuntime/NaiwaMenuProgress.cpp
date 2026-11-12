@@ -1,13 +1,50 @@
 #include "NaiwaMenuProgress.h"
 
 #include "Kismet/GameplayStatics.h"
+#include "Misc/CommandLine.h"
+#include "Misc/Parse.h"
 #include "P5/Data/NaiwaP5SkinCatalog.h"
 
 const TCHAR* UNaiwaProgressSubsystem::SaveSlotName = TEXT("NaiwaMenuProgress");
 
+namespace
+{
+	FName GetP6BaseClearRewardKey()
+	{
+		return FName(TEXT("P6_FirstClear_Base"));
+	}
+
+	FName GetP6PerfectClearRewardKey()
+	{
+		return FName(TEXT("P6_FirstClear_Perfect"));
+	}
+
+	FName GetP6CaseRunRewardKey(const FGuid& CaseRunId)
+	{
+		return FName(*FString::Printf(TEXT("P6_CaseRun_%s"), *CaseRunId.ToString(EGuidFormats::Digits)));
+	}
+
+	int32 AddMilkTickets(UNaiwaMenuSaveGame& SaveData, const int32 Tickets)
+	{
+		const int32 CurrentTickets = FMath::Max(0, SaveData.MilkTickets);
+		const int32 TicketsAdded = FMath::Clamp(Tickets, 0, MAX_int32 - CurrentTickets);
+		SaveData.MilkTickets = CurrentTickets + TicketsAdded;
+		return TicketsAdded;
+	}
+
+	bool IsP6ProbeMode()
+	{
+		return FParse::Param(FCommandLine::Get(), TEXT("NaiwaP6M1Probe")) ||
+			FParse::Param(FCommandLine::Get(), TEXT("NaiwaP6M2Probe")) ||
+			FParse::Param(FCommandLine::Get(), TEXT("NaiwaP6M3Probe")) ||
+			FParse::Param(FCommandLine::Get(), TEXT("NaiwaP6M4Probe"));
+	}
+}
+
 void UNaiwaProgressSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
     Super::Initialize(Collection);
+    const bool bP6Probe = IsP6ProbeMode();
     if (UGameplayStatics::DoesSaveGameExist(SaveSlotName, SaveUserIndex))
     {
         SaveData = Cast<UNaiwaMenuSaveGame>(UGameplayStatics::LoadGameFromSlot(SaveSlotName, SaveUserIndex));
@@ -40,7 +77,50 @@ void UNaiwaProgressSubsystem::Initialize(FSubsystemCollectionBase& Collection)
             SaveData->DataVersion = 3;
             bNeedsSave = true;
         }
-        if (bNeedsSave)
+        if (SaveData->DataVersion < 4)
+        {
+            SaveData->DataVersion = 4;
+            bNeedsSave = true;
+        }
+        if (SaveData->DataVersion < 5)
+        {
+            SaveData->P6WrongSubmissionCount = FMath::Max(0, SaveData->P6WrongSubmissionCount);
+            SaveData->P6CaseElapsedMinutes = FMath::Clamp(SaveData->P6CaseElapsedMinutes, 20, 360);
+            SaveData->P6BestCaseRating = FMath::Clamp(SaveData->P6BestCaseRating, 0, 2);
+            SaveData->DataVersion = 5;
+            bNeedsSave = true;
+        }
+        if (SaveData->DataVersion < 6)
+        {
+            SaveData->P6FailureStreakCount = 0;
+            SaveData->DataVersion = 6;
+            bNeedsSave = true;
+        }
+        if (SaveData->DataVersion < 7)
+        {
+            SaveData->P6BestCaseRating = FMath::Clamp(SaveData->P6BestCaseRating, 0, 2);
+            SaveData->P6ClaimedRewardKeys.RemoveAll([](const FName RewardKey) { return RewardKey.IsNone(); });
+
+            // M4 saved case ratings before ticket rewards were connected. Pay the
+            // matching one-time first-clear amount during migration, then persist
+            // the keys with the updated ticket balance in the same save write.
+            if (SaveData->P6BestCaseRating >= 1 &&
+                !SaveData->P6ClaimedRewardKeys.Contains(GetP6BaseClearRewardKey()))
+            {
+                AddMilkTickets(*SaveData, 60);
+                SaveData->P6ClaimedRewardKeys.Add(GetP6BaseClearRewardKey());
+            }
+            if (SaveData->P6BestCaseRating >= 2 &&
+                !SaveData->P6ClaimedRewardKeys.Contains(GetP6PerfectClearRewardKey()))
+            {
+                AddMilkTickets(*SaveData, 60);
+                SaveData->P6ClaimedRewardKeys.Add(GetP6PerfectClearRewardKey());
+            }
+
+            SaveData->DataVersion = 7;
+            bNeedsSave = true;
+        }
+        if (bNeedsSave && !bP6Probe)
         {
             SaveProgress();
         }
@@ -129,6 +209,32 @@ const FNaiwaP5SaveRecord& UNaiwaProgressSubsystem::GetP5BestRecord() const
 {
     static const FNaiwaP5SaveRecord EmptyRecord;
     return SaveData ? SaveData->P5BestRecord : EmptyRecord;
+}
+
+const TArray<FName>& UNaiwaProgressSubsystem::GetP6CollectedClueIds() const
+{
+    static const TArray<FName> EmptyIds;
+    return SaveData ? SaveData->P6CollectedClueIds : EmptyIds;
+}
+
+int32 UNaiwaProgressSubsystem::GetP6WrongSubmissionCount() const
+{
+    return SaveData ? FMath::Max(0, SaveData->P6WrongSubmissionCount) : 0;
+}
+
+int32 UNaiwaProgressSubsystem::GetP6FailureStreakCount() const
+{
+    return SaveData ? FMath::Max(0, SaveData->P6FailureStreakCount) : 0;
+}
+
+int32 UNaiwaProgressSubsystem::GetP6CaseElapsedMinutes() const
+{
+    return SaveData ? FMath::Clamp(SaveData->P6CaseElapsedMinutes, 20, 360) : 20;
+}
+
+int32 UNaiwaProgressSubsystem::GetP6BestCaseRating() const
+{
+    return SaveData ? FMath::Clamp(SaveData->P6BestCaseRating, 0, 2) : 0;
 }
 
 bool UNaiwaProgressSubsystem::IsP5SkinOwned(const FName SkinId) const
@@ -224,6 +330,88 @@ void UNaiwaProgressSubsystem::RecordP5RunSettlement(const bool bFinished, const 
     P5Record.BestCollectibles = bFirstClear ? FMath::Max(0, CoinsCollected)
         : FMath::Max(P5Record.BestCollectibles, CoinsCollected);
     SaveProgress();
+}
+
+void UNaiwaProgressSubsystem::RecordP6ClueCollected(const FName ClueId)
+{
+    if (IsP6ProbeMode() || !SaveData || ClueId.IsNone() || SaveData->P6CollectedClueIds.Contains(ClueId))
+    {
+        return;
+    }
+    SaveData->P6CollectedClueIds.Add(ClueId);
+    SaveProgress();
+}
+
+void UNaiwaProgressSubsystem::RecordP6FailedSubmission(const int32 MinutesAdvanced)
+{
+    if (IsP6ProbeMode() || !SaveData)
+    {
+        return;
+    }
+    SaveData->P6WrongSubmissionCount = FMath::Clamp(SaveData->P6WrongSubmissionCount, 0, MAX_int32 - 1) + 1;
+    SaveData->P6FailureStreakCount = FMath::Clamp(SaveData->P6FailureStreakCount, 0, MAX_int32 - 1) + 1;
+    SaveData->P6CaseElapsedMinutes = FMath::Clamp(
+        FMath::Clamp(SaveData->P6CaseElapsedMinutes, 20, 360) + FMath::Clamp(MinutesAdvanced, 0, 360), 20, 360);
+    SaveProgress();
+}
+
+bool UNaiwaProgressSubsystem::ApplyP6CaseClearReward(UNaiwaMenuSaveGame& TargetSave,
+    const int32 Rating, const FGuid& CaseRunId, int32& OutTicketsGranted)
+{
+    OutTicketsGranted = 0;
+    if (!CaseRunId.IsValid() || Rating < 1 || Rating > 2)
+    {
+        return false;
+    }
+    const FName RunRewardKey = GetP6CaseRunRewardKey(CaseRunId);
+    if (TargetSave.P6ClaimedRewardKeys.Contains(RunRewardKey))
+    {
+        return false;
+    }
+
+    const int32 SafeRating = Rating;
+    const int32 ExistingBestRating = FMath::Clamp(TargetSave.P6BestCaseRating, 0, 2);
+    const int32 UpdatedBestRating = FMath::Max(ExistingBestRating, SafeRating);
+    TargetSave.P6FailureStreakCount = 0;
+
+    int32 RewardAmount = 0;
+    const FName BaseRewardKey = GetP6BaseClearRewardKey();
+    const FName PerfectRewardKey = GetP6PerfectClearRewardKey();
+    const bool bHasBaseReward = TargetSave.P6ClaimedRewardKeys.Contains(BaseRewardKey);
+    if (!bHasBaseReward)
+    {
+        TargetSave.P6ClaimedRewardKeys.Add(BaseRewardKey);
+        RewardAmount += 60;
+    }
+    if (SafeRating >= 2 && !TargetSave.P6ClaimedRewardKeys.Contains(PerfectRewardKey))
+    {
+        TargetSave.P6ClaimedRewardKeys.Add(PerfectRewardKey);
+        RewardAmount += 60;
+    }
+    if (bHasBaseReward)
+    {
+        RewardAmount += 20;
+    }
+
+    TargetSave.P6ClaimedRewardKeys.Add(RunRewardKey);
+    OutTicketsGranted = AddMilkTickets(TargetSave, RewardAmount);
+    TargetSave.P6BestCaseRating = UpdatedBestRating;
+    return true;
+}
+
+int32 UNaiwaProgressSubsystem::RecordP6CaseClear(const int32 Rating, const FGuid& CaseRunId)
+{
+    if (IsP6ProbeMode() || !SaveData)
+    {
+        return 0;
+    }
+    int32 TicketsGranted = 0;
+    if (!ApplyP6CaseClearReward(*SaveData, Rating, CaseRunId, TicketsGranted))
+    {
+        return 0;
+    }
+    SaveProgress();
+    return TicketsGranted;
 }
 
 void UNaiwaProgressSubsystem::SaveProgress()

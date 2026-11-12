@@ -209,7 +209,7 @@ void UNaiwaMenuWidget::BuildHomePage()
     AddText(TEXT("N A I W A   &   T H E   S L I N G S H O T"),
         FVector2D(0.075f, 0.205f), FVector2D(700.0f, 34.0f), 15, MutedColor);
     AddText(TEXT("奶蛙闯关"), FVector2D(0.075f, 0.285f), FVector2D(740.0f, 118.0f), 76, InkColor, true);
-    AddText(TEXT("七关主线：1-1 → 2-1 → 2-2 → 2-3 → 3-1 → 3-2 → 4-1"),
+    AddText(TEXT("八关主线：1-1 → 2-1 → 2-2 → 2-3 → 3-1 → 3-2 → 4-1 → 5-1"),
         FVector2D(0.078f, 0.435f), FVector2D(790.0f, 48.0f), 22, MutedColor);
 
     UNaiwaProgressSubsystem* Progress = GetGameInstance()
@@ -312,6 +312,7 @@ void UNaiwaMenuWidget::AddLevelCard(const FString& LevelId, bool bUnlocked,
     if (LevelId == TEXT("3-1")) Button->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnSelect31);
     if (LevelId == TEXT("3-2")) Button->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnSelect32);
     if (LevelId == TEXT("4-1")) Button->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnSelect41);
+    if (LevelId == TEXT("5-1")) Button->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnSelect51);
 }
 
 void UNaiwaMenuWidget::BuildLevelSelectPage()
@@ -330,15 +331,16 @@ void UNaiwaMenuWidget::BuildLevelSelectPage()
 
     const TCHAR* StageTitle = CurrentLevelPage == 0 ? TEXT("第一大关")
         : CurrentLevelPage == 1 ? TEXT("第二大关")
-        : CurrentLevelPage == 2 ? TEXT("第三大关") : TEXT("第四大关");
+        : CurrentLevelPage == 2 ? TEXT("第三大关")
+        : CurrentLevelPage == 3 ? TEXT("第四大关") : TEXT("第五大关");
     AddText(TEXT("N A I W A   &   T H E   S L I N G S H O T"),
         FVector2D(0.05f, 0.055f), FVector2D(560.0f, 28.0f), 15, MutedColor);
     AddText(TEXT("选择关卡"), FVector2D(0.05f, 0.115f), FVector2D(620.0f, 82.0f), 58, InkColor, true);
     AddText(StageTitle, FVector2D(0.05f, 0.225f), FVector2D(420.0f, 48.0f), 34, MutedColor, true);
 
-    AddText(FString::Printf(TEXT("%02d / 04"), CurrentLevelPage + 1),
+    AddText(FString::Printf(TEXT("%02d / 05"), CurrentLevelPage + 1),
         FVector2D(0.82f, 0.065f), FVector2D(240.0f, 38.0f), 29, InkColor, true, ETextJustify::Right);
-    for (int32 DotIndex = 0; DotIndex < 4; ++DotIndex)
+    for (int32 DotIndex = 0; DotIndex < 5; ++DotIndex)
     {
         AddText(TEXT("●"), FVector2D(0.895f + DotIndex * 0.026f, 0.124f),
             FVector2D(24.0f, 24.0f), 14, DotIndex == CurrentLevelPage ? InkColor : BorderColor,
@@ -362,6 +364,7 @@ void UNaiwaMenuWidget::BuildLevelSelectPage()
     const bool bUnlocked31 = Progress && Progress->IsLevelUnlocked(TEXT("3-1"));
     const bool bUnlocked32 = Progress && Progress->IsLevelUnlocked(TEXT("3-2"));
     const bool bUnlocked41 = Progress && Progress->IsLevelUnlocked(TEXT("4-1"));
+    const bool bUnlocked51 = Progress && Progress->IsLevelUnlocked(TEXT("5-1"));
 
     FVector2D SelectedPosition(0.38f, 0.267f);
     FVector2D CardSize(0.25f, 0.52f);
@@ -403,11 +406,21 @@ void UNaiwaMenuWidget::BuildLevelSelectPage()
         CardSize = SelectedLevel == TEXT("3-2") ? Size32 : Size31;
         StartButtonY = 0.755f;
     }
-    else
+    else if (CurrentLevelPage == 3)
     {
         SelectedPosition = FVector2D(0.38f, 0.29f);
         CardSize = FVector2D(0.25f, 0.52f);
         AddLevelCard(TEXT("4-1"), bUnlocked41, SelectedPosition, CardSize);
+        StartButtonY = 0.704f;
+    }
+    else
+    {
+        SelectedPosition = FVector2D(0.38f, 0.29f);
+        CardSize = FVector2D(0.25f, 0.52f);
+        AddLevelCard(TEXT("5-1"), bUnlocked51, SelectedPosition, CardSize);
+        AddText(TEXT("禁笑令之夜  ·  收集现场证据，完成三段结案"),
+            FVector2D(0.30f, 0.80f), FVector2D(620.0f, 32.0f), 16, MutedColor,
+            false, ETextJustify::Center);
         StartButtonY = 0.704f;
     }
 
@@ -432,12 +445,12 @@ void UNaiwaMenuWidget::BuildLevelSelectPage()
     UButton* NextButton = AddButton(TEXT("下一页  →"), BackgroundColor,
         FVector2D(0.51f, 0.88f), FVector2D(230.0f, 64.0f), 20);
     NextButton->OnClicked.AddDynamic(this, &UNaiwaMenuWidget::OnNextPageClicked);
-    NextButton->SetIsEnabled(CurrentLevelPage < 3);
+    NextButton->SetIsEnabled(CurrentLevelPage < 4);
 }
 
 void UNaiwaMenuWidget::GoToLevelPage(int32 PageIndex)
 {
-    CurrentLevelPage = FMath::Clamp(PageIndex, 0, 3);
+    CurrentLevelPage = FMath::Clamp(PageIndex, 0, 4);
     if (CurrentLevelPage == 0)
     {
         SelectedLevel = TEXT("1-1");
@@ -453,9 +466,13 @@ void UNaiwaMenuWidget::GoToLevelPage(int32 PageIndex)
     {
         SelectedLevel = TEXT("3-1");
     }
-    else
+    else if (CurrentLevelPage == 3)
     {
         SelectedLevel = TEXT("4-1");
+    }
+    else
+    {
+        SelectedLevel = TEXT("5-1");
     }
     BuildLevelSelectPage();
 }
@@ -483,7 +500,8 @@ void UNaiwaMenuWidget::SelectLevel(const FString& LevelId)
     SelectedLevel = LevelId;
     CurrentLevelPage = LevelId.StartsWith(TEXT("1-")) ? 0
         : LevelId.StartsWith(TEXT("2-")) ? 1
-        : LevelId.StartsWith(TEXT("3-")) ? 2 : 3;
+        : LevelId.StartsWith(TEXT("3-")) ? 2
+        : LevelId.StartsWith(TEXT("4-")) ? 3 : 4;
     BuildLevelSelectPage();
 }
 
@@ -517,6 +535,10 @@ void UNaiwaMenuWidget::OnStartSelectedLevel()
     {
         UGameplayStatics::OpenLevel(this, FName(TEXT("/Game/Naiwa/P5/Maps/L_NaiwaP5_M2Prototype")), true);
     }
+    else if (SelectedLevel == TEXT("5-1"))
+    {
+        UGameplayStatics::OpenLevel(this, FName(TEXT("/Game/Naiwa/P6/Maps/L_NaiwaP6_M1Prototype")), true);
+    }
     else if (SelectedLevel == TEXT("2-1") || SelectedLevel == TEXT("2-2") || SelectedLevel == TEXT("2-3"))
     {
         FString MapPath;
@@ -536,6 +558,7 @@ void UNaiwaMenuWidget::OnSelect23() { SelectLevel(TEXT("2-3")); }
 void UNaiwaMenuWidget::OnSelect31() { SelectLevel(TEXT("3-1")); }
 void UNaiwaMenuWidget::OnSelect32() { SelectLevel(TEXT("3-2")); }
 void UNaiwaMenuWidget::OnSelect41() { SelectLevel(TEXT("4-1")); }
+void UNaiwaMenuWidget::OnSelect51() { SelectLevel(TEXT("5-1")); }
 
 void UNaiwaMenuWidget::OnWardrobeClicked()
 {

@@ -20,6 +20,15 @@ public class NaiwaRuntime : ModuleRules
             "ProceduralMeshComponent"
         });
 
+        // P6 sources are currently grouped under module-relative P6/* folders and
+        // include headers with those prefixes. Keep those headers visible to UBT.
+        PrivateIncludePaths.AddRange(new[] {
+            ModuleDirectory,
+            ModuleDirectory + "/P6/Core",
+            ModuleDirectory + "/P6/Data",
+            ModuleDirectory + "/P6/Presentation"
+        });
+
         // Editor-only presentation helpers are compiled into this module for the
         // editor target. Link their owning modules explicitly; relying on the
         // Editor shared PCH leaves these inline public-header symbols unresolved

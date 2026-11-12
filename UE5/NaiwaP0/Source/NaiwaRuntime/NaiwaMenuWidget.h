@@ -43,6 +43,7 @@ private:
     UFUNCTION() void OnSelect31();
     UFUNCTION() void OnSelect32();
     UFUNCTION() void OnSelect41();
+    UFUNCTION() void OnSelect51();
     UFUNCTION() void OnWardrobeClicked();
     UFUNCTION() void OnWardrobeBackClicked();
     UFUNCTION() void OnWardrobeBaseClicked();

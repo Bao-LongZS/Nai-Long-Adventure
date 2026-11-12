@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "kind": "g0-frame-time",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 QQBrowser/22.1.7007.400",
+  "screen": {
+    "width": 1707,
+    "height": 1067,
+    "dpr": 1.5
+  },
+  "renderTarget": "1280x720 equivalent pixel count",
+  "sampleDurationSeconds": 300,
+  "wallDurationSeconds": 300,
+  "frameCount": 67775,
+  "frameTimeP50Ms": 4.2,
+  "frameTimeP95Ms": 4.3,
+  "capturedAt": "2026-10-29T10:11:04.114Z"
+}

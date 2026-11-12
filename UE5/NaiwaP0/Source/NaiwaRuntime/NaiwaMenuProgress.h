@@ -73,6 +73,25 @@ public:
 
     UPROPERTY(SaveGame, BlueprintReadOnly)
     FNaiwaP5SaveRecord P5BestRecord;
+
+    UPROPERTY(SaveGame)
+    TArray<FName> P6CollectedClueIds;
+
+    UPROPERTY(SaveGame)
+    int32 P6WrongSubmissionCount = 0;
+
+    UPROPERTY(SaveGame)
+    int32 P6FailureStreakCount = 0;
+
+    UPROPERTY(SaveGame)
+    int32 P6CaseElapsedMinutes = 20;
+
+    UPROPERTY(SaveGame)
+    int32 P6BestCaseRating = 0;
+
+    /** Idempotency keys for the first-clear tiers and each successful case run. */
+    UPROPERTY(SaveGame)
+    TArray<FName> P6ClaimedRewardKeys;
 };
 
 UCLASS()
@@ -90,6 +109,11 @@ public:
     const TArray<FName>& GetOwnedP5SkinIds() const;
     FName GetSelectedP5SkinId() const;
     const FNaiwaP5SaveRecord& GetP5BestRecord() const;
+    const TArray<FName>& GetP6CollectedClueIds() const;
+    int32 GetP6WrongSubmissionCount() const;
+    int32 GetP6FailureStreakCount() const;
+    int32 GetP6CaseElapsedMinutes() const;
+    int32 GetP6BestCaseRating() const;
     bool IsP5SkinOwned(FName SkinId) const;
     bool TryPurchaseP5Skin(FName SkinId);
     bool SetSelectedP5Skin(FName SkinId);
@@ -97,6 +121,13 @@ public:
         int32 Deaths, int32 Collectibles);
     void RecordP5RunSettlement(bool bFinished, int32 TicketsEarned, int32 DistanceMm, int32 Score,
         float TimeSeconds, int32 Falls, int32 CoinsCollected);
+    void RecordP6ClueCollected(FName ClueId);
+    void RecordP6FailedSubmission(int32 MinutesAdvanced);
+    int32 RecordP6CaseClear(int32 Rating, const FGuid& CaseRunId);
+
+    /** Applies a P6 clear to caller-owned SaveGame data without writing a slot. */
+    static bool ApplyP6CaseClearReward(UNaiwaMenuSaveGame& TargetSave, int32 Rating,
+        const FGuid& CaseRunId, int32& OutTicketsGranted);
 
 private:
     void SaveProgress();
