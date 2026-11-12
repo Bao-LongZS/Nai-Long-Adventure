@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "map_asset": "/Game/Naiwa/P6/Art/A1/Maps/L_NaiwaP6_A1LightingReview_v03",
+  "owner_tag": "NaiwaP6A1LightingReviewV03",
+  "mesh_asset": "/Game/Naiwa/P6/Art/A1/CourtyardKit_v04/P6_A1_CourtyardKit_v04_UECombined.P6_A1_CourtyardKit_v04_UECombined",
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/Scripts/build_p6_a1_lighting_review_map_v03.py\", line 84, in <module>\n    mesh_actor = spawn(unreal.StaticMeshActor, \"NAIWA_P6_A1_v04_CourtyardKit\")\n                 ^^^^^\nNameError: name 'spawn' is not defined\n"
+}

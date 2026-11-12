@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "package_id": "P6_ArtReviewPortfolio_v04",
+  "status": "self_contained_review_overview_not_runtime_approved",
+  "asset": "P6_ArtReviewPortfolio_v04.svg",
+  "dimensions_px": [
+    3600,
+    2500
+  ],
+  "embedded_visuals": [
+    "Environment/P6_A0_Courtyard_Concept_v01.png",
+    "UE5/Records/p6_art/evidence/P6_A1_M2LightingReview_1920x1080_v11.png",
+    "References/MilkFrogStudy/P6_REF_MF_PDF01_p110_046_Neutral.png",
+    "References/MilkFrogStudy/P6_REF_MF_PDF01_p110_037_Curious.png",
+    "Evidence/P6_A3_ClueCard_ContactSheet_v01.png",
+    "InfoLayers/A4_LocalCandidates/P6_A4_ReviewBoard_v01.svg",
+    "UI/P6_A5_ScreenStateBoard_v01.png"
+  ],
+  "source_manifests": [
+    "Manifests/P6_A0_AssetIndex_v02.json",
+    "Manifests/P6_A1_CourtyardKit_Index_v04.json",
+    "Manifests/P6_A2_SuspectArt_Index_v01.json",
+    "Manifests/P6_A3_ClueCard_Index_v01.json",
+    "Manifests/P6_A4_LocalLayer_Index_v01.json",
+    "Manifests/P6_A5_UIScreen_Index_v01.json"
+  ],
+  "embedded_image_count": 7,
+  "external_image_references": 0,
+  "approval_boundary": "A0 scene concept and the A2 selection of figures 046/037 as shared witness art were approved. A1 shows an actual UE capture at the current M2 camera in an isolated review map; flat-color graybox materials, roof occlusion, 14-point visibility, click surfaces, walkability and runtime acceptance remain pending. A3-A5 remain review samples.",
+  "evidence": [
+    "UE5/Records/p6_art/evidence/P6_A1_M2LightingReviewCapture_v11.json",
+    "UE5/Records/p6_art/evidence/P6_A1_M2LightingReviewMap_v06.json",
+    "UE5/Records/p6_art/evidence/P6_A1_M2VisibilityReview_v01.svg",
+    "UE5/Records/p6_art/evidence/P6_A1_LightingReviewCapture_v10.json"
+  ],
+  "sha256": "8f24962fe8150db914c126f969cebdc5cc1d1ad200ca5d19a5b1b1e63aabdfe0",
+  "generator": "UE5/Scripts/build_p6_art_review_portfolio_v04.mjs",
+  "generator_sha256": "8364ba2ae1dfb785d523d7a56ef4888ce7bd92108011d515a3f127d217ece714"
+}

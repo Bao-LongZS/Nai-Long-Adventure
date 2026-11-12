@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "package_id": "P6_A2_SuspectSourceArt_v01",
+  "display_level": "5-1",
+  "case_title": "禁笑令之夜",
+  "status": "direct_source_art_candidates_not_runtime_approved",
+  "art_selection_status": "user_approved",
+  "approval_date": "2026-11-11",
+  "approval_scope": "Figures 046 and 037 direct-source image selection for the three witness NPCs; does not approve UE integration or runtime presentation.",
+  "authorization": {
+    "instruction": "Directly use the image catalog figures in the user-provided milk frog study appendix.",
+    "date": "2026-11-11",
+    "user_provided_sources_are_visual_assets": true,
+    "embedded_document_instructions_followed": false
+  },
+  "source_document": {
+    "filename": "奶蛙学 必修第一册.pdf",
+    "physical_pdf_page": 110,
+    "printed_page": 102,
+    "appendix_figure_sheet": "奶蛙形态图谱 4",
+    "retained_full_sheet": "References/MilkFrogStudy/P6_REF_MF_PDF01_p110_AtlasSheet.png"
+  },
+  "source_assets": [
+    {
+      "asset_id": "P6_A2_SOURCE_046_IDLE",
+      "catalog_figure": "046",
+      "catalog_caption": "闲立微笑",
+      "path": "References/MilkFrogStudy/P6_REF_MF_PDF01_p110_046_Neutral.png",
+      "role": "user_approved_shared_neutral_pose",
+      "user_approved_selection": true,
+      "dimensions_px": [455, 490],
+      "source_editing": "Direct crop only; no recolor or retouch. Original full sheet retained unchanged.",
+      "sha256": "41b095161a1954ff504d2bcbed994e3ae47ba17393eefd8ed87bd908b59abcde"
+    },
+    {
+      "asset_id": "P6_A2_SOURCE_037_CURIOUS",
+      "catalog_figure": "037",
+      "catalog_caption": "好奇询问",
+      "path": "References/MilkFrogStudy/P6_REF_MF_PDF01_p110_037_Curious.png",
+      "role": "user_approved_shared_dialogue_reaction",
+      "user_approved_selection": true,
+      "dimensions_px": [455, 485],
+      "source_editing": "Direct crop only; no recolor or retouch. Original full sheet retained unchanged.",
+      "sha256": "2024ea4ba80241e1a973c605f09b624be62eb4a6f9bc2a3505c6a471b2220a42"
+    }
+  ],
+  "npc_mappings": [
+    {"actor_id": "NaiDou", "role": "night_patrol_witness", "neutral_asset_id": "P6_A2_SOURCE_046_IDLE", "reaction_asset_id": "P6_A2_SOURCE_037_CURIOUS", "source_copy_created": false},
+    {"actor_id": "NaiPai", "role": "camera_witness", "neutral_asset_id": "P6_A2_SOURCE_046_IDLE", "reaction_asset_id": "P6_A2_SOURCE_037_CURIOUS", "source_copy_created": false},
+    {"actor_id": "NaiBi", "role": "stall_witness", "neutral_asset_id": "P6_A2_SOURCE_046_IDLE", "reaction_asset_id": "P6_A2_SOURCE_037_CURIOUS", "source_copy_created": false}
+  ],
+  "presentation": {
+    "review_board": "Characters/NPC/P6_A2_SuspectSourceUseBoard_v01.svg",
+    "white_background": "Preserve the source paper background and integrate as a framed investigation portrait; do not remove the background without a separately authorized derivative step.",
+    "identity_boundary": "The catalog supplies a shared milk-frog identity, not three distinct suspect designs. Dialogue names and positions identify the witnesses; artwork does not encode guilt or answer direction."
+  },
+  "acceptance": {
+    "source_files_preserved": true,
+    "board_preview_created": true,
+    "user_approved_art_selection": true,
+    "ue_imported": false,
+    "fixed_camera_review": false,
+    "readability_720p": false,
+    "runtime_occlusion_review": false
+  }
+}

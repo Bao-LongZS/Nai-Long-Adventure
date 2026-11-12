@@ -1,0 +1,10 @@
+{
+  "user_save_slot_touched": false,
+  "details": "two_clue_fixture=ok; three_m1_baseline_points_preserved=ok; fourteen_point_world_spawn=ok; four_answer_options=ok; world_authority_ready=ok; question_requires_footprint_evidence=ok; collect_g1=ok; collect_g5=ok; duplicate_collect_rejected=ok; evidence_retained=ok; wrong_answer_not_accepted=ok; wrong_answer_keeps_evidence=ok; correct_answer_accepted=ok; question_state_recorded=ok; trophy_layer_available=ok; info_layer_toggles_on=ok; info_layer_toggles_off=ok; save_data_memory_roundtrip=ok",
+  "map": "/Game/Naiwa/P6/Maps/L_NaiwaP6_M1Prototype",
+  "probe_stage": "M1",
+  "log": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p6_m1\\m1_probe.log",
+  "exit_code": 0,
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "verdict": "PASS"
+}

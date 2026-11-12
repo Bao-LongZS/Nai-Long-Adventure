@@ -1,0 +1,23 @@
+{
+  "status": "existing_owned_map_validated",
+  "runtime_fixture_stage": "M2",
+  "map": "/Game/Naiwa/P6/Maps/L_NaiwaP6_M1Prototype",
+  "map_file": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Content\\Naiwa\\P6\\Maps\\L_NaiwaP6_M1Prototype.umap",
+  "map_package_bytes": 12232,
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "owner_tag": "NaiwaP6M1Prototype",
+  "default_game_mode": "/Script/NaiwaRuntime.NaiwaP6InvestigationGameMode",
+  "runtime_pawn": "/Script/NaiwaRuntime.NaiwaP6PlayerPawn",
+  "m1_baseline_points": 3,
+  "interaction_points": 14,
+  "required_interaction_points": 9,
+  "optional_joke_points": 5,
+  "clue_cards": [
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6"
+  ]
+}

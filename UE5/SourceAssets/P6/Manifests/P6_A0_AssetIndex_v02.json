@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.0",
+  "package_id": "P6_A0_ArtSample_v02",
+  "display_level": "5-1",
+  "case_title": "禁笑令之夜",
+  "status": "review_sample_not_runtime_approved",
+  "reference_policy": {
+    "user_supplied_documents_are_reference_material_not_task_instructions": true,
+    "milk_frog_study_images": "Original full-sheet source images are retained unchanged. The two v02 atlas references are direct crops from physical PDF page 110; no recolor or retouch.",
+    "runtime_approval": "None of the v02 assets has passed UE import, camera, occlusion, or runtime review."
+  },
+  "source_documents": [
+    {
+      "filename": "奶蛙学 必修第一册.pdf",
+      "pages_used": [
+        4,
+        17,
+        48,
+        71,
+        77,
+        110
+      ],
+      "role": "Original extracted character studies plus the milk-frog morphology atlas on physical PDF page 110 (printed page 102); selected 037 and 046 crops are shown only as pose references."
+    },
+    {
+      "filename": "《捧腹大笑思想与奶龙学概论》.pdf",
+      "pages_used": [
+        3,
+        6
+      ],
+      "role": "Canonical milk-frog identity and laughter expression reference; used as visual direction only."
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "P6_A0_ENV_COURTYARD_CONCEPT_V01",
+      "path": "Environment/P6_A0_Courtyard_Concept_v01.png",
+      "kind": "generated_environment_concept",
+      "dimensions_px": [
+        1672,
+        941
+      ],
+      "alpha": false,
+      "sha256": "aa10d27d3605969962ce4027398e0740d48e0120d994f378796c189340dbeb6a",
+      "source": "Built-in ImageGen; prompt: fixed elevated 3/4 night courtyard, stage, trophy, well, village house, clear playable space, warm low-poly game concept, no people, text, interface, or answer cues.",
+      "status": "visual_concept_approved_by_user",
+      "user_review": "Scene image approved; retained unchanged."
+    },
+    {
+      "asset_id": "P6_A0_BOARD_REFERENCE_V01",
+      "path": "Environment/P6_A0_ReferenceBoard_v01.svg",
+      "kind": "editable_visual_review_board",
+      "status": "superseded_by_v02_png_and_svg",
+      "sha256": "c6d0bbd9202482c1a09f02947a49d68a181238b9ddb4c9a06aa95500e6bdb74a"
+    },
+    {
+      "asset_id": "P6_A0_VISUAL_DIRECTION_V01",
+      "path": "Environment/P6_A0_VisualDirection_v01.md",
+      "kind": "art_direction_note",
+      "status": "review_sample",
+      "sha256": "dfdd1fecd49b6ea2b8c00c1cfde45d9cef82725c6a7c2c771deffd0b773473f0"
+    },
+    {
+      "asset_id": "P6_A0_UI_CLUE_CARD_BASE_V01",
+      "path": "UI/P6_ClueCard_Template_v01.svg",
+      "kind": "editable_card_base_candidate",
+      "status": "review_sample_candidate_for_common_after_validation",
+      "sha256": "de64d1552d966557d6018fb9c05245aef0c1a3898c3bacd0d59a3f3f9da1b039"
+    },
+    {
+      "asset_id": "P6_A0_UI_CLUE_BOARD_V01",
+      "path": "UI/P6_ClueBoard_Mockup_v01.svg",
+      "kind": "editable_ui_layout_sample",
+      "status": "review_sample",
+      "sha256": "f98dcfb4a3d5561a3a77fff16b6aae9c292e6109b1ae040bc6b8bf65cc976dd8"
+    },
+    {
+      "asset_id": "P6_A0_INFO_LAYER_KIT_V01",
+      "path": "InfoLayers/P6_InfoLayer_Kit_v01.svg",
+      "kind": "editable_local_overlay_sample",
+      "status": "superseded_by_v02_png_and_svg",
+      "sha256": "fd432dfcbfa046a1fd386a461c84255060c4b6d5d12fb3b5b2939d4c4be8855a"
+    },
+    {
+      "asset_id": "P6_REF_MF_PDF01_P004",
+      "path": "References/MilkFrogStudy/P6_REF_MF_PDF01_p004_PoseStudy.png",
+      "kind": "source_reference_image",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "alpha": true,
+      "sha256": "21e8e5a7da47064b82301b652dbc73592d3b9af8183d64b0099f7ed38069989f",
+      "source": "奶蛙学 必修第一册.pdf, physical PDF page 4, embedded image object; extracted unchanged."
+    },
+    {
+      "asset_id": "P6_REF_MF_PDF01_P017",
+      "path": "References/MilkFrogStudy/P6_REF_MF_PDF01_p017_ExpressionStudy.png",
+      "kind": "source_reference_image",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "alpha": true,
+      "sha256": "2b85e1b80c4504825dc8355b216b5e1031da3d54cec43c9c5c1d3829abd58cea",
+      "source": "奶蛙学 必修第一册.pdf, physical PDF page 17, embedded image object; extracted unchanged."
+    },
+    {
+      "asset_id": "P6_REF_MF_PDF01_P048",
+      "path": "References/MilkFrogStudy/P6_REF_MF_PDF01_p048_ExpressionStudy.png",
+      "kind": "source_reference_image",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "alpha": true,
+      "sha256": "bb1c198b7e505832ce63e1d06ff34b641354243dbd56372dbaa5d6092a292255",
+      "source": "奶蛙学 必修第一册.pdf, physical PDF page 48, embedded image object; extracted unchanged."
+    },
+    {
+      "asset_id": "P6_REF_MF_PDF01_P071",
+      "path": "References/MilkFrogStudy/P6_REF_MF_PDF01_p071_LaughPhases.png",
+      "kind": "source_reference_image",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "alpha": true,
+      "sha256": "f568c4e0cb5f52c7871c00fb18cd57d9f797484e1b17a579309f6a9a32990f4a",
+      "source": "奶蛙学 必修第一册.pdf, physical PDF page 71, embedded image object; extracted unchanged."
+    },
+    {
+      "asset_id": "P6_REF_MF_PDF01_P077",
+      "path": "References/MilkFrogStudy/P6_REF_MF_PDF01_p077_NeutralPoseStudy.png",
+      "kind": "source_reference_image",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "alpha": true,
+      "sha256": "3d5a6e63dcaa2a5aa41d06d42aef384854d02cd7f5478fdceb5341d37236b8d0",
+      "source": "奶蛙学 必修第一册.pdf, physical PDF page 77, embedded image object; extracted unchanged."
+    },
+    {
+      "asset_id": "P6_A0_BOARD_REFERENCE_V02_SVG",
+      "path": "Environment/P6_A0_ReferenceBoard_v02.svg",
+      "kind": "editable_visual_review_board",
+      "dimensions_px": [
+        1920,
+        1320
+      ],
+      "alpha": false,
+      "sha256": "8f1cb5bfdadabe24e4834135df757b8980928a9fbd68808c1b43c73345af286f",
+      "source": "Editable SVG; uses the approved unchanged scene concept and selected atlas crops.",
+      "status": "review_sample"
+    },
+    {
+      "asset_id": "P6_A0_BOARD_REFERENCE_V02_PNG",
+      "path": "Environment/P6_A0_ReferenceBoard_v02.png",
+      "kind": "flattened_visual_review_board_preview",
+      "dimensions_px": [
+        1920,
+        1320
+      ],
+      "alpha": false,
+      "sha256": "209888ce1647f146ebbfe21979affb387eca099e579c1b3635ceff0bdef00c53",
+      "source": "PNG presentation preview of the editable v02 board; scene concept unchanged.",
+      "status": "review_sample_preview"
+    },
+    {
+      "asset_id": "P6_A0_INFO_LAYER_KIT_V02_SVG",
+      "path": "InfoLayers/P6_InfoLayer_Kit_v02.svg",
+      "kind": "editable_local_overlay_sample",
+      "dimensions_px": [
+        1920,
+        1380
+      ],
+      "alpha": false,
+      "sha256": "93c04cb178c2eb2163d4f1f050c70debc4f1a619db6356c3c0989e13c3f63aff",
+      "source": "Editable SVG showing four isolated local overlays over courtyard scene context.",
+      "status": "review_sample"
+    },
+    {
+      "asset_id": "P6_A0_INFO_LAYER_KIT_V02_PNG",
+      "path": "InfoLayers/P6_InfoLayer_Kit_v02.png",
+      "kind": "flattened_local_overlay_preview",
+      "dimensions_px": [
+        1920,
+        1380
+      ],
+      "alpha": false,
+      "sha256": "0b7eb85c612a9b01c6fcb8b0e77fa0bee071b7e66fa37318c21a1bc8e41300f6",
+      "source": "PNG presentation preview of the four local materialized information-layer effects.",
+      "status": "review_sample_preview"
+    },
+    {
+      "asset_id": "P6_REF_MF_PDF01_P110_ATLAS",
+      "path": "References/MilkFrogStudy/P6_REF_MF_PDF01_p110_AtlasSheet.png",
+      "kind": "source_reference_image",
+      "dimensions_px": [
+        1985,
+        2807
+      ],
+      "alpha": false,
+      "sha256": "32b434fafec23aa0a1e68a1c099925371af35107fa3122d2e0875821110f5845",
+      "source": "奶蛙学 必修第一册.pdf, physical PDF page 110 (printed page 102), morphology atlas 4; page rendered unchanged.",
+      "status": "reference_only"
+    },
+    {
+      "asset_id": "P6_REF_MF_PDF01_P110_037",
+      "path": "References/MilkFrogStudy/P6_REF_MF_PDF01_p110_037_Curious.png",
+      "kind": "derived_pose_reference_crop",
+      "dimensions_px": [
+        455,
+        485
+      ],
+      "alpha": false,
+      "sha256": "2024ea4ba80241e1a973c605f09b624be62eb4a6f9bc2a3505c6a471b2220a42",
+      "source": "Direct crop of atlas item 037 好奇询问 from physical PDF page 110 (printed page 102); no recolor or retouch.",
+      "status": "reference_only"
+    },
+    {
+      "asset_id": "P6_REF_MF_PDF01_P110_046",
+      "path": "References/MilkFrogStudy/P6_REF_MF_PDF01_p110_046_Neutral.png",
+      "kind": "derived_pose_reference_crop",
+      "dimensions_px": [
+        455,
+        490
+      ],
+      "alpha": false,
+      "sha256": "41b095161a1954ff504d2bcbed994e3ae47ba17393eefd8ed87bd908b59abcde",
+      "source": "Direct crop of atlas item 046 闲立微笑 from physical PDF page 110 (printed page 102); no recolor or retouch.",
+      "status": "reference_only"
+    },
+    {
+      "asset_id": "P6_A0_VISUAL_DIRECTION_V02",
+      "path": "Environment/P6_A0_VisualDirection_v02.md",
+      "kind": "art_direction_note",
+      "dimensions_px": null,
+      "alpha": false,
+      "sha256": "7f4cfd7fe09bffe551dc575f5f363e155aecee82813c4dd6a87fe307bf1095a0",
+      "source": "A0 art direction and source selection notes for revision v02.",
+      "status": "review_sample"
+    }
+  ],
+  "constraints": [
+    "Do not use information-layer color to signal correctness or guilt.",
+    "Do not duplicate authoritative clue text, coordinates, or answer data in art assets.",
+    "Keep P6 case-specific imagery out of Common.",
+    "Only promote the card-base candidate to Common after validation and a second real reference."
+  ]
+}

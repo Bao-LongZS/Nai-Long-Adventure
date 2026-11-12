@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "package_id": "P6_A1_PointPropAlignment_v01",
+  "status": "m2_coordinate_alignment_candidates_not_final_placement",
+  "coordinate_source": "Manifests/P6_A1_CurrentPointArtMap_v01.json",
+  "geometry_source": "Environment/A1_CourtyardKit/Models/P6_A1_CourtyardKit_Blockout_v01.obj",
+  "coordinates_unit": "centimeters",
+  "entries": [
+    {"actor_id":"Trophy","kind":"required_evidence","m2_loc":[-320,520,70],"candidate_anchor_xy":[-320,520],"object_group_prefixes":["P6_Trophy_"],"match":"xy_exact_candidate","note":"Cup and plinth base sit above the M2 floor anchor."},
+    {"actor_id":"Noticeboard","kind":"required_evidence","m2_loc":[-2700,900,74],"candidate_anchor_xy":[-2700,900],"object_group_prefixes":["P6_Noticeboard_"],"match":"xy_exact_candidate","note":"Paper and frame remain decorative; clue content stays in game data."},
+    {"actor_id":"Detector","kind":"required_evidence","m2_loc":[2300,610,78],"candidate_anchor_xy":[2300,610],"object_group_prefixes":["P6_Detector_"],"match":"xy_exact_candidate","note":"Sampling paper and detector UI are not yet modeled."},
+    {"actor_id":"PhotoTable","kind":"required_evidence","m2_loc":[1500,1080,65],"candidate_anchor_xy":[1500,1080],"object_group_prefixes":["P6_PhotoTable_"],"match":"xy_exact_candidate","note":"Camera model only; no clue photo texture is authored."},
+    {"actor_id":"Flowers","kind":"required_evidence","m2_loc":[1050,400,45],"candidate_anchor_xy":[1050,400],"object_group_prefixes":["P6_G5_FakeFlowers_"],"match":"xy_exact_candidate","note":"Lightweight paper-flower shape cue; verify its intended relation to the stage in the fixed camera."},
+    {"actor_id":"PatrolLedger","kind":"required_evidence","m2_loc":[-2250,-1000,68],"candidate_anchor_xy":[-2250,-1000],"object_group_prefixes":["P6_Ledger_"],"match":"xy_exact_candidate","note":"The paper asset is blank; clue text is not authored into geometry."},
+    {"actor_id":"NaiDou","kind":"witness","m2_loc":[-3150,0.5,90],"candidate_anchor_xy":null,"object_group_prefixes":[],"source_art_ids":["P6_A2_SOURCE_046_IDLE","P6_A2_SOURCE_037_CURIOUS"],"match":"direct_source_billboard_candidate","note":"No 3D mesh. Use original catalog crops via the A2 reference mapping; billboard placement and foot anchoring remain pending."},
+    {"actor_id":"NaiPai","kind":"witness","m2_loc":[3100,760,90],"candidate_anchor_xy":null,"object_group_prefixes":[],"source_art_ids":["P6_A2_SOURCE_046_IDLE","P6_A2_SOURCE_037_CURIOUS"],"match":"direct_source_billboard_candidate","note":"No 3D mesh. Use original catalog crops via the A2 reference mapping; billboard placement and foot anchoring remain pending."},
+    {"actor_id":"NaiBi","kind":"witness","m2_loc":[2950,-1480,90],"candidate_anchor_xy":null,"object_group_prefixes":[],"source_art_ids":["P6_A2_SOURCE_046_IDLE","P6_A2_SOURCE_037_CURIOUS"],"match":"direct_source_billboard_candidate","note":"No 3D mesh. Use original catalog crops via the A2 reference mapping; billboard placement and foot anchoring remain pending."},
+    {"actor_id":"Socks","kind":"optional_joke","m2_loc":[1770,-810,55],"candidate_anchor_xy":[1770,-810],"object_group_prefixes":["P6_SocksRack_","P6_SocksPair_"],"match":"xy_exact_candidate","note":"Rack, small awning and sock pair are a local prop group; final silhouette and joke readability need review."},
+    {"actor_id":"TrashCan","kind":"optional_joke","m2_loc":[-1280,-1430,50],"candidate_anchor_xy":[-1280,-1430],"object_group_prefixes":["P6_TrashCan_"],"match":"xy_exact_candidate","note":"The optional joke prop carries no unique answer evidence."},
+    {"actor_id":"RoofTiles","kind":"optional_joke","m2_loc":[420,-2270,90],"candidate_anchor_xy":[420,-2270],"object_group_prefixes":["P6_RoofTile_"],"match":"xy_exact_candidate","note":"Stack is set dressing only; do not treat as an extra required clue."},
+    {"actor_id":"WellBucket","kind":"optional_joke","m2_loc":[2520,-2240,46],"candidate_anchor_xy":[2520,-2240],"object_group_prefixes":["P6_Well_"],"match":"xy_exact_candidate","note":"Well, rope, water and bucket share the joke point anchor. Anchor was moved from a previous off-target blockout location."},
+    {"actor_id":"Clothesline","kind":"optional_joke","m2_loc":[-850,2220,112],"candidate_anchor_xy":[-850,2220],"object_group_prefixes":["P6_Clothesline_"],"match":"xy_exact_candidate","note":"Scarves and line are prop silhouettes only; no text or clue is encoded."}
+  ],
+  "acceptance": {
+    "all_14_actor_ids_mapped": true,
+    "six_evidence_anchor_xy_candidates_match_m2": true,
+    "five_optional_joke_anchor_xy_candidates_match_m2": true,
+    "three_billboards_mapped_to_direct_source_art": true,
+    "fixed_camera_visibility_confirmed": false,
+    "runtime_occlusion_confirmed": false,
+    "walkability_confirmed": false,
+    "final_level_design_placement_approved": false
+  },
+  "boundary": "The exact XY relationship only records a candidate blockout transform. It does not prove camera readability, actor bounds alignment, collision, clue truth, or approved final placement."
+}

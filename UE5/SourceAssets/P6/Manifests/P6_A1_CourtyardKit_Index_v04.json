@@ -1,0 +1,669 @@
+{
+  "schema_version": "1.0",
+  "package_id": "P6_A1_CourtyardKit_Blockout_v04",
+  "display_level": "5-1",
+  "case_title": "禁笑令之夜",
+  "status": "m2_camera_capture_first_pass_reviewed_pending_point_visibility_and_final_art_acceptance",
+  "source_basis": {
+    "preserved_v01_obj": {
+      "path": "Environment/A1_CourtyardKit/Models/P6_A1_CourtyardKit_Blockout_v01.obj",
+      "sha256": "e9023ff7fcd2f640c41a67af75e3841a5ec74fc63ab41df31d65f8d9826ab596"
+    },
+    "preserved_v01_mtl": {
+      "path": "Environment/A1_CourtyardKit/Models/P6_A1_CourtyardKit_Blockout_v01.mtl",
+      "sha256": "c88835914fe013bc4b3951546c7e451783d6733bc0859518b948dc8ec67bad95"
+    },
+    "current_m2_point_map": "Manifests/P6_A1_CurrentPointArtMap_v01.json",
+    "m2_point_count": 14,
+    "style_reference": "Environment/A1_CourtyardKit/P6_A1_EnvironmentKit_Concept_v02.png",
+    "v01_source_preserved": true,
+    "v01_object_groups": 112,
+    "v01_object_groups_preserved_in_v04": 112
+  },
+  "geometry": {
+    "units": "centimeters",
+    "axis_semantics": {
+      "x": "courtyard long axis",
+      "y": "courtyard depth",
+      "z": "height"
+    },
+    "object_group_count": 1523,
+    "vertex_count": 54944,
+    "face_count": 49534,
+    "bounds_cm": {
+      "x": [
+        -3550,
+        3550
+      ],
+      "y": [
+        -2898.518,
+        2750
+      ],
+      "z": [
+        -110,
+        1875
+      ]
+    },
+    "material_count": 41,
+    "material_file_is_final": false,
+    "uvs_generated": false,
+    "collision_generated": false,
+    "lods_generated": false,
+    "detail_counts": {
+      "courtyard_flagstones": 825,
+      "stage_deck_seams": 11,
+      "framed_lanterns": 4,
+      "phototable_detail_groups": 15,
+      "original_v01_groups_preserved": 112
+    }
+  },
+  "ue_integration": {
+    "status": "ue_mesh_imported_nanite_built_m2_camera_capture_reviewed_pending_point_visibility_and_runtime_acceptance",
+    "merged_source_path": "Environment/A1_CourtyardKit/Models/P6_A1_CourtyardKit_v04_UECombined.obj",
+    "merged_source_groups": 1,
+    "used_material_slots": 40,
+    "imported_asset_path": "/Game/Naiwa/P6/Art/A1/CourtyardKit_v04/P6_A1_CourtyardKit_v04_UECombined",
+    "imported_asset_report": "UE5/Records/p6_art/evidence/P6_A1_CourtyardKit_UEImport_v04.json",
+    "source_material_batches": 40,
+    "axis_policy": "UE OBJ Y handedness flip pre-compensated in the UE companion source; canonical coordinates unchanged",
+    "preview_uv_policy": "generated planar XY import-preview UVs only; not final unwrap",
+    "lod_count": 1,
+    "lod0_fallback_triangle_count": 27520,
+    "nanite_enabled": true,
+    "nanite_triangle_count": 91460,
+    "lod0_section_count": 40,
+    "isolated_review_map_path": "/Game/Naiwa/P6/Art/A1/Maps/L_NaiwaP6_A1M2LightingReview_v06",
+    "lighting_review_report": "UE5/Records/p6_art/evidence/P6_A1_M2LightingReviewMap_v06.json",
+    "lighting_plan": {
+      "cool_key_lux": 7200,
+      "camera_fill_lux": 1400,
+      "skylight_multiplier": 0.45,
+      "lantern_point_lights": 4,
+      "lantern_intensity_cd_each": 16000,
+      "lantern_attenuation_radius_cm": 950,
+      "exposure": "manual, -0.15 EV",
+      "color_saturation": 1.15
+    },
+    "review_camera": {
+      "position_cm": [
+        0,
+        2078,
+        3600
+      ],
+      "rotation_deg_pitch_yaw_roll": [
+        -60,
+        -90,
+        0
+      ],
+      "ortho_width_cm": 7800
+    },
+    "capture_report": "UE5/Records/p6_art/evidence/P6_A1_M2LightingReviewCapture_v11.json",
+    "captured_screenshots": [
+      {
+        "path": "UE5/Records/p6_art/evidence/P6_A1_M2LightingReview_1280x720_v11.png",
+        "resolution_px": [
+          1280,
+          720
+        ],
+        "bytes": 593008
+      },
+      {
+        "path": "UE5/Records/p6_art/evidence/P6_A1_M2LightingReview_1920x1080_v11.png",
+        "resolution_px": [
+          1920,
+          1080
+        ],
+        "bytes": 1296731
+      }
+    ],
+    "previous_oblique_capture": [
+      {
+        "path": "UE5/Records/p6_art/evidence/P6_A1_LightingReview_1280x720_v10.png",
+        "resolution_px": [
+          1280,
+          720
+        ]
+      },
+      {
+        "path": "UE5/Records/p6_art/evidence/P6_A1_LightingReview_1920x1080_v10.png",
+        "resolution_px": [
+          1920,
+          1080
+        ]
+      }
+    ],
+    "first_pass_visual_findings": [
+      "The v11 capture matches the current M2 camera location, rotation and orthographic width.",
+      "The scene remains a flat-color graybox; warm lanterns and a cool night mood do not yet match the approved concept.",
+      "Foreground roofs occupy much of the frame and obscure courtyard points."
+    ],
+    "offline_point_visibility_proxy": {
+      "status": "offline_pivot_depth_proxy_only_not_engine_silhouette_or_click_test",
+      "full_roof_visible_count": 4,
+      "full_roof_visible_points": [
+        "NaiDou",
+        "NaiBi",
+        "Socks",
+        "Clothesline"
+      ],
+      "roof_cutaway_visible_count": 5,
+      "roof_cutaway_visible_points": [
+        "NaiDou",
+        "NaiBi",
+        "Socks",
+        "RoofTiles",
+        "Clothesline"
+      ],
+      "blocked_required_points": [
+        {
+          "id": "Trophy",
+          "sequence": 1,
+          "occluding_group_candidate": "P6_Stage_RoofTiles_R_Course_04"
+        },
+        {
+          "id": "Noticeboard",
+          "sequence": 2,
+          "occluding_group_candidate": "P6_Tree_Canopy_A"
+        },
+        {
+          "id": "Detector",
+          "sequence": 3,
+          "occluding_group_candidate": "P6_House_RoofSlope_Right"
+        },
+        {
+          "id": "PhotoTable",
+          "sequence": 4,
+          "occluding_group_candidate": "P6_House_RoofTiles_L_Course_10"
+        },
+        {
+          "id": "Flowers",
+          "sequence": 5,
+          "occluding_group_candidate": "P6_House_RoofTiles_L_Course_03"
+        },
+        {
+          "id": "PatrolLedger",
+          "sequence": 6,
+          "occluding_group_candidate": "P6_Ledger_Desk"
+        },
+        {
+          "id": "NaiPai",
+          "sequence": 8,
+          "occluding_group_candidate": "P6_House_RoofTiles_R_Course_05"
+        }
+      ],
+      "interpretation": "The proxy compares each M2 pivot to the nearest projected source-model surface. It does not measure object silhouette visibility, Actor bounds, clickability, collision or walkability."
+    },
+    "p6_m2_map_modified": false,
+    "engine_visual_review": true,
+    "engine_visual_review_scope": "First-pass exact-M2 composition and lighting review in an isolated map; graybox and lighting candidate only, not point visibility, click-area, walkability, or runtime acceptance."
+  },
+  "refinements": [
+    "825 offset, lightly irregular beveled flagstones with a small set of hairline chips.",
+    "Per-tile low-contrast ceramic variation, upturned eave ends and ceramic ridge details.",
+    "Raised door panels, ring knockers, window sill drips, east-side lattice vents, shutters and sill course.",
+    "Tree limb structure, layered canopy and small broadleaf planting at wall and stage junctions.",
+    "Four framed warm lanterns at the house facade and stage posts; stage and house closeups temporarily hide roof groups to expose facade detail.",
+    "Photo evidence camera gains a screwed lens plate, inset focus ring, top shutter, side dial/strap and a stitched cream table runner with red hem.",
+    "Bucket staves/iron hoops, well rim cap and water ripples, incised jar bands, stage stair nosings and railing caps, detector dial graduations/needle and noticeboard sheets/pins.",
+    "Subtle stone tone variation on house bases and wall masonry courses, plus 11 stage deck seam/nail groups.",
+    "New v04 detail pass adds five framed stage fascia reliefs, 44 fine deck-grain accents, door hinge straps/rivets, and two window latches.",
+    "Raised slate-roof and primary timber base tones; the offline preview lifts the display midtones, adds warm key/cool fill and lantern glow, and reduces the flattened ground-shadow darkening."
+  ],
+  "assets": [
+    {
+      "asset_id": "P6_A1_KIT_V04_OBJ",
+      "path": "Environment/A1_CourtyardKit/Models/P6_A1_CourtyardKit_Blockout_v04.obj",
+      "type": "editable_detailed_source_blockout",
+      "sha256": "328da7ab07daf3163b91bc7647e3d8587ca285612db1c16a361ebe78b76a7be5"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_MTL",
+      "path": "Environment/A1_CourtyardKit/Models/P6_A1_CourtyardKit_Blockout_v04.mtl",
+      "type": "flat_preview_materials_not_final",
+      "sha256": "21317c72bce1508374d9a897feda4e203a95d9cb5a5c97f438f5be3ba376f036"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_PREVIEW_PNG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_CourtyardKit_Blockout_Preview_v04.png",
+      "type": "offline_axonometric_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "3dcb316a57d2c8e2f7499d5fee0d562bc6f799056ec9ebd95117596bf8e95a5c"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_PREVIEW_SVG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_CourtyardKit_Blockout_Preview_v04.svg",
+      "type": "editable_offline_axonometric_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "dc49cad249a749bbaa28e6eabfc53ea1e7a8846e8ddfa02cd60ed6009102a91f"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_CUTAWAY_PNG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_CourtyardKit_CutawayPreview_v04.png",
+      "type": "offline_cutaway_projection_not_approved_level_change",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "9abf23356e8083c6acc6cbb6ba722e3ac11927bdf753eb03c420f7253c6149b1"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_CUTAWAY_SVG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_CourtyardKit_CutawayPreview_v04.svg",
+      "type": "editable_offline_cutaway_projection_not_approved_level_change",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "7266cd10ec957eb7b723f53aa7c1d5705fa869da252ce1e16783a238e7b0e5c8"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_HOUSE_DETAIL_PNG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_HouseDetailPreview_v04.png",
+      "type": "offline_house_detail_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "498098e17a68d6ac4ef4c0cfe8738ba80bfd1e68de734bfc543a50252f960eaa"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_HOUSE_DETAIL_SVG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_HouseDetailPreview_v04.svg",
+      "type": "editable_offline_house_detail_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "734fa33da70338b51c812083f8cccf24d0c4080cc74ba38be86b48df6c4023ac"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_STAGE_DETAIL_PNG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_StageDetailPreview_v04.png",
+      "type": "offline_stage_detail_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "be3e3c6a2cda67f4d121f4979342e8d6685382f6cf70a15d8d57e91e125c1c2f"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_STAGE_DETAIL_SVG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_StageDetailPreview_v04.svg",
+      "type": "editable_offline_stage_detail_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "a27a52b3c9451efaa54304ae26344a3d263925b0475e288285ee1bacfb1270c2"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_PHOTOTABLE_DETAIL_PNG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_PhotoTableDetailPreview_v04.png",
+      "type": "offline_phototable_detail_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "280da0541dac70d303a7033f290d9a637e18c1a2e5315ca47dd0e5d2bd9e9ee9"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_PHOTOTABLE_DETAIL_SVG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_PhotoTableDetailPreview_v04.svg",
+      "type": "editable_offline_phototable_detail_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "5efe67c991376e51aefe24b02f799c10b75682905d202969b16d1a687c8a5a0b"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_NOTICEBOARD_DETAIL_PNG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_NoticeboardDetailPreview_v04.png",
+      "type": "offline_noticeboard_detail_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "69de24e2f563c62af0edb2513b54e9a92e2d7944673d7aaa7e83785c6a58fe57"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_NOTICEBOARD_DETAIL_SVG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_NoticeboardDetailPreview_v04.svg",
+      "type": "editable_offline_noticeboard_detail_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "4a4b50b8283aa9a745beeb3c8ff5b653286448a08cc0b30e9d852075257529e1"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_DETECTOR_DETAIL_PNG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_DetectorDetailPreview_v04.png",
+      "type": "offline_detector_detail_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "d1df656827a922d189993aed79a91adb84b7b95a77e000a6146388bb02a2a0ce"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_DETECTOR_DETAIL_SVG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_DetectorDetailPreview_v04.svg",
+      "type": "editable_offline_detector_detail_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "37c79bb7738fb86e2f5fb9486fa7cce7598c3bd90359a1e76ff4008ecec3b0eb"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_WELL_DETAIL_PNG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_WellDetailPreview_v04.png",
+      "type": "offline_well_detail_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "4e121f9f0b7be4127117fb338708e7b0e5bc2b8a8ac2072be68ef538e1195da3"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_WELL_DETAIL_SVG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_WellDetailPreview_v04.svg",
+      "type": "editable_offline_well_detail_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "fcd401ec5f134a0a46b14f05ede39128f6d1d0a677b9965068fdd2bd2555f630"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_TROPHY_DETAIL_PNG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_TrophyDetailPreview_v04.png",
+      "type": "offline_trophy_detail_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "77c9115986472520f0f688c40560196599657779a6c57e811c71a6bf2bb45a75"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_TROPHY_DETAIL_SVG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_TrophyDetailPreview_v04.svg",
+      "type": "editable_offline_trophy_detail_projection_not_engine_render",
+      "dimensions_px": [
+        1600,
+        1120
+      ],
+      "sha256": "89dba7dc2754c2b29ad9f421a1abd3735eb73335434454a79cd19a242057dfd1"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_M2_PNG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_M2CameraPreview_v04.png",
+      "type": "offline_exact_m2_projection_and_pivot_depth_proxy",
+      "dimensions_px": [
+        1920,
+        1080
+      ],
+      "sha256": "82573645c9d5c8d68dc1e18b8802127d6b9415a3106b8e25d4e702c116bb9d3b"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_M2_SVG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_M2CameraPreview_v04.svg",
+      "type": "editable_offline_exact_m2_projection_not_runtime_visibility",
+      "dimensions_px": [
+        1920,
+        1080
+      ],
+      "sha256": "b07af022a7acab3631a76703efd44ded0cbfcac914897fc42079e787871aab9a"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_M2_DEPTH",
+      "path": "Environment/A1_CourtyardKit/P6_A1_M2CameraDepthProxy_v04.json",
+      "type": "offline_per_point_nearest_surface_proxy_not_ue_occlusion",
+      "sha256": "277e93b339f0f7b6a009ca2588641691ef2d9fecd581a7d6dffdef164fe7ba08"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_M2_CUTAWAY_PNG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_M2CameraCutawayPreview_v04.png",
+      "type": "offline_exact_m2_cutaway_projection_not_approved_level_change",
+      "dimensions_px": [
+        1920,
+        1080
+      ],
+      "sha256": "6690b045a9edc1078a6224d326c9c5e0b507f3a9d51e8a07401a1a8877333ace"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_M2_CUTAWAY_SVG",
+      "path": "Environment/A1_CourtyardKit/P6_A1_M2CameraCutawayPreview_v04.svg",
+      "type": "editable_offline_exact_m2_cutaway_projection_not_runtime_visibility",
+      "dimensions_px": [
+        1920,
+        1080
+      ],
+      "sha256": "62dc9ea9667ea10dbb872eda209c15e9cbed5b34b8c88cd5d829dddad847a65a"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_M2_CUTAWAY_DEPTH",
+      "path": "Environment/A1_CourtyardKit/P6_A1_M2CameraCutawayDepthProxy_v04.json",
+      "type": "offline_cutaway_per_point_nearest_surface_proxy_not_ue_occlusion",
+      "sha256": "276fe448b5da13fbc2a81bb3e70c0696f1a74689332ae8ea2886f9a42d28d304"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_REVIEW_BOARD",
+      "path": "Environment/A1_CourtyardKit/P6_A1_ReviewBoard_v04.svg",
+      "type": "self_contained_visual_review_board_not_runtime_screenshot",
+      "dimensions_px": [
+        2560,
+        3700
+      ],
+      "sha256": "70469d5893ebfb30867b6af4075e7fceaccd32e98b2f4902d9eb2ac738f57511"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_HANDOFF",
+      "path": "Environment/A1_CourtyardKit/P6_A1_CourtyardKit_Handoff_v04.md",
+      "type": "artist_handoff",
+      "sha256": "15d27794da1a16bb6349d2ec07726f397178c20f366fd22b6ef61899ddd8b4a2"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_UE_COMBINED_OBJ",
+      "path": "Environment/A1_CourtyardKit/Models/P6_A1_CourtyardKit_v04_UECombined.obj",
+      "type": "ue_import_source_one_mesh_forty_batched_materials",
+      "sha256": "1de9b7e73244a6b5c5519421c621a400828a82ab02c85112c388a86b50281c08"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_UE_COMBINED_MTL",
+      "path": "Environment/A1_CourtyardKit/Models/P6_A1_CourtyardKit_v04_UECombined.mtl",
+      "type": "ue_import_material_source_copy",
+      "sha256": "21317c72bce1508374d9a897feda4e203a95d9cb5a5c97f438f5be3ba376f036"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_BUILD_SCRIPT",
+      "path": "../../Scripts/build_p6_a1_courtyard_kit_v04.mjs",
+      "type": "source_generation_script",
+      "sha256": "e198aad1d66aaf7cd9243e338c5ef8cf4e7825814c4b941f5765c2e6138ca043"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_UE_SOURCE_SCRIPT",
+      "path": "../../Scripts/build_p6_a1_ue_source_v04.mjs",
+      "type": "ue_merge_source_generation_script",
+      "sha256": "639bd08b2cbd6784c579496fcbbee53b17cb867363d0d0e7e93558643369fbd0"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_UE_IMPORT_SCRIPT",
+      "path": "../../Scripts/import_p6_a1_courtyard_v04.py",
+      "type": "ue_static_mesh_import_script",
+      "sha256": "3962cb5f66e2f631a7674a6925e6990d46cc2add7dec3bc8a432c27677de5fd4"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_UE_REVIEW_MAP_SCRIPT",
+      "path": "../../Scripts/build_p6_a1_lighting_review_map.py",
+      "type": "ue_lighting_review_map_script",
+      "sha256": "e49bde9e24f6e73524b38fcb3ef319db0913cf6c0d03fc5da3c6cba0eff00b65"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V05_UE_REVIEW_MAP_SCRIPT",
+      "path": "../../Scripts/build_p6_a1_lighting_review_map_v05.py",
+      "type": "ue_lighting_review_map_script",
+      "sha256": "7f5d5514b9add6f59ccad344a2647e6412279b7c719bf2e7bfe3a68dfeb0215d"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V06_M2_REVIEW_MAP_SCRIPT",
+      "path": "../../Scripts/build_p6_a1_m2_lighting_review_map_v06.py",
+      "type": "ue_m2_camera_lighting_review_map_script",
+      "sha256": "dec0915521e60839a660e90ec3ff8c6b7029b9fe288c92d8ee6e45675fa77b78"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V06_M2_CAPTURE_SCRIPT",
+      "path": "../../Scripts/capture_p6_a1_m2_lighting_review_v06.py",
+      "type": "ue_m2_camera_capture_script",
+      "sha256": "e5c89801eedbb5c2a4dda0bf2caef43d821a0cba756bb961bf9aa3b1750a0a5f"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_UE_INSPECTION_SCRIPT",
+      "path": "../../Scripts/inspect_p6_a1_static_mesh.py",
+      "type": "ue_mesh_inspection_script",
+      "sha256": "8a05f5c9cd693d8e650548bf0e5fb8469684def0326e008a0ee74b3a4210fdda"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V05_REVIEW_MAP_REPORT",
+      "path": "../../Records/p6_art/evidence/P6_A1_LightingReviewMap_v05.json",
+      "type": "ue_isolated_review_map_evidence",
+      "sha256": "aec7161ab37659e09a0e8943610cc4b4f67916397ca81d0dcf54baf6f6c51e8e"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V10_CAPTURE_REPORT",
+      "path": "../../Records/p6_art/evidence/P6_A1_LightingReviewCapture_v10.json",
+      "type": "ue_engine_capture_evidence",
+      "sha256": "a29e4da5d29ad85718203b0658b70a15fc95d06cec5205f7a12fb863ac7694ca"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V10_CAPTURE_720P",
+      "path": "../../Records/p6_art/evidence/P6_A1_LightingReview_1280x720_v10.png",
+      "type": "ue_engine_screenshot_first_pass_review_only",
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "sha256": "216a493b5276caebbb922241ab224560f503cf30cfd8d345efd50dfe92a7dd9c"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V10_CAPTURE_1080P",
+      "path": "../../Records/p6_art/evidence/P6_A1_LightingReview_1920x1080_v10.png",
+      "type": "ue_engine_screenshot_first_pass_review_only",
+      "dimensions_px": [
+        1920,
+        1080
+      ],
+      "sha256": "8d4b6c1e6238afbb1c1a1d025e0cde9d8ac871b61cda39c1c169416c00ab3977"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V06_M2_REVIEW_MAP_REPORT",
+      "path": "../../Records/p6_art/evidence/P6_A1_M2LightingReviewMap_v06.json",
+      "type": "ue_isolated_m2_camera_review_map_evidence",
+      "sha256": "6142e18e46dfd80373edf446903a9a68dafb7a0bc8a8567b0cefaa56bb0d5351"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V11_M2_CAPTURE_REPORT",
+      "path": "../../Records/p6_art/evidence/P6_A1_M2LightingReviewCapture_v11.json",
+      "type": "ue_m2_camera_engine_capture_evidence",
+      "sha256": "be9b7d1903eed4f4604d1751827e48b3ca6e7febd0aadd31731636844b482b17"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V11_M2_CAPTURE_720P",
+      "path": "../../Records/p6_art/evidence/P6_A1_M2LightingReview_1280x720_v11.png",
+      "type": "ue_m2_camera_engine_screenshot_first_pass_review_only",
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "sha256": "e7cbc44e746d681d77538e3b67977379e5a7495537df5af5e285f0e3d9cabf2e"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V11_M2_CAPTURE_1080P",
+      "path": "../../Records/p6_art/evidence/P6_A1_M2LightingReview_1920x1080_v11.png",
+      "type": "ue_m2_camera_engine_screenshot_first_pass_review_only",
+      "dimensions_px": [
+        1920,
+        1080
+      ],
+      "sha256": "e9af5102ad509c2e66d6f0c05a3a481b9107d51bdead2ed0d48cbc6f84fe342b"
+    },
+    {
+      "asset_id": "P6_A1_KIT_M2_VISIBILITY_REVIEW_BOARD",
+      "path": "../../Records/p6_art/evidence/P6_A1_M2VisibilityReview_v01.svg",
+      "type": "annotated_m2_pivot_occlusion_review_not_runtime_visibility",
+      "dimensions_px": [
+        2700,
+        1640
+      ],
+      "sha256": "2b3d54ecd65b8b2a21c2dcb25b838342c20f4ec98104b035e768c218f663ff49"
+    },
+    {
+      "asset_id": "P6_A1_KIT_M2_VISIBILITY_REVIEW_SCRIPT",
+      "path": "../../Scripts/build_p6_a1_m2_visibility_review_v01.mjs",
+      "type": "m2_visibility_review_board_generation_script",
+      "sha256": "5830c25e27f1ece6f3dcc2e62566495e4859b54a37ab90aa0c28c288d138a215"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_UE_INTEGRATION_HANDOFF",
+      "path": "Environment/A1_CourtyardKit/P6_A1_UE_Integration_v04.md",
+      "type": "ue_integration_preparation_handoff",
+      "sha256": "45e7e829878aeb1f918001112f84edb169d0288314e6c68ee5266504f1e83126"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_PREVIEW_SCRIPT",
+      "path": "../../Scripts/render_p6_a1_courtyard_preview_v04.mjs",
+      "type": "preview_generation_script",
+      "sha256": "accc1c153846e36c04be01b1a00eb267cb6f355b18d967a6406c310359a6f9dc"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_BOARD_SCRIPT",
+      "path": "../../Scripts/build_p6_a1_review_board_v04.mjs",
+      "type": "review_board_generation_script",
+      "sha256": "5a609980c46d4fa3ba9a94e2258218819e61c7a43cea4b2811532c1de04e5ba0"
+    },
+    {
+      "asset_id": "P6_A1_KIT_V04_INDEX_SCRIPT",
+      "path": "../../Scripts/build_p6_a1_courtyard_kit_index_v04.mjs",
+      "type": "index_generation_script",
+      "sha256": "4288fdb5c5087c648a313cc3101e5b4a4352ccab983580b5163f328f75c78f82"
+    }
+  ],
+  "offline_m2_depth_proxy": {
+    "full_roof_pivots_visible": 4,
+    "cutaway_pivots_visible": 5,
+    "total_points": 14,
+    "interpretation": "Coordinate hotspot only. A pivot can be hidden by its own prop geometry. Not a runtime mesh silhouette, clickable-area, bounds, walkability or UE occlusion result."
+  },
+  "acceptance": {
+    "v01_source_preserved": true,
+    "all_v01_object_groups_preserved": true,
+    "original_14_m2_point_map_preserved": true,
+    "detailed_source_model_generated": true,
+    "house_and_stage_and_phototable_detail_views_created": true,
+    "review_board_created": true,
+    "ue_merged_import_source_prepared": true,
+    "ue_lighting_review_map_script_prepared": true,
+    "ue_imported": true,
+    "ue_nanite_built": true,
+    "ue_lighting_review_map_saved": true,
+    "ue_lighting_review_capture_saved": true,
+    "first_pass_capture_reviewed": true,
+    "fixed_camera_review": true,
+    "m2_camera_matches_current_point_map": true,
+    "point_visibility_approved": false,
+    "readability_1080p": false,
+    "readability_720p": false,
+    "runtime_occlusion_review": false,
+    "walkability_review": false,
+    "uv_collision_lod_review": false
+  },
+  "preview_kind": "offline software projection; not an Unreal Engine render",
+  "placement_authority": "UE5/SourceAssets/P6/Manifests/P6_A1_CurrentPointArtMap_v01.json remains the current M2 reference; final placement requires Level Design review."
+}

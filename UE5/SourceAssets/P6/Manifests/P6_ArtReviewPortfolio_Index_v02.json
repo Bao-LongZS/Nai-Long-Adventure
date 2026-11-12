@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "package_id": "P6_ArtReviewPortfolio_v02",
+  "status": "self_contained_review_overview_not_runtime_approved",
+  "asset": "P6_ArtReviewPortfolio_v02.svg",
+  "dimensions_px": [
+    3600,
+    2500
+  ],
+  "embedded_visuals": [
+    "Environment/P6_A0_Courtyard_Concept_v01.png",
+    "Environment/A1_CourtyardKit/P6_A1_ReviewBoard_v02.svg",
+    "References/MilkFrogStudy/P6_REF_MF_PDF01_p110_046_Neutral.png",
+    "References/MilkFrogStudy/P6_REF_MF_PDF01_p110_037_Curious.png",
+    "Evidence/P6_A3_ClueCard_ContactSheet_v01.png",
+    "InfoLayers/A4_LocalCandidates/P6_A4_ReviewBoard_v01.svg",
+    "UI/P6_A5_ScreenStateBoard_v01.png"
+  ],
+  "source_manifests": [
+    "Manifests/P6_A0_AssetIndex_v02.json",
+    "Manifests/P6_A1_CourtyardKit_Index_v02.json",
+    "Manifests/P6_A2_SuspectArt_Index_v01.json",
+    "Manifests/P6_A3_ClueCard_Index_v01.json",
+    "Manifests/P6_A4_LocalLayer_Index_v01.json",
+    "Manifests/P6_A5_UIScreen_Index_v01.json"
+  ],
+  "embedded_image_count": 7,
+  "external_image_references": 0,
+  "approval_boundary": "A0 scene concept and the A2 selection of figures 046/037 as shared witness art were approved. A1 v02, A3-A5 panels are review samples; no panel indicates UE integration or runtime acceptance.",
+  "sha256": "4b565e5cd8f324bdf7cf6398d2734ea4d100416f53c5b7832f34fd14f4c80148",
+  "generator": "UE5/Scripts/build_p6_art_review_portfolio_v02.mjs",
+  "generator_sha256": "c609ef1b050515669c757e0c5d607c65afed0cd0734f743270db012b5e18a41b"
+}

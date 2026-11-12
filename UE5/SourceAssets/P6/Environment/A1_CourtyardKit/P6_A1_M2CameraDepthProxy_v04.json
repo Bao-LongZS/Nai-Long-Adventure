@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.0",
+  "package_id": "P6_A1_M2CameraDepthProxy_v03",
+  "view": "all_roofs_visible",
+  "source_model": "Environment/A1_CourtyardKit/Models/P6_A1_CourtyardKit_Blockout_v04.obj",
+  "point_map": "Manifests/P6_A1_CurrentPointArtMap_v01.json",
+  "reference_viewport_px": [
+    1920,
+    1080
+  ],
+  "comparison_rule": "Actor pivot depth is compared with the nearest rasterized surface at the projected pixel using a 20 cm tolerance.",
+  "warning": "Offline point-pivot diagnostic only. The nearest surface group may be the point prop itself because some actor origins are at or inside prop bases. It does not establish mesh silhouette readability, Actor bounds visibility, collision, clickable area, or UE runtime occlusion.",
+  "point_rows": [
+    {
+      "id": "Trophy",
+      "sequence": 1,
+      "kind": "evidence",
+      "screen_px": [
+        881,
+        642
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 320.622,
+      "nearest_surface_depth_proxy": 1729.877,
+      "depth_delta": -1409.255,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_Stage_RoofTiles_R_Course_04",
+      "occluding_group_candidate": "P6_Stage_RoofTiles_R_Course_04"
+    },
+    {
+      "id": "Noticeboard",
+      "sequence": 2,
+      "kind": "evidence",
+      "screen_px": [
+        295,
+        723
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 514.086,
+      "nearest_surface_depth_proxy": 2034.137,
+      "depth_delta": -1520.051,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_Tree_Canopy_A",
+      "occluding_group_candidate": "P6_Tree_Canopy_A"
+    },
+    {
+      "id": "Detector",
+      "sequence": 3,
+      "kind": "evidence",
+      "screen_px": [
+        1526,
+        661
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 372.55,
+      "nearest_surface_depth_proxy": 2141.451,
+      "depth_delta": -1768.901,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_House_RoofSlope_Right",
+      "occluding_group_candidate": "P6_House_RoofSlope_Right"
+    },
+    {
+      "id": "PhotoTable",
+      "sequence": 4,
+      "kind": "evidence",
+      "screen_px": [
+        1329,
+        762
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 596.292,
+      "nearest_surface_depth_proxy": 2533.568,
+      "depth_delta": -1937.276,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_House_RoofTiles_L_Course_10",
+      "occluding_group_candidate": "P6_House_RoofTiles_L_Course_10"
+    },
+    {
+      "id": "Flowers",
+      "sequence": 5,
+      "kind": "evidence",
+      "screen_px": [
+        1218,
+        620
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 238.971,
+      "nearest_surface_depth_proxy": 1949.871,
+      "depth_delta": -1710.9,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_House_RoofTiles_L_Course_03",
+      "occluding_group_candidate": "P6_House_RoofTiles_L_Course_03"
+    },
+    {
+      "id": "PatrolLedger",
+      "sequence": 6,
+      "kind": "evidence",
+      "screen_px": [
+        406,
+        319
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": -441.11,
+      "nearest_surface_depth_proxy": -124.812,
+      "depth_delta": -316.298,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_Ledger_Desk",
+      "occluding_group_candidate": "P6_Ledger_Desk"
+    },
+    {
+      "id": "NaiDou",
+      "sequence": 7,
+      "kind": "witness",
+      "screen_px": [
+        185,
+        529
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 78.192,
+      "nearest_surface_depth_proxy": -24.858,
+      "depth_delta": 103.05,
+      "visible_proxy": true,
+      "nearest_surface_group": "P6_Ground_CourtyardPlaza",
+      "occluding_group_candidate": null
+    },
+    {
+      "id": "NaiPai",
+      "sequence": 8,
+      "kind": "witness",
+      "screen_px": [
+        1723,
+        691
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 457.942,
+      "nearest_surface_depth_proxy": 1816.437,
+      "depth_delta": -1358.495,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_House_RoofTiles_R_Course_05",
+      "occluding_group_candidate": "P6_House_RoofTiles_R_Course_05"
+    },
+    {
+      "id": "NaiBi",
+      "sequence": 9,
+      "kind": "witness",
+      "screen_px": [
+        1686,
+        214
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": -662.058,
+      "nearest_surface_depth_proxy": -763.686,
+      "depth_delta": 101.628,
+      "visible_proxy": true,
+      "nearest_surface_group": "P6_Ground_CourtyardPlaza",
+      "occluding_group_candidate": null
+    },
+    {
+      "id": "Socks",
+      "sequence": 10,
+      "kind": "joke",
+      "screen_px": [
+        1396,
+        361
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": -357.369,
+      "nearest_surface_depth_proxy": -408.129,
+      "depth_delta": 50.76,
+      "visible_proxy": true,
+      "nearest_surface_group": "P6_PavingStone_Course_09_26",
+      "occluding_group_candidate": null
+    },
+    {
+      "id": "TrashCan",
+      "sequence": 11,
+      "kind": "joke",
+      "screen_px": [
+        645,
+        229
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": -671.699,
+      "nearest_surface_depth_proxy": -114.489,
+      "depth_delta": -557.21,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_TrashCan_Lid",
+      "occluding_group_candidate": "P6_TrashCan_Lid"
+    },
+    {
+      "id": "RoofTiles",
+      "sequence": 12,
+      "kind": "joke",
+      "screen_px": [
+        1063,
+        45
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": -1057.058,
+      "nearest_surface_depth_proxy": -923.359,
+      "depth_delta": -133.699,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_RoofTile_Stack",
+      "occluding_group_candidate": "P6_RoofTile_Stack"
+    },
+    {
+      "id": "WellBucket",
+      "sequence": 13,
+      "kind": "joke",
+      "screen_px": [
+        1580,
+        57
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": -1080.163,
+      "nearest_surface_depth_proxy": -1015.302,
+      "depth_delta": -64.861,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_Well_Water",
+      "occluding_group_candidate": "P6_Well_Water"
+    },
+    {
+      "id": "Clothesline",
+      "sequence": 14,
+      "kind": "joke",
+      "screen_px": [
+        751,
+        1000
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 1206.995,
+      "nearest_surface_depth_proxy": 1079.866,
+      "depth_delta": 127.129,
+      "visible_proxy": true,
+      "nearest_surface_group": "P6_Ground_CourtyardPlaza",
+      "occluding_group_candidate": null
+    }
+  ]
+}

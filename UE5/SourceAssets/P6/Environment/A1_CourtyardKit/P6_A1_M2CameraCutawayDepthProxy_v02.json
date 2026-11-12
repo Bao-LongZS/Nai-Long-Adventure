@@ -1,0 +1,239 @@
+{
+  "schema_version": "1.0",
+  "package_id": "P6_A1_M2CameraCutawayDepthProxy_v02",
+  "view": "roof_and_eave_hidden_diagnostic",
+  "source_model": "Environment/A1_CourtyardKit/Models/P6_A1_CourtyardKit_Blockout_v02.obj",
+  "point_map": "Manifests/P6_A1_CurrentPointArtMap_v01.json",
+  "reference_viewport_px": [
+    1920,
+    1080
+  ],
+  "comparison_rule": "Actor pivot depth is compared with the nearest rasterized surface at the projected pixel using a 20 cm tolerance.",
+  "warning": "Offline point-pivot diagnostic only. The nearest surface group may be the point prop itself because some actor origins are at or inside prop bases. It does not establish mesh silhouette readability, Actor bounds visibility, collision, clickable area, or UE runtime occlusion.",
+  "point_rows": [
+    {
+      "id": "Trophy",
+      "sequence": 1,
+      "kind": "evidence",
+      "screen_px": [
+        881,
+        642
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 320.622,
+      "nearest_surface_depth_proxy": 494.216,
+      "depth_delta": -173.594,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_Trophy_Foot",
+      "occluding_group_candidate": "P6_Trophy_Foot"
+    },
+    {
+      "id": "Noticeboard",
+      "sequence": 2,
+      "kind": "evidence",
+      "screen_px": [
+        295,
+        723
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 514.086,
+      "nearest_surface_depth_proxy": 2034.137,
+      "depth_delta": -1520.051,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_Tree_Canopy_A",
+      "occluding_group_candidate": "P6_Tree_Canopy_A"
+    },
+    {
+      "id": "Detector",
+      "sequence": 3,
+      "kind": "evidence",
+      "screen_px": [
+        1526,
+        661
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 372.55,
+      "nearest_surface_depth_proxy": 1624.199,
+      "depth_delta": -1251.649,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_House_MainVolume",
+      "occluding_group_candidate": "P6_House_MainVolume"
+    },
+    {
+      "id": "PhotoTable",
+      "sequence": 4,
+      "kind": "evidence",
+      "screen_px": [
+        1329,
+        762
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 596.292,
+      "nearest_surface_depth_proxy": 1861.093,
+      "depth_delta": -1264.801,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_House_MainVolume",
+      "occluding_group_candidate": "P6_House_MainVolume"
+    },
+    {
+      "id": "Flowers",
+      "sequence": 5,
+      "kind": "evidence",
+      "screen_px": [
+        1218,
+        620
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 238.971,
+      "nearest_surface_depth_proxy": 1521.105,
+      "depth_delta": -1282.134,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_House_Facade_TimberFrame",
+      "occluding_group_candidate": "P6_House_Facade_TimberFrame"
+    },
+    {
+      "id": "PatrolLedger",
+      "sequence": 6,
+      "kind": "evidence",
+      "screen_px": [
+        406,
+        319
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": -441.11,
+      "nearest_surface_depth_proxy": -124.812,
+      "depth_delta": -316.298,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_Ledger_Desk",
+      "occluding_group_candidate": "P6_Ledger_Desk"
+    },
+    {
+      "id": "NaiDou",
+      "sequence": 7,
+      "kind": "witness",
+      "screen_px": [
+        185,
+        529
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 78.192,
+      "nearest_surface_depth_proxy": -17.93,
+      "depth_delta": 96.122,
+      "visible_proxy": true,
+      "nearest_surface_group": "P6_Paving_04_01",
+      "occluding_group_candidate": null
+    },
+    {
+      "id": "NaiPai",
+      "sequence": 8,
+      "kind": "witness",
+      "screen_px": [
+        1723,
+        691
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 457.942,
+      "nearest_surface_depth_proxy": 883.541,
+      "depth_delta": -425.599,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_Pot_Right_Plant",
+      "occluding_group_candidate": "P6_Pot_Right_Plant"
+    },
+    {
+      "id": "NaiBi",
+      "sequence": 9,
+      "kind": "witness",
+      "screen_px": [
+        1686,
+        214
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": -662.058,
+      "nearest_surface_depth_proxy": -756.758,
+      "depth_delta": 94.7,
+      "visible_proxy": true,
+      "nearest_surface_group": "P6_Paving_02_10",
+      "occluding_group_candidate": null
+    },
+    {
+      "id": "Socks",
+      "sequence": 10,
+      "kind": "joke",
+      "screen_px": [
+        1396,
+        361
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": -357.369,
+      "nearest_surface_depth_proxy": -411.971,
+      "depth_delta": 54.602,
+      "visible_proxy": true,
+      "nearest_surface_group": "P6_Paving_03_08",
+      "occluding_group_candidate": null
+    },
+    {
+      "id": "TrashCan",
+      "sequence": 11,
+      "kind": "joke",
+      "screen_px": [
+        645,
+        229
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": -671.699,
+      "nearest_surface_depth_proxy": -114.489,
+      "depth_delta": -557.21,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_TrashCan_Lid",
+      "occluding_group_candidate": "P6_TrashCan_Lid"
+    },
+    {
+      "id": "RoofTiles",
+      "sequence": 12,
+      "kind": "joke",
+      "screen_px": [
+        1063,
+        45
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": -1057.058,
+      "nearest_surface_depth_proxy": -1153.145,
+      "depth_delta": 96.087,
+      "visible_proxy": true,
+      "nearest_surface_group": "P6_Paving_01_06",
+      "occluding_group_candidate": null
+    },
+    {
+      "id": "WellBucket",
+      "sequence": 13,
+      "kind": "joke",
+      "screen_px": [
+        1580,
+        57
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": -1080.163,
+      "nearest_surface_depth_proxy": -1015.302,
+      "depth_delta": -64.861,
+      "visible_proxy": false,
+      "nearest_surface_group": "P6_Well_Water",
+      "occluding_group_candidate": "P6_Well_Water"
+    },
+    {
+      "id": "Clothesline",
+      "sequence": 14,
+      "kind": "joke",
+      "screen_px": [
+        751,
+        1000
+      ],
+      "in_viewport": true,
+      "actor_depth_proxy": 1206.995,
+      "nearest_surface_depth_proxy": 1086.794,
+      "depth_delta": 120.201,
+      "visible_proxy": true,
+      "nearest_surface_group": "P6_Paving_08_04",
+      "occluding_group_candidate": null
+    }
+  ]
+}

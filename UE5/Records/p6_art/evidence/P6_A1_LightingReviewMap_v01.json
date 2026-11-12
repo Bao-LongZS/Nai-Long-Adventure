@@ -1,0 +1,24 @@
+{
+  "status": "isolated_review_map_saved",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "map_asset": "/Game/Naiwa/P6/Art/A1/Maps/L_NaiwaP6_A1LightingReview_v01",
+  "owner_tag": "NaiwaP6A1LightingReviewV01",
+  "mesh_asset": "/Game/Naiwa/P6/Art/A1/CourtyardKit_v04/P6_A1_CourtyardKit_v04_UECombined.P6_A1_CourtyardKit_v04_UECombined",
+  "lighting": {
+    "key_sun_lux": 65000.0,
+    "camera_fill_lux": 18000.0,
+    "skylight_multiplier": 1.45,
+    "lantern_point_lights": 4,
+    "exposure": "manual, +0.65 EV"
+  },
+  "camera": {
+    "position_cm": [
+      0.0,
+      2078.0,
+      3600.0
+    ],
+    "ortho_width_cm": 7800.0
+  },
+  "runtime_game_mode": "/Script/Engine.GameModeBase",
+  "m2_map_modified": false
+}

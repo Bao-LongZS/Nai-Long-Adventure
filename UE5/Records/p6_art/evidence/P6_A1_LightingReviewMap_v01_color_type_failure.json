@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "map_asset": "/Game/Naiwa/P6/Art/A1/Maps/L_NaiwaP6_A1LightingReview_v01",
+  "owner_tag": "NaiwaP6A1LightingReviewV01",
+  "mesh_asset": "/Game/Naiwa/P6/Art/A1/CourtyardKit_v04/P6_A1_CourtyardKit_v04_UECombined.P6_A1_CourtyardKit_v04_UECombined",
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/Scripts/build_p6_a1_lighting_review_map.py\", line 95, in <module>\n    configure_directional(key, 65000.0, True, unreal.LinearColor(1.0, 0.94, 0.82, 1.0))\n  File \"C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/Scripts/build_p6_a1_lighting_review_map.py\", line 43, in configure_directional\n    component.set_editor_properties({\nTypeError: DirectionalLightComponent: Failed to convert type 'LinearColor' to property 'LightColor' (StructProperty) for attribute 'light_color' on 'DirectionalLightComponent'\n  TypeError: NativizeProperty: Cannot nativize 'LinearColor' as 'LightColor' (StructProperty)\n    TypeError: NativizeStructInstance: Cannot nativize 'LinearColor' as 'Color'\n"
+}

@@ -1,0 +1,188 @@
+# P6 A1 flat material palette; color is a style base for UE material setup.
+newmtl Ground
+Kd 0.39 0.40 0.38
+Ka 0.18 0.19 0.18
+Ns 12
+
+newmtl Plaster
+Kd 0.72 0.62 0.48
+Ka 0.25 0.22 0.18
+Ns 16
+
+newmtl Stone
+Kd 0.43 0.42 0.38
+Ka 0.17 0.17 0.15
+Ns 10
+
+newmtl Timber
+Kd 0.34 0.20 0.13
+Ka 0.14 0.09 0.06
+Ns 18
+
+newmtl Roof
+Kd 0.19 0.24 0.32
+Ka 0.08 0.10 0.14
+Ns 14
+
+newmtl Curtain
+Kd 0.49 0.19 0.21
+Ka 0.18 0.07 0.08
+Ns 20
+
+newmtl Brass
+Kd 0.73 0.53 0.20
+Ka 0.28 0.20 0.08
+Ns 55
+
+newmtl Clay
+Kd 0.49 0.27 0.19
+Ka 0.20 0.10 0.07
+Ns 20
+
+newmtl Plant
+Kd 0.29 0.40 0.31
+Ka 0.12 0.17 0.13
+Ns 9
+
+newmtl WindowAmber
+Kd 0.92 0.68 0.31
+Ka 0.48 0.35 0.16
+Ns 24
+
+newmtl Lantern
+Kd 0.95 0.58 0.20
+Ka 0.48 0.29 0.10
+Ns 16
+
+newmtl Paper
+Kd 0.88 0.82 0.68
+Ka 0.35 0.32 0.25
+Ns 6
+
+newmtl Sage
+Kd 0.41 0.53 0.45
+Ka 0.18 0.23 0.19
+Ns 10
+
+newmtl Water
+Kd 0.22 0.38 0.43
+Ka 0.09 0.15 0.18
+Ns 28
+
+newmtl Petal
+Kd 0.78 0.29 0.28
+Ka 0.29 0.10 0.10
+Ns 15
+
+newmtl FlowerCenter
+Kd 0.91 0.71 0.33
+Ka 0.34 0.25 0.11
+Ns 18
+newmtl Paving
+Kd 0.44 0.43 0.40
+Ka 0.18 0.17 0.15
+Ns 8
+
+newmtl PavingAlt
+Kd 0.41 0.41 0.39
+Ka 0.16 0.16 0.15
+Ns 8
+
+newmtl StoneWarm
+Kd 0.53 0.49 0.42
+Ka 0.19 0.17 0.15
+Ns 10
+
+newmtl Mortar
+Kd 0.33 0.32 0.29
+Ka 0.12 0.12 0.11
+Ns 5
+
+newmtl RoofTile
+Kd 0.25 0.32 0.40
+Ka 0.09 0.12 0.16
+Ns 18
+
+newmtl RoofTileLight
+Kd 0.31 0.38 0.45
+Ka 0.12 0.14 0.17
+Ns 18
+
+newmtl RoofTileShade
+Kd 0.19 0.26 0.34
+Ka 0.07 0.10 0.13
+Ns 14
+
+newmtl TimberEdge
+Kd 0.46 0.29 0.18
+Ka 0.17 0.10 0.06
+Ns 16
+
+newmtl CurtainGold
+Kd 0.78 0.53 0.24
+Ka 0.29 0.19 0.08
+Ns 30
+
+newmtl Iron
+Kd 0.16 0.19 0.20
+Ka 0.06 0.07 0.08
+Ns 35
+newmtl PavingEdge
+Kd 0.36 0.36 0.34
+Ka 0.13 0.13 0.12
+Ns 5
+
+newmtl PavingPale
+Kd 0.46 0.44 0.40
+Ka 0.17 0.16 0.14
+Ns 8
+
+newmtl RoofTileGlaze
+Kd 0.35 0.41 0.48
+Ka 0.13 0.15 0.18
+Ns 24
+
+newmtl LeafDark
+Kd 0.20 0.32 0.24
+Ka 0.07 0.12 0.09
+Ns 8
+
+newmtl LeafLight
+Kd 0.36 0.48 0.31
+Ka 0.13 0.18 0.10
+Ns 9
+
+newmtl VentShadow
+Kd 0.12 0.16 0.18
+Ka 0.05 0.06 0.07
+Ns 12
+
+newmtl StoneHairline
+Kd 0.29 0.29 0.27
+Ka 0.11 0.11 0.10
+Ns 5
+
+newmtl StoneSoft
+Kd 0.47 0.46 0.42
+Ka 0.17 0.16 0.14
+Ns 8
+
+newmtl StoneLight
+Kd 0.54 0.52 0.47
+Ka 0.20 0.19 0.16
+Ns 8
+
+newmtl StoneShade
+Kd 0.38 0.39 0.37
+Ka 0.14 0.14 0.13
+Ns 6
+
+newmtl LanternGlow
+Kd 0.96 0.69 0.29
+Ka 0.52 0.30 0.10
+Ns 32
+
+newmtl PhotoCloth
+Kd 0.82 0.77 0.67
+Ka 0.31 0.28 0.23
+Ns 7

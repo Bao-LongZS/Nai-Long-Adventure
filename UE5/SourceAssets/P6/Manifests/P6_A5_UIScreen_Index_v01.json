@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "package_id": "P6_A5_InvestigationUI_v01",
+  "status": "review_sample_not_runtime_approved",
+  "asset_paths_relative_to": "UE5/SourceAssets/P6",
+  "reference_paths_relative_to": "workspace_root",
+  "screens": [
+    {
+      "asset_id": "P6_A5_InvestigationHUD_v01",
+      "preview_png": "UI/P6_A5_InvestigationHUD_v01.png",
+      "preview_sha256": "17e74dcb49cc6a43ed13d275532a9971bdfd199acf171341ccfdb63b6324d8a6",
+      "editable_svg": "UI/P6_A5_InvestigationHUD_v01.svg",
+      "editable_sha256": "ef0a306c6e82577d4215e67a26c1dde96d8a0f920fdfef572df61572bf6c19aa",
+      "size_px": [
+        1920,
+        1080
+      ],
+      "status": "review_sample_not_runtime_approved"
+    },
+    {
+      "asset_id": "P6_A5_InfoLayerTutorial_v01",
+      "preview_png": "UI/P6_A5_InfoLayerTutorial_v01.png",
+      "preview_sha256": "9989a7104df2166a6bad52ed66bf91111e81f00fac921a84d0f4bb596d1f6800",
+      "editable_svg": "UI/P6_A5_InfoLayerTutorial_v01.svg",
+      "editable_sha256": "6da0b6ff215d1861890898c01b80aa0211e6e42d24eee60ec41d2fad37792454",
+      "size_px": [
+        1920,
+        1080
+      ],
+      "status": "review_sample_not_runtime_approved"
+    },
+    {
+      "asset_id": "P6_A5_SubmitFeedback_v01",
+      "preview_png": "UI/P6_A5_SubmitFeedback_v01.png",
+      "preview_sha256": "2ab9cd15eefe35d0a9f543d26a100a048848f17687f0939571e12c7f6556e68d",
+      "editable_svg": "UI/P6_A5_SubmitFeedback_v01.svg",
+      "editable_sha256": "491a10b40800b839713027e5315f3159aac09e0b2bf300f55805a2c533796081",
+      "size_px": [
+        1920,
+        1080
+      ],
+      "status": "review_sample_not_runtime_approved"
+    },
+    {
+      "asset_id": "P6_A5_ScreenStateBoard_v01",
+      "preview_png": "UI/P6_A5_ScreenStateBoard_v01.png",
+      "preview_sha256": "9525ae7226816a6428a70f466f5eb47b07b1f91b13391ca0ce2b9fa6bead871a",
+      "editable_svg": "UI/P6_A5_ScreenStateBoard_v01.svg",
+      "editable_sha256": "72e6895e465a0900842f71b547e690c2130fbe9d658530fee30c8ed718db268e",
+      "size_px": [
+        1920,
+        1320
+      ],
+      "status": "review_sample_not_runtime_approved"
+    }
+  ],
+  "constraints": [
+    "The approved courtyard source image is unchanged.",
+    "HUD input labels mirror current M2 HUD code.",
+    "No correctness or guilt is encoded by red/green states.",
+    "An unsuccessful submission keeps collected evidence and advances game time by 40 minutes.",
+    "S1 is a fixed-time reconstruction; S3 is a short ground slide; S4 water evidence is not guilt.",
+    "Screens are visual proposals, not runtime screenshots or UE import approval."
+  ],
+  "references": [
+    {
+      "path": "UE5/SourceAssets/P6/Environment/P6_A0_Courtyard_Concept_v01.png",
+      "sha256": "aa10d27d3605969962ce4027398e0740d48e0120d994f378796c189340dbeb6a"
+    },
+    {
+      "path": "UE5/SourceAssets/P6/UI/P6_ClueBoard_Mockup_v02.png",
+      "sha256": "64bdddefa1afd5501d683ad01a5233d914caff8ab9fdba1f85c3ec30a67ded76"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/P6/Presentation/NaiwaP6HUD.cpp",
+      "sha256": "7fe5f5553189b6d653c153a6baa9592797d18efbfe1fcc3458ed1d8e7839cd4c"
+    },
+    {
+      "path": "UE5/Records/p5_p6_plan/P6_工程计划书_v2.md",
+      "sha256": "29aaa570816463fe32f975f8b83fa9afd4dbc79b17dfbbf86dd409c8cbcbc30a"
+    },
+    {
+      "path": "UE5/Records/p5_p6_plan/P6_美术执行计划_v1.md",
+      "sha256": "d441dd1920eafd88aa6cd1654c1fd7e5160a8b83ff95f27189d876ab63330401"
+    }
+  ],
+  "art_direction": "Evidence/P6_A5_InvestigationUI_ArtDirection_v01.md"
+}

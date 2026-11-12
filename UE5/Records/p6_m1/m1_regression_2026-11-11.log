@@ -1,0 +1,27 @@
+**********************
+PowerShell transcript start
+Start time: 20261111112701
+Username: AOLIN\31314
+RunAs User: AOLIN\31314
+Configuration Name: 
+Machine: AOLIN (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\WindowsApps\OpenAI.CodexPrimaryRuntime.v26-1105-1297-0_26.1105.1297.0_x64__3k8sg7r9htsxt\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+$logPath = Join-Path (Resolve-Path 'UE5/Records').Path 'p6_m1/m1_regression_2026-11-11.log'; Start-Transcript -LiteralPath $logPath -Force | Out-Null; try { & .\UE5\run_p6_m1.ps1 -Mode Probe -SkipBuild; if ($LASTEXITCODE -and $LASTEXITCODE -ne 0) { exit $LASTEXITCODE } } finally { Stop-Transcript | Out-Null }
+Process ID: 62600
+PSVersion: 7.6.9
+PSEdition: Core
+GitCommitId: 7.6.9
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+
+P6 M1 probe PASS: two_clue_fixture=ok; three_m1_baseline_points_preserved=ok; fourteen_point_world_spawn=ok; four_answer_options=ok; world_authority_ready=ok; question_requires_footprint_evidence=ok; collect_g1=ok; collect_g5=ok; duplicate_collect_rejected=ok; evidence_retained=ok; wrong_answer_not_accepted=ok; wrong_answer_keeps_evidence=ok; correct_answer_accepted=ok; question_state_recorded=ok; trophy_layer_available=ok; info_layer_toggles_on=ok; info_layer_toggles_off=ok; save_data_memory_roundtrip=ok
+Report: C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\Records\p6_m1\m1_probe_result.json
+**********************
+PowerShell transcript end
+End time: 20261111112731
+**********************

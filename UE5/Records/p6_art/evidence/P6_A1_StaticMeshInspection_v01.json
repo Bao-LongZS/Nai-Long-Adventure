@@ -1,0 +1,68 @@
+{
+  "status": "inspected",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "mesh_asset": "/Game/Naiwa/P6/Art/A1/CourtyardKit_v04/P6_A1_CourtyardKit_v04_UECombined.P6_A1_CourtyardKit_v04_UECombined",
+  "bounds": "<Struct 'BoxSphereBounds' (0x00000277B817C280) {origin: {x: 0.000000, y: 74.259033, z: 882.500000}, box_extent: {x: 3550.000000, y: 2824.259033, z: 992.500000}, sphere_radius: 4643.704915}>",
+  "api_calls": {
+    "get_num_lods": {
+      "available": true,
+      "no_args": 1,
+      "lod_0": {
+        "error": "get_num_lods() takes no arguments (1 given)"
+      }
+    },
+    "get_num_triangles": {
+      "available": true,
+      "no_args": {
+        "error": "get_num_triangles() required argument 'lod_index' (pos 1) not found"
+      },
+      "lod_0": 91460
+    },
+    "get_num_vertices": {
+      "available": true,
+      "no_args": {
+        "error": "get_num_vertices() required argument 'lod_index' (pos 1) not found"
+      },
+      "lod_0": 74617
+    },
+    "get_num_sections": {
+      "available": true,
+      "no_args": {
+        "error": "get_num_sections() required argument 'lod' (pos 1) not found"
+      },
+      "lod_0": 3093
+    }
+  },
+  "relevant_exposed_methods": [
+    "get_bounding_box",
+    "get_bounds",
+    "get_min_lod_for_quality_levels",
+    "get_minimum_lod_for_platform",
+    "get_minimum_lod_for_platforms",
+    "get_minimum_lod_for_quality_level",
+    "get_minimum_lod_for_quality_levels",
+    "get_num_lods",
+    "get_num_nanite_triangles",
+    "get_num_nanite_vertices",
+    "get_num_sections",
+    "get_num_triangles",
+    "is_lod_screen_size_auto_computed",
+    "lod_for_collision",
+    "set_min_lod_for_quality_levels",
+    "set_minimum_lod_for_platform",
+    "set_minimum_lod_for_platforms"
+  ],
+  "properties": {
+    "render_data": {
+      "error": "StaticMesh: Failed to find property 'render_data' for attribute 'render_data' on 'StaticMesh'"
+    },
+    "source_models": {
+      "error": "StaticMesh: Failed to find property 'source_models' for attribute 'source_models' on 'StaticMesh'"
+    },
+    "nanite_settings": "<Struct 'MeshNaniteSettings' (0x00000277B8646BA0) {enabled: True, explicit_tangents: False, lerp_u_vs: True, separable: False, voxel_ndf: True, voxel_opacity: False, shape_preservation: None, position_precision: -2147483648, normal_precision: -1, tangent_precision: -1, bone_weight_precision: -1, keep_percent_triangles: 1.000000, trim_relative_error: 0.000000, generate_fallback: PlatformDefault, fallback_target: Auto, fallback_percent_triangles: 1.000000, fallback_relative_error: 1.000000, max_edge_length_factor: 0.000000, num_rays: 64, voxel_level: 0, ray_back_up: 0.000000, displacement_uv_channel: 0}>",
+    "bounds": {
+      "error": "StaticMesh: Failed to find property 'bounds' for attribute 'bounds' on 'StaticMesh'"
+    },
+    "static_materials": 40
+  }
+}

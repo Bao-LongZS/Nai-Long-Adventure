@@ -1,0 +1,414 @@
+{
+  "schema_version": "1.0",
+  "package_id": "P6_A1_CurrentPointArtMap_v01",
+  "status": "current_m2_reference_not_final_a1_placement",
+  "count": 14,
+  "required_count": 9,
+  "optional_count": 5,
+  "camera": {
+    "location": [
+      0,
+      2078,
+      3600
+    ],
+    "rotation_deg": [
+      -60,
+      -90,
+      0
+    ],
+    "ortho_width_cm": 7800,
+    "reference_viewport_px": [
+      1920,
+      1080
+    ]
+  },
+  "projection": {
+    "pixels_per_cm": 0.24615384615384617,
+    "up_vector_y_component": -0.8660254037844387,
+    "formula": "screen_x=960+world_x*pixels_per_cm; up=(world_y-2078)*(-0.8660254)+(world_z-3600)*0.5; screen_y=540-up*pixels_per_cm"
+  },
+  "point_source": "UE5/NaiwaP0/Source/NaiwaRuntime/P6/Data/NaiwaP6CaseDefinition.cpp",
+  "camera_source": "UE5/NaiwaP0/Source/NaiwaRuntime/P6/Presentation/NaiwaP6InvestigationGameMode.cpp",
+  "points": [
+    {
+      "id": "Trophy",
+      "name": "感应奖杯",
+      "clue": "G1",
+      "kind": "evidence",
+      "required": true,
+      "loc": [
+        -320,
+        520,
+        70
+      ],
+      "scale": [
+        1.15,
+        0.72,
+        1.25
+      ],
+      "art": "奖杯主体与可见触发底座",
+      "projected_px": [
+        881.23,
+        642.33
+      ],
+      "sequence": 1,
+      "record_type": "G 类通用证据"
+    },
+    {
+      "id": "Noticeboard",
+      "name": "村委会公告栏",
+      "clue": "G2",
+      "kind": "evidence",
+      "required": true,
+      "loc": [
+        -2700,
+        900,
+        74
+      ],
+      "scale": [
+        0.82,
+        0.24,
+        1.18
+      ],
+      "art": "木公告栏、分层张贴纸张",
+      "projected_px": [
+        295.38,
+        722.85
+      ],
+      "sequence": 2,
+      "record_type": "G 类通用证据"
+    },
+    {
+      "id": "Detector",
+      "name": "静音检测仪与纸条",
+      "clue": "G3",
+      "kind": "evidence",
+      "required": true,
+      "loc": [
+        2300,
+        610,
+        78
+      ],
+      "scale": [
+        0.74,
+        0.68,
+        1.12
+      ],
+      "art": "仪器与可辨识采样纸条",
+      "projected_px": [
+        1526.15,
+        660.54
+      ],
+      "sequence": 3,
+      "record_type": "G 类通用证据"
+    },
+    {
+      "id": "PhotoTable",
+      "name": "奶拍的相机与底片",
+      "clue": "G4",
+      "kind": "evidence",
+      "required": true,
+      "loc": [
+        1500,
+        1080,
+        65
+      ],
+      "scale": [
+        0.72,
+        0.64,
+        0.78
+      ],
+      "art": "相机、底片与取景照片",
+      "projected_px": [
+        1329.23,
+        762.33
+      ],
+      "sequence": 4,
+      "record_type": "G 类通用证据"
+    },
+    {
+      "id": "Flowers",
+      "name": "戏台假花与地面痕迹",
+      "clue": "G5",
+      "kind": "evidence",
+      "required": true,
+      "loc": [
+        1050,
+        400,
+        45
+      ],
+      "scale": [
+        0.82,
+        0.82,
+        0.68
+      ],
+      "art": "假花、三趾印、连续擦痕",
+      "projected_px": [
+        1218.46,
+        619.83
+      ],
+      "sequence": 5,
+      "record_type": "G 类通用证据"
+    },
+    {
+      "id": "PatrolLedger",
+      "name": "巡夜簿与摊位收摊票",
+      "clue": "G6",
+      "kind": "evidence",
+      "required": true,
+      "loc": [
+        -2250,
+        -1000,
+        68
+      ],
+      "scale": [
+        0.88,
+        0.63,
+        0.72
+      ],
+      "art": "记录簿、收摊票据",
+      "projected_px": [
+        406.15,
+        318.55
+      ],
+      "sequence": 6,
+      "record_type": "G 类通用证据"
+    },
+    {
+      "id": "NaiDou",
+      "name": "奶抖的口供",
+      "clue": null,
+      "kind": "witness",
+      "required": true,
+      "loc": [
+        -3150,
+        0.5,
+        90
+      ],
+      "scale": [
+        0.46,
+        0.42,
+        0.92
+      ],
+      "art": "嫌疑人立绘 / 中性站姿待 A2",
+      "projected_px": [
+        184.62,
+        529.13
+      ],
+      "sequence": 7,
+      "record_type": "必看口供"
+    },
+    {
+      "id": "NaiPai",
+      "name": "奶拍的口供",
+      "clue": null,
+      "kind": "witness",
+      "required": true,
+      "loc": [
+        3100,
+        760,
+        90
+      ],
+      "scale": [
+        0.46,
+        0.42,
+        0.92
+      ],
+      "art": "嫌疑人立绘 / 中性站姿待 A2",
+      "projected_px": [
+        1723.08,
+        691.03
+      ],
+      "sequence": 8,
+      "record_type": "必看口供"
+    },
+    {
+      "id": "NaiBi",
+      "name": "奶鼻的口供",
+      "clue": null,
+      "kind": "witness",
+      "required": true,
+      "loc": [
+        2950,
+        -1480,
+        90
+      ],
+      "scale": [
+        0.46,
+        0.42,
+        0.92
+      ],
+      "art": "嫌疑人立绘 / 中性站姿待 A2",
+      "projected_px": [
+        1686.15,
+        213.52
+      ],
+      "sequence": 9,
+      "record_type": "必看口供"
+    },
+    {
+      "id": "Socks",
+      "name": "屋檐下的袜子",
+      "clue": null,
+      "kind": "joke",
+      "required": false,
+      "loc": [
+        1770,
+        -810,
+        55
+      ],
+      "scale": [
+        0.58,
+        0.42,
+        0.72
+      ],
+      "art": "可跳过笑点；不承载答案证据",
+      "projected_px": [
+        1395.69,
+        360.66
+      ],
+      "sequence": 10,
+      "record_type": "可跳过笑点"
+    },
+    {
+      "id": "TrashCan",
+      "name": "院角的大垃圾桶",
+      "clue": null,
+      "kind": "joke",
+      "required": false,
+      "loc": [
+        -1280,
+        -1430,
+        50
+      ],
+      "scale": [
+        0.7,
+        0.68,
+        0.94
+      ],
+      "art": "可跳过笑点；不承载答案证据",
+      "projected_px": [
+        644.92,
+        229.1
+      ],
+      "sequence": 11,
+      "record_type": "可跳过笑点"
+    },
+    {
+      "id": "RoofTiles",
+      "name": "戏台屋檐瓦片",
+      "clue": null,
+      "kind": "joke",
+      "required": false,
+      "loc": [
+        420,
+        -2270,
+        90
+      ],
+      "scale": [
+        0.82,
+        0.62,
+        0.68
+      ],
+      "art": "可跳过笑点；不承载答案证据",
+      "projected_px": [
+        1063.38,
+        45.11
+      ],
+      "sequence": 12,
+      "record_type": "可跳过笑点"
+    },
+    {
+      "id": "WellBucket",
+      "name": "井边的水桶",
+      "clue": null,
+      "kind": "joke",
+      "required": false,
+      "loc": [
+        2520,
+        -2240,
+        46
+      ],
+      "scale": [
+        0.62,
+        0.62,
+        0.8
+      ],
+      "art": "可跳过笑点；不承载答案证据",
+      "projected_px": [
+        1580.31,
+        56.92
+      ],
+      "sequence": 13,
+      "record_type": "可跳过笑点"
+    },
+    {
+      "id": "Clothesline",
+      "name": "后院晾衣绳",
+      "clue": null,
+      "kind": "joke",
+      "required": false,
+      "loc": [
+        -850,
+        2220,
+        112
+      ],
+      "scale": [
+        0.92,
+        0.24,
+        0.42
+      ],
+      "art": "可跳过笑点；不承载答案证据",
+      "projected_px": [
+        750.77,
+        999.56
+      ],
+      "sequence": 14,
+      "record_type": "可跳过笑点"
+    }
+  ],
+  "environment_kit_seed": [
+    "院落骨架：墙体、地面、屋檐、院门",
+    "核心地标：戏台、井、门廊、植栽",
+    "证据小件：奖杯、公告栏、检测仪、相机/底片、假花/蹼印、巡夜簿/票据",
+    "人物 billboards：奶抖、奶拍、奶鼻（角色资产由 P6-A2 继续）"
+  ],
+  "constraints": [
+    "Location and bounds are the M2 interactable definitions; bounds are not visual mesh dimensions.",
+    "Projection is a 1920x1080 reference crop of the current orthographic camera, not a final A1 placement approval.",
+    "The approved courtyard concept is shown separately as a style reference and is not used as coordinate background.",
+    "The five optional joke points do not carry unique answer evidence.",
+    "Manual visibility and walkability review remain required."
+  ],
+  "preview_png": "Environment/P6_A1_CurrentPointArtMap_v01.png",
+  "preview_png_sha256": "25ffd3e2c1401e4f576f6e38b19ea7af0f74f3a3869b2a1ed183a7e16bd36eca",
+  "editable_svg": "Environment/P6_A1_CurrentPointArtMap_v01.svg",
+  "editable_svg_sha256": "364e20bc3300a671502e3df60b0766ce41b88df8f3f7cf0026d9202e477ce976",
+  "preview_size_px": [
+    2200,
+    1600
+  ],
+  "references": [
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/P6/Data/NaiwaP6CaseDefinition.cpp",
+      "sha256": "13f4c92262b8170afd016817f3e5387b4aba6bf035f02236229bcc375d023a41"
+    },
+    {
+      "path": "UE5/NaiwaP0/Source/NaiwaRuntime/P6/Presentation/NaiwaP6InvestigationGameMode.cpp",
+      "sha256": "647c697a873bf9dad21b8e214d97485630a2d6441a4c0686c8e959e3bd69795f"
+    },
+    {
+      "path": "UE5/Records/p5_p6_plan/P6_工程计划书_v2.md",
+      "sha256": "19979c5bfaf139be3a9176db4daed84182787940458bf9dda5e10887680153bf"
+    },
+    {
+      "path": "UE5/Records/p5_p6_plan/P6_美术执行计划_v1.md",
+      "sha256": "d441dd1920eafd88aa6cd1654c1fd7e5160a8b83ff95f27189d876ab63330401"
+    },
+    {
+      "path": "UE5/SourceAssets/P6/Environment/P6_A0_Courtyard_Concept_v01.png",
+      "sha256": "aa10d27d3605969962ce4027398e0740d48e0120d994f378796c189340dbeb6a"
+    }
+  ],
+  "art_direction": "Environment/P6_A1_CurrentPointArtMap_ArtDirection_v01.md"
+}

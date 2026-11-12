@@ -1,0 +1,206 @@
+{
+  "schema_version": "1.0",
+  "package_id": "P6_A3_ClueCards_v01",
+  "status": "review_sample_not_runtime_approved",
+  "source_document": "UE5/Records/p5_p6_plan/P6_工程计划书_v2.md",
+  "constraints": [
+    "G/S/X IDs remain authoritative.",
+    "No correctness or guilt state is encoded by color.",
+    "S1 is a fixed-time reconstruction, not a live recording.",
+    "S3 depicts a short ground slide, not a projectile arc.",
+    "S4 water marks are not a guilt indicator.",
+    "X1/X2 are fixed combinations only."
+  ],
+  "contact_sheet": "Evidence/P6_A3_ClueCard_ContactSheet_v01.png",
+  "editable_template": "UI/P6_ClueCard_Template_v02.svg",
+  "cards": [
+    {
+      "clue_id": "G1",
+      "title": "奖杯铭牌与底座结构",
+      "category": "通用证据",
+      "summary": "底座内含感应触发器与声音播放模块。 铭牌标注为低价塑料壳产品。",
+      "time": "案发后检查",
+      "source": "戏台奖杯",
+      "record_type": "结构 / 设备",
+      "path": "Evidence/Cards_v01/P6_A3_G1_ClueCard_v01.png",
+      "size_px": [
+        960,
+        680
+      ],
+      "sha256": "2f156f27e89b99336df808a4cd41043c93c93c035d359fbfb0404392374df304"
+    },
+    {
+      "clue_id": "G2",
+      "title": "禁笑令与评比公告",
+      "category": "通用证据",
+      "summary": "公告建立村内共同背景与动机。 它本身不指认具体人员。",
+      "time": "背景资料",
+      "source": "禁笑令 / 评比",
+      "record_type": "背景信息",
+      "path": "Evidence/Cards_v01/P6_A3_G2_ClueCard_v01.png",
+      "size_px": [
+        960,
+        680
+      ],
+      "sha256": "7312b963911d10db04e53d6700c354066ac54184621168f3bd72a3b29a9fa81b"
+    },
+    {
+      "clue_id": "G3",
+      "title": "检测仪采样纸条",
+      "category": "通用证据",
+      "summary": "23:58:07 · 96 dB · 分类为“人类大笑”。 波形与间隔被踩糊，不能还原完整节奏。",
+      "time": "23:58:07",
+      "source": "检测仪纸条",
+      "record_type": "采样记录",
+      "path": "Evidence/Cards_v01/P6_A3_G3_ClueCard_v01.png",
+      "size_px": [
+        960,
+        680
+      ],
+      "sha256": "d64cd8c7de1a65917c7aac432db0a78610b1c4018f8aa7967ca931daec170c97"
+    },
+    {
+      "clue_id": "G4",
+      "title": "照片底片与元数据",
+      "category": "通用证据",
+      "summary": "23:57:15 的照片里，奖杯已经倒地。 亮斑与闪光同步。",
+      "time": "23:57:15",
+      "source": "奶拍底片",
+      "record_type": "拍摄记录",
+      "path": "Evidence/Cards_v01/P6_A3_G4_ClueCard_v01.png",
+      "size_px": [
+        960,
+        680
+      ],
+      "sha256": "69aa61290c31aebbf81e7c31d61c52119adb6a1da5f0f25dd8042ee3b1281f8d"
+    },
+    {
+      "clue_id": "G5",
+      "title": "蹼印、啄痕与底座擦痕",
+      "category": "通用证据",
+      "summary": "三趾蹼印从假花旁延伸到奖杯底座。 啄痕与底座擦痕的材质连续。",
+      "time": "23:57 左右",
+      "source": "假花 / 底座",
+      "record_type": "接触痕迹",
+      "path": "Evidence/Cards_v01/P6_A3_G5_ClueCard_v01.png",
+      "size_px": [
+        960,
+        680
+      ],
+      "sha256": "1c943220a8a43aaf137b75d1c39b2b30400243989d60a6d406b3650cc8c1f07d"
+    },
+    {
+      "clue_id": "G6",
+      "title": "巡夜记录、口供与收摊票据",
+      "category": "通用证据",
+      "summary": "23:55 巡夜；00:03、00:12 与 03:00 有独立记录。 路线、口供时间与收摊票据可交叉核对。",
+      "time": "23:55—03:00",
+      "source": "巡夜记录 / 票据",
+      "record_type": "时间线",
+      "path": "Evidence/Cards_v01/P6_A3_G6_ClueCard_v01.png",
+      "size_px": [
+        960,
+        680
+      ],
+      "sha256": "9ac5033e1ca5468cb62240f60ec3b1d6a14651dcf98626438f338e53c5ee755c"
+    },
+    {
+      "clue_id": "S1",
+      "title": "固定时刻视线重建",
+      "category": "皮肤信息层",
+      "summary": "按时间戳重建人物位置与视线遮挡。 这是静态重建，不模拟实时朝向。",
+      "time": "23:58:07",
+      "source": "视线 / 遮挡",
+      "record_type": "位置重建",
+      "path": "Evidence/Cards_v01/P6_A3_S1_ClueCard_v01.png",
+      "size_px": [
+        960,
+        680
+      ],
+      "sha256": "e9117a5cf6833491c8b1ad3c0c09c5a353dd6a889e4ccc8947a79df69b6d351e"
+    },
+    {
+      "clue_id": "S2",
+      "title": "低位撞痕与破损顺序",
+      "category": "皮肤信息层",
+      "summary": "记录 30 cm 低位撞痕与缺口宽度。 比较奖杯、假花的接触破损顺序。",
+      "time": "案发后检查",
+      "source": "奖杯底座",
+      "record_type": "破损观察",
+      "path": "Evidence/Cards_v01/P6_A3_S2_ClueCard_v01.png",
+      "size_px": [
+        960,
+        680
+      ],
+      "sha256": "4d9ff1f647a619b685ba6dd84a7787e0eee924e00bf160d768ac074b5a1fc929"
+    },
+    {
+      "clue_id": "S3",
+      "title": "奖杯短距离滑移轨迹",
+      "category": "皮肤信息层",
+      "summary": "记录戏台边缘、滑移痕、撞击点与最终位置。 表现贴地短轨迹，不以抛物线解释。",
+      "time": "23:57 左右",
+      "source": "戏台地面",
+      "record_type": "轨迹重建",
+      "path": "Evidence/Cards_v01/P6_A3_S3_ClueCard_v01.png",
+      "size_px": [
+        960,
+        680
+      ],
+      "sha256": "f4043701b508067b2179d84b09befcad6fc0d2c1442c475aa1391abebdcde8f1"
+    },
+    {
+      "clue_id": "S4",
+      "title": "井边水痕与冲淡脚印",
+      "category": "皮肤信息层",
+      "summary": "记录戏台至井边的水流方向与脚印淡化范围。 水痕形成时间需与时间线一并核对。",
+      "time": "调查期间",
+      "source": "地面 / 井边",
+      "record_type": "水痕观察",
+      "path": "Evidence/Cards_v01/P6_A3_S4_ClueCard_v01.png",
+      "size_px": [
+        960,
+        680
+      ],
+      "sha256": "78d03fe0a6b9bb972264baa232c375ca95de0965a0a6924a739ac543a1929342"
+    },
+    {
+      "clue_id": "X1",
+      "title": "视线 × 破损",
+      "category": "交叉记录",
+      "summary": "组合 S1 与 S2：采样时没有人处在能触发奖杯的位置。 低位外撞与接触痕迹吻合。",
+      "time": "组合重建",
+      "source": "戏台：S1 + S2",
+      "record_type": "固定组合",
+      "path": "Evidence/Cards_v01/P6_A3_X1_ClueCard_v01.png",
+      "size_px": [
+        960,
+        680
+      ],
+      "sha256": "7ecdadeac20e83a84d9fc0da2073f200dc94a02bc065c492969c472e5a6449a8"
+    },
+    {
+      "clue_id": "X2",
+      "title": "滑移 × 结构",
+      "category": "交叉记录",
+      "summary": "组合 S3 与 G1：奖杯落地触发底座芯片。 芯片循环播放约三分钟。",
+      "time": "组合重建",
+      "source": "奖杯：S3 + G1",
+      "record_type": "固定组合",
+      "path": "Evidence/Cards_v01/P6_A3_X2_ClueCard_v01.png",
+      "size_px": [
+        960,
+        680
+      ],
+      "sha256": "709f112727f630c3137c27a6f8ca8268d6fbd4a5fc226c5f2427018efee78b29"
+    }
+  ],
+  "contact_sheet_sha256": "0dd09ddadfe538f2d119e2a5954297142bc1f885c0b546e864ab2ff0935b2aab",
+  "editable_template_sha256": "a6fcbf1a7ae08553e21b0b10cf5a08ede747b281e422ba6c492dbe989ff310a4",
+  "board_preview": "UI/P6_ClueBoard_Mockup_v02.png",
+  "board_preview_sha256": "64bdddefa1afd5501d683ad01a5233d914caff8ab9fdba1f85c3ec30a67ded76",
+  "board_editable": "UI/P6_ClueBoard_Mockup_v02.svg",
+  "board_editable_sha256": "06bc9d4cb99901e7994f9f9881cfeca9b554d4e2f06f73f58a8bc959f259931b",
+  "art_direction": "Evidence/P6_A3_ClueCards_ArtDirection_v01.md",
+  "art_direction_sha256": "484705e075332d1754922a199ff7ad7e5e89fb7e28ecb648c012edccf91af635"
+}

@@ -1,0 +1,28 @@
+{
+  "status": "captured",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "map_asset": "/Game/Naiwa/P6/Art/A1/Maps/L_NaiwaP6_A1LightingReview_v02",
+  "camera_label": "NAIWA_P6_A1_Review_OrthoCamera",
+  "capture_method": "PythonAutomationTest + AutomationScheduler latent screenshot tasks",
+  "captures": [
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p6_art\\evidence\\P6_A1_LightingReview_1280x720_v07.png",
+      "resolution_px": [
+        1280,
+        720
+      ],
+      "bytes": 417428,
+      "camera": "/Game/Naiwa/P6/Art/A1/Maps/L_NaiwaP6_A1LightingReview_v02.L_NaiwaP6_A1LightingReview_v02:PersistentLevel.CameraActor_0"
+    },
+    {
+      "path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p6_art\\evidence\\P6_A1_LightingReview_1920x1080_v07.png",
+      "resolution_px": [
+        1920,
+        1080
+      ],
+      "bytes": 887572,
+      "camera": "/Game/Naiwa/P6/Art/A1/Maps/L_NaiwaP6_A1LightingReview_v02.L_NaiwaP6_A1LightingReview_v02:PersistentLevel.CameraActor_0"
+    }
+  ],
+  "map_saved_before_capture": true
+}

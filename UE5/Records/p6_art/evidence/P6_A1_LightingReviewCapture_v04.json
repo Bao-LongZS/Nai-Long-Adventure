@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "map_asset": "/Game/Naiwa/P6/Art/A1/Maps/L_NaiwaP6_A1LightingReview_v01",
+  "camera_label": "NAIWA_P6_A1_Review_OrthoCamera",
+  "tick_scheduler": "unreal.AutomationScheduler",
+  "partial_captures": [],
+  "error": "The editor process was reaped with its launcher session before the latent callback could complete."
+}

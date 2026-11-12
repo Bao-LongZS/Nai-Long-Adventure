@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "map_asset": "/Game/Naiwa/P6/Art/A1/Maps/L_NaiwaP6_A1LightingReview_v01",
+  "camera_label": "NAIWA_P6_A1_Review_OrthoCamera",
+  "tick_scheduler": "unreal.AutomationScheduler",
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/Scripts/capture_p6_a1_lighting_review_v02.py\", line 42, in <module>\n    unreal.EditorPythonScriptingLibrary.set_keep_python_script_alive(True)\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'unreal' has no attribute 'EditorPythonScriptingLibrary'\n"
+}

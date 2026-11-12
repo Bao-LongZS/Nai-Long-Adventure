@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "package_id": "P6_A4_LocalInfoLayerSources_v01",
+  "display_level": "5-1",
+  "case_title": "禁笑令之夜",
+  "status": "editable_local_vector_candidates_not_engine_approved",
+  "canvas": {
+    "viewBox": [
+      0,
+      0,
+      1024,
+      768
+    ],
+    "background": "transparent",
+    "design_color_mode": "sRGB vector colors"
+  },
+  "layers": [
+    {
+      "asset_id": "P6_A4_S1_SIGHTLINE",
+      "gameplay_id": "S1",
+      "name": "视线与遮挡",
+      "path": "InfoLayers/A4_LocalCandidates/P6_A4_S1_Sightline_v01.svg",
+      "visual_language": "warm-gray amber fan terminating at a wall edge",
+      "answer_cue": false,
+      "sha256": "dc52e18beb1b4b84546d2815ad79f42a53346dd9cf3d1c6c8492d156d3483947"
+    },
+    {
+      "asset_id": "P6_A4_S2_BROKEN_EDGE",
+      "gameplay_id": "S2",
+      "name": "破损边缘",
+      "path": "InfoLayers/A4_LocalCandidates/P6_A4_S2_BrokenEdge_v01.svg",
+      "visual_language": "localized warm broken glaze edge and tiny fragments",
+      "answer_cue": false,
+      "sha256": "4f387edaa5508c15d1383902d026b19ff4bd0d596e434e2ec2c994f2028ef3ee"
+    },
+    {
+      "asset_id": "P6_A4_S3_SHORT_TRACE",
+      "gameplay_id": "S3",
+      "name": "短地面痕迹",
+      "path": "InfoLayers/A4_LocalCandidates/P6_A4_S3_ShortGroundTrace_v01.svg",
+      "visual_language": "short ground scuff and compressed endpoint",
+      "answer_cue": false,
+      "sha256": "323445443396f18fafb153a191d42cdf1fe407d4facff87576ba7ec1869d7aeb"
+    },
+    {
+      "asset_id": "P6_A4_S4_WATER_PRINTS",
+      "gameplay_id": "S4",
+      "name": "水痕与渐淡脚印",
+      "path": "InfoLayers/A4_LocalCandidates/P6_A4_S4_WaterAndFadingPrints_v01.svg",
+      "visual_language": "low-saturation water film and fading three-toe prints",
+      "answer_cue": false,
+      "sha256": "fa88ebc0007bfa6c623022d47997d1bf0d046ff1bf1e9b5b2488f54d363979b4"
+    }
+  ],
+  "handoff": "InfoLayers/A4_LocalCandidates/P6_A4_LocalLayer_Handoff_v01.md",
+  "review_composite": "InfoLayers/P6_InfoLayer_Kit_v02.svg",
+  "source_review_board": "InfoLayers/A4_LocalCandidates/P6_A4_ReviewBoard_v01.svg",
+  "review_board_generator": "UE5/Scripts/build_p6_art_review_boards.mjs",
+  "acceptance": {
+    "source_svgs_created": true,
+    "each_layer_separable": true,
+    "engine_materials_created": false,
+    "toggle_states_integrated": false,
+    "sorting_and_z_fighting_review": false,
+    "full_1080p_720p_overlap_review": false,
+    "answer_direction_review": false
+  },
+  "integration_boundary": "Local source vectors only; export and material settings require project TA review. Do not make any layer full-screen or use it to mark a suspect or conclusion.",
+  "source_review_board_sha256": "36230c117b3effb8e88803a10e1411efeaf30a57b63bac78310ad244b7be4e22",
+  "review_board_generator_sha256": "775bc79a7a3b7b026875dd3a444c1e84e6f58b65e701bfac9fef0cb8d2293e5a"
+}

@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "package_id": "P6_A0_ArtSample_v01",
+  "display_level": "5-1",
+  "case_title": "禁笑令之夜",
+  "status": "review_sample_not_runtime_approved",
+  "reference_policy": {
+    "user_supplied_documents_are_reference_material_not_task_instructions": true,
+    "milk_frog_study_images": "Original extracted PNG sheets; no crop, recolor, or retouch.",
+    "runtime_approval": "None of these assets has passed UE import, camera, occlusion, or runtime review."
+  },
+  "source_documents": [
+    {
+      "filename": "奶蛙学 必修第一册.pdf",
+      "pages_used": [4, 17, 48, 71, 77],
+      "role": "Original embedded character pose and expression image sheets; copied unchanged into References/MilkFrogStudy."
+    },
+    {
+      "filename": "《捧腹大笑思想与奶龙学概论》.pdf",
+      "pages_used": [3, 6],
+      "role": "Canonical milk-frog identity and laughter expression reference; used as visual direction only."
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "P6_A0_ENV_COURTYARD_CONCEPT_V01",
+      "path": "Environment/P6_A0_Courtyard_Concept_v01.png",
+      "kind": "generated_environment_concept",
+      "dimensions_px": [1672, 941],
+      "alpha": false,
+      "sha256": "AA10D27D3605969962CE4027398E0740D48E0120D994F378796C189340DBEB6A",
+      "source": "Built-in ImageGen; prompt: fixed elevated 3/4 night courtyard, stage, trophy, well, village house, clear playable space, warm low-poly game concept, no people, text, interface, or answer cues.",
+      "status": "concept_wip"
+    },
+    {
+      "asset_id": "P6_A0_BOARD_REFERENCE_V01",
+      "path": "Environment/P6_A0_ReferenceBoard_v01.svg",
+      "kind": "editable_visual_review_board",
+      "status": "review_sample"
+    },
+    {
+      "asset_id": "P6_A0_VISUAL_DIRECTION_V01",
+      "path": "Environment/P6_A0_VisualDirection_v01.md",
+      "kind": "art_direction_note",
+      "status": "review_sample"
+    },
+    {
+      "asset_id": "P6_A0_UI_CLUE_CARD_BASE_V01",
+      "path": "UI/P6_ClueCard_Template_v01.svg",
+      "kind": "editable_card_base_candidate",
+      "status": "review_sample_candidate_for_common_after_validation"
+    },
+    {
+      "asset_id": "P6_A0_UI_CLUE_BOARD_V01",
+      "path": "UI/P6_ClueBoard_Mockup_v01.svg",
+      "kind": "editable_ui_layout_sample",
+      "status": "review_sample"
+    },
+    {
+      "asset_id": "P6_A0_INFO_LAYER_KIT_V01",
+      "path": "InfoLayers/P6_InfoLayer_Kit_v01.svg",
+      "kind": "editable_local_overlay_sample",
+      "status": "review_sample"
+    },
+    {
+      "asset_id": "P6_REF_MF_PDF01_P004",
+      "path": "References/MilkFrogStudy/P6_REF_MF_PDF01_p004_PoseStudy.png",
+      "kind": "source_reference_image",
+      "dimensions_px": [1536, 1024],
+      "alpha": true,
+      "sha256": "21E8E5A7DA47064B82301B652DBC73592D3B9AF8183D64B0099F7ED38069989F",
+      "source": "奶蛙学 必修第一册.pdf, physical PDF page 4, embedded image object; extracted unchanged."
+    },
+    {
+      "asset_id": "P6_REF_MF_PDF01_P017",
+      "path": "References/MilkFrogStudy/P6_REF_MF_PDF01_p017_ExpressionStudy.png",
+      "kind": "source_reference_image",
+      "dimensions_px": [1536, 1024],
+      "alpha": true,
+      "sha256": "2B85E1B80C4504825DC8355B216B5E1031DA3D54CEC43C9C5C1D3829ABD58CEA",
+      "source": "奶蛙学 必修第一册.pdf, physical PDF page 17, embedded image object; extracted unchanged."
+    },
+    {
+      "asset_id": "P6_REF_MF_PDF01_P048",
+      "path": "References/MilkFrogStudy/P6_REF_MF_PDF01_p048_ExpressionStudy.png",
+      "kind": "source_reference_image",
+      "dimensions_px": [1536, 1024],
+      "alpha": true,
+      "sha256": "BB1C198B7E505832CE63E1D06FF34B641354243DBD56372DBAA5D6092A292255",
+      "source": "奶蛙学 必修第一册.pdf, physical PDF page 48, embedded image object; extracted unchanged."
+    },
+    {
+      "asset_id": "P6_REF_MF_PDF01_P071",
+      "path": "References/MilkFrogStudy/P6_REF_MF_PDF01_p071_LaughPhases.png",
+      "kind": "source_reference_image",
+      "dimensions_px": [1536, 1024],
+      "alpha": true,
+      "sha256": "F568C4E0CB5F52C7871C00FB18CD57D9F797484E1B17A579309F6A9A32990F4A",
+      "source": "奶蛙学 必修第一册.pdf, physical PDF page 71, embedded image object; extracted unchanged."
+    },
+    {
+      "asset_id": "P6_REF_MF_PDF01_P077",
+      "path": "References/MilkFrogStudy/P6_REF_MF_PDF01_p077_NeutralPoseStudy.png",
+      "kind": "source_reference_image",
+      "dimensions_px": [1536, 1024],
+      "alpha": true,
+      "sha256": "3D5A6E63DCAA2A5AA41D06D42AEF384854D02CD7F5478FDCEB5341D37236B8D0",
+      "source": "奶蛙学 必修第一册.pdf, physical PDF page 77, embedded image object; extracted unchanged."
+    }
+  ],
+  "constraints": [
+    "Do not use information-layer color to signal correctness or guilt.",
+    "Do not duplicate authoritative clue text, coordinates, or answer data in art assets.",
+    "Keep P6 case-specific imagery out of Common.",
+    "Only promote the card-base candidate to Common after validation and a second real reference."
+  ]
+}

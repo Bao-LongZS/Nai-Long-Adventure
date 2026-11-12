@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "package_id": "P6_A1_CourtyardKit_Blockout_v02",
+  "display_level": "5-1",
+  "case_title": "禁笑令之夜",
+  "status": "refined_blockout_candidate_not_engine_approved",
+  "source_basis": {
+    "preserved_v01_obj": {
+      "path": "Environment/A1_CourtyardKit/Models/P6_A1_CourtyardKit_Blockout_v01.obj",
+      "sha256": "e9023ff7fcd2f640c41a67af75e3841a5ec74fc63ab41df31d65f8d9826ab596"
+    },
+    "preserved_v01_mtl": {
+      "path": "Environment/A1_CourtyardKit/Models/P6_A1_CourtyardKit_Blockout_v01.mtl",
+      "sha256": "c88835914fe013bc4b3951546c7e451783d6733bc0859518b948dc8ec67bad95"
+    },
+    "current_m2_point_map": "Manifests/P6_A1_CurrentPointArtMap_v01.json",
+    "style_reference": "Environment/A1_CourtyardKit/P6_A1_EnvironmentKit_Concept_v02.png",
+    "v01_source_preserved": true
+  },
+  "geometry": {
+    "units": "centimeters",
+    "axis_semantics": {"x": "courtyard long axis", "y": "courtyard depth", "z": "height"},
+    "object_group_count": 450,
+    "vertex_count": 18338,
+    "face_count": 19643,
+    "bounds_cm": {"x": [-3550, 3550], "y": [-2875.106, 2750], "z": [-110, 1875]},
+    "material_count": 26,
+    "material_file_is_final": false,
+    "uvs_generated": false,
+    "collision_generated": false,
+    "lods_generated": false
+  },
+  "refinements": [
+    "Shallow courtyard paving slabs with reduced grout gaps.",
+    "Segmented wall foundations and coping caps.",
+    "Barrel-tile roof courses, ridge caps, eave/rake trim and timber supports.",
+    "House door joinery, window grids, stone base courses and facade timber framing.",
+    "Stage stone facing, railings, curtain folds and roof trim.",
+    "Well masonry courses and pulley; trophy rim, handles and pedestal trim.",
+    "Neutral detail pass on noticeboard, detector, camera table, bench, pots and lanterns."
+  ],
+  "assets": [
+    {"asset_id":"P6_A1_KIT_V02_OBJ","path":"Environment/A1_CourtyardKit/Models/P6_A1_CourtyardKit_Blockout_v02.obj","type":"editable_refined_source_blockout","sha256":"bba12ac2ad4350bdbc1f653bc5707644167feb66c4d2542e7376f1bc36d90ec3"},
+    {"asset_id":"P6_A1_KIT_V02_MTL","path":"Environment/A1_CourtyardKit/Models/P6_A1_CourtyardKit_Blockout_v02.mtl","type":"flat_color_preview_materials_not_final","sha256":"a0bd27438d2093000c593808a2efed667b6b1a72bf44cf1818f7fdc5606e22c2"},
+    {"asset_id":"P6_A1_KIT_V02_PREVIEW_PNG","path":"Environment/A1_CourtyardKit/P6_A1_CourtyardKit_Blockout_Preview_v02.png","type":"offline_axonometric_projection_not_engine_render","dimensions_px":[1600,1120],"sha256":"aa805160bdccc00435ac79291f06b1013f9deaecb459321c36887c343eb23850"},
+    {"asset_id":"P6_A1_KIT_V02_PREVIEW_SVG","path":"Environment/A1_CourtyardKit/P6_A1_CourtyardKit_Blockout_Preview_v02.svg","type":"editable_offline_axonometric_projection_not_engine_render","dimensions_px":[1600,1120],"sha256":"4b67d1988233c7e1bf8fdd095ec6c6029c1c99b31b672055d0e1f619546beeb7"},
+    {"asset_id":"P6_A1_KIT_V02_CUTAWAY_PNG","path":"Environment/A1_CourtyardKit/P6_A1_CourtyardKit_CutawayPreview_v02.png","type":"offline_cutaway_projection_not_approved_level_change","dimensions_px":[1600,1120],"sha256":"9028f8316d89992d0a96f75c4264ef37eac494bf007e268f000b602a49b976c3"},
+    {"asset_id":"P6_A1_KIT_V02_CUTAWAY_SVG","path":"Environment/A1_CourtyardKit/P6_A1_CourtyardKit_CutawayPreview_v02.svg","type":"editable_offline_cutaway_projection_not_approved_level_change","dimensions_px":[1600,1120],"sha256":"9db702bac1dfdf6aed61e7ee7e98253beeafd7cdb5bfbe4fe07ccf49c5d2b26a"},
+    {"asset_id":"P6_A1_KIT_V02_M2_PNG","path":"Environment/A1_CourtyardKit/P6_A1_M2CameraPreview_v02.png","type":"offline_exact_m2_projection_and_pivot_depth_proxy","dimensions_px":[1920,1080],"sha256":"b66a54384335c5f5734cde20b61bbcac887deed2866e7e1b8d4eaf24508592bf"},
+    {"asset_id":"P6_A1_KIT_V02_M2_SVG","path":"Environment/A1_CourtyardKit/P6_A1_M2CameraPreview_v02.svg","type":"editable_offline_exact_m2_projection_not_runtime_visibility","dimensions_px":[1920,1080],"sha256":"b0ef85bef157b5775dfeb64eccd8397a7c81b9a001c8d5e81dd26037c33c5e10"},
+    {"asset_id":"P6_A1_KIT_V02_M2_CUTAWAY_PNG","path":"Environment/A1_CourtyardKit/P6_A1_M2CameraCutawayPreview_v02.png","type":"offline_exact_m2_cutaway_projection_not_approved_level_change","dimensions_px":[1920,1080],"sha256":"bc5808850160ae255237fb76ac34b0b3feecf30e63ccef8cdb86e76bdd65d509"},
+    {"asset_id":"P6_A1_KIT_V02_M2_CUTAWAY_SVG","path":"Environment/A1_CourtyardKit/P6_A1_M2CameraCutawayPreview_v02.svg","type":"editable_offline_exact_m2_cutaway_projection_not_runtime_visibility","dimensions_px":[1920,1080],"sha256":"5c4d69416ae5ff05c61877983f437f99929c2cc9840c51796db7614bd1e93d98"},
+    {"asset_id":"P6_A1_KIT_V02_M2_DEPTH","path":"Environment/A1_CourtyardKit/P6_A1_M2CameraDepthProxy_v02.json","type":"offline_per_point_nearest_surface_proxy_not_ue_occlusion","sha256":"dacd3d97346ba867f7cb0a46678c3844ca32108423e4bec4ae1b7e7f905263b6"},
+    {"asset_id":"P6_A1_KIT_V02_M2_CUTAWAY_DEPTH","path":"Environment/A1_CourtyardKit/P6_A1_M2CameraCutawayDepthProxy_v02.json","type":"offline_cutaway_per_point_nearest_surface_proxy_not_ue_occlusion","sha256":"d8e15cbfcab6c17ff84a85bc2af4d83f1137fd67e6d8913da944234ae21419d1"},
+    {"asset_id":"P6_A1_KIT_V02_REVIEW_BOARD","path":"Environment/A1_CourtyardKit/P6_A1_ReviewBoard_v02.svg","type":"self_contained_visual_review_board_not_runtime_screenshot","dimensions_px":[2560,2200],"sha256":"ae5475f192576f7ac89fa1383db2a7b9f1bdab971a4f6fe3be356a42a598acd1"},
+    {"asset_id":"P6_A1_KIT_V02_HANDOFF","path":"Environment/A1_CourtyardKit/P6_A1_CourtyardKit_Handoff_v02.md","type":"artist_handoff","sha256":"6f114b8986093ded6afadd16bae5d526fe6eddb67a1880bb35ca2c992af7fe75"},
+    {"asset_id":"P6_A1_KIT_V02_BUILD_SCRIPT","path":"UE5/Scripts/build_p6_a1_courtyard_kit_v02.mjs","type":"source_generation_script","sha256":"50db7990dc68dc8c7e13a3fc28c53ae956520b4fead005e8425d01002ca4320a"},
+    {"asset_id":"P6_A1_KIT_V02_PREVIEW_SCRIPT","path":"UE5/Scripts/render_p6_a1_courtyard_preview_v02.mjs","type":"preview_generation_script","sha256":"3b49888c9c44f9ba872d9bd4765f2fbb1d5543bddd353fa03d4d7f74f214130f"},
+    {"asset_id":"P6_A1_KIT_V02_BOARD_SCRIPT","path":"UE5/Scripts/build_p6_a1_review_board_v02.mjs","type":"review_board_generation_script","sha256":"9dbf599bd093753373950b9f01954a6301b8d86df59c4667b8dae96eb59c995d"}
+  ],
+  "offline_m2_depth_proxy": {
+    "full_roof_pivots_visible": 4,
+    "cutaway_pivots_visible": 5,
+    "total_points": 14,
+    "interpretation": "Coordinate hotspot only. A pivot can be hidden by its own prop geometry. Not a runtime mesh silhouette, clickable-area, bounds, walkability or UE occlusion result."
+  },
+  "acceptance": {
+    "v01_source_preserved": true,
+    "original_14_m2_point_map_preserved": true,
+    "refined_source_model_generated": true,
+    "review_board_created": true,
+    "ue_imported": false,
+    "fixed_camera_review": false,
+    "readability_1080p": false,
+    "readability_720p": false,
+    "runtime_occlusion_review": false,
+    "walkability_review": false,
+    "uv_collision_lod_review": false
+  },
+  "preview_kind": "offline software projection; not an Unreal Engine render",
+  "placement_authority": "UE5/SourceAssets/P6/Manifests/P6_A1_CurrentPointArtMap_v01.json remains the current M2 reference; final placement requires Level Design review."
+}
