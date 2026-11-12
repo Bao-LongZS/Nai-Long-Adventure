@@ -1,0 +1,41 @@
+{
+  "status": "imported_approved_map_presentation_textures",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "scope": "two user-approved P7 map presentation textures only; no map asset or gameplay data changed",
+  "level_opened_or_changed": false,
+  "runtime_played": false,
+  "assets": [
+    {
+      "asset_path": "/Game/Naiwa/P7/Environment/A0/T_P7_A0_GroundBoard_Field_v01",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Environment\\A0\\P7_A0_GroundBoard_Field_v01.png",
+      "source_sha256": "b14d354fa7d71709a0601021597fe3405144ed8e116d487492b3d9de00c84b02",
+      "width": 1672,
+      "height": 941,
+      "action": "imported",
+      "texture_group": "UI",
+      "mipmaps": false,
+      "srgb": true,
+      "alpha": true,
+      "asset_id": "P7-ENV-A0-GROUNDBOARD",
+      "version": "v01",
+      "review_status": "User approved as A0 environment sample; map fit/crop review pending",
+      "manifest_hash": "b14d354fa7d71709a0601021597fe3405144ed8e116d487492b3d9de00c84b02"
+    },
+    {
+      "asset_path": "/Game/Naiwa/P7/Environment/A1/T_P7_A1_GuardianMilkEgg_v04",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Environment\\A1\\P7_A1_GuardianMilkEgg_v04.png",
+      "source_sha256": "4225d469e98a0500bdce5640ea139958da7ee9570534c7a7bbdc81a64995f93c",
+      "width": 1254,
+      "height": 1254,
+      "action": "imported",
+      "texture_group": "UI",
+      "mipmaps": false,
+      "srgb": true,
+      "alpha": true,
+      "asset_id": "P7-ENV-A1-GUARDIAN-MILK-EGG",
+      "version": "v04",
+      "review_status": "User-approved visual; import, scale and HUD fit pending",
+      "manifest_hash": "4225d469e98a0500bdce5640ea139958da7ee9570534c7a7bbdc81a64995f93c"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="832" height="416" viewBox="0 0 832 416">
+  <title>P7 A1 result badge atlas v01</title>
+  <desc>Two transparent settlement seals: a protected milk-egg guardian and a broken guardian shield.</desc>
+  <defs>
+    <g id="star">
+      <path d="M0-27 7-8 27-8 11 4 17 24 0 12-17 24-11 4-27-8-7-8Z"/>
+    </g>
+  </defs>
+
+  <g id="P7-UI-A1-RESULT-WIN" transform="translate(16 16)" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="192" cy="192" r="160" fill="#FFF3D7" stroke="#14264A" stroke-width="14"/>
+    <circle cx="192" cy="192" r="143" fill="none" stroke="#F4C84A" stroke-width="9"/>
+    <circle cx="192" cy="48" r="5" fill="#55B97C"/>
+    <circle cx="192" cy="336" r="5" fill="#55B97C"/>
+
+    <path d="M93 269C70 230 70 179 91 144M291 269C314 230 314 179 293 144" fill="none" stroke="#55B97C" stroke-width="8"/>
+    <ellipse cx="83" cy="232" rx="8" ry="16" transform="rotate(-44 83 232)" fill="#55B97C"/>
+    <ellipse cx="79" cy="196" rx="8" ry="16" transform="rotate(-18 79 196)" fill="#55B97C"/>
+    <ellipse cx="84" cy="160" rx="8" ry="16" transform="rotate(15 84 160)" fill="#55B97C"/>
+    <ellipse cx="301" cy="232" rx="8" ry="16" transform="rotate(44 301 232)" fill="#55B97C"/>
+    <ellipse cx="305" cy="196" rx="8" ry="16" transform="rotate(18 305 196)" fill="#55B97C"/>
+    <ellipse cx="300" cy="160" rx="8" ry="16" transform="rotate(-15 300 160)" fill="#55B97C"/>
+
+    <path d="M192 91C160 91 132 101 116 112V199C116 247 146 280 192 306C238 280 268 247 268 199V112C252 101 224 91 192 91Z" fill="#E6F3E5" stroke="#14264A" stroke-width="11"/>
+    <path d="M192 120C165 120 145 140 145 169V221C145 249 165 267 192 267C219 267 239 249 239 221V169C239 140 219 120 192 120Z" fill="#F4C84A" stroke="#14264A" stroke-width="9"/>
+    <path d="M159 148C166 132 179 124 192 124" fill="none" stroke="#FFF8E8" stroke-width="8"/>
+    <circle cx="178" cy="188" r="5.5" fill="#14264A"/>
+    <circle cx="206" cy="188" r="5.5" fill="#14264A"/>
+    <path d="M180 207Q192 220 204 207" fill="none" stroke="#8D4F2C" stroke-width="6"/>
+    <path d="M168 229Q192 242 216 229" fill="none" stroke="#55B97C" stroke-width="7"/>
+
+    <path d="M192 46L201 65L222 67L207 81L211 102L192 92L173 102L177 81L162 67L183 65Z" fill="#F4C84A" stroke="#9A5A2E" stroke-width="5"/>
+    <path d="M139 82L144 93M245 82L240 93" stroke="#F4C84A" stroke-width="6"/>
+  </g>
+
+  <g id="P7-UI-A1-RESULT-LOSS" transform="translate(432 16)" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M192 32C252 32 307 57 333 101V216C333 274 278 323 192 352C106 323 51 274 51 216V101C77 57 132 32 192 32Z" fill="#FBE7DE" stroke="#14264A" stroke-width="14"/>
+    <path d="M192 51C246 51 290 72 313 108V213C313 260 267 301 192 328C117 301 71 260 71 213V108C94 72 138 51 192 51Z" fill="none" stroke="#EF6256" stroke-width="9"/>
+
+    <path d="M192 105C162 105 136 114 120 126V199C120 242 147 270 192 292C237 270 264 242 264 199V126C248 114 222 105 192 105Z" fill="#FFF3D7" stroke="#14264A" stroke-width="10"/>
+    <path d="M192 132C165 132 145 151 145 178V222C145 248 165 265 192 265C219 265 239 248 239 222V178C239 151 219 132 192 132Z" fill="#F4C84A" stroke="#14264A" stroke-width="9"/>
+    <path d="M159 158C167 143 179 136 192 136" fill="none" stroke="#FFF8E8" stroke-width="8"/>
+    <path d="M168 193Q178 183 187 193M198 193Q208 183 218 193" fill="none" stroke="#14264A" stroke-width="6"/>
+    <path d="M180 223Q192 211 204 223" fill="none" stroke="#8D4F2C" stroke-width="6"/>
+    <path d="M188 139L177 174L195 183L181 209L200 219L190 249" fill="none" stroke="#EF6256" stroke-width="11"/>
+    <path d="M188 139L177 174L195 183L181 209L200 219L190 249" fill="none" stroke="#14264A" stroke-width="4"/>
+
+    <path d="M114 115L99 97M99 97L105 79M270 118L285 100M285 100L280 82" fill="none" stroke="#EF6256" stroke-width="9"/>
+    <path d="M243 273L259 287L248 303L233 289Z" fill="#EF6256" stroke="#14264A" stroke-width="5"/>
+    <path d="M275 260L288 272L280 286L267 275Z" fill="#F4C84A" stroke="#14264A" stroke-width="5"/>
+  </g>
+</svg>

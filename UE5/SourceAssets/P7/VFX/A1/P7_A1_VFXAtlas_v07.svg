@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="848" height="848" viewBox="0 0 848 848">
+  <title>P7 A1 gameplay VFX atlas v05</title>
+  <desc>Four gameplay events in four frames each. Refined, directional effects for transparent in-game overlays.</desc>
+  <defs>
+    <radialGradient id="goldWash"><stop stop-color="#FFF8D9" stop-opacity=".84"/><stop offset=".48" stop-color="#FFD267" stop-opacity=".42"/><stop offset="1" stop-color="#F4A83B" stop-opacity="0"/></radialGradient>
+    <radialGradient id="warmCore"><stop stop-color="#FFFDF1"/><stop offset=".48" stop-color="#FFE28A"/><stop offset="1" stop-color="#F3A342" stop-opacity=".08"/></radialGradient>
+    <radialGradient id="mintWash"><stop stop-color="#F7FFE5" stop-opacity=".8"/><stop offset=".55" stop-color="#9CDEA6" stop-opacity=".4"/><stop offset="1" stop-color="#52B987" stop-opacity="0"/></radialGradient>
+    <radialGradient id="violetWash"><stop stop-color="#F7F0FF" stop-opacity=".78"/><stop offset=".48" stop-color="#A98BE7" stop-opacity=".44"/><stop offset="1" stop-color="#7159B5" stop-opacity="0"/></radialGradient>
+    <radialGradient id="coralWash"><stop stop-color="#FFF3D7" stop-opacity=".75"/><stop offset=".5" stop-color="#F27A63" stop-opacity=".43"/><stop offset="1" stop-color="#DB534D" stop-opacity="0"/></radialGradient>
+    <linearGradient id="shotBody" x1="0" y1="0" x2="1" y2=".2"><stop stop-color="#F6A83D"/><stop offset=".42" stop-color="#FFD96B"/><stop offset=".76" stop-color="#FFF0B5"/><stop offset="1" stop-color="#F4B247"/></linearGradient>
+    <linearGradient id="cookieFace" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#FFD58A"/><stop offset="1" stop-color="#C98242"/></linearGradient>
+    <linearGradient id="coinFace" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#FFF0A8"/><stop offset=".55" stop-color="#F6C34C"/><stop offset="1" stop-color="#DA8A35"/></linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur in="SourceAlpha" stdDeviation="2.2" result="blur"/><feOffset dy="2" result="offset"/><feComponentTransfer><feFuncA type="linear" slope=".18"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>
+      .ink{stroke:#27324A;stroke-linecap:round;stroke-linejoin:round}
+      .fine{stroke:#FFF5D8;stroke-linecap:round;stroke-linejoin:round}
+      .gold{stroke:#E6A83F;stroke-linecap:round;stroke-linejoin:round}
+      .mint{stroke:#51B987;stroke-linecap:round;stroke-linejoin:round}
+      .violet{stroke:#7E68B8;stroke-linecap:round;stroke-linejoin:round}
+      .coral{stroke:#D95A51;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <!-- SHOT: milk-chicken tower fires a warm, compact projectile at a normal enemy. -->
+  <g transform="translate(16 16)">
+    <ellipse cx="96" cy="96" rx="62" ry="42" fill="url(#goldWash)"/>
+    <path d="M48 96a48 48 0 0 1 15-35M144 96a48 48 0 0 1-15 35" fill="none" class="gold" stroke-width="5"/>
+    <path d="M57 48l8 8m62 80 8 8M47 96H33m126 0h-14" fill="none" class="fine" stroke-width="4"/>
+    <circle cx="96" cy="96" r="23" fill="#F6C85A" class="ink" stroke-width="4"/>
+    <circle cx="96" cy="96" r="14" fill="url(#warmCore)" class="fine" stroke-width="3"/>
+    <circle cx="96" cy="96" r="5" fill="#FFFDF3"/>
+    <path d="M77 76q-10-9-19-8m57 9q10-10 20-8M76 116q-9 9-18 8m58-8q9 9 18 8" fill="none" class="gold" stroke-width="3"/>
+    <circle cx="45" cy="69" r="3" fill="#FFF4C5"/><circle cx="148" cy="54" r="4" fill="#F5B74B"/><circle cx="143" cy="139" r="3" fill="#FFF4C5"/>
+  </g>
+  <g transform="translate(224 16)" filter="url(#softShadow)">
+    <path d="M22 119c18 2 27-8 40-15 13-7 25-4 35-2 8 1 14-2 22-8" fill="none" stroke="#E89C3B" stroke-width="12" stroke-linecap="round" opacity=".16"/>
+    <path d="M22 106c17-2 28-11 41-15 12-4 22 1 32 1 8 0 14-3 21-8" fill="none" stroke="#FFD463" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M35 111c8-2 14-6 20-11m15-13 8-2m18 10 7-1" fill="none" stroke="#FFF5D8" stroke-width="2" stroke-linecap="round" opacity=".82"/>
+    <circle cx="57" cy="101" r="2.2" fill="#F7C45A"/><circle cx="91" cy="92" r="1.8" fill="#FFF1BE"/>
+    <path d="M73 96c15-17 33-25 55-21l37 17-36 19c-22 5-41 0-56-15Z" fill="url(#shotBody)" class="ink" stroke-width="4"/>
+    <path d="M91 94c17-8 34-9 52-3" fill="none" class="fine" stroke-width="3"/>
+    <path d="M44 79l12-5m-3 48 16-7m61-52 8-8" fill="none" class="gold" stroke-width="3"/>
+    <circle cx="135" cy="91" r="3.5" fill="#FFFDF0"/><circle cx="55" cy="65" r="3" fill="#FFF5CF"/>
+  </g>
+  <g transform="translate(432 16)">
+    <ellipse cx="98" cy="98" rx="58" ry="52" fill="url(#goldWash)"/>
+    <path d="M96 29c9 20 13 28 27 32 5-13 9-20 17-25-2 17 0 29 12 39 12-3 20-4 30-1-12 9-18 18-18 32 11 6 18 12 22 22-16-4-27-2-37 6-1 13-5 22-14 31-3-17-10-25-21-31-11 8-20 12-33 10 9-13 10-24 6-36-14-4-23-10-29-21 17 1 27-4 35-14-4-15-2-27 3-44Z" fill="#F7C95A" stroke="#E4A745" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M97 43c5 19 15 26 28 30m16 46c-8 13-18 19-32 19m-34-33c-11-7-17-16-20-29" fill="none" class="fine" stroke-width="4"/>
+    <ellipse cx="98" cy="100" rx="26" ry="18" fill="none" stroke="#FFFDF1" stroke-width="4" opacity=".88"/>
+    <circle cx="98" cy="100" r="8" fill="#FFFDF1"/>
+    <path d="M86 92l-9-8m34 34 8 8" fill="none" stroke="#E8973E" stroke-width="4" stroke-linecap="round"/>
+    <path d="M43 48l9 8m103 85 10 7M39 143l10-8m117-78 9-8" fill="none" class="gold" stroke-width="4"/>
+  </g>
+  <g transform="translate(640 16)">
+    <path d="M31 111c17 7 32 6 43-2m30-27c12-13 28-18 51-14" fill="none" stroke="#F0B84A" stroke-width="5" stroke-linecap="round" opacity=".62"/>
+    <path d="M54 91c10-17 20-22 30-23m31 42c11-2 20-8 27-18" fill="none" class="fine" stroke-width="3" opacity=".8"/>
+    <path d="M53 67c-5-5-12-1-11 5 1 5 8 8 12 4m91 50c-5-5-12-1-11 5 1 5 8 8 12 4" fill="#FFD568" stroke="#E5A541" stroke-width="2"/>
+    <circle cx="93" cy="98" r="11" fill="url(#warmCore)"/><circle cx="93" cy="98" r="4" fill="#FFFDF1"/>
+    <circle cx="127" cy="69" r="3" fill="#FFF2C7"/><circle cx="71" cy="132" r="2.5" fill="#F5B64B"/><circle cx="151" cy="91" r="2" fill="#FFF2C7"/>
+  </g>
+
+  <!-- CLEAR: a marked obstacle cracks, breaks into cookie shards, and reveals a build site/reward. -->
+  <g transform="translate(16 224)">
+    <ellipse cx="103" cy="101" rx="56" ry="44" fill="url(#goldWash)"/>
+    <path d="M38 108c17-7 27-16 38-29m32 7 9-17m18 53 13 10" fill="none" stroke="#D58A42" stroke-width="7" stroke-linecap="round" opacity=".7"/>
+    <path d="M76 66c8 8 8 16 1 23 12 1 17 9 12 19 11-3 19 3 18 14 8-8 18-7 24 2" fill="none" class="fine" stroke-width="4"/>
+    <path d="M50 83l11 8m82-39 8-7m-99 83-9 8" fill="none" class="gold" stroke-width="4"/>
+    <circle cx="59" cy="123" r="5" fill="#E8A64F"/><circle cx="137" cy="67" r="3" fill="#FFF0BF"/>
+  </g>
+  <g transform="translate(224 224)">
+    <ellipse cx="96" cy="96" rx="59" ry="57" fill="url(#goldWash)" opacity=".7"/>
+    <path d="M99 30 84 67l19 17-29 20 18 21-8 38" fill="none" stroke="#9A5D32" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M99 30 84 67l19 17-29 20 18 21-8 38" fill="none" stroke="#FFE0A0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M84 67 62 60m41 24 24-16m-53 36-22-5m40 26 23 8m-31-9-18 20" fill="none" stroke="#B66D3A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="44" cy="52" r="3" fill="#FFF4CF"/><circle cx="147" cy="49" r="4" fill="#F6BD55"/><circle cx="150" cy="145" r="3" fill="#FFF4CF"/>
+  </g>
+  <g transform="translate(432 224)">
+    <path d="m37 65 32 10-5 29-32-5Zm54-32 31 8-4 29-34-5Zm26 80 29 2 5 29-30 5ZM68 119l24 9-7 25-27-4Z" fill="#8D5A35" opacity=".62"/>
+    <path d="m34 59 31 9-6 29-32-5Zm54-26 31 8-4 29-34-5Zm26 80 29 2 5 29-30 5ZM64 113l24 9-7 25-27-4Z" fill="url(#cookieFace)" stroke="#7C533B" stroke-width="3" stroke-linejoin="round"/>
+    <path d="m39 65 18 5-4 16-17-3m57-43 18 5-3 14-18-3m34 70 17 1 2 14-17 3m-59-26 14 5-4 14-15-2" fill="none" stroke="#FFE2A5" stroke-width="3" stroke-linecap="round"/>
+    <g fill="#805035"><circle cx="49" cy="78" r="2"/><circle cx="101" cy="51" r="2"/><circle cx="130" cy="135" r="2"/><circle cx="68" cy="128" r="2"/></g>
+    <path d="M27 48l-8-9m140 44 10-6m-9 74 7 7m-101 3-3 10" fill="none" class="gold" stroke-width="4"/>
+  </g>
+  <g transform="translate(640 224)">
+    <ellipse cx="88" cy="123" rx="63" ry="28" fill="url(#mintWash)"/>
+    <path d="M43 119h89M53 132h69M62 105h52" fill="none" stroke="#56B987" stroke-width="4" stroke-linecap="round" opacity=".72"/>
+    <path d="M48 113 61 98m70 15-13-15M62 138l-8 8m68-8 8 8" fill="none" stroke="#B2E8B4" stroke-width="4" stroke-linecap="round"/>
+    <path d="M114 84c12-12 23-17 36-16" fill="none" stroke="#E9B64C" stroke-width="4" stroke-linecap="round" stroke-dasharray="3 7"/>
+    <g transform="translate(151 58) rotate(13)"><ellipse cx="0" cy="16" rx="16" ry="5" fill="#A96F35" opacity=".5"/><circle cy="0" r="17" fill="url(#coinFace)" stroke="#9E672F" stroke-width="3"/><circle cy="0" r="11" fill="none" stroke="#FFF0B4" stroke-width="2"/><path d="m0-7 2.4 4.6 5 .7-3.7 3.6.9 5-4.6-2.4-4.5 2.4.8-5-3.7-3.6 5-.7Z" fill="#A96B32"/></g>
+    <circle cx="41" cy="75" r="4" fill="#8DD9A2"/><circle cx="73" cy="89" r="3" fill="#F5C958"/><circle cx="130" cy="54" r="3" fill="#FFF1C4"/>
+  </g>
+
+  <!-- UPGRADE: coins flow into a milk-chicken tower; a brighter, stable level emerges. -->
+  <g transform="translate(16 432)">
+    <ellipse cx="96" cy="132" rx="54" ry="25" fill="url(#goldWash)" opacity=".55"/>
+    <path d="M48 129c1-25 13-47 41-65 1 20-8 31-12 43-3 8-4 16-3 24Z" fill="#EBA944" opacity=".62"/>
+    <path d="M52 122c5-24 17-42 36-57" fill="none" stroke="#FFF0BD" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M143 128c-4-20-16-36-34-47" fill="none" stroke="#F1C554" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    <circle cx="91" cy="68" r="4" fill="#FFF7D5"/><circle cx="106" cy="78" r="3" fill="#F3BD52"/><circle cx="48" cy="103" r="2.5" fill="#FFF1C4"/>
+  </g>
+  <g transform="translate(224 432)">
+    <ellipse cx="96" cy="96" rx="62" ry="43" transform="rotate(-22 96 96)" fill="url(#goldWash)" opacity=".38"/>
+    <ellipse cx="96" cy="96" rx="62" ry="43" transform="rotate(-22 96 96)" fill="none" stroke="#DAA743" stroke-width="6" stroke-dasharray="84 24 38 112" stroke-linecap="round"/>
+    <path d="M43 83c10-21 29-34 50-34" fill="none" stroke="#FFF0BF" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="148" cy="72" r="8" fill="url(#warmCore)" stroke="#FFF6D7" stroke-width="2"/>
+    <circle cx="54" cy="126" r="3.5" fill="#F6C85B"/><circle cx="75" cy="47" r="2.5" fill="#FFF6D5"/>
+  </g>
+  <g transform="translate(432 432)">
+    <path d="M27 133c28-5 51-18 70-42 18-23 39-34 66-36" fill="none" stroke="#E3AA45" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 9"/>
+    <path d="M43 121c20-6 37-17 52-34" fill="none" stroke="#FFF0B8" stroke-width="3" stroke-linecap="round"/>
+    <g transform="translate(51 111) scale(.85)"><circle r="17" fill="url(#coinFace)" stroke="#9F6934" stroke-width="3"/><circle r="10.5" fill="none" stroke="#FFF2BF" stroke-width="2"/><path d="m0-7 2.4 4.6 5 .7-3.7 3.6.9 5-4.6-2.4-4.5 2.4.8-5-3.7-3.6 5-.7Z" fill="#A96B32"/></g>
+    <g transform="translate(111 73) scale(.65)"><circle r="17" fill="url(#coinFace)" stroke="#9F6934" stroke-width="3"/><circle r="10.5" fill="none" stroke="#FFF2BF" stroke-width="2"/><path d="m0-7 2.4 4.6 5 .7-3.7 3.6.9 5-4.6-2.4-4.5 2.4.8-5-3.7-3.6 5-.7Z" fill="#A96B32"/></g>
+    <g transform="translate(157 51) scale(.48)"><circle r="17" fill="url(#coinFace)" stroke="#9F6934" stroke-width="3"/><circle r="10.5" fill="none" stroke="#FFF2BF" stroke-width="2"/><path d="m0-7 2.4 4.6 5 .7-3.7 3.6.9 5-4.6-2.4-4.5 2.4.8-5-3.7-3.6 5-.7Z" fill="#A96B32"/></g>
+    <path d="M77 145 69 153m59-99 6-9" fill="none" class="gold" stroke-width="3"/>
+  </g>
+  <g transform="translate(640 432)">
+    <ellipse cx="96" cy="96" rx="62" ry="56" fill="url(#goldWash)" opacity=".62"/>
+    <ellipse cx="96" cy="144" rx="45" ry="10" fill="none" stroke="#F5C657" stroke-width="4"/>
+    <path d="M96 30v-14m-42 35-9-9m93 9 9-9M35 91H23m146 0h-12m-12 44 8 8" fill="none" stroke="#E6A83F" stroke-width="4" stroke-linecap="round"/>
+    <path d="m74 45-4-6m48 6 4-6" fill="none" stroke="#FFF0BD" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="96" cy="16" r="4.5" fill="#FFF9E1"/><circle cx="48" cy="111" r="3" fill="#F4BF4E"/><circle cx="145" cy="112" r="3.5" fill="#FFF1C4"/>
+  </g>
+
+  <!-- JAM: jammer pulse reaches a tower, interrupts its shot, then clears and allows fire again. -->
+  <g transform="translate(16 640)">
+    <circle cx="40" cy="97" r="12" fill="url(#violetWash)"/>
+    <circle cx="40" cy="97" r="6" fill="#B09AE8" stroke="#68599D" stroke-width="3"/>
+    <path d="M53 97h28m-20-20q16 20 0 40m16-55q24 35 0 70m16-86q32 43 0 102" fill="none" stroke="#8D79C8" stroke-width="4" stroke-linecap="round" opacity=".88"/>
+    <path d="M56 97h23m-14-18q13 18 0 36" fill="none" class="fine" stroke-width="2"/>
+    <circle cx="106" cy="97" r="4" fill="#E7D9FF"/><circle cx="133" cy="75" r="3" fill="#B89FEA"/><circle cx="142" cy="120" r="4" fill="#E7D9FF"/>
+  </g>
+  <g transform="translate(224 640)">
+    <path d="M28 145 56 123 45 108 80 92 69 76 111 52" fill="none" stroke="#6E5BA8" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M28 145 56 123 45 108 80 92 69 76 111 52" fill="none" stroke="#BCA7ED" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M28 145 56 123 45 108 80 92 69 76 111 52" fill="none" class="fine" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M118 51q12-8 20 1m-80 79q-9 6-15 15m27-68-8-9" fill="none" stroke="#D7C8FA" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="27" cy="145" r="6" fill="#F4CB63" stroke="#FFF1C8" stroke-width="2"/><circle cx="142" cy="55" r="4" fill="#A792E2"/>
+  </g>
+  <g transform="translate(432 640)">
+    <ellipse cx="96" cy="97" rx="67" ry="56" fill="url(#coralWash)" opacity=".78"/>
+    <path d="M31 97c24-3 38-11 55-12 19-2 33 5 75-3-22 10-36 21-58 21-23 0-43-1-72 9Z" fill="#B94A50" opacity=".72"/>
+    <path d="M31 91c27-2 42-8 58-8 16 0 31 5 68-2-18 8-34 16-55 16-24 0-43-1-68 7Z" fill="#E96E5D" stroke="#A74749" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M43 89c21-1 34-6 47-6 15 0 30 4 53 0" fill="none" stroke="#FFF0D2" stroke-width="2.5" stroke-linecap="round" opacity=".88"/>
+    <path d="m69 75-8-8m88 40 8 6m-104 2-7 5m75-58 5-8" fill="none" stroke="#F4B84C" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="96" cy="97" r="5" fill="#FFC985"/>
+  </g>
+  <g transform="translate(640 640)">
+    <ellipse cx="153" cy="96" rx="29" ry="34" fill="url(#mintWash)" opacity=".52"/>
+    <path d="M153 93c-18-11-35-12-54-5-15 5-25 10-43 9 20 5 36 4 52 0 16-4 28-5 45 4Z" fill="#EAAF43" opacity=".38"/>
+    <path d="M154 91c-19-9-36-9-53-3-14 5-25 9-43 9 18 4 34 2 50-2 18-5 29-4 45 3" fill="none" stroke="#EAAF43" stroke-width="5" stroke-linecap="round"/>
+    <path d="M149 89c-16-6-30-5-44 0" fill="none" stroke="#FFF4CC" stroke-width="2" stroke-linecap="round"/>
+    <path d="M44 96c13-17 30-21 46-12l13 12-13 12c-16 9-33 5-46-12Z" fill="url(#shotBody)" stroke="#D98E34" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M57 94c11-7 22-7 34-2" fill="none" stroke="#FFF4CC" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="m156 72 4-6m5 53 6 3m-24-61 1-7" fill="none" stroke="#9DDBA8" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="163" cy="82" r="3.2" fill="#F8E6A9"/><circle cx="146" cy="114" r="2.5" fill="#A9E6AB"/><circle cx="110" cy="78" r="2" fill="#FFF4CC"/>
+  </g>
+</svg>

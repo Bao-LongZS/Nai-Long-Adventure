@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2928" height="528" viewBox="0 0 2928 528">
+  <title>P7 A1 fork gate states v03 — Alpha01 T-junction aligned</title>
+  <desc>Three transparent 960 by 528 cells: route A eastbound; route B northbound at the split; route B eastbound at the merge. Every cell is clipped to keep the 24 pixel atlas gutters clear.</desc>
+  <defs>
+    <clipPath id="clip-a"><rect width="960" height="528"/></clipPath>
+    <clipPath id="clip-b-split"><rect width="960" height="528"/></clipPath>
+    <clipPath id="clip-b-merge"><rect width="960" height="528"/></clipPath>
+    <g id="t-road" fill="none" stroke-linecap="butt" stroke-linejoin="round">
+      <path d="M0 264H960M480 0V264" stroke="#72512F" stroke-width="306"/>
+      <path d="M0 264H960M480 0V264" stroke="#F6CF5E" stroke-width="256"/>
+      <path d="M0 264H960M480 0V264" stroke="#FFF8DF" stroke-width="18" stroke-dasharray="34 38"/>
+    </g>
+    <g id="route-a" fill="none" stroke-linecap="butt" stroke-linejoin="round">
+      <path d="M0 264H960" stroke="#087B89" stroke-width="122"/>
+      <path d="M0 264H960" stroke="#16C7CF" stroke-width="88"/>
+      <path d="M0 264H960" stroke="#E9FFFF" stroke-width="15" stroke-dasharray="30 36"/>
+    </g>
+    <g id="route-b-split" fill="none" stroke-linecap="butt" stroke-linejoin="round">
+      <path d="M0 264H480V0" stroke="#087B89" stroke-width="122"/>
+      <path d="M0 264H480V0" stroke="#16C7CF" stroke-width="88"/>
+      <path d="M0 264H480V0" stroke="#E9FFFF" stroke-width="15" stroke-dasharray="30 36"/>
+    </g>
+    <g id="route-b-merge" fill="none" stroke-linecap="butt" stroke-linejoin="round">
+      <path d="M480 0V264H960" stroke="#087B89" stroke-width="122"/>
+      <path d="M480 0V264H960" stroke="#16C7CF" stroke-width="88"/>
+      <path d="M480 0V264H960" stroke="#E9FFFF" stroke-width="15" stroke-dasharray="30 36"/>
+    </g>
+    <g id="stop-north">
+      <rect x="352" y="118" width="256" height="54" rx="12" fill="#E43B36" stroke="#542728" stroke-width="13"/>
+      <path d="M389 130L430 160M430 130L389 160M484 130L525 160M525 130L484 160" stroke="#FFF7E7" stroke-width="12" stroke-linecap="round"/>
+    </g>
+    <g id="stop-east">
+      <rect x="756" y="136" width="54" height="256" rx="12" fill="#E43B36" stroke="#542728" stroke-width="13"/>
+      <path d="M768 185L798 226M798 185L768 226M768 302L798 343M798 302L768 343" stroke="#FFF7E7" stroke-width="12" stroke-linecap="round"/>
+    </g>
+    <g id="stop-west">
+      <rect x="150" y="136" width="54" height="256" rx="12" fill="#E43B36" stroke="#542728" stroke-width="13"/>
+      <path d="M162 185L192 226M192 185L162 226M162 302L192 343M192 302L162 343" stroke="#FFF7E7" stroke-width="12" stroke-linecap="round"/>
+    </g>
+    <path id="arrow-east" d="M940 264L830 194V334Z" fill="#16C7CF" stroke="#087B89" stroke-width="14" stroke-linejoin="round"/>
+    <path id="arrow-north" d="M480 18L410 128H550Z" fill="#16C7CF" stroke="#087B89" stroke-width="14" stroke-linejoin="round"/>
+  </defs>
+  <g clip-path="url(#clip-a)">
+    <use href="#t-road"/>
+    <use href="#route-a"/>
+    <use href="#arrow-east"/>
+    <use href="#stop-north"/>
+  </g>
+  <g transform="translate(984 0)" clip-path="url(#clip-b-split)">
+    <use href="#t-road"/>
+    <use href="#route-b-split"/>
+    <use href="#arrow-north"/>
+    <use href="#stop-east"/>
+  </g>
+  <g transform="translate(1968 0)" clip-path="url(#clip-b-merge)">
+    <use href="#t-road"/>
+    <use href="#route-b-merge"/>
+    <use href="#arrow-east"/>
+    <use href="#stop-west"/>
+  </g>
+</svg>

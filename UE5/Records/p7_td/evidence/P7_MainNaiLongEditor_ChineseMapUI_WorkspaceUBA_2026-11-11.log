@@ -1,0 +1,331 @@
+P7 Chinese map/UI Editor build - exit=6
+TEMP=C:\Users\31314\Desktop\Nai-Long-Adventure\tmp\P7ProbeTemp
+Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" Nai_LongEditor Win64 Development "C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Nai_LongP7Repair_TEMP.uproject" -NoUBA -NoUbaLocal -NoHotReloadFromIDE -NoLiveCoding -WaitMutex -MaxParallelActions=4
+Log file: C:\Users\31314\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{a0d1967d-29ee-4e5c-9d14-aac253becfca}\UnrealBuildTool\Log.txt
+Executing up to 4 actions based on MaxProcessorCount override
+UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+Available x64 toolchains (1):
+ * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231
+    (Family=14.51.36231, FamilyRank=2, Version=14.51.36256, HostArchitecture=x64, ReleaseChannel=Latest, Architecture=x64)
+Visual Studio compiler version 14.51.36256 is newer than latest preferred version 14.50.35717. Please use caution as this compiler has not been heavily tested
+Building Nai_LongEditor...
+===== Toolchain Information =====
+Using ISPC compiler (C:\Program Files\Epic Games\UE_5.8\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+  Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2) 
+Using Visual Studio 14.51.36256 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+Warning: Visual Studio compiler 14.51.36256 is not a preferred version
+[Adaptive Build] Excluded from NaiwaRuntime unity file: NaiwaAnimInstance.cpp, NaiwaAutoTestComponent.cpp, NaiwaCharacter.cpp, NaiwaGameMode.cpp, NaiwaHUD.cpp, NaiwaMenuGameMode.cpp, NaiwaMenuPlayerController.cpp, NaiwaMenuProgress.cpp, NaiwaMenuWidget.cpp, NaiwaP1BouncePad.cpp, NaiwaP1CameraManager.cpp, NaiwaP1GameMode.cpp, NaiwaP1PlayerController.cpp, NaiwaP1SwitchPlatform.cpp, NaiwaP1TimedPlatform.cpp, NaiwaP1Trigger.cpp, NaiwaP2Archer.cpp, NaiwaP2ArcherAnimInstance.cpp, NaiwaP2Ballistics.cpp, NaiwaP2GameMode.cpp, NaiwaP2HUD.cpp, NaiwaP2ImpactEffectSubsystem.cpp, NaiwaP2PhysicsEgg.cpp, NaiwaP2PhysicsGoal.cpp, NaiwaP2PlayerController.cpp, NaiwaP2Probe.cpp, NaiwaP2SceneLibrary.cpp, NaiwaP2StructureBlock.cpp, NaiwaP3BombActor.cpp, NaiwaP3BombTypes.cpp, NaiwaP3FogOfWar.cpp, NaiwaP3GridSubsystem.cpp, NaiwaP3ItemEffects.cpp, NaiwaP3LootTable.cpp, NaiwaP3M1Actors.cpp, NaiwaP3M1GameMode.cpp, NaiwaP3M1HUD.cpp, NaiwaP3M1Settings.cpp, NaiwaP3M2EnemyAI.cpp, NaiwaP3M2GameMode.cpp, NaiwaP3M2HUD.cpp, NaiwaP3M2LevelSession.cpp, NaiwaP3M2MechanicsSettings.cpp, NaiwaP3M2RuntimeSubsystem.cpp, NaiwaP3M2ScenarioPreviewActor.cpp, NaiwaP3M2SeededMap.cpp, NaiwaP3M2Settings.cpp, NaiwaP3M2WorldPresentation.cpp, NaiwaP3Mechanics.cpp, NaiwaP3PlayerController.cpp, NaiwaP3PlayerPawn.cpp, NaiwaRuntime.cpp, NaiwaVisualReviewComponent.cpp, NaiwaWebNativeDataExport.cpp, NaiwaP4ArenaSubsystem.cpp, NaiwaP4Determinism.cpp, NaiwaP4Settings.cpp, NaiwaP4UpgradeCatalog.cpp, NaiwaP4ArtIntegrationPlayerController.cpp, NaiwaP4InputBuffer.cpp, NaiwaP4PlayerController.cpp, NaiwaP4ArtIntegrationGameMode.cpp, NaiwaP4ArtIntegrationPawn.cpp, NaiwaP4ArtIntegrationWidget.cpp, NaiwaP4CameraRig.cpp, NaiwaP4W1PreviewGameMode.cpp, NaiwaP4DeterminismTests.cpp, NaiwaP5RunSubsystem.cpp, NaiwaP5Simulation.cpp, NaiwaP5TrackData.cpp, NaiwaP5SkinCatalog.cpp, NaiwaP5HUD.cpp, NaiwaP5M2PrototypeGameMode.cpp, NaiwaP5PrototypeGameMode.cpp, NaiwaP5PrototypePawn.cpp, NaiwaP5PrototypeTrackActor.cpp, NaiwaP6InvestigationSubsystem.cpp, NaiwaP6CaseDefinition.cpp, NaiwaP6HUD.cpp, NaiwaP6InteractableActor.cpp, NaiwaP6InvestigationGameMode.cpp, NaiwaP6PlayerController.cpp, NaiwaP6PlayerPawn.cpp
+=================================
+Using Unreal Build Accelerator local executor to run 107 action(s)
+  CPU 24 physical cores, 24 logical cores
+  Memory 31.47 GB physical, 25.65 GB/43.97 GB committed
+  UBA Storage capacity 40 GB
+[1/107] Compile Resource [x64] Default.rc2 [NoUba]
+[2/107] Compile Resource [x64] Default.rc2 [NoUba]
+[3/107] Compile [x64] SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4341,43): warning C4996: 'UStruct::ActivateTrackingPropertyValueFlag': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk.
+	UE_INTERNAL COREUOBJECT_API virtual bool ActivateTrackingPropertyValueFlag(EPropertyValueFlags Flags, void* Data) const override;
+	                                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4342,43): warning C4996: 'UStruct::IsTrackingPropertyValueFlag': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk.
+	UE_INTERNAL COREUOBJECT_API virtual bool IsTrackingPropertyValueFlag(EPropertyValueFlags Flags, const void* Data) const override;
+	                                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4343,43): warning C4996: 'UStruct::HasPropertyValueFlag': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk.
+	UE_INTERNAL COREUOBJECT_API virtual bool HasPropertyValueFlag(EPropertyValueFlags Flags, const void* Data, const FProperty* Property, int32 ArrayIndex = 0) const override;
+	                                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4344,43): warning C4996: 'UStruct::SetPropertyValueFlag': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk.
+	UE_INTERNAL COREUOBJECT_API virtual void SetPropertyValueFlag(EPropertyValueFlags Flags, bool bValue, void* Data, const FProperty* Property, int32 ArrayIndex = 0) const override;
+	                                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4345,43): warning C4996: 'UStruct::ResetPropertyValueFlags': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk.
+	UE_INTERNAL COREUOBJECT_API virtual void ResetPropertyValueFlags(EPropertyValueFlags Flags, void* Data) const override;
+	                                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4346,43): warning C4996: 'UStruct::SerializePropertyValueFlags': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk.
+	UE_INTERNAL COREUOBJECT_API virtual void SerializePropertyValueFlags(EPropertyValueFlags Flags, void* Data, FStructuredArchiveRecord Record, FArchiveFieldName Name) const override;
+	                                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\BlueprintGeneratedClass.h(590,42): warning C4996: 'UObjectBaseUtility::GetVersePath': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk.
+	ENGINE_API virtual UE::Core::FVersePath GetVersePath() const override;
+	                                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Animation\AnimCurveMetadata.h(211,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Animation\AnimCompressionTypes.h(518,26): warning C4996: 'ICompressedAnimData::SerializeCompressedData': SerializeCompressedData now accepts the DataOwner as an argument - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SerializeCompressedData(class FArchive& Ar) override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Curves\CurveFloat.h(48,53): warning C4996: 'UCurveBase::GetCurves': Use version taking a TAdderReserverRef - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FRichCurveEditInfoConst> GetCurves() const override;
+	                                                   ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Materials\MaterialExpressionMaterialFunctionCall.h(126,51): warning C4996: 'UMaterialExpression::GetInputsView': Use FExpressionInputIterator instead or GetInput() directly. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArrayView<FExpressionInput*> GetInputsView() override;
+	                                                 ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2190,15): warning C4996: 'USkinnedMeshComponent::UpdateSlaveComponent': This method has been deprecated. Please use UpdateFollowerComponent instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void UpdateSlaveComponent() override { UpdateFollowerComponent(); };
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2198,26): warning C4996: 'USkinnedMeshComponent::SetSkeletalMesh': Use USkeletalMeshComponent::SetSkeletalMesh() or SetSkinnedAssetAndUpdate() instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SetSkeletalMesh(class USkeletalMesh* NewMesh, bool bReinitPose = true) override;  // SetSkeletalMesh may remain and become a UFUNCTION but lose its virtual after it is removed from the SkinnedMeshComponent API
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture.h(2069,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\EdGraph\EdGraphSchema.h(631,26): warning C4996: 'FGraphActionListBuilderBase::AddAction': Overriding the schema action category is no longer supported, set the category via CosmeticUpdateRootCategory or CosmeticUpdateCategory - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void AddAction(const TSharedPtr<FEdGraphSchemaAction>& NewAction, FString const& Category) override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\EdGraph\EdGraphSchema.h(633,26): warning C4996: 'FGraphActionListBuilderBase::AddActionList': Collections of Action lists were ambiguous and unused - make a compound FEdGraphSchemaAction and Add it - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void AddActionList(const TArray<TSharedPtr<FEdGraphSchemaAction> >& NewActions, FString const& Category = FString()) override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\ChildConnection.h(75,16): warning C4996: 'UNetConnection::IsNetReady': Replaced with a version that doesn't have a saturate option. Call Saturate() directly if passing true before. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual int32 IsNetReady(bool Saturate) override
+	              ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(2606,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(3015,57): warning C4996: 'USkinnedAsset::GetLODInfoArray': Use GetLODInfo and GetLODNum instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual const TArray<FSkeletalMeshLODInfo>& GetLODInfoArray() const override;
+	                                                       ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(3009,51): warning C4996: 'USkinnedAsset::GetLODInfoArray': Use GetLODInfo and GetLODNum instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FSkeletalMeshLODInfo>& GetLODInfoArray() override;
+	                                                 ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture2D.h(125,15): warning C4996: 'UTexture::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Sound\SoundWave.h(1189,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\Box.h(104,17): warning C4996: 'Chaos::FImplicitObject::GetRadius': Please use GetRadiusf instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+		virtual FReal GetRadius() const override
+		              ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\Box.h(104,17): note: ???��????????????(??????????????????)??
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\GeometryParticles.h(151,8): note: ???��???��???��??Chaos::TGeometryParticlesImp????
+	class TGeometryParticlesImp : public TSimpleGeometryParticles<T, d>
+	      ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\GeometryParticles.h(588,21): note: ???????????��???? ?�� ???�� ????????Chaos::TBox<Chaos::FReal,3>????????
+				TBox<FReal, 3>::SerializeAsAABBs(Ar, MLocalBounds);
+				                ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\ImplicitObjectTransformed.h(174,16): warning C4996: 'Chaos::FImplicitObject::GetMargin': Please use GetMarginf instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual FReal GetMargin() const override
+	              ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\ImplicitObjectTransformed.h(174,16): note: ???��????????????(??????????????????)??
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\ImplicitObjectTransformed.h(458,61): note: ???????????��???? ?�� ???�� ????????Chaos::TImplicitObjectTransformed<Chaos::FReal,3,true>????????
+			TImplicitObjectTransformed<FReal, 3>* InnerTransformed = static_cast<TImplicitObjectTransformed<FReal, 3>*>(NewTransformed.GetReference());
+			                                                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\ImplicitObjectTransformed.h(180,16): warning C4996: 'Chaos::FImplicitObject::GetRadius': Please use GetRadiusf instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual FReal GetRadius() const override
+	              ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Editor\UnrealEd\Public\Toolkits\AssetEditorToolkit.h(168,28): warning C4996: 'IAssetEditorInstance::CloseWindow': Use CloseWindow that takes in an EAssetEditorCloseReason instead - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	UNREALED_API virtual bool CloseWindow() override;
+	                          ^
+[4/107] Compile [x64] NaiwaP7BoardTests.cpp [NoUba]
+[5/107] Compile [x64] NaiwaP7Board.cpp [NoUba]
+[6/107] Compile [x64] Module.NaiwaP7Runtime.gen.cpp [NoUba]
+[7/107] Compile [x64] NaiwaP7CombatTests.cpp [NoUba]
+[8/107] Compile [x64] NaiwaP7DataValidationTests.cpp [NoUba]
+[9/107] Compile [x64] NaiwaP7GrayboxGameMode.cpp [NoUba]
+[10/107] Compile [x64] NaiwaP7DataValidation.cpp [NoUba]
+[11/107] Compile [x64] NaiwaP7GrayboxHUD.cpp [NoUba]
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaP7Runtime\Private\Presentation\NaiwaP7GrayboxHUD.cpp(244,16): error C2248: ??AHUD::Canvas??: ???????? protected ????(????AHUD???��??????)
+        if (Hud->Canvas && Font)
+               ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\HUD.h(98,22): note: ??????AHUD::Canvas????????
+	TObjectPtr<UCanvas> Canvas;
+	                    ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\HUD.h(36,7): note: ??????AHUD????????
+class AHUD : public AActor
+      ^
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaP7Runtime\Private\Presentation\NaiwaP7GrayboxHUD.cpp(246,16): error C2248: ??AHUD::Canvas??: ???????? protected ????(????AHUD???��??????)
+            Hud->Canvas->StrLen(Font, *Label, TextWidth, TextHeight);
+               ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\HUD.h(98,22): note: ??????AHUD::Canvas????????
+	TObjectPtr<UCanvas> Canvas;
+	                    ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\HUD.h(36,7): note: ??????AHUD????????
+class AHUD : public AActor
+      ^
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaP7Runtime\Private\Presentation\NaiwaP7GrayboxHUD.cpp(264,23): error C2248: ??AHUD::Canvas??: ???????? protected ????(????AHUD???��??????)
+        if (Hud && Hud->Canvas && Font)
+                      ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\HUD.h(98,22): note: ??????AHUD::Canvas????????
+	TObjectPtr<UCanvas> Canvas;
+	                    ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\HUD.h(36,7): note: ??????AHUD????????
+class AHUD : public AActor
+      ^
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaP7Runtime\Private\Presentation\NaiwaP7GrayboxHUD.cpp(266,16): error C2248: ??AHUD::Canvas??: ???????? protected ????(????AHUD???��??????)
+            Hud->Canvas->StrLen(Font, *Text, TextWidth, TextHeight);
+               ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\HUD.h(98,22): note: ??????AHUD::Canvas????????
+	TObjectPtr<UCanvas> Canvas;
+	                    ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\HUD.h(36,7): note: ??????AHUD????????
+class AHUD : public AActor
+      ^
+[12/107] Compile [x64] NaiwaP7Runtime.cpp [NoUba]
+[13/107] Compile [x64] NaiwaP7PresentationTests.cpp [NoUba]
+[14/107] Compile [x64] NaiwaP7Simulation.cpp [NoUba]
+[15/107] Compile [x64] NaiwaP7GrayboxPlayerController.cpp [NoUba]
+[16/107] Compile [x64] PerModuleInline.gen.cpp [NoUba]
+[17/107] Compile [x64] NaiwaP7TowerDefenseSubsystem.cpp [NoUba]
+[18/107] Compile [x64] NaiwaP7SimulationTests.cpp [NoUba]
+[19/107] Compile [x64] Module.NaiwaRuntime.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[20/107] Compile [x64] NaiwaGameMode.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[21/107] Compile [x64] NaiwaAnimInstance.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[22/107] Compile [x64] NaiwaCharacter.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[23/107] Compile [x64] NaiwaAutoTestComponent.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[24/107] Compile [x64] NaiwaMenuGameMode.cpp [NoUba]
+[25/107] Compile [x64] NaiwaMenuProgress.cpp [NoUba]
+[26/107] Compile [x64] NaiwaHUD.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[27/107] Compile [x64] NaiwaMenuPlayerController.cpp [NoUba]
+[28/107] Compile [x64] NaiwaP1CameraManager.cpp [NoUba]
+[29/107] Compile [x64] NaiwaP1BouncePad.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\NaiwaP0\Source\NaiwaRuntime\NaiwaP1BouncePad.cpp(160,76): warning C4996: 'ACharacter::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    const bool bStandingOnPad = Movement->IsMovingOnGround() && Character->GetMovementBase() == PadCollision.Get();
+                                                                           ^
+[30/107] Compile [x64] NaiwaMenuWidget.cpp [NoUba]
+[31/107] Compile [x64] NaiwaP1PlayerController.cpp [NoUba]
+[32/107] Compile [x64] NaiwaP1GameMode.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Particles\ParticleSystem.h(433,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Plugins\FX\Niagara\Source\Niagara\Classes\NiagaraSystem.h(421,27): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	NIAGARA_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Plugins\FX\Niagara\Source\Niagara\Classes\NiagaraScript.h(1094,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Plugins\FX\Niagara\Source\Niagara\Classes\NiagaraEmitter.h(688,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+[33/107] Compile [x64] NaiwaP1SwitchPlatform.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[34/107] Compile [x64] NaiwaP1Trigger.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[35/107] Compile [x64] NaiwaP1TimedPlatform.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[36/107] Compile [x64] NaiwaP2Archer.cpp [NoUba]
+[37/107] Compile [x64] NaiwaP2ArcherAnimInstance.cpp [NoUba]
+[38/107] Compile [x64] NaiwaP2Ballistics.cpp [NoUba]
+[39/107] Compile [x64] NaiwaP2HUD.cpp [NoUba]
+[40/107] Compile [x64] NaiwaP2GameMode.cpp [NoUba]
+[41/107] Compile [x64] NaiwaP2ImpactEffectSubsystem.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\Particles\ParticleSystem.h(433,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Plugins\FX\Niagara\Source\Niagara\Classes\NiagaraSystem.h(421,27): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	NIAGARA_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                         ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Plugins\FX\Niagara\Source\Niagara\Classes\NiagaraScript.h(1094,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+C:\Program Files\Epic Games\UE_5.8\Engine\Plugins\FX\Niagara\Source\Niagara\Classes\NiagaraEmitter.h(688,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+[42/107] Compile [x64] NaiwaP2PhysicsEgg.cpp [NoUba]
+[43/107] Compile [x64] NaiwaP2PhysicsGoal.cpp [NoUba]
+[44/107] Compile [x64] NaiwaP2PlayerController.cpp [NoUba]
+[45/107] Compile [x64] NaiwaP2Probe.cpp [NoUba]
+[46/107] Compile [x64] NaiwaP2SceneLibrary.cpp [NoUba]
+[47/107] Compile [x64] NaiwaP3BombActor.cpp [NoUba]
+[48/107] Compile [x64] NaiwaP2StructureBlock.cpp [NoUba]
+[49/107] Compile [x64] NaiwaP3BombTypes.cpp [NoUba]
+[50/107] Compile [x64] NaiwaP3ItemEffects.cpp [NoUba]
+[51/107] Compile [x64] NaiwaP3FogOfWar.cpp [NoUba]
+[52/107] Compile [x64] NaiwaP3GridSubsystem.cpp [NoUba]
+[53/107] Compile [x64] NaiwaP3LootTable.cpp [NoUba]
+[54/107] Compile [x64] NaiwaP3M1GameMode.cpp [NoUba]
+[55/107] Compile [x64] NaiwaP3M1HUD.cpp [NoUba]
+[56/107] Compile [x64] NaiwaP3M1Actors.cpp [NoUba]
+[57/107] Compile [x64] NaiwaP3M1Settings.cpp [NoUba]
+[58/107] Compile [x64] NaiwaP3M2EnemyAI.cpp [NoUba]
+[59/107] Compile [x64] NaiwaP3M2GameMode.cpp [NoUba]
+[60/107] Compile [x64] NaiwaP3M2LevelSession.cpp [NoUba]
+[61/107] Compile [x64] NaiwaP3M2HUD.cpp [NoUba]
+[62/107] Compile [x64] NaiwaP3M2MechanicsSettings.cpp [NoUba]
+[63/107] Compile [x64] NaiwaP3M2ScenarioPreviewActor.cpp [NoUba]
+[64/107] Compile [x64] NaiwaP3M2RuntimeSubsystem.cpp [NoUba]
+[65/107] Compile [x64] NaiwaP3M2Settings.cpp [NoUba]
+[66/107] Compile [x64] NaiwaP3M2SeededMap.cpp [NoUba]
+[67/107] Compile [x64] NaiwaP3Mechanics.cpp [NoUba]
+[68/107] Compile [x64] NaiwaP3M2WorldPresentation.cpp [NoUba]
+[69/107] Compile [x64] NaiwaP3PlayerController.cpp [NoUba]
+[70/107] Compile [x64] NaiwaP3PlayerPawn.cpp [NoUba]
+[71/107] Compile [x64] NaiwaP4ArenaSubsystem.cpp [NoUba]
+[72/107] Compile [x64] NaiwaP4ArtIntegrationGameMode.cpp [NoUba]
+[73/107] Compile [x64] NaiwaP4ArtIntegrationPawn.cpp [NoUba]
+[74/107] Compile [x64] NaiwaP4ArtIntegrationPlayerController.cpp [NoUba]
+[75/107] Compile [x64] NaiwaP4ArtIntegrationWidget.cpp [NoUba]
+[76/107] Compile [x64] NaiwaP4CameraRig.cpp [NoUba]
+[77/107] Compile [x64] NaiwaP4Determinism.cpp [NoUba]
+[78/107] Compile [x64] NaiwaP4InputBuffer.cpp [NoUba]
+[79/107] Compile [x64] NaiwaP4DeterminismTests.cpp [NoUba]
+[80/107] Compile [x64] NaiwaP4Settings.cpp [NoUba]
+[81/107] Compile [x64] NaiwaP4PlayerController.cpp [NoUba]
+[82/107] Compile [x64] NaiwaP4UpgradeCatalog.cpp [NoUba]
+[83/107] Compile [x64] NaiwaP5HUD.cpp [NoUba]
+[84/107] Compile [x64] NaiwaP4W1PreviewGameMode.cpp [NoUba]
+[85/107] Compile [x64] NaiwaP5M2PrototypeGameMode.cpp [NoUba]
+[86/107] Compile [x64] NaiwaP5PrototypeGameMode.cpp [NoUba]
+[87/107] Compile [x64] NaiwaP5PrototypePawn.cpp [NoUba]
+[88/107] Compile [x64] NaiwaP5PrototypeTrackActor.cpp [NoUba]
+[89/107] Compile [x64] NaiwaP5Simulation.cpp [NoUba]
+[90/107] Compile [x64] NaiwaP5RunSubsystem.cpp [NoUba]
+[91/107] Compile [x64] NaiwaP5SkinCatalog.cpp [NoUba]
+[92/107] Compile [x64] NaiwaP5TrackData.cpp [NoUba]
+[93/107] Compile [x64] NaiwaP6CaseDefinition.cpp [NoUba]
+[94/107] Compile [x64] NaiwaP6HUD.cpp [NoUba]
+[95/107] Compile [x64] NaiwaP6InteractableActor.cpp [NoUba]
+[96/107] Compile [x64] NaiwaP6InvestigationSubsystem.cpp [NoUba]
+[97/107] Compile [x64] NaiwaP6InvestigationGameMode.cpp [NoUba]
+[98/107] Compile [x64] NaiwaP6PlayerController.cpp [NoUba]
+[99/107] Compile [x64] NaiwaP6PlayerPawn.cpp [NoUba]
+[100/107] Compile [x64] NaiwaRuntime.cpp [NoUba]
+[101/107] Compile [x64] NaiwaVisualReviewComponent.cpp [NoUba]
+C:\Program Files\Epic Games\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[102/107] Compile [x64] NaiwaWebNativeDataExport.cpp [NoUba]
+[103/107] Link [x64] UnrealEditor-NaiwaRuntime.lib [NoUba]
+  ?????????�V C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Intermediate/Build/Win64/x64/UnrealEditor/Development/NaiwaRuntime/UnrealEditor-NaiwaRuntime.lib ?????? C:/Users/31314/Desktop/Nai-Long-Adventure/UE5/NaiwaP0/Intermediate/Build/Win64/x64/UnrealEditor/Development/NaiwaRuntime/UnrealEditor-NaiwaRuntime.exp
+[104/107] Link [x64] UnrealEditor-NaiwaRuntime.dll [NoUba]
+Some action result store tasks did not succeed
+Total time in Unreal Build Accelerator local executor: 119.71 seconds
+
+Result: Failed (OtherCompilationError)
+Total execution time: 121.15 seconds
+Trace written to file C:\Users\31314\AppData\Local\Packages\openai.codex_2p2nqsd0c76g0\AC\#!sandbox.{a0d1967d-29ee-4e5c-9d14-aac253becfca}\UnrealBuildTool\Trace.uba with size 29.7kb

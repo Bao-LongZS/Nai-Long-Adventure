@@ -1,7 +1,10 @@
 # P7 奶罐守卫战计划包
 
-日期：2026-11-01  
-状态：截至 2026-11-02，P7 v1.1 是当前范围基线；P7-only 和真实主工程内 14/14 自动化通过。5 张 `P7_Alpha01` DataTable 已由源 CSV 导入，自动化还验证了真实 fixture 的校验、购买塔和首波刷怪；独立灰盒地图已绑定 P7 Alpha GameMode，Development cook/pak/stage 后确认五表装配成功。随后以 Direct3D 12 启动真实图形视口并生成 1280×720 截图：地图、板格、双路线、建造位、障碍和 HUD 均已绘出；当前明确缺陷是 720p HUD 字体偏小，键鼠输入尚未实测（桌面读屏审批超时）。详见[当前交接 checkpoint](P7_PROGRESS_CHECKPOINT_2026-11-02.md)和[视口截图/报告](evidence/P7_AlphaGrayboxViewportSmoke_2026-11-02_12-52-21.json)。其余证据见[数据导入](evidence/P7_AlphaFixtureImport_2026-11-02_12-10-27.json)、[主工程自动化](evidence/P7_Automation_MainProject_2026-11-02_12-17-49.json)、[地图创建](evidence/P7_AlphaGrayboxMapCreation_2026-11-02_12-13-45.json)、[cook/stage](evidence/P7_AlphaGrayboxCookStage_2026-11-02_12-15-38.log)及[打包启动](evidence/P7_MainGameCookedStartup_2026-11-02_12-16-40.json)。这些平衡值仍是技术候选，G0 负责人/测试 PC/数值签收未完成；A1 导入与实机比例、Standalone/Shipping、性能和试玩也未完成，故尚不是可玩 Alpha。
+更新：2026-11-12
+
+2026-11-12 针对试玩反馈收紧 P7 地图画幅：裁掉上下空置行，移除全板网格，只在可建造炮位绘制格子提示，并压平路线分段接缝；炮塔实例绘制尺寸先提高约 26%，最新改为 1.18 格宽。普通/快速/干扰敌速改为 2.4/4.5/1.8 格/秒并已重导入 DataTable。另加入敌人击杀金币（普通/快速/干扰 +10/+15/+20）及 HUD `+N 金币` 短提示，将普通炮位从 Y=8 移到 Y=7、清障解锁炮位从 Y=9 移到 Y=8。清障方面，零伤害奶鼠不能再被指定为清箱炮塔；有效伤害炮塔切换目标后首击立即执行，并显示目标连线、高亮和更明显的耐久条。最新 Game 编译、Cook/Stage 和 1280×720 RHI 视口截图均通过；地图/五表正常加载。清障/击杀实体操作以及放大后的炮塔实机尺寸仍待现场试玩。详见[当前进度 checkpoint](P7_PROGRESS_CHECKPOINT_2026-11-11.md)、[美术交接](P7_ART_HANDOFF_2026-11-11.md)与[实体试玩卡](P7_MANUAL_INPUT_TRIAL_CARD_2026-11-11.md)。
+
+状态：P7 v1.1 仍是范围基线。主工程与隔离探针既有自动化各 16/16 通过，隔离 Editor 构建 25/25 动作成功；本轮未运行测试。2026-11-12 Game 编译、Cook/Stage 和 1280×720 RHI 截图均通过；画面确认地图/五表、HUD 图标、底图、奶蛋角色及新炮位加载。地图可见范围收紧为逻辑行 3–9，只在可建造炮位显示网格提示，路线段接缝已消除；炮塔实例绘制尺寸为 1.18 格宽，敌速调整表已重导入；新增击杀金币 10/15/20 与 HUD 短提示并进入新包。清障已修复零伤害奶鼠空打、换目标首击等待，并加入连线/目标高亮/耐久反馈；实际点击验证仍待现场试玩。详见[当前进度 checkpoint](P7_PROGRESS_CHECKPOINT_2026-11-11.md)、[试玩卡](P7_MANUAL_INPUT_TRIAL_CARD_2026-11-11.md)和[G0 登记表](P7_G0_DEPENDENCY_REGISTER_2026-11-11.md)。G0 平衡签收、其余环境美术、Standalone/Shipping 与性能验收仍待完成。
 
 P7 是《Nai-Long-Adventure》内的新独立子模式计划代号，不自动表示主线第七关。模式入口、存档和运行时代码仍按项目内既有 P4/P5/P6 边界处理。
 
@@ -23,9 +26,11 @@ P7 是《Nai-Long-Adventure》内的新独立子模式计划代号，不自动�
 - 运行时导入资产归 UE 工程 `UE5/NaiwaP0`，目标 `/Game/Naiwa/P7/`。
 - 只有通过复用验收、且至少被两个关卡实际引用的通用成品，才迁入 `UE5/SourceAssets/Common/`；竞品素材、截图、商标和未验收候选不进入 Common。
 
-## 当前美术推进记录（2026-11-01）
+## 当前美术推进记录（2026-11-11）
 
-P7 A1 环境 v01 已被用户否决，反馈为信息表达不够直接、识别不够明显；v01 保留追溯，路线与清障物采用 v02。终点按用户指示改为参考角色奶蛋，去掉眼泪，沿用 10 点耐久并以 10 格耐久灯显示；奶蛋 v04 外观已获用户通过，金币沿用 v02。HUD v01 因“意义不明确”被否决；HUD v02 已获用户视觉通过。VFX v01 因意义不明确被否决，v02 与 P7 实际玩法关联不足；v03 因画面粗糙由 v04 精修取代。v04 表现攻击、清障、升级、干扰停火与恢复，等待视觉评审。均尚未导入 UE 或绑定运行时。详情见[美术变更记录](P7_美术变更记录_2026-11-01_奶蛋终点.md)、[`UE5/SourceAssets/P7/`](../../SourceAssets/P7/README.md)、[HUD v02 清单](../../SourceAssets/P7/Manifests/A1/P7_A1_HUDIconAssets_v02.csv)、[HUD v02 说明](../../SourceAssets/P7/Manifests/A1/P7_A1_HUDIconDesignBrief_v02.md)、[VFX v04 清单](../../SourceAssets/P7/Manifests/A1/P7_A1_VFXAssets_v04.csv)、[VFX v04 帧序说明](../../SourceAssets/P7/Manifests/A1/P7_A1_VFXDesignBrief_v04.md)、[路线清单](../../SourceAssets/P7/Manifests/A1/P7_A1_EnvironmentAssets_v02.csv)、[清障物清单](../../SourceAssets/P7/Manifests/A1/P7_A1_ObstacleAssets_v02.csv)、[奶蛋清单](../../SourceAssets/P7/Manifests/A1/P7_A1_GuardianMilkEggAssets_v04.csv)、[耐久灯清单](../../SourceAssets/P7/Manifests/A1/P7_A1_GuardianEggAssets_v03.csv) 与[金币清单](../../SourceAssets/P7/Manifests/A1/P7_A1_GuardianAndCoinAssets_v02.csv)。
+最新美术侧批准记录、UE 导入路径、证据和待办见 [P7 美术侧交接记录](P7_ART_HANDOFF_2026-11-11.md)。
+
+P7 A1 环境 v01 已被用户否决，反馈为信息表达不够直接、识别不够明显；v01 保留追溯，路线与清障物采用 v02。终点按用户指示改为参考角色奶蛋，去掉眼泪，沿用 10 点耐久并以 10 格耐久灯显示；奶蛋 v04 外观已获用户通过，金币沿用 v02。HUD v01 因“意义不明确”被否决；HUD v02 的图形与 48px 彩色/灰度缩略评审均已获用户通过，图集已导入 UE。VFX v01 因意义不明确被否决，v02 与 P7 实际玩法关联不足；v03 因画面粗糙由 v04 精修取代。v04 于 2026-11-09 被用户反馈“太粗糙”；v05 的复攻图标线条混杂、含义不清；v06 又被反馈太直白、缺少特效感。当前 v07 加回分层能量流、弧形弹道、闸束余辉与粒子余波，同时控制交叠，已于 2026-11-11 获用户美术视觉评审通过、导入 UE，并接入灰盒 HUD 事件播放层；Editor 编译通过，PIE/Standalone 视觉验收仍待完成。详情见[美术变更记录](P7_美术变更记录_2026-11-01_奶蛋终点.md)、[`UE5/SourceAssets/P7/`](../../SourceAssets/P7/README.md)、[HUD v02 清单](../../SourceAssets/P7/Manifests/A1/P7_A1_HUDIconAssets_v02.csv)、[HUD v02 说明](../../SourceAssets/P7/Manifests/A1/P7_A1_HUDIconDesignBrief_v02.md)、[VFX v07 清单](../../SourceAssets/P7/Manifests/A1/P7_A1_VFXAssets_v07.csv)、[VFX v07 说明](../../SourceAssets/P7/Manifests/A1/P7_A1_VFXDesignBrief_v07.md)、[v07 玩法评审页](../../SourceAssets/P7/VFX/A1/Review/P7_A1_VFXGameplayReview_v07.png)、[路线清单](../../SourceAssets/P7/Manifests/A1/P7_A1_EnvironmentAssets_v02.csv)、[清障物清单](../../SourceAssets/P7/Manifests/A1/P7_A1_ObstacleAssets_v02.csv)、[奶蛋清单](../../SourceAssets/P7/Manifests/A1/P7_A1_GuardianMilkEggAssets_v04.csv)、[耐久灯清单](../../SourceAssets/P7/Manifests/A1/P7_A1_GuardianEggAssets_v03.csv) 与[金币清单](../../SourceAssets/P7/Manifests/A1/P7_A1_GuardianAndCoinAssets_v02.csv)。
 
 
 

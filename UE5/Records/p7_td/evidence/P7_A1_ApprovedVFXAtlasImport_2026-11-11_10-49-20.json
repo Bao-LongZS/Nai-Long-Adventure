@@ -1,0 +1,33 @@
+{
+  "status": "imported_approved_vfx_atlas_runtime_playback_pending",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "manifest": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Manifests\\A1\\P7_A1_VFXAssets_v07.csv",
+  "destination": "/Game/Naiwa/P7/VFX/A1/T_P7_A1_VFXAtlas_v07",
+  "scope": "one user-approved P7 A1 4x4 VFX atlas texture; runtime playback is separate",
+  "level_opened_or_changed": false,
+  "runtime_played": false,
+  "assets": [
+    {
+      "asset_path": "/Game/Naiwa/P7/VFX/A1/T_P7_A1_VFXAtlas_v07",
+      "source_png": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\VFX\\A1\\P7_A1_VFXAtlas_v07.png",
+      "source_svg_sha256": "690683ca9b55b0bc6797965f947d1716c9c38b54d27b16bd10ecd39bda4b414b",
+      "export_png_sha256": "c9e013ba59eb1fdc4e8703bb7eb2c454698bc518d0f18f8396db86ed28a1b809",
+      "dimensions_px": [
+        848,
+        848
+      ],
+      "frame_count": 16,
+      "result": "imported",
+      "texture_settings_readback": "passed"
+    }
+  ],
+  "preflight": {
+    "status": "passed",
+    "approved_frame_count": 16,
+    "already_imported": false,
+    "texture_dimensions_px": [
+      848,
+      848
+    ]
+  }
+}

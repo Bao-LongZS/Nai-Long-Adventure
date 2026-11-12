@@ -1,0 +1,28 @@
+{
+  "status": "imported_and_wired_user_selected_result_badge_v02",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "selection": "User selected original result badge v02 over v03 on 2026-11-12",
+  "scope": "Import the v02 victory/loss atlas and hook its two cells to the P7 result panel; retain v03 as unselected history",
+  "runtime_played": false,
+  "assets": [
+    {
+      "asset_id": "P7-UI-A1-RESULT-ATLAS",
+      "version": "v02",
+      "asset_path": "/Game/Naiwa/P7/UI/A1/T_P7_A1_ResultBadgeAtlas_v02",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\UI\\A1\\P7_A1_ResultBadgeAtlas_v02.png",
+      "source_sha256": "3efe6b90702dd7d972922a86e0cd153cb39abe194d7572dfce04722b5274d46b",
+      "dimensions_px": [
+        832,
+        416
+      ],
+      "action": "imported",
+      "texture_group": "UI",
+      "mipmaps": false,
+      "srgb": true,
+      "alpha": true,
+      "texture_settings_readback": "passed"
+    }
+  ],
+  "source_sha256": "00ce90f280064f8a170fdfe50d1e7f1d416afe29621e610f0f72cd5368166832",
+  "export_sha256": "3efe6b90702dd7d972922a86e0cd153cb39abe194d7572dfce04722b5274d46b"
+}

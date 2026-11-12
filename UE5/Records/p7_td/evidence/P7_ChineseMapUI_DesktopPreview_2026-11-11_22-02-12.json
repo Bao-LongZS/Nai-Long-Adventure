@@ -1,0 +1,13 @@
+{
+  "status": "FRAME_CAPTURED",
+  "stage": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\tmp\\P7CookedAlphaGraybox_2026-11-11_21-52-17\\Windows",
+  "map": "/Game/Naiwa/P7/Maps/L_P7_Alpha01_Graybox",
+  "requestedResolution": "1280x720",
+  "imageWidth": 1280,
+  "imageHeight": 720,
+  "mapLoaded": true,
+  "fixtureLoaded": true,
+  "screenshot": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_ChineseMapUI_DesktopPreview_1280x720_2026-11-11_22-02-12.png",
+  "engineLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_ChineseMapUI_DesktopPreview_2026-11-11_22-02-12.log",
+  "userMachineIdentifiersRedacted": true
+}

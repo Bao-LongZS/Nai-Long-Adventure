@@ -37,6 +37,7 @@ bool UNaiwaP7TowerDefenseSubsystem::LoadLevel(const NaiwaP7::FLevelDefinition& L
     const bool bLoaded = Simulation.LoadLevel(Level, OutError);
     if (bLoaded)
     {
+        bHasRestartFixture = false;
         bPaused = false;
     }
     return bLoaded;
@@ -47,9 +48,30 @@ bool UNaiwaP7TowerDefenseSubsystem::LoadFixture(const NaiwaP7::FAlphaDataFixture
     const bool bLoaded = Simulation.LoadFixture(Fixture, OutError);
     if (bLoaded)
     {
+        RestartFixture = Fixture;
+        bHasRestartFixture = true;
         bPaused = false;
     }
     return bLoaded;
+}
+
+bool UNaiwaP7TowerDefenseSubsystem::TryRestart(FString* OutError)
+{
+    if (!bHasRestartFixture)
+    {
+        if (OutError)
+        {
+            *OutError = TEXT("当前关卡没有可重开的配置。");
+        }
+        return false;
+    }
+
+    const bool bRestarted = Simulation.LoadFixture(RestartFixture, OutError);
+    if (bRestarted)
+    {
+        bPaused = false;
+    }
+    return bRestarted;
 }
 
 bool UNaiwaP7TowerDefenseSubsystem::LoadFromDataTables(

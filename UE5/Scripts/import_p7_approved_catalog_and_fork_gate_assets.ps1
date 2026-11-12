@@ -1,0 +1,65 @@
+[CmdletBinding()]
+param(
+    [string]$EngineRoot = 'C:\Program Files\Epic Games\UE_5.8'
+)
+
+$ErrorActionPreference = 'Stop'
+$RepositoryRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
+$Project = Join-Path $RepositoryRoot 'UE5\NaiwaP0\Nai_Long.uproject'
+$ImportScript = Join-Path $PSScriptRoot 'import_p7_approved_catalog_and_fork_gate_assets.py'
+$EditorCommandlet = Join-Path $EngineRoot 'Engine\Binaries\Win64\UnrealEditor-Cmd.exe'
+$EvidenceRoot = Join-Path $RepositoryRoot 'UE5\Records\p7_td\evidence'
+$SafeTempRoot = Join-Path $RepositoryRoot 'tmp\P7ApprovedCatalogGateImportTemp'
+$Timestamp = Get-Date -Format 'yyyy-MM-dd_HH-mm-ss'
+$LogPath = Join-Path $EvidenceRoot "P7_ApprovedCatalogPortraitAndForkGateImport_Commandlet_$Timestamp.log"
+$StdoutPath = Join-Path $EvidenceRoot "P7_ApprovedCatalogPortraitAndForkGateImport_Commandlet_$Timestamp.stdout.log"
+$StderrPath = Join-Path $EvidenceRoot "P7_ApprovedCatalogPortraitAndForkGateImport_Commandlet_$Timestamp.stderr.log"
+
+foreach ($path in @($Project, $ImportScript, $EditorCommandlet)) {
+    if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
+        throw "Required P7 approved-art import input was not found: $path"
+    }
+}
+New-Item -ItemType Directory -Force -Path $EvidenceRoot,$SafeTempRoot | Out-Null
+"P7 approved catalog HUD poses and fork gate import - $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" |
+    Set-Content -LiteralPath $LogPath -Encoding utf8
+
+$PreviousTemp = $env:TEMP
+$PreviousTmp = $env:TMP
+try {
+    $env:TEMP = $SafeTempRoot
+    $env:TMP = $SafeTempRoot
+    $ArgumentLine = '"' + $Project + '" -unattended -nop4 -nosplash -nullrhi -NoMutex -stdout -FullStdOutLogOutput -log -ExecutePythonScript="' + $ImportScript + '" -AbsLog="' + $LogPath + '"'
+    $Process = Start-Process -FilePath $EditorCommandlet -ArgumentList $ArgumentLine `
+        -WorkingDirectory (Split-Path -Parent $Project) -WindowStyle Hidden -PassThru `
+        -RedirectStandardOutput $StdoutPath -RedirectStandardError $StderrPath
+    $Finished = $Process.WaitForExit(180000)
+    if (-not $Finished -and -not $Process.HasExited) {
+        Stop-Process -InputObject $Process -Force -ErrorAction SilentlyContinue
+        $Process.WaitForExit()
+    }
+    $Process.Refresh()
+    $ExitCode = if ($Finished) { $Process.ExitCode } else { $null }
+} finally {
+    $env:TEMP = $PreviousTemp
+    $env:TMP = $PreviousTmp
+}
+
+$Report = Get-ChildItem -LiteralPath $EvidenceRoot -Filter 'P7_ApprovedCatalogPortraitAndForkGateImport_*.json' |
+    Where-Object { $_.LastWriteTime -ge (Get-Item -LiteralPath $LogPath).LastWriteTime.AddMinutes(-2) } |
+    Sort-Object LastWriteTime -Descending | Select-Object -First 1
+if (-not $Report) {
+    Get-Content -LiteralPath $LogPath -Tail 60
+    throw "P7 import returned 0 but generated no fresh report. See $LogPath"
+}
+$ReportData = Get-Content -LiteralPath $Report.FullName -Raw | ConvertFrom-Json
+if ($ReportData.status -ne 'imported_and_wired_approved_catalog_and_gate_art' -or
+    @($ReportData.assets).Count -ne 7) {
+    Get-Content -LiteralPath $LogPath -Tail 60
+    if (Test-Path -LiteralPath $StderrPath) { Get-Content -LiteralPath $StderrPath -Tail 30 }
+    Get-Content -LiteralPath $Report.FullName -Raw
+    throw "P7 approved-art import did not verify all seven atlas/frame rows. See $($Report.FullName) (Editor-Cmd exit code: $ExitCode)"
+}
+$ReportData.assets | Select-Object asset_id,asset_path,dimensions_px,action | Format-Table -AutoSize
+Write-Output "Report: $($Report.FullName)"
+Write-Output "Commandlet log: $LogPath"

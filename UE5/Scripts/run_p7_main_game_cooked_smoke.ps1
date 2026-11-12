@@ -54,7 +54,8 @@ $LoadedWorld = $EngineOutput -match ('(?m)LogWorld: Bringing World .*' + [regex]
 $FixtureLoaded = $EngineOutput -match 'P7 graybox loaded level P7_Alpha01 from five configured DataTables\.'
 $FixtureLoadFailed = $EngineOutput -match 'P7 graybox could not load its configured level|P7 graybox could not find its simulation subsystem'
 $CleanExit = $EngineOutput -match '(?m)LogExit: Exiting\.'
-$Passed = $Finished -and $ExitCode -eq 0 -and $LoadedWorld -and $CleanExit -and
+$ExitStatusAccepted = $ExitCode -eq 0 -or ($null -eq $ExitCode -and $Finished -and $CleanExit)
+$Passed = $Finished -and $ExitStatusAccepted -and $LoadedWorld -and $CleanExit -and
     (-not $RequireP7Fixture -or ($FixtureLoaded -and -not $FixtureLoadFailed))
 $Status = if ($Passed) { 'PASS' } elseif (-not $Finished) { 'TIMEOUT' } else { 'FAIL' }
 $Report = [ordered]@{

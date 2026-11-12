@@ -1,7 +1,7 @@
 # P7 A1 HUD / 交互图标 v02
 
-日期：2026-11-01（Asia/Shanghai）  
-状态：v01 因符号含义不明确被用户否决；v02 已获用户视觉通过，48px/灰度/hitbox/UE 验收待完成，未导入 Unreal。
+日期：2026-11-01（Asia/Shanghai）；导入与缩略检查更新于 2026-11-11（Asia/Shanghai）  
+状态：v01 因符号含义不明确被用户否决；v02 图形已获用户视觉通过，且用户于 2026-11-11 通过 48px 彩色/灰度本地评审；图集已导入 Unreal。Canvas HUD 已将波次、金币、路线 A/B 与奶蛋状态的 icon cell 接入；鼠标 hitbox 已随 HUD 控件实现。接入后的 viewport 预览未成功启动，游戏内分辨率与 hitbox 验收待完成。
 
 ## 本轮改动
 
@@ -15,10 +15,10 @@
 
 源文件：`UI/A1/P7_A1_HUDIconAtlas_v02.svg`。导出：`UI/A1/P7_A1_HUDIconAtlas_v02.png`，1144×1144、8-bit RGBA、透明背景。每格 256×256；四列四行；外边距 24px、格间距 24px。资产 ID、用途、哈希、裁切坐标和目标路径见 `P7_A1_HUDIconAssets_v02.csv`。
 
-评审预览：`tmp/P7_A1_HUDIconReview_v02.png`。正式图集不包含预览底色和用途标签。
+评审预览：`tmp/P7_A1_HUDIconReview_v02.png`。48px 缩略可读性评审：`UI/A1/Review/P7_A1_HUDIconReadability_48px_v02.png`。正式图集不包含预览底色和用途标签。
 
 ## 验收状态
 
 - v02 图形含义和造型已获用户视觉通过。
-- 48px 棋盘缩略、灰度/色盲、按钮 hitbox、720p/1080p 布局校准仍待完成。
-- 尚未导入 UE；图集切片与 UI 纹理设置待 A0 导入样片冻结。
+- 用户于 2026-11-11 通过 48px 彩色与灰度预览，16 项均能靠形状/符号辨认；色盲模拟、按钮 hitbox、720p/1080p 布局校准仍待完成。
+- 已将 1144×1144 RGBA 图集作为 UI `Texture2D` 导入 `/Game/Naiwa/P7/UI/A1/T_P7_A1_HUDIconAtlas_v02`；纹理设置与源路径回读通过。本轮按 4×4 网格、256px 单元、24px 留边完成 Canvas UV 切片；运行时首批接入波次、金币、路线和奶蛋图标。Editor/Game 编译及 Cook/Stage 通过；viewport 尝试退出码 777006，尚无接入后截图。

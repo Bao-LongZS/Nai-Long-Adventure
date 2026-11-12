@@ -1,0 +1,34 @@
+{
+  "status": "imported_approved_hud_icon_atlas_runtime_integration_pending",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "manifest": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Manifests\\A1\\P7_A1_HUDIconAssets_v02.csv",
+  "destination": "/Game/Naiwa/P7/UI/A1/T_P7_A1_HUDIconAtlas_v02",
+  "scope": "one user-approved P7 A1 4x4 HUD icon atlas texture; runtime slicing and UI hookup are separate",
+  "level_opened_or_changed": false,
+  "runtime_played": false,
+  "assets": [
+    {
+      "asset_path": "/Game/Naiwa/P7/UI/A1/T_P7_A1_HUDIconAtlas_v02",
+      "source_svg": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\UI\\A1\\P7_A1_HUDIconAtlas_v02.svg",
+      "source_svg_sha256": "eff5aa1290e04c4b481da6abf715ee28245541f7a44c733383ce3a873af23ea3",
+      "export_png": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\UI\\A1\\P7_A1_HUDIconAtlas_v02.png",
+      "export_png_sha256": "21d16b1a700ebecdae4a7610209b7f1458aff905754230eb5554c198f68b0cab",
+      "dimensions_px": [
+        1144,
+        1144
+      ],
+      "icon_count": 16,
+      "result": "imported",
+      "texture_settings_readback": "passed"
+    }
+  ],
+  "preflight": {
+    "status": "passed",
+    "approved_icon_count": 16,
+    "already_imported": false,
+    "texture_dimensions_px": [
+      1144,
+      1144
+    ]
+  }
+}

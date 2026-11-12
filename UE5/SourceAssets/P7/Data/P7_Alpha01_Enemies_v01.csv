@@ -1,4 +1,4 @@
 ---,EnemyId,Kind,MaxHealth,SpeedMilliCellsPerSecond,InterferenceRadiusMilliCells,InterferenceDurationSteps
-P7_Enemy_Normal,P7_Enemy_Normal,Normal,24,30000,0,0
-P7_Enemy_Fast,P7_Enemy_Fast,Fast,18,45000,0,0
-P7_Enemy_Jammer,P7_Enemy_Jammer,Interferer,42,24000,2500,90
+P7_Enemy_Normal,P7_Enemy_Normal,Normal,24,2400,0,0
+P7_Enemy_Fast,P7_Enemy_Fast,Fast,18,4500,0,0
+P7_Enemy_Jammer,P7_Enemy_Jammer,Interferer,42,1800,2500,90

@@ -1,0 +1,19 @@
+{
+  "test": "Cooked P7 interactive-window startup, no input actions",
+  "status": "PASS_STARTUP_NO_INPUT_TEST",
+  "startedAt": "2026-11-11 10:20:38+08:00",
+  "executable": "tmp/P7CookedAlphaGraybox_2026-11-09_11-12-44/Windows/Nai_Long.exe",
+  "map": "/Game/Naiwa/P7/Maps/L_P7_Alpha01_Graybox",
+  "window": "1280x720 windowed",
+  "processId": 42792,
+  "processExitCode": null,
+  "engineInitialized": true,
+  "targetMapLoaded": true,
+  "p7FixtureLoaded": true,
+  "cleanEngineExit": true,
+  "gameplayInputPerformedByAgent": false,
+  "engineLog": "P7_InteractiveInput_2026-11-11_10-20-38.log",
+  "stdoutLog": "P7_InteractiveInput_2026-11-11_10-20-38.stdout.log",
+  "stderrLog": "P7_InteractiveInput_2026-11-11_10-20-38.stderr.log",
+  "notes": "This records packaged app boot and clean engine exit only. No gameplay mouse or keyboard actions were sent by the agent; the physical gameplay input trial remains pending."
+}

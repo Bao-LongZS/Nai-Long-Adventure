@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="1390" viewBox="0 0 1440 1390">
+  <title>P7 A1 VFX gameplay review v06</title>
+  <defs>
+    <filter id="cardShadow" x="-8%" y="-8%" width="116%" height="125%"><feGaussianBlur in="SourceAlpha" stdDeviation="5" result="b"/><feOffset dy="3" result="o"/><feComponentTransfer><feFuncA type="linear" slope=".11"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="floor" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#DDE5E3" stroke-width="1"/></pattern>
+    <style>
+      .title{font:700 34px 'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#26334A}
+      .sub{font:400 16px 'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#6D7887}
+      .row{font:700 20px 'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#28364A}
+      .note{font:400 14px 'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#697587}
+      .phase{font:600 15px 'Microsoft YaHei','Noto Sans CJK SC',sans-serif;fill:#37445A}
+      .num{font:700 12px 'Segoe UI',sans-serif;fill:#A47937;letter-spacing:1px}
+    </style>
+  </defs>
+  <rect width="1440" height="1390" fill="#F4F2EC"/>
+  <path d="M0 142H1440" stroke="#D8D5CD" stroke-width="2"/>
+  <text x="52" y="66" class="title">P7 A1 玩法特效 · v06</text>
+  <text x="54" y="101" class="sub">精修评审页　｜　独立特效叠加在现有 P7 玩法素材上（障碍仅作场景示意）</text>
+  <text x="1386" y="65" text-anchor="end" class="num">16 FRAMES · 4 EVENTS</text>
+
+  <!-- row card template is deliberately spacious so the event read survives thumbnail review -->
+  <g filter="url(#cardShadow)"><rect x="40" y="162" width="1360" height="272" rx="18" fill="#FFFEFB"/></g>
+  <text x="64" y="198" class="row">01　普通攻击</text><text x="256" y="198" class="note">奶鸡单体塔 → 普通敌人；蓄光、飞行、命中、消散</text>
+  <g>
+    <g transform="translate(60 215)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/><path d="M15 134H303" stroke="#E4B854" stroke-width="4" stroke-dasharray="8 9" opacity=".42"/>
+      <image href="../../../Towers/A1/P7_A1_Tower_SingleTarget_MilkChicken_L1_v01.png" x="12" y="45" width="102" height="102"/>
+      <image href="../../../Enemies/A1/P7_A1_Enemy_Normal_v01.png" x="203" y="47" width="94" height="94"/>
+      <svg x="63" y="37" width="74" height="74" viewBox="16 16 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F00</text><text x="159" y="180" text-anchor="middle" class="phase">炮口蓄光</text></g>
+    <g transform="translate(393 215)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/><path d="M15 134H303" stroke="#E4B854" stroke-width="4" stroke-dasharray="8 9" opacity=".42"/>
+      <image href="../../../Towers/A1/P7_A1_Tower_SingleTarget_MilkChicken_L1_v01.png" x="12" y="45" width="102" height="102"/><image href="../../../Enemies/A1/P7_A1_Enemy_Normal_v01.png" x="203" y="47" width="94" height="94"/>
+      <svg x="103" y="58" width="98" height="68" viewBox="224 16 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F01</text><text x="159" y="180" text-anchor="middle" class="phase">弹体飞行</text></g>
+    <g transform="translate(726 215)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/><path d="M15 134H303" stroke="#E4B854" stroke-width="4" stroke-dasharray="8 9" opacity=".42"/>
+      <image href="../../../Towers/A1/P7_A1_Tower_SingleTarget_MilkChicken_L1_v01.png" x="12" y="45" width="102" height="102"/><image href="../../../Enemies/A1/P7_A1_Enemy_Normal_v01.png" x="203" y="47" width="94" height="94"/>
+      <svg x="205" y="50" width="82" height="82" viewBox="432 16 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F02</text><text x="159" y="180" text-anchor="middle" class="phase">命中受击</text></g>
+    <g transform="translate(1059 215)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/><path d="M15 134H303" stroke="#E4B854" stroke-width="4" stroke-dasharray="8 9" opacity=".42"/>
+      <image href="../../../Towers/A1/P7_A1_Tower_SingleTarget_MilkChicken_L1_v01.png" x="12" y="45" width="102" height="102"/><image href="../../../Enemies/A1/P7_A1_Enemy_Normal_v01.png" x="203" y="47" width="94" height="94"/>
+      <svg x="211" y="55" width="68" height="68" viewBox="640 16 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F03</text><text x="159" y="180" text-anchor="middle" class="phase">余光散尽</text></g>
+  </g>
+
+  <g filter="url(#cardShadow)"><rect x="40" y="454" width="1360" height="272" rx="18" fill="#FFFEFB"/></g>
+  <text x="64" y="490" class="row">02　清障开位</text><text x="256" y="490" class="note">指定障碍被清除；碎片散开后开放建造位并显示金币奖励</text>
+  <g>
+    <g transform="translate(60 507)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/>
+      <image href="../../../Towers/A1/P7_A1_Tower_SingleTarget_MilkChicken_L1_v01.png" x="2" y="84" width="75" height="75"/>
+      <svg x="107" y="40" width="108" height="108" viewBox="32 32 512 512"><image href="../../../Environment/A1/P7_A1_DestructibleObstacleAtlas_v02.png" width="1664" height="1120"/></svg>
+      <svg x="143" y="72" width="46" height="46" viewBox="16 224 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F00</text><text x="159" y="180" text-anchor="middle" class="phase">障碍受击</text></g>
+    <g transform="translate(393 507)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/>
+      <svg x="91" y="35" width="136" height="136" viewBox="576 32 512 512"><image href="../../../Environment/A1/P7_A1_DestructibleObstacleAtlas_v02.png" width="1664" height="1120"/></svg>
+      <svg x="118" y="57" width="82" height="82" viewBox="224 224 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F01</text><text x="159" y="180" text-anchor="middle" class="phase">裂纹扩张</text></g>
+    <g transform="translate(726 507)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/>
+      <svg x="91" y="35" width="136" height="136" viewBox="1120 32 512 512"><image href="../../../Environment/A1/P7_A1_DestructibleObstacleAtlas_v02.png" width="1664" height="1120"/></svg>
+      <svg x="106" y="42" width="110" height="110" viewBox="432 224 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F02</text><text x="159" y="180" text-anchor="middle" class="phase">饼干碎裂</text></g>
+    <g transform="translate(1059 507)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/>
+      <svg x="78" y="39" width="160" height="120" viewBox="640 224 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F03</text><text x="159" y="180" text-anchor="middle" class="phase">建造位与奖励</text></g>
+  </g>
+
+  <g filter="url(#cardShadow)"><rect x="40" y="746" width="1360" height="272" rx="18" fill="#FFFEFB"/></g>
+  <text x="64" y="782" class="row">03　炮塔升级</text><text x="256" y="782" class="note">金币投入奶鸡塔；能量沿炮塔上升，强化光效收束</text>
+  <g>
+    <g transform="translate(60 799)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/>
+      <image href="../../../Towers/A1/P7_A1_Tower_SingleTarget_MilkChicken_L1_v01.png" x="105" y="42" width="108" height="108"/>
+      <svg x="105" y="53" width="108" height="108" viewBox="16 432 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F00</text><text x="159" y="180" text-anchor="middle" class="phase">塔体蓄能</text></g>
+    <g transform="translate(393 799)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/>
+      <image href="../../../Towers/A1/P7_A1_Tower_SingleTarget_MilkChicken_L1_v01.png" x="105" y="42" width="108" height="108"/>
+      <svg x="104" y="48" width="110" height="110" viewBox="224 432 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F01</text><text x="159" y="180" text-anchor="middle" class="phase">环绕充能</text></g>
+    <g transform="translate(726 799)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/>
+      <image href="../../../Towers/A1/P7_A1_Tower_SingleTarget_MilkChicken_L1_v01.png" x="105" y="42" width="108" height="108"/>
+      <svg x="108" y="47" width="100" height="108" viewBox="432 432 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F02</text><text x="159" y="180" text-anchor="middle" class="phase">金币投入</text></g>
+    <g transform="translate(1059 799)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/>
+      <image href="../../../Towers/A1/P7_A1_Tower_SingleTarget_MilkChicken_L2_v03.png" x="105" y="42" width="108" height="108"/>
+      <svg x="105" y="47" width="108" height="108" viewBox="640 432 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F03</text><text x="159" y="180" text-anchor="middle" class="phase">强化完成</text></g>
+  </g>
+
+  <g filter="url(#cardShadow)"><rect x="40" y="1038" width="1360" height="272" rx="18" fill="#FFFEFB"/></g>
+  <text x="64" y="1074" class="row">04　干扰停火与恢复</text><text x="380" y="1074" class="note">干扰敌 → 奶鸡塔；紫色传递、红色停火、金色弹体明确复攻</text>
+  <g>
+    <g transform="translate(60 1091)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/>
+      <image href="../../../Enemies/A0/P7_A0_Enemy_Jammer_v01.png" x="8" y="54" width="84" height="84"/><image href="../../../Towers/A1/P7_A1_Tower_SingleTarget_MilkChicken_L1_v01.png" x="215" y="54" width="84" height="84"/>
+      <svg x="19" y="56" width="90" height="86" viewBox="16 640 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F00</text><text x="159" y="180" text-anchor="middle" class="phase">干扰波发出</text></g>
+    <g transform="translate(393 1091)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/>
+      <image href="../../../Enemies/A0/P7_A0_Enemy_Jammer_v01.png" x="8" y="54" width="84" height="84"/><image href="../../../Towers/A1/P7_A1_Tower_SingleTarget_MilkChicken_L1_v01.png" x="215" y="54" width="84" height="84"/>
+      <svg x="76" y="40" width="151" height="118" viewBox="224 640 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F01</text><text x="159" y="180" text-anchor="middle" class="phase">电流传递</text></g>
+    <g transform="translate(726 1091)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/>
+      <image href="../../../Enemies/A0/P7_A0_Enemy_Jammer_v01.png" x="8" y="54" width="84" height="84"/><image href="../../../Towers/A1/P7_A1_Tower_SingleTarget_MilkChicken_L1_v01.png" x="215" y="54" width="84" height="84"/>
+      <svg x="210" y="48" width="90" height="90" viewBox="432 640 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F02</text><text x="159" y="180" text-anchor="middle" class="phase">炮塔停火</text></g>
+    <g transform="translate(1059 1091)"><rect width="318" height="196" rx="12" fill="#EFF3F1"/><rect width="318" height="196" rx="12" fill="url(#floor)" opacity=".48"/>
+      <image href="../../../Enemies/A0/P7_A0_Enemy_Jammer_v01.png" x="8" y="54" width="84" height="84"/><image href="../../../Towers/A1/P7_A1_Tower_SingleTarget_MilkChicken_L1_v01.png" x="215" y="54" width="84" height="84"/>
+      <svg x="80" y="0" width="196" height="196" viewBox="640 640 192 192"><image href="../P7_A1_VFXAtlas_v06.png" width="848" height="848"/></svg>
+      <text x="18" y="180" class="num">F03</text><text x="159" y="180" text-anchor="middle" class="phase">复攻恢复</text></g>
+  </g>
+  <text x="56" y="1355" class="sub">评审状态：v06 候选；透明叠加图集与玩法合成页均未导入 UE。</text>
+</svg>

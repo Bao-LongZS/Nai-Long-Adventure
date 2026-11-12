@@ -1,0 +1,6 @@
+Preview executable: C:\Users\31314\Desktop\Nai-Long-Adventure\tmp\P7ChineseMapUI_DevPreview\Nai_Long.exe
+Exit code: 777003
+Screenshot logged: False
+Screenshot file: none
+Engine log: C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\Records\p7_td\evidence\P7_ChineseMapUI_DevPreview_2026-11-11_21-40-34.log
+Existing Cook content timestamp: 2026-11-09; newly imported art is not included.

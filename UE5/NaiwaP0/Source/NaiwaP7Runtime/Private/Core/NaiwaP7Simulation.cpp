@@ -9,6 +9,17 @@ namespace NaiwaP7
         constexpr uint64 FnvOffsetBasis = 14695981039346656037ull;
         constexpr uint64 FnvPrime = 1099511628211ull;
 
+        int32 GetEnemyKillRewardCoins(const ENaiwaP7EnemyKind Kind)
+        {
+            switch (Kind)
+            {
+            case ENaiwaP7EnemyKind::Fast: return 15;
+            case ENaiwaP7EnemyKind::Interferer: return 20;
+            case ENaiwaP7EnemyKind::Normal:
+            default: return 10;
+            }
+        }
+
         uint64 HashByte(uint64 Hash, const uint8 Value)
         {
             return (Hash ^ Value) * FnvPrime;
@@ -142,11 +153,11 @@ namespace NaiwaP7
     {
         if (Phase != ESimulationPhase::BetweenWaves)
         {
-            return Fail(OutError, TEXT("Route selection is only allowed between waves."));
+            return Fail(OutError, TEXT("路线只能在布防阶段切换。"));
         }
         if (Route != ERoute::A && Route != ERoute::B)
         {
-            return Fail(OutError, TEXT("Unknown route ID."));
+            return Fail(OutError, TEXT("路线配置无效。"));
         }
 
         ActiveRoute = Route;
@@ -161,15 +172,15 @@ namespace NaiwaP7
     {
         if (Phase != ESimulationPhase::BetweenWaves)
         {
-            return Fail(OutError, TEXT("A new wave can only start during preparation."));
+            return Fail(OutError, TEXT("只能在布防阶段开始下一波。"));
         }
         if (CurrentWave >= AlphaWaveCount)
         {
-            return Fail(OutError, TEXT("All alpha waves have already been completed."));
+            return Fail(OutError, TEXT("全部波次已完成。"));
         }
         if (!Enemies.IsEmpty())
         {
-            return Fail(OutError, TEXT("A new wave cannot start while enemies remain."));
+            return Fail(OutError, TEXT("场上仍有敌人，暂时不能开始下一波。"));
         }
 
         ++CurrentWave;
@@ -183,7 +194,7 @@ namespace NaiwaP7
             if (!Wave)
             {
                 --CurrentWave;
-                return Fail(OutError, TEXT("The current P7 wave has no loaded spawn row."));
+                return Fail(OutError, TEXT("当前波次缺少敌人配置。"));
             }
             for (const FNaiwaP7WaveSpawnGroup& Spawn : Wave->Spawns)
             {
@@ -207,19 +218,19 @@ namespace NaiwaP7
     {
         if (Phase != ESimulationPhase::WaveActive)
         {
-            return Fail(OutError, TEXT("Enemies can only spawn during an active wave."));
+            return Fail(OutError, TEXT("敌人只能在波次进行时出现。"));
         }
         if (EntityId <= 0)
         {
-            return Fail(OutError, TEXT("Enemy EntityId must be positive."));
+            return Fail(OutError, TEXT("敌人编号必须大于零。"));
         }
         if (SpeedMilliCellsPerSecond <= 0)
         {
-            return Fail(OutError, TEXT("Enemy speed must be a positive milli-cell-per-second value."));
+            return Fail(OutError, TEXT("敌人速度配置无效。"));
         }
         if (Enemies.ContainsByPredicate([EntityId](const FEnemyState& Enemy) { return Enemy.EntityId == EntityId; }))
         {
-            return Fail(OutError, TEXT("Enemy EntityId must be unique among active enemies."));
+            return Fail(OutError, TEXT("场上敌人编号重复。"));
         }
 
         FEnemyState Enemy;
@@ -246,7 +257,7 @@ namespace NaiwaP7
         const FNaiwaP7EnemyRow* Row = FindEnemyRow(EnemyId);
         if (!Row)
         {
-            return Fail(OutError, TEXT("EnemyId does not resolve to a loaded P7 enemy row."));
+            return Fail(OutError, TEXT("找不到该敌人的关卡配置。"));
         }
         if (!TrySpawnEnemy(EntityId, Row->SpeedMilliCellsPerSecond, OutError))
         {
@@ -263,25 +274,25 @@ namespace NaiwaP7
     {
         if (!HasLevel() || Phase == ESimulationPhase::Won || Phase == ESimulationPhase::Lost)
         {
-            return Fail(OutError, TEXT("Towers can only be placed in an active P7 level."));
+            return Fail(OutError, TEXT("当前关卡不能放置炮塔。"));
         }
         if (!IsBuildSiteUnlocked(Cell))
         {
-            return Fail(OutError, TEXT("Cell is not an unlocked P7 build site."));
+            return Fail(OutError, TEXT("这里不是已开放的建造位。"));
         }
         if (Towers.ContainsByPredicate([&Cell](const FTowerState& Tower) { return Tower.Cell == Cell; }))
         {
-            return Fail(OutError, TEXT("A tower already occupies this build site."));
+            return Fail(OutError, TEXT("这个建造位已经有炮塔了。"));
         }
 
         const FNaiwaP7TowerRow* Row = FindTowerRow(TowerId, 1);
         if (!Row)
         {
-            return Fail(OutError, TEXT("TowerId has no level 1 data row."));
+            return Fail(OutError, TEXT("该炮塔缺少一级配置。"));
         }
         if (Coins < Row->CostCoins)
         {
-            return Fail(OutError, TEXT("Not enough coins to place this tower."));
+            return Fail(OutError, TEXT("金币不足，无法建造这座炮塔。"));
         }
 
         FTowerState Tower;
@@ -305,21 +316,21 @@ namespace NaiwaP7
     {
         if (!HasLevel() || Phase == ESimulationPhase::Won || Phase == ESimulationPhase::Lost)
         {
-            return Fail(OutError, TEXT("Towers can only be upgraded in an active P7 level."));
+            return Fail(OutError, TEXT("当前关卡不能升级炮塔。"));
         }
         FTowerState* Tower = FindTowerAtCell(Cell);
         if (!Tower)
         {
-            return Fail(OutError, TEXT("There is no tower at the selected build site."));
+            return Fail(OutError, TEXT("选中的位置没有炮塔。"));
         }
         const FNaiwaP7TowerRow* NextLevel = FindTowerRow(Tower->TowerId, Tower->Level + 1);
         if (!NextLevel)
         {
-            return Fail(OutError, TEXT("Tower is already at its maximum level."));
+            return Fail(OutError, TEXT("这座炮塔已达到最高等级。"));
         }
         if (Coins < NextLevel->CostCoins)
         {
-            return Fail(OutError, TEXT("Not enough coins to upgrade this tower."));
+            return Fail(OutError, TEXT("金币不足，无法升级这座炮塔。"));
         }
 
         Coins -= NextLevel->CostCoins;
@@ -340,11 +351,12 @@ namespace NaiwaP7
         FTowerState* Tower = FindTowerAtCell(TowerCell);
         if (!Tower)
         {
-            return Fail(OutError, TEXT("There is no tower at the selected build site."));
+            return Fail(OutError, TEXT("选中的位置没有炮塔。"));
         }
         if (ObstacleId.IsNone())
         {
             Tower->TargetObstacleId = NAME_None;
+            Tower->AttackCooldownSteps = 0;
             if (OutError)
             {
                 OutError->Reset();
@@ -353,28 +365,36 @@ namespace NaiwaP7
         }
         if (Phase == ESimulationPhase::Won || Phase == ESimulationPhase::Lost)
         {
-            return Fail(OutError, TEXT("Obstacle targets cannot change after the level ends."));
+            return Fail(OutError, TEXT("关卡结束后不能更改障碍目标。"));
         }
 
         FObstacleState* Obstacle = FindObstacle(ObstacleId);
         if (!Obstacle || Obstacle->bCleared)
         {
-            return Fail(OutError, TEXT("Obstacle target is missing or already cleared."));
+            return Fail(OutError, TEXT("目标障碍不存在或已清除。"));
         }
         const FNaiwaP7TowerRow* Row = FindTowerRow(Tower->TowerId, Tower->Level);
         if (!Row)
         {
-            return Fail(OutError, TEXT("Tower data row is missing."));
+            return Fail(OutError, TEXT("找不到这座炮塔的攻击配置。"));
+        }
+        if (Row->Damage <= 0)
+        {
+            return Fail(OutError, TEXT("这座减速炮塔不造成伤害，无法清除障碍；请改用奶鸡或奶狗炮塔。"));
         }
         const int64 Dx = static_cast<int64>(TowerCell.X - Obstacle->Cell.X) * MilliCellsPerCell;
         const int64 Dy = static_cast<int64>(TowerCell.Y - Obstacle->Cell.Y) * MilliCellsPerCell;
         const int64 Range = Row->RangeMilliCells;
         if (Dx * Dx + Dy * Dy > Range * Range)
         {
-            return Fail(OutError, TEXT("Obstacle is outside this tower's range."));
+            return Fail(OutError, TEXT("障碍超出这座炮塔的攻击范围。"));
         }
 
-        Tower->TargetObstacleId = ObstacleId;
+        if (Tower->TargetObstacleId != ObstacleId)
+        {
+            Tower->TargetObstacleId = ObstacleId;
+            Tower->AttackCooldownSteps = 0;
+        }
         if (OutError)
         {
             OutError->Reset();
@@ -456,15 +476,15 @@ namespace NaiwaP7
     {
         if (Phase != ESimulationPhase::WaveActive)
         {
-            return Fail(OutError, TEXT("There is no active wave to complete."));
+            return Fail(OutError, TEXT("当前没有进行中的波次。"));
         }
         if (!Enemies.IsEmpty())
         {
-            return Fail(OutError, TEXT("The wave cannot complete while enemies remain."));
+            return Fail(OutError, TEXT("场上仍有敌人，波次尚未结束。"));
         }
         if (!PendingSpawns.IsEmpty())
         {
-            return Fail(OutError, TEXT("The wave cannot complete while scheduled enemies remain."));
+            return Fail(OutError, TEXT("仍有敌人等待出场，波次尚未结束。"));
         }
 
         FixedAccumulatorSeconds = 0.0;
@@ -576,6 +596,11 @@ namespace NaiwaP7
                     FixedAccumulatorSeconds = 0.0;
                 }
             }
+        }
+
+        if (Phase == ESimulationPhase::WaveActive && Enemies.IsEmpty() && PendingSpawns.IsEmpty())
+        {
+            TryCompleteCurrentWave();
         }
     }
 
@@ -814,6 +839,15 @@ namespace NaiwaP7
             if (Enemy)
             {
                 Enemy->Health = static_cast<int32>(FMath::Max<int64>(0, static_cast<int64>(Enemy->Health) - DamagePair.Value));
+                if (Enemy->Health == 0)
+                {
+                    const FNaiwaP7EnemyRow* EnemyRow = FindEnemyRow(Enemy->EnemyId);
+                    const int32 RewardCoins = EnemyRow
+                        ? GetEnemyKillRewardCoins(EnemyRow->Kind)
+                        : GetEnemyKillRewardCoins(ENaiwaP7EnemyKind::Normal);
+                    Coins = static_cast<int32>(FMath::Min<int64>(MAX_int32,
+                        static_cast<int64>(Coins) + RewardCoins));
+                }
             }
         }
         Enemies.RemoveAll([](const FEnemyState& Enemy) { return Enemy.Health <= 0; });

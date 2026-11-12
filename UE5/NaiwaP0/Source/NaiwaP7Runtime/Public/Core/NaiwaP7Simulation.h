@@ -99,6 +99,7 @@ namespace NaiwaP7
         ERoute GetActiveRoute() const { return ActiveRoute; }
         const FLevelDefinition& GetLevelDefinition() const { return Level; }
         const TArray<FNaiwaP7TowerRow>& GetTowerRows() const { return TowerRows; }
+        const TArray<FNaiwaP7ObstacleRow>& GetObstacleRows() const { return ObstacleRows; }
         int32 GetCurrentWave() const { return CurrentWave; }
         int32 GetMilkJarHealth() const { return MilkJarHealth; }
         int32 GetCoins() const { return Coins; }

@@ -1,0 +1,5 @@
+Direct Game executable: C:\Users\31314\Desktop\Nai-Long-Adventure\tmp\P7ChineseMapUI_DevPreview\Nai_Long\Binaries\Win64\Nai_Long.exe
+Arguments: -Map=/Game/Naiwa/P7/Maps/L_P7_Alpha01_Graybox -windowed -ResX=1280 -ResY=720 -ExecCmds="Open /Game/Naiwa/P7/Maps/L_P7_Alpha01_Graybox,HighResShot 1280x720" -stdout -FullStdOutLogOutput -AbsLog="C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\Records\p7_td\evidence\P7_ChineseMapUI_GameViewport_2026-11-11_21-44-01.log"
+Exit code: 777003
+Screenshot: none
+Engine log: C:\Users\31314\Desktop\Nai-Long-Adventure\UE5\Records\p7_td\evidence\P7_ChineseMapUI_GameViewport_2026-11-11_21-44-01.log

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="1060" viewBox="0 0 1600 1060">
+  <title>P7 A1 result badges v02 review</title>
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#F8F6F0"/><stop offset="1" stop-color="#ECEAE2"/></linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#17284A" flood-opacity="0.11"/></filter>
+    <filter id="gray"><feColorMatrix type="saturate" values="0"/></filter>
+    <style>
+      .title{font:700 36px 'Microsoft YaHei',sans-serif;fill:#14264A}
+      .sub{font:400 18px 'Microsoft YaHei',sans-serif;fill:#667086}
+      .label{font:700 25px 'Microsoft YaHei',sans-serif;fill:#14264A}
+      .body{font:400 16px 'Microsoft YaHei',sans-serif;fill:#667086}
+      .small{font:600 14px 'Microsoft YaHei',sans-serif;fill:#536078}
+    </style>
+  </defs>
+  <rect width="1600" height="1060" fill="url(#bg)"/>
+  <path d="M0 152H1600" stroke="#D9D9D1" stroke-width="2"/>
+  <text x="72" y="82" class="title">P7 / α 结算徽章 · v02</text>
+  <text x="74" y="119" class="sub">原创 UI 候选 · 透明图集不含文字 · 48px 与灰度预览</text>
+  <rect x="1305" y="56" width="222" height="48" rx="24" fill="#FFF3D7" stroke="#D2B04A" stroke-width="2"/>
+  <text x="1416" y="87" text-anchor="middle" class="small">待用户评审</text>
+
+  <g filter="url(#shadow)"><rect x="64" y="190" width="704" height="790" rx="28" fill="#FFFFFF"/></g>
+  <g filter="url(#shadow)"><rect x="832" y="190" width="704" height="790" rx="28" fill="#FFFFFF"/></g>
+
+  <text x="104" y="248" class="label">守护成功</text>
+  <text x="104" y="280" class="body">完整护盾 · 奶蛋微笑 · 金星与枝叶向上</text>
+  <svg x="216" y="302" width="400" height="400" viewBox="16 16 384 384">
+    <image href="../P7_A1_ResultBadgeAtlas_v02.png" x="0" y="0" width="832" height="416"/>
+  </svg>
+  <rect x="102" y="727" width="628" height="1.5" fill="#E3E5E8"/>
+  <text x="104" y="768" class="small">48px 彩色（2×）</text>
+  <svg x="104" y="785" width="96" height="96" viewBox="0 0 48 48" image-rendering="pixelated">
+    <svg x="0" y="0" width="48" height="48" viewBox="16 16 384 384"><image href="../P7_A1_ResultBadgeAtlas_v02.png" x="0" y="0" width="832" height="416"/></svg>
+  </svg>
+  <text x="244" y="824" class="small">灰度</text>
+  <svg x="244" y="837" width="72" height="72" viewBox="16 16 384 384" filter="url(#gray)">
+    <image href="../P7_A1_ResultBadgeAtlas_v02.png" x="0" y="0" width="832" height="416"/>
+  </svg>
+  <text x="338" y="828" class="body">圆形徽章 + 完整护盾</text>
+  <text x="338" y="856" class="body">用于通关、奶蛋未失守结算</text>
+
+  <text x="872" y="248" class="label">奶蛋失守</text>
+  <text x="872" y="280" class="body">盾形外廓 · 奶蛋低垂 · 下坠碎片</text>
+  <svg x="984" y="302" width="400" height="400" viewBox="432 16 384 384">
+    <image href="../P7_A1_ResultBadgeAtlas_v02.png" x="0" y="0" width="832" height="416"/>
+  </svg>
+  <rect x="870" y="727" width="628" height="1.5" fill="#E3E5E8"/>
+  <text x="872" y="768" class="small">48px 彩色（2×）</text>
+  <svg x="872" y="785" width="96" height="96" viewBox="0 0 48 48" image-rendering="pixelated">
+    <svg x="0" y="0" width="48" height="48" viewBox="432 16 384 384"><image href="../P7_A1_ResultBadgeAtlas_v02.png" x="0" y="0" width="832" height="416"/></svg>
+  </svg>
+  <text x="1012" y="824" class="small">灰度</text>
+  <svg x="1012" y="837" width="72" height="72" viewBox="432 16 384 384" filter="url(#gray)">
+    <image href="../P7_A1_ResultBadgeAtlas_v02.png" x="0" y="0" width="832" height="416"/>
+  </svg>
+  <text x="1106" y="828" class="body">盾形徽章 + 下坠碎片</text>
+  <text x="1106" y="856" class="body">用于奶蛋耐久归零的结算</text>
+
+  <rect x="64" y="1002" width="1472" height="1.5" fill="#D9D9D1"/>
+  <text x="72" y="1034" class="small">造型使用 P7 海军蓝描边、奶油白底、金色奶蛋、薄荷绿守护态与珊瑚红失守态；颜色之外以圆/盾轮廓、星标上扬/碎片下坠编码状态。</text>
+</svg>

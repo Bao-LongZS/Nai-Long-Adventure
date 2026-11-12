@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="848" height="432" viewBox="0 0 848 432">
+  <title>P7 A1 tower projectile VFX v01</title>
+  <desc>Two four-frame transparent projectile sequences: a resonant area shell for MilkDog and a mint slow-pulse dart for MilkMouse. MilkChicken keeps the existing v07 shot.</desc>
+  <defs>
+    <radialGradient id="dogHalo"><stop stop-color="#FFF1BF" stop-opacity=".9"/><stop offset=".45" stop-color="#F7A84B" stop-opacity=".48"/><stop offset="1" stop-color="#E86D43" stop-opacity="0"/></radialGradient>
+    <linearGradient id="dogShell" x1="0" y1="0" x2="1" y2=".25"><stop stop-color="#F26B49"/><stop offset=".45" stop-color="#FFB64D"/><stop offset=".78" stop-color="#FFE18A"/><stop offset="1" stop-color="#F27C46"/></linearGradient>
+    <radialGradient id="mouseHalo"><stop stop-color="#F4FFF1" stop-opacity=".94"/><stop offset=".5" stop-color="#86E5CF" stop-opacity=".5"/><stop offset="1" stop-color="#45BDAE" stop-opacity="0"/></radialGradient>
+    <linearGradient id="mouseCrystal" x1="0" y1="0" x2="1" y2=".3"><stop stop-color="#E6FFF1"/><stop offset=".38" stop-color="#80E5D0"/><stop offset=".72" stop-color="#3EB4AB"/><stop offset="1" stop-color="#B5F3D9"/></linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5"/></filter>
+    <style>
+      .ink{stroke:#3B3542;stroke-linecap:round;stroke-linejoin:round}
+      .dogLight{stroke:#FFF1CB;stroke-linecap:round;stroke-linejoin:round}
+      .dogDeep{stroke:#C7583E;stroke-linecap:round;stroke-linejoin:round}
+      .mouseLight{stroke:#E8FFF3;stroke-linecap:round;stroke-linejoin:round}
+      .mouseDeep{stroke:#287E79;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <!-- MilkDog: compact resonant pellet expands into a clear area-impact ring. -->
+  <g transform="translate(16 16)">
+    <ellipse cx="98" cy="98" rx="72" ry="55" fill="url(#dogHalo)"/>
+    <path d="M33 83q17 15 0 30m17-44q25 25 0 50" fill="none" stroke="#F08A43" stroke-width="7" opacity=".72"/>
+    <circle cx="83" cy="96" r="26" fill="url(#dogShell)" class="ink" stroke-width="4"/>
+    <circle cx="126" cy="77" r="13" fill="#FFD77A" class="dogDeep" stroke-width="3"/>
+    <circle cx="132" cy="119" r="10" fill="#ED7250" class="ink" stroke-width="3"/>
+    <circle cx="78" cy="87" r="7" fill="#FFF7D9" opacity=".94"/>
+    <path d="M72 103q10 8 21 0m25-33 5-5m22 46 7 3" fill="none" class="dogLight" stroke-width="3"/>
+    <circle cx="154" cy="61" r="3" fill="#FFEAA9"/><circle cx="159" cy="137" r="4" fill="#E97848"/>
+  </g>
+  <g transform="translate(224 16)">
+    <path d="M27 123c23 0 33-20 50-23 17-4 24 9 39 3 13-5 24-18 42-16" fill="none" stroke="#E96C45" stroke-width="22" stroke-linecap="round" opacity=".18"/>
+    <path d="M29 115c19-1 30-16 46-21 13-4 23 4 35 1 16-4 27-17 47-17" fill="none" stroke="#F5A04A" stroke-width="7" stroke-linecap="round"/>
+    <path d="M38 126c17-2 27-10 38-18m42 1 14-8" fill="none" class="dogLight" stroke-width="3"/>
+    <path d="M64 79 81 63l17 4 10 16-10 24-20 6-16-15Z" fill="url(#dogShell)" class="ink" stroke-width="4"/>
+    <circle cx="80" cy="86" r="9" fill="#FFF1C3" class="dogDeep" stroke-width="2.5"/>
+    <circle cx="117" cy="105" r="14" fill="#F17D49" class="ink" stroke-width="3"/>
+    <circle cx="122" cy="101" r="4" fill="#FFE9A3"/>
+    <circle cx="52" cy="75" r="5" fill="#F9B24E"/><circle cx="146" cy="62" r="3.5" fill="#FFE3A0"/>
+    <path d="M149 119l10 5m-6-59 10-5" fill="none" stroke="#D95D43" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(432 16)">
+    <ellipse cx="98" cy="98" rx="77" ry="70" fill="url(#dogHalo)"/>
+    <circle cx="98" cy="98" r="46" fill="#F77E4A" stroke="#B84C3D" stroke-width="5"/>
+    <circle cx="98" cy="98" r="33" fill="none" stroke="#FFE5A2" stroke-width="7"/>
+    <circle cx="98" cy="98" r="18" fill="#FFF2C8" stroke="#D96541" stroke-width="4"/>
+    <path d="M98 27v19m0 104v15M27 98h19m104 0h15M48 48l14 14m72 72 14 14m0-100-14 14m-72 72-14 14" fill="none" stroke="#E87447" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="81" cy="91" r="7" fill="#FFF0B6" class="dogDeep" stroke-width="2.5"/>
+    <circle cx="111" cy="84" r="6" fill="#FFB64D" class="dogDeep" stroke-width="2.5"/>
+    <circle cx="104" cy="112" r="8" fill="#F18A49" class="dogDeep" stroke-width="2.5"/>
+    <circle cx="47" cy="58" r="8" fill="#FFCE68" class="dogDeep" stroke-width="2.5"/><circle cx="147" cy="55" r="6" fill="#F27A49"/>
+    <circle cx="47" cy="144" r="6" fill="#F6A148"/><circle cx="151" cy="142" r="8" fill="#FFD276" class="dogDeep" stroke-width="2.5"/>
+  </g>
+  <g transform="translate(640 16)">
+    <path d="M44 102a54 54 0 0 1 92-38m10 25a54 54 0 0 1-92 45" fill="none" stroke="#E97549" stroke-width="7" stroke-linecap="round" stroke-dasharray="50 17 26 18" opacity=".75"/>
+    <path d="M61 103a36 36 0 0 1 59-27m-1 40a36 36 0 0 1-58 15" fill="none" stroke="#FFD171" stroke-width="4" stroke-linecap="round" stroke-dasharray="37 14 18 14"/>
+    <circle cx="97" cy="98" r="18" fill="url(#dogHalo)"/><circle cx="97" cy="98" r="7" fill="#FFE5A0"/>
+    <circle cx="49" cy="60" r="6" fill="#F08846"/><circle cx="148" cy="72" r="4" fill="#FFE6A4"/><circle cx="139" cy="137" r="5" fill="#EA7048"/>
+    <path d="m61 46 6-8m72 101 8 4m-103 9-7 6" fill="none" class="dogLight" stroke-width="3"/>
+  </g>
+
+  <!-- MilkMouse: a mint crystal dart applies a readable slowing field instead of damage. -->
+  <g transform="translate(16 224)">
+    <ellipse cx="102" cy="99" rx="72" ry="55" fill="url(#mouseHalo)"/>
+    <path d="M43 73q20 25 0 50m20-61q27 36 0 72" fill="none" stroke="#56BFB3" stroke-width="6" stroke-linecap="round" opacity=".72"/>
+    <path d="m92 65 25 14 8 23-19 26-27-12-8-24Z" fill="url(#mouseCrystal)" class="ink" stroke-width="4"/>
+    <path d="m92 65 2 28 29 9m-29-9-23 4m23-4 12 34" fill="none" class="mouseLight" stroke-width="3.5"/>
+    <path d="m92 65 11 26-11 2-21-11Z" fill="#F5FFF4" opacity=".75"/>
+    <circle cx="143" cy="62" r="5" fill="#A0EBD5"/><circle cx="151" cy="132" r="4" fill="#36A99F"/><circle cx="48" cy="52" r="3" fill="#E7FFF0"/>
+  </g>
+  <g transform="translate(224 224)">
+    <ellipse cx="93" cy="98" rx="74" ry="45" transform="rotate(-18 93 98)" fill="url(#mouseHalo)"/>
+    <path d="M29 124c18-5 29-17 42-24m-34 38c19-3 34-13 46-25" fill="none" stroke="#47BCAF" stroke-width="5" stroke-linecap="round" opacity=".66"/>
+    <path d="M63 105 90 73l47 4 24 18-23 20-47 7Z" fill="url(#mouseCrystal)" class="ink" stroke-width="4"/>
+    <path d="m90 73 5 25 43-21m-43 21-1 24m1-24 42 20" fill="none" class="mouseLight" stroke-width="3.5"/>
+    <path d="m54 93-17-12 6 25-17 14 34 2m109-67 12-9-3 20 12 11-21 3" fill="#8BDCCE" stroke="#287E79" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="149" cy="84" r="4" fill="#F3FFF1"/><circle cx="51" cy="141" r="3" fill="#B3F2D8"/><circle cx="37" cy="67" r="3.5" fill="#4DBBB1"/>
+  </g>
+  <g transform="translate(432 224)">
+    <ellipse cx="98" cy="98" rx="77" ry="70" fill="url(#mouseHalo)"/>
+    <circle cx="98" cy="98" r="48" fill="none" stroke="#43B9AD" stroke-width="7" stroke-dasharray="55 13 28 16" stroke-linecap="round"/>
+    <circle cx="98" cy="98" r="32" fill="none" stroke="#8BE5CB" stroke-width="6" stroke-dasharray="28 10 15 9" stroke-linecap="round"/>
+    <circle cx="98" cy="98" r="15" fill="#E9FFF3" stroke="#3CA89D" stroke-width="4"/>
+    <path d="M98 65v18m0 30v18M65 98h18m30 0h18M75 75l13 13m20 20 13 13m0-46-13 13m-20 20-13 13" fill="none" stroke="#4DBBAD" stroke-width="5" stroke-linecap="round"/>
+    <path d="m98 81 5 12 13 5-13 5-5 12-5-12-13-5 13-5Z" fill="#76D8C4" stroke="#287E79" stroke-width="2.5"/>
+    <circle cx="42" cy="60" r="5" fill="#93E9D2"/><circle cx="151" cy="58" r="4" fill="#37A79D"/><circle cx="151" cy="140" r="6" fill="#B4F1D8"/>
+  </g>
+  <g transform="translate(640 224)">
+    <path d="M48 98a50 50 0 0 1 83-38m12 26a50 50 0 0 1-83 43" fill="none" stroke="#4AB9AD" stroke-width="7" stroke-linecap="round" stroke-dasharray="42 18 24 16" opacity=".76"/>
+    <path d="M67 98a31 31 0 0 1 48-25m4 44a31 31 0 0 1-49 17" fill="none" stroke="#A8EBD4" stroke-width="5" stroke-linecap="round" stroke-dasharray="24 12 17 12"/>
+    <path d="m96 70 8 17 18 8-18 8-8 19-8-19-18-8 18-8Z" fill="#B9F2DB" stroke="#358F88" stroke-width="3"/>
+    <circle cx="44" cy="64" r="5" fill="#E5FFF0"/><circle cx="153" cy="76" r="4" fill="#40B7AB"/><circle cx="142" cy="139" r="5" fill="#9BE9D0"/><circle cx="57" cy="140" r="3" fill="#47B7A9"/>
+    <path d="M43 107h14m91-54 10-5m-111 94-8 5" fill="none" class="mouseLight" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

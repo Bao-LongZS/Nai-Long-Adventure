@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "asset": "/Game/Naiwa/P7/Data/DT_P7_Alpha01_Enemies",
+  "row_struct": "/Script/NaiwaP7Runtime.NaiwaP7EnemyRow",
+  "source_csv": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Data\\P7_Alpha01_Enemies_v01.csv",
+  "source_sha256": "ab1c702f4f395f44d0951fdc16a9fa8f21352962f2e9e77f3183f1adc3f6329e",
+  "updated_rows": {
+    "P7_Enemy_Normal": 2400,
+    "P7_Enemy_Fast": 4500,
+    "P7_Enemy_Jammer": 1800
+  },
+  "updated_asset_count": 1
+}

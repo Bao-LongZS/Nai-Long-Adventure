@@ -13,6 +13,17 @@
 #include "InputMappingContext.h"
 #include "Presentation/NaiwaP7GrayboxHUD.h"
 
+namespace
+{
+    const TCHAR* GetTowerDisplayName(const FName TowerId)
+    {
+        if (TowerId == FName(TEXT("P7_Tower_MilkChicken"))) return TEXT("奶鸡炮塔");
+        if (TowerId == FName(TEXT("P7_Tower_MilkDog"))) return TEXT("奶狗炮塔");
+        if (TowerId == FName(TEXT("P7_Tower_MilkMouse"))) return TEXT("奶鼠炮塔");
+        return TEXT("炮塔");
+    }
+}
+
 ANaiwaP7GrayboxPlayerController::ANaiwaP7GrayboxPlayerController()
 {
     bShowMouseCursor = true;
@@ -72,6 +83,14 @@ void ANaiwaP7GrayboxPlayerController::SetupInputComponent()
 
 bool ANaiwaP7GrayboxPlayerController::TryGetHoveredCell(FIntPoint& OutCell) const
 {
+#if WITH_DEV_AUTOMATION_TESTS
+    if (bAutomationHasHoveredCell)
+    {
+        OutCell = AutomationHoveredCell;
+        return true;
+    }
+#endif
+
     float MouseX = 0.0f;
     float MouseY = 0.0f;
     if (!GetMousePosition(MouseX, MouseY))
@@ -95,6 +114,8 @@ bool ANaiwaP7GrayboxPlayerController::TryGetHoveredCell(FIntPoint& OutCell) cons
     return NaiwaP7::TryMapBoardPointToCell(
         FVector2D(MouseX, MouseY) - BoardOrigin,
         BoardSize,
+        NaiwaP7::PresentationFirstVisibleRow,
+        NaiwaP7::PresentationVisibleRows,
         OutCell);
 }
 
@@ -193,7 +214,7 @@ void ANaiwaP7GrayboxPlayerController::SelectTowerSlot(const int32 SlotIndex)
     UNaiwaP7TowerDefenseSubsystem* P7Subsystem = GetP7Subsystem();
     if (!P7Subsystem || !P7Subsystem->GetSimulation().HasLevel())
     {
-        InteractionMessage = TEXT("Load a validated P7 level before selecting a tower.");
+        InteractionMessage = TEXT("关卡尚未加载，暂时不能选炮塔。");
         return;
     }
 
@@ -212,14 +233,14 @@ void ANaiwaP7GrayboxPlayerController::SelectTowerSlot(const int32 SlotIndex)
 
     if (!TowerIds.IsValidIndex(SlotIndex))
     {
-        InteractionMessage = TEXT("This tower slot has no loaded level-1 tower row.");
+        InteractionMessage = TEXT("这个炮塔栏位没有可用配置。");
         return;
     }
 
     SelectedTowerId = TowerIds[SlotIndex];
     bHasSelectedTowerCell = false;
-    InteractionMessage = FString::Printf(TEXT("Selected tower %s. Click an available build site."),
-        *SelectedTowerId.ToString());
+    InteractionMessage = FString::Printf(TEXT("已选%s：点击绿色建造位放置，右键可取消。"),
+        GetTowerDisplayName(SelectedTowerId));
 }
 
 void ANaiwaP7GrayboxPlayerController::ClearSelection()
@@ -227,7 +248,60 @@ void ANaiwaP7GrayboxPlayerController::ClearSelection()
     SelectedTowerId = NAME_None;
     SelectedTowerCell = FIntPoint::ZeroValue;
     bHasSelectedTowerCell = false;
-    InteractionMessage = TEXT("Selection cleared.");
+    InteractionMessage = TEXT("已取消当前选择。");
+}
+
+void ANaiwaP7GrayboxPlayerController::HandleHudAction(const ENaiwaP7HudAction Action)
+{
+    switch (Action)
+    {
+    case ENaiwaP7HudAction::TowerSlot1:
+        SelectTowerSlot(0);
+        return;
+    case ENaiwaP7HudAction::TowerSlot2:
+        SelectTowerSlot(1);
+        return;
+    case ENaiwaP7HudAction::TowerSlot3:
+        SelectTowerSlot(2);
+        return;
+    case ENaiwaP7HudAction::BeginWave:
+        HandleBeginWave(FInputActionValue());
+        return;
+    case ENaiwaP7HudAction::SelectRouteA:
+        HandleSelectRouteA(FInputActionValue());
+        return;
+    case ENaiwaP7HudAction::SelectRouteB:
+        HandleSelectRouteB(FInputActionValue());
+        return;
+    case ENaiwaP7HudAction::TogglePause:
+        HandleTogglePause(FInputActionValue());
+        return;
+    case ENaiwaP7HudAction::UpgradeSelectedTower:
+        HandleUpgrade(FInputActionValue());
+        return;
+    case ENaiwaP7HudAction::ClearSelectedTowerTarget:
+        HandleClearTowerTarget(FInputActionValue());
+        return;
+    case ENaiwaP7HudAction::RestartRun:
+    {
+        UNaiwaP7TowerDefenseSubsystem* P7Subsystem = GetP7Subsystem();
+        FString Error;
+        if (P7Subsystem && P7Subsystem->TryRestart(&Error))
+        {
+            SelectedTowerId = NAME_None;
+            SelectedTowerCell = FIntPoint::ZeroValue;
+            bHasSelectedTowerCell = false;
+            InteractionMessage = TEXT("新的一局开始了：先布防，再点击“开始第1波”。");
+        }
+        else
+        {
+            InteractionMessage = Error.IsEmpty() ? TEXT("本局暂时无法重开。") : Error;
+        }
+        return;
+    }
+    default:
+        return;
+    }
 }
 
 void ANaiwaP7GrayboxPlayerController::HandlePrimaryClick(const FInputActionValue& Value)
@@ -235,14 +309,38 @@ void ANaiwaP7GrayboxPlayerController::HandlePrimaryClick(const FInputActionValue
     UNaiwaP7TowerDefenseSubsystem* P7Subsystem = GetP7Subsystem();
     if (!P7Subsystem || !P7Subsystem->GetSimulation().HasLevel())
     {
-        InteractionMessage = TEXT("Load a validated P7 level before using the board.");
+        InteractionMessage = TEXT("关卡尚未加载，请检查 P7 关卡配置。");
         return;
+    }
+
+    float MouseX = 0.0f;
+    float MouseY = 0.0f;
+    if (GetMousePosition(MouseX, MouseY))
+    {
+        int32 ViewportWidth = 0;
+        int32 ViewportHeight = 0;
+        GetViewportSize(ViewportWidth, ViewportHeight);
+        const NaiwaP7::FSimulationSnapshot Snapshot = P7Subsystem->GetSnapshot();
+        const bool bIsTerminal = Snapshot.Phase == NaiwaP7::ESimulationPhase::Won ||
+            Snapshot.Phase == NaiwaP7::ESimulationPhase::Lost;
+        ENaiwaP7HudAction HudAction = ENaiwaP7HudAction::None;
+        if (ANaiwaP7GrayboxHUD::TryHitTestInteractiveAction(
+            FVector2D(static_cast<float>(ViewportWidth), static_cast<float>(ViewportHeight)),
+            FVector2D(MouseX, MouseY), HudAction, bHasSelectedTowerCell, bIsTerminal))
+        {
+            HandleHudAction(HudAction);
+            return;
+        }
+        if (bIsTerminal)
+        {
+            return;
+        }
     }
 
     FIntPoint Cell;
     if (!TryGetHoveredCell(Cell))
     {
-        InteractionMessage = TEXT("The pointer is outside the logical board.");
+        InteractionMessage = TEXT("鼠标不在棋盘内。");
         return;
     }
 
@@ -257,8 +355,8 @@ void ANaiwaP7GrayboxPlayerController::HandlePrimaryClick(const FInputActionValue
         SelectedTowerId = NAME_None;
         SelectedTowerCell = Cell;
         bHasSelectedTowerCell = true;
-        InteractionMessage = FString::Printf(TEXT("Selected tower %s, level %d."),
-            *ClickedTower->TowerId.ToString(), ClickedTower->Level);
+        InteractionMessage = FString::Printf(TEXT("已选%s %d级：可升级，或点击障碍指定清障目标。"),
+            GetTowerDisplayName(ClickedTower->TowerId), ClickedTower->Level);
         return;
     }
 
@@ -271,15 +369,15 @@ void ANaiwaP7GrayboxPlayerController::HandlePrimaryClick(const FInputActionValue
     {
         if (!bHasSelectedTowerCell)
         {
-            InteractionMessage = TEXT("Select a tower first, then click an obstacle to mark it.");
+            InteractionMessage = TEXT("先点击一座炮塔，再点击障碍，指定它优先清障。");
             return;
         }
 
         FString Error;
         if (P7Subsystem->TrySetTowerObstacleTarget(SelectedTowerCell, ClickedObstacle->ObstacleId, &Error))
         {
-            InteractionMessage = FString::Printf(TEXT("Tower target set to %s."),
-                *ClickedObstacle->ObstacleId.ToString());
+            InteractionMessage = FString::Printf(TEXT("已指定目标：%s。清除后可获得金币并解锁额外建造位。"),
+                ClickedObstacle->ObstacleId.ToString().EndsWith(TEXT("B")) ? TEXT("燕麦饼叠垛 B") : TEXT("奶油饼干箱 A"));
         }
         else
         {
@@ -291,8 +389,8 @@ void ANaiwaP7GrayboxPlayerController::HandlePrimaryClick(const FInputActionValue
     if (SelectedTowerId.IsNone())
     {
         InteractionMessage = bHasSelectedTowerCell
-            ? TEXT("Tower selected. Choose 1-3 to build, or click an obstacle to set its target.")
-            : TEXT("Choose tower 1-3, then click an available build site.");
+            ? TEXT("已选中炮塔：可点击炮塔栏选新塔，或点击障碍指定清障目标。")
+            : TEXT("先点击上方炮塔卡片，再点击绿色建造位放置。");
         return;
     }
 
@@ -301,8 +399,8 @@ void ANaiwaP7GrayboxPlayerController::HandlePrimaryClick(const FInputActionValue
     {
         SelectedTowerCell = Cell;
         bHasSelectedTowerCell = true;
-        InteractionMessage = FString::Printf(TEXT("Placed %s. Tower selected for upgrade/target commands."),
-            *SelectedTowerId.ToString());
+        InteractionMessage = FString::Printf(TEXT("已放置%s。可在下方升级，或点击障碍指定攻击目标。"),
+            GetTowerDisplayName(SelectedTowerId));
         SelectedTowerId = NAME_None;
     }
     else
@@ -336,14 +434,14 @@ void ANaiwaP7GrayboxPlayerController::HandleUpgrade(const FInputActionValue& Val
     UNaiwaP7TowerDefenseSubsystem* P7Subsystem = GetP7Subsystem();
     if (!P7Subsystem || !P7Subsystem->GetSimulation().HasLevel() || !bHasSelectedTowerCell)
     {
-        InteractionMessage = TEXT("Select a placed tower before upgrading.");
+        InteractionMessage = TEXT("请先点击棋盘上的炮塔，再执行升级。");
         return;
     }
 
     FString Error;
     if (P7Subsystem->TryUpgradeTower(SelectedTowerCell, &Error))
     {
-        InteractionMessage = TEXT("Tower upgraded.");
+        InteractionMessage = TEXT("升级完成。");
     }
     else
     {
@@ -356,14 +454,14 @@ void ANaiwaP7GrayboxPlayerController::HandleClearTowerTarget(const FInputActionV
     UNaiwaP7TowerDefenseSubsystem* P7Subsystem = GetP7Subsystem();
     if (!P7Subsystem || !P7Subsystem->GetSimulation().HasLevel() || !bHasSelectedTowerCell)
     {
-        InteractionMessage = TEXT("Select a placed tower before clearing its target.");
+        InteractionMessage = TEXT("请先点击棋盘上的炮塔，再恢复普通索敌。");
         return;
     }
 
     FString Error;
     if (P7Subsystem->TrySetTowerObstacleTarget(SelectedTowerCell, NAME_None, &Error))
     {
-        InteractionMessage = TEXT("Tower target cleared; normal enemy targeting resumes.");
+        InteractionMessage = TEXT("已恢复普通索敌，炮塔会继续攻击路径上的敌人。");
     }
     else
     {
@@ -376,14 +474,15 @@ void ANaiwaP7GrayboxPlayerController::HandleBeginWave(const FInputActionValue& V
     UNaiwaP7TowerDefenseSubsystem* P7Subsystem = GetP7Subsystem();
     if (!P7Subsystem || !P7Subsystem->GetSimulation().HasLevel())
     {
-        InteractionMessage = TEXT("Load a validated P7 level before starting a wave.");
+        InteractionMessage = TEXT("关卡尚未加载，暂时不能开始波次。");
         return;
     }
 
     FString Error;
     if (P7Subsystem->TryBeginNextWave(&Error))
     {
-        InteractionMessage = TEXT("Wave started.");
+        InteractionMessage = FString::Printf(TEXT("第 %d 波开始！守住奶罐。"),
+            P7Subsystem->GetSnapshot().CurrentWave);
     }
     else
     {
@@ -396,13 +495,13 @@ void ANaiwaP7GrayboxPlayerController::HandleTogglePause(const FInputActionValue&
     UNaiwaP7TowerDefenseSubsystem* P7Subsystem = GetP7Subsystem();
     if (!P7Subsystem)
     {
-        InteractionMessage = TEXT("P7 simulation is unavailable.");
+        InteractionMessage = TEXT("P7 模拟器暂不可用。");
         return;
     }
 
     const bool bNewPaused = !P7Subsystem->IsPaused();
     P7Subsystem->SetPaused(bNewPaused);
-    InteractionMessage = bNewPaused ? TEXT("Simulation paused.") : TEXT("Simulation resumed.");
+    InteractionMessage = bNewPaused ? TEXT("已暂停。") : TEXT("继续防守。");
 }
 
 void ANaiwaP7GrayboxPlayerController::HandleSelectRouteA(const FInputActionValue& Value)
@@ -411,11 +510,11 @@ void ANaiwaP7GrayboxPlayerController::HandleSelectRouteA(const FInputActionValue
     FString Error;
     if (P7Subsystem && P7Subsystem->TrySelectRoute(NaiwaP7::ERoute::A, &Error))
     {
-        InteractionMessage = TEXT("Route A selected.");
+        InteractionMessage = TEXT("已选择 A 路线：直行。仅可在布防阶段切换。 ");
     }
     else
     {
-        InteractionMessage = P7Subsystem ? Error : TEXT("P7 simulation is unavailable.");
+        InteractionMessage = P7Subsystem ? Error : TEXT("P7 模拟器暂不可用。");
     }
 }
 
@@ -425,10 +524,10 @@ void ANaiwaP7GrayboxPlayerController::HandleSelectRouteB(const FInputActionValue
     FString Error;
     if (P7Subsystem && P7Subsystem->TrySelectRoute(NaiwaP7::ERoute::B, &Error))
     {
-        InteractionMessage = TEXT("Route B selected.");
+        InteractionMessage = TEXT("已选择 B 路线：上方绕行。仅可在布防阶段切换。");
     }
     else
     {
-        InteractionMessage = P7Subsystem ? Error : TEXT("P7 simulation is unavailable.");
+        InteractionMessage = P7Subsystem ? Error : TEXT("P7 模拟器暂不可用。");
     }
 }

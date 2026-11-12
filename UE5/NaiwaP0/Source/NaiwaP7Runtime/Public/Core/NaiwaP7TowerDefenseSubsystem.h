@@ -20,6 +20,7 @@ public:
 
     bool LoadLevel(const NaiwaP7::FLevelDefinition& Level, FString* OutError = nullptr);
     bool LoadFixture(const NaiwaP7::FAlphaDataFixture& Fixture, FString* OutError = nullptr);
+    bool TryRestart(FString* OutError = nullptr);
     bool LoadFromDataTables(
         const UDataTable* LevelTable,
         const UDataTable* TowerTable,
@@ -44,5 +45,7 @@ public:
 
 private:
     NaiwaP7::FSimulation Simulation;
+    NaiwaP7::FAlphaDataFixture RestartFixture;
+    bool bHasRestartFixture = false;
     bool bPaused = false;
 };

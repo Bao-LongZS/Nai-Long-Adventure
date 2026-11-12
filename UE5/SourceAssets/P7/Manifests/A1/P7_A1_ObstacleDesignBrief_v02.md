@@ -27,4 +27,10 @@
 
 ## 状态
 
-六项均为 v02 视觉候选；待用户评审。48px 缩略、灰度/色盲辨识、透明边缘、场内相对尺寸、破坏进度节奏与 UE 导入仍待验证。
+六项均为 v02 视觉候选；待用户评审。2026-11-11 已完成 48px 彩色/灰度缩略和透明边缘预览，见[评审页](../../Environment/A1/Review/P7_A1_DestructibleObstacleReadabilityReview_v01.png)。三态的裂纹/缺口在缩略下仍可辨；场内相对尺寸、受击状态切换节奏、路线遮挡与 UE 导入仍待验证。
+
+评审页可用 `UE5/Scripts/build_p7_obstacle_readability_review_v01.ps1` 复建；脚本只读取图集，不改写 SVG 或 PNG 源文件。
+
+## 2026-11-12 棋盘组合补充
+
+新增[Alpha01 A/B 棋盘拼装评审板 v02](../../Environment/A1/Review/P7_A1_TerrainObstacleIntegrationReview_v02.png)，用于同时检查场内相对尺寸与两类障碍在实际位置的遮挡关系。预览在 `(4,9)`、`(15,9)` 各放置一种候选外形作示例；当前运行数据仅标记 `CrateA/CrateB`，两者与图录外形的最终映射未确认。组合预览不代表导入、批准或实际受击状态切换。

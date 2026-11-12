@@ -21,4 +21,4 @@
 - 炮塔新稿的干燥哑光质感需逐张检查。
 - 1080p/720p、灰度、48px缩略与色盲替代编码检查尚未完成。
 - 地面底图需对齐 20×11 BoardRect，再确定裁切与与 tile atlas 的图层关系。
-- UE 导入/运行证据尚未制作。
+- 用户通过的地面主底图已于 2026-11-11 导入为 `/Game/Naiwa/P7/Environment/A0/T_P7_A0_GroundBoard_Field_v01`；灰盒 HUD 按 board 区域比例居中裁切并铺在网格下方。Editor/Game 编译和 Cook/Stage 通过，但接入后的 viewport 启动返回 777006，尚无实际地图截图，裁切贴合仍待视觉验收。导入报告见 `../../Records/p7_td/evidence/P7_ApprovedMapPresentationAssetImport_2026-11-11_22-36-25.json`。

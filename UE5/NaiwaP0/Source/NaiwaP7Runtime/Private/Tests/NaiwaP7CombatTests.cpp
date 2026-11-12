@@ -1,6 +1,11 @@
 #if WITH_DEV_AUTOMATION_TESTS
 
 #include "Core/NaiwaP7Simulation.h"
+#include "Core/NaiwaP7TowerDefenseSubsystem.h"
+#include "Presentation/NaiwaP7GrayboxPlayerController.h"
+#include "EnhancedInputComponent.h"
+#include "EnhancedPlayerInput.h"
+#include "Engine/World.h"
 #include "Misc/AutomationTest.h"
 
 namespace
@@ -104,6 +109,124 @@ namespace
         }
         return Fixture;
     }
+}
+
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(
+    FNaiwaP7RuntimeInputDispatchTest,
+    "Naiwa.P7.Presentation.RuntimeInputDispatch",
+    EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
+
+bool FNaiwaP7RuntimeInputDispatchTest::RunTest(const FString& Parameters)
+{
+    UWorld* TestWorld = UWorld::CreateWorld(EWorldType::Game, false);
+    TestNotNull(TEXT("Test world can be created for input dispatch"), TestWorld);
+    if (!TestWorld)
+    {
+        return false;
+    }
+
+    UNaiwaP7TowerDefenseSubsystem* P7Subsystem = TestWorld->GetSubsystem<UNaiwaP7TowerDefenseSubsystem>();
+    TestNotNull(TEXT("Test world provides the P7 simulation subsystem"), P7Subsystem);
+    if (!P7Subsystem)
+    {
+        TestWorld->DestroyWorld(false);
+        return false;
+    }
+    FString FixtureError;
+    const bool bFixtureLoaded = P7Subsystem->LoadFixture(MakeCombatFixture(), &FixtureError);
+    TestTrue(*FString::Printf(TEXT("Combat fixture loads: %s"), *FixtureError), bFixtureLoaded);
+    if (!bFixtureLoaded)
+    {
+        TestWorld->DestroyWorld(false);
+        return false;
+    }
+
+    ANaiwaP7GrayboxPlayerController* Controller = TestWorld->SpawnActor<ANaiwaP7GrayboxPlayerController>();
+    TestNotNull(TEXT("Graybox controller can be spawned for input dispatch"), Controller);
+    if (!Controller)
+    {
+        TestWorld->DestroyWorld(false);
+        return false;
+    }
+
+    Controller->SetupInputComponent();
+    UEnhancedInputComponent* EnhancedInput = Cast<UEnhancedInputComponent>(Controller->InputComponent.Get());
+    TestNotNull(TEXT("Controller installs an Enhanced Input component"), EnhancedInput);
+    if (!EnhancedInput)
+    {
+        TestWorld->DestroyWorld(false);
+        return false;
+    }
+
+    TArray<UInputComponent*> InputStack = { EnhancedInput };
+    auto InjectAndProcess = [&InputStack](UInputAction* Action)
+    {
+        UEnhancedPlayerInput* PlayerInput = NewObject<UEnhancedPlayerInput>(GetTransientPackage());
+        PlayerInput->InjectInputForAction(Action, FInputActionValue(true));
+        PlayerInput->ProcessInputStack(InputStack, 1.0f / 60.0f, false);
+    };
+
+    InjectAndProcess(Controller->SelectTowerOneAction);
+    TestEqual(TEXT("Tower slot 1 selects the first sorted tower"), Controller->GetSelectedTowerId(), FName(TEXT("Area")));
+    Controller->bAutomationHasHoveredCell = true;
+    Controller->AutomationHoveredCell = FIntPoint(2, 8);
+    InjectAndProcess(Controller->PrimaryClickAction);
+    NaiwaP7::FSimulationSnapshot Snapshot = P7Subsystem->GetSnapshot();
+    TestEqual(TEXT("Primary-click action builds the selected tower at the hovered cell"), Snapshot.Towers.Num(), 1);
+    if (Snapshot.Towers.Num() != 1)
+    {
+        TestWorld->DestroyWorld(false);
+        return false;
+    }
+    TestEqual(TEXT("Build click places the correct tower"), Snapshot.Towers[0].TowerId, FName(TEXT("Area")));
+    TestEqual(TEXT("Build click deducts level-one cost"), Snapshot.Coins, 90);
+
+    InjectAndProcess(Controller->UpgradeAction);
+    Snapshot = P7Subsystem->GetSnapshot();
+    TestEqual(TEXT("U action upgrades the selected tower"), Snapshot.Towers[0].Level, 2);
+
+    Controller->AutomationHoveredCell = FIntPoint(3, 9);
+    InjectAndProcess(Controller->PrimaryClickAction);
+    Snapshot = P7Subsystem->GetSnapshot();
+    TestEqual(TEXT("Clicking obstacle assigns it as the selected tower target"),
+        Snapshot.Towers[0].TargetObstacleId, FName(TEXT("Obstacle_A")));
+
+    InjectAndProcess(Controller->ClearTowerTargetAction);
+    Snapshot = P7Subsystem->GetSnapshot();
+    TestTrue(TEXT("C action clears the obstacle target"), Snapshot.Towers[0].TargetObstacleId.IsNone());
+
+    InjectAndProcess(Controller->SecondaryClickAction);
+    TestTrue(TEXT("Right-click action clears the selected tower cell"), !Controller->HasSelectedTowerCell());
+
+    InjectAndProcess(Controller->SelectRouteBAction);
+    TestEqual(TEXT("B action selects route B in preparation"),
+        static_cast<uint8>(P7Subsystem->GetSimulation().GetActiveRoute()), static_cast<uint8>(NaiwaP7::ERoute::B));
+    InjectAndProcess(Controller->BeginWaveAction);
+    TestEqual(TEXT("N action starts wave one"), P7Subsystem->GetSimulation().GetCurrentWave(), 1);
+    TestEqual(TEXT("Wave action enters active combat"),
+        static_cast<uint8>(P7Subsystem->GetSimulation().GetPhase()),
+        static_cast<uint8>(NaiwaP7::ESimulationPhase::WaveActive));
+
+    InjectAndProcess(Controller->SelectRouteAAction);
+    TestEqual(TEXT("Route choice is locked after combat starts"),
+        static_cast<uint8>(P7Subsystem->GetSimulation().GetActiveRoute()), static_cast<uint8>(NaiwaP7::ERoute::B));
+    InjectAndProcess(Controller->TogglePauseAction);
+    TestTrue(TEXT("Space action pauses the simulation"), P7Subsystem->IsPaused());
+    InjectAndProcess(Controller->TogglePauseAction);
+    TestFalse(TEXT("Second Space action resumes the simulation"), P7Subsystem->IsPaused());
+
+    for (int32 Frame = 0; Frame < 20 && P7Subsystem->GetSimulation().GetPhase() == NaiwaP7::ESimulationPhase::WaveActive; ++Frame)
+    {
+        P7Subsystem->Tick(1.0f / 60.0f);
+    }
+    Snapshot = P7Subsystem->GetSnapshot();
+    TestEqual(TEXT("Defeating the final enemy automatically returns to preparation"),
+        static_cast<uint8>(Snapshot.Phase), static_cast<uint8>(NaiwaP7::ESimulationPhase::BetweenWaves));
+    TestEqual(TEXT("Automatically completed wave leaves no enemies"), Snapshot.Enemies.Num(), 0);
+    TestEqual(TEXT("Wave completion preserves the current wave number"), Snapshot.CurrentWave, 1);
+
+    TestWorld->DestroyWorld(false);
+    return true;
 }
 
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(

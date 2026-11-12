@@ -6,6 +6,9 @@ namespace NaiwaP7
 {
     inline constexpr int32 BoardColumns = 20;
     inline constexpr int32 BoardRows = 11;
+    // The presentation trims unused rows while retaining the stable 20x11 gameplay coordinates.
+    inline constexpr int32 PresentationFirstVisibleRow = 3;
+    inline constexpr int32 PresentationVisibleRows = 7;
     inline constexpr int32 VisibleBuildSiteCount = 8;
     inline constexpr int32 HiddenBuildSiteCount = 2;
     inline constexpr double ReferenceCellWidth = 96.0;
@@ -51,6 +54,14 @@ namespace NaiwaP7
     NAIWAP7RUNTIME_API bool TryMapBoardPointToCell(
         const FVector2D& BoardLocalPoint,
         const FVector2D& BoardSize,
+        FIntPoint& OutCell);
+
+    /** Maps the cropped presentation board back to the stable logical row range. */
+    NAIWAP7RUNTIME_API bool TryMapBoardPointToCell(
+        const FVector2D& BoardLocalPoint,
+        const FVector2D& BoardSize,
+        int32 FirstVisibleRow,
+        int32 VisibleRows,
         FIntPoint& OutCell);
 
     /** Validates the alpha fixture without depending on P4/P5 data or runtime types. */

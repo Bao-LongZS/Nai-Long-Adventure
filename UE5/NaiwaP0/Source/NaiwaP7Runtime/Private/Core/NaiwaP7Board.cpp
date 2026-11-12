@@ -80,6 +80,37 @@ namespace NaiwaP7
         return true;
     }
 
+    bool TryMapBoardPointToCell(
+        const FVector2D& BoardLocalPoint,
+        const FVector2D& BoardSize,
+        const int32 FirstVisibleRow,
+        const int32 VisibleRows,
+        FIntPoint& OutCell)
+    {
+        if (FirstVisibleRow < 0 || VisibleRows <= 0 ||
+            FirstVisibleRow + VisibleRows > BoardRows ||
+            !FMath::IsFinite(BoardLocalPoint.X) || !FMath::IsFinite(BoardLocalPoint.Y) ||
+            !FMath::IsFinite(BoardSize.X) || !FMath::IsFinite(BoardSize.Y) ||
+            BoardSize.X <= 0.0 || BoardSize.Y <= 0.0 ||
+            BoardLocalPoint.X < 0.0 || BoardLocalPoint.Y < 0.0 ||
+            BoardLocalPoint.X >= BoardSize.X || BoardLocalPoint.Y >= BoardSize.Y)
+        {
+            return false;
+        }
+
+        const int32 Column = FMath::FloorToInt(BoardLocalPoint.X * BoardColumns / BoardSize.X);
+        const int32 Row = FirstVisibleRow +
+            FMath::FloorToInt(BoardLocalPoint.Y * VisibleRows / BoardSize.Y);
+        const FIntPoint MappedCell(Column, Row);
+        if (!IsCellInBounds(MappedCell) || Row >= FirstVisibleRow + VisibleRows)
+        {
+            return false;
+        }
+
+        OutCell = MappedCell;
+        return true;
+    }
+
     FValidationResult ValidateLevelDefinition(const FLevelDefinition& Level)
     {
         if (Level.LevelId.IsNone())

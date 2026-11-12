@@ -7,6 +7,7 @@
 class UInputAction;
 class UInputMappingContext;
 class UNaiwaP7TowerDefenseSubsystem;
+enum class ENaiwaP7HudAction : uint8;
 struct FInputActionValue;
 
 /** Mouse-cursor owner for the temporary P7 graybox interaction surface. */
@@ -29,12 +30,18 @@ public:
     const FString& GetInteractionMessage() const { return InteractionMessage; }
 
 private:
+#if WITH_DEV_AUTOMATION_TESTS
+    friend class FNaiwaP7RuntimeInputBindingsTest;
+    friend class FNaiwaP7RuntimeInputDispatchTest;
+#endif
+
     void CreateRuntimeInputContext();
     void AddRuntimeInputContext();
     void RemoveRuntimeInputContext();
     UNaiwaP7TowerDefenseSubsystem* GetP7Subsystem() const;
     void SelectTowerSlot(int32 SlotIndex);
     void ClearSelection();
+    void HandleHudAction(ENaiwaP7HudAction Action);
     void HandlePrimaryClick(const FInputActionValue& Value);
     void HandleSecondaryClick(const FInputActionValue& Value);
     void HandleSelectTowerOne(const FInputActionValue& Value);
@@ -87,5 +94,10 @@ private:
     FIntPoint SelectedTowerCell = FIntPoint::ZeroValue;
     bool bHasSelectedTowerCell = false;
     bool bRuntimeInputContextAdded = false;
-    FString InteractionMessage = TEXT("Choose tower 1-3, then click a build site.");
+    FString InteractionMessage = TEXT("点击上方炮塔卡片，再点击绿色建造位放置。");
+
+#if WITH_DEV_AUTOMATION_TESTS
+    bool bAutomationHasHoveredCell = false;
+    FIntPoint AutomationHoveredCell = FIntPoint::ZeroValue;
+#endif
 };

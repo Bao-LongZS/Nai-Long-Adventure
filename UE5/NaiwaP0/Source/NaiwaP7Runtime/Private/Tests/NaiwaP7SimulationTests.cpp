@@ -93,15 +93,22 @@ bool FNaiwaP7SimulationRouteAndReplayTest::RunTest(const FString& Parameters)
     TestEqual(TEXT("Leaked enemy removes one jar health"), Snapshot.MilkJarHealth, 9);
     TestEqual(TEXT("Leaked enemy leaves the active set"), Snapshot.Enemies.Num(), 0);
     TestEqual(TEXT("Replay hash remains identical after leak"), First.ComputeStateHash(), Replay.ComputeStateHash());
-    TestTrue(TEXT("Empty wave can be completed"), First.TryCompleteCurrentWave());
-    TestTrue(TEXT("Replay completes same wave"), Replay.TryCompleteCurrentWave());
+    TestEqual(TEXT("An empty schedule auto-completes after its last enemy leaks"),
+        static_cast<uint8>(First.GetPhase()), static_cast<uint8>(NaiwaP7::ESimulationPhase::BetweenWaves));
+    TestEqual(TEXT("Replay also auto-completes the same wave"), First.ComputeStateHash(), Replay.ComputeStateHash());
 
     for (int32 Wave = 2; Wave <= NaiwaP7::FSimulation::AlphaWaveCount; ++Wave)
     {
         TestTrue(TEXT("Next wave starts from preparation"), First.TryBeginNextWave());
         TestTrue(TEXT("Replay starts same next wave"), Replay.TryBeginNextWave());
-        TestTrue(TEXT("Empty fixture wave completes"), First.TryCompleteCurrentWave());
-        TestTrue(TEXT("Replay empty wave completes"), Replay.TryCompleteCurrentWave());
+        TestEqual(TEXT("Empty wave advances one simulation step"), First.AdvanceFixedSteps(1), 1);
+        TestEqual(TEXT("Replay advances the same empty wave"), Replay.AdvanceFixedSteps(1), 1);
+        const NaiwaP7::ESimulationPhase ExpectedPhase = Wave == NaiwaP7::FSimulation::AlphaWaveCount
+            ? NaiwaP7::ESimulationPhase::Won
+            : NaiwaP7::ESimulationPhase::BetweenWaves;
+        TestEqual(TEXT("Empty wave automatically advances or wins"),
+            static_cast<uint8>(First.GetPhase()), static_cast<uint8>(ExpectedPhase));
+        TestEqual(TEXT("Replay phase remains deterministic"), First.ComputeStateHash(), Replay.ComputeStateHash());
     }
     TestEqual(TEXT("Eight completed waves win the level"), static_cast<uint8>(First.GetPhase()), static_cast<uint8>(NaiwaP7::ESimulationPhase::Won));
     TestFalse(TEXT("Leaked enemy means the jar is not full"), First.MakeSnapshot().bMilkJarFull);

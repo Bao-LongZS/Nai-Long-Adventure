@@ -1,0 +1,21 @@
+{
+  "test": "Cooked P7 real-RHI viewport screenshot 1280x720",
+  "status": "FAIL",
+  "startedAt": "2026-11-09 10:06:57+08:00",
+  "processExitCode": null,
+  "renderPath": "Direct3D 12 / PCD3D_SM6 expected; see engine log",
+  "map": "/Game/Naiwa/P7/Maps/L_P7_Alpha01_Graybox",
+  "targetMapReportedLoaded": true,
+  "p7FixtureLoaded": true,
+  "engineInitialized": true,
+  "screenshotLogged": true,
+  "requestedWidth": 1280,
+  "requestedHeight": 720,
+  "actualWidth": 1280,
+  "actualHeight": 720,
+  "cleanExitReported": false,
+  "screenshot": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_AlphaGraybox_1280x720_2026-11-09_10-06-57.png",
+  "engineLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_AlphaGrayboxViewport_1280x720_2026-11-09_10-06-57.log",
+  "stdoutLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_AlphaGrayboxViewport_1280x720_2026-11-09_10-06-57.stdout.log",
+  "stderrLog": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_AlphaGrayboxViewport_1280x720_2026-11-09_10-06-57.stderr.log"
+}

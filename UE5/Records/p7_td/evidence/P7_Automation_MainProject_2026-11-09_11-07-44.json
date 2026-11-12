@@ -1,0 +1,41 @@
+﻿{
+    "test":  "P7 automation suite in the main Nai_Long project",
+    "status":  "PASS_TESTS_EXIT_CODE_UNKNOWN",
+    "startedAt":  "2026-11-09 11:07:44+08:00",
+    "timeoutSeconds":  180,
+    "project":  "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\NaiwaP0\\Nai_Long.uproject",
+    "processExitCode":  null,
+    "processFinishedNaturally":  true,
+    "testsPassed":  true,
+    "processClosedByHarness":  false,
+    "expectedCount":  16,
+    "completed":  [
+                      "Naiwa.P7.Board.LevelDefinitionValidation",
+                      "Naiwa.P7.Board.MappingAcrossResolutions",
+                      "Naiwa.P7.Combat.AreaDamageAndSlowSupport",
+                      "Naiwa.P7.Combat.BuildUpgradeObstacleUnlock",
+                      "Naiwa.P7.Combat.InterferenceStableTargetAndExpiry",
+                      "Naiwa.P7.Data.AlphaFixtureAssetAssembly",
+                      "Naiwa.P7.Data.AlphaSchemaValidation",
+                      "Naiwa.P7.Data.CsvArrayImport",
+                      "Naiwa.P7.Data.DataTableFixtureAssembly",
+                      "Naiwa.P7.Presentation.BoardRectResolutionParity",
+                      "Naiwa.P7.Presentation.RuntimeInputBindings",
+                      "Naiwa.P7.Presentation.RuntimeInputDispatch",
+                      "Naiwa.P7.Simulation.CatchUpBacklogIsRetained",
+                      "Naiwa.P7.Simulation.JarReachesZeroOnLeak",
+                      "Naiwa.P7.Simulation.RouteMovementAndReplay",
+                      "Naiwa.P7.Waves.DelayIntervalAndPendingCompletionGate"
+                  ],
+    "failed":  [
+
+               ],
+    "missing":  [
+
+                ],
+    "unexpected":  [
+
+                   ],
+    "engineLog":  "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_Automation_MainProject_2026-11-09_11-07-44.log",
+    "consoleLog":  "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_Automation_MainProject_2026-11-09_11-07-44.console.log"
+}

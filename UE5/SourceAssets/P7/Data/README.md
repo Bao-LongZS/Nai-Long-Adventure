@@ -2,4 +2,4 @@
 
 此目录的 `P7_Alpha01_*.csv` 是当前 P7 灰盒工程接线用的单一数据源候选：一个 20×11 关卡、A/B 两条共用起终点的预设路线、8 个可见建造位、2 个清障解锁位、3 类塔各 3 级、3 类敌人、2 个障碍和 8 波刷怪表。
 
-这些数值用于接通 DataTable → C++ 校验器 → 灰盒 GameMode/模拟器的真实资产链路，版本状态是 **技术验证候选、未获 G0 设计签收**。5 张表已导入 `/Game/Naiwa/P7/Data/` 并通过主工程自动化与 Development cooked 地图启动；证据见 `UE5/Records/p7_td/evidence/P7_AlphaFixtureImport_2026-11-02_12-10-27.json`、`P7_Automation_MainProject_2026-11-02_12-17-49.json` 和 `P7_MainGameCookedStartup_2026-11-02_12-16-40.json`。负责人、测试 PC、玩家经济节奏与难度仍需项目/设计负责人确认；未确认前不得当作正式平衡数值。CSV 文件名和行名应保持稳定，变更时提升版本并同步校验报告。
+这些数值用于接通 DataTable → C++ 校验器 → 灰盒 GameMode/模拟器的真实资产链路，版本状态是 **技术验证候选、未获 G0 设计签收**。5 张表已导入 `/Game/Naiwa/P7/Data/`；截至 2026-11-11，主工程和隔离工程自动化均 16/16 通过，Development cooked 地图启动、五表装配和 1280×720/1920×1080 RHI 捕获均有通过证据。最新桌面包启动日志确认 P7 地图及五表装配且 clean exit；实体键鼠实操仍待完成。当前索引见[P7 G0 依赖登记表](../../../Records/p7_td/P7_G0_DEPENDENCY_REGISTER_2026-11-11.md)、[进度 checkpoint](../../../Records/p7_td/P7_PROGRESS_CHECKPOINT_2026-11-11.md)与[实体试玩卡](../../../Records/p7_td/P7_MANUAL_INPUT_TRIAL_CARD_2026-11-11.md)。负责人、参考测试 PC、玩家经济节奏与难度仍需项目/设计负责人确认；未确认前不得当作正式平衡数值。CSV 文件名和行名应保持稳定，变更时提升版本并同步校验报告。

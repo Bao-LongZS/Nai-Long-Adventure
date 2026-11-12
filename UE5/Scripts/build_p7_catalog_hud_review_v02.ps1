@@ -1,0 +1,103 @@
+﻿param()
+
+$ErrorActionPreference = 'Stop'
+Add-Type -AssemblyName System.Drawing
+
+$ueRoot = Split-Path $PSScriptRoot -Parent
+$sourceRoot = Join-Path $ueRoot 'SourceAssets\P7\Characters\A1\CatalogDirect'
+$reviewRoot = Join-Path $ueRoot 'SourceAssets\P7\Characters\A1\Review'
+New-Item -ItemType Directory -Force -Path $reviewRoot | Out-Null
+$outputPath = Join-Path $reviewRoot 'P7_A1_CatalogHUDPortraitReview_v02.png'
+
+$items = @(
+    @{ File = 'P7_A1_CharacterHUD_Idle_Figure139_v02.png'; State = '常态'; Figure = '图录 139 · 仰首静立'; Page = '书内第 110 页 / PDF 第 118 页'; Use = 'HUD 常态提示候选' },
+    @{ File = 'P7_A1_CharacterHUD_Laugh_Figure079_v02.png'; State = '大笑'; Figure = '图录 079 · 团身翻滚'; Page = '书内第 105 页 / PDF 第 113 页'; Use = 'HUD 轻松反应候选' },
+    @{ File = 'P7_A1_CharacterHUD_Victory_Figure121_v02.png'; State = '胜利'; Figure = '图录 121 · 滑跪庆祝'; Page = '书内第 109 页 / PDF 第 117 页'; Use = 'HUD 胜利反馈候选' },
+    @{ File = 'P7_A1_CharacterHUD_Distress_Figure106_v02.png'; State = '失守'; Figure = '图录 106 · 失落蹲坐'; Page = '书内第 107 页 / PDF 第 115 页'; Use = 'HUD 失守反馈候选' }
+)
+
+$canvasWidth = 1600
+$canvasHeight = 1320
+$bitmap = [System.Drawing.Bitmap]::new($canvasWidth, $canvasHeight)
+$graphics = [System.Drawing.Graphics]::FromImage($bitmap)
+$graphics.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::HighQuality
+$graphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+$graphics.PixelOffsetMode = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality
+$graphics.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::AntiAliasGridFit
+$graphics.Clear([System.Drawing.Color]::FromArgb(244, 241, 232))
+
+$titleFont = [System.Drawing.Font]::new('Microsoft YaHei UI', 30, [System.Drawing.FontStyle]::Bold)
+$subtitleFont = [System.Drawing.Font]::new('Microsoft YaHei UI', 15, [System.Drawing.FontStyle]::Regular)
+$stateFont = [System.Drawing.Font]::new('Microsoft YaHei UI', 22, [System.Drawing.FontStyle]::Bold)
+$bodyFont = [System.Drawing.Font]::new('Microsoft YaHei UI', 15, [System.Drawing.FontStyle]::Regular)
+$smallFont = [System.Drawing.Font]::new('Microsoft YaHei UI', 12, [System.Drawing.FontStyle]::Regular)
+$tinyFont = [System.Drawing.Font]::new('Microsoft YaHei UI', 10, [System.Drawing.FontStyle]::Regular)
+$darkBrush = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(48, 52, 58))
+$mutedBrush = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(98, 99, 96))
+$accentBrush = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(193, 137, 50))
+$cardBrush = [System.Drawing.SolidBrush]::new([System.Drawing.Color]::White)
+$cardBorder = [System.Drawing.Pen]::new([System.Drawing.Color]::FromArgb(220, 215, 205), 2)
+$whitePen = [System.Drawing.Pen]::new([System.Drawing.Color]::FromArgb(232, 230, 224), 1)
+
+$graphics.DrawString('奶蛙学图录原图 · P7 HUD 状态候选 v02', $titleFont, $darkBrush, 48, 34)
+$graphics.DrawString('直接从图录页面裁切；保留原图白底与造型，不改色、不重绘。当前用于 UI 选型与缩略可读性评审。', $subtitleFont, $mutedBrush, 52, 82)
+
+$cardWidth = 736
+$cardHeight = 520
+$lefts = @(48, 816)
+$tops = @(130, 670)
+
+for ($i = 0; $i -lt $items.Count; $i++) {
+    $item = $items[$i]
+    $x = $lefts[$i % 2]
+    $y = $tops[[int][Math]::Floor($i / 2)]
+    $cardRect = [System.Drawing.Rectangle]::new($x, $y, $cardWidth, $cardHeight)
+    $graphics.FillRectangle($cardBrush, $cardRect)
+    $graphics.DrawRectangle($cardBorder, $cardRect)
+
+    $imagePath = Join-Path $sourceRoot $item.File
+    if (-not (Test-Path -LiteralPath $imagePath)) { throw "Missing source image: $imagePath" }
+    $sourceImage = [System.Drawing.Image]::FromFile($imagePath)
+    $artRect = [System.Drawing.Rectangle]::new($x + 18, $y + 18, 374, 374)
+    $graphics.FillRectangle([System.Drawing.SolidBrush]::new([System.Drawing.Color]::White), $artRect)
+    $graphics.DrawImage($sourceImage, $artRect)
+    $graphics.DrawRectangle($whitePen, $artRect)
+
+    $textX = $x + 416
+    $graphics.DrawString($item.State, $stateFont, $accentBrush, $textX, $y + 28)
+    $graphics.DrawString($item.Figure, $bodyFont, $darkBrush, $textX, $y + 82)
+    $graphics.DrawString($item.Page, $smallFont, $mutedBrush, $textX, $y + 116)
+    $graphics.DrawString($item.Use, $smallFont, $mutedBrush, $textX, $y + 150)
+    $graphics.DrawString('48 px 检查', $smallFont, $darkBrush, $textX, $y + 212)
+
+    $colorThumb = [System.Drawing.Rectangle]::new($textX, $y + 244, 96, 96)
+    $grayThumb = [System.Drawing.Rectangle]::new($textX + 120, $y + 244, 96, 96)
+    $graphics.DrawImage($sourceImage, $colorThumb)
+    $graphics.DrawRectangle($whitePen, $colorThumb)
+    $matrix = [System.Drawing.Imaging.ColorMatrix]::new()
+    $matrix.Matrix00 = 0.299; $matrix.Matrix01 = 0.299; $matrix.Matrix02 = 0.299
+    $matrix.Matrix10 = 0.587; $matrix.Matrix11 = 0.587; $matrix.Matrix12 = 0.587
+    $matrix.Matrix20 = 0.114; $matrix.Matrix21 = 0.114; $matrix.Matrix22 = 0.114
+    $attributes = [System.Drawing.Imaging.ImageAttributes]::new()
+    $attributes.SetColorMatrix($matrix)
+    $graphics.DrawImage($sourceImage, $grayThumb, 0, 0, $sourceImage.Width, $sourceImage.Height, [System.Drawing.GraphicsUnit]::Pixel, $attributes)
+    $graphics.DrawRectangle($whitePen, $grayThumb)
+    $graphics.DrawString('彩色', $tinyFont, $mutedBrush, $textX + 26, $y + 348)
+    $graphics.DrawString('灰度', $tinyFont, $mutedBrush, $textX + 154, $y + 348)
+    $sourceImage.Dispose()
+}
+
+$graphics.DrawLine($cardBorder, 48, 1208, 1552, 1208)
+$graphics.DrawString('来源：《奶蛙学：基础教程》“奶蛙形态图谱”；书内页 105、107、109、110（PDF 页 113、115、117、118）。', $smallFont, $mutedBrush, 52, 1223)
+$graphics.DrawString('页脚可见来源标记“小红书号：hongyx”。保留原图白底；未抠透明、未重绘、未导入 UE。', $smallFont, $mutedBrush, 52, 1250)
+$graphics.DrawString('仅作 P7 HUD 头像/结果反馈候选；具体状态和 720p/1080p 游戏内比例待确认。', $smallFont, $mutedBrush, 52, 1277)
+
+$bitmap.Save($outputPath, [System.Drawing.Imaging.ImageFormat]::Png)
+$graphics.Dispose()
+$bitmap.Dispose()
+foreach ($font in @($titleFont,$subtitleFont,$stateFont,$bodyFont,$smallFont,$tinyFont)) { $font.Dispose() }
+foreach ($brush in @($darkBrush,$mutedBrush,$accentBrush,$cardBrush)) { $brush.Dispose() }
+$cardBorder.Dispose()
+$whitePen.Dispose()
+
+Write-Output $outputPath

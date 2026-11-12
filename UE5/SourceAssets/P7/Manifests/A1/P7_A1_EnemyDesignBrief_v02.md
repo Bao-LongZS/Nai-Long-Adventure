@@ -1,7 +1,7 @@
 # P7 A1 Enemy Animation Frames v02
 
 Date: 2026-11-01 (Asia/Shanghai)
-Status: all three Alpha enemy roles now have a three-frame source set. The original normal and fast silhouettes were approved by the user. Four normal/fast motion frames and both jammer continuation frames are new candidates awaiting motion-set review. No timing, UE import or in-game scale acceptance is claimed.
+Status: all three Alpha enemy roles have a three-frame baseline set. The original normal and fast silhouettes are user-approved. The six baseline continuation frames remain candidates awaiting motion-set review. Normal and jammer F01 compressed-step v02 alternatives were approved on 2026-11-12; the fast-enemy F01 compressed-step v02 alternative was generated on 2026-11-12 and is awaiting user review. No timing, UE import or in-game scale acceptance is claimed.
 
 ## Frame map
 
@@ -18,8 +18,13 @@ All nine frames are 1254×1254 RGBA PNGs. The six new frames were checked for tr
 - Base silhouettes for normal and fast: user-approved; carried forward unchanged as frame 0.
 - Interferer frame 0: the already approved A0 sample; reused in place without copying or editing.
 - Six new motion frames: generated candidates; pending user review for identity consistency, readable pose changes and loop rhythm.
-- 48px thumbnail and grayscale readability checks: pending.
-- UE atlas/import, pivot/bounds calibration, 1080p/720p in-game scale, playback timing and runtime review: pending.
+- Normal and jammer F01 compressed-step v02 alternatives: user-approved visual alternates; original v01 frames remain unchanged and the alternates are not imported.
+- Fast F01 compressed-step v02 alternative: new candidate, pending user visual review; original v01 frame remains unchanged and the candidate is not imported. See the [three-role comparison board](../../Enemies/A1/Review/P7_A1_EnemyMotionAlternateReview_v02.png), [candidate manifest](P7_A1_EnemyMotionAlternateAssets_v02.csv) and [alternate brief](P7_A1_EnemyMotionAlternateDesignBrief_v02.md).
+- 48px 彩色/灰度缩略检查已于 2026-11-11 完成；透明棋盘上的边缘预览和真实 48×48 下采样见[评审页](../../Enemies/A1/Review/P7_A1_EnemyMotionReadabilityReview_v01.png)。普通型、快速型、干扰型各三帧均可读；普通型和干扰型的部分轮廓差异较小，列入动作连续性复核重点。
+- 首帧另叠加在 P7 1280×720 灰盒路线，比较 36/48px 彩色与灰度：[`P7_A1_EnemyTrackContrastReview_v01.png`](../../Enemies/A1/Review/P7_A1_EnemyTrackContrastReview_v01.png)。48px 更醒目，36px 更贴近单条路径带宽；实际战场尺寸、遮挡和 A/B 路径交叉仍待 UE 视口确认。
+- UE atlas/import, pivot/bounds calibration, final 1080p/720p in-game scale, playback timing and runtime review: pending.
+- Review board can be rebuilt with `UE5/Scripts/build_p7_enemy_motion_review_v01.ps1`; it does not modify the nine source frames.
+- Track contrast board can be rebuilt with `UE5/Scripts/build_p7_enemy_track_contrast_review_v01.ps1`; it uses the current P7 graybox screenshot and does not modify enemy source frames.
 
 ## Motion-pose prompt set
 

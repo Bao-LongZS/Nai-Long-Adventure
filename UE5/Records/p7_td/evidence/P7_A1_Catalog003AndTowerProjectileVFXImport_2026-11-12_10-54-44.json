@@ -1,0 +1,95 @@
+{
+  "status": "imported_and_wired_requested_catalog_replacement_and_tower_projectile_vfx",
+  "engine": "5.8.3-58210709+++UE5+Release-5.8",
+  "scope": "user-requested Figure003 standing laugh replacement and independent MilkDog/MilkMouse projectile VFX; existing v07 shot remains MilkChicken; no gameplay data or level changed",
+  "level_opened_or_changed": false,
+  "runtime_played": false,
+  "assets": [
+    {
+      "asset_id": "P7-CHR-A1-CAT-139",
+      "version": "v02",
+      "asset_path": "/Game/Naiwa/P7/Characters/A1/CatalogDirect/T_P7_A1_CharacterHUD_Idle_Figure139_v02",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Characters\\A1\\CatalogDirect\\P7_A1_CharacterHUD_Idle_Figure139_v02.png",
+      "source_sha256": "a6a0d8b28330da41fead19e5e074737de1e524547977048cab23e4b575c5fef9",
+      "dimensions_px": [
+        583,
+        583
+      ],
+      "action": "reused_same_source",
+      "texture_group": "UI",
+      "mipmaps": false,
+      "srgb": true,
+      "alpha": false,
+      "texture_settings_readback": "passed"
+    },
+    {
+      "asset_id": "P7-CHR-A1-CAT-003",
+      "version": "v03",
+      "asset_path": "/Game/Naiwa/P7/Characters/A1/CatalogDirect/T_P7_A1_CharacterHUD_Laugh_Figure003_v03",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Characters\\A1\\CatalogDirect\\P7_A1_CharacterHUD_Laugh_Figure003_v03.png",
+      "source_sha256": "6c979fe16e956ae160921a81d0dc6153e3767e5fe95c434a19d56e1fca489c4d",
+      "dimensions_px": [
+        604,
+        604
+      ],
+      "action": "imported",
+      "texture_group": "UI",
+      "mipmaps": false,
+      "srgb": true,
+      "alpha": false,
+      "texture_settings_readback": "passed"
+    },
+    {
+      "asset_id": "P7-CHR-A1-CAT-121",
+      "version": "v02",
+      "asset_path": "/Game/Naiwa/P7/Characters/A1/CatalogDirect/T_P7_A1_CharacterHUD_Victory_Figure121_v02",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Characters\\A1\\CatalogDirect\\P7_A1_CharacterHUD_Victory_Figure121_v02.png",
+      "source_sha256": "220189369ab41ae78ab4cf168c2523ad4a2e1f3aa043bb0c2c67058425ed1fae",
+      "dimensions_px": [
+        604,
+        604
+      ],
+      "action": "reused_same_source",
+      "texture_group": "UI",
+      "mipmaps": false,
+      "srgb": true,
+      "alpha": false,
+      "texture_settings_readback": "passed"
+    },
+    {
+      "asset_id": "P7-CHR-A1-CAT-106",
+      "version": "v02",
+      "asset_path": "/Game/Naiwa/P7/Characters/A1/CatalogDirect/T_P7_A1_CharacterHUD_Distress_Figure106_v02",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\Characters\\A1\\CatalogDirect\\P7_A1_CharacterHUD_Distress_Figure106_v02.png",
+      "source_sha256": "1e78beb45e2a105e12541b4b4b27f2ab434cdcc07034f84d86e1eac67b5b1102",
+      "dimensions_px": [
+        604,
+        604
+      ],
+      "action": "reused_same_source",
+      "texture_group": "UI",
+      "mipmaps": false,
+      "srgb": true,
+      "alpha": false,
+      "texture_settings_readback": "passed"
+    },
+    {
+      "asset_id": "P7-VFX-A1-TOWER-PROJECTILE-ATLAS",
+      "version": "v01",
+      "asset_path": "/Game/Naiwa/P7/VFX/A1/T_P7_A1_TowerProjectileVFX_v01",
+      "source_path": "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\SourceAssets\\P7\\VFX\\A1\\P7_A1_TowerProjectileVFX_v01.png",
+      "source_sha256": "d8702b75e8a63685e5a0d1b662ed801535dc7f930c342a8a3f627a1b84acdb18",
+      "dimensions_px": [
+        848,
+        432
+      ],
+      "action": "imported",
+      "texture_group": "UI",
+      "mipmaps": false,
+      "srgb": true,
+      "alpha": true,
+      "texture_settings_readback": "passed"
+    }
+  ],
+  "catalog_source_pdf_sha256": "1b3d6198eb393e735d34c0ac0ccd6fbc8f1cfc5fb7e91847a7028e25057c9361"
+}

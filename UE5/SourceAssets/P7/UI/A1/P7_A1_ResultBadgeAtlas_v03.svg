@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="832" height="416" viewBox="0 0 832 416">
+ <title>P7 A1 result badge atlas v03</title>
+ <desc>Victory badge with a large mint check and defeat badge with a bold coral down arrow. The milk egg remains whole.</desc>
+ <g id="P7-UI-A1-RESULT-WIN" transform="translate(16 16)" stroke-linejoin="round" stroke-linecap="round">
+  <circle cx="192" cy="192" r="160" fill="#FFF3D7" stroke="#14264A" stroke-width="14"/>
+  <circle cx="192" cy="192" r="143" fill="none" stroke="#F4C84A" stroke-width="9"/>
+  <path d="M93 270C70 231 70 180 91 145M291 270C314 231 314 180 293 145" fill="none" stroke="#55B97C" stroke-width="8"/>
+  <ellipse cx="83" cy="233" rx="8" ry="16" transform="rotate(-44 83 233)" fill="#55B97C"/>
+  <ellipse cx="79" cy="197" rx="8" ry="16" transform="rotate(-18 79 197)" fill="#55B97C"/>
+  <ellipse cx="84" cy="161" rx="8" ry="16" transform="rotate(15 84 161)" fill="#55B97C"/>
+  <ellipse cx="301" cy="233" rx="8" ry="16" transform="rotate(44 301 233)" fill="#55B97C"/>
+  <ellipse cx="305" cy="197" rx="8" ry="16" transform="rotate(18 305 197)" fill="#55B97C"/>
+  <ellipse cx="300" cy="161" rx="8" ry="16" transform="rotate(-15 300 161)" fill="#55B97C"/>
+  <path d="M192 76C159 76 131 87 113 102V199C113 251 145 286 192 312C239 286 271 251 271 199V102C253 87 225 76 192 76Z" fill="#E6F3E5" stroke="#14264A" stroke-width="11"/>
+  <path d="M192 105C155 105 140 136 140 178V226C140 260 162 282 192 282C222 282 244 260 244 226V178C244 136 229 105 192 105Z" fill="#F4C84A" stroke="#14264A" stroke-width="9"/>
+  <path d="M162 135C170 119 181 111 193 110" fill="none" stroke="#FFF8E8" stroke-width="8"/>
+  <circle cx="177" cy="183" r="6" fill="#14264A"/><circle cx="207" cy="183" r="6" fill="#14264A"/>
+  <path d="M179 206Q192 221 205 206" fill="none" stroke="#8D4F2C" stroke-width="7"/>
+  <path d="M174 230Q192 240 210 230" fill="none" stroke="#55B97C" stroke-width="7"/>
+  <path d="M192 45L201 63L221 65L206 79L210 99L192 89L174 99L178 79L163 65L183 63Z" fill="#F4C84A" stroke="#9A5A2E" stroke-width="5"/>
+  <path d="M247 253L270 275L326 211" fill="none" stroke="#14264A" stroke-width="27"/>
+  <path d="M247 253L270 275L326 211" fill="none" stroke="#55B97C" stroke-width="16"/>
+ </g>
+ <g id="P7-UI-A1-RESULT-LOSS" transform="translate(432 16)" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M192 32C252 32 307 57 333 101V216C333 274 278 323 192 352C106 323 51 274 51 216V101C77 57 132 32 192 32Z" fill="#FBE7DE" stroke="#14264A" stroke-width="14"/>
+  <path d="M192 51C246 51 290 72 313 108V213C313 260 267 301 192 328C117 301 71 260 71 213V108C94 72 138 51 192 51Z" fill="none" stroke="#EF6256" stroke-width="9"/>
+  <path d="M192 97C162 97 136 108 120 123V203C120 245 147 273 192 294C237 273 264 245 264 203V123C248 108 222 97 192 97Z" fill="#FFF3D7" stroke="#14264A" stroke-width="10"/>
+  <path d="M192 126C155 126 140 157 140 198V234C140 264 162 281 192 281C222 281 244 264 244 234V198C244 157 229 126 192 126Z" fill="#F4C84A" stroke="#14264A" stroke-width="9"/>
+  <path d="M161 153C169 138 181 132 193 131" fill="none" stroke="#FFF8E8" stroke-width="8"/>
+  <path d="M169 194Q179 183 189 194M197 194Q207 183 217 194" fill="none" stroke="#14264A" stroke-width="7"/>
+  <path d="M179 224Q192 210 205 224" fill="none" stroke="#8D4F2C" stroke-width="7"/>
+  <path d="M295 108V231M271 207L295 233L319 207" fill="none" stroke="#14264A" stroke-width="25"/>
+  <path d="M295 108V231M271 207L295 233L319 207" fill="none" stroke="#EF6256" stroke-width="15"/>
+  <path d="M99 111L87 95M285 276L298 287L286 300L273 288Z" fill="#EF6256" stroke="#14264A" stroke-width="5"/>
+ </g>
+</svg>

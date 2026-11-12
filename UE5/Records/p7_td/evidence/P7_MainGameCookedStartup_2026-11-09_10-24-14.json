@@ -1,0 +1,21 @@
+﻿{
+    "test":  "Cooked Nai_Long Development startup: /Game/Naiwa/P7/Maps/L_P7_Alpha01_Graybox",
+    "status":  "PASS",
+    "startedAt":  "2026-11-09 10:24:14+08:00",
+    "elapsedTimeoutSeconds":  60,
+    "processId":  69120,
+    "stageDirectory":  "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\tmp\\P7CookedAlphaGraybox_2026-11-09_10-22-04\\Windows",
+    "executable":  "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\tmp\\P7CookedAlphaGraybox_2026-11-09_10-22-04\\Windows\\Nai_Long.exe",
+    "contentPak":  "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\tmp\\P7CookedAlphaGraybox_2026-11-09_10-22-04\\Windows\\Nai_Long\\Content\\Paks\\Nai_Long-Windows.pak",
+    "map":  "/Game/Naiwa/P7/Maps/L_P7_Alpha01_Graybox",
+    "finishedWithinTimeout":  true,
+    "processExitCode":  null,
+    "targetMapReportedLoaded":  true,
+    "p7FixtureLoaded":  true,
+    "p7FixtureLoadFailed":  false,
+    "cleanEngineExitReported":  true,
+    "engineLogCreated":  true,
+    "engineLog":  "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_MainGameCookedStartup_2026-11-09_10-24-14.log",
+    "stdoutLog":  "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_MainGameCookedStartup_2026-11-09_10-24-14.stdout.log",
+    "stderrLog":  "C:\\Users\\31314\\Desktop\\Nai-Long-Adventure\\UE5\\Records\\p7_td\\evidence\\P7_MainGameCookedStartup_2026-11-09_10-24-14.stderr.log"
+}

@@ -13,6 +13,7 @@ $ProbeParentCandidate = Join-Path $RepositoryRoot 'tmp'
 New-Item -ItemType Directory -Force -Path $ProbeParentCandidate | Out-Null
 $ProbeParent = (Resolve-Path $ProbeParentCandidate).Path
 $ProbeRoot = Join-Path $ProbeParent 'P7BuildProbe'
+$ProbeTempCandidate = Join-Path $ProbeParent 'P7ProbeTemp'
 $EvidenceRoot = Join-Path $RepositoryRoot 'UE5\Records\p7_td\evidence'
 $BuildBatch = Join-Path $EngineRoot 'Engine\Build\BatchFiles\Build.bat'
 $EditorCommandlet = Join-Path $EngineRoot 'Engine\Binaries\Win64\UnrealEditor-Cmd.exe'
@@ -21,6 +22,8 @@ $BuildTimestamp = Get-Date -Format 'yyyy-MM-dd_HH-mm-ss'
 $TargetName = if ($Target -eq 'Editor') { 'P7BuildProbeEditor' } else { 'P7BuildProbe' }
 $BuildLog = Join-Path $EvidenceRoot "P7_Isolated${Target}Build_$BuildTimestamp.log"
 $PreviousUbaRoot = $env:UBA_ROOT
+$PreviousTemp = $env:TEMP
+$PreviousTmp = $env:TMP
 
 if (-not (Test-Path -LiteralPath $BuildBatch)) {
     throw "Unreal Build.bat was not found: $BuildBatch"
@@ -33,6 +36,15 @@ if (Test-Path -LiteralPath $ProbeRoot) {
 }
 
 try {
+    New-Item -ItemType Directory -Force -Path $ProbeTempCandidate | Out-Null
+    $ProbeTemp = (Resolve-Path -LiteralPath $ProbeTempCandidate).Path
+    if (-not $ProbeTemp.StartsWith($ProbeParent + [System.IO.Path]::DirectorySeparatorChar, [System.StringComparison]::OrdinalIgnoreCase) -or
+        $ProbeTemp.Contains('!')) {
+        throw "Unsafe temporary root for Unreal Build.bat: $ProbeTemp"
+    }
+    $env:TEMP = $ProbeTemp
+    $env:TMP = $ProbeTemp
+
     New-Item -ItemType Directory -Force -Path (Join-Path $ProbeRoot 'Source\P7BuildProbe\Private') | Out-Null
     New-Item -ItemType Directory -Force -Path (Join-Path $ProbeRoot 'Source\NaiwaP7Runtime') | Out-Null
     New-Item -ItemType Directory -Force -Path $EvidenceRoot | Out-Null
@@ -103,7 +115,7 @@ IMPLEMENT_PRIMARY_GAME_MODULE(FDefaultGameModuleImpl, P7BuildProbe, "P7BuildProb
 '@ | Set-Content -Encoding utf8 (Join-Path $ProbeRoot 'Source\P7BuildProbe\Private\P7BuildProbe.cpp')
 
     $env:UBA_ROOT = Join-Path $ProbeRoot 'Uba'
-    "P7 isolated $Target development build - $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" |
+    "P7 isolated $Target development build - $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')`r`nTMP/TEMP: $ProbeTemp" |
         Set-Content -LiteralPath $BuildLog -Encoding utf8
     $BuildOutput = & $BuildBatch $TargetName Win64 Development $ProbeProject `
         -NoUBA -NoHotReloadFromIDE -NoLiveCoding -WaitMutex -MaxParallelActions=8 2>&1
@@ -158,6 +170,8 @@ IMPLEMENT_PRIMARY_GAME_MODULE(FDefaultGameModuleImpl, P7BuildProbe, "P7BuildProb
             'Naiwa.P7.Data.CsvArrayImport'
             'Naiwa.P7.Data.DataTableFixtureAssembly'
             'Naiwa.P7.Presentation.BoardRectResolutionParity'
+            'Naiwa.P7.Presentation.RuntimeInputBindings'
+            'Naiwa.P7.Presentation.RuntimeInputDispatch'
             'Naiwa.P7.Simulation.CatchUpBacklogIsRetained'
             'Naiwa.P7.Simulation.JarReachesZeroOnLeak'
             'Naiwa.P7.Simulation.RouteMovementAndReplay'
@@ -188,6 +202,8 @@ IMPLEMENT_PRIMARY_GAME_MODULE(FDefaultGameModuleImpl, P7BuildProbe, "P7BuildProb
 }
 finally {
     $env:UBA_ROOT = $PreviousUbaRoot
+    $env:TEMP = $PreviousTemp
+    $env:TMP = $PreviousTmp
     if (Test-Path -LiteralPath $ProbeRoot) {
         if ($KeepProbe) {
             Write-Output "Keeping isolated P7 project for inspection: $ProbeRoot"
