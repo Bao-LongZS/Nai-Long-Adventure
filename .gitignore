@@ -135,6 +135,7 @@ NaiwaAnimation_20261009/preview/
 !UE5/SourceAssets/P4/Characters/Alpha/**/*.png
 !UE5/SourceAssets/P4/Environment/**/*.png
 !UE5/SourceAssets/P4/UI/**/*.png
+!UE5/SourceAssets/P4/Beta6/**/*.png
 #    W4 特效源（Boss 冲锋/砸盖/二阶段/冲刺撞击/防御/敌人死亡等）85 张，
 #    是 W4 特效的直接输入，AI 生成不可再生。
 !UE5/SourceAssets/P4/Effects/**/*.png
@@ -181,7 +182,13 @@ UE5/Records/**/*.jsonl
 #       提交前请跑一次核对（见 .workbuddy/memory/ 中的提交前检查步骤）。
 
 # ── 7. 日志自动备份与编译迭代日志 ───────────────────────────────
-UE5/Records/*-backup-*.log
+#    编辑器每次改写已有记录时自动落一份 -backup-<时间戳> 副本。扩展名不固定
+#    （.log / .json 都有），全部挡掉：原始文件都在同一目录，副本只是中间态。
+#    实测未跟踪里曾积到 10 个 / 140.6 MB，其中单个 .json 副本 58.1 MB
+#    而对应原件仅 0.87 MB。
+#    ⚠️ 必须用 ** 而不是 *：gitignore 的单 * 不跨 /，而副本会落在
+#    p4_alpha/evidence/W4/ 这种三四层深处。
+UE5/Records/**/*-backup-*
 #    编译 / 验证迭代日志：同参数重编即可再生，单个文件最大 31 MB。
 #    注：已入库的 3 个 P0 构建日志不受影响（.gitignore 只作用于未跟踪文件）。
 UE5/Records/*_build_*.log
@@ -212,3 +219,24 @@ BirthdayVideo_20261006/
 # ── 10. UE 官方 Third Person 模板（P0 动画重定向引用其骨骼，
 #       本地须保留，但属引擎自带、不进库）──────────────────────
 UE5/NaiwaP0/Content/Characters/
+
+# ── 11. 根目录资料原件（2026-11-12 用户明确「不入」）──────────────
+#    微信视频2026-10-22_131317_118.mp4：P1 死亡大笑动画的源视频。
+#    已从它抽出 96 帧并入库（SourceAssets/P1_Feedback/DeathLaughVideoFramesRaw），
+#    抠图成品 DeathLaughFrames 也在库内；视频本体 11 MB 不重复托管。
+/微信视频*.mp4
+#    角色资料与美术参考/：两份奶龙设定 PDF（25.6 MB），第三方资料，
+#    公开仓库不宜托管，改由冷备纳管。
+/角色资料与美术参考/
+
+# ── 12. P6 可重生 SVG 与第三方裁图（2026-11-12 用户明确「都不入」）──
+#    SourceAssets/P6 下 59 个 SVG / 279.1 MB：
+#    - A1_CourtyardKit 36 个 242.3 MB：render_p6_a1_courtyard_preview_v0{1..4}.mjs
+#      从同目录 Models/*.obj（6 MB，已入库）做离线轴测投影确定性生成
+#    - 根级 4 个 ArtReviewPortfolio 39.7 MB：同上，由 *portfolio_v0*.mjs 合成
+#    - 其余 19 个（UI 卡面模板 / InfoLayers / ReferenceBoard）合计约 0.1 MB，
+#      一并排除；对应 PNG 预览全部入库，需要可编辑源稿时按需单独放行
+UE5/SourceAssets/P6/**/*.svg
+#    References/MilkFrogStudy/：8 张 PNG（7.3 MB）从《奶蛙学 必修第一册》PDF
+#    按页裁出，与上面「PDF 不入」同源，口径一致。
+UE5/SourceAssets/P6/References/MilkFrogStudy/

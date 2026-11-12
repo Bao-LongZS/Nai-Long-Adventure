@@ -4,6 +4,28 @@
 
 ---
 
+## 2026-11-12
+**P4 Beta6 六章数据表导入通过，配套 11 张建图落地（运行验收待补）。** `CSVImportFactory` 按 `P4Beta6_ScopeProjection.json` 导入六张表，回读全部成功：chapters 6 行、themes 6 行、waveSpawns 66 行、enemies 12 行、bosses 2 行、bossAttacks 8 行；themes 的 6 条贴图引用 `object_ref_readback` 拿到实际资产路径（chapter 2–6 的环境图与午间原生场景）。这解除了 11-11 起持续失败的 E2——此前多次尝试都卡在 `Build.bat` 共享脚本锁上，19:33 这次才真正跑完导入。
+
+同批建图 11 张：`02`–`06` 各一对，5 张 `ScenePreview`（每张 3 个 actor，固定 3/4 相机、50° 俯角、37° 水平 FOV，贴图按 `TC_EditorIcon` 无压缩、Sharpen0、UI 组、非流式）与 5 张 `EnvironmentReview`，再加 1 张 `InternalTest`（默认 GameMode 为 `NaiwaP4Beta6TestGameMode`，声明依赖六张 Beta6 表加 `DT_P4_Upgrade_Alpha`）。P4 地图从 4 张增至 15 张。
+
+三份建图报告都停在待评审，没有一张说通过：`ScenePreview` 是 `maps_saved_pending_visual_review`，`EnvironmentReview` 是 `review_maps_saved_pending_fixed_camera_readability_review`，`InternalTest` 是 `map_saved_pending_runtime_acceptance` 且 `runtime_played: false`。也就是说六章的数据与场景骨架已就位，但整关从未在引擎里跑过。平衡侧仍有未标定项：按 fixture 的 7,232 常规敌血 + 8,448 Boss 血，在 12 伤害 / 0.59 s 弹速下，第 4 章与第 6 章的完美命中 TTK 下界为 174.25 s 与 290.43 s，高于 165 s 与 180 s 的章节目标——该口径不含近战、升级、移动与 Boss 行为，用于触发模拟标定，不是预测通关时间。证据见[导入报告](UE5/Records/p4_alpha/evidence/Beta6/P4_Beta6_DataTableImport.json)、[场景预览建图](UE5/Records/p4_alpha/evidence/Beta6/P4_Beta6_ScenePreview_build_report_v01.json)、[环境评审建图](UE5/Records/p4_alpha/evidence/Beta6/P4_Beta6_EnvironmentReviewMaps_build_report_v01.json)与[内部测试建图](UE5/Records/p4_alpha/evidence/Beta6/P4_Beta6_InternalTestMap_build_report_v01.json)。
+
+**P4 导入并接入奶蛙学附录图录肖像。** 按负责人要求直接采用图录 139/003/121/106 原图裁切，保留白底和颜色，不重绘；四张 UI Texture2D 已导入 `/Game/Naiwa/P4/UI/Alpha/CatalogDirect/`。Native UMG 已接入 HUD 常态/大笑头像和胜负结算肖像，`Nai_LongEditor` UE 5.8.3 增量编译 18 actions 成功；PIE 与 720p/1080p 游戏画面验收待完成。素材清单、预览、导入与编译证据见 [图录直用包](UE5/SourceAssets/P4/UI/Alpha/CatalogDirect/README.md) 和[接入报告](UE5/Records/p4_alpha/evidence/CatalogDirect/P4_A1_CatalogPortraits_HUDIntegration_2026-11-12.json)。
+
+**P6 M3/M4 自动探针入口补齐（等待主工程构建后运行）。** `run_p6_m1.ps1` 新增 `ProbeM3` 和 `ProbeM4`：M3 检查四个皮肤信息层、X1/X2 组合线索、12 卡容量与两次换肤上限；M4 分别以 Perfect、Clear、Failure、Morning 四个进程覆盖评分档位、缺证据门、失败连击、06:00 锁定与晨间复核，并使用内存 SaveGame fixture 检查奖励阶梯、GUID 幂等、无效输入和钱包上限到账数。探针保护真实 SaveGame 写入口，报告标记 `user_save_slot_touched=false`。PowerShell 脚本解析和 UE 随附 Python 解释器的 Python AST 解析均通过；C++ 编译及探针执行尚未完成，主 P6 Editor 构建仍被共享 `Build.bat` 锁挡住。细节见 [P6 M4 工程切片记录](UE5/Records/p6_m4/P6_M4_三段结案工程切片_2026-11-11.md)及[当前构建等待记录](UE5/Records/p6_m4/editor_build_2026-11-12_m3_m4_wait.log)。
+
+**P6 M3/M4 构建诊断修正。** 16:02 先取得共享 Build.bat 的 Nai_LongEditor 构建使用 P7 ArtReview 临时 `.uproject`，共计划 34 actions，编译了奶票进度模块及多份 P6 源文件；随后在 GameMode M3 探针处报 C4458，原因是本地 `Layers` 遮蔽 `AActor::Layers`。已改名为 `InfoLayers`，保留完整失败日志供复查；该结果仅用于定位源码，不算主 P6 构建通过。当前 P6 `-WaitMutex` 会话继续等待。详见[诊断日志](UE5/Records/p6_m4/shared_editor_build_2026-11-12_p7_temp_p6_probe_compile_fail.log)。
+
+**P6 M4 奶票奖励与结案后案情揭晓（运行验收待补）。** 普通首通结案奖励 60 张，首次完美评级补 60 张，之后每个新调查轮次成功结案奖励 20 张；奖励键和 WorldSubsystem 轮次 GUID 与奶票余额一起写入主存档，同 GUID 重复提交不改评级、不重复发票。SaveGame 迁移到 v7，已有结案评级的旧档按已达评级补发一次首通奖励。结案反馈显示实际到账奶票，并提示最佳评级是提升还是保持。线索板在成功结案后才显示奶鸭撞杯、芯片循环笑声和检测仪误判的案情复盘，提交前隐藏；case fixture 版本升到 5。P7 ArtReview 临时 `.uproject` 的共享 `Nai_LongEditor` 构建以 110 个动作编译奖励键初版，再以 4 个动作编译严格 GUID 去重修订，均成功；10:57 的同类构建以 5 个动作编译/链接 P7 源码，没有编译 P6。余额上限精确结算和案情复盘 HUD 晚于实际 P6 编译证据，仍待主 P6 构建确认。主 P6 `.uproject` 的 Editor 构建仍等待 `Build.bat` 文件锁。尚无 PIE、存档实写、M4 流程验证或试玩；结案动画/表演和正式 ending 仍待完成。详见 [P6 M4 接续记录](UE5/Records/p6_m4/P6_M4_三段结案工程切片_2026-11-11.md)、[110 动作构建](UE5/Records/p6_m4/shared_editor_build_2026-11-12_reward_keys.log)、[幂等修订构建](UE5/Records/p6_m4/shared_editor_build_2026-11-12_reward_idempotent.log)和[10:57 P7-only 记录](UE5/Records/p6_m4/shared_editor_build_2026-11-12_p7_only.log)。
+
+## 2026-11-11
+**P6 M4 三段结案工程骨架接入（未验收）。** 线索板补入 Q/E 三题浏览、1–4 分题选项和 Enter 整组提交；3/3、2/3、≤1/3 映射完美结案、可结案与保留证据重查。提交门统一要求 G1/G3/G4/G5/G6，S/X 仍为补充线索；缺失核心证据会列出缺少的 G 卡 ID，不记失败也不推进案件时钟；无效选项 ID 会被拒绝且不计失败；三种结果不在提交前泄露单题正误。SaveGame 增加累计/连续失败数、20–360 分钟案件时钟与最佳评级并迁移至 v6；成功结案清连续失败，06:00 暂停夜间结案选择/提交，离开并重进后进入不再推进时间的晨间复核。证据、累计失败和最佳评级保留，逐题选择仅属当前会话；HUD 在夜间、暂停、晨间和结案状态显示最佳评级。完整奶票奖励、奖励幂等、结案演出、PIE/试玩及五种配置出口门未实现或验收。Editor 增量构建五次尝试（最后一次针对评分校验后的源码）均被 `Build.bat` 既有互斥等待提示阻塞；所有等待都只由本任务取消，没有绕锁，也没有编译结果。详见 [P6 M4 工程切片记录](UE5/Records/p6_m4/P6_M4_三段结案工程切片_2026-11-11.md)及[构建日志](UE5/Records/p6_m4/editor_build_2026-11-11.log)。
+
+**P6 M3 信息层与皮肤试用接入 M2 灰盒。** 保持 14 个院内点位和 9 个必看提示，新增 S1–S4 局部层、借用/切换显示、12 卡线索板摘要，以及固定 X1/X2 证据归档；A3 卡面标题、时间、来源同步到运行时 fixture。新档保留基础款无购买路径，收集皮肤线索后重进可继续尝试未见信息层。复核发现井边笑点不是主线提示点，将 S4 移到奖杯必看点，在地面标记中沿井边方向给出水痕，井边桶仍是可跳过点。信息层组件改挂单位缩放锚点，独立于点位主体缩放；真实可见性、遮挡、双分辨率布局和五配置出口门仍待 Editor/试玩验收。
+
+**验证边界。** M3 切片记录时，Editor 构建被 Unreal `Build.bat` 的共享脚本锁阻塞，日志只记录等待提示；当时没有运行自动探针、测试或人工试玩，M4–M5 与正式美术接入尚未开始。详见 [P6 M3 工程切片记录](UE5/Records/p6_m3/P6_M3_信息层与皮肤试用工程切片_2026-11-11.md)。
+
 ## 2026-11-02
 **P7「奶罐守卫战」独立子模式：从骨架推进到真实数据链与灰盒视口。** 新增独立 UE 模块 `NaiwaP7Runtime`，不依赖 `NaiwaRuntime`、不含 P4/P5 头文件，主游戏与 Editor target 分别注册。五张 `P7_Alpha01` 候选 DataTable 由源 CSV 持久导入 `/Game/Naiwa/P7/Data/`（Level 1 行、Tower 9 行、Enemy 3 行、Obstacle 2 行、Wave 8 行），`ANaiwaP7AlphaGrayboxGameMode` 连接五表，专属地图 `/Game/Naiwa/P7/Maps/L_P7_Alpha01_Graybox` 已 cook/stage。主工程自动化 14/14 通过，验证真实 DataTable 装配、初始购买扣费、首波及首只敌人刷出。Development 包在 PCD3D_SM6 真实路径启动并生成 1280×720 实图，板格、双路线、8 个建造位、2 个障碍、奶蛋耐久、波次金币和交互提示均已绘出。
 
